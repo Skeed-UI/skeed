@@ -1,0 +1,6 @@
+:root {
+  --skeed-brand: {{SKEED_BRAND}};
+  --skeed-fg: {{SKEED_FG}};
+}
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; }

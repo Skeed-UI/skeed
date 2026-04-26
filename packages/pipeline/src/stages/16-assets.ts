@@ -1,25 +1,25 @@
-import { z } from 'zod';
 import type { Stage } from '@skeed/contracts';
+import { PipelineState } from './state.js';
 
-/**
- * Stage 16 — Asset router populates slots.
- *
- * AGENTS: read packages/pipeline/src/stages/AGENTS.md before editing.
- * Replace TODOs with: real input/output schemas (extend pipeline-types.ts if new),
- * a real run() body, and a sibling test file.
- */
-
-const Input = z.unknown(); // TODO: replace with real input schema
-const Output = z.unknown(); // TODO: replace with real output schema
-
-export const stage_16_assets: Stage<unknown, unknown> = {
+/** Stage 16 — Asset population. M1: writes chosen logo SVG only. */
+export const stage_16_assets: Stage<PipelineState, PipelineState> = {
   name: '16-assets',
   version: '0.1.0',
-  inputSchema: Input,
-  outputSchema: Output,
+  inputSchema: PipelineState,
+  outputSchema: PipelineState,
   cacheable: true,
-  async run(input, _ctx) {
-    // TODO: implement
-    return input;
+  async run(state) {
+    const assets: NonNullable<PipelineState['resolvedAssets']> = [];
+    if (state.logoChosen) {
+      assets.push({
+        slot: 'logo',
+        kind: 'logo',
+        sourceId: 'svg-composer',
+        relativePath: 'public/logo.svg',
+        contents: state.logoChosen.svg,
+        encoding: 'utf8',
+      });
+    }
+    return { ...state, resolvedAssets: assets };
   },
 };

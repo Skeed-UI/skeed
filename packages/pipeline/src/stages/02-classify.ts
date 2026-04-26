@@ -1,25 +1,46 @@
-import { z } from 'zod';
-import type { Stage } from '@skeed/contracts';
+import type { DemographicId, Stage } from '@skeed/contracts';
+import { PipelineState } from './state.js';
 
-/**
- * Stage 02 — Demographic + niche classifier with clarification.
- *
- * AGENTS: read packages/pipeline/src/stages/AGENTS.md before editing.
- * Replace TODOs with: real input/output schemas (extend pipeline-types.ts if new),
- * a real run() body, and a sibling test file.
- */
-
-const Input = z.unknown(); // TODO: replace with real input schema
-const Output = z.unknown(); // TODO: replace with real output schema
-
-export const stage_02_classify: Stage<unknown, unknown> = {
+/** Stage 02 — Demographic & Niche Classification. M1: prompt-keyword heuristic. */
+export const stage_02_classify: Stage<PipelineState, PipelineState> = {
   name: '02-classify',
   version: '0.1.0',
-  inputSchema: Input,
-  outputSchema: Output,
+  inputSchema: PipelineState,
+  outputSchema: PipelineState,
   cacheable: true,
-  async run(input, _ctx) {
-    // TODO: implement
-    return input;
+  async run(state) {
+    const guess = inferDemographic(state.prompt);
+    return {
+      ...state,
+      classification: {
+        candidates: [
+          {
+            demographic: guess.demographic,
+            niche: guess.niche,
+            confidence: 0.82,
+            reasoning: 'M1 hardcoded heuristic; M2 will use LLM classifier.',
+          },
+        ],
+        needsClarification: false,
+        questions: [],
+      },
+    };
   },
 };
+
+function inferDemographic(prompt: string): { demographic: DemographicId; niche: string } {
+  const p = prompt.toLowerCase();
+  if (p.includes('kid') || p.includes('child') || p.includes('school')) {
+    return { demographic: 'kids', niche: 'learning' };
+  }
+  if (p.includes('finance') || p.includes('bank') || p.includes('money') || p.includes('invest')) {
+    return { demographic: 'fintech', niche: 'consumer' };
+  }
+  if (p.includes('health') || p.includes('clinic') || p.includes('patient')) {
+    return { demographic: 'health', niche: 'general' };
+  }
+  if (p.includes('gov') || p.includes('public') || p.includes('civic')) {
+    return { demographic: 'gov', niche: 'general' };
+  }
+  return { demographic: 'productivity', niche: 'general' };
+}

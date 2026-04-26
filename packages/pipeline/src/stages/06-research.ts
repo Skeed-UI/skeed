@@ -1,25 +1,14 @@
-import { z } from 'zod';
 import type { Stage } from '@skeed/contracts';
+import { PipelineState } from './state.js';
 
-/**
- * Stage 06 — AutoResearchClaw deep research.
- *
- * AGENTS: read packages/pipeline/src/stages/AGENTS.md before editing.
- * Replace TODOs with: real input/output schemas (extend pipeline-types.ts if new),
- * a real run() body, and a sibling test file.
- */
-
-const Input = z.unknown(); // TODO: replace with real input schema
-const Output = z.unknown(); // TODO: replace with real output schema
-
-export const stage_06_research: Stage<unknown, unknown> = {
+/** Stage 06 — Deep research. M1: skipped (lite-mode passthrough). M4 wires AutoResearchClaw. */
+export const stage_06_research: Stage<PipelineState, PipelineState> = {
   name: '06-research',
   version: '0.1.0',
-  inputSchema: Input,
-  outputSchema: Output,
+  inputSchema: PipelineState,
+  outputSchema: PipelineState,
   cacheable: true,
-  async run(input, _ctx) {
-    // TODO: implement
-    return input;
+  async run(state) {
+    return state;
   },
 };

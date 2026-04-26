@@ -83,7 +83,7 @@
     "contrastPairs": [
       { "fg": "neutral.900", "bg": "neutral.50", "ratio": 21, "passesAA": true, "passesAAA": true },
       { "fg": "neutral.50", "bg": "neutral.900", "ratio": 21, "passesAA": true, "passesAAA": true },
-      { "fg": "brand.600", "bg": "brand.50", "ratio": 7.2, "passesAA": true, "passesAAA": true }
+      { "fg": "brand.700", "bg": "brand.50", "ratio": 7.09, "passesAA": true, "passesAAA": true }
     ]
   },
   "typography": {

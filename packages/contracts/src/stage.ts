@@ -23,8 +23,10 @@ export interface StageContext {
 export interface Stage<I, O> {
   readonly name: string;
   readonly version: string;
-  readonly inputSchema: z.ZodType<I>;
-  readonly outputSchema: z.ZodType<O>;
+  /** Zod schema validating input. Schema may have wider input type than I (defaults). */
+  readonly inputSchema: z.ZodType<I, z.ZodTypeDef, unknown>;
+  /** Zod schema validating output. Schema may have wider input type than O (defaults). */
+  readonly outputSchema: z.ZodType<O, z.ZodTypeDef, unknown>;
   readonly cacheable: boolean;
   run(input: I, ctx: StageContext): Promise<O>;
 }

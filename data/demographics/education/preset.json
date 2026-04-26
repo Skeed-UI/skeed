@@ -83,9 +83,9 @@
     "contrastPairs": [
       { "fg": "neutral.900", "bg": "neutral.50", "ratio": 21, "passesAA": true, "passesAAA": true },
       { "fg": "neutral.50", "bg": "neutral.900", "ratio": 21, "passesAA": true, "passesAAA": true },
-      { "fg": "brand.700", "bg": "brand.50", "ratio": 7.5, "passesAA": true, "passesAAA": true },
-      { "fg": "success.700", "bg": "success.50", "ratio": 7.2, "passesAA": true, "passesAAA": true },
-      { "fg": "danger.700", "bg": "danger.50", "ratio": 7.8, "passesAA": true, "passesAAA": true }
+      { "fg": "brand.800", "bg": "brand.50", "ratio": 11.24, "passesAA": true, "passesAAA": true },
+      { "fg": "success.900", "bg": "success.50", "ratio": 9.71, "passesAA": true, "passesAAA": true },
+      { "fg": "danger.900", "bg": "danger.50", "ratio": 9.53, "passesAA": true, "passesAAA": true }
     ]
   },
   "typography": {

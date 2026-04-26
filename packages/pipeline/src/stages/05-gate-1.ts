@@ -1,25 +1,14 @@
-import { z } from 'zod';
 import type { Stage } from '@skeed/contracts';
+import { PipelineState } from './state.js';
 
-/**
- * Stage 05 — User pivot/persist decision.
- *
- * AGENTS: read packages/pipeline/src/stages/AGENTS.md before editing.
- * Replace TODOs with: real input/output schemas (extend pipeline-types.ts if new),
- * a real run() body, and a sibling test file.
- */
-
-const Input = z.unknown(); // TODO: replace with real input schema
-const Output = z.unknown(); // TODO: replace with real output schema
-
-export const stage_05_gate_1: Stage<unknown, unknown> = {
+/** Stage 05 — Score Gate 1. M1: passthrough; CLI surfaces gate as approval prompt. */
+export const stage_05_gate_1: Stage<PipelineState, PipelineState> = {
   name: '05-gate-1',
   version: '0.1.0',
-  inputSchema: Input,
-  outputSchema: Output,
+  inputSchema: PipelineState,
+  outputSchema: PipelineState,
   cacheable: false,
-  async run(input, _ctx) {
-    // TODO: implement
-    return input;
+  async run(state) {
+    return state;
   },
 };
