@@ -147,10 +147,10 @@ export function getSpacingClass(
   // Find closest spacing token index
   const spacing = preset.spacing;
   let closestIdx = 0;
-  let closestDiff = Math.abs(spacing[0] - value);
+  let closestDiff = Math.abs(spacing[0]! - value);
   
   for (let i = 1; i < spacing.length; i++) {
-    const diff = Math.abs(spacing[i] - value);
+    const diff = Math.abs(spacing[i]! - value);
     if (diff < closestDiff) {
       closestDiff = diff;
       closestIdx = i;
@@ -176,10 +176,10 @@ export function getRadiusClass(
   // Find closest radius token index
   const radius = preset.radius;
   let closestIdx = 0;
-  let closestDiff = Math.abs(radius[0] - value);
+  let closestDiff = Math.abs(radius[0]! - value);
   
   for (let i = 1; i < radius.length; i++) {
-    const diff = Math.abs(radius[i] - value);
+    const diff = Math.abs(radius[i]! - value);
     if (diff < closestDiff) {
       closestDiff = diff;
       closestIdx = i;
@@ -205,12 +205,12 @@ export function validateDensityTokens(
   
   const tokens = new Set<string>();
   
-  let match;
+  let match: RegExpExecArray | null;
   while ((match = varRegex.exec(className)) !== null) {
-    tokens.add(match[1]);
+    if (match[1]) tokens.add(match[1]);
   }
   while ((match = bracketRegex.exec(className)) !== null) {
-    tokens.add(match[1]);
+    if (match[1]) tokens.add(match[1]);
   }
   
   // Check if density-specific tokens exist
@@ -220,7 +220,7 @@ export function validateDensityTokens(
       const densityMatch = token.match(/density-([\w-]+)-/);
       if (densityMatch) {
         const tokenDensity = densityMatch[1];
-        if (!['compact', 'cozy', 'comfy'].includes(tokenDensity)) {
+        if (!['compact', 'cozy', 'comfy'].includes(tokenDensity!)) {
           missing.push(token);
         }
       }

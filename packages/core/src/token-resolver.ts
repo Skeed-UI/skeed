@@ -206,7 +206,7 @@ export function resolveToken(
       if (Number.isNaN(index) || index < 0 || index >= preset.elevation.shadows.length) {
         return null;
       }
-      return preset.elevation.shadows[index];
+      return preset.elevation.shadows[index] ?? null;
     }
     
     case 'border': {
@@ -252,7 +252,9 @@ function getLuminance(hex: string): number {
   });
   
   if (!rgb || rgb.length !== 3) return 0;
-  return 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
+  const [r, g, b] = rgb;
+  if (r === undefined || g === undefined || b === undefined) return 0;
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
 /**

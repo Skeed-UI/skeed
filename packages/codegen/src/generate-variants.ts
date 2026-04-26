@@ -100,7 +100,7 @@ export interface GenerationFailure {
   /** Error message */
   error: string;
   /** Stack trace */
-  stack?: string;
+  stack?: string | undefined;
 }
 
 /**
