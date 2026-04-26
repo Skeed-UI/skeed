@@ -1,0 +1,17 @@
+{
+  "id": "modal",
+  "name": "Modal",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Modal",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

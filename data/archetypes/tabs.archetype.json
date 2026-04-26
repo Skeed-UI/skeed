@@ -1,0 +1,32 @@
+{
+  "id": "tabs",
+  "name": "Tabs",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "Tabbed content switcher with three visual variants (underline, solid, ghost) and full ARIA role/keyboard navigation support. Arrow keys navigate between tabs; Enter/Space activates.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.100",
+    "color.neutral.200",
+    "color.neutral.500",
+    "color.neutral.900",
+    "color.brand.50",
+    "color.brand.500",
+    "color.brand.600",
+    "spacing.0",
+    "spacing.1",
+    "density.cozy.padx",
+    "density.cozy.pady",
+    "radius.1",
+    "radius.2",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default",
+    "shadow.1"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

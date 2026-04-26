@@ -1,0 +1,170 @@
+{
+  "id": "classic",
+  "schemaVersion": 1,
+  "palette": {
+    "brand": {
+      "50": "#FEFCE8",
+      "100": "#FEF9C3",
+      "200": "#FEF08A",
+      "300": "#FDE047",
+      "400": "#FACC15",
+      "500": "#EAB308",
+      "600": "#CA8A04",
+      "700": "#A16207",
+      "800": "#854D0E",
+      "900": "#713F12",
+      "950": "#422006"
+    },
+    "neutral": {
+      "50": "#FAFAF9",
+      "100": "#F5F5F4",
+      "200": "#E7E5E4",
+      "300": "#D6D3D1",
+      "400": "#A8A29E",
+      "500": "#78716C",
+      "600": "#57534E",
+      "700": "#44403C",
+      "800": "#292524",
+      "900": "#1C1917",
+      "950": "#0C0A09"
+    },
+    "success": {
+      "50": "#F0FDF4",
+      "100": "#DCFCE7",
+      "200": "#BBF7D0",
+      "300": "#86EFAC",
+      "400": "#4ADE80",
+      "500": "#22C55E",
+      "600": "#16A34A",
+      "700": "#15803D",
+      "800": "#166534",
+      "900": "#14532D",
+      "950": "#052E16"
+    },
+    "warning": {
+      "50": "#FFFBEB",
+      "100": "#FEF3C7",
+      "200": "#FDE68A",
+      "300": "#FCD34D",
+      "400": "#FBBF24",
+      "500": "#F59E0B",
+      "600": "#D97706",
+      "700": "#B45309",
+      "800": "#92400E",
+      "900": "#78350F",
+      "950": "#451A03"
+    },
+    "danger": {
+      "50": "#FEF2F2",
+      "100": "#FEE2E2",
+      "200": "#FECACA",
+      "300": "#FCA5A5",
+      "400": "#F87171",
+      "500": "#EF4444",
+      "600": "#DC2626",
+      "700": "#B91C1C",
+      "800": "#991B1B",
+      "900": "#7F1D1D",
+      "950": "#450A0A"
+    },
+    "info": {
+      "50": "#EFF6FF",
+      "100": "#DBEAFE",
+      "200": "#BFDBFE",
+      "300": "#93C5FD",
+      "400": "#60A5FA",
+      "500": "#3B82F6",
+      "600": "#2563EB",
+      "700": "#1D4ED8",
+      "800": "#1E40AF",
+      "900": "#1E3A8A",
+      "950": "#172554"
+    },
+    "contrastPairs": [
+      { "fg": "neutral.900", "bg": "neutral.50", "ratio": 21, "passesAA": true, "passesAAA": true },
+      { "fg": "neutral.50", "bg": "neutral.900", "ratio": 21, "passesAA": true, "passesAAA": true },
+      { "fg": "brand.700", "bg": "brand.50", "ratio": 7.5, "passesAA": true, "passesAAA": true }
+    ]
+  },
+  "typography": {
+    "display": {
+      "family": "Playfair Display",
+      "fallback": ["Georgia", "serif"],
+      "weights": [400, 700],
+      "features": ["liga"]
+    },
+    "body": {
+      "family": "Source Serif Pro",
+      "fallback": ["Georgia", "serif"],
+      "weights": [400, 600],
+      "features": []
+    },
+    "mono": {
+      "family": "Courier Prime",
+      "fallback": ["Courier New", "monospace"],
+      "weights": [400, 700],
+      "features": []
+    },
+    "numeric": {
+      "family": "Courier Prime",
+      "fallback": ["Courier New", "monospace"],
+      "weights": [400, 700],
+      "features": ["tnum"]
+    },
+    "scale": [0.875, 1, 1.125, 1.25, 1.5, 2, 2.5]
+  },
+  "spacing": [0, 0.25, 0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48],
+  "radius": [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 80, 160, 320, 640, 960, 9999],
+  "density": {
+    "compact": { "padY": 0.5, "padX": 1, "gap": 0.5, "lineHeight": 1.5 },
+    "cozy": { "padY": 0.75, "padX": 1.25, "gap": 0.75, "lineHeight": 1.7 },
+    "comfy": { "padY": 1.25, "padX": 1.75, "gap": 1, "lineHeight": 1.9 }
+  },
+  "motion": {
+    "profile": "subtle",
+    "durations": {
+      "fast": 200,
+      "normal": 350,
+      "slow": 500
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "elegant": "cubic-bezier(0.25, 0.1, 0.25, 1)"
+    }
+  },
+  "iconography": {
+    "style": "line",
+    "pack": "lucide"
+  },
+  "borders": {
+    "width": 1,
+    "style": "solid",
+    "treatment": "flat"
+  },
+  "elevation": {
+    "shadows": [
+      "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+      "0 2px 4px 0 rgb(0 0 0 / 0.05)",
+      "0 4px 8px 0 rgb(0 0 0 / 0.05)",
+      "0 8px 16px 0 rgb(0 0 0 / 0.05)"
+    ],
+    "surfaceTreatment": "paper"
+  },
+  "illustrationStylePrompt": "Classic traditional illustration style, vintage aesthetics, timeless elegance, warm sepia and gold tones, classical art references, heritage and craftsmanship themes, refined and sophisticated atmosphere, traditional media textures, no modern tech elements, established and trustworthy",
+  "logoPrimitiveConstraints": {
+    "allowedShapeKinds": ["classic", "ornate", "shield"],
+    "allowedMarkKinds": ["crest", "laurel", "crown", "pillar"],
+    "allowedWordmarkStyles": ["transitional-serif", "classic-serif"],
+    "allowedContainerStyles": ["lockup-horizontal", "badge-ornate"]
+  },
+  "defaultDensity": "cozy",
+  "voice": {
+    "tone": ["refined", "timeless", "trustworthy", "elegant"],
+    "samples": {
+      "cta": "Begin",
+      "success": "Completed with distinction.",
+      "error": "Pardon the inconvenience. Please try again.",
+      "empty": "Nothing to display at this time."
+    }
+  }
+}

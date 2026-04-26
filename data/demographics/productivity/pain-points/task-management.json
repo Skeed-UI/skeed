@@ -1,0 +1,67 @@
+{
+  "demographic": "productivity",
+  "niche": "task-management",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "context-switching-cost",
+      "description": "Switching between apps to complete one workflow fragments attention and kills momentum",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": [
+        "Gloria Mark (UC Irvine) research: 23 minutes to refocus after interruption",
+        "Zapier State of Business Automation 2023: workers switch apps 25+ times per day"
+      ]
+    },
+    {
+      "id": "unclear-task-priority",
+      "description": "No clear way to see what matters most right now — everything feels equally urgent",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": [
+        "Asana Anatomy of Work Index: 26% of workers feel unclear on daily priorities",
+        "Todoist productivity survey: priority overload cited by 58% of power users"
+      ]
+    },
+    {
+      "id": "notification-overload",
+      "description": "Too many pings from the app itself interrupt deep work sessions the tool is supposed to enable",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": [
+        "Microsoft WorkLab: excessive notifications reduce productivity 40%",
+        "Common complaint across G2 reviews of Jira, Asana, Monday.com"
+      ]
+    },
+    {
+      "id": "dead-simple-capture-missing",
+      "description": "Too many clicks or modal dialogs required to capture a quick task idea while already in flow",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": [
+        "GTD principle: capture friction causes ideas to be lost or deferred indefinitely",
+        "Linear quick-add keyboard shortcut cited as top retention driver in user interviews"
+      ]
+    },
+    {
+      "id": "progress-invisibility",
+      "description": "No meaningful sense of overall momentum — daily work feels like running in place without visible throughput",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": [
+        "Teresa Amabile's Progress Principle: small wins are the strongest intrinsic motivator",
+        "Notion user research: 'done' list and velocity charts among most-requested missing features"
+      ]
+    },
+    {
+      "id": "collaboration-ambiguity",
+      "description": "Unclear ownership, blockers, and handoffs cause tasks to stall without anyone noticing",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": [
+        "Atlassian teamwork report: 36% of delays attributed to unclear responsibility",
+        "Linear and Height user reviews: assignee + status clarity cited as critical differentiators"
+      ]
+    }
+  ]
+}

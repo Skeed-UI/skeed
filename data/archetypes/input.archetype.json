@@ -1,0 +1,32 @@
+{
+  "id": "input",
+  "name": "Input",
+  "schemaVersion": 1,
+  "category": "atom",
+  "description": "Text input field with optional label, hint text, error state, and leading/trailing icon slots. Token-only canonical implementation.",
+  "tokensUsed": [
+    "color.brand.500",
+    "color.neutral.50",
+    "color.neutral.100",
+    "color.neutral.300",
+    "color.neutral.400",
+    "color.neutral.500",
+    "color.neutral.900",
+    "color.danger.500",
+    "color.danger.600",
+    "radius.2",
+    "spacing.1",
+    "spacing.3",
+    "spacing.9",
+    "density.cozy.padx",
+    "density.cozy.pady",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

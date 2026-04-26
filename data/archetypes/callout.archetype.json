@@ -1,0 +1,17 @@
+{
+  "id": "callout",
+  "name": "Callout",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Callout",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

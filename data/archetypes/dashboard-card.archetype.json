@@ -1,0 +1,32 @@
+{
+  "id": "dashboard-card",
+  "name": "DashboardCard",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "Compact metric and stats card for dashboards. Displays a title, value, unit, trend indicator, optional icon, and an inline SVG sparkline polyline chart. Supports default and compact density variants.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.200",
+    "color.neutral.400",
+    "color.neutral.500",
+    "color.neutral.600",
+    "color.neutral.900",
+    "color.brand.50",
+    "color.brand.400",
+    "color.brand.500",
+    "color.success.600",
+    "color.danger.600",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "spacing.8",
+    "density.cozy.padx",
+    "density.cozy.pady",
+    "radius.2"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

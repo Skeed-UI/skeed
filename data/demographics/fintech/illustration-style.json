@@ -1,0 +1,20 @@
+{
+  "demographic": "fintech",
+  "schemaVersion": 1,
+  "promptSuffix": "clean flat illustration, cobalt blue (#3B82F6) and slate (#1E293B) color palette, abstract financial data visualizations, geometric shapes, isometric charts and graphs, professional corporate fintech aesthetic, no human faces, no text overlays, minimal background, modern and trustworthy",
+  "negativePromptSuffix": "no cash or coins (cliché), no handshakes (cliché), no generic business people, no dark patterns, no stock photo aesthetic, no cluttered composition, no warm or playful colors",
+  "preferredAspectRatios": ["16:9", "4:3", "1:1"],
+  "providerHints": {
+    "fal-flux": {
+      "model": "flux/schnell",
+      "steps": 4
+    },
+    "replicate": {
+      "model": "black-forest-labs/flux-schnell"
+    },
+    "openai-image": {
+      "model": "gpt-image-1",
+      "quality": "high"
+    }
+  }
+}

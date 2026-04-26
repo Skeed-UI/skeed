@@ -1,0 +1,8 @@
+{
+  "id": "badge-flat",
+  "style": "badge-flat",
+  "layout": "badge",
+  "shape": "rounded-square",
+  "padding": "0.5em",
+  "alignment": "center"
+}

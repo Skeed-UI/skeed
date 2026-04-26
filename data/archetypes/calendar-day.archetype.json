@@ -1,0 +1,17 @@
+{
+  "id": "calendar-day",
+  "name": "CalendarDay",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe CalendarDay",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

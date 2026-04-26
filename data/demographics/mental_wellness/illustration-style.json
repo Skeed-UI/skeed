@@ -1,0 +1,20 @@
+{
+  "demographic": "mental_wellness",
+  "schemaVersion": 1,
+  "promptSuffix": "Calming mental wellness illustration, serene nature landscapes, gentle flowing water, peaceful meditation scenes, soft morning light, mindfulness visuals, diverse people in calm contemplative poses, gentle organic shapes, soft violet (#8B5CF6) and lavender color palette, healing garden imagery, minimal distractions, hopeful and restorative mood, no clinical or sterile environments, warm and nurturing atmosphere",
+  "negativePromptSuffix": "no clinical hospital imagery, no sterile environments, no urgency or stress symbols, no dark or gloomy atmosphere, no overwhelming or chaotic compositions, no judgmental or shaming visuals, no unrealistic body standards, no medical equipment focus",
+  "preferredAspectRatios": ["16:9", "4:3", "1:1"],
+  "providerHints": {
+    "fal-flux": {
+      "model": "flux/schnell",
+      "steps": 4
+    },
+    "replicate": {
+      "model": "black-forest-labs/flux-schnell"
+    },
+    "openai-image": {
+      "model": "gpt-image-1",
+      "quality": "high"
+    }
+  }
+}

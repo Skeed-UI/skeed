@@ -1,0 +1,28 @@
+{
+  "id": "radio",
+  "name": "Radio",
+  "schemaVersion": 1,
+  "category": "atom",
+  "description": "Radio button with label and optional description. Also exports RadioGroup with fieldset/legend for accessible grouped selection in vertical or horizontal orientation.",
+  "tokensUsed": [
+    "color.brand.500",
+    "color.neutral.50",
+    "color.neutral.300",
+    "color.neutral.400",
+    "color.neutral.500",
+    "color.neutral.900",
+    "color.danger.600",
+    "radius.full",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

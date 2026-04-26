@@ -1,0 +1,67 @@
+{
+  "demographic": "gov",
+  "niche": "civic",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "complex-form-language",
+      "description": "Plain citizens cannot understand bureaucratic form language — legal jargon, undefined acronyms, and passive-voice instructions create confusion and form abandonment",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": [
+        "plainlanguage.gov research on government document comprehension",
+        "CFPB plain language usability studies"
+      ]
+    },
+    {
+      "id": "unclear-form-progress",
+      "description": "Multi-step forms with no visible progress indicator cause citizens to abandon submissions, not knowing how much remains or whether they can save and return",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": [
+        "USWDS multi-step form guidance",
+        "GOV.UK Design System research on form completion rates"
+      ]
+    },
+    {
+      "id": "status-ambiguity",
+      "description": "Applications submitted with no status tracking leave citizens anxious, generating repeated phone calls and service desk load while eroding trust in government systems",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": [
+        "USDS discovery research on benefits applications",
+        "GAO report on federal customer experience"
+      ]
+    },
+    {
+      "id": "inaccessible-pdfs",
+      "description": "Critical government documents distributed as untagged, inaccessible PDFs exclude screen reader users, people with cognitive disabilities, and mobile-only users",
+      "severity": 5,
+      "frequency": 4,
+      "evidence": [
+        "Section 508 enforcement complaints data",
+        "WebAIM PDF accessibility survey"
+      ]
+    },
+    {
+      "id": "session-timeout-loss",
+      "description": "Citizens lose all entered form data when sessions expire without warning — especially harmful for complex benefit applications that may take 30–60 minutes to complete",
+      "severity": 5,
+      "frequency": 3,
+      "evidence": [
+        "USWDS session management best practices",
+        "WCAG 2.1 SC 2.2.1 timing adjustable requirement"
+      ]
+    },
+    {
+      "id": "mobile-hostile-forms",
+      "description": "Government forms designed only for desktop break on phones — fixed-width tables, tiny tap targets, and no mobile keyboard optimization exclude the 30%+ of citizens who are mobile-only",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": [
+        "Pew Research mobile-only internet access data",
+        "USDS mobile form usability testing"
+      ]
+    }
+  ]
+}

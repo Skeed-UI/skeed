@@ -1,0 +1,20 @@
+{
+  "demographic": "education",
+  "schemaVersion": 1,
+  "promptSuffix": "Educational illustration style, diverse representation of students and teachers across ages and backgrounds, modern classroom environments, books, graduation caps, academic achievement symbols, inclusive and welcoming atmosphere, clean flat design with sky blue (#0EA5E9) accents, warm and encouraging mood, no stereotypes, accessibility-friendly visuals",
+  "negativePromptSuffix": "no discriminatory imagery, no stereotypes, no dark patterns, no distracting elements, no cluttered compositions, no aggressive marketing aesthetics, no violent or inappropriate content",
+  "preferredAspectRatios": ["16:9", "4:3", "1:1"],
+  "providerHints": {
+    "fal-flux": {
+      "model": "flux/schnell",
+      "steps": 4
+    },
+    "replicate": {
+      "model": "black-forest-labs/flux-schnell"
+    },
+    "openai-image": {
+      "model": "gpt-image-1",
+      "quality": "high"
+    }
+  }
+}

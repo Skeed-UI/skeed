@@ -1,0 +1,11 @@
+{
+  "demographic": "education",
+  "containerStyle": "lockup-stacked",
+  "schemaVersion": 1,
+  "layout": "vertical",
+  "spacing": 0.375,
+  "alignment": "center",
+  "minWidth": 80,
+  "maxWidth": 200,
+  "padding": { "x": 0.75, "y": 0.5 }
+}

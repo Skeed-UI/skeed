@@ -1,0 +1,29 @@
+{
+  "id": "kpi-grid",
+  "name": "KpiGrid",
+  "schemaVersion": 1,
+  "category": "organism",
+  "description": "Key metric cards displayed in a responsive grid for dashboards and analytics pages. Each card shows a label, value, optional unit, and trend indicator with up/down/flat semantic color coding.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.200",
+    "color.neutral.500",
+    "color.neutral.600",
+    "color.neutral.900",
+    "color.success.600",
+    "color.danger.600",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "density.cozy.padx",
+    "density.cozy.pady",
+    "density.cozy.gap",
+    "radius.2",
+    "shadow.1"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

@@ -1,0 +1,11 @@
+{
+  "demographic": "mental_wellness",
+  "containerStyle": "lockup-horizontal",
+  "schemaVersion": 1,
+  "layout": "horizontal",
+  "spacing": 0.5,
+  "alignment": "center",
+  "minWidth": 120,
+  "maxWidth": 400,
+  "padding": { "x": 0.75, "y": 0.5 }
+}

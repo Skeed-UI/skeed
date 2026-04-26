@@ -1,0 +1,40 @@
+{
+  "demographic": "health",
+  "niche": "patient",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": [
+    "verified_check",
+    "expert_byline",
+    "institutional_seal",
+    "compliance_badge",
+    "soft_rounding"
+  ],
+  "motivationPattern": "fear",
+  "formality": 3,
+  "noveltyTolerance": 1,
+  "accessibilityFloor": "AAA",
+  "forbiddenPatterns": [
+    "pii-in-url",
+    "pii-in-localStorage",
+    "pii-in-analytics-events",
+    "autoplay-sound",
+    "urgency-timer",
+    "fake-scarcity",
+    "notification-spam",
+    "pre-checked-consent",
+    "hidden-data-sharing",
+    "social-comparison",
+    "countdown-timer"
+  ],
+  "research": {
+    "notes": "Health UI users include elderly (cognitive decline, motor impairment), patients under stress, caregivers managing others' health, and clinical staff under time pressure. HIPAA-adjacent: never send PHI in URLs, localStorage, or analytics. Tap targets minimum 48px. Use plain language (grade 6–8 reading level). Always provide emergency contact info (911) for health-critical flows. Error messages must be specific and actionable. Session timeouts must warn with accessible modal. Never use red for non-emergency decorative purposes — it causes patient anxiety.",
+    "sources": [
+      "https://www.hhs.gov/hipaa/",
+      "https://www.nngroup.com/articles/healthcare-ux/",
+      "https://www.w3.org/WAI/WCAG21/",
+      "https://plainlanguage.gov/",
+      "https://www.cms.gov/medicare/regulations-guidance/508-standards"
+    ]
+  }
+}

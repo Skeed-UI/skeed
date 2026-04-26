@@ -1,0 +1,17 @@
+{
+  "id": "chat-message",
+  "name": "ChatMessage",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe ChatMessage",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

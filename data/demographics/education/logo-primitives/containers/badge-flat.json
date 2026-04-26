@@ -1,0 +1,12 @@
+{
+  "demographic": "education",
+  "containerStyle": "badge-flat",
+  "schemaVersion": 1,
+  "layout": "badge",
+  "shape": "rounded",
+  "border": true,
+  "alignment": "center",
+  "minWidth": 60,
+  "maxWidth": 150,
+  "padding": { "x": 0.75, "y": 0.375 }
+}

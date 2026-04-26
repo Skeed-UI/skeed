@@ -1,0 +1,17 @@
+{
+  "id": "onboarding-step",
+  "name": "OnboardingStep",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe OnboardingStep",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

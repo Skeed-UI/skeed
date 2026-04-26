@@ -1,0 +1,25 @@
+{
+  "id": "empty-state",
+  "name": "EmptyState",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "No-content placeholder shown when lists or tables are empty. Centered layout with optional illustration slot, title, description, and action button. Uses role=status and aria-live for accessibility.",
+  "tokensUsed": [
+    "color.neutral.400",
+    "color.neutral.600",
+    "color.neutral.900",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.6",
+    "spacing.10",
+    "spacing.16"
+  ],
+  "assetSlots": [
+    { "role": "illustration", "type": "hero_illustration", "required": false }
+  ],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

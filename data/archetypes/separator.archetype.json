@@ -1,0 +1,17 @@
+{
+  "id": "separator",
+  "name": "Separator",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Separator",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

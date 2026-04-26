@@ -1,0 +1,12 @@
+{
+  "id": "clean-sans",
+  "style": "clean-sans",
+  "fontFamily": "Inter",
+  "fallback": ["system-ui", "sans-serif"],
+  "weights": [600],
+  "features": ["ss01"],
+  "letterSpacing": "-0.01em",
+  "textTransform": "none",
+  "sizeMultiplier": 1.0,
+  "uppercase": false
+}

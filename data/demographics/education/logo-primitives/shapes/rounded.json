@@ -1,0 +1,9 @@
+{
+  "demographic": "education",
+  "shapeKind": "rounded",
+  "schemaVersion": 1,
+  "style": "rounded",
+  "cornerRadius": 0.5,
+  "minSize": 2,
+  "maxSize": 8
+}

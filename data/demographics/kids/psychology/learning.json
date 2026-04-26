@@ -1,0 +1,31 @@
+{
+  "demographic": "kids",
+  "niche": "learning",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "minimal",
+  "trustCuesNeeded": ["mascot", "soft_rounding"],
+  "motivationPattern": "intrinsic",
+  "formality": 1,
+  "noveltyTolerance": 4,
+  "accessibilityFloor": "AAA",
+  "forbiddenPatterns": [
+    "autoplay-audio",
+    "autoplay-video",
+    "infinite-scroll",
+    "urgency-timer",
+    "fake-scarcity",
+    "modal-overlay-on-load",
+    "targeted-advertising",
+    "third-party-tracking",
+    "data-collection-without-parental-consent",
+    "social-comparison-shaming"
+  ],
+  "research": {
+    "sources": [
+      "https://gapsystudio.com/blog/ux-design-for-kids/",
+      "https://www.w3.org/TR/coga-usable/",
+      "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/childrens-code-guidance-and-resources/age-appropriate-design-a-code-of-practice-for-online-services/"
+    ],
+    "notes": "Ages 5-10. Tap targets ≥48px. Instant feedback (<200ms). Haptic + sound on success. Avoid spinner-only feedback. Modals are disorienting — prefer inline state changes. UK Age-Appropriate Design Code mandates high privacy defaults and no nudge-toward-low-privacy patterns."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "serif-institutional",
+  "style": "serif-institutional",
+  "fontFamily": "Public Sans",
+  "fallback": ["Source Sans 3", "system-ui", "sans-serif"],
+  "weights": [700],
+  "features": [],
+  "letterSpacing": "0.02em",
+  "textTransform": "uppercase",
+  "sizeMultiplier": 0.95,
+  "uppercase": true
+}

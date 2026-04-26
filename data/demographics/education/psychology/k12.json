@@ -1,0 +1,35 @@
+{
+  "demographic": "education",
+  "niche": "k12",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": [
+    "progress_indicators",
+    "achievement_badges",
+    "clear_instructions",
+    "parental_controls",
+    "accessibility_compliance"
+  ],
+  "motivationPattern": "intrinsic",
+  "formality": 3,
+  "noveltyTolerance": 3,
+  "accessibilityFloor": "AAA",
+  "forbiddenPatterns": [
+    "gamification-exploitation",
+    " addictive-notification-design",
+    "hidden-premium-content",
+    "social-pressure-tactics",
+    "dark-patterns-consent",
+    "manipulative-engagement-loops"
+  ],
+  "research": {
+    "sources": [
+      "WCAG 2.1 AAA Guidelines — https://www.w3.org/WAI/WCAG21/quickref/",
+      "Universal Design for Learning (UDL) Guidelines — http://www.cast.org/udl/",
+      "Digital Promise — Research on Learner Variability — https://digitalpromise.org/initiative/learner-variability/",
+      "EdTech Evidence Standards — https://ies.ed.gov/ncee/wwc/",
+      "Children's Online Privacy Protection Act (COPPA) — https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa"
+    ],
+    "notes": "Educational users span a wide age range from 5-18 plus adult educators. Cognitive load must be minimized to focus attention on learning objectives, not interface mechanics. AAA accessibility compliance is required to serve students with disabilities. Progress indicators and achievement systems must support intrinsic motivation without exploitative gamification. Parental controls and privacy protections are legally and ethically mandatory. Instructions must be explicit and jargon-free. Novelty tolerance is moderate—familiar patterns reduce cognitive overhead but some engagement features are appropriate. Trust is built through transparency, safety, and clear educational value. Social features must be carefully designed to avoid cyberbullying or social pressure."
+  }
+}

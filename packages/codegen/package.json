@@ -1,0 +1,40 @@
+{
+  "name": "@skeed/codegen",
+  "version": "0.1.0",
+  "description": "Component generation engine for Skeed - transforms archetypes × presets × densities into resolved components",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./density-applier": {
+      "types": "./dist/density-applier.d.ts",
+      "default": "./dist/density-applier.js"
+    },
+    "./component-emitter": {
+      "types": "./dist/component-emitter.d.ts",
+      "default": "./dist/component-emitter.js"
+    },
+    "./generate-variants": {
+      "types": "./dist/generate-variants.d.ts",
+      "default": "./dist/generate-variants.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "lint": "biome lint src"
+  },
+  "dependencies": {
+    "@skeed/contracts": "workspace:*",
+    "@skeed/core": "workspace:*",
+    "@skeed/archetypes-loader": "workspace:*",
+    "@skeed/demographics-loader": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

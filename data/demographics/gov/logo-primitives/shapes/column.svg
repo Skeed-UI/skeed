@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" data-skeed-primitive="column" data-kind="shape">
+  <rect x="8" y="8" width="48" height="6" fill="currentColor"/>
+  <rect x="20" y="14" width="8" height="36" fill="currentColor"/>
+  <rect x="36" y="14" width="8" height="36" fill="currentColor"/>
+  <rect x="8" y="50" width="48" height="6" fill="currentColor"/>
+</svg>

@@ -1,0 +1,32 @@
+{
+  "id": "avatar",
+  "name": "Avatar",
+  "schemaVersion": 1,
+  "category": "atom",
+  "description": "User or entity representation using an image or initials fallback. Supports circle and square shapes, five sizes, and optional status indicator dots for online, offline, busy, and away states.",
+  "tokensUsed": [
+    "color.brand.100",
+    "color.brand.700",
+    "color.neutral.50",
+    "color.neutral.400",
+    "color.success.500",
+    "color.danger.500",
+    "color.warning.500",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.6",
+    "spacing.8",
+    "spacing.10",
+    "spacing.14",
+    "spacing.18",
+    "radius.2"
+  ],
+  "assetSlots": [
+    { "role": "avatar", "type": "avatar", "required": false }
+  ],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": "card",
+  "name": "Card",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "Generic content container with optional header, body, and footer subcomponents. Supports elevated (shadow), outlined (border), and flat variants with interactive hover/focus states for clickable cards.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.100",
+    "color.neutral.200",
+    "color.neutral.900",
+    "color.brand.500",
+    "spacing.3",
+    "spacing.5",
+    "spacing.6",
+    "density.cozy.padx",
+    "density.cozy.pady",
+    "radius.2",
+    "shadow.1",
+    "shadow.2",
+    "motion.duration.fast",
+    "motion.easing.default"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

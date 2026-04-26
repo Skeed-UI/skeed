@@ -1,0 +1,30 @@
+{
+  "id": "search-bar",
+  "name": "SearchBar",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "Search input with leading search icon, optional loading spinner, and clearable X button. Wraps in role=search/form for full accessibility. Supports sm/md/lg sizes.",
+  "tokensUsed": [
+    "color.brand.500",
+    "color.neutral.50",
+    "color.neutral.300",
+    "color.neutral.400",
+    "color.neutral.900",
+    "radius.2",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.8",
+    "spacing.10",
+    "spacing.11",
+    "density.cozy.padx",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

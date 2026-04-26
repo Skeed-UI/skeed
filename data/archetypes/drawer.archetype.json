@@ -1,0 +1,30 @@
+{
+  "id": "drawer",
+  "name": "Drawer",
+  "schemaVersion": 1,
+  "category": "organism",
+  "description": "Slide-in panel overlay (side sheet) for secondary content or mobile navigation. Supports left, right, and bottom entry points with sm/md/lg size variants. Includes backdrop, Escape-key close, body-scroll lock, and ARIA modal semantics.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.100",
+    "color.neutral.200",
+    "color.neutral.500",
+    "color.neutral.900",
+    "color.brand.500",
+    "spacing.4",
+    "spacing.6",
+    "spacing.8",
+    "spacing.10",
+    "radius.1",
+    "font.display",
+    "motion.duration.fast",
+    "motion.duration.normal",
+    "motion.easing.default",
+    "shadow.1"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": ["kids"]
+}

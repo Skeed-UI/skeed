@@ -1,0 +1,12 @@
+{
+  "id": "geometric-sans",
+  "style": "geometric-sans",
+  "fontFamily": "DM Sans",
+  "fallback": ["Inter", "system-ui", "sans-serif"],
+  "weights": [700],
+  "features": ["ss01"],
+  "letterSpacing": "-0.02em",
+  "textTransform": "none",
+  "sizeMultiplier": 1.0,
+  "uppercase": false
+}

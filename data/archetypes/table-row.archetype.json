@@ -1,0 +1,17 @@
+{
+  "id": "table-row",
+  "name": "TableRow",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe TableRow",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

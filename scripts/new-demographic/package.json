@@ -1,0 +1,9 @@
+{
+  "name": "@skeed/scripts-new-demographic",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": { "start": "tsx index.ts" },
+  "devDependencies": { "@types/node": "^22.10.0", "tsx": "^4.19.2", "typescript": "^5.7.2" }
+}

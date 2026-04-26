@@ -1,0 +1,9 @@
+{
+  "demographic": "mental_wellness",
+  "shapeKind": "organic",
+  "schemaVersion": 1,
+  "style": "organic",
+  "cornerRadius": 0.75,
+  "minSize": 2,
+  "maxSize": 8
+}

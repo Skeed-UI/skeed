@@ -1,0 +1,73 @@
+# Skeed CODEOWNERS
+# https://docs.github.com/en/repositories/managing-your-repositories-settings-and-features/customizing-your-repository/about-code-owners
+
+# Core (default fallback)
+*                                       @skeed/core
+
+# Stable contracts — every change here is a breaking change candidate
+/packages/contracts/                    @skeed/core
+/packages/core/                         @skeed/core
+/packages/pipeline/orchestrator.ts      @skeed/core
+/packages/indexer/migrations/           @skeed/core
+
+# Pipeline stages — per-stage owners (assigned ad hoc)
+/packages/pipeline/src/stages/01-*.ts   @skeed/pipeline-maintainers
+/packages/pipeline/src/stages/02-*.ts   @skeed/pipeline-maintainers
+/packages/pipeline/src/stages/03-*.ts   @skeed/pipeline-maintainers
+/packages/pipeline/src/stages/04-*.ts   @skeed/scoring-maintainers
+/packages/pipeline/src/stages/06-*.ts   @skeed/research-maintainers
+/packages/pipeline/src/stages/07-*.ts   @skeed/scoring-maintainers
+/packages/pipeline/src/stages/10-*.ts   @skeed/brand-maintainers
+/packages/pipeline/src/stages/11-*.ts   @skeed/design-system-maintainers
+/packages/pipeline/src/stages/13-*.ts   @skeed/landing-maintainers
+/packages/pipeline/src/stages/15-*.ts   @skeed/composition-maintainers
+/packages/pipeline/src/stages/16-*.ts   @skeed/asset-maintainers
+
+# Asset sources — one maintainer group covers them all
+/packages/asset-source-*/               @skeed/asset-maintainers
+/packages/assets-router/                @skeed/asset-maintainers
+/packages/asset-logo-svg/               @skeed/asset-maintainers
+
+# LLM providers
+/packages/llm-provider-*/               @skeed/llm-maintainers
+/packages/llm-cache/                    @skeed/llm-maintainers
+
+# Guards + scoring + research
+/packages/guards/                       @skeed/guards-maintainers
+/packages/scoring/                      @skeed/scoring-maintainers
+/packages/research-bridge/              @skeed/research-maintainers
+/packages/landing-options/              @skeed/landing-maintainers
+
+# Demographic content — domain leads per demographic, plus a11y review for AAA-strict
+/data/demographics/kids/                @skeed/kids-leads @skeed/a11y-reviewers
+/data/demographics/education/           @skeed/education-leads @skeed/a11y-reviewers
+/data/demographics/health/              @skeed/health-leads @skeed/a11y-reviewers @skeed/clinical-reviewers
+/data/demographics/gov/                 @skeed/gov-leads @skeed/a11y-reviewers
+/data/demographics/mental_wellness/     @skeed/wellness-leads @skeed/a11y-reviewers
+/data/demographics/teens/               @skeed/teens-leads
+/data/demographics/working_class/       @skeed/working-class-leads
+/data/demographics/religious/           @skeed/religious-leads
+/data/demographics/legal/               @skeed/legal-leads
+/data/demographics/erp/                 @skeed/erp-leads
+/data/demographics/sales_crm/           @skeed/sales-leads
+/data/demographics/hightech/            @skeed/hightech-leads
+/data/demographics/social/              @skeed/social-leads
+/data/demographics/monitoring/          @skeed/monitoring-leads
+/data/demographics/classic/             @skeed/classic-leads
+/data/demographics/fintech/             @skeed/fintech-leads
+/data/demographics/ai_apps/             @skeed/ai-apps-leads
+/data/demographics/marketplace/         @skeed/marketplace-leads
+/data/demographics/listings/            @skeed/listings-leads
+/data/demographics/military/            @skeed/military-leads
+/data/demographics/productivity/        @skeed/productivity-leads
+
+# Archetypes — generally light review; complex archetypes (organism+) want a designer
+/data/archetypes/                       @skeed/archetype-maintainers
+
+# Repo infra
+/.github/                               @skeed/infra
+/turbo.json                             @skeed/infra
+/pnpm-workspace.yaml                    @skeed/infra
+/biome.json                             @skeed/infra
+/tsconfig.base.json                     @skeed/infra
+/scripts/                               @skeed/infra

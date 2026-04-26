@@ -1,0 +1,5 @@
+{
+  "_TODO": "Replace with full DemographicPreset. See packages/contracts/src/preset.ts for schema. See data/demographics/kids/preset.json for a worked example.",
+  "id": "REPLACE_ME",
+  "schemaVersion": 1
+}

@@ -1,0 +1,12 @@
+{
+  "demographic": "productivity",
+  "schemaVersion": 1,
+  "promptSuffix": "clean flat illustration, indigo and violet color palette (#6366F1 primary), abstract workflow and focus concepts, minimal geometric shapes, kanban-style flow imagery, calendar and checklist motifs, modern productivity app aesthetic, soft gradient backgrounds, no text overlays, no human faces",
+  "negativePromptSuffix": "no stressed workers, no overflowing inboxes as negative imagery, no clichéd lightbulbs or clocks, no cluttered busy compositions, no realistic photography, no dark moody colors",
+  "preferredAspectRatios": ["16:9", "4:3", "1:1"],
+  "providerHints": {
+    "fal-flux": { "model": "flux/schnell", "steps": 4 },
+    "replicate": { "model": "black-forest-labs/flux-schnell" },
+    "openai-image": { "model": "gpt-image-1", "quality": "high" }
+  }
+}

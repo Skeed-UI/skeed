@@ -1,0 +1,28 @@
+{
+  "id": "navbar",
+  "name": "Navbar",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "Top navigation bar with logo area, nav links, and optional CTA/user menu. Supports sticky positioning with backdrop blur.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.200",
+    "color.neutral.700",
+    "color.brand.500",
+    "spacing.1",
+    "spacing.2",
+    "spacing.4",
+    "spacing.6",
+    "density.cozy.gap",
+    "radius.1",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default",
+    "shadow.1"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

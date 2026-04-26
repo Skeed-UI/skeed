@@ -1,0 +1,35 @@
+{
+  "demographic": "mental_wellness",
+  "niche": "therapy",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": [
+    "privacy_indicators",
+    "professional_credentials",
+    "crisis_resources",
+    "clear_consent_flows",
+    "accessibility_compliance"
+  ],
+  "motivationPattern": "intrinsic",
+  "formality": 2,
+  "noveltyTolerance": 2,
+  "accessibilityFloor": "AAA",
+  "forbiddenPatterns": [
+    "urgent-scarcity-tactics",
+    "shame-based-marketing",
+    "misleading-therapy-claims",
+    "privacy-dark-patterns",
+    "manipulative-upsells",
+    "unqualified-advice"
+  ],
+  "research": {
+    "sources": [
+      "APA Guidelines — Telepsychology and Digital Mental Health (2021)",
+      "WCAG 2.1 AAA Guidelines — https://www.w3.org/WAI/WCAG21/quickref/",
+      "Crisis Text Line — Design Principles for Crisis Support (2022)",
+      "NIMH — Digital Mental Health Research (2023)",
+      "HIPAA Privacy Rule — https://www.hhs.gov/hipaa/for-professionals/privacy/index.html"
+    ],
+    "notes": "Mental wellness users are often in vulnerable emotional states. The interface must be calming, non-judgmental, and explicitly privacy-protective. Crisis resources must be prominently available. Progress tracking should focus on wellbeing trends, not gamified achievements. Formality is low to create a safe, approachable space. AAA accessibility is essential for users with cognitive differences or disabilities. Trust is paramount — any dark patterns, urgency tactics, or privacy violations can cause serious harm to vulnerable users."
+  }
+}

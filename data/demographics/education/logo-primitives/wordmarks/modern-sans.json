@@ -1,0 +1,12 @@
+{
+  "demographic": "education",
+  "wordmarkStyle": "modern-sans",
+  "schemaVersion": 1,
+  "fontFamily": "Open Sans",
+  "fallback": ["system-ui", "sans-serif"],
+  "weights": [600, 700],
+  "features": [],
+  "letterSpacing": 0.02,
+  "textTransform": "none",
+  "sizeMultiplier": 1
+}

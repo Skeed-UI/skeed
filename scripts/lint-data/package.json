@@ -1,0 +1,21 @@
+{
+  "name": "@skeed/scripts-lint-data",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Walks data/ and validates every artifact against @skeed/contracts schemas. Run in CI on every PR.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "tsx index.ts"
+  },
+  "dependencies": {
+    "@skeed/archetypes-loader": "workspace:*",
+    "@skeed/contracts": "workspace:*",
+    "@skeed/demographics-loader": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

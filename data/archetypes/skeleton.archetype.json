@@ -1,0 +1,23 @@
+{
+  "id": "skeleton",
+  "name": "Skeleton",
+  "schemaVersion": 1,
+  "category": "atom",
+  "description": "Content placeholder shown while real content loads. Supports text (with multi-line staggered widths), circular, rectangular, and rounded variants. Dynamic width and height are passed via the style attribute; animation uses Tailwind animate-pulse.",
+  "tokensUsed": [
+    "color.neutral.200",
+    "spacing.2",
+    "spacing.4",
+    "spacing.6",
+    "spacing.9",
+    "radius.0",
+    "radius.1",
+    "radius.2",
+    "radius.9999"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

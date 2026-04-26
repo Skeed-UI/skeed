@@ -1,0 +1,17 @@
+{
+  "id": "link",
+  "name": "Link",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Link",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

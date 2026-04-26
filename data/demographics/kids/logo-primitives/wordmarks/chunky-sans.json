@@ -1,0 +1,11 @@
+{
+  "id": "chunky-sans",
+  "kind": "wordmark",
+  "fontFamily": "Fredoka",
+  "fontWeight": 700,
+  "fontSize": 48,
+  "letterSpacing": -0.5,
+  "transform": "none",
+  "minBrandLength": 2,
+  "maxBrandLength": 14
+}

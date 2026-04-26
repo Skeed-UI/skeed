@@ -1,0 +1,17 @@
+{
+  "id": "stepper",
+  "name": "Stepper",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Stepper",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

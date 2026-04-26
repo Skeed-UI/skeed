@@ -1,0 +1,8 @@
+{
+  "id": "lockup-horizontal",
+  "style": "lockup-horizontal",
+  "layout": "horizontal",
+  "markPosition": "left",
+  "spacing": "0.5em",
+  "alignment": "center"
+}

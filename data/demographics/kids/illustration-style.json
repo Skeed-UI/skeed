@@ -1,0 +1,12 @@
+{
+  "demographic": "kids",
+  "schemaVersion": 1,
+  "promptSuffix": "rounded chunky cartoon style, soft pastel palette (pink #FF6B9D, yellow #FFD166, green #06D6A0, sky blue #4CC9F0), friendly mascot when applicable, simple shapes, no text, no faces of real people, age-appropriate for 5-10 year olds, plain or simple background, cheerful and encouraging mood",
+  "negativePromptSuffix": "no scary content, no realistic violence, no adult themes, no text overlays, no photographic style, no copyrighted characters, no harsh shadows, no dark moody palette",
+  "preferredAspectRatios": ["1:1", "4:3", "16:9"],
+  "providerHints": {
+    "fal-flux": { "model": "flux/schnell", "steps": 4 },
+    "replicate": { "model": "black-forest-labs/flux-schnell" },
+    "openai-image": { "model": "gpt-image-1", "quality": "high" }
+  }
+}

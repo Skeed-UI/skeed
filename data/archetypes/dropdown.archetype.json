@@ -1,0 +1,17 @@
+{
+  "id": "dropdown",
+  "name": "Dropdown",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Dropdown",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

@@ -1,0 +1,170 @@
+{
+  "id": "ai_apps",
+  "schemaVersion": 1,
+  "palette": {
+    "brand": {
+      "50": "#F5F3FF",
+      "100": "#EDE9FE",
+      "200": "#DDD6FE",
+      "300": "#C4B5FD",
+      "400": "#A78BFA",
+      "500": "#8B5CF6",
+      "600": "#7C3AED",
+      "700": "#6D28D9",
+      "800": "#5B21B6",
+      "900": "#4C1D95",
+      "950": "#2E1065"
+    },
+    "neutral": {
+      "50": "#FAFAFA",
+      "100": "#F4F4F5",
+      "200": "#E4E4E7",
+      "300": "#D4D4D8",
+      "400": "#A1A1AA",
+      "500": "#71717A",
+      "600": "#52525B",
+      "700": "#3F3F46",
+      "800": "#27272A",
+      "900": "#18181B",
+      "950": "#09090B"
+    },
+    "success": {
+      "50": "#F0FDF4",
+      "100": "#DCFCE7",
+      "200": "#BBF7D0",
+      "300": "#86EFAC",
+      "400": "#4ADE80",
+      "500": "#22C55E",
+      "600": "#16A34A",
+      "700": "#15803D",
+      "800": "#166534",
+      "900": "#14532D",
+      "950": "#052E16"
+    },
+    "warning": {
+      "50": "#FFFBEB",
+      "100": "#FEF3C7",
+      "200": "#FDE68A",
+      "300": "#FCD34D",
+      "400": "#FBBF24",
+      "500": "#F59E0B",
+      "600": "#D97706",
+      "700": "#B45309",
+      "800": "#92400E",
+      "900": "#78350F",
+      "950": "#451A03"
+    },
+    "danger": {
+      "50": "#FEF2F2",
+      "100": "#FEE2E2",
+      "200": "#FECACA",
+      "300": "#FCA5A5",
+      "400": "#F87171",
+      "500": "#EF4444",
+      "600": "#DC2626",
+      "700": "#B91C1C",
+      "800": "#991B1B",
+      "900": "#7F1D1D",
+      "950": "#450A0A"
+    },
+    "info": {
+      "50": "#EFF6FF",
+      "100": "#DBEAFE",
+      "200": "#BFDBFE",
+      "300": "#93C5FD",
+      "400": "#60A5FA",
+      "500": "#3B82F6",
+      "600": "#2563EB",
+      "700": "#1D4ED8",
+      "800": "#1E40AF",
+      "900": "#1E3A8A",
+      "950": "#172554"
+    },
+    "contrastPairs": [
+      { "fg": "neutral.900", "bg": "neutral.50", "ratio": 21, "passesAA": true, "passesAAA": true },
+      { "fg": "neutral.50", "bg": "neutral.900", "ratio": 21, "passesAA": true, "passesAAA": true },
+      { "fg": "brand.700", "bg": "brand.50", "ratio": 7.5, "passesAA": true, "passesAAA": true }
+    ]
+  },
+  "typography": {
+    "display": {
+      "family": "Inter",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 500, 600, 700],
+      "features": []
+    },
+    "body": {
+      "family": "Inter",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 500, 600],
+      "features": []
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "fallback": ["Consolas", "monospace"],
+      "weights": [400, 500],
+      "features": ["zero"]
+    },
+    "numeric": {
+      "family": "JetBrains Mono",
+      "fallback": ["Consolas", "monospace"],
+      "weights": [400, 500],
+      "features": ["tnum", "zero"]
+    },
+    "scale": [0.875, 1, 1.125, 1.25, 1.5, 2, 2.5]
+  },
+  "spacing": [0, 0.25, 0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48],
+  "radius": [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 80, 160, 320, 640, 960, 9999],
+  "density": {
+    "compact": { "padY": 0.375, "padX": 0.75, "gap": 0.5, "lineHeight": 1.4 },
+    "cozy": { "padY": 0.625, "padX": 1, "gap": 0.75, "lineHeight": 1.6 },
+    "comfy": { "padY": 1, "padX": 1.5, "gap": 1, "lineHeight": 1.8 }
+  },
+  "motion": {
+    "profile": "playful",
+    "durations": {
+      "fast": 150,
+      "normal": 250,
+      "slow": 350
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+    }
+  },
+  "iconography": {
+    "style": "line",
+    "pack": "lucide"
+  },
+  "borders": {
+    "width": 1,
+    "style": "solid",
+    "treatment": "soft"
+  },
+  "elevation": {
+    "shadows": [
+      "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+      "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+      "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+      "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+    ],
+    "surfaceTreatment": "glass"
+  },
+  "illustrationStylePrompt": "Futuristic AI illustration style, neural networks and data visualization, abstract tech patterns, glowing nodes and connections, deep purple (#8B5CF6) accents on dark backgrounds, clean minimal tech aesthetic, innovation and intelligence themes, no human faces, modern and cutting-edge",
+  "logoPrimitiveConstraints": {
+    "allowedShapeKinds": ["geometric", "angular", "tech"],
+    "allowedMarkKinds": ["chip", "node", "spark", "orbit"],
+    "allowedWordmarkStyles": ["modern-sans", "geometric-sans"],
+    "allowedContainerStyles": ["lockup-horizontal", "lockup-stacked"]
+  },
+  "defaultDensity": "cozy",
+  "voice": {
+    "tone": ["intelligent", "helpful", "precise", "approachable"],
+    "samples": {
+      "cta": "Generate",
+      "success": "Done! Here's what I created.",
+      "error": "I couldn't complete that. Let me try a different approach.",
+      "empty": "Ready when you are. What would you like to create?"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "skeed",
+  "private": true,
+  "version": "0.1.0",
+  "description": "MCP-native demographic design system builder",
+  "license": "MIT",
+  "packageManager": "pnpm@10.32.1",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "lint:data": "tsx scripts/lint-data/index.ts",
+    "new:demographic": "tsx scripts/new-demographic/index.ts",
+    "new:archetype": "tsx scripts/new-archetype/index.ts",
+    "new:asset-source": "tsx scripts/new-asset-source/index.ts",
+    "new:llm-provider": "tsx scripts/new-llm-provider/index.ts",
+    "build-index": "pnpm --filter @skeed/indexer build-index",
+    "mcp": "pnpm --filter @skeed/mcp-server start",
+    "validate:tokens": "tsx scripts/validate-tokens.ts",
+    "validate:contrast": "tsx scripts/validate-contrast.ts",
+    "validate:ethics": "tsx scripts/validate-ethics.ts",
+    "validate:bundle": "tsx scripts/bundle-size-check.ts",
+    "smoke-test": "tsx scripts/smoke-test-generation.ts",
+    "ci": "pnpm lint:data && pnpm typecheck && pnpm lint && pnpm validate:tokens && pnpm validate:contrast && pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "turbo": "^2.3.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["better-sqlite3"]
+  }
+}

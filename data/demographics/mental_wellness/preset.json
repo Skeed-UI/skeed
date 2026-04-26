@@ -1,0 +1,170 @@
+{
+  "id": "mental_wellness",
+  "schemaVersion": 1,
+  "palette": {
+    "brand": {
+      "50": "#F5F3FF",
+      "100": "#EDE9FE",
+      "200": "#DDD6FE",
+      "300": "#C4B5FD",
+      "400": "#A78BFA",
+      "500": "#8B5CF6",
+      "600": "#7C3AED",
+      "700": "#6D28D9",
+      "800": "#5B21B6",
+      "900": "#4C1D95",
+      "950": "#2E1065"
+    },
+    "neutral": {
+      "50": "#FAFAFA",
+      "100": "#F5F5F5",
+      "200": "#E5E5E5",
+      "300": "#D4D4D4",
+      "400": "#A3A3A3",
+      "500": "#737373",
+      "600": "#525252",
+      "700": "#404040",
+      "800": "#262626",
+      "900": "#171717",
+      "950": "#0A0A0A"
+    },
+    "success": {
+      "50": "#ECFDF5",
+      "100": "#D1FAE5",
+      "200": "#A7F3D0",
+      "300": "#6EE7B7",
+      "400": "#34D399",
+      "500": "#10B981",
+      "600": "#059669",
+      "700": "#047857",
+      "800": "#065F46",
+      "900": "#064E3B",
+      "950": "#022C22"
+    },
+    "warning": {
+      "50": "#FFFBEB",
+      "100": "#FEF3C7",
+      "200": "#FDE68A",
+      "300": "#FCD34D",
+      "400": "#FBBF24",
+      "500": "#F59E0B",
+      "600": "#D97706",
+      "700": "#B45309",
+      "800": "#92400E",
+      "900": "#78350F",
+      "950": "#451A03"
+    },
+    "danger": {
+      "50": "#FEF2F2",
+      "100": "#FEE2E2",
+      "200": "#FECACA",
+      "300": "#FCA5A5",
+      "400": "#F87171",
+      "500": "#EF4444",
+      "600": "#DC2626",
+      "700": "#B91C1C",
+      "800": "#991B1B",
+      "900": "#7F1D1D",
+      "950": "#450A0A"
+    },
+    "info": {
+      "50": "#EFF6FF",
+      "100": "#DBEAFE",
+      "200": "#BFDBFE",
+      "300": "#93C5FD",
+      "400": "#60A5FA",
+      "500": "#3B82F6",
+      "600": "#2563EB",
+      "700": "#1D4ED8",
+      "800": "#1E40AF",
+      "900": "#1E3A8A",
+      "950": "#172554"
+    },
+    "contrastPairs": [
+      { "fg": "neutral.900", "bg": "neutral.50", "ratio": 21, "passesAA": true, "passesAAA": true },
+      { "fg": "neutral.50", "bg": "neutral.900", "ratio": 21, "passesAA": true, "passesAAA": true },
+      { "fg": "brand.700", "bg": "brand.50", "ratio": 7.5, "passesAA": true, "passesAAA": true }
+    ]
+  },
+  "typography": {
+    "display": {
+      "family": "Nunito",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 600, 700],
+      "features": []
+    },
+    "body": {
+      "family": "Nunito",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 600],
+      "features": []
+    },
+    "mono": {
+      "family": "Fira Code",
+      "fallback": ["Consolas", "monospace"],
+      "weights": [400, 500],
+      "features": []
+    },
+    "numeric": {
+      "family": "Fira Code",
+      "fallback": ["Consolas", "monospace"],
+      "weights": [400, 500],
+      "features": ["tnum"]
+    },
+    "scale": [0.875, 1, 1.125, 1.25, 1.5, 2, 2.5]
+  },
+  "spacing": [0, 0.25, 0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48],
+  "radius": [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 80, 160, 320, 640, 960, 9999],
+  "density": {
+    "compact": { "padY": 0.5, "padX": 1, "gap": 0.5, "lineHeight": 1.5 },
+    "cozy": { "padY": 0.75, "padX": 1.25, "gap": 0.75, "lineHeight": 1.6 },
+    "comfy": { "padY": 1.25, "padX": 1.75, "gap": 1, "lineHeight": 1.7 }
+  },
+  "motion": {
+    "profile": "subtle",
+    "durations": {
+      "fast": 200,
+      "normal": 300,
+      "slow": 500
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "gentle": "cubic-bezier(0.25, 0.1, 0.25, 1)"
+    }
+  },
+  "iconography": {
+    "style": "line",
+    "pack": "lucide"
+  },
+  "borders": {
+    "width": 1,
+    "style": "solid",
+    "treatment": "soft"
+  },
+  "elevation": {
+    "shadows": [
+      "0 1px 2px 0 rgb(0 0 0 / 0.03)",
+      "0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05)",
+      "0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05)",
+      "0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05)"
+    ],
+    "surfaceTreatment": "paper"
+  },
+  "illustrationStylePrompt": "Calming mental wellness illustration style, serene nature scenes, peaceful landscapes, mindfulness and meditation visuals, soft violet (#8B5CF6) accents, gentle gradients, minimal distractions, hopeful and healing atmosphere, diverse representation of people in wellness contexts, no clinical or sterile imagery, warm and approachable",
+  "logoPrimitiveConstraints": {
+    "allowedShapeKinds": ["rounded", "organic", "soft"],
+    "allowedMarkKinds": ["heart", "leaf", "wave", "sun"],
+    "allowedWordmarkStyles": ["humanist-sans", "rounded-sans"],
+    "allowedContainerStyles": ["lockup-horizontal", "lockup-stacked", "badge-flat"]
+  },
+  "defaultDensity": "comfy",
+  "voice": {
+    "tone": ["calming", "empathetic", "supportive", "hopeful", "non-judgmental"],
+    "samples": {
+      "cta": "Take a Moment",
+      "success": "You're making progress. Every step matters.",
+      "error": "Something went wrong. Let's try again when you're ready.",
+      "empty": "No sessions scheduled. Time to rest and recharge."
+    }
+  }
+}

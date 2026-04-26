@@ -1,0 +1,17 @@
+{
+  "id": "menu",
+  "name": "Menu",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Menu",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

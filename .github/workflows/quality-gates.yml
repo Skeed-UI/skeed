@@ -1,0 +1,183 @@
+name: Quality Gates
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Job 1: Lint and Type Check
+  lint:
+    name: Lint & Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Run Biome lint
+        run: pnpm lint
+      
+      - name: Type check all packages
+        run: pnpm typecheck
+  
+  # Job 2: Token Validation
+  token-validation:
+    name: Token Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Validate archetype tokens
+        run: |
+          echo "Checking for hardcoded values in archetypes..."
+          # This would run a script that checks all archetypes
+          node --experimental-vm-modules scripts/validate-tokens.js
+  
+  # Job 3: Contrast Validation
+  contrast-check:
+    name: WCAG Contrast Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Validate contrast ratios
+        run: |
+          echo "Checking WCAG contrast compliance..."
+          # Check all preset contrast pairs
+          node --experimental-vm-modules scripts/validate-contrast.js
+  
+  # Job 4: Ethics Guard
+  ethics-check:
+    name: Ethics & Accessibility
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Run ethics validation
+        run: |
+          echo "Checking ethics patterns..."
+          node --experimental-vm-modules scripts/validate-ethics.js
+  
+  # Job 5: Bundle Size Check
+  bundle-size:
+    name: Bundle Size Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Check bundle size limits
+        run: |
+          echo "Checking bundle sizes..."
+          node --experimental-vm-modules scripts/bundle-size-check.js
+
+  # Job 6: Test Suite
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Run all tests
+        run: pnpm test
+
+  # Job 7: Component Generation Smoke Test
+  generation-smoke-test:
+    name: Component Generation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Run generation smoke test
+        run: |
+          echo "Running component generation smoke test..."
+          # Generate a small subset to verify the pipeline works
+          node --experimental-vm-modules scripts/smoke-test-generation.js

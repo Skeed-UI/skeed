@@ -1,0 +1,17 @@
+{
+  "id": "label",
+  "name": "Label",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Label",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

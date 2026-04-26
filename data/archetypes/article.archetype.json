@@ -1,0 +1,17 @@
+{
+  "id": "article",
+  "name": "Article",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Article",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

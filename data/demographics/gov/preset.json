@@ -1,0 +1,179 @@
+{
+  "id": "gov",
+  "schemaVersion": 1,
+  "palette": {
+    "brand": {
+      "50": "#F0F4F9",
+      "100": "#D9E3F0",
+      "200": "#B4C7E2",
+      "300": "#8FAAD3",
+      "400": "#6A8EC4",
+      "500": "#2D6DB5",
+      "600": "#1B5BA3",
+      "700": "#0E4D93",
+      "800": "#093D7A",
+      "900": "#052D5F",
+      "950": "#031A38"
+    },
+    "neutral": {
+      "50": "#F9FAFB",
+      "100": "#F3F4F6",
+      "200": "#E5E7EB",
+      "300": "#D1D5DB",
+      "400": "#9CA3AF",
+      "500": "#6B7280",
+      "600": "#4B5563",
+      "700": "#374151",
+      "800": "#1F2937",
+      "900": "#111827",
+      "950": "#030712"
+    },
+    "success": {
+      "50": "#F0FDF4",
+      "100": "#DCFCE7",
+      "200": "#BBF7D0",
+      "300": "#86EFAC",
+      "400": "#4ADE80",
+      "500": "#22C55E",
+      "600": "#16A34A",
+      "700": "#15803D",
+      "800": "#166534",
+      "900": "#14532D",
+      "950": "#052E16"
+    },
+    "warning": {
+      "50": "#FFFBEB",
+      "100": "#FEF3C7",
+      "200": "#FDE68A",
+      "300": "#FCD34D",
+      "400": "#FBBF24",
+      "500": "#F59E0B",
+      "600": "#D97706",
+      "700": "#B45309",
+      "800": "#92400E",
+      "900": "#78350F",
+      "950": "#451A03"
+    },
+    "danger": {
+      "50": "#FFF1F2",
+      "100": "#FFE4E6",
+      "200": "#FECDD3",
+      "300": "#FDA4AF",
+      "400": "#FB7185",
+      "500": "#F43F5E",
+      "600": "#E11D48",
+      "700": "#BE123C",
+      "800": "#9F1239",
+      "900": "#881337",
+      "950": "#4C0519"
+    },
+    "info": {
+      "50": "#F0F4F9",
+      "100": "#D9E3F0",
+      "200": "#B4C7E2",
+      "300": "#8FAAD3",
+      "400": "#6A8EC4",
+      "500": "#2D6DB5",
+      "600": "#1B5BA3",
+      "700": "#0E4D93",
+      "800": "#093D7A",
+      "900": "#052D5F",
+      "950": "#031A38"
+    },
+    "contrastPairs": [
+      { "fg": "#111827", "bg": "#F9FAFB", "ratio": 17.0, "passesAA": true, "passesAAA": true },
+      { "fg": "#FFFFFF", "bg": "#0E4D93", "ratio": 8.5, "passesAA": true, "passesAAA": true },
+      { "fg": "#FFFFFF", "bg": "#093D7A", "ratio": 11.2, "passesAA": true, "passesAAA": true },
+      { "fg": "#111827", "bg": "#D9E3F0", "ratio": 12.8, "passesAA": true, "passesAAA": true }
+    ]
+  },
+  "typography": {
+    "display": {
+      "family": "Public Sans",
+      "fallback": ["Source Sans 3", "system-ui", "sans-serif"],
+      "weights": [400, 600, 700],
+      "features": []
+    },
+    "body": {
+      "family": "Public Sans",
+      "fallback": ["Source Sans 3", "system-ui", "sans-serif"],
+      "weights": [400, 600, 700],
+      "features": []
+    },
+    "mono": {
+      "family": "Source Code Pro",
+      "fallback": ["ui-monospace", "monospace"],
+      "weights": [400, 500],
+      "features": []
+    },
+    "numeric": {
+      "family": "Source Code Pro",
+      "fallback": ["ui-monospace", "monospace"],
+      "weights": [500, 700],
+      "features": ["tnum"]
+    },
+    "scale": [0.75, 0.875, 1.0, 1.125, 1.25, 1.5, 1.875, 2.25, 3.0, 3.75, 4.5]
+  },
+  "spacing": [0, 4, 8, 12, 16, 24, 32, 40, 48, 64, 96],
+  "radius": [0, 2, 4, 6, 8, 12, 16, 20],
+  "density": {
+    "compact": { "padY": 8, "padX": 12, "gap": 8, "lineHeight": 1.5 },
+    "cozy": { "padY": 12, "padX": 16, "gap": 12, "lineHeight": 1.6 },
+    "comfy": { "padY": 16, "padX": 20, "gap": 16, "lineHeight": 1.7 }
+  },
+  "motion": {
+    "profile": "none",
+    "durations": {
+      "fast": 0,
+      "normal": 0,
+      "slow": 0,
+      "enter": 0
+    },
+    "easings": {
+      "default": "linear",
+      "enter": "linear",
+      "exit": "linear"
+    }
+  },
+  "iconography": {
+    "style": "line",
+    "pack": "lucide"
+  },
+  "borders": {
+    "width": 2,
+    "style": "solid",
+    "treatment": "hard"
+  },
+  "elevation": {
+    "shadows": [
+      "none",
+      "0 1px 3px rgba(17,24,39,0.10)",
+      "0 2px 6px rgba(17,24,39,0.12)",
+      "0 4px 12px rgba(17,24,39,0.14)",
+      "0 8px 24px rgba(17,24,39,0.16)"
+    ],
+    "surfaceTreatment": "flat"
+  },
+  "illustrationStylePrompt": "flat minimal illustration, navy blue and neutral gray color palette, abstract civic symbols, simple geometric shapes, no human faces, professional government aesthetic, plain white background, clear clean lines, no text overlays, accessible and inclusive visual language",
+  "logoPrimitiveConstraints": {
+    "allowedShapeKinds": ["rectangle", "shield", "circle", "star", "column"],
+    "allowedMarkKinds": ["institutional-seal", "monogram", "symbol-flat", "wordmark-only"],
+    "allowedWordmarkStyles": ["serif-institutional", "condensed-sans", "all-caps-sans"],
+    "allowedContainerStyles": ["lockup-horizontal", "lockup-stacked", "wordmark-only", "seal-round"]
+  },
+  "defaultDensity": "cozy",
+  "voice": {
+    "tone": ["plain", "direct", "helpful", "neutral", "respectful"],
+    "samples": {
+      "primaryAction": "Submit",
+      "errorEmpty": "No results found",
+      "successToast": "Submission received",
+      "loading": "Loading...",
+      "welcome": "Welcome",
+      "confirmAction": "Confirm submission",
+      "cancelAction": "Go back",
+      "errorMessage": "Please correct the errors below",
+      "requiredField": "Required"
+    }
+  }
+}

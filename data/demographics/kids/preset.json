@@ -1,0 +1,169 @@
+{
+  "id": "kids",
+  "schemaVersion": 1,
+  "palette": {
+    "brand": {
+      "50": "#FFF0F6",
+      "100": "#FFD9E9",
+      "200": "#FFB1D2",
+      "300": "#FF85B6",
+      "400": "#FF6B9D",
+      "500": "#F03A85",
+      "600": "#D11F6B",
+      "700": "#A91653",
+      "800": "#7E1340",
+      "900": "#561030"
+    },
+    "neutral": {
+      "50": "#FAFAFB",
+      "100": "#F1F2F5",
+      "200": "#E2E4EA",
+      "300": "#C9CDD6",
+      "400": "#A0A6B3",
+      "500": "#727A8B",
+      "600": "#525968",
+      "700": "#3C4250",
+      "800": "#262B36",
+      "900": "#13161D"
+    },
+    "success": {
+      "50": "#E8FBF1",
+      "100": "#C8F5DC",
+      "200": "#94EAB9",
+      "300": "#5BDC92",
+      "400": "#2BC972",
+      "500": "#06D6A0",
+      "600": "#04A57B",
+      "700": "#037B5C",
+      "800": "#02543F",
+      "900": "#012F22"
+    },
+    "warning": {
+      "50": "#FFF8E0",
+      "100": "#FFEDB0",
+      "200": "#FFDF7A",
+      "300": "#FFD166",
+      "400": "#F5BB36",
+      "500": "#E0A41B",
+      "600": "#B68213",
+      "700": "#86600D",
+      "800": "#594008",
+      "900": "#2F2104"
+    },
+    "danger": {
+      "50": "#FFE8E8",
+      "100": "#FFC1C1",
+      "200": "#FF8E8E",
+      "300": "#FF6363",
+      "400": "#F94545",
+      "500": "#E62929",
+      "600": "#BC1D1D",
+      "700": "#891414",
+      "800": "#5A0D0D",
+      "900": "#310606"
+    },
+    "info": {
+      "50": "#E5F8FF",
+      "100": "#B7ECFF",
+      "200": "#7CDCFF",
+      "300": "#4CC9F0",
+      "400": "#1FB1DC",
+      "500": "#0D94BD",
+      "600": "#066F90",
+      "700": "#03506A",
+      "800": "#013446",
+      "900": "#001A24"
+    },
+    "contrastPairs": [
+      { "fg": "#13161D", "bg": "#FAFAFB", "ratio": 17.62, "passesAA": true, "passesAAA": true },
+      { "fg": "#FAFAFB", "bg": "#F03A85", "ratio": 4.52, "passesAA": true, "passesAAA": false },
+      { "fg": "#13161D", "bg": "#FFD166", "ratio": 13.08, "passesAA": true, "passesAAA": true },
+      { "fg": "#FAFAFB", "bg": "#06D6A0", "ratio": 1.65, "passesAA": false, "passesAAA": false }
+    ]
+  },
+  "typography": {
+    "display": {
+      "family": "Fredoka",
+      "fallback": ["Nunito", "system-ui", "sans-serif"],
+      "weights": [400, 500, 600, 700],
+      "features": ["ss01"]
+    },
+    "body": {
+      "family": "Nunito",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 600, 700, 800],
+      "features": []
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "fallback": ["ui-monospace", "monospace"],
+      "weights": [400, 600],
+      "features": []
+    },
+    "numeric": {
+      "family": "Lexend",
+      "fallback": ["Nunito", "system-ui", "sans-serif"],
+      "weights": [500, 700],
+      "features": ["tnum"]
+    },
+    "scale": [0.75, 0.875, 1.0, 1.125, 1.25, 1.5, 1.875, 2.25, 3.0, 3.75, 4.5]
+  },
+  "spacing": [0, 4, 8, 12, 16, 24, 32, 48, 64, 96, 128],
+  "radius": [0, 8, 12, 16, 24, 32, 48, 9999],
+  "density": {
+    "compact": { "padY": 8, "padX": 12, "gap": 8, "lineHeight": 1.4 },
+    "cozy": { "padY": 12, "padX": 16, "gap": 12, "lineHeight": 1.5 },
+    "comfy": { "padY": 16, "padX": 24, "gap": 16, "lineHeight": 1.6 }
+  },
+  "motion": {
+    "profile": "playful",
+    "durations": {
+      "fast": 200,
+      "normal": 320,
+      "slow": 480,
+      "bounce": 600
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "bounce": "cubic-bezier(0.5, 1.6, 0.4, 0.8)",
+      "spring": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+    }
+  },
+  "iconography": {
+    "style": "illustrated",
+    "pack": "open-doodles"
+  },
+  "borders": {
+    "width": 0,
+    "style": "solid",
+    "treatment": "soft"
+  },
+  "elevation": {
+    "shadows": [
+      "none",
+      "0 2px 4px rgba(255, 107, 157, 0.12)",
+      "0 4px 12px rgba(255, 107, 157, 0.18), 0 2px 4px rgba(76, 201, 240, 0.08)",
+      "0 8px 24px rgba(255, 107, 157, 0.22), 0 4px 8px rgba(76, 201, 240, 0.12)",
+      "0 16px 48px rgba(255, 107, 157, 0.24), 0 8px 16px rgba(76, 201, 240, 0.14)"
+    ],
+    "surfaceTreatment": "paper"
+  },
+  "illustrationStylePrompt": "rounded chunky cartoon, soft pastel palette, friendly mascot, cheerful, simple shapes, plain background, no text, child-friendly, age 5-10",
+  "logoPrimitiveConstraints": {
+    "allowedShapeKinds": ["rounded-square", "circle", "blob", "star-rounded", "heart"],
+    "allowedMarkKinds": ["mascot", "monogram-rounded", "icon-doodle"],
+    "allowedWordmarkStyles": ["chunky-sans", "rounded-display", "handwritten"],
+    "allowedContainerStyles": ["badge-soft", "stacked", "horizontal"]
+  },
+  "defaultDensity": "comfy",
+  "voice": {
+    "tone": ["warm", "encouraging", "playful", "simple"],
+    "samples": {
+      "primaryAction": "Let's go!",
+      "errorEmpty": "Oops, nothing here yet — try adding one!",
+      "successToast": "Yay! You did it!",
+      "loading": "Hang on, almost there...",
+      "welcome": "Hi friend! Ready to play?"
+    }
+  }
+}

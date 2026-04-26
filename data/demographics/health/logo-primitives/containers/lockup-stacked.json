@@ -1,0 +1,8 @@
+{
+  "id": "lockup-stacked",
+  "style": "lockup-stacked",
+  "layout": "stacked",
+  "markPosition": "top",
+  "spacing": "0.25em",
+  "alignment": "center"
+}

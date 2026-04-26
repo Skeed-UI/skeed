@@ -1,0 +1,9 @@
+{
+  "demographic": "education",
+  "shapeKind": "geometric",
+  "schemaVersion": 1,
+  "style": "geometric",
+  "cornerRadius": 0.125,
+  "minSize": 2,
+  "maxSize": 8
+}

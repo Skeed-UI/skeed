@@ -1,0 +1,17 @@
+{
+  "id": "comments",
+  "name": "Comments",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe Comments",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

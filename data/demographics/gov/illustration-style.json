@@ -1,0 +1,12 @@
+{
+  "demographic": "gov",
+  "schemaVersion": 1,
+  "promptSuffix": "flat minimal illustration, USWDS navy blue (#0E4D93) and neutral gray color palette, abstract civic and community symbols, simple geometric shapes, no human faces or personal data, professional government aesthetic, plain white background, clear lines, accessible and inclusive visual language representing all citizens",
+  "negativePromptSuffix": "no political symbols or party imagery, no specific government officials, no stereotyped demographics, no cash or luxury items, no cluttered backgrounds, no text overlays, no dark or high-contrast dramatic lighting",
+  "preferredAspectRatios": ["16:9", "4:3", "1:1"],
+  "providerHints": {
+    "fal-flux": { "model": "flux/schnell", "steps": 4 },
+    "replicate": { "model": "black-forest-labs/flux-schnell" },
+    "openai-image": { "model": "gpt-image-1", "quality": "high" }
+  }
+}

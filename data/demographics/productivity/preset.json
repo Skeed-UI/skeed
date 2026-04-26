@@ -1,0 +1,179 @@
+{
+  "id": "productivity",
+  "schemaVersion": 1,
+  "palette": {
+    "brand": {
+      "50": "#EEF2FF",
+      "100": "#E0E7FF",
+      "200": "#C7D2FE",
+      "300": "#A5B4FC",
+      "400": "#818CF8",
+      "500": "#6366F1",
+      "600": "#4F46E5",
+      "700": "#4338CA",
+      "800": "#3730A3",
+      "900": "#312E81",
+      "950": "#1E1B4B"
+    },
+    "neutral": {
+      "50": "#F8F8FF",
+      "100": "#F0F0FB",
+      "200": "#E4E3F5",
+      "300": "#C8C7DE",
+      "400": "#9694B8",
+      "500": "#6A6890",
+      "600": "#514F6E",
+      "700": "#3B3A52",
+      "800": "#252439",
+      "900": "#141326",
+      "950": "#07060F"
+    },
+    "success": {
+      "50": "#F0FDF4",
+      "100": "#DCFCE7",
+      "200": "#BBF7D0",
+      "300": "#86EFAC",
+      "400": "#4ADE80",
+      "500": "#22C55E",
+      "600": "#16A34A",
+      "700": "#15803D",
+      "800": "#166534",
+      "900": "#14532D",
+      "950": "#052E16"
+    },
+    "warning": {
+      "50": "#FFFBEB",
+      "100": "#FEF3C7",
+      "200": "#FDE68A",
+      "300": "#FCD34D",
+      "400": "#FBBF24",
+      "500": "#F59E0B",
+      "600": "#D97706",
+      "700": "#B45309",
+      "800": "#92400E",
+      "900": "#78350F",
+      "950": "#451A03"
+    },
+    "danger": {
+      "50": "#FFF1F2",
+      "100": "#FFE4E6",
+      "200": "#FECDD3",
+      "300": "#FDA4AF",
+      "400": "#FB7185",
+      "500": "#F43F5E",
+      "600": "#E11D48",
+      "700": "#BE123C",
+      "800": "#9F1239",
+      "900": "#881337",
+      "950": "#4C0519"
+    },
+    "info": {
+      "50": "#EEF2FF",
+      "100": "#E0E7FF",
+      "200": "#C7D2FE",
+      "300": "#A5B4FC",
+      "400": "#818CF8",
+      "500": "#6366F1",
+      "600": "#4F46E5",
+      "700": "#4338CA",
+      "800": "#3730A3",
+      "900": "#312E81",
+      "950": "#1E1B4B"
+    },
+    "contrastPairs": [
+      { "fg": "#141326", "bg": "#F8F8FF", "ratio": 16.8, "passesAA": true, "passesAAA": true },
+      { "fg": "#FFFFFF", "bg": "#4338CA", "ratio": 7.2, "passesAA": true, "passesAAA": true },
+      { "fg": "#FFFFFF", "bg": "#3730A3", "ratio": 9.1, "passesAA": true, "passesAAA": true },
+      { "fg": "#141326", "bg": "#E0E7FF", "ratio": 13.5, "passesAA": true, "passesAAA": true }
+    ]
+  },
+  "typography": {
+    "display": {
+      "family": "DM Sans",
+      "fallback": ["Inter", "system-ui", "sans-serif"],
+      "weights": [500, 600, 700],
+      "features": ["ss01"]
+    },
+    "body": {
+      "family": "Inter",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 500, 600],
+      "features": []
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "fallback": ["ui-monospace", "monospace"],
+      "weights": [400, 500],
+      "features": ["zero"]
+    },
+    "numeric": {
+      "family": "JetBrains Mono",
+      "fallback": ["ui-monospace", "monospace"],
+      "weights": [500, 700],
+      "features": ["tnum", "zero"]
+    },
+    "scale": [0.75, 0.875, 1.0, 1.125, 1.25, 1.5, 1.875, 2.25, 3.0, 3.75, 4.5]
+  },
+  "spacing": [0, 4, 8, 12, 16, 24, 32, 40, 48, 64, 96],
+  "radius": [0, 4, 6, 8, 12, 16, 20, 24],
+  "density": {
+    "compact": { "padY": 6, "padX": 10, "gap": 6, "lineHeight": 1.4 },
+    "cozy":    { "padY": 10, "padX": 14, "gap": 10, "lineHeight": 1.5 },
+    "comfy":   { "padY": 14, "padX": 18, "gap": 14, "lineHeight": 1.6 }
+  },
+  "motion": {
+    "profile": "subtle",
+    "durations": {
+      "fast": 150,
+      "normal": 250,
+      "slow": 400,
+      "bounce": 0
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4,0,0.2,1)",
+      "enter": "cubic-bezier(0,0,0.2,1)",
+      "exit": "cubic-bezier(0.4,0,1,1)"
+    }
+  },
+  "iconography": {
+    "style": "line",
+    "pack": "lucide"
+  },
+  "borders": {
+    "width": 1,
+    "style": "solid",
+    "treatment": "soft"
+  },
+  "elevation": {
+    "shadows": [
+      "none",
+      "0 1px 3px rgba(20,19,38,0.06)",
+      "0 2px 8px rgba(20,19,38,0.08)",
+      "0 4px 16px rgba(20,19,38,0.10)",
+      "0 8px 32px rgba(20,19,38,0.14)"
+    ],
+    "surfaceTreatment": "raised"
+  },
+  "illustrationStylePrompt": "clean flat illustration, indigo and violet color palette, abstract productivity and workflow concepts, minimal geometric shapes representing tasks lists and kanban boards, focus and flow state imagery, modern app aesthetic, no human faces, no text overlays, soft gradient backgrounds",
+  "logoPrimitiveConstraints": {
+    "allowedShapeKinds": ["circle", "rounded-square", "diamond", "hexagon", "abstract"],
+    "allowedMarkKinds": ["check-mark", "lightning", "symbol-geometric", "monogram", "abstract-flow"],
+    "allowedWordmarkStyles": ["geometric-sans", "friendly-sans", "rounded-sans"],
+    "allowedContainerStyles": ["lockup-horizontal", "lockup-stacked", "icon-only", "badge-soft"]
+  },
+  "defaultDensity": "cozy",
+  "voice": {
+    "tone": ["encouraging", "direct", "action-oriented", "concise", "positive"],
+    "samples": {
+      "primaryAction": "Get started",
+      "errorEmpty": "Nothing here yet — add your first item",
+      "successToast": "Done!",
+      "loading": "Just a moment...",
+      "welcome": "Ready to focus?",
+      "confirmAction": "Yes, do it",
+      "cancelAction": "Not now",
+      "completedTask": "Marked complete",
+      "deletedItem": "Deleted"
+    }
+  }
+}

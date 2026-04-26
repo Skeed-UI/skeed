@@ -1,0 +1,33 @@
+{
+  "id": "testimonial",
+  "name": "Testimonial",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "Quote and author attribution component for marketing and landing pages. Supports card, quote-bar, and minimal variants with optional star rating, avatar, and author metadata.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.300",
+    "color.neutral.600",
+    "color.neutral.800",
+    "color.neutral.900",
+    "color.brand.300",
+    "color.brand.500",
+    "color.warning.500",
+    "spacing.1",
+    "spacing.3",
+    "spacing.4",
+    "spacing.5",
+    "spacing.10",
+    "density.cozy.padx",
+    "density.cozy.pady",
+    "radius.2",
+    "shadow.1"
+  ],
+  "assetSlots": [
+    { "role": "avatar", "type": "avatar", "required": false }
+  ],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

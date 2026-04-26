@@ -1,0 +1,73 @@
+{
+  "demographic": "education",
+  "niche": "k12",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "complex-navigation",
+      "description": "Students struggle to find assignments, grades, and learning materials due to complex or inconsistent navigation. Multiple clicks to reach core learning content wastes cognitive resources and frustrates students with limited digital literacy.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": [
+        "Nielsen Norman Group — Education UX: Students spend 30% of session time navigating rather than learning (2021)",
+        "EdSurge Research — LMS Usability Study: Navigation complexity is the #1 student complaint across learning platforms",
+        "UDL Guidelines Checkpoint 6.4: Enhance capacity for monitoring progress — requires clear, consistent navigation"
+      ]
+    },
+    {
+      "id": "poor-accessibility",
+      "description": "Educational content fails WCAG AA or AAA standards, excluding students with visual, auditory, motor, or cognitive disabilities. Missing alt text, poor color contrast, non-keyboard navigable elements, and lack of screen reader support prevent equal access to education.",
+      "severity": 5,
+      "frequency": 4,
+      "evidence": [
+        "U.S. Department of Education OCR — Accessibility complaints in K-12 increased 200% 2016-2021",
+        "CAST — Learner Variability Project: 1 in 5 students has a recognized learning difference requiring accommodation",
+        "WCAG 2.1 AAA: Required for education under Section 504 and ADA Title II"
+      ]
+    },
+    {
+      "id": "unclear-progress-feedback",
+      "description": "Students cannot track their learning progress, assignment completion status, or grades without confusion. Unclear progress indicators lead to anxiety, missed deadlines, and disengagement from learning.",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": [
+        "Hattie & Timperley — The Power of Feedback (2007): Effective feedback is actionable and answers 'Where am I going? How am I going? Where to next?'",
+        "Black & Wiliam — Assessment for Learning: Progress visibility increases student achievement by 0.4-0.7 standard deviations",
+        "EdTech Research: Progress tracking is a core engagement driver in learning platforms"
+      ]
+    },
+    {
+      "id": "intrusive-notifications",
+      "description": "Excessive or poorly-timed notifications interrupt learning flow, distract students, and create anxiety. Notification overload reduces sustained attention and deep learning.",
+      "severity": 3,
+      "frequency": 4,
+      "evidence": [
+        "Gloria Mark — Attention Span (2023): Context switching due to interruptions increases stress and reduces productivity",
+        "Cal Newport — Deep Work: Notifications fragment attention and prevent flow states necessary for learning",
+        "COPPA guidance: Excessive engagement tactics targeting children raise ethical and legal concerns"
+      ]
+    },
+    {
+      "id": "inadequate-parental-visibility",
+      "description": "Parents and guardians cannot easily monitor student progress, upcoming assignments, or platform usage. Poor parental dashboards reduce family engagement in education and delay intervention for struggling students.",
+      "severity": 4,
+      "frequency": 3,
+      "evidence": [
+        "Harvard Family Research Project — Family engagement increases student achievement by 40%",
+        "National Center for Education Statistics: Schools with strong parent communication see 25% better outcomes",
+        "EdTech UX Studies: Parent portals with poor UX see 60% lower engagement than well-designed alternatives"
+      ]
+    },
+    {
+      "id": "privacy-concerns",
+      "description": "Lack of transparency about data collection, sharing practices, and student privacy protections creates distrust among parents and educators. COPPA violations or unclear privacy policies can result in legal liability and platform abandonment.",
+      "severity": 5,
+      "frequency": 3,
+      "evidence": [
+        "FTC — COPPA enforcement actions increased 150% 2019-2023",
+        "Common Sense Media — 90% of parents are concerned about student data privacy",
+        "Education Week — Districts increasingly require privacy certifications before procurement"
+      ]
+    }
+  ]
+}

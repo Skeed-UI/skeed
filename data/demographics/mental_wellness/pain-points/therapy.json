@@ -1,0 +1,73 @@
+{
+  "demographic": "mental_wellness",
+  "niche": "therapy",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "privacy-anxiety",
+      "description": "Users are deeply concerned about the privacy of their mental health data. Lack of clear privacy indicators, confusing consent flows, or uncertainty about data sharing creates anxiety that prevents engagement with therapeutic tools.",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": [
+        "Pew Research Center — 81% of Americans feel they have little control over data collected by companies (2023)",
+        "Journal of Medical Internet Research — Privacy concerns are the #1 barrier to digital mental health adoption",
+        "APA Ethics Code — Psychologists must protect confidential information and obtain informed consent"
+      ]
+    },
+    {
+      "id": "crisis-visibility",
+      "description": "Crisis resources are buried or difficult to find during moments of acute distress. Users in crisis need immediate access to help, but interfaces often hide crisis information behind multiple clicks or during non-business hours.",
+      "severity": 5,
+      "frequency": 3,
+      "evidence": [
+        "988 Suicide & Crisis Lifeline — Design guidelines emphasize persistent, visible crisis access",
+        "Crisis Text Line — 78% of texters report that immediate access was critical to their safety",
+        "NIMH — Crisis accessibility is a documented safety requirement for mental health platforms"
+      ]
+    },
+    {
+      "id": "clinical-jargon",
+      "description": "Mental health apps use clinical terminology or diagnostic language that feels alienating, stigmatizing, or confusing to users. Over-medicalized language creates emotional distance and reduces engagement.",
+      "severity": 3,
+      "frequency": 4,
+      "evidence": [
+        "Health Literacy Research — 88% of US adults have limited health literacy; jargon increases dropout",
+        "Patient Experience Journal — Plain language in mental health increases perceived empathy and trust",
+        "APA — Person-first language guidelines emphasize dignity and respect"
+      ]
+    },
+    {
+      "id": "unrealistic-expectations",
+      "description": "Apps promise rapid results or guaranteed outcomes that create unrealistic expectations and self-blame when progress doesn't match marketing claims. 'Get better in 30 days' messaging is harmful to users with complex conditions.",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": [
+        "FDA — Mental health apps making unsubstantiated claims face regulatory action (2023)",
+        "Nature Digital Medicine — Unrealistic app expectations correlate with disengagement and self-stigma",
+        "Consumer Reports — 40% of mental health app users report disappointment with promised outcomes"
+      ]
+    },
+    {
+      "id": "lack-of-human-connection",
+      "description": "Fully automated tools fail to provide the human connection that is central to therapeutic relationships. Users feel isolated when apps replace rather than supplement human care, especially during difficult periods.",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": [
+        "APA — Therapeutic alliance is the strongest predictor of positive outcomes",
+        "JMIR — Hybrid models (human + digital) show 2x better retention than app-only",
+        "Patient surveys — 67% of users want easy access to human support alongside digital tools"
+      ]
+    },
+    {
+      "id": "progress-pressure",
+      "description": "Aggressive gamification, streaks, or progress pressure creates guilt and anxiety when users skip sessions or have difficult days. Mental health progress is non-linear; pressure tactics are counterproductive and potentially harmful.",
+      "severity": 4,
+      "frequency": 3,
+      "evidence": [
+        "Ethics in Technology — Gamification in mental health can increase self-blame and avoidance",
+        "Behavioral Research — External motivators (streaks) undermine intrinsic motivation for self-care",
+        "User interviews — 52% report guilt from 'streak broken' notifications in wellness apps"
+      ]
+    }
+  ]
+}

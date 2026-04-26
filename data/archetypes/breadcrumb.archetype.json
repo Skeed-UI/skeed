@@ -1,0 +1,23 @@
+{
+  "id": "breadcrumb",
+  "name": "Breadcrumb",
+  "schemaVersion": 1,
+  "category": "atom",
+  "description": "Navigation trail showing current location in site hierarchy. Renders accessible ol/li structure with aria-current on the active page item. Supports a configurable separator node.",
+  "tokensUsed": [
+    "color.neutral.400",
+    "color.neutral.500",
+    "color.neutral.900",
+    "color.brand.500",
+    "spacing.1",
+    "radius.1",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

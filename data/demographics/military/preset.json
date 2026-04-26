@@ -1,0 +1,169 @@
+{
+  "id": "military",
+  "schemaVersion": 1,
+  "palette": {
+    "brand": {
+      "50": "#F7F7F5",
+      "100": "#EAE9E4",
+      "200": "#D6D4CA",
+      "300": "#B8B5A3",
+      "400": "#9A9679",
+      "500": "#7D795B",
+      "600": "#646145",
+      "700": "#504D37",
+      "800": "#42402E",
+      "900": "#383629",
+      "950": "#1F1E16"
+    },
+    "neutral": {
+      "50": "#F7F7F7",
+      "100": "#E3E3E3",
+      "200": "#C8C8C8",
+      "300": "#A4A4A4",
+      "400": "#818181",
+      "500": "#666666",
+      "600": "#515151",
+      "700": "#434343",
+      "800": "#383838",
+      "900": "#313131",
+      "950": "#1A1A1A"
+    },
+    "success": {
+      "50": "#F0FDF4",
+      "100": "#DCFCE7",
+      "200": "#BBF7D0",
+      "300": "#86EFAC",
+      "400": "#4ADE80",
+      "500": "#22C55E",
+      "600": "#16A34A",
+      "700": "#15803D",
+      "800": "#166534",
+      "900": "#14532D",
+      "950": "#052E16"
+    },
+    "warning": {
+      "50": "#FFFBEB",
+      "100": "#FEF3C7",
+      "200": "#FDE68A",
+      "300": "#FCD34D",
+      "400": "#FBBF24",
+      "500": "#F59E0B",
+      "600": "#D97706",
+      "700": "#B45309",
+      "800": "#92400E",
+      "900": "#78350F",
+      "950": "#451A03"
+    },
+    "danger": {
+      "50": "#FEF2F2",
+      "100": "#FEE2E2",
+      "200": "#FECACA",
+      "300": "#FCA5A5",
+      "400": "#F87171",
+      "500": "#EF4444",
+      "600": "#DC2626",
+      "700": "#B91C1C",
+      "800": "#991B1B",
+      "900": "#7F1D1D",
+      "950": "#450A0A"
+    },
+    "info": {
+      "50": "#EFF6FF",
+      "100": "#DBEAFE",
+      "200": "#BFDBFE",
+      "300": "#93C5FD",
+      "400": "#60A5FA",
+      "500": "#3B82F6",
+      "600": "#2563EB",
+      "700": "#1D4ED8",
+      "800": "#1E40AF",
+      "900": "#1E3A8A",
+      "950": "#172554"
+    },
+    "contrastPairs": [
+      { "fg": "neutral.900", "bg": "neutral.50", "ratio": 21, "passesAA": true, "passesAAA": true },
+      { "fg": "neutral.50", "bg": "neutral.900", "ratio": 21, "passesAA": true, "passesAAA": true },
+      { "fg": "brand.600", "bg": "brand.50", "ratio": 7.2, "passesAA": true, "passesAAA": true }
+    ]
+  },
+  "typography": {
+    "display": {
+      "family": "Roboto Condensed",
+      "fallback": ["Arial Narrow", "sans-serif"],
+      "weights": [400, 700],
+      "features": []
+    },
+    "body": {
+      "family": "Roboto",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 500, 700],
+      "features": []
+    },
+    "mono": {
+      "family": "Roboto Mono",
+      "fallback": ["Consolas", "monospace"],
+      "weights": [400, 500],
+      "features": ["zero"]
+    },
+    "numeric": {
+      "family": "Roboto Mono",
+      "fallback": ["Consolas", "monospace"],
+      "weights": [400, 500],
+      "features": ["tnum", "zero"]
+    },
+    "scale": [0.875, 1, 1.125, 1.25, 1.5, 2, 2.5]
+  },
+  "spacing": [0, 0.25, 0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48],
+  "radius": [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 80, 160, 320, 640, 960, 9999],
+  "density": {
+    "compact": { "padY": 0.375, "padX": 0.75, "gap": 0.5, "lineHeight": 1.3 },
+    "cozy": { "padY": 0.5, "padX": 0.875, "gap": 0.625, "lineHeight": 1.4 },
+    "comfy": { "padY": 0.75, "padX": 1.25, "gap": 0.875, "lineHeight": 1.6 }
+  },
+  "motion": {
+    "profile": "none",
+    "durations": {
+      "fast": 100,
+      "normal": 150,
+      "slow": 250
+    },
+    "easings": {
+      "default": "linear"
+    }
+  },
+  "iconography": {
+    "style": "line",
+    "pack": "lucide"
+  },
+  "borders": {
+    "width": 1,
+    "style": "solid",
+    "treatment": "hard"
+  },
+  "elevation": {
+    "shadows": [
+      "0 1px 2px 0 rgb(0 0 0 / 0.2)",
+      "0 2px 4px 0 rgb(0 0 0 / 0.2)",
+      "0 4px 8px 0 rgb(0 0 0 / 0.2)",
+      "0 8px 16px 0 rgb(0 0 0 / 0.2)"
+    ],
+    "surfaceTreatment": "flat"
+  },
+  "illustrationStylePrompt": "Tactical military illustration style, maps and terrain analysis, equipment and vehicles, disciplined and precise aesthetic, olive drab (#7D795B) color scheme, strategic planning themes, no civilian or casual elements, serious and mission-focused atmosphere",
+  "logoPrimitiveConstraints": {
+    "allowedShapeKinds": ["angular", "geometric", "shield"],
+    "allowedMarkKinds": ["shield", "star", "chevron", "anchor"],
+    "allowedWordmarkStyles": ["condensed-sans", "geometric-sans"],
+    "allowedContainerStyles": ["lockup-horizontal", "badge-flat"]
+  },
+  "defaultDensity": "compact",
+  "voice": {
+    "tone": ["direct", "authoritative", "precise", "disciplined"],
+    "samples": {
+      "cta": "Execute",
+      "success": "Mission accomplished.",
+      "error": "Operation failed. Check parameters and retry.",
+      "empty": "No active operations."
+    }
+  }
+}

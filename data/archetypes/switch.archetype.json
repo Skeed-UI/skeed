@@ -1,0 +1,27 @@
+{
+  "id": "switch",
+  "name": "Switch",
+  "schemaVersion": 1,
+  "category": "atom",
+  "description": "Toggle switch using role=switch button pattern. Visually distinct from checkbox with animated thumb. Supports sm/md sizes, label, and description.",
+  "tokensUsed": [
+    "color.brand.500",
+    "color.neutral.50",
+    "color.neutral.300",
+    "color.neutral.400",
+    "color.neutral.500",
+    "color.neutral.900",
+    "radius.full",
+    "spacing.1",
+    "spacing.3",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default",
+    "shadow.1"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

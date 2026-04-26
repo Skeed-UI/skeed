@@ -1,0 +1,35 @@
+{
+  "demographic": "kids",
+  "niche": "learning",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "lost-after-error",
+      "description": "Child gets stuck on a wrong answer and disengages without retry",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": ["Khan Academy retention studies", "Duolingo for Kids streak data"]
+    },
+    {
+      "id": "reading-load-too-high",
+      "description": "Instructions require reading skills the child does not yet have",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "no-progress-visible",
+      "description": "Child cannot see what they have accomplished, motivation drops",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": []
+    },
+    {
+      "id": "session-too-long",
+      "description": "Activity outlasts attention span, ends in frustration",
+      "severity": 3,
+      "frequency": 4,
+      "evidence": ["AAP screen-time guidelines"]
+    }
+  ]
+}

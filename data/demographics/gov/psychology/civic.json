@@ -1,0 +1,37 @@
+{
+  "demographic": "gov",
+  "niche": "civic",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": [
+    "institutional_seal",
+    "flat_borders",
+    "audit_trail",
+    "compliance_badge"
+  ],
+  "motivationPattern": "fear",
+  "formality": 5,
+  "noveltyTolerance": 1,
+  "accessibilityFloor": "AAA",
+  "forbiddenPatterns": [
+    "infinite-scroll",
+    "autoplay-video",
+    "urgency-timer",
+    "modal-overlay-on-load",
+    "pre-checked-consent",
+    "confusing-cancellation",
+    "hidden-fee",
+    "pop-under",
+    "fake-scarcity",
+    "third-party-ad-tracking"
+  ],
+  "research": {
+    "notes": "Government users include elderly, low-literacy, disabled populations. Plain language at grade 8 reading level (Flesch-Kincaid). Multi-step forms must show progress. Errors must be listed at top AND inline. Never use color as the sole indicator of status (color blindness). All interactive elements must be keyboard-navigable. Session timeouts must warn before logout with accessible modal.",
+    "sources": [
+      "https://designsystem.digital.gov/",
+      "https://www.section508.gov/",
+      "https://www.w3.org/WAI/WCAG21/",
+      "https://plainlanguage.gov/"
+    ]
+  }
+}

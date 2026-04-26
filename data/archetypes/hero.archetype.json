@@ -1,0 +1,40 @@
+{
+  "id": "hero",
+  "name": "Hero",
+  "schemaVersion": 1,
+  "category": "organism",
+  "description": "Full-width hero section with headline, subtext, and CTA button. Appears at top of landing pages. Includes an asset slot for a hero illustration.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.100",
+    "color.neutral.600",
+    "color.neutral.900",
+    "color.brand.500",
+    "color.brand.600",
+    "spacing.3",
+    "spacing.6",
+    "spacing.8",
+    "spacing.10",
+    "density.cozy.gap",
+    "radius.2",
+    "radius.3",
+    "font.display",
+    "font.body",
+    "motion.duration.fast",
+    "motion.duration.normal",
+    "motion.easing.default",
+    "shadow.1"
+  ],
+  "assetSlots": [
+    {
+      "role": "hero-illustration",
+      "type": "hero_illustration",
+      "required": true,
+      "fallbackHint": "Abstract illustration representing the app's core value proposition"
+    }
+  ],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": ["kids"]
+}

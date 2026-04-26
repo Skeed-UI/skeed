@@ -1,0 +1,61 @@
+{
+  "demographic": "health",
+  "niche": "patient",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "appointment-booking-friction",
+      "label": "Appointment booking friction",
+      "description": "Booking appointments requires multiple phone calls or confusing portal navigation. Patients must navigate phone trees, hold queues, or opaque online booking flows with limited slot visibility.",
+      "severity": 5,
+      "frequency": 5,
+      "impactedFlows": ["appointment-scheduling", "portal-onboarding", "care-navigation"],
+      "designImplication": "Provide a clear, step-by-step booking flow with real-time slot availability. Minimize the number of screens. Support one-tap rebooking for recurring visits. Never require login before showing available times."
+    },
+    {
+      "id": "unclear-medication-instructions",
+      "label": "Unclear medication instructions",
+      "description": "Dosage and timing instructions are written in medical jargon that patients cannot parse. Terms like 'b.i.d.', 'PRN', and 'titrate' are common barriers, especially for elderly patients or those with low health literacy.",
+      "severity": 5,
+      "frequency": 4,
+      "impactedFlows": ["medication-management", "prescription-refill", "discharge-instructions"],
+      "designImplication": "Always render medication instructions in plain language (grade 6–8 reading level). Supplement with icons and timing visualizations. Provide a tap-to-expand glossary for any clinical term that cannot be avoided."
+    },
+    {
+      "id": "lab-result-anxiety",
+      "label": "Lab result anxiety",
+      "description": "Lab results appear in patient portals with no context, reference ranges, or plain-language explanation. Patients see an 'H' flag or an out-of-range number and assume the worst before they can speak to a provider.",
+      "severity": 5,
+      "frequency": 4,
+      "impactedFlows": ["lab-results", "health-records", "notifications"],
+      "designImplication": "Always display reference ranges alongside values. Use calm, neutral language — avoid red/danger color for borderline results. Provide a brief plain-language interpretation. Include a clear CTA to message or call the care team. Delay push notifications for abnormal results until care team review where workflow permits."
+    },
+    {
+      "id": "portal-login-barriers",
+      "label": "Portal login barriers",
+      "description": "Forgotten passwords lock patients out of time-sensitive health information such as upcoming appointment details, test results, and prescription refills. Password reset flows are often slow and difficult on mobile.",
+      "severity": 4,
+      "frequency": 4,
+      "impactedFlows": ["authentication", "portal-onboarding", "account-recovery"],
+      "designImplication": "Support magic-link email login as a primary fallback. Offer biometric authentication (Face ID / Touch ID) on mobile. Session length should be generous for low-risk actions (reading records) and require re-auth only for high-sensitivity actions (changing contact info, sharing records). Never auto-expire a session without a visible, accessible warning modal with a countdown that is pausable."
+    },
+    {
+      "id": "care-team-communication",
+      "label": "Care team communication gap",
+      "description": "Patients have no easy way to message their care team asynchronously. Every non-urgent question routes through the phone, leading to long hold times, missed calls, and delayed answers for manageable concerns.",
+      "severity": 4,
+      "frequency": 5,
+      "impactedFlows": ["secure-messaging", "care-coordination", "appointment-follow-up"],
+      "designImplication": "Provide a clearly labeled, asynchronous secure messaging channel accessible from all primary navigation surfaces. Set clear response-time expectations in the UI (e.g., 'We typically reply within 1 business day'). Always show emergency contact (911 / local emergency services) prominently when health-critical topics are detected."
+    },
+    {
+      "id": "billing-opacity",
+      "label": "Billing opacity and surprise costs",
+      "description": "Medical bills arrive weeks after service with no itemization, no mapping to the care received, and no prior cost estimate. Patients cannot predict out-of-pocket costs or reconcile charges with their insurance explanation of benefits.",
+      "severity": 5,
+      "frequency": 4,
+      "impactedFlows": ["billing", "insurance", "pre-authorization", "cost-estimator"],
+      "designImplication": "Provide pre-service cost estimates wherever possible, broken down by service and insurance portion. Itemize bills line by line with plain-language descriptions of each charge. Offer payment plan enrollment inline without a phone call. Never hide billing information behind additional login walls separate from the primary portal."
+    }
+  ]
+}

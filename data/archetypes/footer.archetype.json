@@ -1,0 +1,37 @@
+{
+  "id": "footer",
+  "name": "Footer",
+  "schemaVersion": 1,
+  "category": "organism",
+  "description": "Site footer with optional logo asset slot, multi-column link grid, social icon links, and copyright text. Dark background variant using neutral-900.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.300",
+    "color.neutral.400",
+    "color.neutral.500",
+    "color.neutral.700",
+    "color.neutral.900",
+    "color.brand.500",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.6",
+    "spacing.8",
+    "radius.1",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default"
+  ],
+  "assetSlots": [
+    {
+      "role": "logo",
+      "type": "logo",
+      "required": false,
+      "fallbackHint": "Brand logo displayed in footer top-left area"
+    }
+  ],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

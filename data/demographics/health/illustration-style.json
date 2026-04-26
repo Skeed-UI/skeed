@@ -1,0 +1,20 @@
+{
+  "demographic": "health",
+  "schemaVersion": 1,
+  "promptSuffix": "calm flat illustration, clinical teal (#14B8A6) and warm gray color palette, abstract health and wellness concepts, gentle organic shapes, diverse and inclusive representation, no graphic medical procedures or injuries, no blood or clinical gore, soft backgrounds, professional healthcare aesthetic, no text overlays, conveying care and healing",
+  "negativePromptSuffix": "no graphic medical imagery, no injuries or blood, no hypodermic needles in foreground, no stereotyped demographics, no expensive luxury medical settings, no stressed or in-pain faces, no dark moody lighting",
+  "preferredAspectRatios": ["16:9", "4:3", "1:1"],
+  "providerHints": {
+    "fal-flux": {
+      "model": "flux/schnell",
+      "steps": 4
+    },
+    "replicate": {
+      "model": "black-forest-labs/flux-schnell"
+    },
+    "openai-image": {
+      "model": "gpt-image-1",
+      "quality": "high"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "demographic": "fintech",
+  "niche": "banking",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "medium",
+  "trustCuesNeeded": [
+    "monospaced_numerics",
+    "audit_trail",
+    "verified_check",
+    "compliance_badge",
+    "flat_borders"
+  ],
+  "motivationPattern": "extrinsic",
+  "formality": 4,
+  "noveltyTolerance": 2,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [
+    "hidden-fee-disclosure",
+    "dark-nudge-overdraft",
+    "auto-enrollment-premium",
+    "confusing-cancellation",
+    "misleading-apr-display",
+    "fake-urgency-rates",
+    "pre-checked-consent"
+  ],
+  "research": {
+    "sources": [
+      "CFPB Design & Testing Guidelines for Financial Products (2023) — https://www.consumerfinance.gov/data-research/research-reports/",
+      "WCAG 2.1 — Web Content Accessibility Guidelines, W3C — https://www.w3.org/TR/WCAG21/",
+      "Nielsen Norman Group — Banking UX: Key Principles for Trust and Clarity (2022) — https://www.nngroup.com/articles/banking-ux/",
+      "Baymard Institute — Mobile Form Usability (2021) — https://baymard.com/research/mobile-form-usability",
+      "Federal Reserve — 2023 Report on the Economic Well-Being of U.S. Households — https://www.federalreserve.gov/publications/2023-economic-well-being-of-us-households.htm"
+    ],
+    "notes": "Banking users are risk-averse and skeptical. Monospaced numerics prevent misreading amounts — a single transposed digit can result in financial loss or overdrafts. Audit trails and transaction IDs build institutional trust: users need to believe there is a ledger of record, not just an app. Every action must be reversible or clearly confirmable before execution; irreversible actions (wire transfers, account closure) require explicit multi-step confirmation. FDIC and regulatory compliance badges reduce anxiety in the first 5 seconds of account creation flows. Forms must be strictly linear — multi-column financial forms increase error rates (Baymard 2021). Error messages must be specific and actionable: 'Payment declined — insufficient funds. Available balance: $42.17' is correct; 'Something went wrong' is not. Users filing duplicate transfers due to unclear ACH feedback is a documented and costly failure mode. Novelty tolerance is low: users trust recognizable UI patterns (familiar card layouts, tabular statements) over novel interaction paradigms."
+  }
+}

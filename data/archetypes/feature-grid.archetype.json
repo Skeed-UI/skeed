@@ -1,0 +1,33 @@
+{
+  "id": "feature-grid",
+  "name": "FeatureGrid",
+  "schemaVersion": 1,
+  "category": "organism",
+  "description": "Grid of feature highlights for landing and marketing pages. Supports icon-top, icon-left, and numbered variants with 2, 3, or 4 columns and an optional section title and subtitle.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.600",
+    "color.neutral.900",
+    "color.brand.100",
+    "color.brand.500",
+    "color.brand.600",
+    "spacing.1",
+    "spacing.3",
+    "spacing.4",
+    "spacing.10",
+    "spacing.12",
+    "density.cozy.padx",
+    "density.cozy.pady",
+    "density.cozy.gap",
+    "radius.2",
+    "radius.7",
+    "shadow.1"
+  ],
+  "assetSlots": [
+    { "role": "feature-icon", "type": "decorative", "required": false }
+  ],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

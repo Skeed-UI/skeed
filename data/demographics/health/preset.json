@@ -1,0 +1,218 @@
+{
+  "id": "health",
+  "schemaVersion": 1,
+  "palette": {
+    "brand": {
+      "50": "#F0FDFA",
+      "100": "#CCFBF1",
+      "200": "#99F6E4",
+      "300": "#5EEAD4",
+      "400": "#2DD4BF",
+      "500": "#14B8A6",
+      "600": "#0D9488",
+      "700": "#0F766E",
+      "800": "#115E59",
+      "900": "#134E4A",
+      "950": "#042F2E"
+    },
+    "neutral": {
+      "50": "#FAFAF9",
+      "100": "#F5F5F4",
+      "200": "#E7E5E4",
+      "300": "#D6D3D1",
+      "400": "#A8A29E",
+      "500": "#78716C",
+      "600": "#57534E",
+      "700": "#44403C",
+      "800": "#292524",
+      "900": "#1C1917",
+      "950": "#0C0A09"
+    },
+    "success": {
+      "50": "#F0FDF4",
+      "100": "#DCFCE7",
+      "200": "#BBF7D0",
+      "300": "#86EFAC",
+      "400": "#4ADE80",
+      "500": "#22C55E",
+      "600": "#16A34A",
+      "700": "#15803D",
+      "800": "#166534",
+      "900": "#14532D",
+      "950": "#052E16"
+    },
+    "warning": {
+      "50": "#FFFBEB",
+      "100": "#FEF3C7",
+      "200": "#FDE68A",
+      "300": "#FCD34D",
+      "400": "#FBBF24",
+      "500": "#F59E0B",
+      "600": "#D97706",
+      "700": "#B45309",
+      "800": "#92400E",
+      "900": "#78350F",
+      "950": "#451A03"
+    },
+    "danger": {
+      "50": "#FFF1F2",
+      "100": "#FFE4E6",
+      "200": "#FECDD3",
+      "300": "#FDA4AF",
+      "400": "#FB7185",
+      "500": "#F43F5E",
+      "600": "#E11D48",
+      "700": "#BE123C",
+      "800": "#9F1239",
+      "900": "#881337",
+      "950": "#4C0519"
+    },
+    "info": {
+      "50": "#EFF6FF",
+      "100": "#DBEAFE",
+      "200": "#BFDBFE",
+      "300": "#93C5FD",
+      "400": "#60A5FA",
+      "500": "#3B82F6",
+      "600": "#2563EB",
+      "700": "#1D4ED8",
+      "800": "#1E40AF",
+      "900": "#1E3A8A",
+      "950": "#172554"
+    }
+  },
+  "contrastPairs": [
+    {
+      "fg": "#1C1917",
+      "bg": "#FAFAF9",
+      "ratio": 17.1,
+      "passesAA": true,
+      "passesAAA": true
+    },
+    {
+      "fg": "#FFFFFF",
+      "bg": "#115E59",
+      "ratio": 7.7,
+      "passesAA": true,
+      "passesAAA": true
+    },
+    {
+      "fg": "#FFFFFF",
+      "bg": "#134E4A",
+      "ratio": 9.8,
+      "passesAA": true,
+      "passesAAA": true
+    },
+    {
+      "fg": "#1C1917",
+      "bg": "#CCFBF1",
+      "ratio": 13.2,
+      "passesAA": true,
+      "passesAAA": true
+    }
+  ],
+  "typography": {
+    "display": {
+      "family": "Inter",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 500, 600, 700],
+      "features": ["ss01"]
+    },
+    "body": {
+      "family": "Inter",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 500, 600],
+      "features": []
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "fallback": ["ui-monospace", "monospace"],
+      "weights": [400, 500],
+      "features": ["zero"]
+    },
+    "numeric": {
+      "family": "JetBrains Mono",
+      "fallback": ["ui-monospace", "monospace"],
+      "weights": [500, 700],
+      "features": ["tnum", "zero"]
+    },
+    "scale": [0.75, 0.875, 1.0, 1.125, 1.25, 1.5, 1.875, 2.25, 3.0, 3.75, 4.5]
+  },
+  "spacing": [0, 4, 8, 12, 16, 24, 32, 40, 48, 64, 96],
+  "radius": [0, 4, 8, 12, 16, 20, 24, 32],
+  "density": {
+    "compact": {
+      "padY": 8,
+      "padX": 12,
+      "gap": 8,
+      "lineHeight": 1.5
+    },
+    "cozy": {
+      "padY": 12,
+      "padX": 16,
+      "gap": 12,
+      "lineHeight": 1.6
+    },
+    "comfy": {
+      "padY": 16,
+      "padX": 20,
+      "gap": 16,
+      "lineHeight": 1.75
+    }
+  },
+  "defaultDensity": "cozy",
+  "motion": {
+    "profile": "subtle",
+    "durations": {
+      "fast": 150,
+      "normal": 250,
+      "slow": 350,
+      "enter": 200
+    },
+    "easings": {
+      "default": "cubic-bezier(0.4,0,0.2,1)",
+      "enter": "cubic-bezier(0,0,0.2,1)",
+      "exit": "cubic-bezier(0.4,0,1,1)"
+    }
+  },
+  "iconography": {
+    "style": "duotone",
+    "pack": "lucide"
+  },
+  "borders": {
+    "width": 1,
+    "style": "solid",
+    "treatment": "soft"
+  },
+  "elevation": {
+    "shadows": [
+      "none",
+      "0 1px 3px rgba(28,25,23,0.06)",
+      "0 2px 8px rgba(28,25,23,0.08)",
+      "0 4px 16px rgba(28,25,23,0.10)",
+      "0 8px 32px rgba(28,25,23,0.12)"
+    ],
+    "surfaceTreatment": "flat"
+  },
+  "illustrationStylePrompt": "calm flat illustration, clinical teal and warm gray color palette, abstract health and wellness concepts, gentle organic shapes, no graphic medical procedures, no blood or injury imagery, inclusive representation of diverse body types and ages, soft backgrounds, professional healthcare aesthetic, no text overlays",
+  "logoPrimitiveConstraints": {
+    "allowedShapeKinds": ["circle", "rounded-square", "shield", "pill", "cross"],
+    "allowedMarkKinds": ["plus-mark", "leaf", "heart-line", "shield-plus", "monogram"],
+    "allowedWordmarkStyles": ["clean-sans", "rounded-sans", "accessible-sans"],
+    "allowedContainerStyles": ["lockup-horizontal", "lockup-stacked", "icon-only", "badge-soft"]
+  },
+  "voice": {
+    "tone": ["calm", "reassuring", "professional", "clear", "empathetic"],
+    "samples": {
+      "primaryAction": "Continue",
+      "errorEmpty": "No records found",
+      "successToast": "Saved successfully",
+      "loading": "Loading your records...",
+      "welcome": "Welcome back",
+      "confirmAction": "Confirm",
+      "cancelAction": "Cancel",
+      "emergencyContact": "Call 911 for emergencies",
+      "privacyNote": "Your data is private and secure"
+    }
+  }
+}

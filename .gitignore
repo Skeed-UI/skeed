@@ -1,0 +1,36 @@
+node_modules
+dist
+build
+.turbo
+*.log
+.DS_Store
+.env
+.env.local
+.env.*.local
+
+# Skeed runtime
+.skeed/
+~/.skeed/
+
+# Editor
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+.tsbuildinfo
+
+# Test artifacts
+coverage/
+.vitest-cache/
+playwright-report/
+test-results/
+
+# Built indices (regeneratable, not in git)
+packages/indexer/dist/*.db
+packages/mcp-server/dist/registry-*.db

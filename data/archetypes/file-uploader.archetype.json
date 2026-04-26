@@ -1,0 +1,17 @@
+{
+  "id": "file-uploader",
+  "name": "FileUploader",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "TODO: describe FileUploader",
+  "tokensUsed": [
+    "color.neutral.50"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": [
+    "react"
+  ],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

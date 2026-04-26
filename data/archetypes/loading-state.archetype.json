@@ -1,0 +1,27 @@
+{
+  "id": "loading-state",
+  "name": "LoadingState",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "Loading indicator with optional message. Supports spinner (animated SVG), skeleton (pulse placeholder blocks), and pulse (single pulsing rectangle) variants in small, medium, and large sizes. Optionally fills the full page with an overlay.",
+  "tokensUsed": [
+    "color.neutral.50",
+    "color.neutral.200",
+    "color.neutral.600",
+    "color.brand.500",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.8",
+    "spacing.10",
+    "spacing.12",
+    "spacing.16",
+    "radius.1",
+    "radius.2"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "demographicAntiPatterns": []
+}

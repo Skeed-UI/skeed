@@ -1,0 +1,28 @@
+{
+  "demographic": "productivity",
+  "niche": "task-management",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "medium",
+  "trustCuesNeeded": ["verified_check", "audit_trail", "soft_rounding"],
+  "motivationPattern": "mastery",
+  "formality": 2,
+  "noveltyTolerance": 3,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [
+    "notification-spam",
+    "streak-shaming",
+    "social-comparison-pressure",
+    "fake-urgency",
+    "autoplay-sound",
+    "dark-pattern-upsell",
+    "guilt-tripping-copy"
+  ],
+  "research": {
+    "sources": [
+      "https://nngroup.com/articles/productivity-tools-ux/",
+      "https://www.theverge.com/23178813/linear-project-management-review",
+      "https://todoist.com/productivity-methods"
+    ],
+    "notes": "Productivity users are in 'flow state' frequently — UI must not interrupt with unnecessary modals or notifications. Keyboard shortcuts are critical. Optimistic UI updates reduce friction. Empty states should be encouraging not punishing. Destructive actions (delete) must be undoable. Users use these apps for hours daily — cognitive fatigue is real. Prefer inline editing over modal dialogs. Progress visibility is intrinsically motivating."
+  }
+}
