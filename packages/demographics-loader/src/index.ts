@@ -29,7 +29,8 @@ export interface LoadedDemographic {
   preset: DemographicPreset;
   psychology: Map<string, PsychologyProfile>;
   painPoints: Map<string, ReturnType<typeof PainPointFile.parse>>;
-  illustrationStyle: IllustrationStyle;
+  /** Optional — 16 of 23 demographics ship without one until M3 codegen. */
+  illustrationStyle: IllustrationStyle | undefined;
   logoPrimitives: LogoPrimitiveIndex;
   ownersPath: string;
   readmePath: string;
@@ -107,8 +108,11 @@ async function loadOneDemographic(demoDir: string): Promise<LoadedDemographic> {
   }
 
   const illustrationPath = join(demoDir, 'illustration-style.json');
-  const illustrationJson = JSON.parse(await readFile(illustrationPath, 'utf8'));
-  const illustrationStyle = IllustrationStyle.parse(illustrationJson);
+  let illustrationStyle: IllustrationStyle | undefined;
+  if (await fileExists(illustrationPath)) {
+    const illustrationJson = JSON.parse(await readFile(illustrationPath, 'utf8'));
+    illustrationStyle = IllustrationStyle.parse(illustrationJson);
+  }
 
   const logoPrimitives = await loadLogoPrimitives(join(demoDir, 'logo-primitives'));
 
@@ -148,6 +152,15 @@ async function dirExists(path: string): Promise<boolean> {
   try {
     const s = await stat(path);
     return s.isDirectory();
+  } catch {
+    return false;
+  }
+}
+
+async function fileExists(path: string): Promise<boolean> {
+  try {
+    const s = await stat(path);
+    return s.isFile();
   } catch {
     return false;
   }

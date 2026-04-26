@@ -8,25 +8,32 @@
 import { readFileSync, readdirSync, existsSync, mkdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import type { ArchetypeDefinition, GeneratedComponent, DemographicPreset, Density } from '@skeed/contracts';
-import { emitComponent, emitCSSVariables } from '@skeed/codegen';
+import { emitComponent } from '@skeed/codegen';
+import { generateCSSVariables } from '@skeed/core/token-resolver';
 
 const ARCHETYPES_DIR = './data/archetypes';
 const DEMOGRAPHICS_DIR = './data/demographics';
 const OUTPUT_DIR = './output/smoke-test';
 
 async function loadArchetype(filename: string): Promise<ArchetypeDefinition> {
-  const path = join(ARCHETYPES_DIR, filename);
-  const content = readFileSync(path, 'utf-8');
+  // Load metadata from JSON file (e.g., accordion.archetype.json)
+  const jsonFilename = filename.replace('.tsx', '.json');
+  const jsonPath = join(ARCHETYPES_DIR, jsonFilename);
+  const metadata = JSON.parse(readFileSync(jsonPath, 'utf-8'));
   
-  // Parse the archetype file to extract metadata and component
-  const jsonMatch = content.match(/\/\*\*\s*@archetype\s*\*\/\s*({[\s\S]*?})/);
-  if (!jsonMatch) {
-    throw new Error(`No archetype metadata found in ${filename}`);
-  }
+  // Load TSX source
+  const tsxPath = join(ARCHETYPES_DIR, filename);
+  const source = readFileSync(tsxPath, 'utf-8');
   
-  const metadata = JSON.parse(jsonMatch[1]!);
+  // Map ArchetypeManifest to ArchetypeDefinition
+  // tokensUsed -> tokens for component-emitter compatibility
   return {
-    ...metadata,
+    id: metadata.id,
+    category: metadata.category,
+    source,
+    imports: [],
+    tokens: metadata.tokensUsed || [],
+    props: [],
     filename,
   };
 }
@@ -98,11 +105,13 @@ async function runSmokeTest() {
               // Write output for inspection
               const outputFile = `${archetype.id}-${demographicId}-${density}.tsx`;
               const outputPath = join(OUTPUT_DIR, outputFile);
-              writeFileSync(outputPath, component.tsx, 'utf-8');
+              writeFileSync(outputPath, component.source, 'utf-8');
               
               // Write CSS variables
               const cssOutputPath = join(OUTPUT_DIR, `${archetype.id}-${demographicId}-${density}.css`);
-              writeFileSync(cssOutputPath, emitCSSVariables(preset, density), 'utf-8');
+              const cssVars = generateCSSVariables(preset, density);
+              const cssContent = cssVars.cssVariables.map(v => `  ${v.name}: ${v.value};`).join('\n');
+              writeFileSync(cssOutputPath, `:root {\n${cssContent}\n}`, 'utf-8');
               
               results.push({
                 archetype: archetype.id,

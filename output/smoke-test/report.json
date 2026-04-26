@@ -1,0 +1,280 @@
+{
+  "timestamp": "2026-04-26T03:16:27.027Z",
+  "summary": {
+    "total": 45,
+    "success": 45,
+    "errors": 0
+  },
+  "results": [
+    {
+      "archetype": "accordion",
+      "demographic": "kids",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "kids",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "kids",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "education",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "education",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "education",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "health",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "health",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "health",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "fintech",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "fintech",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "fintech",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "classic",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "classic",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "accordion",
+      "demographic": "classic",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "kids",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "kids",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "kids",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "education",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "education",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "education",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "health",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "health",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "health",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "fintech",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "fintech",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "fintech",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "classic",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "classic",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "alert",
+      "demographic": "classic",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "kids",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "kids",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "kids",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "education",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "education",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "education",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "health",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "health",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "health",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "fintech",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "fintech",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "fintech",
+      "density": "comfy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "classic",
+      "density": "compact",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "classic",
+      "density": "cozy",
+      "success": true
+    },
+    {
+      "archetype": "article",
+      "demographic": "classic",
+      "density": "comfy",
+      "success": true
+    }
+  ]
+}
