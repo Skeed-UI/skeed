@@ -87,13 +87,18 @@ const rule: Rule.RuleModule = {
         while ((match = regex.exec(value)) !== null) {
           // Skip if inside a CSS variable reference
           const contextStr = value.substring(
-            Math.max(0, match.index! - 20),
-            Math.min(value.length, match.index! + match[0].length + 20)
+            Math.max(0, (match.index ?? 0) - 20),
+            Math.min(value.length, (match.index ?? 0) + match[0].length + 20)
           );
           
           if (contextStr.includes('--skeed-') || contextStr.includes('var(')) {
             continue;
           }
+          
+          // Capture match values for fix function (TypeScript closure safety)
+          const matchIndex = match.index ?? 0;
+          const matchValue = match[0];
+          if (!matchValue) continue;
 
           context.report({
             node,
@@ -101,18 +106,18 @@ const rule: Rule.RuleModule = {
             loc: {
               start: {
                 line: node.loc?.start?.line ?? 1,
-                column: (node.loc?.start?.column ?? 0) + match.index!,
+                column: (node.loc?.start?.column ?? 0) + matchIndex,
               },
               end: {
                 line: node.loc?.start?.line ?? 1,
-                column: (node.loc?.start?.column ?? 0) + match.index! + match[0].length,
+                column: (node.loc?.start?.column ?? 0) + matchIndex + matchValue.length,
               },
             },
-            fix(fixer: any) {
-              const replacement = getReplacement(match[0]!);
+            fix(fixer) {
+              const replacement = getReplacement(matchValue);
               return fixer.replaceText(
                 node,
-                node.raw.replace(match[0]!, replacement)
+                node.raw.replace(matchValue, replacement)
               );
             },
           });
