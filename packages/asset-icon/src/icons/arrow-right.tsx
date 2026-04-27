@@ -3,7 +3,7 @@
 import { useIconContext } from '../IconContext';
 import { getStrokeWidth, type IconProps } from '../types';
 
-export function Check({ size = 16, weight, variant, className, ...props }: IconProps) {
+export function ArrowRight({ size = 16, weight, variant, className, ...props }: IconProps) {
   const ctx = useIconContext();
   const activeWeight = weight ?? ctx.weight;
   const activeVariant = variant ?? ctx.variant;
@@ -21,7 +21,7 @@ export function Check({ size = 16, weight, variant, className, ...props }: IconP
         aria-hidden="true"
         {...props}
       >
-        <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" />
+        <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" />
       </svg>
     );
   }
@@ -41,7 +41,8 @@ export function Check({ size = 16, weight, variant, className, ...props }: IconP
       aria-hidden="true"
       {...props}
     >
-      <polyline points="20 6 9 17 4 12" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
     </svg>
   );
 }

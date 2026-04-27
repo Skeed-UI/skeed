@@ -1,5 +1,6 @@
 import { type HTMLAttributes, forwardRef, type ReactNode } from 'react';
 import { cn } from '@skeed/core/cn';
+import { ArrowUp, ArrowDown, ArrowRight } from '@skeed/asset-icon';
 
 export interface DashboardCardProps extends HTMLAttributes<HTMLElement> {
   title: string;
@@ -122,7 +123,7 @@ export const DashboardCard = forwardRef<HTMLElement, DashboardCardProps>(
             aria-label={`${change >= 0 ? 'Increased' : 'Decreased'} by ${Math.abs(change)}%${changeLabel ? ` ${changeLabel}` : ''}`}
           >
             <span aria-hidden="true">
-              {isPositive ? '↑' : isNegative ? '↓' : '→'}
+              {isPositive ? <ArrowUp size={12} /> : isNegative ? <ArrowDown size={12} /> : <ArrowRight size={12} />}
             </span>
             <span>
               {change > 0 ? '+' : ''}
@@ -143,3 +144,58 @@ export const DashboardCard = forwardRef<HTMLElement, DashboardCardProps>(
     );
   },
 );
+
+// Skeleton Component
+export interface DashboardCardSkeletonProps {
+  variant?: 'default' | 'compact';
+  hasSparkline?: boolean;
+  className?: string;
+}
+
+export function DashboardCardSkeleton({
+  variant = 'default',
+  hasSparkline = true,
+  className,
+}: DashboardCardSkeletonProps) {
+  return (
+    <article
+      className={cn(
+        'flex flex-col bg-skeed-color-neutral-50 rounded-skeed-radius-2 shadow-skeed-shadow-1 border border-skeed-color-neutral-200 animate-pulse',
+        variant === 'compact'
+          ? 'px-skeed-spacing-3 py-skeed-spacing-2'
+          : 'px-skeed-density-cozy-padx py-skeed-density-cozy-pady',
+        className,
+      )}
+      aria-busy="true"
+      aria-label="Loading dashboard card"
+    >
+      {/* Header */}
+      <div className="flex items-start justify-between mb-skeed-spacing-2">
+        <div className="h-skeed-spacing-4 w-24 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+        <div className="flex items-center justify-center h-skeed-spacing-8 w-skeed-spacing-8 rounded-skeed-radius-2 bg-skeed-color-neutral-200" />
+      </div>
+
+      {/* Value */}
+      <div className="flex items-baseline gap-skeed-spacing-1 mb-skeed-spacing-1">
+        <div
+          className={cn(
+            'bg-skeed-color-neutral-300 rounded-skeed-radius-1',
+            variant === 'compact' ? 'h-6 w-16' : 'h-8 w-20',
+          )}
+        />
+        <div className="h-skeed-spacing-3 w-skeed-spacing-8 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+      </div>
+
+      {/* Change indicator */}
+      <div className="flex items-center gap-skeed-spacing-1">
+        <div className="h-skeed-spacing-3 w-3 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+        <div className="h-skeed-spacing-3 w-12 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+      </div>
+
+      {/* Sparkline */}
+      {hasSparkline && (
+        <div className="mt-skeed-spacing-3 h-skeed-spacing-8 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+      )}
+    </article>
+  );
+}

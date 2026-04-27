@@ -1,6 +1,13 @@
-import type { IconProps } from '../types';
+'use client';
 
-export function Eye({ size = 16, className, ...props }: IconProps) {
+import { useIconContext } from '../IconContext';
+import { getStrokeWidth, type IconProps } from '../types';
+
+export function Eye({ size = 16, weight, className, ...props }: IconProps) {
+  const ctx = useIconContext();
+  const activeWeight = weight ?? ctx.weight;
+  const strokeWidth = getStrokeWidth(activeWeight, size);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +16,7 @@ export function Eye({ size = 16, className, ...props }: IconProps) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}

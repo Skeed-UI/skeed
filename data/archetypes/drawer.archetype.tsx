@@ -1,5 +1,6 @@
 import { type HTMLAttributes, forwardRef, useEffect, useRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { X } from '@skeed/asset-icon';
 
 type DrawerSide = 'left' | 'right' | 'bottom';
 type DrawerSize = 'sm' | 'md' | 'lg';
@@ -172,20 +173,7 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
             aria-label="Close"
             onClick={onClose}
           >
-            {/* Close icon — consuming app provides SVG or icon component */}
-            <svg
-              viewBox="0 0 16 16"
-              fill="none"
-              aria-hidden="true"
-              className="w-full h-full"
-            >
-              <path
-                d="M4 4l8 8M12 4l-8 8"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
+            <X size={16} />
           </button>
         </div>
 

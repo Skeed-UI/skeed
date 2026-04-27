@@ -1,5 +1,6 @@
-import { type HTMLAttributes, forwardRef, useEffect, useCallback, useRef } from 'react';
+import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { X } from '@skeed/asset-icon';
 
 export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
@@ -101,22 +102,10 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(function Modal(
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500',
                 )}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
+                <X
+                  size={20}
                   className="transition-transform duration-skeed-motion-duration-fast hover:rotate-90"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
+                />
               </button>
             )}
           </div>

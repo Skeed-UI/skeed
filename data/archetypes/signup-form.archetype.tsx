@@ -1,5 +1,6 @@
 import { type HTMLAttributes, useState, useId } from 'react';
 import { cn } from '@skeed/core/cn';
+import { Eye, EyeOff, Spinner, Check } from '@skeed/asset-icon';
 
 type FieldKey = 'name' | 'email' | 'password' | 'confirm-password';
 
@@ -16,32 +17,6 @@ export interface SignupFormProps extends Omit<HTMLAttributes<HTMLElement>, 'onSu
 }
 
 const DEFAULT_FIELDS: FieldKey[] = ['name', 'email', 'password', 'confirm-password'];
-
-const EyeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-    <circle cx="12" cy="12" r="3" />
-  </svg>
-);
-
-const EyeOffIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
-    <line x1="1" y1="1" x2="23" y2="23" />
-  </svg>
-);
-
-const SpinnerIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-spin" aria-hidden="true">
-    <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-  </svg>
-);
-
-const SmallCheckIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
 
 const INPUT_BASE =
   'w-full bg-skeed-color-neutral-50 text-skeed-color-neutral-900 ' +
@@ -273,7 +248,7 @@ export function SignupForm({
                 onClick={() => setRevealPw((v) => !v)}
                 className={TOGGLE_BTN}
               >
-                {revealPw ? <EyeOffIcon /> : <EyeIcon />}
+                {revealPw ? <EyeOff size={16} /> : <Eye size={16} />}
               </button>
             </div>
             {pw.length > 0 && (
@@ -325,7 +300,7 @@ export function SignupForm({
                 onClick={() => setRevealConfirmPw((v) => !v)}
                 className={TOGGLE_BTN}
               >
-                {revealConfirmPw ? <EyeOffIcon /> : <EyeIcon />}
+                {revealConfirmPw ? <EyeOff size={16} /> : <Eye size={16} />}
               </button>
             </div>
             {fieldErrors['confirm-password'] && (
@@ -363,7 +338,7 @@ export function SignupForm({
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 flex items-center justify-center text-skeed-color-neutral-50 opacity-0 peer-checked:opacity-100"
                 >
-                  <SmallCheckIcon />
+                  <Check size={12} />
                 </span>
               </div>
               <label htmlFor={termsId} className="text-sm font-skeed-body text-skeed-color-neutral-700 cursor-pointer leading-snug">
@@ -404,7 +379,7 @@ export function SignupForm({
             'disabled:pointer-events-none disabled:opacity-50'
           }
         >
-          {isLoading && <SpinnerIcon />}
+          {isLoading && <Spinner size={16} className="animate-spin" />}
           {isLoading ? 'Creating account…' : 'Create account'}
         </button>
       </form>

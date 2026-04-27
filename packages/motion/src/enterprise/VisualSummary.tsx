@@ -6,6 +6,7 @@
 import * as React from 'react';
 import { useMotion } from '../react/useMotion.js';
 import { useMotionContext } from '../react/MotionProvider.js';
+import { ChevronDown, ArrowUp, ArrowDown, ArrowRight } from '@skeed/asset-icon';
 
 export interface SummaryData {
   id: string;
@@ -113,9 +114,7 @@ export function VisualSummary({
                 transition: 'transform 0.3s ease',
               }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
+              <ChevronDown size={20} />
             </div>
           )}
         </div>
@@ -302,7 +301,7 @@ function SummaryItem({
                 color: item.trend ? trendColors[item.trend] : 'var(--skeed-color-neutral-500)',
               }}
             >
-              {item.trend === 'up' ? '↑' : item.trend === 'down' ? '↓' : '→'}
+              {item.trend === 'up' ? <ArrowUp size={14} /> : item.trend === 'down' ? <ArrowDown size={14} /> : <ArrowRight size={14} />}
               {item.change !== undefined && Math.abs(item.change).toFixed(1)}
               {item.changeLabel && (
                 <span style={{ fontSize: '12px', color: 'var(--skeed-color-neutral-400)' }}>
@@ -404,7 +403,7 @@ function KPICard({
         </span>
         {metric.trend && (
           <span style={{ color: trendColors[metric.trend], fontSize: '14px' }}>
-            {metric.trend === 'up' ? '↑' : metric.trend === 'down' ? '↓' : '→'}
+            {metric.trend === 'up' ? <ArrowUp size={14} /> : metric.trend === 'down' ? <ArrowDown size={14} /> : <ArrowRight size={14} />}
           </span>
         )}
       </div>

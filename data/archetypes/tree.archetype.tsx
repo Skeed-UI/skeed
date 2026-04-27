@@ -1,5 +1,6 @@
 import { type HTMLAttributes, forwardRef, useState, useCallback, KeyboardEvent, useRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { ChevronRight } from '@skeed/asset-icon';
 
 export interface TreeNode {
   id: string;
@@ -198,24 +199,13 @@ function TreeItem({
         onFocus={() => onFocus(node.id)}
       >
         {hasChildren && (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
+          <ChevronRight
+            size={16}
             className={cn(
               'transition-transform duration-skeed-motion-duration-fast',
               isExpanded && 'rotate-90'
             )}
-          >
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
+          />
         )}
         <span>{node.label}</span>
       </button>

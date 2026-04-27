@@ -1,5 +1,6 @@
 import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { ArrowUp, ArrowDown, ArrowRight } from '@skeed/asset-icon';
 
 export interface KpiMetric {
   id: string;
@@ -29,10 +30,10 @@ const trendColorClasses: Record<'up' | 'down' | 'flat', string> = {
   flat: 'text-skeed-color-neutral-500',
 };
 
-const trendArrows: Record<'up' | 'down' | 'flat', string> = {
-  up: '↑',
-  down: '↓',
-  flat: '→',
+const TrendIcon = ({ trend }: { trend: 'up' | 'down' | 'flat' }) => {
+  if (trend === 'up') return <ArrowUp size={14} />;
+  if (trend === 'down') return <ArrowDown size={14} />;
+  return <ArrowRight size={14} />;
 };
 
 export const KpiGrid = forwardRef<HTMLElement, KpiGridProps>(
@@ -95,7 +96,7 @@ export const KpiGrid = forwardRef<HTMLElement, KpiGridProps>(
                   }
                 >
                   {metric.trend && (
-                    <span aria-hidden="true">{trendArrows[metric.trend]}</span>
+                    <span aria-hidden="true"><TrendIcon trend={metric.trend} /></span>
                   )}
                   {metric.change !== undefined && (
                     <span>
@@ -115,3 +116,65 @@ export const KpiGrid = forwardRef<HTMLElement, KpiGridProps>(
     );
   },
 );
+
+// Skeleton Component
+export interface KpiGridSkeletonProps {
+  columns?: 2 | 3 | 4;
+  itemCount?: number;
+  compact?: boolean;
+  className?: string;
+}
+
+export function KpiGridSkeleton({
+  columns = 4,
+  itemCount = 4,
+  compact = false,
+  className,
+}: KpiGridSkeletonProps) {
+  return (
+    <section
+      className={cn('w-full', className)}
+      aria-busy="true"
+      aria-label="Loading KPI grid"
+    >
+      <div
+        className={cn(
+          'grid gap-skeed-density-cozy-gap',
+          gridColsClasses[columns],
+        )}
+      >
+        {Array.from({ length: itemCount }).map((_, i) => (
+          <div
+            key={i}
+            className={cn(
+              'flex flex-col bg-skeed-color-neutral-50 rounded-skeed-radius-2 shadow-skeed-shadow-1 border border-skeed-color-neutral-200 animate-pulse',
+              compact
+                ? 'px-skeed-spacing-3 py-skeed-spacing-2'
+                : 'px-skeed-density-cozy-padx py-skeed-density-cozy-pady',
+            )}
+          >
+            {/* Label */}
+            <div className="h-skeed-spacing-4 w-24 bg-skeed-color-neutral-200 rounded-skeed-radius-1 mb-skeed-spacing-1" />
+
+            {/* Value */}
+            <div className="flex items-baseline gap-skeed-spacing-1">
+              <div
+                className={cn(
+                  'bg-skeed-color-neutral-300 rounded-skeed-radius-1',
+                  compact ? 'h-7 w-16' : 'h-9 w-20',
+                )}
+              />
+              <div className="h-skeed-spacing-4 w-skeed-spacing-8 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+            </div>
+
+            {/* Change indicator */}
+            <div className="mt-skeed-spacing-2 flex items-center gap-skeed-spacing-1">
+              <div className="h-skeed-spacing-3 w-3 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+              <div className="h-skeed-spacing-3 w-12 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

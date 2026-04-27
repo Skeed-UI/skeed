@@ -1,5 +1,6 @@
 import React, { type HTMLAttributes, useState, useId } from 'react';
 import { cn } from '@skeed/core/cn';
+import { ChevronDown, ChevronRight } from '@skeed/asset-icon';
 import { createGroupingEngine, type FieldConfig, type GroupingStrategy } from '@skeed/core/form-grouping';
 import type { FieldGroup } from '@skeed/contracts';
 
@@ -13,18 +14,6 @@ export interface GroupedFormProps extends Omit<HTMLAttributes<HTMLElement>, 'onS
   title?: string;
   subtitle?: string;
 }
-
-const ChevronDownIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polyline points="6 9 12 15 18 9" />
-  </svg>
-);
-
-const ChevronRightIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polyline points="9 18 15 12 9 6" />
-  </svg>
-);
 
 const INPUT_BASE =
   'w-full bg-skeed-color-neutral-50 text-skeed-color-neutral-900 ' +
@@ -176,7 +165,7 @@ export function GroupedForm({
                 <div className="flex items-center gap-skeed-spacing-2">
                   {group.collapsible && (
                     <span className="text-skeed-color-neutral-500">
-                      {isExpanded ? <ChevronDownIcon /> : <ChevronRightIcon />}
+                      {isExpanded ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
                     </span>
                   )}
                   <span className="font-medium font-skeed-body text-skeed-color-neutral-900">

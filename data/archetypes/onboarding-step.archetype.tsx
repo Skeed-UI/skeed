@@ -1,5 +1,6 @@
 import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { Check } from '@skeed/asset-icon';
 
 export interface OnboardingStepProps extends HTMLAttributes<HTMLDivElement> {
   stepNumber: number;
@@ -41,20 +42,7 @@ export const OnboardingStep = forwardRef<HTMLDivElement, OnboardingStepProps>(fu
           )}
         >
           {isCompleted ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
+            <Check size={16} />
           ) : (
             stepNumber
           )}

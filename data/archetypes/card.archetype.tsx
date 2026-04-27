@@ -95,3 +95,58 @@ export const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
     );
   },
 );
+
+// Skeleton Components
+export interface CardSkeletonProps extends HTMLAttributes<HTMLElement> {
+  variant?: 'elevated' | 'outlined' | 'flat';
+  hasHeader?: boolean;
+  hasFooter?: boolean;
+  lines?: number;
+}
+
+export function CardSkeleton({
+  variant = 'elevated',
+  hasHeader = true,
+  hasFooter = false,
+  lines = 3,
+  className,
+  ...rest
+}: CardSkeletonProps) {
+  return (
+    <article
+      className={cn(
+        variantClasses[variant],
+        'px-skeed-density-cozy-padx py-skeed-density-cozy-pady animate-pulse',
+        className,
+      )}
+      aria-busy="true"
+      aria-label="Loading card"
+      {...rest}
+    >
+      {hasHeader && (
+        <div className="mb-skeed-spacing-3 pb-skeed-spacing-3 border-b border-skeed-color-neutral-200">
+          <div className="h-skeed-spacing-5 w-2/3 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+        </div>
+      )}
+
+      <div className="space-y-skeed-spacing-2">
+        {Array.from({ length: lines }).map((_, i) => (
+          <div
+            key={i}
+            className={cn(
+              'h-skeed-spacing-4 bg-skeed-color-neutral-200 rounded-skeed-radius-1',
+              i === lines - 1 && 'w-3/4',
+            )}
+          />
+        ))}
+      </div>
+
+      {hasFooter && (
+        <div className="mt-skeed-spacing-3 pt-skeed-spacing-3 border-t border-skeed-color-neutral-200 flex justify-end gap-skeed-spacing-2">
+          <div className="h-skeed-spacing-8 w-skeed-spacing-20 bg-skeed-color-neutral-200 rounded-skeed-radius-1" />
+          <div className="h-skeed-spacing-8 w-skeed-spacing-20 bg-skeed-color-neutral-300 rounded-skeed-radius-1" />
+        </div>
+      )}
+    </article>
+  );
+}

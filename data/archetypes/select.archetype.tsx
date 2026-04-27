@@ -1,5 +1,6 @@
 import { type SelectHTMLAttributes, forwardRef, useId } from 'react';
 import { cn } from '@skeed/core/cn';
+import { ChevronDown } from '@skeed/asset-icon';
 
 export interface SelectOption {
   value: string;
@@ -34,23 +35,6 @@ const ERROR_SELECT_CLASSES =
 const SUCCESS_SELECT_CLASSES =
   'border-skeed-color-success-500 focus-visible:ring-skeed-color-success-500 focus-visible:border-skeed-color-success-500';
 const LOADING_SELECT_CLASSES = 'bg-skeed-color-neutral-100 cursor-wait';
-
-const ChevronDownIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <polyline points="6 9 12 15 18 9" />
-  </svg>
-);
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
   {
@@ -112,7 +96,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select
           ))}
         </select>
         <span className="pointer-events-none absolute right-skeed-spacing-3 flex items-center text-skeed-color-neutral-400">
-          <ChevronDownIcon />
+          <ChevronDown size={16} />
         </span>
       </div>
       {error ? (
