@@ -1,0 +1,11 @@
+{
+  "id": "legal/loading-state/cozy/default",
+  "archetypeId": "loading-state",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "619b6fd8",
+  "generatedAt": "2026-04-26T09:13:57.260Z"
+}

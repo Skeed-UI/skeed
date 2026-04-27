@@ -1,0 +1,11 @@
+{
+  "id": "productivity/signup-form/comfy/default",
+  "archetypeId": "signup-form",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "17e61218",
+  "generatedAt": "2026-04-26T09:14:02.119Z"
+}

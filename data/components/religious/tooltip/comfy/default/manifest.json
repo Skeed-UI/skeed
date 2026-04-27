@@ -1,0 +1,11 @@
+{
+  "id": "religious/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7113f5bc",
+  "generatedAt": "2026-04-26T09:14:03.074Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/empty-state/compact/default",
+  "archetypeId": "empty-state",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3af7dc2d",
+  "generatedAt": "2026-04-26T09:14:00.985Z"
+}

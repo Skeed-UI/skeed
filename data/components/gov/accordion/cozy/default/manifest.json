@@ -1,0 +1,11 @@
+{
+  "id": "gov/accordion/cozy/default",
+  "archetypeId": "accordion",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "42c10e6c",
+  "generatedAt": "2026-04-26T09:13:53.730Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/table-row/comfy/default",
+  "archetypeId": "table-row",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "35615909",
+  "generatedAt": "2026-04-26T09:14:01.423Z"
+}

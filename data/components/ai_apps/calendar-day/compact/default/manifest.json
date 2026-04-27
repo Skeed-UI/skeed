@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/calendar-day/compact/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2a1fe8aa",
+  "generatedAt": "2026-04-26T09:13:50.794Z"
+}

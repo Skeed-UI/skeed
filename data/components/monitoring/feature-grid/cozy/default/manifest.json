@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/feature-grid/cozy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2e688961",
+  "generatedAt": "2026-04-26T09:14:01.022Z"
+}

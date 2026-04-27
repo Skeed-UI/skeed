@@ -1,0 +1,11 @@
+{
+  "id": "productivity/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4fa03364",
+  "generatedAt": "2026-04-26T09:14:02.214Z"
+}

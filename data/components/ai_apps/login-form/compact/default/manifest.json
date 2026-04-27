@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1310d8c",
+  "generatedAt": "2026-04-26T09:13:50.996Z"
+}

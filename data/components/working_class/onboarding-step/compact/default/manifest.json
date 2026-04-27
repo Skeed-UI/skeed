@@ -1,0 +1,11 @@
+{
+  "id": "working_class/onboarding-step/compact/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "2f0954a6",
+  "generatedAt": "2026-04-26T09:14:06.666Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/hero/cozy/default",
+  "archetypeId": "hero",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7bc86826",
+  "generatedAt": "2026-04-26T09:13:57.193Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "teens/contact-form/compact/default",
+  "archetypeId": "contact-form",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1f0375ff",
+  "generatedAt": "2026-04-26T09:14:05.580Z"
+}

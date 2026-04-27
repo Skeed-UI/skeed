@@ -1,0 +1,11 @@
+{
+  "id": "listings/badge/cozy/default",
+  "archetypeId": "badge",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "7c7eb5e8",
+  "generatedAt": "2026-04-26T09:13:57.657Z"
+}

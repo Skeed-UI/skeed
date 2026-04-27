@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/stepper/cozy/default",
+  "archetypeId": "stepper",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5bc6ac7e",
+  "generatedAt": "2026-04-26T09:13:51.155Z"
+}

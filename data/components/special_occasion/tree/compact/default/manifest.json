@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/tree/compact/default",
+  "archetypeId": "tree",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "7e8f080",
+  "generatedAt": "2026-04-26T09:14:05.390Z"
+}

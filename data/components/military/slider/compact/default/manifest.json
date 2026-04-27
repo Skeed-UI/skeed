@@ -1,0 +1,11 @@
+{
+  "id": "military/slider/compact/default",
+  "archetypeId": "slider",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7f6dc50e",
+  "generatedAt": "2026-04-26T09:14:00.620Z"
+}

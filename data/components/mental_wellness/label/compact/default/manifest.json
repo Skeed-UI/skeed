@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/label/compact/default",
+  "archetypeId": "label",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "432e16ef",
+  "generatedAt": "2026-04-26T09:13:59.548Z"
+}

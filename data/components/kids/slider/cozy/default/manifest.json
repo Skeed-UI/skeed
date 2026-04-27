@@ -1,0 +1,11 @@
+{
+  "id": "kids/slider/cozy/default",
+  "archetypeId": "slider",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "1386d822",
+  "generatedAt": "2026-04-26T09:13:56.702Z"
+}

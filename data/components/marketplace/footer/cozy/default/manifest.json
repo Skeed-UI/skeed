@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/footer/cozy/default",
+  "archetypeId": "footer",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "31d7b61d",
+  "generatedAt": "2026-04-26T09:13:58.673Z"
+}

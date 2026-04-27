@@ -1,0 +1,16 @@
+{
+  "demographic": "special_occasion",
+  "niche": "birthday",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": ["soft_rounding"],
+  "motivationPattern": "social",
+  "formality": 1,
+  "noveltyTolerance": 5,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": ["dark_pattern"],
+  "research": {
+    "sources": [],
+    "notes": "Birthday invites prioritize delight + speed-to-RSVP. Default taste = wild_open or game_night for adults; classic_standard for milestone birthdays."
+  }
+}

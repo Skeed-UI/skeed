@@ -1,0 +1,11 @@
+{
+  "id": "erp/card/cozy/default",
+  "archetypeId": "card",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5659262b",
+  "generatedAt": "2026-04-26T09:13:52.290Z"
+}

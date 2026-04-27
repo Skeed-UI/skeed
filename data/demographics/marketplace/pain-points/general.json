@@ -1,0 +1,21 @@
+{
+  "demographic": "marketplace",
+  "niche": "general",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "mp1",
+      "description": "Marketplace UIs prioritize buyers; sellers feel like second-class users.",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": []
+    },
+    {
+      "id": "mp2",
+      "description": "Reviews + ratings systems are gamed easily.",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": []
+    }
+  ]
+}

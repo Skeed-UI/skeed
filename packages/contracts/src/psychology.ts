@@ -13,6 +13,15 @@ export const TrustCue = z.enum([
   'compliance_badge',
   'testimonial',
   'expert_byline',
+  'progress_indicators',
+  'privacy_indicators',
+  'achievement_badges',
+  'professional_credentials',
+  'accessibility_compliance',
+  'clear_consent_flows',
+  'clear_instructions',
+  'crisis_resources',
+  'parental_controls',
 ]);
 export type TrustCue = z.infer<typeof TrustCue>;
 

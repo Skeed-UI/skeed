@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/hero/cozy/default",
+  "archetypeId": "hero",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "6d8274fc",
+  "generatedAt": "2026-04-26T09:14:04.960Z"
+}

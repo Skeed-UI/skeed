@@ -1,0 +1,11 @@
+{
+  "id": "working_class/sidebar/compact/default",
+  "archetypeId": "sidebar",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "51dc2e08",
+  "generatedAt": "2026-04-26T09:14:06.781Z"
+}

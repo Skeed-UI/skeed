@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/button/cozy/default",
+  "archetypeId": "button",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "59c5da57",
+  "generatedAt": "2026-04-26T09:13:58.473Z"
+}

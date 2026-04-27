@@ -1,0 +1,11 @@
+{
+  "id": "military/chip/cozy/default",
+  "archetypeId": "chip",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "29565ee8",
+  "generatedAt": "2026-04-26T09:14:00.073Z"
+}

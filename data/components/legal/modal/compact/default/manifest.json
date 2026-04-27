@@ -1,0 +1,11 @@
+{
+  "id": "legal/modal/compact/default",
+  "archetypeId": "modal",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "22297fd1",
+  "generatedAt": "2026-04-26T09:13:57.289Z"
+}

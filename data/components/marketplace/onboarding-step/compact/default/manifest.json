@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/onboarding-step/compact/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5b5a0f3a",
+  "generatedAt": "2026-04-26T09:13:58.817Z"
+}

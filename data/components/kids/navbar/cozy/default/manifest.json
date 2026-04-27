@@ -1,0 +1,11 @@
+{
+  "id": "kids/navbar/cozy/default",
+  "archetypeId": "navbar",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "1b21627f",
+  "generatedAt": "2026-04-26T09:13:56.527Z"
+}

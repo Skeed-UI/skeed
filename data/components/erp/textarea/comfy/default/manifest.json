@@ -1,0 +1,11 @@
+{
+  "id": "erp/textarea/comfy/default",
+  "archetypeId": "textarea",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7af3ba6",
+  "generatedAt": "2026-04-26T09:13:53.020Z"
+}

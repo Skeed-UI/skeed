@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "4798f1bf",
+  "generatedAt": "2026-04-26T09:14:05.051Z"
+}

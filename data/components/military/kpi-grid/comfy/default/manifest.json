@@ -1,0 +1,11 @@
+{
+  "id": "military/kpi-grid/comfy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "45573d1b",
+  "generatedAt": "2026-04-26T09:14:00.317Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/badge/compact/default",
+  "archetypeId": "badge",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4a6c47f1",
+  "generatedAt": "2026-04-26T09:13:51.259Z"
+}

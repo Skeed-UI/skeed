@@ -1,0 +1,11 @@
+{
+  "id": "productivity/dialog/cozy/default",
+  "archetypeId": "dialog",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1995e0e6",
+  "generatedAt": "2026-04-26T09:14:01.746Z"
+}

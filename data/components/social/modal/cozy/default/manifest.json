@@ -1,0 +1,11 @@
+{
+  "id": "social/modal/cozy/default",
+  "archetypeId": "modal",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "751fd711",
+  "generatedAt": "2026-04-26T09:14:04.276Z"
+}

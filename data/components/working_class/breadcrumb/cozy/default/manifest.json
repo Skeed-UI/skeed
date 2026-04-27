@@ -1,0 +1,11 @@
+{
+  "id": "working_class/breadcrumb/cozy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "working_class",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "a023ae5",
+  "generatedAt": "2026-04-26T09:14:06.299Z"
+}

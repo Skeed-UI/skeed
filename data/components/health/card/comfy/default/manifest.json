@@ -1,0 +1,11 @@
+{
+  "id": "health/card/comfy/default",
+  "archetypeId": "card",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7bc68257",
+  "generatedAt": "2026-04-26T09:13:54.636Z"
+}

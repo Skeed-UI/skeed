@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/navbar/cozy/default",
+  "archetypeId": "navbar",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "71ec184b",
+  "generatedAt": "2026-04-26T09:14:01.185Z"
+}

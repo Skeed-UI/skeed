@@ -1,0 +1,11 @@
+{
+  "id": "kids/radio/comfy/default",
+  "archetypeId": "radio",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "183eb5b9",
+  "generatedAt": "2026-04-26T09:13:56.619Z"
+}

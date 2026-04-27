@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "373a025d",
+  "generatedAt": "2026-04-26T09:14:00.966Z"
+}

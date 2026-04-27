@@ -1,0 +1,11 @@
+{
+  "id": "social/command-palette/compact/default",
+  "archetypeId": "command-palette",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3bf04d8",
+  "generatedAt": "2026-04-26T09:14:04.000Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "erp/skeleton/comfy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "78b5f6",
+  "generatedAt": "2026-04-26T09:13:52.950Z"
+}

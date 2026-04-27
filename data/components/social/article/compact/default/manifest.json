@@ -1,0 +1,11 @@
+{
+  "id": "social/article/compact/default",
+  "archetypeId": "article",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3f514a10",
+  "generatedAt": "2026-04-26T09:14:03.865Z"
+}

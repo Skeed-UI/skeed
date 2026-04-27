@@ -1,0 +1,11 @@
+{
+  "id": "classic/empty-state/compact/default",
+  "archetypeId": "empty-state",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7f34404e",
+  "generatedAt": "2026-04-26T09:13:51.378Z"
+}

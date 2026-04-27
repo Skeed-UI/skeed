@@ -1,0 +1,11 @@
+{
+  "id": "military/card/compact/default",
+  "archetypeId": "card",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2932d6c",
+  "generatedAt": "2026-04-26T09:14:00.029Z"
+}

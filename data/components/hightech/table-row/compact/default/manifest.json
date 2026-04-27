@@ -1,0 +1,11 @@
+{
+  "id": "hightech/table-row/compact/default",
+  "archetypeId": "table-row",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1095cd8b",
+  "generatedAt": "2026-04-26T09:13:56.011Z"
+}

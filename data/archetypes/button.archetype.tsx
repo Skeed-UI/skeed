@@ -1,5 +1,6 @@
 import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { Spinner } from '@skeed/asset-icon';
 
 type Intent = 'primary' | 'secondary' | 'ghost' | 'danger';
 type Size = 'sm' | 'md' | 'lg';
@@ -7,6 +8,7 @@ type Size = 'sm' | 'md' | 'lg';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   intent?: Intent;
   size?: Size;
+  loading?: boolean;
 }
 
 const INTENT_CLASSES: Record<Intent, string> = {
@@ -32,16 +34,39 @@ const BASE_CLASSES =
   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 ' +
   'disabled:pointer-events-none disabled:opacity-50';
 
+const LOADING_SIZE: Record<Size, 12 | 16 | 20> = {
+  sm: 12,
+  md: 16,
+  lg: 20,
+};
+
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { intent = 'primary', size = 'md', className, type, ...rest },
+  { intent = 'primary', size = 'md', loading = false, className, type, children, disabled, ...rest },
   ref,
 ) {
   return (
     <button
       ref={ref}
       type={type ?? 'button'}
-      className={cn(BASE_CLASSES, INTENT_CLASSES[intent], SIZE_CLASSES[size], className)}
+      disabled={disabled || loading}
+      aria-busy={loading}
+      className={cn(
+        BASE_CLASSES,
+        INTENT_CLASSES[intent],
+        SIZE_CLASSES[size],
+        loading && 'opacity-70 cursor-not-allowed',
+        className,
+      )}
       {...rest}
-    />
+    >
+      {loading ? (
+        <>
+          <Spinner size={LOADING_SIZE[size]} className="mr-2" />
+          {children}
+        </>
+      ) : (
+        children
+      )}
+    </button>
   );
 });

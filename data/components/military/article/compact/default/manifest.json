@@ -1,0 +1,11 @@
+{
+  "id": "military/article/compact/default",
+  "archetypeId": "article",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4815ed65",
+  "generatedAt": "2026-04-26T09:13:59.937Z"
+}

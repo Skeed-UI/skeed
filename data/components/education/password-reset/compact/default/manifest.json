@@ -1,0 +1,11 @@
+{
+  "id": "education/password-reset/compact/default",
+  "archetypeId": "password-reset",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2d6a7c5a",
+  "generatedAt": "2026-04-26T09:13:51.979Z"
+}

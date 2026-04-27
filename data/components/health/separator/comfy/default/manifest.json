@@ -1,0 +1,11 @@
+{
+  "id": "health/separator/comfy/default",
+  "archetypeId": "separator",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1d254b1",
+  "generatedAt": "2026-04-26T09:13:55.150Z"
+}

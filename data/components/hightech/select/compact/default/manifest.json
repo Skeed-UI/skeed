@@ -1,0 +1,11 @@
+{
+  "id": "hightech/select/compact/default",
+  "archetypeId": "select",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "18941bb3",
+  "generatedAt": "2026-04-26T09:13:55.898Z"
+}

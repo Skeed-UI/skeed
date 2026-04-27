@@ -1,0 +1,11 @@
+{
+  "id": "productivity/table-row/comfy/default",
+  "archetypeId": "table-row",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "577af5cf",
+  "generatedAt": "2026-04-26T09:14:02.187Z"
+}

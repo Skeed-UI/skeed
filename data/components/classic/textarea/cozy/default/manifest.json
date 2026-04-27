@@ -1,0 +1,11 @@
+{
+  "id": "classic/textarea/cozy/default",
+  "archetypeId": "textarea",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "67de5e59",
+  "generatedAt": "2026-04-26T09:13:51.631Z"
+}

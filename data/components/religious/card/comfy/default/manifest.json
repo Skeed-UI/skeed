@@ -1,0 +1,11 @@
+{
+  "id": "religious/card/comfy/default",
+  "archetypeId": "card",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6071ee86",
+  "generatedAt": "2026-04-26T09:14:02.412Z"
+}

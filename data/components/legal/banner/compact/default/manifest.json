@@ -1,0 +1,11 @@
+{
+  "id": "legal/banner/compact/default",
+  "archetypeId": "banner",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3893c3ed",
+  "generatedAt": "2026-04-26T09:13:56.906Z"
+}

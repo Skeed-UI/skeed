@@ -1,0 +1,11 @@
+{
+  "id": "religious/checkbox/cozy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "68f9fa85",
+  "generatedAt": "2026-04-26T09:14:02.432Z"
+}

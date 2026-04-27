@@ -1,0 +1,11 @@
+{
+  "id": "health/stepper/cozy/default",
+  "archetypeId": "stepper",
+  "demographicId": "health",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1ea33d43",
+  "generatedAt": "2026-04-26T09:13:55.212Z"
+}

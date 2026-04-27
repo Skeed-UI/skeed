@@ -1,0 +1,11 @@
+{
+  "id": "social/dialog/compact/default",
+  "archetypeId": "dialog",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6e33530e",
+  "generatedAt": "2026-04-26T09:14:04.044Z"
+}

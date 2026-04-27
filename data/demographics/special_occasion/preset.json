@@ -1,0 +1,154 @@
+{
+  "id": "special_occasion",
+  "schemaVersion": 1,
+  "palette": {
+    "brand": {
+      "50": "#FFF5F7",
+      "100": "#FFE4EA",
+      "200": "#FFC2CE",
+      "300": "#FF93A8",
+      "400": "#FF5C7C",
+      "500": "#E83E62",
+      "600": "#C72B4D",
+      "700": "#A21F3D",
+      "800": "#7E1830",
+      "900": "#5C1023",
+      "950": "#380715"
+    },
+    "neutral": {
+      "50": "#FAFAF9",
+      "100": "#F5F5F4",
+      "200": "#E7E5E4",
+      "300": "#D6D3D1",
+      "400": "#A8A29E",
+      "500": "#78716C",
+      "600": "#57534E",
+      "700": "#44403C",
+      "800": "#292524",
+      "900": "#1C1917",
+      "950": "#0C0A09"
+    },
+    "success": {
+      "50": "#F0FDF4",
+      "100": "#DCFCE7",
+      "200": "#BBF7D0",
+      "300": "#86EFAC",
+      "400": "#4ADE80",
+      "500": "#22C55E",
+      "600": "#16A34A",
+      "700": "#15803D",
+      "800": "#166534",
+      "900": "#14532D"
+    },
+    "warning": {
+      "50": "#FFFBEB",
+      "100": "#FEF3C7",
+      "200": "#FDE68A",
+      "300": "#FCD34D",
+      "400": "#FBBF24",
+      "500": "#F59E0B",
+      "600": "#D97706",
+      "700": "#B45309",
+      "800": "#92400E",
+      "900": "#78350F"
+    },
+    "danger": {
+      "50": "#FEF2F2",
+      "100": "#FEE2E2",
+      "200": "#FECACA",
+      "300": "#FCA5A5",
+      "400": "#F87171",
+      "500": "#EF4444",
+      "600": "#DC2626",
+      "700": "#B91C1C",
+      "800": "#991B1B",
+      "900": "#7F1D1D"
+    },
+    "info": {
+      "50": "#EFF6FF",
+      "100": "#DBEAFE",
+      "200": "#BFDBFE",
+      "300": "#93C5FD",
+      "400": "#60A5FA",
+      "500": "#3B82F6",
+      "600": "#2563EB",
+      "700": "#1D4ED8",
+      "800": "#1E40AF",
+      "900": "#1E3A8A"
+    },
+    "contrastPairs": [
+      { "fg": "#0C0A09", "bg": "#FFF5F7", "ratio": 18.5, "passesAA": true, "passesAAA": true },
+      { "fg": "#FFFFFF", "bg": "#E83E62", "ratio": 4.6, "passesAA": true, "passesAAA": false }
+    ]
+  },
+  "typography": {
+    "display": {
+      "family": "Cormorant Garamond",
+      "fallback": ["Playfair Display", "Georgia", "serif"],
+      "weights": [400, 500, 600, 700],
+      "features": []
+    },
+    "body": {
+      "family": "Inter",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 500, 600],
+      "features": []
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "fallback": ["Consolas", "monospace"],
+      "weights": [400, 500],
+      "features": ["zero"]
+    },
+    "numeric": {
+      "family": "Inter",
+      "fallback": ["system-ui", "sans-serif"],
+      "weights": [400, 500, 600],
+      "features": ["tnum"]
+    },
+    "scale": [0.75, 0.875, 1, 1.125, 1.375, 1.75, 2.25, 3, 4]
+  },
+  "spacing": [0, 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 6, 8, 12],
+  "radius": [0, 0.25, 0.5, 1, 1.5, 9999],
+  "density": {
+    "compact": { "padY": 0.5, "padX": 0.75, "gap": 0.5, "lineHeight": 1.3 },
+    "cozy": { "padY": 0.75, "padX": 1, "gap": 0.75, "lineHeight": 1.5 },
+    "comfy": { "padY": 1.25, "padX": 1.5, "gap": 1.25, "lineHeight": 1.7 }
+  },
+  "motion": {
+    "profile": "playful",
+    "durations": { "fast": 200, "base": 360, "slow": 600 },
+    "easings": {
+      "standard": "cubic-bezier(.22,1,.36,1)",
+      "emphasized": "cubic-bezier(.34,1.56,.64,1)"
+    }
+  },
+  "iconography": { "style": "line", "pack": "lucide-rounded" },
+  "borders": { "width": 1, "style": "solid", "treatment": "soft" },
+  "elevation": {
+    "shadows": [
+      "0 1px 2px rgba(0,0,0,.04)",
+      "0 4px 12px rgba(0,0,0,.08)",
+      "0 10px 28px rgba(0,0,0,.14)",
+      "0 24px 60px rgba(0,0,0,.22)"
+    ],
+    "surfaceTreatment": "raised"
+  },
+  "illustrationStylePrompt": "Editorial wedding-invite illustration, soft watercolor florals with restrained gilt accents, elegant typography overlays, romantic but never saccharine, hand-painted texture, plain background",
+  "logoPrimitiveConstraints": {
+    "allowedShapeKinds": ["arch", "diamond", "circle"],
+    "allowedMarkKinds": ["monogram", "sparkle", "wreath"],
+    "allowedWordmarkStyles": ["elegant-serif", "modern-display"],
+    "allowedContainerStyles": ["stacked", "horizontal"]
+  },
+  "defaultDensity": "comfy",
+  "voice": {
+    "tone": ["warm", "elegant", "personal"],
+    "samples": {
+      "cta": "RSVP",
+      "success": "We can't wait to see you.",
+      "error": "Something went wrong. Please try again.",
+      "empty": "No replies yet."
+    }
+  }
+}

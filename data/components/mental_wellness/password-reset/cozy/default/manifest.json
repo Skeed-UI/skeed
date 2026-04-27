@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "738d68b0",
+  "generatedAt": "2026-04-26T09:13:59.652Z"
+}

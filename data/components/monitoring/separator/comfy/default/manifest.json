@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/separator/comfy/default",
+  "archetypeId": "separator",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "79d26ef",
+  "generatedAt": "2026-04-26T09:14:01.318Z"
+}

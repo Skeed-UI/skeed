@@ -226,10 +226,10 @@ Router is configurable per project — power users can bias toward AI for everyt
 
 | Layer | Decision | Rationale |
 |---|---|---|
-| Registry schema | **Fork shadcn** + extend with `meta.demographics`, `meta.psychology_signals`, `meta.accessibility` | Preserve CLI compatibility, semantic metadata in `meta` extension point |
+| Registry schema | **Extend** standard registry format with `meta.demographics`, `meta.psychology_signals`, `meta.accessibility` | Preserve CLI compatibility, semantic metadata in `meta` extension point |
 | MCP server | **Build** on `@modelcontextprotocol/sdk-typescript` | Need demographic-aware retrieval + psychology reranker |
 | Token engine | **Adapt** Style Dictionary + DTCG JSON. Optional Material 3 Monet for brand→palette | Mature codegen, multi-target output |
-| Code scaffolding | **Adapt** shadcn CLI surface, internally drive Plop templates | Familiar UX, programmatic flexibility |
+| Code scaffolding | **Build** CLI with familiar commands, internally drive Plop templates | Consistent UX, programmatic flexibility |
 | Research engine | **External** AutoResearchClaw via MCP/CLI bridge | Don't duplicate a 23-stage pipeline |
 
 ### Metadata schema (canonical)

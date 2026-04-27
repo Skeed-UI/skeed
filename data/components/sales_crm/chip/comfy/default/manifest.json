@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/chip/comfy/default",
+  "archetypeId": "chip",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5cbfcd77",
+  "generatedAt": "2026-04-26T09:14:03.238Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "health/empty-state/compact/default",
+  "archetypeId": "empty-state",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "75b2f296",
+  "generatedAt": "2026-04-26T09:13:54.773Z"
+}

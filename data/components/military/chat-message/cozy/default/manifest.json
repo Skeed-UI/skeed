@@ -1,0 +1,11 @@
+{
+  "id": "military/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "73c16a81",
+  "generatedAt": "2026-04-26T09:14:00.046Z"
+}

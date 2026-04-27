@@ -1,0 +1,11 @@
+{
+  "id": "erp/chip/cozy/default",
+  "archetypeId": "chip",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5ec0c262",
+  "generatedAt": "2026-04-26T09:13:52.314Z"
+}

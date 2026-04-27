@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/avatar/cozy/default",
+  "archetypeId": "avatar",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "77a510d6",
+  "generatedAt": "2026-04-26T09:14:04.624Z"
+}

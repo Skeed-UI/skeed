@@ -1,0 +1,11 @@
+{
+  "id": "working_class/tabs/comfy/default",
+  "archetypeId": "tabs",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "2f4cccbc",
+  "generatedAt": "2026-04-26T09:14:06.889Z"
+}

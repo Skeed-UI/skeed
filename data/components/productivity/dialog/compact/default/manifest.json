@@ -1,0 +1,11 @@
+{
+  "id": "productivity/dialog/compact/default",
+  "archetypeId": "dialog",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "16e8cc83",
+  "generatedAt": "2026-04-26T09:14:01.743Z"
+}

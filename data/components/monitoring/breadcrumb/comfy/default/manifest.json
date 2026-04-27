@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/breadcrumb/comfy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3cab1f69",
+  "generatedAt": "2026-04-26T09:14:00.827Z"
+}

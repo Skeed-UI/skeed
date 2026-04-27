@@ -1,0 +1,9 @@
+{
+  "id": "elegant-serif",
+  "fontFamily": "Cormorant Garamond, Playfair Display, serif",
+  "fontWeight": 600,
+  "letterSpacing": "0.04em",
+  "case": "title",
+  "baseline": "alphabetic",
+  "italic": true
+}

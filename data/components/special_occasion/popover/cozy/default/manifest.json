@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/popover/cozy/default",
+  "archetypeId": "popover",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "383ad5b2",
+  "generatedAt": "2026-04-26T09:14:05.150Z"
+}

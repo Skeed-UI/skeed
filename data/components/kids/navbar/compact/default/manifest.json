@@ -1,0 +1,11 @@
+{
+  "id": "kids/navbar/compact/default",
+  "archetypeId": "navbar",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "45819cce",
+  "generatedAt": "2026-04-26T09:13:56.524Z"
+}

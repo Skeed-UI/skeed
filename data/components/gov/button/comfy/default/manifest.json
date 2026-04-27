@@ -1,0 +1,11 @@
+{
+  "id": "gov/button/comfy/default",
+  "archetypeId": "button",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "2d25a442",
+  "generatedAt": "2026-04-26T09:13:53.829Z"
+}

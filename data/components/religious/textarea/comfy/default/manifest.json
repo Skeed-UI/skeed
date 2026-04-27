@@ -1,0 +1,11 @@
+{
+  "id": "religious/textarea/comfy/default",
+  "archetypeId": "textarea",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6ca7c5cc",
+  "generatedAt": "2026-04-26T09:14:03.052Z"
+}

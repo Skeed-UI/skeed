@@ -1,0 +1,11 @@
+{
+  "id": "religious/navbar/compact/default",
+  "archetypeId": "navbar",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1610b9b1",
+  "generatedAt": "2026-04-26T09:14:02.755Z"
+}

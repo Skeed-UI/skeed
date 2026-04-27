@@ -1,0 +1,11 @@
+{
+  "id": "teens/menu/compact/default",
+  "archetypeId": "menu",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5d3e80b1",
+  "generatedAt": "2026-04-26T09:14:05.870Z"
+}

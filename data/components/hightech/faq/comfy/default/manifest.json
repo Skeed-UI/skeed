@@ -1,0 +1,11 @@
+{
+  "id": "hightech/faq/comfy/default",
+  "archetypeId": "faq",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "15cc058e",
+  "generatedAt": "2026-04-26T09:13:55.596Z"
+}

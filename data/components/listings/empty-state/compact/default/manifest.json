@@ -1,0 +1,11 @@
+{
+  "id": "listings/empty-state/compact/default",
+  "archetypeId": "empty-state",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "317d3c69",
+  "generatedAt": "2026-04-26T09:13:57.868Z"
+}

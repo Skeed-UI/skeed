@@ -1,0 +1,11 @@
+{
+  "id": "education/drawer/compact/default",
+  "archetypeId": "drawer",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "20ae5e2b",
+  "generatedAt": "2026-04-26T09:13:51.786Z"
+}

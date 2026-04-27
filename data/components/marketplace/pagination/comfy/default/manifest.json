@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/pagination/comfy/default",
+  "archetypeId": "pagination",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3279233d",
+  "generatedAt": "2026-04-26T09:13:58.836Z"
+}

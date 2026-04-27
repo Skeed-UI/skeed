@@ -1,0 +1,11 @@
+{
+  "id": "erp/testimonial/cozy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1b08891b",
+  "generatedAt": "2026-04-26T09:13:53.009Z"
+}

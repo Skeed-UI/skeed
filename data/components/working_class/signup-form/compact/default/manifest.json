@@ -1,0 +1,11 @@
+{
+  "id": "working_class/signup-form/compact/default",
+  "archetypeId": "signup-form",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "3893dadd",
+  "generatedAt": "2026-04-26T09:14:06.793Z"
+}

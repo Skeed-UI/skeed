@@ -1,0 +1,11 @@
+{
+  "id": "education/switch/cozy/default",
+  "archetypeId": "switch",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4e3a1f4d",
+  "generatedAt": "2026-04-26T09:13:52.093Z"
+}

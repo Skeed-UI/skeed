@@ -1,0 +1,21 @@
+{
+  "demographic": "marketplace",
+  "niche": "general",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "medium",
+  "trustCuesNeeded": [
+    "testimonial",
+    "verified_check"
+  ],
+  "motivationPattern": "extrinsic",
+  "formality": 2,
+  "noveltyTolerance": 3,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [
+    "urgency_timer"
+  ],
+  "research": {
+    "sources": [],
+    "notes": "Two-sided market UX — buyer trust + seller-tooling discoverability matter equally."
+  }
+}

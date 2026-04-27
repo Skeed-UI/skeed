@@ -333,27 +333,41 @@ function generateCacheKey(
 }
 
 /**
- * Get a cached component
+ * Get a cached component (filesystem cache by content key).
  */
 async function getCachedComponent(
   cacheKey: string,
-  cacheDir: string
+  cacheDir: string,
 ): Promise<GeneratedComponent | null> {
-  // Placeholder - actual implementation would read from filesystem or SQLite
-  // This would check ~/.skeed/cache.db or .skeed/cache/<cacheKey>.json
-  return null;
+  const { readFile } = await import('node:fs/promises');
+  const { join } = await import('node:path');
+  try {
+    const raw = await readFile(join(cacheDir, `${cacheKey}.json`), 'utf8');
+    const data = JSON.parse(raw) as Omit<GeneratedComponent, 'cssVariables'> & {
+      cssVariables: Array<[string, string]>;
+    };
+    return { ...data, cssVariables: new Map(data.cssVariables) } as GeneratedComponent;
+  } catch {
+    return null;
+  }
 }
 
 /**
- * Cache a generated component
+ * Cache a generated component (filesystem write).
  */
 async function cacheComponent(
   cacheKey: string,
   component: GeneratedComponent,
-  cacheDir: string
+  cacheDir: string,
 ): Promise<void> {
-  // Placeholder - actual implementation would write to filesystem or SQLite
-  // This would write to ~/.skeed/cache.db or .skeed/cache/<cacheKey>.json
+  const { mkdir, writeFile } = await import('node:fs/promises');
+  const { join } = await import('node:path');
+  await mkdir(cacheDir, { recursive: true });
+  const serializable = {
+    ...component,
+    cssVariables: Array.from(component.cssVariables.entries()),
+  };
+  await writeFile(join(cacheDir, `${cacheKey}.json`), JSON.stringify(serializable), 'utf8');
 }
 
 /**

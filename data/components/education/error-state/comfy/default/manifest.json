@@ -1,0 +1,11 @@
+{
+  "id": "education/error-state/comfy/default",
+  "archetypeId": "error-state",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6348aee8",
+  "generatedAt": "2026-04-26T09:13:51.810Z"
+}

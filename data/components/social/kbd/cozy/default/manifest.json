@@ -1,0 +1,11 @@
+{
+  "id": "social/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2b63da8f",
+  "generatedAt": "2026-04-26T09:14:04.195Z"
+}

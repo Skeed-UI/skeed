@@ -1,0 +1,11 @@
+{
+  "id": "religious/radio/comfy/default",
+  "archetypeId": "radio",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "732ae674",
+  "generatedAt": "2026-04-26T09:14:02.849Z"
+}

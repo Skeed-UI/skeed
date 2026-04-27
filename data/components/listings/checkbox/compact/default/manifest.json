@@ -1,0 +1,11 @@
+{
+  "id": "listings/checkbox/compact/default",
+  "archetypeId": "checkbox",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "61afcbf3",
+  "generatedAt": "2026-04-26T09:13:57.759Z"
+}

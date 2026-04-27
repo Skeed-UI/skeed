@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/dropdown/cozy/default",
+  "archetypeId": "dropdown",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "335154ae",
+  "generatedAt": "2026-04-26T09:13:50.879Z"
+}

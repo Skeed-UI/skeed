@@ -1,0 +1,11 @@
+{
+  "id": "listings/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "49a3abc7",
+  "generatedAt": "2026-04-26T09:13:57.986Z"
+}

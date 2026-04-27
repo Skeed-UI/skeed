@@ -1,0 +1,11 @@
+{
+  "id": "hightech/chip/comfy/default",
+  "archetypeId": "chip",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "13acbdb7",
+  "generatedAt": "2026-04-26T09:13:55.473Z"
+}

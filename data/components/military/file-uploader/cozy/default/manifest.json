@@ -1,0 +1,11 @@
+{
+  "id": "military/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "21e4d151",
+  "generatedAt": "2026-04-26T09:14:00.233Z"
+}

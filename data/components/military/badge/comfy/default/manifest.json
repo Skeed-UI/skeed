@@ -1,0 +1,11 @@
+{
+  "id": "military/badge/comfy/default",
+  "archetypeId": "badge",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "43b665e1",
+  "generatedAt": "2026-04-26T09:13:59.969Z"
+}

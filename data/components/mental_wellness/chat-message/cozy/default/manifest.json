@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "ea46c80",
+  "generatedAt": "2026-04-26T09:13:59.286Z"
+}

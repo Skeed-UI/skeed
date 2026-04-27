@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/command-palette/comfy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7526e9f5",
+  "generatedAt": "2026-04-26T09:13:59.329Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "military/kbd/comfy/default",
+  "archetypeId": "kbd",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1fd0102e",
+  "generatedAt": "2026-04-26T09:14:00.304Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "listings/spinner/cozy/default",
+  "archetypeId": "spinner",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "17e07cce",
+  "generatedAt": "2026-04-26T09:13:58.275Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/tooltip/compact/default",
+  "archetypeId": "tooltip",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "284ebd71",
+  "generatedAt": "2026-04-26T09:14:01.503Z"
+}

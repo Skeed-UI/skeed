@@ -1,0 +1,11 @@
+{
+  "id": "erp/faq/compact/default",
+  "archetypeId": "faq",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "283a3241",
+  "generatedAt": "2026-04-26T09:13:52.386Z"
+}

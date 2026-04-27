@@ -1,0 +1,11 @@
+{
+  "id": "hightech/radio/compact/default",
+  "archetypeId": "radio",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4e631faf",
+  "generatedAt": "2026-04-26T09:13:55.872Z"
+}

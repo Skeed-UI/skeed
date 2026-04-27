@@ -1,0 +1,11 @@
+{
+  "id": "legal/feature-grid/compact/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "713b7832",
+  "generatedAt": "2026-04-26T09:13:57.139Z"
+}

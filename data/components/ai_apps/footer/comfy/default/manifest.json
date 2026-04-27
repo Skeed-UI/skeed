@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "9b5955a",
+  "generatedAt": "2026-04-26T09:13:50.936Z"
+}

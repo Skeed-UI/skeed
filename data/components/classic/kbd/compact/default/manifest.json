@@ -1,0 +1,11 @@
+{
+  "id": "classic/kbd/compact/default",
+  "archetypeId": "kbd",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "30ecffc0",
+  "generatedAt": "2026-04-26T09:13:51.440Z"
+}

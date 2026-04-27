@@ -1,0 +1,11 @@
+{
+  "id": "military/avatar/cozy/default",
+  "archetypeId": "avatar",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4612507f",
+  "generatedAt": "2026-04-26T09:13:59.954Z"
+}

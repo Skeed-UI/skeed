@@ -1,0 +1,11 @@
+{
+  "id": "social/hero/cozy/default",
+  "archetypeId": "hero",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "54892b3b",
+  "generatedAt": "2026-04-26T09:14:04.157Z"
+}

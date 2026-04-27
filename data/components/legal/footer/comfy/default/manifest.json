@@ -1,0 +1,11 @@
+{
+  "id": "legal/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2898fc1e",
+  "generatedAt": "2026-04-26T09:13:57.171Z"
+}

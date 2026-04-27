@@ -1,0 +1,11 @@
+{
+  "id": "classic/signup-form/compact/default",
+  "archetypeId": "signup-form",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1c989a59",
+  "generatedAt": "2026-04-26T09:13:51.566Z"
+}

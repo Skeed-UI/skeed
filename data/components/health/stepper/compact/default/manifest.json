@@ -1,0 +1,11 @@
+{
+  "id": "health/stepper/compact/default",
+  "archetypeId": "stepper",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4f6ba694",
+  "generatedAt": "2026-04-26T09:13:55.209Z"
+}

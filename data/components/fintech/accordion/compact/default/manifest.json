@@ -1,0 +1,11 @@
+{
+  "id": "fintech/accordion/compact/default",
+  "archetypeId": "accordion",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1dd178d6",
+  "generatedAt": "2026-04-26T09:13:53.044Z"
+}

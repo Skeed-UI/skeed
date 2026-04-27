@@ -1,0 +1,11 @@
+{
+  "id": "kids/callout/compact/default",
+  "archetypeId": "callout",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "5ac4a79",
+  "generatedAt": "2026-04-26T09:13:56.203Z"
+}

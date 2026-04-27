@@ -1,0 +1,11 @@
+{
+  "id": "education/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "55639bd1",
+  "generatedAt": "2026-04-26T09:13:51.997Z"
+}

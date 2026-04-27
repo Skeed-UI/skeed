@@ -1,0 +1,11 @@
+{
+  "id": "legal/textarea/compact/default",
+  "archetypeId": "textarea",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "46ee0cc9",
+  "generatedAt": "2026-04-26T09:13:57.566Z"
+}

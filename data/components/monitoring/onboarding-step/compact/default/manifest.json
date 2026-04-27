@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/onboarding-step/compact/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "36820fd1",
+  "generatedAt": "2026-04-26T09:14:01.194Z"
+}

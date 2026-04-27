@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/hero/cozy/default",
+  "archetypeId": "hero",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "49ad51fe",
+  "generatedAt": "2026-04-26T09:13:58.696Z"
+}

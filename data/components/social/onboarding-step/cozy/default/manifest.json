@@ -1,0 +1,11 @@
+{
+  "id": "social/onboarding-step/cozy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4192f141",
+  "generatedAt": "2026-04-26T09:14:04.298Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/modal/cozy/default",
+  "archetypeId": "modal",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5f5a7a61",
+  "generatedAt": "2026-04-26T09:13:51.487Z"
+}

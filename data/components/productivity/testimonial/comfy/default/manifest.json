@@ -1,0 +1,11 @@
+{
+  "id": "productivity/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "17589e6b",
+  "generatedAt": "2026-04-26T09:14:02.221Z"
+}

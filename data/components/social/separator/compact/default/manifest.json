@@ -1,0 +1,11 @@
+{
+  "id": "social/separator/compact/default",
+  "archetypeId": "separator",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "49176f47",
+  "generatedAt": "2026-04-26T09:14:04.392Z"
+}

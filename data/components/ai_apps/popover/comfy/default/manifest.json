@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/popover/comfy/default",
+  "archetypeId": "popover",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "18123571",
+  "generatedAt": "2026-04-26T09:13:51.053Z"
+}

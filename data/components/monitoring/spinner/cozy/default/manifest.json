@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/spinner/cozy/default",
+  "archetypeId": "spinner",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3e49dfd1",
+  "generatedAt": "2026-04-26T09:14:01.379Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/badge/compact/default",
+  "archetypeId": "badge",
+  "demographicId": "sales_crm",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5a6b9ed8",
+  "generatedAt": "2026-04-26T09:14:03.132Z"
+}

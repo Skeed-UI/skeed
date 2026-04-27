@@ -1,0 +1,11 @@
+{
+  "id": "erp/file-uploader/comfy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4ab2720e",
+  "generatedAt": "2026-04-26T09:13:52.715Z"
+}

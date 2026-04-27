@@ -1,0 +1,11 @@
+{
+  "id": "legal/input/cozy/default",
+  "archetypeId": "input",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7607f26c",
+  "generatedAt": "2026-04-26T09:13:57.204Z"
+}

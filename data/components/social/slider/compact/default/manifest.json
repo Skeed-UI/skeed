@@ -1,0 +1,11 @@
+{
+  "id": "social/slider/compact/default",
+  "archetypeId": "slider",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "28df5923",
+  "generatedAt": "2026-04-26T09:14:04.437Z"
+}

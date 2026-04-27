@@ -1,0 +1,11 @@
+{
+  "id": "hightech/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1676ba25",
+  "generatedAt": "2026-04-26T09:13:55.634Z"
+}

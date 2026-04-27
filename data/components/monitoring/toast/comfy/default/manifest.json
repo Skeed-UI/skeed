@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/toast/comfy/default",
+  "archetypeId": "toast",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4f823bb",
+  "generatedAt": "2026-04-26T09:14:01.499Z"
+}

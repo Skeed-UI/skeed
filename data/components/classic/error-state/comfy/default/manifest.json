@@ -1,0 +1,11 @@
+{
+  "id": "classic/error-state/comfy/default",
+  "archetypeId": "error-state",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "116ec925",
+  "generatedAt": "2026-04-26T09:13:51.390Z"
+}

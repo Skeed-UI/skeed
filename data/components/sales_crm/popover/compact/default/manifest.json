@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/popover/compact/default",
+  "archetypeId": "popover",
+  "demographicId": "sales_crm",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "37ee90a7",
+  "generatedAt": "2026-04-26T09:14:03.574Z"
+}

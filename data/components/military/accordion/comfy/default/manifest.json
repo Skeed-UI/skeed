@@ -1,0 +1,11 @@
+{
+  "id": "military/accordion/comfy/default",
+  "archetypeId": "accordion",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "cdc3f6",
+  "generatedAt": "2026-04-26T09:13:59.923Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fintech/signup-form/comfy/default",
+  "archetypeId": "signup-form",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "116f2eb9",
+  "generatedAt": "2026-04-26T09:13:53.545Z"
+}

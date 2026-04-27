@@ -1,0 +1,11 @@
+{
+  "id": "religious/link/compact/default",
+  "archetypeId": "link",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "45adc47c",
+  "generatedAt": "2026-04-26T09:14:02.696Z"
+}

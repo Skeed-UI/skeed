@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/faq/cozy/default",
+  "archetypeId": "faq",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "12d24770",
+  "generatedAt": "2026-04-26T09:13:50.905Z"
+}

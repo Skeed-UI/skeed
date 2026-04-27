@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/link/comfy/default",
+  "archetypeId": "link",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "11c870b5",
+  "generatedAt": "2026-04-26T09:13:50.986Z"
+}

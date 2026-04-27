@@ -1,0 +1,11 @@
+{
+  "id": "health/button/comfy/default",
+  "archetypeId": "button",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "50d6387e",
+  "generatedAt": "2026-04-26T09:13:54.598Z"
+}

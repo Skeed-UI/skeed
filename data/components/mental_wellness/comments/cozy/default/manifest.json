@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/comments/cozy/default",
+  "archetypeId": "comments",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7a3cf4c0",
+  "generatedAt": "2026-04-26T09:13:59.338Z"
+}

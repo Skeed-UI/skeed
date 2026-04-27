@@ -1,0 +1,11 @@
+{
+  "id": "military/tag/compact/default",
+  "archetypeId": "tag",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "290521bb",
+  "generatedAt": "2026-04-26T09:14:00.689Z"
+}

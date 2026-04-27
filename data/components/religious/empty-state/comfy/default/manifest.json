@@ -1,0 +1,11 @@
+{
+  "id": "religious/empty-state/comfy/default",
+  "archetypeId": "empty-state",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5187fe5a",
+  "generatedAt": "2026-04-26T09:14:02.552Z"
+}

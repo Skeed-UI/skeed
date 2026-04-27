@@ -1,0 +1,11 @@
+{
+  "id": "education/slider/compact/default",
+  "archetypeId": "slider",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "53b037a4",
+  "generatedAt": "2026-04-26T09:13:52.066Z"
+}

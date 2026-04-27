@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/slider/compact/default",
+  "archetypeId": "slider",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2309026c",
+  "generatedAt": "2026-04-26T09:13:51.136Z"
+}

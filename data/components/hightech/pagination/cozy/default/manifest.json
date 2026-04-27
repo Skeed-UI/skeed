@@ -1,0 +1,11 @@
+{
+  "id": "hightech/pagination/cozy/default",
+  "archetypeId": "pagination",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4b1586e3",
+  "generatedAt": "2026-04-26T09:13:55.810Z"
+}

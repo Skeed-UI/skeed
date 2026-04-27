@@ -1,0 +1,11 @@
+{
+  "id": "productivity/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "358b7efd",
+  "generatedAt": "2026-04-26T09:14:02.108Z"
+}

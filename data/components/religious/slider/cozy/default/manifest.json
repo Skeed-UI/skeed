@@ -1,0 +1,11 @@
+{
+  "id": "religious/slider/cozy/default",
+  "archetypeId": "slider",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "53232773",
+  "generatedAt": "2026-04-26T09:14:02.921Z"
+}

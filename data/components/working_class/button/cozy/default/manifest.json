@@ -1,0 +1,11 @@
+{
+  "id": "working_class/button/cozy/default",
+  "archetypeId": "button",
+  "demographicId": "working_class",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "293fe74c",
+  "generatedAt": "2026-04-26T09:14:06.311Z"
+}

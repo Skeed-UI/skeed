@@ -1,0 +1,11 @@
+{
+  "id": "religious/badge/compact/default",
+  "archetypeId": "badge",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6f6e9391",
+  "generatedAt": "2026-04-26T09:14:02.328Z"
+}

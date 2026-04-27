@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "624ce9ae",
+  "generatedAt": "2026-04-26T09:14:01.224Z"
+}

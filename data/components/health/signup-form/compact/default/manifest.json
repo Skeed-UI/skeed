@@ -1,0 +1,11 @@
+{
+  "id": "health/signup-form/compact/default",
+  "archetypeId": "signup-form",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7a84d71",
+  "generatedAt": "2026-04-26T09:13:55.165Z"
+}

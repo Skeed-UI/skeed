@@ -1,0 +1,11 @@
+{
+  "id": "fintech/sidebar/compact/default",
+  "archetypeId": "sidebar",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "77509b28",
+  "generatedAt": "2026-04-26T09:13:53.522Z"
+}

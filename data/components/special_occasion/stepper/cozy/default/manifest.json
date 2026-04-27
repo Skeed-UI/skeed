@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/stepper/cozy/default",
+  "archetypeId": "stepper",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "7eb8f9d6",
+  "generatedAt": "2026-04-26T09:14:05.291Z"
+}

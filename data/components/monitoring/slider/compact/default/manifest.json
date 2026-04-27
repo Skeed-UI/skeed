@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/slider/compact/default",
+  "archetypeId": "slider",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "55d5356f",
+  "generatedAt": "2026-04-26T09:14:01.361Z"
+}

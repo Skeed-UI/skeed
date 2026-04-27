@@ -1,0 +1,11 @@
+{
+  "id": "social/dropdown/cozy/default",
+  "archetypeId": "dropdown",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "56943fc5",
+  "generatedAt": "2026-04-26T09:14:04.069Z"
+}

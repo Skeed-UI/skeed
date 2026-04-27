@@ -1,0 +1,11 @@
+{
+  "id": "erp/switch/compact/default",
+  "archetypeId": "switch",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "64ef961c",
+  "generatedAt": "2026-04-26T09:13:52.975Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "military/tree/compact/default",
+  "archetypeId": "tree",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5656cfaf",
+  "generatedAt": "2026-04-26T09:14:00.743Z"
+}

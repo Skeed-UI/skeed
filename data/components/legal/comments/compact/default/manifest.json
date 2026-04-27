@@ -1,0 +1,11 @@
+{
+  "id": "legal/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6f739271",
+  "generatedAt": "2026-04-26T09:13:57.031Z"
+}

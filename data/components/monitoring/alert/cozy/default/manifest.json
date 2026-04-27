@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/alert/cozy/default",
+  "archetypeId": "alert",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "329b3aec",
+  "generatedAt": "2026-04-26T09:14:00.769Z"
+}

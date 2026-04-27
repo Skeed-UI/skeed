@@ -1,0 +1,11 @@
+{
+  "id": "classic/dialog/cozy/default",
+  "archetypeId": "dialog",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "69dbbd3a",
+  "generatedAt": "2026-04-26T09:13:51.360Z"
+}

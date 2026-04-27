@@ -1,0 +1,11 @@
+{
+  "id": "gov/dropdown/cozy/default",
+  "archetypeId": "dropdown",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7bccabbc",
+  "generatedAt": "2026-04-26T09:13:53.992Z"
+}

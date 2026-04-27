@@ -1,0 +1,11 @@
+{
+  "id": "education/separator/comfy/default",
+  "archetypeId": "separator",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3f9c538f",
+  "generatedAt": "2026-04-26T09:13:52.040Z"
+}

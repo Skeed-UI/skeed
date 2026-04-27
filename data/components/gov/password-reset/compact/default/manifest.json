@@ -1,0 +1,11 @@
+{
+  "id": "gov/password-reset/compact/default",
+  "archetypeId": "password-reset",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "326e8e91",
+  "generatedAt": "2026-04-26T09:13:54.232Z"
+}

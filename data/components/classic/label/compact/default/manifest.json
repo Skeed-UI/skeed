@@ -1,0 +1,11 @@
+{
+  "id": "classic/label/compact/default",
+  "archetypeId": "label",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "28a8eeaf",
+  "generatedAt": "2026-04-26T09:13:51.453Z"
+}

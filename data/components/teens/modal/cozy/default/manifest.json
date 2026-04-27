@@ -1,0 +1,11 @@
+{
+  "id": "teens/modal/cozy/default",
+  "archetypeId": "modal",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7ae69a15",
+  "generatedAt": "2026-04-26T09:14:05.885Z"
+}

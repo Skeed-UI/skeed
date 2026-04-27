@@ -1,0 +1,11 @@
+{
+  "id": "classic/tag/compact/default",
+  "archetypeId": "tag",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3620abdd",
+  "generatedAt": "2026-04-26T09:13:51.616Z"
+}

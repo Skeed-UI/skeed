@@ -1,0 +1,11 @@
+{
+  "id": "legal/faq/compact/default",
+  "archetypeId": "faq",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "247465c5",
+  "generatedAt": "2026-04-26T09:13:57.127Z"
+}

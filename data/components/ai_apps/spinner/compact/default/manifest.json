@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/spinner/compact/default",
+  "archetypeId": "spinner",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "78911c51",
+  "generatedAt": "2026-04-26T09:13:51.144Z"
+}

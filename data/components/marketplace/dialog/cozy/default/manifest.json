@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/dialog/cozy/default",
+  "archetypeId": "dialog",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "23baee0f",
+  "generatedAt": "2026-04-26T09:13:58.589Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "productivity/testimonial/cozy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7e5e0653",
+  "generatedAt": "2026-04-26T09:14:02.218Z"
+}

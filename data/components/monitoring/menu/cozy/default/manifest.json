@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/menu/cozy/default",
+  "archetypeId": "menu",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7086944a",
+  "generatedAt": "2026-04-26T09:14:01.160Z"
+}

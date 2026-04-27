@@ -1,0 +1,11 @@
+{
+  "id": "teens/drawer/comfy/default",
+  "archetypeId": "drawer",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "872ff13",
+  "generatedAt": "2026-04-26T09:14:05.622Z"
+}

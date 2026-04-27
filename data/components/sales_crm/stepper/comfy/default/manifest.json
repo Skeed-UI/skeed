@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/stepper/comfy/default",
+  "archetypeId": "stepper",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5ae38a32",
+  "generatedAt": "2026-04-26T09:14:03.726Z"
+}

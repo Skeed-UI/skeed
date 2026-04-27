@@ -1,0 +1,11 @@
+{
+  "id": "kids/accordion/compact/default",
+  "archetypeId": "accordion",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "36b1a4e3",
+  "generatedAt": "2026-04-26T09:13:56.104Z"
+}

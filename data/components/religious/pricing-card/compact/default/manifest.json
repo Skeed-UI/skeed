@@ -1,0 +1,11 @@
+{
+  "id": "religious/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "36002e81",
+  "generatedAt": "2026-04-26T09:14:02.820Z"
+}

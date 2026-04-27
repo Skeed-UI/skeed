@@ -1,0 +1,11 @@
+{
+  "id": "hightech/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "618b07de",
+  "generatedAt": "2026-04-26T09:13:55.931Z"
+}

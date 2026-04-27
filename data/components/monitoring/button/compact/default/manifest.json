@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/button/compact/default",
+  "archetypeId": "button",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "462e6694",
+  "generatedAt": "2026-04-26T09:14:00.831Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "working_class/separator/comfy/default",
+  "archetypeId": "separator",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "139cc4b6",
+  "generatedAt": "2026-04-26T09:14:06.777Z"
+}

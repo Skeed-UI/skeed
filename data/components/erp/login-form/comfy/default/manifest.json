@@ -1,0 +1,11 @@
+{
+  "id": "erp/login-form/comfy/default",
+  "archetypeId": "login-form",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3f3490d2",
+  "generatedAt": "2026-04-26T09:13:52.809Z"
+}

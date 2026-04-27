@@ -1,0 +1,11 @@
+{
+  "id": "gov/slider/comfy/default",
+  "archetypeId": "slider",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "6cadeb5d",
+  "generatedAt": "2026-04-26T09:13:54.363Z"
+}

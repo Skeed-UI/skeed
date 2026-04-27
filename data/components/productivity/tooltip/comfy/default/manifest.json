@@ -1,0 +1,11 @@
+{
+  "id": "productivity/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "268a01ef",
+  "generatedAt": "2026-04-26T09:14:02.256Z"
+}

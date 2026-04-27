@@ -1,0 +1,11 @@
+{
+  "id": "productivity/input/compact/default",
+  "archetypeId": "input",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4384dfec",
+  "generatedAt": "2026-04-26T09:14:01.867Z"
+}

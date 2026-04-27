@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "127b5504",
+  "generatedAt": "2026-04-26T09:14:05.137Z"
+}

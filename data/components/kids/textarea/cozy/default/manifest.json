@@ -1,0 +1,11 @@
+{
+  "id": "kids/textarea/cozy/default",
+  "archetypeId": "textarea",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "1b63acba",
+  "generatedAt": "2026-04-26T09:13:56.797Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/breadcrumb/cozy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "756f9dc0",
+  "generatedAt": "2026-04-26T09:14:04.663Z"
+}

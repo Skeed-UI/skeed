@@ -1,0 +1,11 @@
+{
+  "id": "education/callout/comfy/default",
+  "archetypeId": "callout",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3fcfb61d",
+  "generatedAt": "2026-04-26T09:13:51.712Z"
+}

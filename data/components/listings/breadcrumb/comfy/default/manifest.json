@@ -1,0 +1,11 @@
+{
+  "id": "listings/breadcrumb/comfy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "69b40de",
+  "generatedAt": "2026-04-26T09:13:57.682Z"
+}

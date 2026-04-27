@@ -1,0 +1,11 @@
+{
+  "id": "gov/stepper/cozy/default",
+  "archetypeId": "stepper",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "2c3ab9ec",
+  "generatedAt": "2026-04-26T09:13:54.382Z"
+}

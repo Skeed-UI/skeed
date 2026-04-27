@@ -1,0 +1,11 @@
+{
+  "id": "listings/hero/compact/default",
+  "archetypeId": "hero",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "3d8dba9b",
+  "generatedAt": "2026-04-26T09:13:57.957Z"
+}

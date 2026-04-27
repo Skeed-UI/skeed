@@ -1,0 +1,13 @@
+{
+  "demographic": "ai_apps",
+  "niche": "generative",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "medium",
+  "trustCuesNeeded": ["expert_byline", "verified_check", "audit_trail"],
+  "motivationPattern": "mastery",
+  "formality": 3,
+  "noveltyTolerance": 5,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": ["dark_pattern"],
+  "research": { "sources": [], "notes": "AI-app users tolerate novelty but need transparent provenance + reversibility." }
+}

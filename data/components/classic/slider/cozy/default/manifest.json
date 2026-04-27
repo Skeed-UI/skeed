@@ -1,0 +1,11 @@
+{
+  "id": "classic/slider/cozy/default",
+  "archetypeId": "slider",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7f92a30f",
+  "generatedAt": "2026-04-26T09:13:51.581Z"
+}

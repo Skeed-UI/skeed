@@ -1,0 +1,11 @@
+{
+  "id": "hightech/sidebar/compact/default",
+  "archetypeId": "sidebar",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "604abe29",
+  "generatedAt": "2026-04-26T09:13:55.923Z"
+}

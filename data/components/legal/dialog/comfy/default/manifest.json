@@ -1,0 +1,11 @@
+{
+  "id": "legal/dialog/comfy/default",
+  "archetypeId": "dialog",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5bfcb9d4",
+  "generatedAt": "2026-04-26T09:13:57.075Z"
+}

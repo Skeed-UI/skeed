@@ -1,0 +1,11 @@
+{
+  "id": "teens/callout/compact/default",
+  "archetypeId": "callout",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "33fc2191",
+  "generatedAt": "2026-04-26T09:14:05.504Z"
+}

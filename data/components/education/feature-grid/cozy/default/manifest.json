@@ -1,0 +1,11 @@
+{
+  "id": "education/feature-grid/cozy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7bcd30f5",
+  "generatedAt": "2026-04-26T09:13:51.822Z"
+}

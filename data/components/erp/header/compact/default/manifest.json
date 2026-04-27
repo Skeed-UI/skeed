@@ -1,0 +1,11 @@
+{
+  "id": "erp/header/compact/default",
+  "archetypeId": "header",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "8feadf0",
+  "generatedAt": "2026-04-26T09:13:52.733Z"
+}

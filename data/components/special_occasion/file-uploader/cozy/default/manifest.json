@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "34f9855a",
+  "generatedAt": "2026-04-26T09:14:04.920Z"
+}

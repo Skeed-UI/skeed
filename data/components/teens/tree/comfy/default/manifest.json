@@ -1,0 +1,11 @@
+{
+  "id": "teens/tree/comfy/default",
+  "archetypeId": "tree",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6593cd7d",
+  "generatedAt": "2026-04-26T09:14:06.222Z"
+}

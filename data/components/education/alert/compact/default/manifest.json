@@ -1,0 +1,11 @@
+{
+  "id": "education/alert/compact/default",
+  "archetypeId": "alert",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "c24701c",
+  "generatedAt": "2026-04-26T09:13:51.660Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/dialog/comfy/default",
+  "archetypeId": "dialog",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3f912caf",
+  "generatedAt": "2026-04-26T09:13:51.362Z"
+}

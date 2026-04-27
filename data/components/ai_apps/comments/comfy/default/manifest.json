@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/comments/comfy/default",
+  "archetypeId": "comments",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "649945ad",
+  "generatedAt": "2026-04-26T09:13:50.844Z"
+}

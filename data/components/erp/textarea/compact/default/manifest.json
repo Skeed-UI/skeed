@@ -1,0 +1,11 @@
+{
+  "id": "erp/textarea/compact/default",
+  "archetypeId": "textarea",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1cfacf0f",
+  "generatedAt": "2026-04-26T09:13:53.015Z"
+}

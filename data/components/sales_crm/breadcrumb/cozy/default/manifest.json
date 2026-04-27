@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/breadcrumb/cozy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "sales_crm",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "30410885",
+  "generatedAt": "2026-04-26T09:14:03.157Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/dialog/cozy/default",
+  "archetypeId": "dialog",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "68b90327",
+  "generatedAt": "2026-04-26T09:13:59.378Z"
+}

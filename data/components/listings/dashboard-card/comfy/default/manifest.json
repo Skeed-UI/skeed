@@ -1,0 +1,11 @@
+{
+  "id": "listings/dashboard-card/comfy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "529bde20",
+  "generatedAt": "2026-04-26T09:13:57.828Z"
+}

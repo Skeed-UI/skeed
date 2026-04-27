@@ -1,0 +1,11 @@
+{
+  "id": "kids/stepper/cozy/default",
+  "archetypeId": "stepper",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "70404f4a",
+  "generatedAt": "2026-04-26T09:13:56.725Z"
+}

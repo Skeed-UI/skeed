@@ -1,0 +1,11 @@
+{
+  "id": "legal/tag/cozy/default",
+  "archetypeId": "tag",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "67a99873",
+  "generatedAt": "2026-04-26T09:13:57.547Z"
+}

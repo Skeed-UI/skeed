@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/loading-state/cozy/default",
+  "archetypeId": "loading-state",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2396831a",
+  "generatedAt": "2026-04-26T09:13:59.574Z"
+}

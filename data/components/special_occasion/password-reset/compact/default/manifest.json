@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/password-reset/compact/default",
+  "archetypeId": "password-reset",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "661ac91f",
+  "generatedAt": "2026-04-26T09:14:05.133Z"
+}

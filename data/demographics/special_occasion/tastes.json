@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "demographic": "special_occasion",
+  "tastes": [
+    {
+      "id": "classic_standard",
+      "label": "Classic Standard",
+      "description": "Timeless and tasteful. Cream + ink palette, restrained motion, minimal ornament.",
+      "palette": { "primary": "#1C1917", "accent": "#C2A875", "bg": "#FAF7F2" },
+      "motion": "calm",
+      "fontStack": ["Cormorant Garamond", "Playfair Display", "serif"],
+      "illustrationStyle": "thin-line botanical",
+      "musicGenre": "soft-piano",
+      "rsvpStyle": "form-only"
+    },
+    {
+      "id": "classic_premium",
+      "label": "Classic Premium",
+      "description": "Editorial wedding-magazine feel. Champagne + ivory + deep green.",
+      "palette": { "primary": "#0F2A1D", "accent": "#C5A35A", "bg": "#FBF9F4" },
+      "motion": "cinematic",
+      "fontStack": ["Cormorant Garamond", "Inter", "serif"],
+      "illustrationStyle": "watercolor-floral",
+      "musicGenre": "string-quartet",
+      "rsvpStyle": "form-with-meal-prefs"
+    },
+    {
+      "id": "classic_super_closed",
+      "label": "Classic Super Closed",
+      "description": "Private. Invite-only. Password-gated landing, monochrome wordmark, no public preview.",
+      "palette": { "primary": "#0C0A09", "accent": "#78716C", "bg": "#FFFFFF" },
+      "motion": "calm",
+      "fontStack": ["Cormorant Garamond", "serif"],
+      "illustrationStyle": "none",
+      "musicGenre": "ambient-room-tone",
+      "rsvpStyle": "passcode-required"
+    },
+    {
+      "id": "open_moderate",
+      "label": "Open Moderate",
+      "description": "Warm and welcoming. Earthy palette with friendly type.",
+      "palette": { "primary": "#A2622E", "accent": "#E0A678", "bg": "#FFF7EE" },
+      "motion": "playful",
+      "fontStack": ["DM Serif Display", "Inter", "serif"],
+      "illustrationStyle": "loose-pen-sketches",
+      "musicGenre": "indie-folk",
+      "rsvpStyle": "form-only"
+    },
+    {
+      "id": "wild_open",
+      "label": "Wild Open",
+      "description": "High-energy public party vibe. Saturated palette, bold motion, big type.",
+      "palette": { "primary": "#FF2D6F", "accent": "#FFE53D", "bg": "#0E0915" },
+      "motion": "playful",
+      "fontStack": ["Space Grotesk", "Inter", "sans-serif"],
+      "illustrationStyle": "neon-graffiti",
+      "musicGenre": "afrobeats",
+      "rsvpStyle": "rapid-tap"
+    },
+    {
+      "id": "wild_closed",
+      "label": "Wild Closed",
+      "description": "Underground feel — invite-link gated, no SEO, blacklight palette.",
+      "palette": { "primary": "#E83E62", "accent": "#7B5BFF", "bg": "#06030A" },
+      "motion": "playful",
+      "fontStack": ["Space Grotesk", "monospace"],
+      "illustrationStyle": "glitch-poster",
+      "musicGenre": "house-mix",
+      "rsvpStyle": "invite-token"
+    },
+    {
+      "id": "wild_rock",
+      "label": "Wild Rock",
+      "description": "Concert-poster aesthetic. Distressed type, deep red, smoke textures.",
+      "palette": { "primary": "#B81C2D", "accent": "#1A1A1A", "bg": "#F1ECE2" },
+      "motion": "dramatic",
+      "fontStack": ["Bebas Neue", "Impact", "sans-serif"],
+      "illustrationStyle": "concert-poster",
+      "musicGenre": "rock-classic",
+      "rsvpStyle": "form-only"
+    },
+    {
+      "id": "moderate_solemn",
+      "label": "Moderate Solemn",
+      "description": "Quiet dignity — webinars, memorial, formal anniversaries.",
+      "palette": { "primary": "#1B2A41", "accent": "#9CA9B8", "bg": "#F5F7FA" },
+      "motion": "calm",
+      "fontStack": ["Source Serif Pro", "Inter", "serif"],
+      "illustrationStyle": "minimal-geometric",
+      "musicGenre": "neoclassical",
+      "rsvpStyle": "form-with-questions"
+    },
+    {
+      "id": "game_night",
+      "label": "Game Night",
+      "description": "Pixel-art and arcade vibes for tabletop / video-game gatherings.",
+      "palette": { "primary": "#22D3EE", "accent": "#F472B6", "bg": "#0B1020" },
+      "motion": "playful",
+      "fontStack": ["Press Start 2P", "monospace"],
+      "illustrationStyle": "pixel-icons",
+      "musicGenre": "synthwave",
+      "rsvpStyle": "tap-with-team"
+    },
+    {
+      "id": "just_vibe",
+      "label": "Just Vibe",
+      "description": "No agenda — chill, ambient, low text density. Best for low-key gatherings.",
+      "palette": { "primary": "#7DD3C0", "accent": "#FCD34D", "bg": "#FAFAF9" },
+      "motion": "calm",
+      "fontStack": ["Sora", "Inter", "sans-serif"],
+      "illustrationStyle": "soft-blob",
+      "musicGenre": "lofi-beats",
+      "rsvpStyle": "free-form"
+    }
+  ]
+}

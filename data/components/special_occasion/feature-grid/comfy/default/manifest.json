@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/feature-grid/comfy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "2064bfc1",
+  "generatedAt": "2026-04-26T09:14:04.911Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/skeleton/cozy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7f9e3564",
+  "generatedAt": "2026-04-26T09:13:57.470Z"
+}

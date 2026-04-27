@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/file-uploader/compact/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "72e2bd0",
+  "generatedAt": "2026-04-26T09:13:50.920Z"
+}

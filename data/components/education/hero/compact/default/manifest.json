@@ -1,0 +1,11 @@
+{
+  "id": "education/hero/compact/default",
+  "archetypeId": "hero",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "75e9b762",
+  "generatedAt": "2026-04-26T09:13:51.850Z"
+}

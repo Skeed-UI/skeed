@@ -1,0 +1,11 @@
+{
+  "id": "health/radio/comfy/default",
+  "archetypeId": "radio",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "221dc26f",
+  "generatedAt": "2026-04-26T09:13:55.079Z"
+}

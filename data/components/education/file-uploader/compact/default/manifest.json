@@ -1,0 +1,11 @@
+{
+  "id": "education/file-uploader/compact/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2046c3f8",
+  "generatedAt": "2026-04-26T09:13:51.827Z"
+}

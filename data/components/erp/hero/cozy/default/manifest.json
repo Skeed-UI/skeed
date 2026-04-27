@@ -1,0 +1,11 @@
+{
+  "id": "erp/hero/cozy/default",
+  "archetypeId": "hero",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "741cb331",
+  "generatedAt": "2026-04-26T09:13:52.749Z"
+}

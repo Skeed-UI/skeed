@@ -1,0 +1,11 @@
+{
+  "id": "social/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6be06938",
+  "generatedAt": "2026-04-26T09:14:04.561Z"
+}

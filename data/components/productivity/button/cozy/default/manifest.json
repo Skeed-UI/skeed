@@ -1,0 +1,11 @@
+{
+  "id": "productivity/button/cozy/default",
+  "archetypeId": "button",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "8de1e74",
+  "generatedAt": "2026-04-26T09:14:01.620Z"
+}

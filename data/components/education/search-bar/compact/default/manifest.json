@@ -1,0 +1,11 @@
+{
+  "id": "education/search-bar/compact/default",
+  "archetypeId": "search-bar",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "35351e99",
+  "generatedAt": "2026-04-26T09:13:52.020Z"
+}

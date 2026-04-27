@@ -1,0 +1,11 @@
+{
+  "id": "classic/separator/comfy/default",
+  "archetypeId": "separator",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "48c07ffc",
+  "generatedAt": "2026-04-26T09:13:51.558Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "working_class/search-bar/compact/default",
+  "archetypeId": "search-bar",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "6a485c05",
+  "generatedAt": "2026-04-26T09:14:06.746Z"
+}

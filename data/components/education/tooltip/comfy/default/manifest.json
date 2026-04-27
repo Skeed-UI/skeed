@@ -1,0 +1,11 @@
+{
+  "id": "education/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1e9b4b27",
+  "generatedAt": "2026-04-26T09:13:52.172Z"
+}

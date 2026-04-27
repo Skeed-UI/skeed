@@ -1,0 +1,11 @@
+{
+  "id": "education/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7feeb9dd",
+  "generatedAt": "2026-04-26T09:13:51.806Z"
+}

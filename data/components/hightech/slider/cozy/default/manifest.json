@@ -1,0 +1,11 @@
+{
+  "id": "hightech/slider/cozy/default",
+  "archetypeId": "slider",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "8fce0b5",
+  "generatedAt": "2026-04-26T09:13:55.965Z"
+}

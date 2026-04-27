@@ -1,0 +1,11 @@
+{
+  "id": "teens/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "33eb2f2a",
+  "generatedAt": "2026-04-26T09:14:05.618Z"
+}

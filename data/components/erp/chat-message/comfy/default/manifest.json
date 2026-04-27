@@ -1,0 +1,11 @@
+{
+  "id": "erp/chat-message/comfy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2983b060",
+  "generatedAt": "2026-04-26T09:13:52.302Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "erp/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "64c1952e",
+  "generatedAt": "2026-04-26T09:13:53.033Z"
+}

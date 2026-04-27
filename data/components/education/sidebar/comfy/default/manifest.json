@@ -1,0 +1,11 @@
+{
+  "id": "education/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "62c41335",
+  "generatedAt": "2026-04-26T09:13:52.049Z"
+}

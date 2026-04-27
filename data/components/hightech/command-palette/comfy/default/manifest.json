@@ -1,0 +1,11 @@
+{
+  "id": "hightech/command-palette/comfy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2e500e71",
+  "generatedAt": "2026-04-26T09:13:55.484Z"
+}

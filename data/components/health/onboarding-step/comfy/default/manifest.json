@@ -1,0 +1,11 @@
+{
+  "id": "health/onboarding-step/comfy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "6df2fc87",
+  "generatedAt": "2026-04-26T09:13:55.013Z"
+}

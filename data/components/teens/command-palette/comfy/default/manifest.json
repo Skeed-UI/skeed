@@ -1,0 +1,11 @@
+{
+  "id": "teens/command-palette/comfy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4c98dc7f",
+  "generatedAt": "2026-04-26T09:14:05.565Z"
+}

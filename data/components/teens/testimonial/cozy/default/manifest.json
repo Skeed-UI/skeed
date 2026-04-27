@@ -1,0 +1,11 @@
+{
+  "id": "teens/testimonial/cozy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6bc61029",
+  "generatedAt": "2026-04-26T09:14:06.168Z"
+}

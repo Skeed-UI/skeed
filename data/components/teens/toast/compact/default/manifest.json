@@ -1,0 +1,11 @@
+{
+  "id": "teens/toast/compact/default",
+  "archetypeId": "toast",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4c76f709",
+  "generatedAt": "2026-04-26T09:14:06.189Z"
+}

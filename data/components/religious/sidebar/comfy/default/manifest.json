@@ -1,0 +1,11 @@
+{
+  "id": "religious/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2bf51152",
+  "generatedAt": "2026-04-26T09:14:02.892Z"
+}

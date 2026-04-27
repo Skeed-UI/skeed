@@ -1,0 +1,11 @@
+{
+  "id": "gov/input/comfy/default",
+  "archetypeId": "input",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "15f557af",
+  "generatedAt": "2026-04-26T09:13:54.103Z"
+}

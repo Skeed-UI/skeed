@@ -1,0 +1,11 @@
+{
+  "id": "hightech/textarea/compact/default",
+  "archetypeId": "textarea",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "63758b6f",
+  "generatedAt": "2026-04-26T09:13:56.058Z"
+}

@@ -1,0 +1,10 @@
+{
+  "demographic": "special_occasion",
+  "niche": "webinar",
+  "schemaVersion": 1,
+  "points": [
+    { "id": "wb1", "description": "Webinar landing pages are slow to spin up and look the same as everyone else's.", "severity": 4, "frequency": 5, "evidence": [] },
+    { "id": "wb2", "description": "Time zone confusion drops registrations by 20-30%.", "severity": 4, "frequency": 5, "evidence": [] },
+    { "id": "wb3", "description": "Speaker credentials buried beneath calendar widgets.", "severity": 3, "frequency": 5, "evidence": [] }
+  ]
+}

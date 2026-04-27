@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/faq/comfy/default",
+  "archetypeId": "faq",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "7675ccf4",
+  "generatedAt": "2026-04-26T09:14:04.898Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/switch/compact/default",
+  "archetypeId": "switch",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "67724711",
+  "generatedAt": "2026-04-26T09:13:59.016Z"
+}

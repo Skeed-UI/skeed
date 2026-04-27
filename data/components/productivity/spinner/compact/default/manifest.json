@@ -1,0 +1,11 @@
+{
+  "id": "productivity/spinner/compact/default",
+  "archetypeId": "spinner",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "487f543",
+  "generatedAt": "2026-04-26T09:14:02.146Z"
+}

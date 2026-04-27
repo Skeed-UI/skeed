@@ -1,0 +1,11 @@
+{
+  "id": "listings/table-row/comfy/default",
+  "archetypeId": "table-row",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "6de03f3e",
+  "generatedAt": "2026-04-26T09:13:58.313Z"
+}

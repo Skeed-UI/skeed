@@ -1,0 +1,11 @@
+{
+  "id": "hightech/dialog/compact/default",
+  "archetypeId": "dialog",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "408115be",
+  "generatedAt": "2026-04-26T09:13:55.527Z"
+}

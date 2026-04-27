@@ -1,0 +1,11 @@
+{
+  "id": "kids/file-uploader/comfy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "2450e13b",
+  "generatedAt": "2026-04-26T09:13:56.386Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "teens/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "13772f8b",
+  "generatedAt": "2026-04-26T09:14:05.798Z"
+}

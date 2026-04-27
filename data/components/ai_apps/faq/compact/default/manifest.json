@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/faq/compact/default",
+  "archetypeId": "faq",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "34ede62e",
+  "generatedAt": "2026-04-26T09:13:50.902Z"
+}

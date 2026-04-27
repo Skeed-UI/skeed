@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/radio/comfy/default",
+  "archetypeId": "radio",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "568d35f1",
+  "generatedAt": "2026-04-26T09:14:01.279Z"
+}

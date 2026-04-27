@@ -1,0 +1,11 @@
+{
+  "id": "education/navbar/compact/default",
+  "archetypeId": "navbar",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1a8fd53d",
+  "generatedAt": "2026-04-26T09:13:51.954Z"
+}

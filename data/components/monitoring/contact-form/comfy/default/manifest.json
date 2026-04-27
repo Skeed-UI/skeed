@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/contact-form/comfy/default",
+  "archetypeId": "contact-form",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "672e3db3",
+  "generatedAt": "2026-04-26T09:14:00.939Z"
+}

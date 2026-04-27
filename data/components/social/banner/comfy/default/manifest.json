@@ -1,0 +1,11 @@
+{
+  "id": "social/banner/comfy/default",
+  "archetypeId": "banner",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "10895174",
+  "generatedAt": "2026-04-26T09:14:03.910Z"
+}

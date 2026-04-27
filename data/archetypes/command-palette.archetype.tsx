@@ -1,4 +1,4 @@
-import { type HTMLAttributes, forwardRef, useState } from 'react';
+import { type HTMLAttributes, forwardRef, useState, useEffect, useCallback, useRef } from 'react';
 import { cn } from '@skeed/core/cn';
 
 export interface Command {
@@ -16,16 +16,79 @@ export interface CommandPaletteProps extends HTMLAttributes<HTMLDivElement> {
 
 export const CommandPalette = forwardRef<HTMLDivElement, CommandPaletteProps>(function CommandPalette(
   { className, open = false, commands, onClose, ...rest },
-  ref,
+  forwardedRef,
 ) {
   const [search, setSearch] = useState('');
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const previousActiveElement = useRef<Element | null>(null);
   const inputId = 'command-palette-input';
-
-  if (!open) return null;
 
   const filteredCommands = commands.filter((cmd) =>
     cmd.title.toLowerCase().includes(search.toLowerCase()),
   );
+
+  // Reset selection when search changes
+  useEffect(() => {
+    setSelectedIndex(0);
+  }, [search]);
+
+  // Handle keyboard navigation
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (!open) return;
+
+    switch (e.key) {
+      case 'Escape':
+        onClose?.();
+        break;
+      case 'ArrowDown':
+        e.preventDefault();
+        setSelectedIndex((prev) => 
+          prev < filteredCommands.length - 1 ? prev + 1 : prev
+        );
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (filteredCommands[selectedIndex]) {
+          filteredCommands[selectedIndex].onSelect();
+          onClose?.();
+        }
+        break;
+      case 'Home':
+        e.preventDefault();
+        setSelectedIndex(0);
+        break;
+      case 'End':
+        e.preventDefault();
+        setSelectedIndex(filteredCommands.length - 1);
+        break;
+    }
+  }, [open, filteredCommands, selectedIndex, onClose]);
+
+  // Add keyboard listeners and manage focus/scroll
+  useEffect(() => {
+    if (open) {
+      previousActiveElement.current = document.activeElement;
+      document.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+      // Focus input after render
+      setTimeout(() => inputRef.current?.focus(), 0);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+      if (!open && previousActiveElement.current instanceof HTMLElement) {
+        previousActiveElement.current.focus();
+      }
+    };
+  }, [open, handleKeyDown]);
+
+  if (!open) return null;
 
   return (
     <div
@@ -40,7 +103,13 @@ export const CommandPalette = forwardRef<HTMLDivElement, CommandPaletteProps>(fu
         aria-hidden="true"
       />
       <div
-        ref={ref}
+        ref={(node) => {
+          if (typeof forwardedRef === 'function') {
+            forwardedRef(node);
+          } else if (forwardedRef) {
+            forwardedRef.current = node;
+          }
+        }}
         className={cn(
           'relative z-10 w-full max-w-lg',
           'bg-skeed-color-neutral-50',
@@ -52,6 +121,7 @@ export const CommandPalette = forwardRef<HTMLDivElement, CommandPaletteProps>(fu
       >
         <div className="border-b border-skeed-color-neutral-200 px-skeed-spacing-4 py-skeed-spacing-3">
           <input
+            ref={inputRef}
             id={inputId}
             type="text"
             value={search}
@@ -63,19 +133,24 @@ export const CommandPalette = forwardRef<HTMLDivElement, CommandPaletteProps>(fu
               'placeholder:text-skeed-color-neutral-400',
               'focus:outline-none',
             )}
-            autoFocus
+            aria-autocomplete="list"
+            aria-controls="command-list"
+            aria-activedescendant={filteredCommands[selectedIndex]?.id}
           />
         </div>
-        <div className="max-h-skeed-spacing-80 overflow-y-auto py-skeed-spacing-1">
+        <div id="command-list" role="listbox" className="max-h-skeed-spacing-80 overflow-y-auto py-skeed-spacing-1">
           {filteredCommands.length === 0 ? (
             <div className="px-skeed-spacing-4 py-skeed-spacing-3 text-sm font-skeed-body text-skeed-color-neutral-500">
               No commands found
             </div>
           ) : (
-            filteredCommands.map((command) => (
+            filteredCommands.map((command, index) => (
               <button
                 key={command.id}
+                id={command.id}
                 type="button"
+                role="option"
+                aria-selected={index === selectedIndex}
                 onClick={() => {
                   command.onSelect();
                   onClose?.();
@@ -86,6 +161,7 @@ export const CommandPalette = forwardRef<HTMLDivElement, CommandPaletteProps>(fu
                   'text-sm font-skeed-body text-skeed-color-neutral-700',
                   'hover:bg-skeed-color-neutral-100',
                   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500',
+                  index === selectedIndex && 'bg-skeed-color-neutral-100',
                 )}
               >
                 <span>{command.title}</span>

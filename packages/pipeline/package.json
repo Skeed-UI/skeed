@@ -17,7 +17,13 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
+    "@skeed/asset-logo-svg": "workspace:*",
+    "@skeed/assets-router": "workspace:*",
     "@skeed/contracts": "workspace:*",
+    "@skeed/demographics-loader": "workspace:*",
+    "@skeed/guards": "workspace:*",
+    "@skeed/landing-options": "workspace:*",
+    "@skeed/llm-router": "workspace:*",
     "zod": "^3.24.1"
   },
   "devDependencies": {

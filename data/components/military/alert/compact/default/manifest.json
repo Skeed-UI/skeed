@@ -1,0 +1,11 @@
+{
+  "id": "military/alert/compact/default",
+  "archetypeId": "alert",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "22146ab2",
+  "generatedAt": "2026-04-26T09:13:59.927Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "productivity/skeleton/comfy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "670715ed",
+  "generatedAt": "2026-04-26T09:14:02.131Z"
+}

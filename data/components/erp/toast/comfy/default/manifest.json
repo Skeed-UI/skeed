@@ -1,0 +1,11 @@
+{
+  "id": "erp/toast/comfy/default",
+  "archetypeId": "toast",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "73857cd0",
+  "generatedAt": "2026-04-26T09:13:53.027Z"
+}

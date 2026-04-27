@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/table-row/compact/default",
+  "archetypeId": "table-row",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5434d54d",
+  "generatedAt": "2026-04-26T09:14:01.415Z"
+}

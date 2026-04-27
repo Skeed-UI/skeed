@@ -1,0 +1,11 @@
+{
+  "id": "military/radio/comfy/default",
+  "archetypeId": "radio",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6e862646",
+  "generatedAt": "2026-04-26T09:14:00.540Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hightech/progress/compact/default",
+  "archetypeId": "progress",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "878f1a3",
+  "generatedAt": "2026-04-26T09:13:55.859Z"
+}

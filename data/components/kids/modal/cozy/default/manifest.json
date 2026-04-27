@@ -1,0 +1,11 @@
+{
+  "id": "kids/modal/cozy/default",
+  "archetypeId": "modal",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "639d7eb2",
+  "generatedAt": "2026-04-26T09:13:56.516Z"
+}

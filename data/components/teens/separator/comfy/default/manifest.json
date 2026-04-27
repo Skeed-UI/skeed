@@ -1,0 +1,11 @@
+{
+  "id": "teens/separator/comfy/default",
+  "archetypeId": "separator",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "70b07f2",
+  "generatedAt": "2026-04-26T09:14:06.031Z"
+}

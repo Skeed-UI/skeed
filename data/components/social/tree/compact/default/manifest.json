@@ -1,0 +1,11 @@
+{
+  "id": "social/tree/compact/default",
+  "archetypeId": "tree",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4fa598a4",
+  "generatedAt": "2026-04-26T09:14:04.566Z"
+}

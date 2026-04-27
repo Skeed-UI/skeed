@@ -1,0 +1,11 @@
+{
+  "id": "erp/card/comfy/default",
+  "archetypeId": "card",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "751616c",
+  "generatedAt": "2026-04-26T09:13:52.293Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hightech/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2bbc40be",
+  "generatedAt": "2026-04-26T09:13:55.850Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/label/comfy/default",
+  "archetypeId": "label",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "59d81bfe",
+  "generatedAt": "2026-04-26T09:13:54.136Z"
+}

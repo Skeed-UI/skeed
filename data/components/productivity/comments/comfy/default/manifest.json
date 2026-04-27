@@ -1,0 +1,11 @@
+{
+  "id": "productivity/comments/comfy/default",
+  "archetypeId": "comments",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "5da557bd",
+  "generatedAt": "2026-04-26T09:14:01.716Z"
+}

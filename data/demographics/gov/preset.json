@@ -175,5 +175,52 @@
       "errorMessage": "Please correct the errors below",
       "requiredField": "Required"
     }
+  },
+  "formIntelligence": {
+    "validationStyle": "adaptive",
+    "suggestionMode": "conservative",
+    "groupingStrategy": "semantic",
+    "progressiveDisclosure": "conditional",
+    "smartDefaults": {
+      "country": "geo-ip",
+      "language": "browser",
+      "timezone": "browser"
+    },
+    "correctionTypes": ["typo", "format"],
+    "voice": {
+      "validation": "plain language and clear",
+      "suggestion": "helpful with examples",
+      "success": "neutral confirmation"
+    }
+  },
+  "form": {
+    "input": {
+      "radius": "0.25rem"
+    },
+    "focus": {
+      "ring": "0 0 0 3px rgba(45, 109, 181, 0.2)"
+    },
+    "state": {
+      "error": {
+        "color": "#E11D48"
+      },
+      "success": {
+        "color": "#16A34A"
+      },
+      "warning": {
+        "color": "#D97706"
+      }
+    },
+    "suggestion": {
+      "background": "#F0F4F9",
+      "text": "#4B5563"
+    },
+    "group": {
+      "spacing": "1rem",
+      "border": "2px solid #D9E3F0"
+    },
+    "transition": {
+      "duration": "0ms"
+    }
   }
 }

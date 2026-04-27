@@ -1,0 +1,11 @@
+{
+  "id": "listings/calendar-day/cozy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "a03268d",
+  "generatedAt": "2026-04-26T09:13:57.700Z"
+}

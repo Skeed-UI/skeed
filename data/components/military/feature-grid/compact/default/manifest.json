@@ -1,0 +1,11 @@
+{
+  "id": "military/feature-grid/compact/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4165fc21",
+  "generatedAt": "2026-04-26T09:14:00.216Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hightech/alert/comfy/default",
+  "archetypeId": "alert",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "788fb774",
+  "generatedAt": "2026-04-26T09:13:55.340Z"
+}

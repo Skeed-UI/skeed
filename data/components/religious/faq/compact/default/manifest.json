@@ -1,0 +1,11 @@
+{
+  "id": "religious/faq/compact/default",
+  "archetypeId": "faq",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "50471dd8",
+  "generatedAt": "2026-04-26T09:14:02.569Z"
+}

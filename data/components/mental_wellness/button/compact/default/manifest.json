@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/button/compact/default",
+  "archetypeId": "button",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "28015d4d",
+  "generatedAt": "2026-04-26T09:13:59.228Z"
+}

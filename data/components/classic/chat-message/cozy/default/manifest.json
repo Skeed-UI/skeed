@@ -1,0 +1,11 @@
+{
+  "id": "classic/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "383fd0e1",
+  "generatedAt": "2026-04-26T09:13:51.311Z"
+}

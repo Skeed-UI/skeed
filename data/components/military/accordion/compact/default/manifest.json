@@ -1,0 +1,11 @@
+{
+  "id": "military/accordion/compact/default",
+  "archetypeId": "accordion",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "65b2cba2",
+  "generatedAt": "2026-04-26T09:13:59.916Z"
+}

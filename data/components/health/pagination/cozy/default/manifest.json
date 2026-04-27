@@ -1,0 +1,11 @@
+{
+  "id": "health/pagination/cozy/default",
+  "archetypeId": "pagination",
+  "demographicId": "health",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1e89976f",
+  "generatedAt": "2026-04-26T09:13:55.021Z"
+}

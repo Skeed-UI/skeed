@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/sidebar/cozy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "61d7d004",
+  "generatedAt": "2026-04-26T09:13:51.107Z"
+}

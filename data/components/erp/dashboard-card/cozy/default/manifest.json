@@ -1,0 +1,11 @@
+{
+  "id": "erp/dashboard-card/cozy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6c6f9277",
+  "generatedAt": "2026-04-26T09:13:52.343Z"
+}

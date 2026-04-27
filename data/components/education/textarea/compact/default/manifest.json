@@ -1,0 +1,11 @@
+{
+  "id": "education/textarea/compact/default",
+  "archetypeId": "textarea",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1ec5223c",
+  "generatedAt": "2026-04-26T09:13:52.139Z"
+}

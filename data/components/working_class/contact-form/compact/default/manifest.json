@@ -1,0 +1,11 @@
+{
+  "id": "working_class/contact-form/compact/default",
+  "archetypeId": "contact-form",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "5ecfd680",
+  "generatedAt": "2026-04-26T09:14:06.408Z"
+}

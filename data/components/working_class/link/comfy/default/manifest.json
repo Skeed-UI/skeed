@@ -1,0 +1,11 @@
+{
+  "id": "working_class/link/comfy/default",
+  "archetypeId": "link",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "7f9ac2be",
+  "generatedAt": "2026-04-26T09:14:06.606Z"
+}

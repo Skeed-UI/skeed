@@ -1,0 +1,11 @@
+{
+  "id": "hightech/kbd/comfy/default",
+  "archetypeId": "kbd",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "227de73c",
+  "generatedAt": "2026-04-26T09:13:55.689Z"
+}

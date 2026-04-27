@@ -1,0 +1,11 @@
+{
+  "id": "kids/link/comfy/default",
+  "archetypeId": "link",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "1860f82b",
+  "generatedAt": "2026-04-26T09:13:56.475Z"
+}

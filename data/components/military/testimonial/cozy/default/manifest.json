@@ -1,0 +1,11 @@
+{
+  "id": "military/testimonial/cozy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "57a93711",
+  "generatedAt": "2026-04-26T09:14:00.703Z"
+}

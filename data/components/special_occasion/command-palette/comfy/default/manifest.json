@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/command-palette/comfy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "30577aed",
+  "generatedAt": "2026-04-26T09:14:04.776Z"
+}

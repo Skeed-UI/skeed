@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6cccf1ff",
+  "generatedAt": "2026-04-26T09:13:59.078Z"
+}

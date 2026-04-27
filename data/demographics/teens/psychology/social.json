@@ -1,0 +1,23 @@
+{
+  "demographic": "teens",
+  "niche": "social",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": [
+    "soft_rounding",
+    "parental_controls"
+  ],
+  "motivationPattern": "social",
+  "formality": 1,
+  "noveltyTolerance": 5,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [
+    "dark_pattern",
+    "urgency_timer",
+    "autoplay_av"
+  ],
+  "research": {
+    "sources": [],
+    "notes": "Bold motion + maximalism. Avoid corporate chrome at all costs."
+  }
+}

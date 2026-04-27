@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/calendar-day/comfy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "115d7148",
+  "generatedAt": "2026-04-26T09:14:03.183Z"
+}

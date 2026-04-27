@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/textarea/comfy/default",
+  "archetypeId": "textarea",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "211fd719",
+  "generatedAt": "2026-04-26T09:13:51.206Z"
+}

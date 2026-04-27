@@ -1,0 +1,11 @@
+{
+  "id": "erp/calendar-day/comfy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "11bf81c8",
+  "generatedAt": "2026-04-26T09:13:52.276Z"
+}

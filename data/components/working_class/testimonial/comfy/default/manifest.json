@@ -1,0 +1,11 @@
+{
+  "id": "working_class/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "295c31e8",
+  "generatedAt": "2026-04-26T09:14:06.924Z"
+}

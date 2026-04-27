@@ -1,0 +1,11 @@
+{
+  "id": "education/faq/compact/default",
+  "archetypeId": "faq",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5f5fac76",
+  "generatedAt": "2026-04-26T09:13:51.813Z"
+}

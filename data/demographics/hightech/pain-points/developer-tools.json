@@ -1,0 +1,21 @@
+{
+  "demographic": "hightech",
+  "niche": "developer-tools",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "ht1",
+      "description": "Onboarding screens condescend to technical users.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "ht2",
+      "description": "Marketing pages hide the actual product behind videos.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "education/menu/comfy/default",
+  "archetypeId": "menu",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1fe1dd03",
+  "generatedAt": "2026-04-26T09:13:51.927Z"
+}

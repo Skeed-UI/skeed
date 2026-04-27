@@ -1,0 +1,11 @@
+{
+  "id": "education/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "38f8e53c",
+  "generatedAt": "2026-04-26T09:13:51.912Z"
+}

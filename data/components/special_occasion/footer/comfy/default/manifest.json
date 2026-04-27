@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "75ff95b9",
+  "generatedAt": "2026-04-26T09:14:04.937Z"
+}

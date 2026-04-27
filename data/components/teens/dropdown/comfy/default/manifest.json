@@ -1,0 +1,11 @@
+{
+  "id": "teens/dropdown/comfy/default",
+  "archetypeId": "dropdown",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2a1a4760",
+  "generatedAt": "2026-04-26T09:14:05.676Z"
+}

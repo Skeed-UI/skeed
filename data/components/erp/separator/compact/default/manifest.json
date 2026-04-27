@@ -1,0 +1,11 @@
+{
+  "id": "erp/separator/compact/default",
+  "archetypeId": "separator",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "314578ef",
+  "generatedAt": "2026-04-26T09:13:52.915Z"
+}

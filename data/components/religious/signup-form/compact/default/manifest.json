@@ -1,0 +1,11 @@
+{
+  "id": "religious/signup-form/compact/default",
+  "archetypeId": "signup-form",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "76c63e29",
+  "generatedAt": "2026-04-26T09:14:02.896Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "productivity/error-state/cozy/default",
+  "archetypeId": "error-state",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "e163f12",
+  "generatedAt": "2026-04-26T09:14:01.788Z"
+}

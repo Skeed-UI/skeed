@@ -1,0 +1,11 @@
+{
+  "id": "legal/button/cozy/default",
+  "archetypeId": "button",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6a20e9c5",
+  "generatedAt": "2026-04-26T09:13:56.936Z"
+}

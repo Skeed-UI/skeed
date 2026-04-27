@@ -1,0 +1,11 @@
+{
+  "id": "classic/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "35ec04bc",
+  "generatedAt": "2026-04-26T09:13:51.525Z"
+}

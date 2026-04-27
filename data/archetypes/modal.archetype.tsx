@@ -1,4 +1,4 @@
-import { type HTMLAttributes, forwardRef } from 'react';
+import { type HTMLAttributes, forwardRef, useEffect, useCallback, useRef } from 'react';
 import { cn } from '@skeed/core/cn';
 
 export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
@@ -9,8 +9,47 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
 
 export const Modal = forwardRef<HTMLDivElement, ModalProps>(function Modal(
   { className, open = false, onClose, title, children, ...rest },
-  ref,
+  forwardedRef,
 ) {
+  const internalRef = useRef<HTMLDivElement>(null);
+  const previousActiveElement = useRef<Element | null>(null);
+
+  // Handle escape key
+  const handleEscape = useCallback((event: KeyboardEvent) => {
+    if (event.key === 'Escape' && onClose) {
+      onClose();
+    }
+  }, [onClose]);
+
+  useEffect(() => {
+    if (open) {
+      // Store current focus
+      previousActiveElement.current = document.activeElement;
+      // Add escape listener
+      document.addEventListener('keydown', handleEscape);
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+      // Focus the modal content after render
+      setTimeout(() => {
+        const modalEl = internalRef.current;
+        if (modalEl) {
+          const focusableEl = modalEl.querySelector<HTMLElement>(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          (focusableEl || modalEl).focus();
+        }
+      }, 0);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = '';
+      // Restore focus on close
+      if (previousActiveElement.current instanceof HTMLElement) {
+        previousActiveElement.current.focus();
+      }
+    };
+  }, [open, handleEscape]);
+
   if (!open) return null;
 
   return (
@@ -25,7 +64,15 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(function Modal(
         aria-hidden="true"
       />
       <div
-        ref={ref}
+        ref={(node) => {
+          internalRef.current = node;
+          if (typeof forwardedRef === 'function') {
+            forwardedRef(node);
+          } else if (forwardedRef) {
+            forwardedRef.current = node;
+          }
+        }}
+        tabIndex={-1}
         className={cn(
           'relative z-10',
           'w-full max-w-lg',
@@ -65,6 +112,7 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(function Modal(
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   aria-hidden="true"
+                  className="transition-transform duration-skeed-motion-duration-fast hover:rotate-90"
                 >
                   <line x1="18" y1="6" x2="6" y2="18" />
                   <line x1="6" y1="6" x2="18" y2="18" />

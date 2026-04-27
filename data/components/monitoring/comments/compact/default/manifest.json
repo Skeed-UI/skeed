@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "67b9d63f",
+  "generatedAt": "2026-04-26T09:14:00.920Z"
+}

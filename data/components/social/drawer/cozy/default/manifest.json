@@ -1,0 +1,11 @@
+{
+  "id": "social/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6dc135ee",
+  "generatedAt": "2026-04-26T09:14:04.058Z"
+}

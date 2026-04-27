@@ -1,0 +1,11 @@
+{
+  "id": "religious/modal/compact/default",
+  "archetypeId": "modal",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5af16f3e",
+  "generatedAt": "2026-04-26T09:14:02.744Z"
+}

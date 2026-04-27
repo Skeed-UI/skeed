@@ -1,0 +1,20 @@
+{
+  "demographic": "erp",
+  "niche": "inventory",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "high",
+  "trustCuesNeeded": [
+    "audit_trail",
+    "monospaced_numerics",
+    "verified_check"
+  ],
+  "motivationPattern": "extrinsic",
+  "formality": 4,
+  "noveltyTolerance": 1,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [],
+  "research": {
+    "sources": [],
+    "notes": "Power users; data density preferred over aesthetics. Avoid playful motion."
+  }
+}

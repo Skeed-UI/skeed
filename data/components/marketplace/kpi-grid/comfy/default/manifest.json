@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/kpi-grid/comfy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5d7df9fe",
+  "generatedAt": "2026-04-26T09:13:58.736Z"
+}

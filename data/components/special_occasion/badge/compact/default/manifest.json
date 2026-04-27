@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/badge/compact/default",
+  "archetypeId": "badge",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "2c945482",
+  "generatedAt": "2026-04-26T09:14:04.633Z"
+}

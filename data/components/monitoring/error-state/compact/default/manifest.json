@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "41307532",
+  "generatedAt": "2026-04-26T09:14:00.997Z"
+}

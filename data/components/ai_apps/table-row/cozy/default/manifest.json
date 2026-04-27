@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/table-row/cozy/default",
+  "archetypeId": "table-row",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "fe423c8",
+  "generatedAt": "2026-04-26T09:13:51.172Z"
+}

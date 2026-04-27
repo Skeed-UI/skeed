@@ -1,0 +1,11 @@
+{
+  "id": "erp/feature-grid/compact/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "29a0374",
+  "generatedAt": "2026-04-26T09:13:52.393Z"
+}

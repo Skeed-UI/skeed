@@ -1,0 +1,11 @@
+{
+  "id": "legal/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4aaa08f6",
+  "generatedAt": "2026-04-26T09:13:57.007Z"
+}

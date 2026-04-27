@@ -1,0 +1,11 @@
+{
+  "id": "erp/input/comfy/default",
+  "archetypeId": "input",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2c87d302",
+  "generatedAt": "2026-04-26T09:13:52.761Z"
+}

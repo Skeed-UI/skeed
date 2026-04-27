@@ -1,0 +1,11 @@
+{
+  "id": "erp/contact-form/cozy/default",
+  "archetypeId": "contact-form",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "c0f666f",
+  "generatedAt": "2026-04-26T09:13:52.336Z"
+}

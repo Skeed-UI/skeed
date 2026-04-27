@@ -1,0 +1,11 @@
+{
+  "id": "legal/tabs/compact/default",
+  "archetypeId": "tabs",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2016eae7",
+  "generatedAt": "2026-04-26T09:13:57.532Z"
+}

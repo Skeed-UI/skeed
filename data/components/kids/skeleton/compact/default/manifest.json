@@ -1,0 +1,11 @@
+{
+  "id": "kids/skeleton/compact/default",
+  "archetypeId": "skeleton",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "5aa603b5",
+  "generatedAt": "2026-04-26T09:13:56.685Z"
+}

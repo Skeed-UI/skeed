@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/article/comfy/default",
+  "archetypeId": "article",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "79494d5",
+  "generatedAt": "2026-04-26T09:14:03.117Z"
+}

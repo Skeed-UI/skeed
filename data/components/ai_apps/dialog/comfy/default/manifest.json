@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/dialog/comfy/default",
+  "archetypeId": "dialog",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "172fbf4c",
+  "generatedAt": "2026-04-26T09:13:50.867Z"
+}

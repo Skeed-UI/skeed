@@ -1,0 +1,11 @@
+{
+  "id": "hightech/tooltip/compact/default",
+  "archetypeId": "tooltip",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2e2263f7",
+  "generatedAt": "2026-04-26T09:13:56.080Z"
+}

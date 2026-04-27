@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/file-uploader/comfy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "24f57c3f",
+  "generatedAt": "2026-04-26T09:13:58.666Z"
+}

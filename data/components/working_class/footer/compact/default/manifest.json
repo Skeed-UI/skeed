@@ -1,0 +1,11 @@
+{
+  "id": "working_class/footer/compact/default",
+  "archetypeId": "footer",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "1c2d13ff",
+  "generatedAt": "2026-04-26T09:14:06.520Z"
+}

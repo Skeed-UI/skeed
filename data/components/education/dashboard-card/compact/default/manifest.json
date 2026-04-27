@@ -1,0 +1,11 @@
+{
+  "id": "education/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "21536d5c",
+  "generatedAt": "2026-04-26T09:13:51.772Z"
+}

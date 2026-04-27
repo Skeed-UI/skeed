@@ -1,0 +1,11 @@
+{
+  "id": "social/card/cozy/default",
+  "archetypeId": "card",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "76d19bdf",
+  "generatedAt": "2026-04-26T09:14:03.962Z"
+}

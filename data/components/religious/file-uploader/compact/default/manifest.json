@@ -1,0 +1,11 @@
+{
+  "id": "religious/file-uploader/compact/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6a954316",
+  "generatedAt": "2026-04-26T09:14:02.594Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/alert/compact/default",
+  "archetypeId": "alert",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "11515021",
+  "generatedAt": "2026-04-26T09:13:56.854Z"
+}

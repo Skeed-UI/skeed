@@ -1,0 +1,11 @@
+{
+  "id": "religious/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "48c1372a",
+  "generatedAt": "2026-04-26T09:14:02.994Z"
+}

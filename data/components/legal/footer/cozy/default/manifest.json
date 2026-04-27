@@ -1,0 +1,11 @@
+{
+  "id": "legal/footer/cozy/default",
+  "archetypeId": "footer",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "701ee6c7",
+  "generatedAt": "2026-04-26T09:13:57.168Z"
+}

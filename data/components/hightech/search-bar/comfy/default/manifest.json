@@ -1,0 +1,11 @@
+{
+  "id": "hightech/search-bar/comfy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "b06acdf",
+  "generatedAt": "2026-04-26T09:13:55.892Z"
+}

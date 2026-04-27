@@ -1,0 +1,11 @@
+{
+  "id": "classic/footer/compact/default",
+  "archetypeId": "footer",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "41e86af7",
+  "generatedAt": "2026-04-26T09:13:51.414Z"
+}

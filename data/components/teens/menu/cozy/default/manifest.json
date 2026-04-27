@@ -1,0 +1,11 @@
+{
+  "id": "teens/menu/cozy/default",
+  "archetypeId": "menu",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5f152ecf",
+  "generatedAt": "2026-04-26T09:14:05.873Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "kids/chip/cozy/default",
+  "archetypeId": "chip",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "405a08ad",
+  "generatedAt": "2026-04-26T09:13:56.251Z"
+}

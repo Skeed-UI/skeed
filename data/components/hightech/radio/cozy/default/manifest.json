@@ -1,0 +1,11 @@
+{
+  "id": "hightech/radio/cozy/default",
+  "archetypeId": "radio",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "19fdb48d",
+  "generatedAt": "2026-04-26T09:13:55.876Z"
+}

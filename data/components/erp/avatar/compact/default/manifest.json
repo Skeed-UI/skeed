@@ -1,0 +1,11 @@
+{
+  "id": "erp/avatar/compact/default",
+  "archetypeId": "avatar",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2d4a71ed",
+  "generatedAt": "2026-04-26T09:13:52.226Z"
+}

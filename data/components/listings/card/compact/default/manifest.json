@@ -1,0 +1,11 @@
+{
+  "id": "listings/card/compact/default",
+  "archetypeId": "card",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "30eb7389",
+  "generatedAt": "2026-04-26T09:13:57.738Z"
+}

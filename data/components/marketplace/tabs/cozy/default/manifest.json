@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/tabs/cozy/default",
+  "archetypeId": "tabs",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3aa4e08c",
+  "generatedAt": "2026-04-26T09:13:59.047Z"
+}

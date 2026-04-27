@@ -1,0 +1,11 @@
+{
+  "id": "productivity/dropdown/compact/default",
+  "archetypeId": "dropdown",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "2fd1123c",
+  "generatedAt": "2026-04-26T09:14:01.764Z"
+}

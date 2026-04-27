@@ -1,0 +1,11 @@
+{
+  "id": "teens/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7923fc7",
+  "generatedAt": "2026-04-26T09:14:05.936Z"
+}

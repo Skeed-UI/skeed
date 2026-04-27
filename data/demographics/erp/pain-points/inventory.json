@@ -1,0 +1,21 @@
+{
+  "demographic": "erp",
+  "niche": "inventory",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "er1",
+      "description": "Legacy ERP UIs require 6+ clicks for a single transaction.",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "er2",
+      "description": "No keyboard shortcuts in modern web ERP tools.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    }
+  ]
+}

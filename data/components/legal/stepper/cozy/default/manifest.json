@@ -1,0 +1,11 @@
+{
+  "id": "legal/stepper/cozy/default",
+  "archetypeId": "stepper",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3d3243b4",
+  "generatedAt": "2026-04-26T09:13:57.503Z"
+}

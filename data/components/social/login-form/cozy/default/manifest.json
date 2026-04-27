@@ -1,0 +1,11 @@
+{
+  "id": "social/login-form/cozy/default",
+  "archetypeId": "login-form",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "97af5a1",
+  "generatedAt": "2026-04-26T09:14:04.254Z"
+}

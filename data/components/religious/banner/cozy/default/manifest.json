@@ -1,0 +1,11 @@
+{
+  "id": "religious/banner/cozy/default",
+  "archetypeId": "banner",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "36b7019",
+  "generatedAt": "2026-04-26T09:14:02.345Z"
+}

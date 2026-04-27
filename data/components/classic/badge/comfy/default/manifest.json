@@ -1,0 +1,11 @@
+{
+  "id": "classic/badge/comfy/default",
+  "archetypeId": "badge",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "51015ba5",
+  "generatedAt": "2026-04-26T09:13:51.264Z"
+}

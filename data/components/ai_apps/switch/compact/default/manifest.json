@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/switch/compact/default",
+  "archetypeId": "switch",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "59d918f7",
+  "generatedAt": "2026-04-26T09:13:51.161Z"
+}

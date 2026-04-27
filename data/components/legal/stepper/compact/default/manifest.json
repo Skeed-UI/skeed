@@ -1,0 +1,11 @@
+{
+  "id": "legal/stepper/compact/default",
+  "archetypeId": "stepper",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1e2bcb4d",
+  "generatedAt": "2026-04-26T09:13:57.500Z"
+}

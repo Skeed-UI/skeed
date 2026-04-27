@@ -1,0 +1,11 @@
+{
+  "id": "productivity/loading-state/compact/default",
+  "archetypeId": "loading-state",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "2b4f9430",
+  "generatedAt": "2026-04-26T09:14:01.922Z"
+}

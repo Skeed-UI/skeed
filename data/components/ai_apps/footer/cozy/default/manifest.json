@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/footer/cozy/default",
+  "archetypeId": "footer",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4a2c993d",
+  "generatedAt": "2026-04-26T09:13:50.934Z"
+}

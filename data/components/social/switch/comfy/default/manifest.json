@@ -1,0 +1,11 @@
+{
+  "id": "social/switch/comfy/default",
+  "archetypeId": "switch",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4e3fb583",
+  "generatedAt": "2026-04-26T09:14:04.477Z"
+}

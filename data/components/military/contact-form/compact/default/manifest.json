@@ -1,0 +1,11 @@
+{
+  "id": "military/contact-form/compact/default",
+  "archetypeId": "contact-form",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "45bfc6d8",
+  "generatedAt": "2026-04-26T09:14:00.108Z"
+}

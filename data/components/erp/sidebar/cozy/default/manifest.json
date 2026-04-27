@@ -1,0 +1,11 @@
+{
+  "id": "erp/sidebar/cozy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5dcf0ff7",
+  "generatedAt": "2026-04-26T09:13:52.926Z"
+}

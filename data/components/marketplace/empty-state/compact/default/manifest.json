@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/empty-state/compact/default",
+  "archetypeId": "empty-state",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6c209184",
+  "generatedAt": "2026-04-26T09:13:58.617Z"
+}

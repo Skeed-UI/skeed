@@ -1,0 +1,11 @@
+{
+  "id": "gov/separator/cozy/default",
+  "archetypeId": "separator",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "405f086a",
+  "generatedAt": "2026-04-26T09:13:54.314Z"
+}

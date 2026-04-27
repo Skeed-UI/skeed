@@ -1,0 +1,11 @@
+{
+  "id": "education/radio/cozy/default",
+  "archetypeId": "radio",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1806b886",
+  "generatedAt": "2026-04-26T09:13:52.016Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "erp/switch/cozy/default",
+  "archetypeId": "switch",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2922b41e",
+  "generatedAt": "2026-04-26T09:13:52.978Z"
+}

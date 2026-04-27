@@ -1,0 +1,11 @@
+{
+  "id": "fintech/pagination/cozy/default",
+  "archetypeId": "pagination",
+  "demographicId": "fintech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "73df916",
+  "generatedAt": "2026-04-26T09:13:53.404Z"
+}

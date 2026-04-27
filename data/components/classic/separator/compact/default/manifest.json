@@ -1,0 +1,11 @@
+{
+  "id": "classic/separator/compact/default",
+  "archetypeId": "separator",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "52ad239a",
+  "generatedAt": "2026-04-26T09:13:51.554Z"
+}

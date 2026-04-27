@@ -1,0 +1,11 @@
+{
+  "id": "health/avatar/comfy/default",
+  "archetypeId": "avatar",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "521d5e4d",
+  "generatedAt": "2026-04-26T09:13:54.549Z"
+}

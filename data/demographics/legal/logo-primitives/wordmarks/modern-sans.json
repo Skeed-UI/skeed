@@ -1,0 +1,8 @@
+{
+  "id": "modern-sans",
+  "fontFamily": "Inter, system-ui, sans-serif",
+  "fontWeight": 700,
+  "letterSpacing": "-0.01em",
+  "case": "title",
+  "baseline": "alphabetic"
+}

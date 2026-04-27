@@ -1,0 +1,11 @@
+{
+  "id": "military/checkbox/compact/default",
+  "archetypeId": "checkbox",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "36d358ea",
+  "generatedAt": "2026-04-26T09:14:00.054Z"
+}

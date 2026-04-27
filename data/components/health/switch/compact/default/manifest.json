@@ -1,0 +1,11 @@
+{
+  "id": "health/switch/compact/default",
+  "archetypeId": "switch",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "b436843",
+  "generatedAt": "2026-04-26T09:13:55.220Z"
+}

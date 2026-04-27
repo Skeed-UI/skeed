@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/login-form/comfy/default",
+  "archetypeId": "login-form",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3b93c2a1",
+  "generatedAt": "2026-04-26T09:13:51.001Z"
+}

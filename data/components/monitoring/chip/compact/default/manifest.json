@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "41d59ce6",
+  "generatedAt": "2026-04-26T09:14:00.898Z"
+}

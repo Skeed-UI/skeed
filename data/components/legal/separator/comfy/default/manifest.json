@@ -1,0 +1,11 @@
+{
+  "id": "legal/separator/comfy/default",
+  "archetypeId": "separator",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7a1b335f",
+  "generatedAt": "2026-04-26T09:13:57.441Z"
+}

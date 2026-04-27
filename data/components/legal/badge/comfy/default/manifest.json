@@ -1,0 +1,11 @@
+{
+  "id": "legal/badge/comfy/default",
+  "archetypeId": "badge",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4362eea8",
+  "generatedAt": "2026-04-26T09:13:56.901Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7b978970",
+  "generatedAt": "2026-04-26T09:13:57.215Z"
+}

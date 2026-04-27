@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/skeleton/cozy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "76252966",
+  "generatedAt": "2026-04-26T09:13:51.128Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/chip/comfy/default",
+  "archetypeId": "chip",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "19e85374",
+  "generatedAt": "2026-04-26T09:13:57.014Z"
+}

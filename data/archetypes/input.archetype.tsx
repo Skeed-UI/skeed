@@ -1,10 +1,14 @@
-import { type InputHTMLAttributes, forwardRef, useId } from 'react';
+import { type InputHTMLAttributes, forwardRef, useId, useState, useEffect } from 'react';
 import { cn } from '@skeed/core/cn';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   hint?: string;
   error?: string;
+  success?: string;
+  loading?: boolean;
+  maxLength?: number;
+  showCharacterCount?: boolean;
   leadingIcon?: React.ReactNode;
   trailingIcon?: React.ReactNode;
   fullWidth?: boolean;
@@ -22,17 +26,26 @@ const BASE_INPUT_CLASSES =
   'read-only:bg-skeed-color-neutral-100';
 
 const ERROR_INPUT_CLASSES = 'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
+const SUCCESS_INPUT_CLASSES = 'border-skeed-color-success-500 focus-visible:ring-skeed-color-success-500 focus-visible:border-skeed-color-success-500';
+const LOADING_INPUT_CLASSES = 'bg-skeed-color-neutral-100 cursor-wait';
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   {
     label,
     hint,
     error,
+    success,
+    loading,
+    maxLength,
+    showCharacterCount,
     leadingIcon,
     trailingIcon,
     fullWidth = false,
     className,
     id: idProp,
+    value,
+    defaultValue,
+    onChange,
     ...rest
   },
   ref,
@@ -41,6 +54,25 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   const id = idProp ?? generatedId;
   const hintId = `${id}-hint`;
   const errorId = `${id}-error`;
+  const successId = `${id}-success`;
+
+  // Track character count for controlled and uncontrolled inputs
+  const [charCount, setCharCount] = useState(() => {
+    const initialValue = value ?? defaultValue ?? '';
+    return String(initialValue).length;
+  });
+
+  // Sync charCount when controlled value changes externally
+  useEffect(() => {
+    if (value !== undefined) {
+      setCharCount(String(value).length);
+    }
+  }, [value]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCharCount(e.target.value.length);
+    onChange?.(e);
+  };
 
   return (
     <div className={cn('flex flex-col gap-skeed-spacing-1', fullWidth ? 'w-full' : 'w-auto', className)}>
@@ -61,11 +93,21 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         <input
           ref={ref}
           id={id}
-          aria-describedby={error ? errorId : hint ? hintId : undefined}
+          aria-describedby={
+            error ? errorId : success ? successId : hint ? hintId : undefined
+          }
           aria-invalid={!!error}
+          aria-busy={loading}
+          disabled={rest.disabled || loading}
+          maxLength={maxLength}
+          value={value}
+          defaultValue={value === undefined ? defaultValue : undefined}
+          onChange={handleChange}
           className={cn(
             BASE_INPUT_CLASSES,
             error && ERROR_INPUT_CLASSES,
+            success && !error && SUCCESS_INPUT_CLASSES,
+            loading && LOADING_INPUT_CLASSES,
             leadingIcon && 'pl-skeed-spacing-9',
             trailingIcon && 'pr-skeed-spacing-9',
           )}
@@ -77,15 +119,29 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           </span>
         )}
       </div>
-      {error ? (
-        <p id={errorId} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
-          {error}
-        </p>
-      ) : hint ? (
-        <p id={hintId} className="text-sm font-skeed-body text-skeed-color-neutral-500">
-          {hint}
-        </p>
-      ) : null}
+      <div className="flex items-center justify-between gap-skeed-spacing-2">
+        {error ? (
+          <p id={errorId} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600 animate-in fade-in slide-in-from-top-1">
+            {error}
+          </p>
+        ) : success ? (
+          <p id={successId} className="text-sm font-skeed-body text-skeed-color-success-600 animate-in fade-in slide-in-from-top-1">
+            {success}
+          </p>
+        ) : hint ? (
+          <p id={hintId} className="text-sm font-skeed-body text-skeed-color-neutral-500">
+            {hint}
+          </p>
+        ) : <div />}
+        {showCharacterCount && maxLength && (
+          <span className={cn(
+            "text-xs font-skeed-body tabular-nums",
+            charCount > maxLength * 0.9 ? "text-skeed-color-danger-500" : "text-skeed-color-neutral-400"
+          )}>
+            {charCount}/{maxLength}
+          </span>
+        )}
+      </div>
     </div>
   );
 });

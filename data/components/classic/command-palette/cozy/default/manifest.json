@@ -1,0 +1,11 @@
+{
+  "id": "classic/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "56e318d4",
+  "generatedAt": "2026-04-26T09:13:51.333Z"
+}

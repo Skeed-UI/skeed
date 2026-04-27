@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/onboarding-step/compact/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7388fa2e",
+  "generatedAt": "2026-04-26T09:13:59.627Z"
+}

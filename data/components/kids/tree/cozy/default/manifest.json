@@ -1,0 +1,11 @@
+{
+  "id": "kids/tree/cozy/default",
+  "archetypeId": "tree",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "400bbaa3",
+  "generatedAt": "2026-04-26T09:13:56.833Z"
+}

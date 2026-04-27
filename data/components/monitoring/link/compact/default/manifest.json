@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/link/compact/default",
+  "archetypeId": "link",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7aa68747",
+  "generatedAt": "2026-04-26T09:14:01.120Z"
+}

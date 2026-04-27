@@ -1,0 +1,11 @@
+{
+  "id": "kids/menu/comfy/default",
+  "archetypeId": "menu",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "5c22b22b",
+  "generatedAt": "2026-04-26T09:13:56.509Z"
+}

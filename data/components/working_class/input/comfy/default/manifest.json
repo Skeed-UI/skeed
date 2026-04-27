@@ -1,0 +1,29 @@
+{
+  "id": "working_class/input/comfy/default",
+  "archetypeId": "input",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "7c1cc968",
+  "generatedAt": "2026-04-26T09:14:06.563Z",
+  "disclosure": {
+    "type": "conditional",
+    "supportsProgressiveDisclosure": true,
+    "triggers": [
+      {
+        "field": "hasAdditionalInfo",
+        "operator": "equals",
+        "value": true,
+        "show": ["additionalInfo"]
+      }
+    ]
+  },
+  "formIntelligence": {
+    "supportsGrouping": true,
+    "supportsValidation": true,
+    "supportsSuggestions": true,
+    "fieldTypes": ["text", "email", "password", "number", "tel", "url"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "18fb48bd",
+  "generatedAt": "2026-04-26T09:13:57.554Z"
+}

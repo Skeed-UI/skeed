@@ -1,0 +1,11 @@
+{
+  "id": "working_class/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "working_class",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "9722529",
+  "generatedAt": "2026-04-26T09:14:06.570Z"
+}

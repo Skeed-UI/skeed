@@ -1,0 +1,11 @@
+{
+  "id": "listings/progress/comfy/default",
+  "archetypeId": "progress",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "6b8e1426",
+  "generatedAt": "2026-04-26T09:13:58.171Z"
+}

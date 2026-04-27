@@ -1,0 +1,11 @@
+{
+  "id": "social/drawer/compact/default",
+  "archetypeId": "drawer",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "d4a8a14",
+  "generatedAt": "2026-04-26T09:14:04.054Z"
+}

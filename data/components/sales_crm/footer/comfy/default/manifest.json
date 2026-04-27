@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "59f5d109",
+  "generatedAt": "2026-04-26T09:14:03.382Z"
+}

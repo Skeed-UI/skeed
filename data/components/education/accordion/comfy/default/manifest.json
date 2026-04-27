@@ -1,0 +1,11 @@
+{
+  "id": "education/accordion/comfy/default",
+  "archetypeId": "accordion",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2ec95f4d",
+  "generatedAt": "2026-04-26T09:13:51.657Z"
+}

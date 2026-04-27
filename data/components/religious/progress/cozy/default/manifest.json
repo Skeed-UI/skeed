@@ -1,0 +1,11 @@
+{
+  "id": "religious/progress/cozy/default",
+  "archetypeId": "progress",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7e393fb9",
+  "generatedAt": "2026-04-26T09:14:02.835Z"
+}

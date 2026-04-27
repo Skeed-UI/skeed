@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/tabs/compact/default",
+  "archetypeId": "tabs",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7f63ccb4",
+  "generatedAt": "2026-04-26T09:13:51.177Z"
+}

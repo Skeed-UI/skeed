@@ -1,0 +1,11 @@
+{
+  "id": "kids/signup-form/compact/default",
+  "archetypeId": "signup-form",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "1bdbfeba",
+  "generatedAt": "2026-04-26T09:13:56.672Z"
+}

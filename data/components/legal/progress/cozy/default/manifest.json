@@ -1,0 +1,11 @@
+{
+  "id": "legal/progress/cozy/default",
+  "archetypeId": "progress",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7a5c279a",
+  "generatedAt": "2026-04-26T09:13:57.392Z"
+}

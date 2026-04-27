@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/badge/cozy/default",
+  "archetypeId": "badge",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3afb62b",
+  "generatedAt": "2026-04-26T09:14:00.802Z"
+}

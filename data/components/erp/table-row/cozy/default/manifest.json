@@ -1,0 +1,11 @@
+{
+  "id": "erp/table-row/cozy/default",
+  "archetypeId": "table-row",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "51c8302b",
+  "generatedAt": "2026-04-26T09:13:52.986Z"
+}

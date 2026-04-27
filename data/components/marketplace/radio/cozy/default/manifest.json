@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/radio/cozy/default",
+  "archetypeId": "radio",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "103fd51c",
+  "generatedAt": "2026-04-26T09:13:58.888Z"
+}

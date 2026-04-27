@@ -1,0 +1,11 @@
+{
+  "id": "social/textarea/cozy/default",
+  "archetypeId": "textarea",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "10069219",
+  "generatedAt": "2026-04-26T09:14:04.531Z"
+}

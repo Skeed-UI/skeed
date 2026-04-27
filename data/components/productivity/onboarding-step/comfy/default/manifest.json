@@ -1,0 +1,11 @@
+{
+  "id": "productivity/onboarding-step/comfy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4ca3644f",
+  "generatedAt": "2026-04-26T09:14:01.986Z"
+}

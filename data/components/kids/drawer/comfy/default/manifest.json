@@ -1,0 +1,11 @@
+{
+  "id": "kids/drawer/comfy/default",
+  "archetypeId": "drawer",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "6907924e",
+  "generatedAt": "2026-04-26T09:13:56.322Z"
+}

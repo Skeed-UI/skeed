@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "537cd9d4",
+  "generatedAt": "2026-04-26T09:14:04.730Z"
+}

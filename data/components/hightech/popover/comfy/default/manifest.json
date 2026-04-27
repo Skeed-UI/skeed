@@ -1,0 +1,11 @@
+{
+  "id": "hightech/popover/comfy/default",
+  "archetypeId": "popover",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "24d35a3c",
+  "generatedAt": "2026-04-26T09:13:55.840Z"
+}

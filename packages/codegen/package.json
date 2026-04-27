@@ -31,7 +31,11 @@
     "@skeed/contracts": "workspace:*",
     "@skeed/core": "workspace:*",
     "@skeed/archetypes-loader": "workspace:*",
+    "@skeed/asset-logo-svg": "workspace:*",
     "@skeed/demographics-loader": "workspace:*"
+  },
+  "scripts-extra": {
+    "gen": "tsx src/cli.ts"
   },
   "devDependencies": {
     "typescript": "^5.4.0",

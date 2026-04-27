@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/radio/cozy/default",
+  "archetypeId": "radio",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4f41ed42",
+  "generatedAt": "2026-04-26T09:13:51.076Z"
+}

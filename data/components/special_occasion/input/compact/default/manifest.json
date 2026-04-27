@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/input/compact/default",
+  "archetypeId": "input",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "42252c93",
+  "generatedAt": "2026-04-26T09:14:04.970Z"
+}

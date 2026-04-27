@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/label/cozy/default",
+  "archetypeId": "label",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "425dd3f5",
+  "generatedAt": "2026-04-26T09:13:50.977Z"
+}

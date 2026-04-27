@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/command-palette/compact/default",
+  "archetypeId": "command-palette",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "3f133784",
+  "generatedAt": "2026-04-26T09:14:04.767Z"
+}

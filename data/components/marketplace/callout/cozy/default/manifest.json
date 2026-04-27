@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/callout/cozy/default",
+  "archetypeId": "callout",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7870ddee",
+  "generatedAt": "2026-04-26T09:13:58.494Z"
+}

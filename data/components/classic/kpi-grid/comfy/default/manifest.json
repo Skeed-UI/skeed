@@ -1,0 +1,11 @@
+{
+  "id": "classic/kpi-grid/comfy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "44822057",
+  "generatedAt": "2026-04-26T09:13:51.451Z"
+}

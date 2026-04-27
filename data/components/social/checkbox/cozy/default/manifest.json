@@ -1,0 +1,11 @@
+{
+  "id": "social/checkbox/cozy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "26358b77",
+  "generatedAt": "2026-04-26T09:14:03.983Z"
+}

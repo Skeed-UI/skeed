@@ -1,0 +1,11 @@
+{
+  "id": "hightech/table-row/cozy/default",
+  "archetypeId": "table-row",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "256014ed",
+  "generatedAt": "2026-04-26T09:13:56.015Z"
+}

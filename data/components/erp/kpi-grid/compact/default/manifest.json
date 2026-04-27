@@ -1,0 +1,11 @@
+{
+  "id": "erp/kpi-grid/compact/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "18b43ce4",
+  "generatedAt": "2026-04-26T09:13:52.773Z"
+}

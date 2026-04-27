@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "50440320",
+  "generatedAt": "2026-04-26T09:14:05.238Z"
+}

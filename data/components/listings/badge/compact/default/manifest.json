@@ -1,0 +1,11 @@
+{
+  "id": "listings/badge/compact/default",
+  "archetypeId": "badge",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "7dd7fd6",
+  "generatedAt": "2026-04-26T09:13:57.653Z"
+}

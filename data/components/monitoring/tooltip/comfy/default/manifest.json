@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5da7fac7",
+  "generatedAt": "2026-04-26T09:14:01.511Z"
+}

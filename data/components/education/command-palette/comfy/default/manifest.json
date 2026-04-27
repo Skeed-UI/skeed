@@ -1,0 +1,11 @@
+{
+  "id": "education/command-palette/comfy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "9a21d9e",
+  "generatedAt": "2026-04-26T09:13:51.755Z"
+}

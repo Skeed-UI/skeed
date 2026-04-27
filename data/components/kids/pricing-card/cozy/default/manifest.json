@@ -1,0 +1,11 @@
+{
+  "id": "kids/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "30a620f1",
+  "generatedAt": "2026-04-26T09:13:56.591Z"
+}

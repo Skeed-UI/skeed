@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/alert/comfy/default",
+  "archetypeId": "alert",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5f58a246",
+  "generatedAt": "2026-04-26T09:13:59.159Z"
+}

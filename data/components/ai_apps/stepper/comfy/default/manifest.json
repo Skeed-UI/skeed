@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/stepper/comfy/default",
+  "archetypeId": "stepper",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "41710f6b",
+  "generatedAt": "2026-04-26T09:13:51.157Z"
+}

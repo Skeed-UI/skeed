@@ -1,0 +1,11 @@
+{
+  "id": "erp/button/compact/default",
+  "archetypeId": "button",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2997991e",
+  "generatedAt": "2026-04-26T09:13:52.263Z"
+}

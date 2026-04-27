@@ -1,0 +1,11 @@
+{
+  "id": "military/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "32d06752",
+  "generatedAt": "2026-04-26T09:14:00.085Z"
+}

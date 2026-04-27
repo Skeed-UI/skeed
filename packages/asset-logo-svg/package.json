@@ -15,7 +15,8 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@skeed/contracts": "workspace:*"
+    "@skeed/contracts": "workspace:*",
+    "@skeed/demographics-loader": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

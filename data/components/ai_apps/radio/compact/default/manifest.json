@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/radio/compact/default",
+  "archetypeId": "radio",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "14e72f44",
+  "generatedAt": "2026-04-26T09:13:51.073Z"
+}

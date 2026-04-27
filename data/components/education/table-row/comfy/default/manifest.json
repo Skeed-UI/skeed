@@ -1,0 +1,11 @@
+{
+  "id": "education/table-row/comfy/default",
+  "archetypeId": "table-row",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "22ac1069",
+  "generatedAt": "2026-04-26T09:13:52.104Z"
+}

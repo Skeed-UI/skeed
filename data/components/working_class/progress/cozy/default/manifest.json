@@ -1,0 +1,11 @@
+{
+  "id": "working_class/progress/cozy/default",
+  "archetypeId": "progress",
+  "demographicId": "working_class",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "7e8f1a2d",
+  "generatedAt": "2026-04-26T09:14:06.728Z"
+}

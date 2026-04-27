@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/table-row/compact/default",
+  "archetypeId": "table-row",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4a11bdf6",
+  "generatedAt": "2026-04-26T09:13:51.170Z"
+}

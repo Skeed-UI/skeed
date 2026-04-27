@@ -1,0 +1,11 @@
+{
+  "id": "erp/kpi-grid/cozy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "409277e6",
+  "generatedAt": "2026-04-26T09:13:52.775Z"
+}

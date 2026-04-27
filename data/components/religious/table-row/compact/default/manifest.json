@@ -1,0 +1,11 @@
+{
+  "id": "religious/table-row/compact/default",
+  "archetypeId": "table-row",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "25b52b10",
+  "generatedAt": "2026-04-26T09:14:02.961Z"
+}

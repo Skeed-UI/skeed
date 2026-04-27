@@ -1,0 +1,11 @@
+{
+  "id": "listings/login-form/cozy/default",
+  "archetypeId": "login-form",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "107fd469",
+  "generatedAt": "2026-04-26T09:13:58.053Z"
+}

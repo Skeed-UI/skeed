@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/checkbox/compact/default",
+  "archetypeId": "checkbox",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4882c076",
+  "generatedAt": "2026-04-26T09:13:59.294Z"
+}

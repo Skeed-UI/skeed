@@ -1,0 +1,11 @@
+{
+  "id": "religious/drawer/compact/default",
+  "archetypeId": "drawer",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "51b8be03",
+  "generatedAt": "2026-04-26T09:14:02.518Z"
+}

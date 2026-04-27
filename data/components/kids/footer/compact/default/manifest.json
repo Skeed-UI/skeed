@@ -1,0 +1,11 @@
+{
+  "id": "kids/footer/compact/default",
+  "archetypeId": "footer",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "330eb068",
+  "generatedAt": "2026-04-26T09:13:56.390Z"
+}

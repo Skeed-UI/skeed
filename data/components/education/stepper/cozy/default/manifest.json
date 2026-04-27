@@ -1,0 +1,11 @@
+{
+  "id": "education/stepper/cozy/default",
+  "archetypeId": "stepper",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1622dc4a",
+  "generatedAt": "2026-04-26T09:13:52.084Z"
+}

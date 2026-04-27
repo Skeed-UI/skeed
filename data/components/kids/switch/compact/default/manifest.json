@@ -1,0 +1,11 @@
+{
+  "id": "kids/switch/compact/default",
+  "archetypeId": "switch",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "2b1ab406",
+  "generatedAt": "2026-04-26T09:13:56.733Z"
+}

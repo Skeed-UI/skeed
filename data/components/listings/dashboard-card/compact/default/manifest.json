@@ -1,0 +1,11 @@
+{
+  "id": "listings/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "9f3b5eb",
+  "generatedAt": "2026-04-26T09:13:57.820Z"
+}

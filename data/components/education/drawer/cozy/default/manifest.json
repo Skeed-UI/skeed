@@ -1,0 +1,11 @@
+{
+  "id": "education/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "25a8898d",
+  "generatedAt": "2026-04-26T09:13:51.788Z"
+}

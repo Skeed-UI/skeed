@@ -1,0 +1,11 @@
+{
+  "id": "erp/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "78d59b78",
+  "generatedAt": "2026-04-26T09:13:52.358Z"
+}

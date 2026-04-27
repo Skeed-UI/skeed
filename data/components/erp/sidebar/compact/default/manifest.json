@@ -1,0 +1,11 @@
+{
+  "id": "erp/sidebar/compact/default",
+  "archetypeId": "sidebar",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2d308dab",
+  "generatedAt": "2026-04-26T09:13:52.923Z"
+}

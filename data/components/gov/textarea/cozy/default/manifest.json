@@ -1,0 +1,11 @@
+{
+  "id": "gov/textarea/cozy/default",
+  "archetypeId": "textarea",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "18eb6318",
+  "generatedAt": "2026-04-26T09:13:54.456Z"
+}

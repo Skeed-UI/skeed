@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "20ef3204",
+  "generatedAt": "2026-04-26T09:13:50.815Z"
+}

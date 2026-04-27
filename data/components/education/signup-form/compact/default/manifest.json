@@ -1,0 +1,11 @@
+{
+  "id": "education/signup-form/compact/default",
+  "archetypeId": "signup-form",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1d9d8c3b",
+  "generatedAt": "2026-04-26T09:13:52.052Z"
+}

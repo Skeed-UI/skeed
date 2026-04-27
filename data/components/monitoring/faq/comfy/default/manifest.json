@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/faq/comfy/default",
+  "archetypeId": "faq",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "55c9a641",
+  "generatedAt": "2026-04-26T09:14:01.015Z"
+}

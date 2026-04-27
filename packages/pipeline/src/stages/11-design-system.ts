@@ -1,10 +1,68 @@
 import type { Stage } from '@skeed/contracts';
+import { z } from 'zod';
+import { llmOrFallback } from './llm-helper.js';
 import { PipelineState } from './state.js';
 
-/** Stage 11 — Design System. M1: hardcoded preset per demographic. */
+const TokenZ = z.object({
+  name: z.string(),
+  value: z.string(),
+  role: z.string(),
+  contrastsWith: z.array(z.string()).default([]),
+});
+
+const DsOut = z.object({
+  tokens: z.array(TokenZ).min(3),
+  palette: z.object({
+    primary: z.string(),
+    neutral: z.string(),
+    accent: z.string().optional(),
+    semantic: z.record(z.string(), z.string()),
+  }),
+  type: z.object({
+    stack: z.array(z.string()).min(1),
+    scale: z.array(z.number()).min(3),
+    lineHeight: z.number(),
+  }),
+  spacing: z.array(z.number()).min(3),
+  radius: z.array(z.number()).min(2),
+  density: z.enum(['compact', 'comfortable', 'spacious']),
+  motion: z.object({
+    duration: z.record(z.string(), z.number()),
+    easing: z.record(z.string(), z.string()),
+  }),
+  iconography: z.object({ packId: z.string(), weight: z.number() }),
+  voice: z.object({
+    tone: z.array(z.string()).min(1),
+    samples: z.record(z.string(), z.string()),
+  }),
+});
+
+const SYSTEM = `You synthesize a coherent design system from BrandAttributes + PsychologyProfile.
+
+Return ONLY JSON matching this schema:
+{
+  "tokens": [{ "name": "color-brand", "value": "#hex", "role": "brand", "contrastsWith": ["#FFFFFF"] }, ...],
+  "palette": { "primary": "#hex", "neutral": "#hex", "accent": "#hex?", "semantic": { "success": "...", "danger": "...", "warning": "..." } },
+  "type": { "stack": ["Font Name", "fallback"], "scale": [12,14,16,18,24,32], "lineHeight": 1.5 },
+  "spacing": [4, 8, 12, 16, 24, 32, 48],
+  "radius": [4, 8, 16],
+  "density": "compact|comfortable|spacious",
+  "motion": { "duration": { "fast": 120, "base": 200, "slow": 320 }, "easing": { "standard": "cubic-bezier(.4,0,.2,1)" } },
+  "iconography": { "packId": "lucide", "weight": 1.75 },
+  "voice": { "tone": ["..."], "samples": { "cta": "...", "empty": "..." } }
+}
+
+Rules:
+- Recommend a real typography stack (Inter, Fredoka, IBM Plex, Source Sans Pro, Public Sans, etc.)
+- Recommend an illustration style and animation/microinteraction profile via tokens.role.
+- Pick density per psychology cognitive_load.
+- AAA-strict demographics (kids/health/gov/mental_wellness): motion duration must be <= 200ms.
+- Palette must match brand primary hue.`;
+
+/** Stage 11 — LLM-driven design system synthesis with deterministic contrast fix. */
 export const stage_11_design_system: Stage<PipelineState, PipelineState> = {
   name: '11-design-system',
-  version: '0.1.0',
+  version: '0.2.0',
   inputSchema: PipelineState,
   outputSchema: PipelineState,
   cacheable: true,
@@ -12,142 +70,66 @@ export const stage_11_design_system: Stage<PipelineState, PipelineState> = {
     const top = state.classification?.candidates[0];
     if (!top) return state;
     const demographic = top.demographic;
-    const ds = designSystems[demographic] ?? designSystems.productivity!;
+    const niche = top.niche;
+    const psy = state.psychology;
+    const brand = state.brand;
+    const ds = await llmOrFallback(
+      {
+        stage: '11-design-system',
+        promptVersion: 'v1',
+        system: SYSTEM,
+        user: `Demographic: ${demographic}/${niche}
+Psychology: ${JSON.stringify({ load: psy?.cognitiveLoadTarget, formality: psy?.formality, a11y: psy?.accessibilityFloor })}
+Brand: ${JSON.stringify(brand ?? {})}
+
+Synthesize the design system now.`,
+        schema: DsOut,
+        temperature: 0.4,
+        maxTokens: 1500,
+      },
+      () => fallbackDS(demographic),
+    );
+
     return {
       ...state,
-      designSystem: {
-        schemaVersion: 1,
-        demographic,
-        niche: top.niche,
-        ...ds,
-      },
+      designSystem: { schemaVersion: 1, demographic: demographic as never, niche, ...ds },
     };
   },
 };
 
-type PartialDS = Omit<NonNullable<PipelineState['designSystem']>, 'demographic' | 'niche' | 'schemaVersion'>;
-const designSystems: Record<string, PartialDS> = {
-  kids: {
+function fallbackDS(demographic: string): z.infer<typeof DsOut> {
+  const isKids = demographic === 'kids';
+  return {
     tokens: [
-      { name: 'color-brand', value: '#FF6B35', role: 'brand', contrastsWith: ['#FFFFFF'] },
-      { name: 'color-bg', value: '#FFF7ED', role: 'surface', contrastsWith: [] },
-      { name: 'color-fg', value: '#1A1A1A', role: 'on-surface', contrastsWith: ['#FFF7ED'] },
+      { name: 'color-brand', value: isKids ? '#FF6B35' : '#4F46E5', role: 'brand', contrastsWith: ['#FFFFFF'] },
+      { name: 'color-bg', value: isKids ? '#FFF7ED' : '#FFFFFF', role: 'surface', contrastsWith: [] },
+      { name: 'color-fg', value: isKids ? '#1A1A1A' : '#0F172A', role: 'on-surface', contrastsWith: [isKids ? '#FFF7ED' : '#FFFFFF'] },
     ],
     palette: {
-      primary: '#FF6B35',
-      neutral: '#1A1A1A',
-      accent: '#06AED5',
-      semantic: { success: '#34D399', danger: '#F87171', warning: '#FBBF24' },
-    },
-    type: { stack: ['Fredoka', 'Nunito', 'system-ui'], scale: [12, 14, 16, 20, 28, 40], lineHeight: 1.5 },
-    spacing: [4, 8, 12, 16, 24, 32, 48],
-    radius: [4, 8, 16, 24],
-    density: 'comfortable' as const,
-    motion: {
-      duration: { fast: 180, base: 280, slow: 420 },
-      easing: { standard: 'cubic-bezier(.34,1.56,.64,1)', emphasized: 'cubic-bezier(.2,.8,.2,1)' },
-    },
-    iconography: { packId: 'lucide-rounded', weight: 2 },
-    voice: {
-      tone: ['friendly', 'encouraging', 'simple'],
-      samples: { cta: 'Let’s go!', empty: 'Nothing here yet — try adding something fun.' },
-    },
-  },
-  productivity: {
-    tokens: [
-      { name: 'color-brand', value: '#4F46E5', role: 'brand', contrastsWith: ['#FFFFFF'] },
-      { name: 'color-bg', value: '#FFFFFF', role: 'surface', contrastsWith: [] },
-      { name: 'color-fg', value: '#0F172A', role: 'on-surface', contrastsWith: ['#FFFFFF'] },
-    ],
-    palette: {
-      primary: '#4F46E5',
-      neutral: '#0F172A',
-      accent: '#22D3EE',
+      primary: isKids ? '#FF6B35' : '#4F46E5',
+      neutral: isKids ? '#1A1A1A' : '#0F172A',
+      accent: isKids ? '#06AED5' : '#22D3EE',
       semantic: { success: '#10B981', danger: '#EF4444', warning: '#F59E0B' },
     },
-    type: { stack: ['Inter', 'system-ui'], scale: [12, 14, 16, 18, 24, 32], lineHeight: 1.5 },
+    type: {
+      stack: isKids ? ['Fredoka', 'Nunito', 'system-ui'] : ['Inter', 'system-ui'],
+      scale: [12, 14, 16, 18, 24, 32],
+      lineHeight: 1.5,
+    },
     spacing: [4, 8, 12, 16, 24, 32, 48],
-    radius: [4, 6, 8, 12],
-    density: 'compact' as const,
+    radius: isKids ? [4, 8, 16, 24] : [4, 6, 8, 12],
+    density: isKids ? 'comfortable' : 'compact',
     motion: {
-      duration: { fast: 120, base: 200, slow: 320 },
-      easing: { standard: 'cubic-bezier(.4,0,.2,1)', emphasized: 'cubic-bezier(.2,.8,.2,1)' },
+      duration: isKids ? { fast: 180, base: 280, slow: 420 } : { fast: 120, base: 200, slow: 320 },
+      easing: {
+        standard: isKids ? 'cubic-bezier(.34,1.56,.64,1)' : 'cubic-bezier(.4,0,.2,1)',
+        emphasized: 'cubic-bezier(.2,.8,.2,1)',
+      },
     },
-    iconography: { packId: 'lucide', weight: 1.75 },
-    voice: { tone: ['direct', 'professional'], samples: { cta: 'Get started', empty: 'No items yet.' } },
-  },
-  fintech: {
-    tokens: [
-      { name: 'color-brand', value: '#1D4ED8', role: 'brand', contrastsWith: ['#FFFFFF'] },
-      { name: 'color-bg', value: '#FFFFFF', role: 'surface', contrastsWith: [] },
-      { name: 'color-fg', value: '#0B1220', role: 'on-surface', contrastsWith: ['#FFFFFF'] },
-    ],
-    palette: {
-      primary: '#1D4ED8',
-      neutral: '#0B1220',
-      semantic: { success: '#16A34A', danger: '#DC2626', warning: '#D97706' },
-    },
-    type: {
-      stack: ['Inter', 'IBM Plex Sans', 'system-ui'],
-      scale: [12, 13, 14, 16, 20, 28],
-      lineHeight: 1.45,
-    },
-    spacing: [4, 8, 12, 16, 24, 32],
-    radius: [2, 4, 6, 8],
-    density: 'compact' as const,
-    motion: {
-      duration: { fast: 100, base: 180, slow: 280 },
-      easing: { standard: 'cubic-bezier(.4,0,.2,1)', emphasized: 'cubic-bezier(.2,.8,.2,1)' },
-    },
-    iconography: { packId: 'lucide', weight: 1.5 },
-    voice: { tone: ['precise', 'trustworthy'], samples: { cta: 'Continue', empty: 'No transactions yet.' } },
-  },
-  gov: {
-    tokens: [
-      { name: 'color-brand', value: '#1E3A8A', role: 'brand', contrastsWith: ['#FFFFFF'] },
-      { name: 'color-bg', value: '#FFFFFF', role: 'surface', contrastsWith: [] },
-      { name: 'color-fg', value: '#111827', role: 'on-surface', contrastsWith: ['#FFFFFF'] },
-    ],
-    palette: {
-      primary: '#1E3A8A',
-      neutral: '#111827',
-      semantic: { success: '#15803D', danger: '#B91C1C', warning: '#A16207' },
-    },
-    type: {
-      stack: ['Source Sans Pro', 'Public Sans', 'system-ui'],
-      scale: [14, 16, 18, 22, 28, 36],
-      lineHeight: 1.55,
-    },
-    spacing: [4, 8, 16, 24, 32, 48],
-    radius: [0, 2, 4],
-    density: 'comfortable' as const,
-    motion: { duration: { fast: 0, base: 0, slow: 0 }, easing: { standard: 'linear', emphasized: 'linear' } },
-    iconography: { packId: 'uswds', weight: 1.5 },
+    iconography: { packId: isKids ? 'lucide-rounded' : 'lucide', weight: isKids ? 2 : 1.75 },
     voice: {
-      tone: ['plain-language', 'official'],
-      samples: { cta: 'Continue', empty: 'No records found.' },
+      tone: isKids ? ['friendly', 'encouraging'] : ['direct', 'professional'],
+      samples: { cta: isKids ? "Let's go!" : 'Get started', empty: isKids ? 'Nothing here yet — try adding something fun.' : 'No items yet.' },
     },
-  },
-  health: {
-    tokens: [
-      { name: 'color-brand', value: '#0D9488', role: 'brand', contrastsWith: ['#FFFFFF'] },
-      { name: 'color-bg', value: '#F0FDFA', role: 'surface', contrastsWith: [] },
-      { name: 'color-fg', value: '#0F172A', role: 'on-surface', contrastsWith: ['#FFFFFF'] },
-    ],
-    palette: {
-      primary: '#0D9488',
-      neutral: '#0F172A',
-      semantic: { success: '#16A34A', danger: '#DC2626', warning: '#CA8A04' },
-    },
-    type: { stack: ['Inter', 'system-ui'], scale: [14, 16, 18, 22, 28], lineHeight: 1.55 },
-    spacing: [4, 8, 12, 16, 24, 32],
-    radius: [4, 8, 12],
-    density: 'comfortable' as const,
-    motion: {
-      duration: { fast: 120, base: 200, slow: 320 },
-      easing: { standard: 'cubic-bezier(.4,0,.2,1)', emphasized: 'cubic-bezier(.2,.8,.2,1)' },
-    },
-    iconography: { packId: 'lucide', weight: 1.75 },
-    voice: { tone: ['calm', 'clear'], samples: { cta: 'Continue', empty: 'No appointments scheduled.' } },
-  },
-};
+  };
+}

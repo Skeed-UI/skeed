@@ -1,0 +1,11 @@
+{
+  "id": "listings/login-form/comfy/default",
+  "archetypeId": "login-form",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "6f56c600",
+  "generatedAt": "2026-04-26T09:13:58.057Z"
+}

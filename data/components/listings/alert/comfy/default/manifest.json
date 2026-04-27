@@ -1,0 +1,11 @@
+{
+  "id": "listings/alert/comfy/default",
+  "archetypeId": "alert",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "332548e0",
+  "generatedAt": "2026-04-26T09:13:57.627Z"
+}

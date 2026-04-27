@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/menu/comfy/default",
+  "archetypeId": "menu",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "820659d",
+  "generatedAt": "2026-04-26T09:14:01.164Z"
+}

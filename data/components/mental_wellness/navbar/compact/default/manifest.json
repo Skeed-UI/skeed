@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/navbar/compact/default",
+  "archetypeId": "navbar",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "43d34233",
+  "generatedAt": "2026-04-26T09:13:59.616Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/chat-message/compact/default",
+  "archetypeId": "chat-message",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "3e082c4f",
+  "generatedAt": "2026-04-26T09:14:04.726Z"
+}

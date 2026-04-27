@@ -1,0 +1,11 @@
+{
+  "id": "legal/skeleton/compact/default",
+  "archetypeId": "skeleton",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4188559b",
+  "generatedAt": "2026-04-26T09:13:57.467Z"
+}

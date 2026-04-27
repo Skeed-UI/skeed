@@ -1,0 +1,11 @@
+{
+  "id": "teens/accordion/comfy/default",
+  "archetypeId": "accordion",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3497b950",
+  "generatedAt": "2026-04-26T09:14:05.409Z"
+}

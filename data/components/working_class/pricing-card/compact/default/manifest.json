@@ -1,0 +1,11 @@
+{
+  "id": "working_class/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "6be12bcd",
+  "generatedAt": "2026-04-26T09:14:06.713Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "productivity/select/cozy/default",
+  "archetypeId": "select",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "67053f5",
+  "generatedAt": "2026-04-26T09:14:02.083Z"
+}

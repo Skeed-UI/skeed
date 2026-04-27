@@ -1,0 +1,11 @@
+{
+  "id": "classic/avatar/comfy/default",
+  "archetypeId": "avatar",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7d43be06",
+  "generatedAt": "2026-04-26T09:13:51.257Z"
+}

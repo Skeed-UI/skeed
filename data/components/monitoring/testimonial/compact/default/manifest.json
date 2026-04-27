@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "24ab0fed",
+  "generatedAt": "2026-04-26T09:14:01.466Z"
+}

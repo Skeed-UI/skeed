@@ -1,0 +1,11 @@
+{
+  "id": "classic/progress/comfy/default",
+  "archetypeId": "progress",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "44c53f14",
+  "generatedAt": "2026-04-26T09:13:51.533Z"
+}

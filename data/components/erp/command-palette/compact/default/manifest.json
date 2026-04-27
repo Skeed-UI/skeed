@@ -1,0 +1,11 @@
+{
+  "id": "erp/command-palette/compact/default",
+  "archetypeId": "command-palette",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7b702622",
+  "generatedAt": "2026-04-26T09:13:52.319Z"
+}

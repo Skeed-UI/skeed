@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/textarea/comfy/default",
+  "archetypeId": "textarea",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6533dbf3",
+  "generatedAt": "2026-04-26T09:13:59.090Z"
+}

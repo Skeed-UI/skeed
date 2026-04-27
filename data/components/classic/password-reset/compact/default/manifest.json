@@ -1,0 +1,11 @@
+{
+  "id": "classic/password-reset/compact/default",
+  "archetypeId": "password-reset",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "246f7252",
+  "generatedAt": "2026-04-26T09:13:51.510Z"
+}

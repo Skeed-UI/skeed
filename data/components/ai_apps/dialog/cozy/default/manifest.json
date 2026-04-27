@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/dialog/cozy/default",
+  "archetypeId": "dialog",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3a9cb84b",
+  "generatedAt": "2026-04-26T09:13:50.864Z"
+}

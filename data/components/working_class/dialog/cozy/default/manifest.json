@@ -1,0 +1,11 @@
+{
+  "id": "working_class/dialog/cozy/default",
+  "archetypeId": "dialog",
+  "demographicId": "working_class",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "360f79b2",
+  "generatedAt": "2026-04-26T09:14:06.434Z"
+}

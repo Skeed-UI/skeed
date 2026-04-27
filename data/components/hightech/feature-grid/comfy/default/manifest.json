@@ -1,0 +1,11 @@
+{
+  "id": "hightech/feature-grid/comfy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5e8e3121",
+  "generatedAt": "2026-04-26T09:13:55.609Z"
+}

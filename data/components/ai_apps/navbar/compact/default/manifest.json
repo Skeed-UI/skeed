@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/navbar/compact/default",
+  "archetypeId": "navbar",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1ba7e24b",
+  "generatedAt": "2026-04-26T09:13:51.019Z"
+}

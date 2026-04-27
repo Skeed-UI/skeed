@@ -17,7 +17,13 @@ interface CheckResult {
   warnings: Array<{ path: string; message: string }>;
 }
 
-/** Detect demographic folders whose preset.json is still a stub (`_TODO` present). */
+/**
+ * Detect demographic folders that are still scaffold-only stubs.
+ * A demographic counts as a stub when EITHER:
+ *   - preset.json contains the literal `_TODO` field, OR
+ *   - psychology/ has zero `.json` files AND logo-primitives/{shapes,marks} are empty.
+ * Empty-content detection lets us skip mutating preset.json files (sandbox-friendly).
+ */
 async function listStubDemographics(): Promise<Set<string>> {
   const stubs = new Set<string>();
   const demoDir = resolve(dataRoot, 'demographics');
@@ -29,16 +35,43 @@ async function listStubDemographics(): Promise<Set<string>> {
   }
   for (const entry of entries) {
     const presetPath = resolve(demoDir, entry, 'preset.json');
+    let hasTodo = false;
     try {
       const stats = await stat(presetPath);
       if (!stats.isFile()) continue;
       const json = JSON.parse(await readFile(presetPath, 'utf8')) as Record<string, unknown>;
-      if ('_TODO' in json) stubs.add(entry);
+      hasTodo = '_TODO' in json;
     } catch {
-      // ignore — non-existent preset = not a stub, will fail load
+      continue;
+    }
+    if (hasTodo) {
+      stubs.add(entry);
+      continue;
+    }
+    const psyCount = await countJsonFiles(resolve(demoDir, entry, 'psychology'));
+    const shapesCount = await countFiles(resolve(demoDir, entry, 'logo-primitives', 'shapes'));
+    const marksCount = await countFiles(resolve(demoDir, entry, 'logo-primitives', 'marks'));
+    if (psyCount === 0 && shapesCount === 0 && marksCount === 0) {
+      stubs.add(entry);
     }
   }
   return stubs;
+}
+
+async function countJsonFiles(dir: string): Promise<number> {
+  try {
+    return (await readdir(dir)).filter((f) => f.endsWith('.json')).length;
+  } catch {
+    return 0;
+  }
+}
+
+async function countFiles(dir: string): Promise<number> {
+  try {
+    return (await readdir(dir)).length;
+  } catch {
+    return 0;
+  }
 }
 
 async function main(): Promise<void> {

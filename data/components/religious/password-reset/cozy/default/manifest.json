@@ -1,0 +1,11 @@
+{
+  "id": "religious/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2fd1be35",
+  "generatedAt": "2026-04-26T09:14:02.800Z"
+}

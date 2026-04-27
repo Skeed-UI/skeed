@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/toast/compact/default",
+  "archetypeId": "toast",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "54a2ab0",
+  "generatedAt": "2026-04-26T09:13:59.881Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "working_class/select/compact/default",
+  "archetypeId": "select",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "357ad942",
+  "generatedAt": "2026-04-26T09:14:06.757Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/loading-state/comfy/default",
+  "archetypeId": "loading-state",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4bfd3851",
+  "generatedAt": "2026-04-26T09:14:01.139Z"
+}

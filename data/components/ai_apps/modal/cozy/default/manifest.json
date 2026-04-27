@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/modal/cozy/default",
+  "archetypeId": "modal",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6b9c4e06",
+  "generatedAt": "2026-04-26T09:13:51.013Z"
+}

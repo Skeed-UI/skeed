@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/callout/compact/default",
+  "archetypeId": "callout",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "319e1f99",
+  "generatedAt": "2026-04-26T09:14:00.853Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "teens/file-uploader/compact/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5e6ff3f5",
+  "generatedAt": "2026-04-26T09:14:05.731Z"
+}

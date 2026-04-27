@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/skeleton/cozy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4214e92a",
+  "generatedAt": "2026-04-26T09:13:59.763Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/login-form/comfy/default",
+  "archetypeId": "login-form",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "22c85f39",
+  "generatedAt": "2026-04-26T09:14:01.152Z"
+}

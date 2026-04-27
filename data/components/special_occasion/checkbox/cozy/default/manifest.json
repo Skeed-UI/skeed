@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/checkbox/cozy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "545a7036",
+  "generatedAt": "2026-04-26T09:14:04.743Z"
+}

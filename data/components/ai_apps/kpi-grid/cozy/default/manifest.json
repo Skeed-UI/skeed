@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/kpi-grid/cozy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "28571f0d",
+  "generatedAt": "2026-04-26T09:13:50.970Z"
+}

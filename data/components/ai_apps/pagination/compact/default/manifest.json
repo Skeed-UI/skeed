@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/pagination/compact/default",
+  "archetypeId": "pagination",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "50bf99d4",
+  "generatedAt": "2026-04-26T09:13:51.033Z"
+}

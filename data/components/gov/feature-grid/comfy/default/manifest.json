@@ -1,0 +1,11 @@
+{
+  "id": "gov/feature-grid/comfy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "5f015a70",
+  "generatedAt": "2026-04-26T09:13:54.042Z"
+}

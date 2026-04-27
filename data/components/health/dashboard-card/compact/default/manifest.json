@@ -1,0 +1,11 @@
+{
+  "id": "health/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "12253b58",
+  "generatedAt": "2026-04-26T09:13:54.718Z"
+}

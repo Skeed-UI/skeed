@@ -1,0 +1,11 @@
+{
+  "id": "kids/header/compact/default",
+  "archetypeId": "header",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "4632df7a",
+  "generatedAt": "2026-04-26T09:13:56.401Z"
+}

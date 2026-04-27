@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5380df9c",
+  "generatedAt": "2026-04-26T09:14:01.091Z"
+}

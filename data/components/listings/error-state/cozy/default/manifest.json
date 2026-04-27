@@ -1,0 +1,11 @@
+{
+  "id": "listings/error-state/cozy/default",
+  "archetypeId": "error-state",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "34436c98",
+  "generatedAt": "2026-04-26T09:13:57.883Z"
+}

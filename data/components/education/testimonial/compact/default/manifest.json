@@ -1,0 +1,11 @@
+{
+  "id": "education/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "59659638",
+  "generatedAt": "2026-04-26T09:13:52.129Z"
+}

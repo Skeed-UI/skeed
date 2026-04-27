@@ -1,0 +1,11 @@
+{
+  "id": "education/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4532436e",
+  "generatedAt": "2026-04-26T09:13:51.867Z"
+}

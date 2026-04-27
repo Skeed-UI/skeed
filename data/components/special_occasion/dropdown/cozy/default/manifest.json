@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/dropdown/cozy/default",
+  "archetypeId": "dropdown",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "3172c606",
+  "generatedAt": "2026-04-26T09:14:04.853Z"
+}

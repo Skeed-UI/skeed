@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/button/comfy/default",
+  "archetypeId": "button",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "515190e6",
+  "generatedAt": "2026-04-26T09:13:50.791Z"
+}

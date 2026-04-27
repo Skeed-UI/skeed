@@ -1,0 +1,11 @@
+{
+  "id": "kids/textarea/compact/default",
+  "archetypeId": "textarea",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "549b3b19",
+  "generatedAt": "2026-04-26T09:13:56.794Z"
+}

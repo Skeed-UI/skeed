@@ -1,0 +1,11 @@
+{
+  "id": "legal/dropdown/compact/default",
+  "archetypeId": "dropdown",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "377f6b1d",
+  "generatedAt": "2026-04-26T09:13:57.092Z"
+}

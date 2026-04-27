@@ -1,0 +1,11 @@
+{
+  "id": "classic/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "25ee138a",
+  "generatedAt": "2026-04-26T09:13:51.627Z"
+}

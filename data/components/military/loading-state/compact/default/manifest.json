@@ -1,0 +1,11 @@
+{
+  "id": "military/loading-state/compact/default",
+  "archetypeId": "loading-state",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4ad6bcba",
+  "generatedAt": "2026-04-26T09:14:00.348Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "erp/progress/compact/default",
+  "archetypeId": "progress",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3cc5f1df",
+  "generatedAt": "2026-04-26T09:13:52.880Z"
+}

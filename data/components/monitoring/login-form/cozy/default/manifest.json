@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/login-form/cozy/default",
+  "archetypeId": "login-form",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5d4995cc",
+  "generatedAt": "2026-04-26T09:14:01.147Z"
+}

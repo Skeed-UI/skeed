@@ -1,0 +1,11 @@
+{
+  "id": "classic/radio/comfy/default",
+  "archetypeId": "radio",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "292e5cc2",
+  "generatedAt": "2026-04-26T09:13:51.539Z"
+}

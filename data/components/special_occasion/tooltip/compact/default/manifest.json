@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/tooltip/compact/default",
+  "archetypeId": "tooltip",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "15f06841",
+  "generatedAt": "2026-04-26T09:14:05.379Z"
+}

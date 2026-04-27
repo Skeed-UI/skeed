@@ -1,0 +1,8 @@
+{
+  "id": "modern-display",
+  "fontFamily": "Inter, system-ui, sans-serif",
+  "fontWeight": 800,
+  "letterSpacing": "-0.02em",
+  "case": "upper",
+  "baseline": "alphabetic"
+}

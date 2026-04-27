@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/password-reset/compact/default",
+  "archetypeId": "password-reset",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "362613b1",
+  "generatedAt": "2026-04-26T09:14:01.220Z"
+}

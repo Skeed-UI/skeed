@@ -1,0 +1,11 @@
+{
+  "id": "military/navbar/cozy/default",
+  "archetypeId": "navbar",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "77ec8a94",
+  "generatedAt": "2026-04-26T09:14:00.440Z"
+}

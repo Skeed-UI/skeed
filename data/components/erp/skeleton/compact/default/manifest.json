@@ -1,0 +1,11 @@
+{
+  "id": "erp/skeleton/compact/default",
+  "archetypeId": "skeleton",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "16fd4ed5",
+  "generatedAt": "2026-04-26T09:13:52.943Z"
+}

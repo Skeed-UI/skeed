@@ -1,0 +1,11 @@
+{
+  "id": "gov/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "58cf9b1c",
+  "generatedAt": "2026-04-26T09:13:54.050Z"
+}

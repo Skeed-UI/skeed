@@ -1,0 +1,11 @@
+{
+  "id": "legal/contact-form/comfy/default",
+  "archetypeId": "contact-form",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "391a52dd",
+  "generatedAt": "2026-04-26T09:13:57.051Z"
+}

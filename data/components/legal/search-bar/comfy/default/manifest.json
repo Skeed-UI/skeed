@@ -1,0 +1,11 @@
+{
+  "id": "legal/search-bar/comfy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6081c4de",
+  "generatedAt": "2026-04-26T09:13:57.419Z"
+}

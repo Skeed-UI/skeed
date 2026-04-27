@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "sales_crm",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5647e9d6",
+  "generatedAt": "2026-04-26T09:14:03.587Z"
+}

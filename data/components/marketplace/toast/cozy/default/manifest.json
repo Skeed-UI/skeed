@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/toast/cozy/default",
+  "archetypeId": "toast",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5985039a",
+  "generatedAt": "2026-04-26T09:13:59.099Z"
+}

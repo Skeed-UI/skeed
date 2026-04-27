@@ -1,0 +1,11 @@
+{
+  "id": "working_class/card/comfy/default",
+  "archetypeId": "card",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "3ac36eae",
+  "generatedAt": "2026-04-26T09:14:06.348Z"
+}

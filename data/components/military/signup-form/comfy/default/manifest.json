@@ -1,0 +1,11 @@
+{
+  "id": "military/signup-form/comfy/default",
+  "archetypeId": "signup-form",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7f847687",
+  "generatedAt": "2026-04-26T09:14:00.603Z"
+}

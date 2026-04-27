@@ -1,0 +1,11 @@
+{
+  "id": "classic/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2384c6b8",
+  "generatedAt": "2026-04-26T09:13:51.564Z"
+}

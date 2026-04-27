@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/signup-form/comfy/default",
+  "archetypeId": "signup-form",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "10086bdd",
+  "generatedAt": "2026-04-26T09:13:59.756Z"
+}

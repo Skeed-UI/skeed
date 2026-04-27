@@ -1,0 +1,11 @@
+{
+  "demographic": "special_occasion",
+  "niche": "wedding",
+  "schemaVersion": 1,
+  "points": [
+    { "id": "wp1", "description": "Generic wedding-website builders look identical and dated.", "severity": 5, "frequency": 5, "evidence": [] },
+    { "id": "wp2", "description": "RSVP collection requires manual spreadsheet work.", "severity": 4, "frequency": 5, "evidence": [] },
+    { "id": "wp3", "description": "No way to share a tasteful playlist or video memory wall passively.", "severity": 3, "frequency": 4, "evidence": [] },
+    { "id": "wp4", "description": "Most templates force one aesthetic (rustic, minimalist) — couples want options.", "severity": 4, "frequency": 5, "evidence": [] }
+  ]
+}

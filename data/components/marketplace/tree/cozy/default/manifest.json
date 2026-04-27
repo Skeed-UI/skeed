@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/tree/cozy/default",
+  "archetypeId": "tree",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7117269b",
+  "generatedAt": "2026-04-26T09:13:59.125Z"
+}

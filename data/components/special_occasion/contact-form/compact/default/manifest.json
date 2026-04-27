@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/contact-form/compact/default",
+  "archetypeId": "contact-form",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "716746c7",
+  "generatedAt": "2026-04-26T09:14:04.795Z"
+}

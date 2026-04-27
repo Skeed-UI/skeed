@@ -1,0 +1,11 @@
+{
+  "id": "religious/link/comfy/default",
+  "archetypeId": "link",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "55bfdf1a",
+  "generatedAt": "2026-04-26T09:14:02.703Z"
+}

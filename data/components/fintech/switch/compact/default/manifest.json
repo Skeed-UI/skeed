@@ -1,0 +1,11 @@
+{
+  "id": "fintech/switch/compact/default",
+  "archetypeId": "switch",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "25b32fff",
+  "generatedAt": "2026-04-26T09:13:53.604Z"
+}

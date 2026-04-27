@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/card/compact/default",
+  "archetypeId": "card",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5fcd0c0a",
+  "generatedAt": "2026-04-26T09:13:50.806Z"
+}

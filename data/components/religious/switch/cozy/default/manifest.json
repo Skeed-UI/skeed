@@ -1,0 +1,11 @@
+{
+  "id": "religious/switch/cozy/default",
+  "archetypeId": "switch",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "66c1e55e",
+  "generatedAt": "2026-04-26T09:14:02.953Z"
+}

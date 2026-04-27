@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7c3fa20d",
+  "generatedAt": "2026-04-26T09:13:58.863Z"
+}

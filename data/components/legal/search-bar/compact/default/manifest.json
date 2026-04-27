@@ -1,0 +1,11 @@
+{
+  "id": "legal/search-bar/compact/default",
+  "archetypeId": "search-bar",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "410978c",
+  "generatedAt": "2026-04-26T09:13:57.412Z"
+}

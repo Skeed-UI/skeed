@@ -1,0 +1,11 @@
+{
+  "id": "religious/card/compact/default",
+  "archetypeId": "card",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3afbb510",
+  "generatedAt": "2026-04-26T09:14:02.405Z"
+}

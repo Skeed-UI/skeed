@@ -1,0 +1,11 @@
+{
+  "id": "health/label/compact/default",
+  "archetypeId": "label",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "b3a5679",
+  "generatedAt": "2026-04-26T09:13:54.917Z"
+}

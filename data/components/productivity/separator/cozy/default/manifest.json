@@ -1,0 +1,11 @@
+{
+  "id": "productivity/separator/cozy/default",
+  "archetypeId": "separator",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7b523f3b",
+  "generatedAt": "2026-04-26T09:14:02.094Z"
+}

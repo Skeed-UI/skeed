@@ -1,0 +1,11 @@
+{
+  "id": "classic/empty-state/cozy/default",
+  "archetypeId": "empty-state",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "38cf50d",
+  "generatedAt": "2026-04-26T09:13:51.380Z"
+}

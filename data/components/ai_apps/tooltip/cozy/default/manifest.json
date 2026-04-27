@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/tooltip/cozy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5f874176",
+  "generatedAt": "2026-04-26T09:13:51.218Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/callout/cozy/default",
+  "archetypeId": "callout",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "60ef2c96",
+  "generatedAt": "2026-04-26T09:14:00.857Z"
+}

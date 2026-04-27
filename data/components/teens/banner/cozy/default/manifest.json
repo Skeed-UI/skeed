@@ -1,0 +1,11 @@
+{
+  "id": "teens/banner/cozy/default",
+  "archetypeId": "banner",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1490f07",
+  "generatedAt": "2026-04-26T09:14:05.461Z"
+}

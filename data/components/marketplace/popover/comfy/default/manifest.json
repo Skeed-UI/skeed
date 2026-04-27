@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/popover/comfy/default",
+  "archetypeId": "popover",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7c1cce4b",
+  "generatedAt": "2026-04-26T09:13:58.859Z"
+}

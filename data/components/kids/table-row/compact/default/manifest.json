@@ -1,0 +1,11 @@
+{
+  "id": "kids/table-row/compact/default",
+  "archetypeId": "table-row",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "7ec8ea2d",
+  "generatedAt": "2026-04-26T09:13:56.745Z"
+}

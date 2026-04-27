@@ -20,7 +20,8 @@
     "./stage": "./src/stage.ts",
     "./guard": "./src/guard.ts",
     "./pipeline-types": "./src/pipeline-types.ts",
-    "./layout-dsl": "./src/layout-dsl.ts"
+    "./layout-dsl": "./src/layout-dsl.ts",
+    "./event-taste": "./src/event-taste.ts"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",

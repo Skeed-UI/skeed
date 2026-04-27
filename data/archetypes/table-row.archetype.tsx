@@ -7,11 +7,11 @@ export interface TableRowProps extends HTMLAttributes<HTMLTableRowElement> {
 
 export const TableRow = forwardRef<HTMLTableRowElement, TableRowProps>(function TableRow(
   { className, selected, children, ...rest },
-  ref,
+  ref: React.ForwardedRef<HTMLTableRowElement>,
 ) {
   return (
     <tr
-      ref={ref as any}
+      ref={ref}
       className={cn(
         'border-b border-skeed-color-neutral-200',
         'hover:bg-skeed-color-neutral-50',

@@ -1,0 +1,11 @@
+{
+  "id": "social/stepper/comfy/default",
+  "archetypeId": "stepper",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6afe68d4",
+  "generatedAt": "2026-04-26T09:14:04.465Z"
+}

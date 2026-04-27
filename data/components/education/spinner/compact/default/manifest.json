@@ -1,0 +1,11 @@
+{
+  "id": "education/spinner/compact/default",
+  "archetypeId": "spinner",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6fc91eb7",
+  "generatedAt": "2026-04-26T09:13:52.073Z"
+}

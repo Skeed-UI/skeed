@@ -1,0 +1,11 @@
+{
+  "id": "classic/label/comfy/default",
+  "archetypeId": "label",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "72c4b4e7",
+  "generatedAt": "2026-04-26T09:13:51.457Z"
+}

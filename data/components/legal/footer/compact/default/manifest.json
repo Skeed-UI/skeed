@@ -1,0 +1,11 @@
+{
+  "id": "legal/footer/compact/default",
+  "archetypeId": "footer",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "72d4a778",
+  "generatedAt": "2026-04-26T09:13:57.164Z"
+}

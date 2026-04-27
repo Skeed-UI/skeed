@@ -1,0 +1,11 @@
+{
+  "id": "classic/loading-state/comfy/default",
+  "archetypeId": "loading-state",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "47d04e62",
+  "generatedAt": "2026-04-26T09:13:51.470Z"
+}

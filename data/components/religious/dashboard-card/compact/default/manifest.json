@@ -1,0 +1,11 @@
+{
+  "id": "religious/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "20813732",
+  "generatedAt": "2026-04-26T09:14:02.493Z"
+}

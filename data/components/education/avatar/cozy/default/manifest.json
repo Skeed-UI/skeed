@@ -1,0 +1,11 @@
+{
+  "id": "education/avatar/cozy/default",
+  "archetypeId": "avatar",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2c853ab6",
+  "generatedAt": "2026-04-26T09:13:51.673Z"
+}

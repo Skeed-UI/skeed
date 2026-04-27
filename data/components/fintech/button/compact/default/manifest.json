@@ -1,0 +1,11 @@
+{
+  "id": "fintech/button/compact/default",
+  "archetypeId": "button",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "216d957b",
+  "generatedAt": "2026-04-26T09:13:53.093Z"
+}

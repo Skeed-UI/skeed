@@ -1,0 +1,11 @@
+{
+  "id": "productivity/banner/compact/default",
+  "archetypeId": "banner",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "6747856c",
+  "generatedAt": "2026-04-26T09:14:01.591Z"
+}

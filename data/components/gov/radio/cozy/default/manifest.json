@@ -1,0 +1,11 @@
+{
+  "id": "gov/radio/cozy/default",
+  "archetypeId": "radio",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4bc358a8",
+  "generatedAt": "2026-04-26T09:13:54.281Z"
+}

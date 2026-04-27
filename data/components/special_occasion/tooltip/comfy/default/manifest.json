@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "357f58ae",
+  "generatedAt": "2026-04-26T09:14:05.386Z"
+}

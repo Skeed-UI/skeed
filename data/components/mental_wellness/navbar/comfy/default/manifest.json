@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/navbar/comfy/default",
+  "archetypeId": "navbar",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "57b69065",
+  "generatedAt": "2026-04-26T09:13:59.623Z"
+}

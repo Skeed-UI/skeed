@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/search-bar/compact/default",
+  "archetypeId": "search-bar",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "ce367fc",
+  "generatedAt": "2026-04-26T09:14:01.284Z"
+}

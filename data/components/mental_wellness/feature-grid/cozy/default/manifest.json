@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/feature-grid/cozy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7a7460a1",
+  "generatedAt": "2026-04-26T09:13:59.455Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "teens/chat-message/comfy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "310b852e",
+  "generatedAt": "2026-04-26T09:14:05.533Z"
+}

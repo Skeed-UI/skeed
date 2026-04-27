@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3886bf98",
+  "generatedAt": "2026-04-26T09:13:58.554Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "erp/spinner/compact/default",
+  "archetypeId": "spinner",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "361c8c2",
+  "generatedAt": "2026-04-26T09:13:52.961Z"
+}

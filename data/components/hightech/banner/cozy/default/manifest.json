@@ -1,0 +1,11 @@
+{
+  "id": "hightech/banner/cozy/default",
+  "archetypeId": "banner",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3fde74d7",
+  "generatedAt": "2026-04-26T09:13:55.381Z"
+}

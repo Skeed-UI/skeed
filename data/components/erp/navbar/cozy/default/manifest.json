@@ -1,0 +1,11 @@
+{
+  "id": "erp/navbar/cozy/default",
+  "archetypeId": "navbar",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "a154db6",
+  "generatedAt": "2026-04-26T09:13:52.834Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "religious/avatar/cozy/default",
+  "archetypeId": "avatar",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "97c079",
+  "generatedAt": "2026-04-26T09:14:02.318Z"
+}

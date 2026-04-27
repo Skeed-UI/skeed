@@ -1,0 +1,11 @@
+{
+  "id": "erp/tag/comfy/default",
+  "archetypeId": "tag",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "404a5dc5",
+  "generatedAt": "2026-04-26T09:13:53.004Z"
+}

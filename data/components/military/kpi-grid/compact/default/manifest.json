@@ -1,0 +1,11 @@
+{
+  "id": "military/kpi-grid/compact/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1bd2134f",
+  "generatedAt": "2026-04-26T09:14:00.309Z"
+}

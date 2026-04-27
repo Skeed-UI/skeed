@@ -1,0 +1,11 @@
+{
+  "id": "kids/alert/compact/default",
+  "archetypeId": "alert",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "19c7bc71",
+  "generatedAt": "2026-04-26T09:13:56.115Z"
+}

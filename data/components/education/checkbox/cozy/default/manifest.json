@@ -1,0 +1,11 @@
+{
+  "id": "education/checkbox/cozy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6d41f656",
+  "generatedAt": "2026-04-26T09:13:51.728Z"
+}

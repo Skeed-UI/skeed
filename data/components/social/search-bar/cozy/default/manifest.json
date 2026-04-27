@@ -1,0 +1,11 @@
+{
+  "id": "social/search-bar/cozy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4bb8d3aa",
+  "generatedAt": "2026-04-26T09:14:04.374Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7d78037c",
+  "generatedAt": "2026-04-26T09:13:57.156Z"
+}

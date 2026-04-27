@@ -1,0 +1,11 @@
+{
+  "id": "erp/dropdown/compact/default",
+  "archetypeId": "dropdown",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3af94ae3",
+  "generatedAt": "2026-04-26T09:13:52.365Z"
+}

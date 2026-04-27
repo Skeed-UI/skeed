@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/search-bar/comfy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4bdc9cbb",
+  "generatedAt": "2026-04-26T09:13:59.712Z"
+}

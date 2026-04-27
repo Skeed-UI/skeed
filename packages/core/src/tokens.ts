@@ -16,6 +16,7 @@ export const TOKEN_NAMESPACES = [
   'border',
   'density',
   'icon',
+  'form',
 ] as const;
 export type TokenNamespace = (typeof TOKEN_NAMESPACES)[number];
 

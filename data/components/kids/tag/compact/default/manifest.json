@@ -1,0 +1,11 @@
+{
+  "id": "kids/tag/compact/default",
+  "archetypeId": "tag",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "2548db44",
+  "generatedAt": "2026-04-26T09:13:56.770Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "military/avatar/compact/default",
+  "archetypeId": "avatar",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "66f6722",
+  "generatedAt": "2026-04-26T09:13:59.951Z"
+}

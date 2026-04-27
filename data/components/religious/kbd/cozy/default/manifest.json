@@ -1,0 +1,11 @@
+{
+  "id": "religious/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "435f6663",
+  "generatedAt": "2026-04-26T09:14:02.662Z"
+}

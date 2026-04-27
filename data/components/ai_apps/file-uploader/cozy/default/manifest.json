@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4929914e",
+  "generatedAt": "2026-04-26T09:13:50.923Z"
+}

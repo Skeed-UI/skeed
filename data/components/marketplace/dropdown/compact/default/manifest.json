@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/dropdown/compact/default",
+  "archetypeId": "dropdown",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3a393336",
+  "generatedAt": "2026-04-26T09:13:58.607Z"
+}

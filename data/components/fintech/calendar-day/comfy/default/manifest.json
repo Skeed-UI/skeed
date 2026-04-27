@@ -1,0 +1,11 @@
+{
+  "id": "fintech/calendar-day/comfy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "28ae4e5a",
+  "generatedAt": "2026-04-26T09:13:53.105Z"
+}

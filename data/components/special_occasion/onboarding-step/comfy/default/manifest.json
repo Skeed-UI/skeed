@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/onboarding-step/comfy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "a9665b2",
+  "generatedAt": "2026-04-26T09:14:05.114Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "teens/feature-grid/compact/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "568d4366",
+  "generatedAt": "2026-04-26T09:14:05.718Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/tooltip/cozy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2e0f0f40",
+  "generatedAt": "2026-04-26T09:13:57.591Z"
+}

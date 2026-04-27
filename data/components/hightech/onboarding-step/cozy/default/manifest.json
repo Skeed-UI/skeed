@@ -1,0 +1,11 @@
+{
+  "id": "hightech/onboarding-step/cozy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "493bd48b",
+  "generatedAt": "2026-04-26T09:13:55.796Z"
+}

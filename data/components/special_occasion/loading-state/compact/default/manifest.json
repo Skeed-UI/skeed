@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/loading-state/compact/default",
+  "archetypeId": "loading-state",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "3919a6d7",
+  "generatedAt": "2026-04-26T09:14:05.037Z"
+}

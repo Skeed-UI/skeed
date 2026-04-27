@@ -1,0 +1,11 @@
+{
+  "id": "classic/toast/comfy/default",
+  "archetypeId": "toast",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "60e231b8",
+  "generatedAt": "2026-04-26T09:13:51.639Z"
+}

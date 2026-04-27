@@ -83,15 +83,24 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
     className,
     ...rest
   },
-  ref,
+  forwardedRef,
 ) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const internalRef = useRef<HTMLDivElement>(null);
+  const previousActiveElement = useRef<Element | null>(null);
 
-  // Focus the close button when the drawer opens
+  // Store focus before opening, restore focus on close
   useEffect(() => {
     if (open) {
-      closeButtonRef.current?.focus();
+      previousActiveElement.current = document.activeElement;
+      // Focus the close button when drawer opens
+      setTimeout(() => closeButtonRef.current?.focus(), 0);
     }
+    return () => {
+      if (!open && previousActiveElement.current instanceof HTMLElement) {
+        previousActiveElement.current.focus();
+      }
+    };
   }, [open]);
 
   // Close on Escape key
@@ -134,7 +143,14 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
 
       {/* Panel */}
       <div
-        ref={ref}
+        ref={(node) => {
+          internalRef.current = node;
+          if (typeof forwardedRef === 'function') {
+            forwardedRef(node);
+          } else if (forwardedRef) {
+            forwardedRef.current = node;
+          }
+        }}
         role="dialog"
         aria-modal="true"
         aria-label={title ?? 'Drawer'}

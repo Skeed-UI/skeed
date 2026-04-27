@@ -1,0 +1,11 @@
+{
+  "id": "religious/onboarding-step/comfy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4d55735c",
+  "generatedAt": "2026-04-26T09:14:02.775Z"
+}

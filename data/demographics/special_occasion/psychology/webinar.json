@@ -1,0 +1,16 @@
+{
+  "demographic": "special_occasion",
+  "niche": "webinar",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "medium",
+  "trustCuesNeeded": ["expert_byline", "professional_credentials", "testimonial"],
+  "motivationPattern": "extrinsic",
+  "formality": 3,
+  "noveltyTolerance": 2,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [],
+  "research": {
+    "sources": [],
+    "notes": "Webinar pages convert on speaker credibility + topic relevance + clear time/zone. Default taste = moderate_solemn; conversion-focused landing archetype recommended."
+  }
+}

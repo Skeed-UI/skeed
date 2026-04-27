@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/modal/compact/default",
+  "archetypeId": "modal",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2f6181ff",
+  "generatedAt": "2026-04-26T09:14:01.169Z"
+}

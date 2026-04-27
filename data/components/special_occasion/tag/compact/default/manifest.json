@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/tag/compact/default",
+  "archetypeId": "tag",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "1594c374",
+  "generatedAt": "2026-04-26T09:14:05.334Z"
+}

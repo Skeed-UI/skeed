@@ -1,0 +1,11 @@
+{
+  "id": "erp/slider/compact/default",
+  "archetypeId": "slider",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "935c059",
+  "generatedAt": "2026-04-26T09:13:52.953Z"
+}

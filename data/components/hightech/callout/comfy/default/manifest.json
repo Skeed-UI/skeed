@@ -1,0 +1,11 @@
+{
+  "id": "hightech/callout/comfy/default",
+  "archetypeId": "callout",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "169b32f6",
+  "generatedAt": "2026-04-26T09:13:55.429Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "military/table-row/compact/default",
+  "archetypeId": "table-row",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2682236c",
+  "generatedAt": "2026-04-26T09:14:00.667Z"
+}

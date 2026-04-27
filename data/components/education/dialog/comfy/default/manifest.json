@@ -1,0 +1,11 @@
+{
+  "id": "education/dialog/comfy/default",
+  "archetypeId": "dialog",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "589a583c",
+  "generatedAt": "2026-04-26T09:13:51.784Z"
+}

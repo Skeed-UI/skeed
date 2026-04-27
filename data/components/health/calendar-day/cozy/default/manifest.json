@@ -1,0 +1,11 @@
+{
+  "id": "health/calendar-day/cozy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "health",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "29a4d693",
+  "generatedAt": "2026-04-26T09:13:54.606Z"
+}

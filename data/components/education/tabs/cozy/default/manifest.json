@@ -1,0 +1,11 @@
+{
+  "id": "education/tabs/cozy/default",
+  "archetypeId": "tabs",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7f462116",
+  "generatedAt": "2026-04-26T09:13:52.111Z"
+}

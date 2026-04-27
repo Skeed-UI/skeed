@@ -1,0 +1,21 @@
+{
+  "demographic": "sales_crm",
+  "niche": "general",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "sc1",
+      "description": "CRM data entry takes more time than actual selling.",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "sc2",
+      "description": "Pipeline visibility is buried under reports.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    }
+  ]
+}

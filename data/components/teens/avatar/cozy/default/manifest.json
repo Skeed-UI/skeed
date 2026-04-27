@@ -1,0 +1,11 @@
+{
+  "id": "teens/avatar/cozy/default",
+  "archetypeId": "avatar",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7067899",
+  "generatedAt": "2026-04-26T09:14:05.438Z"
+}

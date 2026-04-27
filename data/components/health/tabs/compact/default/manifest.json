@@ -1,0 +1,11 @@
+{
+  "id": "health/tabs/compact/default",
+  "archetypeId": "tabs",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "185bd3a0",
+  "generatedAt": "2026-04-26T09:13:55.242Z"
+}

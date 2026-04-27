@@ -1,0 +1,11 @@
+{
+  "id": "gov/popover/cozy/default",
+  "archetypeId": "popover",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4e30d070",
+  "generatedAt": "2026-04-26T09:13:54.246Z"
+}

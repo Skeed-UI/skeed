@@ -1,0 +1,11 @@
+{
+  "id": "working_class/switch/comfy/default",
+  "archetypeId": "switch",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "406b889f",
+  "generatedAt": "2026-04-26T09:14:06.863Z"
+}

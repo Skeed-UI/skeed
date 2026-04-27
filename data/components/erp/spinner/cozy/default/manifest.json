@@ -1,0 +1,11 @@
+{
+  "id": "erp/spinner/cozy/default",
+  "archetypeId": "spinner",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "76c7684",
+  "generatedAt": "2026-04-26T09:13:52.964Z"
+}

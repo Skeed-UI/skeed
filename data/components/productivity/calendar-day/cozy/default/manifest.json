@@ -1,0 +1,11 @@
+{
+  "id": "productivity/calendar-day/cozy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1df62919",
+  "generatedAt": "2026-04-26T09:14:01.632Z"
+}

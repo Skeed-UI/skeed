@@ -1,0 +1,16 @@
+{
+  "demographic": "special_occasion",
+  "niche": "anniversary",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": ["soft_rounding", "testimonial"],
+  "motivationPattern": "intrinsic",
+  "formality": 4,
+  "noveltyTolerance": 3,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [],
+  "research": {
+    "sources": [],
+    "notes": "Anniversary pages emphasize timeline/story. Default taste = classic_premium; offer moderate_solemn for milestone (25/50)."
+  }
+}

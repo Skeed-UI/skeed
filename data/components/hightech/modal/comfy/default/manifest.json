@@ -1,0 +1,11 @@
+{
+  "id": "hightech/modal/comfy/default",
+  "archetypeId": "modal",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "516338dc",
+  "generatedAt": "2026-04-26T09:13:55.775Z"
+}

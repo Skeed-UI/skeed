@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/progress/cozy/default",
+  "archetypeId": "progress",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6cf0d0b0",
+  "generatedAt": "2026-04-26T09:13:51.068Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/callout/comfy/default",
+  "archetypeId": "callout",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7260e2d0",
+  "generatedAt": "2026-04-26T09:13:51.300Z"
+}

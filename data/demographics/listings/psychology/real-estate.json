@@ -1,0 +1,21 @@
+{
+  "demographic": "listings",
+  "niche": "real-estate",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "medium",
+  "trustCuesNeeded": [
+    "testimonial",
+    "verified_check"
+  ],
+  "motivationPattern": "extrinsic",
+  "formality": 3,
+  "noveltyTolerance": 3,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [
+    "urgency_timer"
+  ],
+  "research": {
+    "sources": [],
+    "notes": "Browsing-first interfaces — high-quality imagery dominates UI weight."
+  }
+}

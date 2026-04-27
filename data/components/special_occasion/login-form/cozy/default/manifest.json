@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/login-form/cozy/default",
+  "archetypeId": "login-form",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "1e74d11e",
+  "generatedAt": "2026-04-26T09:14:05.056Z"
+}

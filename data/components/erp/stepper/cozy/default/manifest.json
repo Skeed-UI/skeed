@@ -1,0 +1,11 @@
+{
+  "id": "erp/stepper/cozy/default",
+  "archetypeId": "stepper",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2ebde175",
+  "generatedAt": "2026-04-26T09:13:52.970Z"
+}

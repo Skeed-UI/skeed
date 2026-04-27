@@ -1,0 +1,11 @@
+{
+  "id": "gov/dashboard-card/cozy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7b96fc80",
+  "generatedAt": "2026-04-26T09:13:53.954Z"
+}

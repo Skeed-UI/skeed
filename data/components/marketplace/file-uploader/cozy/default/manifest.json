@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "30b4acd8",
+  "generatedAt": "2026-04-26T09:13:58.662Z"
+}

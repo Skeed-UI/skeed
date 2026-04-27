@@ -1,0 +1,11 @@
+{
+  "id": "social/popover/compact/default",
+  "archetypeId": "popover",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1d3d3513",
+  "generatedAt": "2026-04-26T09:14:04.327Z"
+}

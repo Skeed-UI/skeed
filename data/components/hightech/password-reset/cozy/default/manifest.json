@@ -1,0 +1,11 @@
+{
+  "id": "hightech/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "54c75389",
+  "generatedAt": "2026-04-26T09:13:55.823Z"
+}

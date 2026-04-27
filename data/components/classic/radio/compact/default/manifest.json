@@ -1,0 +1,11 @@
+{
+  "id": "classic/radio/compact/default",
+  "archetypeId": "radio",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3b63ffa8",
+  "generatedAt": "2026-04-26T09:13:51.535Z"
+}

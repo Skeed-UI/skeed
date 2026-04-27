@@ -1,0 +1,11 @@
+{
+  "id": "productivity/progress/cozy/default",
+  "archetypeId": "progress",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "28f6ee4b",
+  "generatedAt": "2026-04-26T09:14:02.050Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "de77e31",
+  "generatedAt": "2026-04-26T09:13:53.950Z"
+}

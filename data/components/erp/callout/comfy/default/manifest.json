@@ -1,0 +1,11 @@
+{
+  "id": "erp/callout/comfy/default",
+  "archetypeId": "callout",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "71e434b8",
+  "generatedAt": "2026-04-26T09:13:52.285Z"
+}

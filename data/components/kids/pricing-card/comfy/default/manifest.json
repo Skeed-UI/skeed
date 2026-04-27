@@ -1,0 +1,11 @@
+{
+  "id": "kids/pricing-card/comfy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "403d0ed2",
+  "generatedAt": "2026-04-26T09:13:56.594Z"
+}

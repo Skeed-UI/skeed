@@ -1,0 +1,11 @@
+{
+  "id": "teens/drawer/compact/default",
+  "archetypeId": "drawer",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5d6f658",
+  "generatedAt": "2026-04-26T09:14:05.615Z"
+}

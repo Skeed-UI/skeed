@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/modal/comfy/default",
+  "archetypeId": "modal",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3882cf6a",
+  "generatedAt": "2026-04-26T09:13:59.612Z"
+}

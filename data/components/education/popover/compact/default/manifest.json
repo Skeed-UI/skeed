@@ -1,0 +1,11 @@
+{
+  "id": "education/popover/compact/default",
+  "archetypeId": "popover",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "57ebc06c",
+  "generatedAt": "2026-04-26T09:13:51.988Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "social/skeleton/compact/default",
+  "archetypeId": "skeleton",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "8e51261",
+  "generatedAt": "2026-04-26T09:14:04.426Z"
+}

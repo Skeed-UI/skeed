@@ -1,0 +1,11 @@
+{
+  "id": "legal/loading-state/compact/default",
+  "archetypeId": "loading-state",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1ddde629",
+  "generatedAt": "2026-04-26T09:13:57.256Z"
+}

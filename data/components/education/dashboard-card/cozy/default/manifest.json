@@ -1,0 +1,11 @@
+{
+  "id": "education/dashboard-card/cozy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6bfeca2",
+  "generatedAt": "2026-04-26T09:13:51.775Z"
+}

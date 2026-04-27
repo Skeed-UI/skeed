@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/contact-form/comfy/default",
+  "archetypeId": "contact-form",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "21921dc8",
+  "generatedAt": "2026-04-26T09:14:03.272Z"
+}

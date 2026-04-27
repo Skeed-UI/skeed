@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/avatar/compact/default",
+  "archetypeId": "avatar",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "66b7464d",
+  "generatedAt": "2026-04-26T09:14:04.620Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "341a3a11",
+  "generatedAt": "2026-04-26T09:13:54.163Z"
+}

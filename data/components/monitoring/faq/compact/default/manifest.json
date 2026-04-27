@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/faq/compact/default",
+  "archetypeId": "faq",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "67a5e415",
+  "generatedAt": "2026-04-26T09:14:01.008Z"
+}

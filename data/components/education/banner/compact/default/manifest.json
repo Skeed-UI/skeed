@@ -1,0 +1,11 @@
+{
+  "id": "education/banner/compact/default",
+  "archetypeId": "banner",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "668e0098",
+  "generatedAt": "2026-04-26T09:13:51.684Z"
+}

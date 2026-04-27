@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/tag/compact/default",
+  "archetypeId": "tag",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "283605ed",
+  "generatedAt": "2026-04-26T09:13:59.057Z"
+}

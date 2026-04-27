@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/checkbox/comfy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4d31d677",
+  "generatedAt": "2026-04-26T09:13:50.823Z"
+}

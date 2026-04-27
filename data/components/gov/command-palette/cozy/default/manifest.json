@@ -1,0 +1,11 @@
+{
+  "id": "gov/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "5bc322c5",
+  "generatedAt": "2026-04-26T09:13:53.914Z"
+}

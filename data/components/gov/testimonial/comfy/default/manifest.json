@@ -1,0 +1,11 @@
+{
+  "id": "gov/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "3c63eeff",
+  "generatedAt": "2026-04-26T09:13:54.448Z"
+}

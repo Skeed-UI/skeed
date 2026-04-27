@@ -1,0 +1,11 @@
+{
+  "id": "education/alert/cozy/default",
+  "archetypeId": "alert",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5b77ce1e",
+  "generatedAt": "2026-04-26T09:13:51.662Z"
+}

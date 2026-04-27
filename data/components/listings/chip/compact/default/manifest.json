@@ -1,0 +1,11 @@
+{
+  "id": "listings/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "3947228a",
+  "generatedAt": "2026-04-26T09:13:57.771Z"
+}

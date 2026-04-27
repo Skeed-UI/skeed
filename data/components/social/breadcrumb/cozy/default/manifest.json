@@ -1,0 +1,11 @@
+{
+  "id": "social/breadcrumb/cozy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "29e5dc81",
+  "generatedAt": "2026-04-26T09:14:03.918Z"
+}

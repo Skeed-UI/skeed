@@ -1,0 +1,11 @@
+{
+  "id": "hightech/banner/compact/default",
+  "archetypeId": "banner",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5f5d34cb",
+  "generatedAt": "2026-04-26T09:13:55.378Z"
+}

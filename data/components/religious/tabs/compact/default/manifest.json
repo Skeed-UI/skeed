@@ -1,0 +1,11 @@
+{
+  "id": "religious/tabs/compact/default",
+  "archetypeId": "tabs",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "79b3d17a",
+  "generatedAt": "2026-04-26T09:14:02.972Z"
+}

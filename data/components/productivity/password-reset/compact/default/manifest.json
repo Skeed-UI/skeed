@@ -1,0 +1,11 @@
+{
+  "id": "productivity/password-reset/compact/default",
+  "archetypeId": "password-reset",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "712c253a",
+  "generatedAt": "2026-04-26T09:14:02.006Z"
+}

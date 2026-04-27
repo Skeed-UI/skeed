@@ -1,0 +1,11 @@
+{
+  "id": "gov/card/compact/default",
+  "archetypeId": "card",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "5793e0d3",
+  "generatedAt": "2026-04-26T09:13:53.860Z"
+}

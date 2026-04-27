@@ -1,0 +1,11 @@
+{
+  "id": "education/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "df5125d",
+  "generatedAt": "2026-04-26T09:13:52.136Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/accordion/cozy/default",
+  "archetypeId": "accordion",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5b9ca0cc",
+  "generatedAt": "2026-04-26T09:13:56.845Z"
+}

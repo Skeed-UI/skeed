@@ -1,0 +1,11 @@
+{
+  "id": "hightech/alert/compact/default",
+  "archetypeId": "alert",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4e5d1b17",
+  "generatedAt": "2026-04-26T09:13:55.332Z"
+}

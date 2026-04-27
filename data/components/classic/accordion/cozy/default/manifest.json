@@ -1,0 +1,11 @@
+{
+  "id": "classic/accordion/cozy/default",
+  "archetypeId": "accordion",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1a1eda23",
+  "generatedAt": "2026-04-26T09:13:51.233Z"
+}

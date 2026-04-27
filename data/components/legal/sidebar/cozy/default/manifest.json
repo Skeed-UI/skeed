@@ -1,0 +1,11 @@
+{
+  "id": "legal/sidebar/cozy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "596a5d4e",
+  "generatedAt": "2026-04-26T09:13:57.448Z"
+}

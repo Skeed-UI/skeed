@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/contact-form/cozy/default",
+  "archetypeId": "contact-form",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "14f3a506",
+  "generatedAt": "2026-04-26T09:14:00.935Z"
+}

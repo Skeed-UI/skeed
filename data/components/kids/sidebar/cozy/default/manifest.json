@@ -1,0 +1,11 @@
+{
+  "id": "kids/sidebar/cozy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "e2b0074",
+  "generatedAt": "2026-04-26T09:13:56.664Z"
+}

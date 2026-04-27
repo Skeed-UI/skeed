@@ -1,0 +1,11 @@
+{
+  "id": "religious/avatar/compact/default",
+  "archetypeId": "avatar",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7912f6ba",
+  "generatedAt": "2026-04-26T09:14:02.314Z"
+}

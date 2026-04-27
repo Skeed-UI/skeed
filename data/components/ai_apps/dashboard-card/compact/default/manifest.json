@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "58151d6c",
+  "generatedAt": "2026-04-26T09:13:50.855Z"
+}

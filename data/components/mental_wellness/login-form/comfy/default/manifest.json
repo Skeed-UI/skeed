@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/login-form/comfy/default",
+  "archetypeId": "login-form",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4ec22ada",
+  "generatedAt": "2026-04-26T09:13:59.589Z"
+}

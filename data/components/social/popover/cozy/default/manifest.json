@@ -1,0 +1,11 @@
+{
+  "id": "social/popover/cozy/default",
+  "archetypeId": "popover",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3601678f",
+  "generatedAt": "2026-04-26T09:14:04.330Z"
+}

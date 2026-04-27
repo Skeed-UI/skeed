@@ -1,0 +1,11 @@
+{
+  "id": "working_class/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "working_class",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "47836579",
+  "generatedAt": "2026-04-26T09:14:06.356Z"
+}

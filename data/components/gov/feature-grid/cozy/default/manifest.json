@@ -1,0 +1,11 @@
+{
+  "id": "gov/feature-grid/cozy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "2339c5f3",
+  "generatedAt": "2026-04-26T09:13:54.039Z"
+}

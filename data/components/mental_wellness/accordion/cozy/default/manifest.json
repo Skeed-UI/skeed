@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/accordion/cozy/default",
+  "archetypeId": "accordion",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "37d7993e",
+  "generatedAt": "2026-04-26T09:13:59.141Z"
+}

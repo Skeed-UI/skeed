@@ -1,0 +1,11 @@
+{
+  "id": "education/hero/comfy/default",
+  "archetypeId": "hero",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "761119f3",
+  "generatedAt": "2026-04-26T09:13:51.854Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/popover/compact/default",
+  "archetypeId": "popover",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7fe3565c",
+  "generatedAt": "2026-04-26T09:13:51.049Z"
+}

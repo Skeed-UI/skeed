@@ -1,0 +1,11 @@
+{
+  "id": "legal/tag/compact/default",
+  "archetypeId": "tag",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1f317acc",
+  "generatedAt": "2026-04-26T09:13:57.544Z"
+}

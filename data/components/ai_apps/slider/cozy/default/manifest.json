@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/slider/cozy/default",
+  "archetypeId": "slider",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3e41196a",
+  "generatedAt": "2026-04-26T09:13:51.138Z"
+}

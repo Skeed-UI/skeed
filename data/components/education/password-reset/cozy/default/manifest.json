@@ -1,0 +1,11 @@
+{
+  "id": "education/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "20e1091c",
+  "generatedAt": "2026-04-26T09:13:51.982Z"
+}

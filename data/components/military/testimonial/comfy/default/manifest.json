@@ -1,0 +1,11 @@
+{
+  "id": "military/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "68699afa",
+  "generatedAt": "2026-04-26T09:14:00.707Z"
+}

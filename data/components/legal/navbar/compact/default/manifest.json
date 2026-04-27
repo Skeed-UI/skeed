@@ -1,0 +1,11 @@
+{
+  "id": "legal/navbar/compact/default",
+  "archetypeId": "navbar",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "55ef2fa2",
+  "generatedAt": "2026-04-26T09:13:57.300Z"
+}

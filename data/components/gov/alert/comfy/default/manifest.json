@@ -1,0 +1,11 @@
+{
+  "id": "gov/alert/comfy/default",
+  "archetypeId": "alert",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4e9a4463",
+  "generatedAt": "2026-04-26T09:13:53.748Z"
+}

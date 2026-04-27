@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/tag/compact/default",
+  "archetypeId": "tag",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "50f263a4",
+  "generatedAt": "2026-04-26T09:14:01.454Z"
+}

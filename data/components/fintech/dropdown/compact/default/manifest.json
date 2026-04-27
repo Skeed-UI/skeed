@@ -1,0 +1,11 @@
+{
+  "id": "fintech/dropdown/compact/default",
+  "archetypeId": "dropdown",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "34482c26",
+  "generatedAt": "2026-04-26T09:13:53.187Z"
+}

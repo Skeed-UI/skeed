@@ -1,0 +1,11 @@
+{
+  "id": "religious/dashboard-card/comfy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7aec6c64",
+  "generatedAt": "2026-04-26T09:14:02.501Z"
+}

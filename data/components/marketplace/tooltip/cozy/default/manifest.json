@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/tooltip/cozy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6e46bd9c",
+  "generatedAt": "2026-04-26T09:13:59.111Z"
+}

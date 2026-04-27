@@ -1,0 +1,11 @@
+{
+  "id": "erp/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "38b38315",
+  "generatedAt": "2026-04-26T09:13:52.326Z"
+}

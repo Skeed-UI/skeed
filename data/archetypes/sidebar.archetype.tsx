@@ -1,4 +1,4 @@
-import { type HTMLAttributes, forwardRef } from 'react';
+import { type HTMLAttributes, forwardRef, useRef, KeyboardEvent } from 'react';
 import { cn } from '@skeed/core/cn';
 
 export interface SidebarItem {
@@ -66,6 +66,36 @@ export const Sidebar = forwardRef<HTMLElement, SidebarProps>(function Sidebar(
   { items, collapsed = false, header, footer, className, ...rest },
   ref,
 ) {
+  const itemRefs = useRef<Array<HTMLAnchorElement | HTMLButtonElement | null>>([]);
+
+  const handleKeyDown = (event: KeyboardEvent, index: number) => {
+    const focusableItems = items
+      .map((item, i) => ({ item, i }))
+      .filter(({ item }) => !item.disabled);
+
+    const currentIndex = focusableItems.findIndex(({ i }) => i === index);
+    let nextIndex: number | undefined;
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      nextIndex = (currentIndex + 1) % focusableItems.length;
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      nextIndex = (currentIndex - 1 + focusableItems.length) % focusableItems.length;
+    } else if (event.key === 'Home') {
+      event.preventDefault();
+      nextIndex = 0;
+    } else if (event.key === 'End') {
+      event.preventDefault();
+      nextIndex = focusableItems.length - 1;
+    }
+
+    if (nextIndex !== undefined && focusableItems[nextIndex]) {
+      const targetIndex = focusableItems[nextIndex].i;
+      itemRefs.current[targetIndex]?.focus();
+    }
+  };
+
   return (
     <aside
       ref={ref}
@@ -77,7 +107,7 @@ export const Sidebar = forwardRef<HTMLElement, SidebarProps>(function Sidebar(
 
       <nav className={NAV_CLASSES} aria-label="Sidebar navigation">
         <ul className={LIST_CLASSES} role="list">
-          {items.map((item) => {
+          {items.map((item, index) => {
             const content = (
               <>
                 {item.icon && <span className={ICON_CLASSES} aria-hidden="true">{item.icon}</span>}
@@ -96,19 +126,23 @@ export const Sidebar = forwardRef<HTMLElement, SidebarProps>(function Sidebar(
               <li key={item.id}>
                 {item.href ? (
                   <a
+                    ref={(el) => { itemRefs.current[index] = el; }}
                     href={item.href}
                     className={cn(ITEM_BASE_CLASSES, item.active && ITEM_ACTIVE_CLASSES)}
                     aria-current={item.active ? 'page' : undefined}
                     title={collapsed ? item.label : undefined}
+                    onKeyDown={(e) => handleKeyDown(e, index)}
                   >
                     {content}
                   </a>
                 ) : (
                   <button
+                    ref={(el) => { itemRefs.current[index] = el; }}
                     type="button"
                     className={cn(ITEM_BASE_CLASSES, item.active && ITEM_ACTIVE_CLASSES)}
                     aria-pressed={item.active}
                     title={collapsed ? item.label : undefined}
+                    onKeyDown={(e) => handleKeyDown(e, index)}
                   >
                     {content}
                   </button>

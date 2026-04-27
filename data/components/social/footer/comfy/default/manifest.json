@@ -1,0 +1,11 @@
+{
+  "id": "social/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7737a171",
+  "generatedAt": "2026-04-26T09:14:04.136Z"
+}

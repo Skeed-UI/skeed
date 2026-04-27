@@ -1,0 +1,11 @@
+{
+  "id": "education/kpi-grid/cozy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3e1e6d85",
+  "generatedAt": "2026-04-26T09:13:51.874Z"
+}

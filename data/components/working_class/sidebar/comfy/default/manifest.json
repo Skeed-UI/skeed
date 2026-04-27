@@ -1,0 +1,11 @@
+{
+  "id": "working_class/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "31c83c86",
+  "generatedAt": "2026-04-26T09:14:06.788Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "education/loading-state/compact/default",
+  "archetypeId": "loading-state",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "75bf7324",
+  "generatedAt": "2026-04-26T09:13:51.902Z"
+}

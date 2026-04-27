@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/badge/comfy/default",
+  "archetypeId": "badge",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3d6c7888",
+  "generatedAt": "2026-04-26T09:14:00.805Z"
+}

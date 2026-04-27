@@ -1,0 +1,11 @@
+{
+  "id": "classic/card/compact/default",
+  "archetypeId": "card",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "29b4f76e",
+  "generatedAt": "2026-04-26T09:13:51.302Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "teens/input/compact/default",
+  "archetypeId": "input",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "9af831b",
+  "generatedAt": "2026-04-26T09:14:05.782Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/tree/compact/default",
+  "archetypeId": "tree",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "75541a6d",
+  "generatedAt": "2026-04-26T09:13:51.222Z"
+}

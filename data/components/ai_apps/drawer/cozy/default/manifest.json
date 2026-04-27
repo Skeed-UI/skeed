@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "55b53d7b",
+  "generatedAt": "2026-04-26T09:13:50.872Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/tooltip/compact/default",
+  "archetypeId": "tooltip",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "596ebef",
+  "generatedAt": "2026-04-26T09:13:54.478Z"
+}

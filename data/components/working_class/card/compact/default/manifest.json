@@ -1,0 +1,11 @@
+{
+  "id": "working_class/card/compact/default",
+  "archetypeId": "card",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "1288e0c4",
+  "generatedAt": "2026-04-26T09:14:06.341Z"
+}

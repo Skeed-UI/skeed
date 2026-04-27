@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/table-row/cozy/default",
+  "archetypeId": "table-row",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "47ada734",
+  "generatedAt": "2026-04-26T09:13:59.825Z"
+}

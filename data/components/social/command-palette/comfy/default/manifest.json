@@ -1,0 +1,11 @@
+{
+  "id": "social/command-palette/comfy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7f595043",
+  "generatedAt": "2026-04-26T09:14:04.007Z"
+}

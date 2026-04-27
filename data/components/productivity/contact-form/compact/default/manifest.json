@@ -1,0 +1,11 @@
+{
+  "id": "productivity/contact-form/compact/default",
+  "archetypeId": "contact-form",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "70c41c6e",
+  "generatedAt": "2026-04-26T09:14:01.720Z"
+}

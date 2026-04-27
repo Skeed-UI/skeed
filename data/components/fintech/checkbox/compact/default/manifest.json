@@ -1,0 +1,11 @@
+{
+  "id": "fintech/checkbox/compact/default",
+  "archetypeId": "checkbox",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "33a94d62",
+  "generatedAt": "2026-04-26T09:13:53.129Z"
+}

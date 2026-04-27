@@ -1,0 +1,11 @@
+{
+  "id": "health/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "699c639b",
+  "generatedAt": "2026-04-26T09:13:55.050Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "religious/table-row/cozy/default",
+  "archetypeId": "table-row",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "caf16d1",
+  "generatedAt": "2026-04-26T09:14:02.965Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "social/sidebar/cozy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6ee3a413",
+  "generatedAt": "2026-04-26T09:14:04.407Z"
+}

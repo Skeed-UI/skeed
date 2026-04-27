@@ -1,0 +1,11 @@
+{
+  "id": "erp/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6d0d535b",
+  "generatedAt": "2026-04-26T09:13:52.711Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "religious/textarea/cozy/default",
+  "archetypeId": "textarea",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "145e030b",
+  "generatedAt": "2026-04-26T09:14:03.049Z"
+}

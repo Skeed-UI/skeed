@@ -1,0 +1,11 @@
+{
+  "id": "religious/slider/compact/default",
+  "archetypeId": "slider",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1a2703ce",
+  "generatedAt": "2026-04-26T09:14:02.918Z"
+}

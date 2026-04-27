@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/faq/compact/default",
+  "archetypeId": "faq",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7a3f382c",
+  "generatedAt": "2026-04-26T09:13:59.439Z"
+}

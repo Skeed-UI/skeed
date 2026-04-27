@@ -1,0 +1,16 @@
+{
+  "demographic": "special_occasion",
+  "niche": "wedding",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": ["soft_rounding", "expert_byline", "testimonial"],
+  "motivationPattern": "intrinsic",
+  "formality": 4,
+  "noveltyTolerance": 4,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": ["urgency_timer", "dark_pattern"],
+  "research": {
+    "sources": [],
+    "notes": "Wedding sites carry deep emotional weight; couples want timeless taste plus a mode that matches their personality. Default taste = classic_premium; alternates listed in tastes.json."
+  }
+}

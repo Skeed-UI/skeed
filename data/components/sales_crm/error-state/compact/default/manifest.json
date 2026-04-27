@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "sales_crm",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1fb2f158",
+  "generatedAt": "2026-04-26T09:14:03.330Z"
+}

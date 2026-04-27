@@ -1,0 +1,11 @@
+{
+  "id": "gov/sidebar/cozy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "207f0aae",
+  "generatedAt": "2026-04-26T09:13:54.326Z"
+}

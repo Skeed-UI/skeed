@@ -1,0 +1,11 @@
+{
+  "id": "legal/drawer/compact/default",
+  "archetypeId": "drawer",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4ad895d0",
+  "generatedAt": "2026-04-26T09:13:57.080Z"
+}

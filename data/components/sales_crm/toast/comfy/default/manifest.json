@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/toast/comfy/default",
+  "archetypeId": "toast",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "8bb3e40",
+  "generatedAt": "2026-04-26T09:14:03.810Z"
+}

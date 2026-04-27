@@ -1,0 +1,11 @@
+{
+  "id": "military/error-state/cozy/default",
+  "archetypeId": "error-state",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "517bbccc",
+  "generatedAt": "2026-04-26T09:14:00.194Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "social/skeleton/comfy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "69e96bec",
+  "generatedAt": "2026-04-26T09:14:04.433Z"
+}

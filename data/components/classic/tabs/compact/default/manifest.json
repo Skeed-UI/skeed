@@ -1,0 +1,11 @@
+{
+  "id": "classic/tabs/compact/default",
+  "archetypeId": "tabs",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4741eae8",
+  "generatedAt": "2026-04-26T09:13:51.610Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "teens/loading-state/cozy/default",
+  "archetypeId": "loading-state",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1a1f51bd",
+  "generatedAt": "2026-04-26T09:14:05.848Z"
+}

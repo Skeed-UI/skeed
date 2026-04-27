@@ -1,0 +1,11 @@
+{
+  "id": "listings/checkbox/cozy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "6a4404af",
+  "generatedAt": "2026-04-26T09:13:57.763Z"
+}

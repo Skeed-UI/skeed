@@ -1,0 +1,21 @@
+{
+  "demographic": "legal",
+  "niche": "general",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "lg1",
+      "description": "Legal-tech UIs feel either too corporate-cold or too consumer-cute.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "lg2",
+      "description": "Hard to communicate billing transparently.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    }
+  ]
+}

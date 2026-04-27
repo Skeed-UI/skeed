@@ -1,0 +1,11 @@
+{
+  "id": "erp/popover/comfy/default",
+  "archetypeId": "popover",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "29031fe",
+  "generatedAt": "2026-04-26T09:13:52.870Z"
+}

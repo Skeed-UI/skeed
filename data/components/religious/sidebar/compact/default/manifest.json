@@ -1,0 +1,11 @@
+{
+  "id": "religious/sidebar/compact/default",
+  "archetypeId": "sidebar",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6f789244",
+  "generatedAt": "2026-04-26T09:14:02.885Z"
+}

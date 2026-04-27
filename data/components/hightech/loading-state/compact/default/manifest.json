@@ -1,0 +1,11 @@
+{
+  "id": "hightech/loading-state/compact/default",
+  "archetypeId": "loading-state",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6b1e7e0f",
+  "generatedAt": "2026-04-26T09:13:55.729Z"
+}

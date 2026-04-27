@@ -1,0 +1,11 @@
+{
+  "id": "social/progress/compact/default",
+  "archetypeId": "progress",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "42b55e57",
+  "generatedAt": "2026-04-26T09:14:04.348Z"
+}

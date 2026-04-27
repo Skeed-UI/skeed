@@ -1,0 +1,11 @@
+{
+  "id": "productivity/header/comfy/default",
+  "archetypeId": "header",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "dc4d28",
+  "generatedAt": "2026-04-26T09:14:01.847Z"
+}

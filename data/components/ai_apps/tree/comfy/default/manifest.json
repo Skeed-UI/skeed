@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/tree/comfy/default",
+  "archetypeId": "tree",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "21a600a2",
+  "generatedAt": "2026-04-26T09:13:51.227Z"
+}

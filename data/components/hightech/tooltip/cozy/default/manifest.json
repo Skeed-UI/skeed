@@ -1,0 +1,11 @@
+{
+  "id": "hightech/tooltip/cozy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6b3485d5",
+  "generatedAt": "2026-04-26T09:13:56.084Z"
+}

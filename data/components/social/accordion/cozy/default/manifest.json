@@ -1,0 +1,11 @@
+{
+  "id": "social/accordion/cozy/default",
+  "archetypeId": "accordion",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "23a054eb",
+  "generatedAt": "2026-04-26T09:14:03.844Z"
+}

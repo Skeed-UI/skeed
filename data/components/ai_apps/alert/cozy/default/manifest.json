@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/alert/cozy/default",
+  "archetypeId": "alert",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "26fe9656",
+  "generatedAt": "2026-04-26T09:13:50.747Z"
+}

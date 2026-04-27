@@ -2,6 +2,15 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Stage } from '@skeed/contracts';
+import {
+  checkAssets,
+  checkDrift,
+  checkForbiddenPatterns,
+  hasBlockingViolation,
+  judgeRubric,
+  scrubPii,
+} from '@skeed/guards';
+import { ROUTE_TEMPLATES } from './route-templates.js';
 import { PipelineState, Scaffold } from './state.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -48,6 +57,20 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
     const globals = state.composedPages?.find((p) => p.pageId === '_globals');
     if (globals) files.push({ path: 'app/globals.css', contents: globals.tsx, encoding: 'utf8', overwrite: true });
 
+    // Backend API routes (from BackendPlan.apiRoutes)
+    for (const route of backend?.apiRoutes ?? []) {
+      const template = ROUTE_TEMPLATES[route.template];
+      if (template) {
+        files.push({ path: route.path, contents: template, encoding: 'utf8', overwrite: true });
+      }
+    }
+
+    // .env.example from envVars
+    if ((backend?.envVars ?? []).length > 0) {
+      const envLines = (backend?.envVars ?? []).map((v) => `${v.name}=${v.example ?? ''}`);
+      files.push({ path: '.env.example', contents: envLines.join('\n') + '\n', encoding: 'utf8', overwrite: true });
+    }
+
     // Assets
     for (const asset of state.resolvedAssets ?? []) {
       files.push({
@@ -77,11 +100,77 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
       overwrite: true,
     });
 
+    // ── Guard pass ─────────────────────────────────────────────────────────
+    const warnings: string[] = templateRoot ? [] : ['template root not found; using composed-only output'];
+    const demographic = state.classification?.candidates[0]?.demographic ?? 'productivity';
+    // findLast — composed overlay wins over template
+    const homeFile = [...files].reverse().find((f) => f.path === 'app/page.tsx');
+    const globalsFile = [...files].reverse().find((f) => f.path === 'app/globals.css');
+    const pageBody = homeFile?.contents ?? '';
+
+    // Forbidden patterns
+    const forbidden = checkForbiddenPatterns({ text: pageBody, demographic });
+    for (const v of forbidden) {
+      warnings.push(`forbidden-pattern[${v.pattern.severity}] ${v.pattern.reason} → "${v.match}"`);
+    }
+    if (hasBlockingViolation(forbidden)) {
+      warnings.push('one or more BLOCKING forbidden-pattern violations were emitted; review skeed.config.json');
+    }
+
+    // PII scrub
+    const pii = scrubPii(pageBody + ' ' + (state.userStories ?? []).map((s) => s.iWantTo).join(' '));
+    for (const h of pii.hits) {
+      warnings.push(`pii[${h.kind}] detected; consider redacting "${h.value}"`);
+    }
+
+    // Asset checks
+    const assetIssues = checkAssets(
+      (state.resolvedAssets ?? []).map((a) => {
+        const alt = a.relativePath.endsWith('logo.svg')
+          ? state.logoChosen?.altText
+          : a.relativePath.endsWith('hero.svg')
+            ? `Hero illustration for ${state.intent?.jobToBeDone ?? state.prompt}`
+            : undefined;
+        return {
+          id: a.relativePath,
+          mime: a.relativePath.endsWith('.svg') ? 'image/svg+xml' : 'application/octet-stream',
+          contents: a.contents,
+          ...(alt ? { altText: alt } : {}),
+        };
+      }),
+    );
+    for (const i of assetIssues) warnings.push(`asset[${i.kind}] ${i.asset}: ${i.message}`);
+
+    // Rubric — pass real asset alt texts (extracted via aria-label match)
+    const altsCollected = (state.resolvedAssets ?? []).map((a) => {
+      const m = a.contents.match(/aria-label="([^"]+)"/);
+      return m?.[1] ?? a.slot;
+    });
+    const rubric = judgeRubric({
+      demographic,
+      landingTsx: pageBody,
+      globalsCss: globalsFile?.contents ?? '',
+      assetAlts: altsCollected,
+      backendStack: backend?.stack ?? ['none'],
+    });
+    if (!rubric.passes) {
+      warnings.push(`rubric: composite ${rubric.composite}/10 below threshold (failing axes: ${rubric.criteria.filter((c) => c.score < 7).map((c) => c.id).join(', ')})`);
+    }
+
+    // Drift guard
+    const drift = checkDrift({
+      spec: { demographic, brandPrimary: state.designSystem?.palette.primary ?? '#4F46E5', backendStack: backend?.stack ?? [] },
+      files: files.map((f) => ({ path: f.path, contents: f.contents })),
+    });
+    for (const d of drift.driftedFromSpec) {
+      warnings.push(`drift[${d.field}] expected "${d.expected}" not found in emit`);
+    }
+
     return {
       manifestVersion: '0.1.0',
       files,
       postInstall: [],
-      warnings: templateRoot ? [] : ['template root not found; using composed-only output'],
+      warnings,
     };
   },
 };

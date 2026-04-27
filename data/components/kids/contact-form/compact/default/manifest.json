@@ -1,0 +1,11 @@
+{
+  "id": "kids/contact-form/compact/default",
+  "archetypeId": "contact-form",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "4304d0e9",
+  "generatedAt": "2026-04-26T09:13:56.282Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hightech/dialog/comfy/default",
+  "archetypeId": "dialog",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "23f0e417",
+  "generatedAt": "2026-04-26T09:13:55.535Z"
+}

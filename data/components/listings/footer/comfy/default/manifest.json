@@ -1,0 +1,11 @@
+{
+  "id": "listings/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "627bb539",
+  "generatedAt": "2026-04-26T09:13:57.937Z"
+}

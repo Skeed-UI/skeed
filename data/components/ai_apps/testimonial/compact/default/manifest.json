@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7999f670",
+  "generatedAt": "2026-04-26T09:13:51.191Z"
+}

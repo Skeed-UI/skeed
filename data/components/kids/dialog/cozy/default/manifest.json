@@ -1,0 +1,11 @@
+{
+  "id": "kids/dialog/cozy/default",
+  "archetypeId": "dialog",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "3b5f30d",
+  "generatedAt": "2026-04-26T09:13:56.307Z"
+}

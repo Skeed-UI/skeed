@@ -1,0 +1,11 @@
+{
+  "id": "erp/breadcrumb/compact/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3ed79469",
+  "generatedAt": "2026-04-26T09:13:52.254Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/onboarding-step/comfy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "16a8a1bf",
+  "generatedAt": "2026-04-26T09:13:51.031Z"
+}

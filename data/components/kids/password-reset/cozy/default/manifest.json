@@ -1,0 +1,11 @@
+{
+  "id": "kids/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "6c1a905c",
+  "generatedAt": "2026-04-26T09:13:56.562Z"
+}

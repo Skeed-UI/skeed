@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/search-bar/comfy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "17c7d1aa",
+  "generatedAt": "2026-04-26T09:13:51.085Z"
+}

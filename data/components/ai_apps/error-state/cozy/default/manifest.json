@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/error-state/cozy/default",
+  "archetypeId": "error-state",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "217fa7f7",
+  "generatedAt": "2026-04-26T09:13:50.895Z"
+}

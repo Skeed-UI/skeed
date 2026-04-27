@@ -1,0 +1,11 @@
+{
+  "id": "listings/button/cozy/default",
+  "archetypeId": "button",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "203b9aae",
+  "generatedAt": "2026-04-26T09:13:57.690Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hightech/checkbox/cozy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5d412bd",
+  "generatedAt": "2026-04-26T09:13:55.458Z"
+}

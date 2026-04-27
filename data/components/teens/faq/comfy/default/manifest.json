@@ -1,0 +1,11 @@
+{
+  "id": "teens/faq/comfy/default",
+  "archetypeId": "faq",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "33855ac2",
+  "generatedAt": "2026-04-26T09:14:05.714Z"
+}

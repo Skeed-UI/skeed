@@ -1,0 +1,11 @@
+{
+  "id": "social/testimonial/cozy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "26323ddb",
+  "generatedAt": "2026-04-26T09:14:04.520Z"
+}

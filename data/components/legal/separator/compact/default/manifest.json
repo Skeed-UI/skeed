@@ -1,0 +1,11 @@
+{
+  "id": "legal/separator/compact/default",
+  "archetypeId": "separator",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1588d6f5",
+  "generatedAt": "2026-04-26T09:13:57.434Z"
+}

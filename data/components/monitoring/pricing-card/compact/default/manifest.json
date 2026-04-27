@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7164bc4",
+  "generatedAt": "2026-04-26T09:14:01.247Z"
+}

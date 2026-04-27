@@ -1,0 +1,11 @@
+{
+  "id": "teens/callout/cozy/default",
+  "archetypeId": "callout",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4ea42451",
+  "generatedAt": "2026-04-26T09:14:05.507Z"
+}

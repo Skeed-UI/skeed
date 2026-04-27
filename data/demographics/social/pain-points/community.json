@@ -1,0 +1,21 @@
+{
+  "demographic": "social",
+  "niche": "community",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "so1",
+      "description": "Existing social platforms dictate the algorithm; no escape hatch.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "so2",
+      "description": "Hard to reach a small private circle without bleed.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    }
+  ]
+}

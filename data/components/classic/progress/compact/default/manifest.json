@@ -1,0 +1,11 @@
+{
+  "id": "classic/progress/compact/default",
+  "archetypeId": "progress",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1fcd1d56",
+  "generatedAt": "2026-04-26T09:13:51.529Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "productivity/kpi-grid/compact/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "33f60a25",
+  "generatedAt": "2026-04-26T09:14:01.889Z"
+}

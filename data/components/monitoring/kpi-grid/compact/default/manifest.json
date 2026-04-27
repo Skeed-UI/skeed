@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/kpi-grid/compact/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "13cc292e",
+  "generatedAt": "2026-04-26T09:14:01.099Z"
+}

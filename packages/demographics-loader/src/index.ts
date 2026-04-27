@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import {
   type DemographicId,
   DemographicPreset,
+  EventTastesFile,
   PainPoint,
   PsychologyProfile,
 } from '@skeed/contracts';
@@ -32,6 +33,8 @@ export interface LoadedDemographic {
   /** Optional — 16 of 23 demographics ship without one until M3 codegen. */
   illustrationStyle: IllustrationStyle | undefined;
   logoPrimitives: LogoPrimitiveIndex;
+  /** Optional — only special_occasion ships taste palettes today. */
+  tastes: EventTastesFile | undefined;
   ownersPath: string;
   readmePath: string;
 }
@@ -116,12 +119,20 @@ async function loadOneDemographic(demoDir: string): Promise<LoadedDemographic> {
 
   const logoPrimitives = await loadLogoPrimitives(join(demoDir, 'logo-primitives'));
 
+  const tastesPath = join(demoDir, 'tastes.json');
+  let tastes: EventTastesFile | undefined;
+  if (await fileExists(tastesPath)) {
+    const json = JSON.parse(await readFile(tastesPath, 'utf8'));
+    tastes = EventTastesFile.parse(json);
+  }
+
   return {
     preset,
     psychology,
     painPoints,
     illustrationStyle,
     logoPrimitives,
+    tastes,
     ownersPath: join(demoDir, 'owners.md'),
     readmePath: join(demoDir, 'README.md'),
   };

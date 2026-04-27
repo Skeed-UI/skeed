@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/dashboard-card/cozy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "4c2892c2",
+  "generatedAt": "2026-04-26T09:14:04.813Z"
+}

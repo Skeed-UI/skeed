@@ -1,0 +1,11 @@
+{
+  "id": "social/modal/compact/default",
+  "archetypeId": "modal",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1e404fb3",
+  "generatedAt": "2026-04-26T09:14:04.273Z"
+}

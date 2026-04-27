@@ -1,0 +1,11 @@
+{
+  "id": "productivity/sidebar/compact/default",
+  "archetypeId": "sidebar",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "6dd313f6",
+  "generatedAt": "2026-04-26T09:14:02.101Z"
+}

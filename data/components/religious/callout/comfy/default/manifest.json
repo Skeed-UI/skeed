@@ -1,0 +1,11 @@
+{
+  "id": "religious/callout/comfy/default",
+  "archetypeId": "callout",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2a2dc83a",
+  "generatedAt": "2026-04-26T09:14:02.400Z"
+}

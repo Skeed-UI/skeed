@@ -1,0 +1,22 @@
+{
+  "demographic": "military",
+  "niche": "tactical",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "high",
+  "trustCuesNeeded": [
+    "institutional_seal",
+    "flat_borders",
+    "audit_trail"
+  ],
+  "motivationPattern": "mastery",
+  "formality": 5,
+  "noveltyTolerance": 1,
+  "accessibilityFloor": "AAA",
+  "forbiddenPatterns": [
+    "dark_pattern"
+  ],
+  "research": {
+    "sources": [],
+    "notes": "High-stakes operational UIs. Reduce cognitive overhead via standard mil-spec layouts."
+  }
+}

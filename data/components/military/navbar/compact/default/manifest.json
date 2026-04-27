@@ -1,0 +1,11 @@
+{
+  "id": "military/navbar/compact/default",
+  "archetypeId": "navbar",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1dc4a1b3",
+  "generatedAt": "2026-04-26T09:14:00.436Z"
+}

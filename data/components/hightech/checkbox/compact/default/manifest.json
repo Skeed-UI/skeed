@@ -1,0 +1,11 @@
+{
+  "id": "hightech/checkbox/compact/default",
+  "archetypeId": "checkbox",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "74f9e021",
+  "generatedAt": "2026-04-26T09:13:55.454Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hightech/checkbox/comfy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4070b1ac",
+  "generatedAt": "2026-04-26T09:13:55.462Z"
+}

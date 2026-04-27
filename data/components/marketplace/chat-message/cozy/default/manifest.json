@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5b5168d6",
+  "generatedAt": "2026-04-26T09:13:58.516Z"
+}

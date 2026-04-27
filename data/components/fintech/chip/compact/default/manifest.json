@@ -1,0 +1,11 @@
+{
+  "id": "fintech/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7a6c681",
+  "generatedAt": "2026-04-26T09:13:53.136Z"
+}

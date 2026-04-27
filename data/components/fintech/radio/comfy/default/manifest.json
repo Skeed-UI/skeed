@@ -1,0 +1,11 @@
+{
+  "id": "fintech/radio/comfy/default",
+  "archetypeId": "radio",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "d0ab948",
+  "generatedAt": "2026-04-26T09:13:53.477Z"
+}

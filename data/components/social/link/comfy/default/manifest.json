@@ -1,0 +1,11 @@
+{
+  "id": "social/link/comfy/default",
+  "archetypeId": "link",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "e5eb51e",
+  "generatedAt": "2026-04-26T09:14:04.234Z"
+}

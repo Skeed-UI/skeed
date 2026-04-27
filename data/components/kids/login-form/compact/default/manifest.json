@@ -1,0 +1,11 @@
+{
+  "id": "kids/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "71e40591",
+  "generatedAt": "2026-04-26T09:13:56.491Z"
+}

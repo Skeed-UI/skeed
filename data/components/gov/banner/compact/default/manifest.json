@@ -1,0 +1,11 @@
+{
+  "id": "gov/banner/compact/default",
+  "archetypeId": "banner",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7ae0c943",
+  "generatedAt": "2026-04-26T09:13:53.792Z"
+}

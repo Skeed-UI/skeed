@@ -1,0 +1,11 @@
+{
+  "id": "erp/separator/comfy/default",
+  "archetypeId": "separator",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6a5a1964",
+  "generatedAt": "2026-04-26T09:13:52.920Z"
+}

@@ -1,0 +1,21 @@
+{
+  "demographic": "working_class",
+  "niche": "general",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "wc1",
+      "description": "Most apps assume desktop or fast data.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "wc2",
+      "description": "Hidden fees feel disrespectful.",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": []
+    }
+  ]
+}

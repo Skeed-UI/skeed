@@ -1,0 +1,11 @@
+{
+  "id": "erp/loading-state/compact/default",
+  "archetypeId": "loading-state",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5c803c6f",
+  "generatedAt": "2026-04-26T09:13:52.797Z"
+}

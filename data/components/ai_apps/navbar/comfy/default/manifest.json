@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/navbar/comfy/default",
+  "archetypeId": "navbar",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "401245c0",
+  "generatedAt": "2026-04-26T09:13:51.023Z"
+}

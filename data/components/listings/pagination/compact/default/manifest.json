@@ -1,0 +1,11 @@
+{
+  "id": "listings/pagination/compact/default",
+  "archetypeId": "pagination",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "14026653",
+  "generatedAt": "2026-04-26T09:13:58.113Z"
+}

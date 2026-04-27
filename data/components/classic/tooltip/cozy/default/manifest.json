@@ -1,0 +1,11 @@
+{
+  "id": "classic/tooltip/cozy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "a9f5c2f",
+  "generatedAt": "2026-04-26T09:13:51.643Z"
+}

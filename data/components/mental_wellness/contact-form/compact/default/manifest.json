@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/contact-form/compact/default",
+  "archetypeId": "contact-form",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4f1d3648",
+  "generatedAt": "2026-04-26T09:13:59.347Z"
+}

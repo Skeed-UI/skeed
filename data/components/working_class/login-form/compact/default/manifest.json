@@ -1,0 +1,11 @@
+{
+  "id": "working_class/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "27926efa",
+  "generatedAt": "2026-04-26T09:14:06.621Z"
+}

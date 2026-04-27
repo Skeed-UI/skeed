@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/checkbox/comfy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1bf36cf2",
+  "generatedAt": "2026-04-26T09:13:59.303Z"
+}

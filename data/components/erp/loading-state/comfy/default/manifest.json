@@ -1,0 +1,11 @@
+{
+  "id": "erp/loading-state/comfy/default",
+  "archetypeId": "loading-state",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4848bdba",
+  "generatedAt": "2026-04-26T09:13:52.801Z"
+}

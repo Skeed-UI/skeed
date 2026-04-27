@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/kpi-grid/comfy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5c0663bf",
+  "generatedAt": "2026-04-26T09:14:03.446Z"
+}

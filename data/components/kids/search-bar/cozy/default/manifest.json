@@ -1,0 +1,11 @@
+{
+  "id": "kids/search-bar/cozy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "4fc45fd7",
+  "generatedAt": "2026-04-26T09:13:56.627Z"
+}

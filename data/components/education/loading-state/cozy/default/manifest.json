@@ -1,0 +1,11 @@
+{
+  "id": "education/loading-state/cozy/default",
+  "archetypeId": "loading-state",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "d4969da",
+  "generatedAt": "2026-04-26T09:13:51.905Z"
+}

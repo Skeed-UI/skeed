@@ -1,0 +1,11 @@
+{
+  "id": "health/pagination/compact/default",
+  "archetypeId": "pagination",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "5286bb40",
+  "generatedAt": "2026-04-26T09:13:55.017Z"
+}

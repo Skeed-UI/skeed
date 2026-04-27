@@ -1,0 +1,11 @@
+{
+  "id": "religious/select/compact/default",
+  "archetypeId": "select",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "54915f8e",
+  "generatedAt": "2026-04-26T09:14:02.864Z"
+}

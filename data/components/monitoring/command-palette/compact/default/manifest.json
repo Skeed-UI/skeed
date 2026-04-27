@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/command-palette/compact/default",
+  "archetypeId": "command-palette",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "19ac4f54",
+  "generatedAt": "2026-04-26T09:14:00.908Z"
+}

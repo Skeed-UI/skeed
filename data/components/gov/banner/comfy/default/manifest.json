@@ -1,0 +1,11 @@
+{
+  "id": "gov/banner/comfy/default",
+  "archetypeId": "banner",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "23112dd1",
+  "generatedAt": "2026-04-26T09:13:53.801Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "erp/banner/comfy/default",
+  "archetypeId": "banner",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6d8e677e",
+  "generatedAt": "2026-04-26T09:13:52.251Z"
+}

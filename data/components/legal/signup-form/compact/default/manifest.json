@@ -1,0 +1,11 @@
+{
+  "id": "legal/signup-form/compact/default",
+  "archetypeId": "signup-form",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "61514ed6",
+  "generatedAt": "2026-04-26T09:13:57.456Z"
+}

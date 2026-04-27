@@ -1,0 +1,11 @@
+{
+  "id": "religious/calendar-day/comfy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "32f1eba",
+  "generatedAt": "2026-04-26T09:14:02.387Z"
+}

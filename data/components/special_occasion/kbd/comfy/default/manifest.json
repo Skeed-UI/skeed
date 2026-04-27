@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/kbd/comfy/default",
+  "archetypeId": "kbd",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "6b5bb87e",
+  "generatedAt": "2026-04-26T09:14:04.992Z"
+}

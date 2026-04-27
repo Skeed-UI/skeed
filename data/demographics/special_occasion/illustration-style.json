@@ -1,0 +1,8 @@
+{
+  "demographic": "special_occasion",
+  "schemaVersion": 1,
+  "promptSuffix": ", elegant editorial illustration with soft brush textures and gentle gradients, romantic palette, hand-drawn feel, plain background",
+  "negativePromptSuffix": ", harsh shadows, corporate stock, cliche heart icons, generic wedding cake imagery",
+  "preferredAspectRatios": ["3:2", "16:9", "1:1"],
+  "providerHints": { "style": "editorial-watercolor", "guidance": 6.5 }
+}

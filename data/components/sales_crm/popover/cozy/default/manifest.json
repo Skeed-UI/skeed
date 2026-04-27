@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/popover/cozy/default",
+  "archetypeId": "popover",
+  "demographicId": "sales_crm",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "32d75989",
+  "generatedAt": "2026-04-26T09:14:03.578Z"
+}

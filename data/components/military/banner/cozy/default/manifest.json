@@ -1,0 +1,11 @@
+{
+  "id": "military/banner/cozy/default",
+  "archetypeId": "banner",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "43bd381f",
+  "generatedAt": "2026-04-26T09:13:59.977Z"
+}

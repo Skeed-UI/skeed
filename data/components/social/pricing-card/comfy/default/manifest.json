@@ -1,0 +1,11 @@
+{
+  "id": "social/pricing-card/comfy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "563372a5",
+  "generatedAt": "2026-04-26T09:14:04.344Z"
+}

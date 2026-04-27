@@ -1,0 +1,11 @@
+{
+  "id": "military/menu/comfy/default",
+  "archetypeId": "menu",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "403698ec",
+  "generatedAt": "2026-04-26T09:14:00.418Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "social/table-row/comfy/default",
+  "archetypeId": "table-row",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "c5dae76",
+  "generatedAt": "2026-04-26T09:14:04.488Z"
+}

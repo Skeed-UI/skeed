@@ -1,0 +1,11 @@
+{
+  "id": "social/search-bar/compact/default",
+  "archetypeId": "search-bar",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7b5c21d8",
+  "generatedAt": "2026-04-26T09:14:04.370Z"
+}

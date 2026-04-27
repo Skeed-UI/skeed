@@ -1,2 +1,2 @@
-export {};
-// AGENTS: export the composer as an AssetSource here.
+export { composeLogoCandidates, type ComposeOptions } from './composer.js';
+export { loadPrimitives, findRepoData } from './primitive-loader.js';

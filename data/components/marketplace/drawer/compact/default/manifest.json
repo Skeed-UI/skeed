@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/drawer/compact/default",
+  "archetypeId": "drawer",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4705eef7",
+  "generatedAt": "2026-04-26T09:13:58.597Z"
+}

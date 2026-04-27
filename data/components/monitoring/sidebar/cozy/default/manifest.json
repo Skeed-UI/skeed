@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/sidebar/cozy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2db23982",
+  "generatedAt": "2026-04-26T09:14:01.327Z"
+}

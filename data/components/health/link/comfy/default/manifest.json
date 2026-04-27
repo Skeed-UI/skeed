@@ -1,0 +1,11 @@
+{
+  "id": "health/link/comfy/default",
+  "archetypeId": "link",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1b030143",
+  "generatedAt": "2026-04-26T09:13:54.937Z"
+}

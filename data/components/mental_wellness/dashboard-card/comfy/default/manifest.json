@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/dashboard-card/comfy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "f2d4afa",
+  "generatedAt": "2026-04-26T09:13:59.369Z"
+}

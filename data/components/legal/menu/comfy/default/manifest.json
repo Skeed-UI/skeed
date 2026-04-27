@@ -1,0 +1,11 @@
+{
+  "id": "legal/menu/comfy/default",
+  "archetypeId": "menu",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "63b9b22d",
+  "generatedAt": "2026-04-26T09:13:57.285Z"
+}

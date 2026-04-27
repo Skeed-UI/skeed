@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/checkbox/compact/default",
+  "archetypeId": "checkbox",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3f6b8e89",
+  "generatedAt": "2026-04-26T09:14:00.886Z"
+}

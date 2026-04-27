@@ -1,0 +1,11 @@
+{
+  "id": "listings/article/compact/default",
+  "archetypeId": "article",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "3e1430d8",
+  "generatedAt": "2026-04-26T09:13:57.631Z"
+}

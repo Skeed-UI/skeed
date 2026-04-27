@@ -1,0 +1,11 @@
+{
+  "id": "legal/toast/cozy/default",
+  "archetypeId": "toast",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "56d8a042",
+  "generatedAt": "2026-04-26T09:13:57.580Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fintech/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "fintech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4c6aa66d",
+  "generatedAt": "2026-04-26T09:13:53.146Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "erp/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4c67afe4",
+  "generatedAt": "2026-04-26T09:13:52.321Z"
+}

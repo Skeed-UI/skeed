@@ -1,0 +1,11 @@
+{
+  "id": "social/header/cozy/default",
+  "archetypeId": "header",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7629ac08",
+  "generatedAt": "2026-04-26T09:14:04.144Z"
+}

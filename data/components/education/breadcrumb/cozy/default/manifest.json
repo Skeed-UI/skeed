@@ -1,0 +1,11 @@
+{
+  "id": "education/breadcrumb/cozy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "573a7420",
+  "generatedAt": "2026-04-26T09:13:51.692Z"
+}

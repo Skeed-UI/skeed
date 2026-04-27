@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/avatar/comfy/default",
+  "archetypeId": "avatar",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6b3bea66",
+  "generatedAt": "2026-04-26T09:13:59.185Z"
+}

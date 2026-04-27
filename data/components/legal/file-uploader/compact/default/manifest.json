@@ -1,0 +1,11 @@
+{
+  "id": "legal/file-uploader/compact/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "73e1e183",
+  "generatedAt": "2026-04-26T09:13:57.152Z"
+}

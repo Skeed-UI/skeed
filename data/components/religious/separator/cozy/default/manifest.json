@@ -1,0 +1,11 @@
+{
+  "id": "religious/separator/cozy/default",
+  "archetypeId": "separator",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "541938c9",
+  "generatedAt": "2026-04-26T09:14:02.878Z"
+}

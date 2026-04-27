@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "64de9a61",
+  "generatedAt": "2026-04-26T09:14:04.809Z"
+}

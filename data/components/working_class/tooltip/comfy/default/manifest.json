@@ -1,0 +1,11 @@
+{
+  "id": "working_class/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "9b05894",
+  "generatedAt": "2026-04-26T09:14:06.967Z"
+}

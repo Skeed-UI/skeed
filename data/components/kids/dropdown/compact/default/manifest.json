@@ -1,0 +1,11 @@
+{
+  "id": "kids/dropdown/compact/default",
+  "archetypeId": "dropdown",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "2d87fa6d",
+  "generatedAt": "2026-04-26T09:13:56.326Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "listings/comments/cozy/default",
+  "archetypeId": "comments",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "586983e5",
+  "generatedAt": "2026-04-26T09:13:57.799Z"
+}

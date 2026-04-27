@@ -1,0 +1,11 @@
+{
+  "id": "military/sidebar/cozy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "45f2777f",
+  "generatedAt": "2026-04-26T09:14:00.585Z"
+}

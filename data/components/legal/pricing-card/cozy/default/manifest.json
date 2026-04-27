@@ -1,0 +1,11 @@
+{
+  "id": "legal/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6fc7a093",
+  "generatedAt": "2026-04-26T09:13:57.381Z"
+}

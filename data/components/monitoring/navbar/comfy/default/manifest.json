@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/navbar/comfy/default",
+  "archetypeId": "navbar",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7cf4ad98",
+  "generatedAt": "2026-04-26T09:14:01.190Z"
+}

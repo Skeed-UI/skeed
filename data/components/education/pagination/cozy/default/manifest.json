@@ -1,0 +1,11 @@
+{
+  "id": "education/pagination/cozy/default",
+  "archetypeId": "pagination",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "52b8b80a",
+  "generatedAt": "2026-04-26T09:13:51.973Z"
+}

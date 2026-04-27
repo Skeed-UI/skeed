@@ -1,0 +1,11 @@
+{
+  "id": "classic/dropdown/compact/default",
+  "archetypeId": "dropdown",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "dce8994",
+  "generatedAt": "2026-04-26T09:13:51.371Z"
+}

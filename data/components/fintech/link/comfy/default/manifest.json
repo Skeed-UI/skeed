@@ -1,0 +1,11 @@
+{
+  "id": "fintech/link/comfy/default",
+  "archetypeId": "link",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "3f3981fa",
+  "generatedAt": "2026-04-26T09:13:53.326Z"
+}

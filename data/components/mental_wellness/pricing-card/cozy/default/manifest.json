@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "30ec4e5b",
+  "generatedAt": "2026-04-26T09:13:59.675Z"
+}

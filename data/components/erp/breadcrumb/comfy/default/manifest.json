@@ -1,0 +1,11 @@
+{
+  "id": "erp/breadcrumb/comfy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "32fd6f4",
+  "generatedAt": "2026-04-26T09:13:52.260Z"
+}

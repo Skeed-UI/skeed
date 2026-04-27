@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "sales_crm",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "102e146b",
+  "generatedAt": "2026-04-26T09:14:03.367Z"
+}

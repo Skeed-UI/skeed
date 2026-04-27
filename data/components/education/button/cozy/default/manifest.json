@@ -1,0 +1,11 @@
+{
+  "id": "education/button/cozy/default",
+  "archetypeId": "button",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "32bda447",
+  "generatedAt": "2026-04-26T09:13:51.698Z"
+}

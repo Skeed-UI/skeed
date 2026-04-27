@@ -1,0 +1,11 @@
+{
+  "id": "fintech/skeleton/compact/default",
+  "archetypeId": "skeleton",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "53165892",
+  "generatedAt": "2026-04-26T09:13:53.550Z"
+}

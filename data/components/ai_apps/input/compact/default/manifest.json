@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/input/compact/default",
+  "archetypeId": "input",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2988d120",
+  "generatedAt": "2026-04-26T09:13:50.953Z"
+}

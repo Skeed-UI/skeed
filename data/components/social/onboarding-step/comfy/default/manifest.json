@@ -1,0 +1,11 @@
+{
+  "id": "social/onboarding-step/comfy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2095f128",
+  "generatedAt": "2026-04-26T09:14:04.301Z"
+}

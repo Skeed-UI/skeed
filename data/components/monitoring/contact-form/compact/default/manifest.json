@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/contact-form/compact/default",
+  "archetypeId": "contact-form",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5d62ae09",
+  "generatedAt": "2026-04-26T09:14:00.932Z"
+}

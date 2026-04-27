@@ -1,0 +1,11 @@
+{
+  "id": "legal/pagination/cozy/default",
+  "archetypeId": "pagination",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "16624608",
+  "generatedAt": "2026-04-26T09:13:57.326Z"
+}

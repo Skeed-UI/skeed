@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5548e26e",
+  "generatedAt": "2026-04-26T09:13:59.360Z"
+}

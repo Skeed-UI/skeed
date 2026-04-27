@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/command-palette/compact/default",
+  "archetypeId": "command-palette",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "10b0bc8d",
+  "generatedAt": "2026-04-26T09:13:59.321Z"
+}

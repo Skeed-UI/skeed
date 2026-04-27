@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/hero/compact/default",
+  "archetypeId": "hero",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "67c91be8",
+  "generatedAt": "2026-04-26T09:13:59.503Z"
+}

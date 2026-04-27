@@ -1,0 +1,11 @@
+{
+  "id": "social/select/compact/default",
+  "archetypeId": "select",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "78c073ff",
+  "generatedAt": "2026-04-26T09:14:04.381Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "social/radio/cozy/default",
+  "archetypeId": "radio",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1b1bae59",
+  "generatedAt": "2026-04-26T09:14:04.363Z"
+}

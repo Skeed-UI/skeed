@@ -1,0 +1,11 @@
+{
+  "id": "hightech/file-uploader/comfy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5505e230",
+  "generatedAt": "2026-04-26T09:13:55.622Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "listings/badge/comfy/default",
+  "archetypeId": "badge",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "52c83eff",
+  "generatedAt": "2026-04-26T09:13:57.660Z"
+}

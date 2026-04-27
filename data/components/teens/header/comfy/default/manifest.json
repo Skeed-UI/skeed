@@ -1,0 +1,11 @@
+{
+  "id": "teens/header/comfy/default",
+  "archetypeId": "header",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6329cc53",
+  "generatedAt": "2026-04-26T09:14:05.764Z"
+}

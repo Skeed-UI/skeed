@@ -1,0 +1,11 @@
+{
+  "id": "social/label/cozy/default",
+  "archetypeId": "label",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6d150f5e",
+  "generatedAt": "2026-04-26T09:14:04.219Z"
+}

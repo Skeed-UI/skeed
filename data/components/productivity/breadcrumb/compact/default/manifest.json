@@ -1,0 +1,11 @@
+{
+  "id": "productivity/breadcrumb/compact/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1837ba76",
+  "generatedAt": "2026-04-26T09:14:01.603Z"
+}

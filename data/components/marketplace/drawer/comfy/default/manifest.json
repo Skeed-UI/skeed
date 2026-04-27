@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/drawer/comfy/default",
+  "archetypeId": "drawer",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5cb0f86c",
+  "generatedAt": "2026-04-26T09:13:58.603Z"
+}

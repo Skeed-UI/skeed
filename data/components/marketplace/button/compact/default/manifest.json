@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/button/compact/default",
+  "archetypeId": "button",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6e46c0b5",
+  "generatedAt": "2026-04-26T09:13:58.469Z"
+}

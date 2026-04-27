@@ -1,0 +1,11 @@
+{
+  "id": "gov/toast/comfy/default",
+  "archetypeId": "toast",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7b990881",
+  "generatedAt": "2026-04-26T09:13:54.473Z"
+}

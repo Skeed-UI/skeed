@@ -1,0 +1,11 @@
+{
+  "id": "legal/dialog/compact/default",
+  "archetypeId": "dialog",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "895a296",
+  "generatedAt": "2026-04-26T09:13:57.067Z"
+}

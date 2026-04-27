@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/separator/cozy/default",
+  "archetypeId": "separator",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "19260e40",
+  "generatedAt": "2026-04-26T09:13:51.098Z"
+}

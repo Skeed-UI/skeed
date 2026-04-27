@@ -1,0 +1,11 @@
+{
+  "id": "gov/calendar-day/comfy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1d7d5687",
+  "generatedAt": "2026-04-26T09:13:53.842Z"
+}

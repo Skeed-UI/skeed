@@ -1,0 +1,11 @@
+{
+  "id": "military/label/compact/default",
+  "archetypeId": "label",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "14fff251",
+  "generatedAt": "2026-04-26T09:14:00.322Z"
+}

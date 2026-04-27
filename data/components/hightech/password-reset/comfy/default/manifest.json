@@ -1,0 +1,11 @@
+{
+  "id": "hightech/password-reset/comfy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7769d50e",
+  "generatedAt": "2026-04-26T09:13:55.828Z"
+}

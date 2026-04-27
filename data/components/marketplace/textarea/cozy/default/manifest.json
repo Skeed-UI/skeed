@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/textarea/cozy/default",
+  "archetypeId": "textarea",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "52ab8dc",
+  "generatedAt": "2026-04-26T09:13:59.086Z"
+}

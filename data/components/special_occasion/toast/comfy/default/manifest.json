@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/toast/comfy/default",
+  "archetypeId": "toast",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "b87b390",
+  "generatedAt": "2026-04-26T09:14:05.375Z"
+}

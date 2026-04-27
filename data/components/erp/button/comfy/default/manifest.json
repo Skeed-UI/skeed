@@ -1,0 +1,11 @@
+{
+  "id": "erp/button/comfy/default",
+  "archetypeId": "button",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5ce6fa73",
+  "generatedAt": "2026-04-26T09:13:52.267Z"
+}

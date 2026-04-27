@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6d368d00",
+  "generatedAt": "2026-04-26T09:13:59.334Z"
+}

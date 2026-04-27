@@ -1,0 +1,11 @@
+{
+  "id": "health/menu/cozy/default",
+  "archetypeId": "menu",
+  "demographicId": "health",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "266b5c33",
+  "generatedAt": "2026-04-26T09:13:54.971Z"
+}

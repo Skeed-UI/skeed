@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/toast/compact/default",
+  "archetypeId": "toast",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "58ad32b2",
+  "generatedAt": "2026-04-26T09:13:51.208Z"
+}

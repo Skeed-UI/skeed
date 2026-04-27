@@ -1,0 +1,11 @@
+{
+  "id": "teens/popover/cozy/default",
+  "archetypeId": "popover",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "131a8375",
+  "generatedAt": "2026-04-26T09:14:05.949Z"
+}

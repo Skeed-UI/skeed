@@ -1,0 +1,11 @@
+{
+  "id": "teens/calendar-day/cozy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "55d4c52f",
+  "generatedAt": "2026-04-26T09:14:05.496Z"
+}

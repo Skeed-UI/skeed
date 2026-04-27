@@ -1,0 +1,11 @@
+{
+  "id": "social/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4a04f910",
+  "generatedAt": "2026-04-26T09:14:04.337Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "religious/skeleton/cozy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1b32e16f",
+  "generatedAt": "2026-04-26T09:14:02.911Z"
+}

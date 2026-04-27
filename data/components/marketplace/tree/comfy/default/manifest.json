@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/tree/comfy/default",
+  "archetypeId": "tree",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1bde5704",
+  "generatedAt": "2026-04-26T09:13:59.132Z"
+}

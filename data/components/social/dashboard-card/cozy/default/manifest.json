@@ -1,0 +1,11 @@
+{
+  "id": "social/dashboard-card/cozy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "30517e7f",
+  "generatedAt": "2026-04-26T09:14:04.037Z"
+}

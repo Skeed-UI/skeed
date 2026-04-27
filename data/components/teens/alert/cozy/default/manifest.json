@@ -1,0 +1,11 @@
+{
+  "id": "teens/alert/cozy/default",
+  "archetypeId": "alert",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2b52cdc5",
+  "generatedAt": "2026-04-26T09:14:05.417Z"
+}

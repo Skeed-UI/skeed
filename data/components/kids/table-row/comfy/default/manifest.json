@@ -1,0 +1,11 @@
+{
+  "id": "kids/table-row/comfy/default",
+  "archetypeId": "table-row",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "5df72ebf",
+  "generatedAt": "2026-04-26T09:13:56.753Z"
+}

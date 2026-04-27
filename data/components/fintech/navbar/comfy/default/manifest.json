@@ -1,0 +1,11 @@
+{
+  "id": "fintech/navbar/comfy/default",
+  "archetypeId": "navbar",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "26abbdcf",
+  "generatedAt": "2026-04-26T09:13:53.378Z"
+}

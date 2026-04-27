@@ -1,0 +1,11 @@
+{
+  "id": "military/radio/compact/default",
+  "archetypeId": "radio",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1f23d71a",
+  "generatedAt": "2026-04-26T09:14:00.532Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "erp/badge/compact/default",
+  "archetypeId": "badge",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "84252e8",
+  "generatedAt": "2026-04-26T09:13:52.236Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/comments/cozy/default",
+  "archetypeId": "comments",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "39bd9492",
+  "generatedAt": "2026-04-26T09:13:53.928Z"
+}

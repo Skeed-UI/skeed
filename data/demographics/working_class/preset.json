@@ -165,5 +165,52 @@
       "error": "That didn't work. Give it another try.",
       "empty": "Nothing here yet. Ready when you are."
     }
+  },
+  "formIntelligence": {
+    "validationStyle": "adaptive",
+    "suggestionMode": "conservative",
+    "groupingStrategy": "functional",
+    "progressiveDisclosure": "conditional",
+    "smartDefaults": {
+      "country": "geo-ip",
+      "language": "browser",
+      "timezone": "browser"
+    },
+    "correctionTypes": ["typo", "format"],
+    "voice": {
+      "validation": "practical and clear",
+      "suggestion": "helpful hints",
+      "success": "encouraging"
+    }
+  },
+  "form": {
+    "input": {
+      "radius": "0.5rem"
+    },
+    "focus": {
+      "ring": "0 0 0 3px rgba(249, 115, 22, 0.2)"
+    },
+    "state": {
+      "error": {
+        "color": "#EF4444"
+      },
+      "success": {
+        "color": "#22C55E"
+      },
+      "warning": {
+        "color": "#F59E0B"
+      }
+    },
+    "suggestion": {
+      "background": "#FFF7ED",
+      "text": "#78716C"
+    },
+    "group": {
+      "spacing": "1rem",
+      "border": "1px solid #E7E5E4"
+    },
+    "transition": {
+      "duration": "150ms"
+    }
   }
 }

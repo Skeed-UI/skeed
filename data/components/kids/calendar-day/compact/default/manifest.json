@@ -1,0 +1,11 @@
+{
+  "id": "kids/calendar-day/compact/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "5e40f3f9",
+  "generatedAt": "2026-04-26T09:13:56.191Z"
+}

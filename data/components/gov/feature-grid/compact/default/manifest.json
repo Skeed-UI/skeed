@@ -1,0 +1,11 @@
+{
+  "id": "gov/feature-grid/compact/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "492f0a1e",
+  "generatedAt": "2026-04-26T09:13:54.035Z"
+}

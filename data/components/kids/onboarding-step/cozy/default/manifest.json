@@ -1,0 +1,11 @@
+{
+  "id": "kids/onboarding-step/cozy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "49824ae2",
+  "generatedAt": "2026-04-26T09:13:56.539Z"
+}

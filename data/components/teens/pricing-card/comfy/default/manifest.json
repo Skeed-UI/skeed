@@ -1,0 +1,11 @@
+{
+  "id": "teens/pricing-card/comfy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "58cecc69",
+  "generatedAt": "2026-04-26T09:14:05.967Z"
+}

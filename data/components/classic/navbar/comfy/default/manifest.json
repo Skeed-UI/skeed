@@ -1,0 +1,11 @@
+{
+  "id": "classic/navbar/comfy/default",
+  "archetypeId": "navbar",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2e097a3b",
+  "generatedAt": "2026-04-26T09:13:51.495Z"
+}

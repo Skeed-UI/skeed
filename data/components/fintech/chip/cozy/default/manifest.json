@@ -1,0 +1,11 @@
+{
+  "id": "fintech/chip/cozy/default",
+  "archetypeId": "chip",
+  "demographicId": "fintech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "56656b59",
+  "generatedAt": "2026-04-26T09:13:53.139Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/password-reset/compact/default",
+  "archetypeId": "password-reset",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1a6e3b12",
+  "generatedAt": "2026-04-26T09:13:51.041Z"
+}

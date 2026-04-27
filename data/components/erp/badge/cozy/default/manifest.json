@@ -1,0 +1,11 @@
+{
+  "id": "erp/badge/cozy/default",
+  "archetypeId": "badge",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "722bf96",
+  "generatedAt": "2026-04-26T09:13:52.238Z"
+}

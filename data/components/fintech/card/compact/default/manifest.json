@@ -1,0 +1,11 @@
+{
+  "id": "fintech/card/compact/default",
+  "archetypeId": "card",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "54a050f4",
+  "generatedAt": "2026-04-26T09:13:53.115Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "military/comments/comfy/default",
+  "archetypeId": "comments",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "44ddc90c",
+  "generatedAt": "2026-04-26T09:14:00.104Z"
+}

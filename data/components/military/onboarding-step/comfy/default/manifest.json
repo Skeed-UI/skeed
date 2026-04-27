@@ -1,0 +1,11 @@
+{
+  "id": "military/onboarding-step/comfy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5dc3bda2",
+  "generatedAt": "2026-04-26T09:14:00.458Z"
+}

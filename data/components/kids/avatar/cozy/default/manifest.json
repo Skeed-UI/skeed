@@ -1,0 +1,11 @@
+{
+  "id": "kids/avatar/cozy/default",
+  "archetypeId": "avatar",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "5352584a",
+  "generatedAt": "2026-04-26T09:13:56.140Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fintech/header/compact/default",
+  "archetypeId": "header",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "20f5f78d",
+  "generatedAt": "2026-04-26T09:13:53.244Z"
+}

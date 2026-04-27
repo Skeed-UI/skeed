@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/tooltip/compact/default",
+  "archetypeId": "tooltip",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "b598c74",
+  "generatedAt": "2026-04-26T09:13:51.216Z"
+}

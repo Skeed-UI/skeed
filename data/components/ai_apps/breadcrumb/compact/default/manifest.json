@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/breadcrumb/compact/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "612a9faa",
+  "generatedAt": "2026-04-26T09:13:50.779Z"
+}

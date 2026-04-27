@@ -1,0 +1,11 @@
+{
+  "id": "erp/input/compact/default",
+  "archetypeId": "input",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "740bf33",
+  "generatedAt": "2026-04-26T09:13:52.754Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "productivity/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "2520893",
+  "generatedAt": "2026-04-26T09:14:01.822Z"
+}

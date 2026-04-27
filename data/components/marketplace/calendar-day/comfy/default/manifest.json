@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/calendar-day/comfy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1ece9c7b",
+  "generatedAt": "2026-04-26T09:13:58.487Z"
+}

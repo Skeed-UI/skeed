@@ -1,0 +1,11 @@
+{
+  "id": "gov/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "327bf746",
+  "generatedAt": "2026-04-26T09:13:53.898Z"
+}

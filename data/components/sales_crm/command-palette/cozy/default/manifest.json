@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "sales_crm",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5be9c7d4",
+  "generatedAt": "2026-04-26T09:14:03.246Z"
+}

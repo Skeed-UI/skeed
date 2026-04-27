@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/input/cozy/default",
+  "archetypeId": "input",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "619bc1a2",
+  "generatedAt": "2026-04-26T09:13:50.955Z"
+}

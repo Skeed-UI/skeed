@@ -1,0 +1,11 @@
+{
+  "id": "productivity/popover/comfy/default",
+  "archetypeId": "popover",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1b49a11f",
+  "generatedAt": "2026-04-26T09:14:02.028Z"
+}

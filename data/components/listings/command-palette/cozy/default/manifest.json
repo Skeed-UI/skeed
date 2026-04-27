@@ -1,0 +1,11 @@
+{
+  "id": "listings/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "1a150c92",
+  "generatedAt": "2026-04-26T09:13:57.787Z"
+}

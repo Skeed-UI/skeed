@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/hero/comfy/default",
+  "archetypeId": "hero",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "b9e70ad",
+  "generatedAt": "2026-04-26T09:14:01.073Z"
+}

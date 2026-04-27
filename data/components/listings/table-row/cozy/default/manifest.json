@@ -1,0 +1,11 @@
+{
+  "id": "listings/table-row/cozy/default",
+  "archetypeId": "table-row",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "4f0e7ea7",
+  "generatedAt": "2026-04-26T09:13:58.310Z"
+}

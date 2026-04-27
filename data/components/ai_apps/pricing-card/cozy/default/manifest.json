@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "987f7f7",
+  "generatedAt": "2026-04-26T09:13:51.060Z"
+}

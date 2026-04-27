@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/dropdown/comfy/default",
+  "archetypeId": "dropdown",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7f6acf3b",
+  "generatedAt": "2026-04-26T09:13:50.881Z"
+}

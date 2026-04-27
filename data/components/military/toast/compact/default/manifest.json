@@ -1,0 +1,11 @@
+{
+  "id": "military/toast/compact/default",
+  "archetypeId": "toast",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4fdc0130",
+  "generatedAt": "2026-04-26T09:14:00.722Z"
+}

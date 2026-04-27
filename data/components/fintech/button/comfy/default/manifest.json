@@ -1,0 +1,11 @@
+{
+  "id": "fintech/button/comfy/default",
+  "archetypeId": "button",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "6f24b8b5",
+  "generatedAt": "2026-04-26T09:13:53.097Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "health/toast/comfy/default",
+  "archetypeId": "toast",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7c18339b",
+  "generatedAt": "2026-04-26T09:13:55.295Z"
+}

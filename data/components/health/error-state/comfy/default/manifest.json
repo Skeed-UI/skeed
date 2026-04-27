@@ -1,0 +1,11 @@
+{
+  "id": "health/error-state/comfy/default",
+  "archetypeId": "error-state",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4b45d808",
+  "generatedAt": "2026-04-26T09:13:54.796Z"
+}

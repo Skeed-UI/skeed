@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/dashboard-card/comfy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4d875ce7",
+  "generatedAt": "2026-04-26T09:14:00.949Z"
+}

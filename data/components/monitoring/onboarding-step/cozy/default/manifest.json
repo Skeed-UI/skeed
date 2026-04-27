@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/onboarding-step/cozy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "23d9456c",
+  "generatedAt": "2026-04-26T09:14:01.198Z"
+}

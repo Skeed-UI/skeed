@@ -1,0 +1,11 @@
+{
+  "id": "teens/tree/cozy/default",
+  "archetypeId": "tree",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "9c2d566",
+  "generatedAt": "2026-04-26T09:14:06.219Z"
+}

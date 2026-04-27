@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/modal/compact/default",
+  "archetypeId": "modal",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "626d3f04",
+  "generatedAt": "2026-04-26T09:13:51.011Z"
+}

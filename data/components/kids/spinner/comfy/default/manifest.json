@@ -1,0 +1,11 @@
+{
+  "id": "kids/spinner/comfy/default",
+  "archetypeId": "spinner",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "132465a",
+  "generatedAt": "2026-04-26T09:13:56.717Z"
+}

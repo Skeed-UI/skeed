@@ -1,0 +1,11 @@
+{
+  "id": "hightech/dashboard-card/comfy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3aa4534c",
+  "generatedAt": "2026-04-26T09:13:55.522Z"
+}

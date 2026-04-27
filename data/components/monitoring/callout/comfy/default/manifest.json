@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/callout/comfy/default",
+  "archetypeId": "callout",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7d80f743",
+  "generatedAt": "2026-04-26T09:14:00.860Z"
+}

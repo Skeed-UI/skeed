@@ -1,0 +1,11 @@
+{
+  "id": "military/input/cozy/default",
+  "archetypeId": "input",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2954e261",
+  "generatedAt": "2026-04-26T09:14:00.287Z"
+}

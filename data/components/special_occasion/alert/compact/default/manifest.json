@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/alert/compact/default",
+  "archetypeId": "alert",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "6957f521",
+  "generatedAt": "2026-04-26T09:14:04.593Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "education/toast/compact/default",
+  "archetypeId": "toast",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1a5c5406",
+  "generatedAt": "2026-04-26T09:13:52.151Z"
+}

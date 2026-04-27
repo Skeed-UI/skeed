@@ -1,0 +1,11 @@
+{
+  "id": "teens/avatar/comfy/default",
+  "archetypeId": "avatar",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "45b70230",
+  "generatedAt": "2026-04-26T09:14:05.442Z"
+}

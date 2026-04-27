@@ -1,0 +1,11 @@
+{
+  "id": "military/kbd/compact/default",
+  "archetypeId": "kbd",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "58cf7bfe",
+  "generatedAt": "2026-04-26T09:14:00.295Z"
+}

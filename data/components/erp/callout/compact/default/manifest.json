@@ -1,0 +1,11 @@
+{
+  "id": "erp/callout/compact/default",
+  "archetypeId": "callout",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "768815c3",
+  "generatedAt": "2026-04-26T09:13:52.280Z"
+}

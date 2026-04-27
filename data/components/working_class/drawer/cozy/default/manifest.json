@@ -1,0 +1,11 @@
+{
+  "id": "working_class/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "working_class",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "30dee678",
+  "generatedAt": "2026-04-26T09:14:06.445Z"
+}

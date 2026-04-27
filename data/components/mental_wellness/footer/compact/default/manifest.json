@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/footer/compact/default",
+  "archetypeId": "footer",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "615332a7",
+  "generatedAt": "2026-04-26T09:13:59.476Z"
+}

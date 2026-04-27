@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/dialog/cozy/default",
+  "archetypeId": "dialog",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1edfd529",
+  "generatedAt": "2026-04-26T09:14:00.956Z"
+}

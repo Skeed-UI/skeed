@@ -1,0 +1,11 @@
+{
+  "id": "social/feature-grid/comfy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7b7b692b",
+  "generatedAt": "2026-04-26T09:14:04.115Z"
+}

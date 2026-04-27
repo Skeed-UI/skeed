@@ -1,0 +1,11 @@
+{
+  "id": "gov/tree/comfy/default",
+  "archetypeId": "tree",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "f012202",
+  "generatedAt": "2026-04-26T09:13:54.499Z"
+}

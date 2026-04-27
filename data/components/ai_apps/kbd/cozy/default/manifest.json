@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1e3fcfa6",
+  "generatedAt": "2026-04-26T09:13:50.962Z"
+}

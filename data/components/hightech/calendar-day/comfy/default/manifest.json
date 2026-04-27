@@ -1,0 +1,11 @@
+{
+  "id": "hightech/calendar-day/comfy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7e36038a",
+  "generatedAt": "2026-04-26T09:13:55.419Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/badge/compact/default",
+  "archetypeId": "badge",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "212f6dc2",
+  "generatedAt": "2026-04-26T09:13:56.893Z"
+}

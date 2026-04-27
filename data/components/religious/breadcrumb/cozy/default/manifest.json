@@ -1,0 +1,11 @@
+{
+  "id": "religious/breadcrumb/cozy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5c1a6871",
+  "generatedAt": "2026-04-26T09:14:02.358Z"
+}

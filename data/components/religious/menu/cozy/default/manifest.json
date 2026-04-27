@@ -1,0 +1,11 @@
+{
+  "id": "religious/menu/cozy/default",
+  "archetypeId": "menu",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "dfa3f3d",
+  "generatedAt": "2026-04-26T09:14:02.735Z"
+}

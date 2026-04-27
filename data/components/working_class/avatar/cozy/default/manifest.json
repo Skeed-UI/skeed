@@ -1,0 +1,11 @@
+{
+  "id": "working_class/avatar/cozy/default",
+  "archetypeId": "avatar",
+  "demographicId": "working_class",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "6aff37fb",
+  "generatedAt": "2026-04-26T09:14:06.266Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "kids/command-palette/compact/default",
+  "archetypeId": "command-palette",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "500f4c4c",
+  "generatedAt": "2026-04-26T09:13:56.259Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "kids/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "842647a",
+  "generatedAt": "2026-04-26T09:13:56.383Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "military/tabs/compact/default",
+  "archetypeId": "tabs",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5b2f0c56",
+  "generatedAt": "2026-04-26T09:14:00.677Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/switch/cozy/default",
+  "archetypeId": "switch",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4de3ae09",
+  "generatedAt": "2026-04-26T09:14:01.405Z"
+}

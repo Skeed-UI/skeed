@@ -1,0 +1,11 @@
+{
+  "id": "fintech/dialog/compact/default",
+  "archetypeId": "dialog",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4789831f",
+  "generatedAt": "2026-04-26T09:13:53.173Z"
+}

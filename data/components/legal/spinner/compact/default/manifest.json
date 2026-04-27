@@ -1,0 +1,11 @@
+{
+  "id": "legal/spinner/compact/default",
+  "archetypeId": "spinner",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7283cd24",
+  "generatedAt": "2026-04-26T09:13:57.489Z"
+}

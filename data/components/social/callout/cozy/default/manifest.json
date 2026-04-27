@@ -1,0 +1,11 @@
+{
+  "id": "social/callout/cozy/default",
+  "archetypeId": "callout",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7cb348d5",
+  "generatedAt": "2026-04-26T09:14:03.951Z"
+}

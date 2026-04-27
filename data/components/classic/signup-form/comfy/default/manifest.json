@@ -1,0 +1,11 @@
+{
+  "id": "classic/signup-form/comfy/default",
+  "archetypeId": "signup-form",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7ed5093d",
+  "generatedAt": "2026-04-26T09:13:51.571Z"
+}

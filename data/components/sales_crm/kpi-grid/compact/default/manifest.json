@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/kpi-grid/compact/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "sales_crm",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "26d3ecd4",
+  "generatedAt": "2026-04-26T09:14:03.438Z"
+}

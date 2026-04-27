@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "6d3f8b94",
+  "generatedAt": "2026-04-26T09:14:05.159Z"
+}

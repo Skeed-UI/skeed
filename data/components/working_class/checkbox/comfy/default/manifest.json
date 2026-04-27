@@ -1,0 +1,11 @@
+{
+  "id": "working_class/checkbox/comfy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "2934d77c",
+  "generatedAt": "2026-04-26T09:14:06.371Z"
+}

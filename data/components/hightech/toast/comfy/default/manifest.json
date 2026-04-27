@@ -1,0 +1,11 @@
+{
+  "id": "hightech/toast/comfy/default",
+  "archetypeId": "toast",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7927c96e",
+  "generatedAt": "2026-04-26T09:13:56.076Z"
+}

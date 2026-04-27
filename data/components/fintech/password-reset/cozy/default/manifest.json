@@ -1,0 +1,11 @@
+{
+  "id": "fintech/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "fintech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "45595ef0",
+  "generatedAt": "2026-04-26T09:13:53.418Z"
+}

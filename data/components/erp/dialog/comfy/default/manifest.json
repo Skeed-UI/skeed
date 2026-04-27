@@ -1,0 +1,11 @@
+{
+  "id": "erp/dialog/comfy/default",
+  "archetypeId": "dialog",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2b8b1ed9",
+  "generatedAt": "2026-04-26T09:13:52.354Z"
+}

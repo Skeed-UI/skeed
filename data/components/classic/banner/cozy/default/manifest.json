@@ -1,0 +1,11 @@
+{
+  "id": "classic/banner/cozy/default",
+  "archetypeId": "banner",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "37054203",
+  "generatedAt": "2026-04-26T09:13:51.269Z"
+}

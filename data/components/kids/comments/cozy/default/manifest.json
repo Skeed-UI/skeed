@@ -1,0 +1,11 @@
+{
+  "id": "kids/comments/cozy/default",
+  "archetypeId": "comments",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "2336304c",
+  "generatedAt": "2026-04-26T09:13:56.274Z"
+}

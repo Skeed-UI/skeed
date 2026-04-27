@@ -1,0 +1,11 @@
+{
+  "id": "social/header/compact/default",
+  "archetypeId": "header",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "71e62bc6",
+  "generatedAt": "2026-04-26T09:14:04.140Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/tree/comfy/default",
+  "archetypeId": "tree",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "57f94e7a",
+  "generatedAt": "2026-04-26T09:14:01.523Z"
+}

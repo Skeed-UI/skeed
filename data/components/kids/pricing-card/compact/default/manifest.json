@@ -1,0 +1,11 @@
+{
+  "id": "kids/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "1f6b5364",
+  "generatedAt": "2026-04-26T09:13:56.586Z"
+}

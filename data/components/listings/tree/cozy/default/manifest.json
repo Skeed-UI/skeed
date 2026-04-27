@@ -1,0 +1,11 @@
+{
+  "id": "listings/tree/cozy/default",
+  "archetypeId": "tree",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "51a3aa6a",
+  "generatedAt": "2026-04-26T09:13:58.385Z"
+}

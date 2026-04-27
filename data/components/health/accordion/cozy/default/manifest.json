@@ -1,0 +1,11 @@
+{
+  "id": "health/accordion/cozy/default",
+  "archetypeId": "accordion",
+  "demographicId": "health",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "333251c3",
+  "generatedAt": "2026-04-26T09:13:54.508Z"
+}

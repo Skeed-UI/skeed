@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/separator/cozy/default",
+  "archetypeId": "separator",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5084b566",
+  "generatedAt": "2026-04-26T09:13:58.927Z"
+}

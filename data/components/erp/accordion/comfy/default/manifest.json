@@ -1,0 +1,11 @@
+{
+  "id": "erp/accordion/comfy/default",
+  "archetypeId": "accordion",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3014135e",
+  "generatedAt": "2026-04-26T09:13:52.199Z"
+}

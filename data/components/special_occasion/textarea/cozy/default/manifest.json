@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/textarea/cozy/default",
+  "archetypeId": "textarea",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "74eadea6",
+  "generatedAt": "2026-04-26T09:14:05.361Z"
+}

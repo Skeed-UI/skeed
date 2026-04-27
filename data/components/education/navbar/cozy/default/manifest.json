@@ -1,0 +1,11 @@
+{
+  "id": "education/navbar/cozy/default",
+  "archetypeId": "navbar",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6ed7a3df",
+  "generatedAt": "2026-04-26T09:13:51.956Z"
+}

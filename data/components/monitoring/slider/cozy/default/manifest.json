@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/slider/cozy/default",
+  "archetypeId": "slider",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "45a882ac",
+  "generatedAt": "2026-04-26T09:14:01.366Z"
+}

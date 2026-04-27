@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/footer/compact/default",
+  "archetypeId": "footer",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4dac1fdb",
+  "generatedAt": "2026-04-26T09:13:50.931Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "social/error-state/comfy/default",
+  "archetypeId": "error-state",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5fbef2b7",
+  "generatedAt": "2026-04-26T09:14:04.094Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "social/dialog/comfy/default",
+  "archetypeId": "dialog",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4c48a263",
+  "generatedAt": "2026-04-26T09:14:04.050Z"
+}

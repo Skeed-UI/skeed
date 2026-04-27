@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/switch/cozy/default",
+  "archetypeId": "switch",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5fb3712f",
+  "generatedAt": "2026-04-26T09:13:59.020Z"
+}

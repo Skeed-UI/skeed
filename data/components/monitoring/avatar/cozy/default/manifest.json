@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/avatar/cozy/default",
+  "archetypeId": "avatar",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6e9c4d40",
+  "generatedAt": "2026-04-26T09:14:00.790Z"
+}

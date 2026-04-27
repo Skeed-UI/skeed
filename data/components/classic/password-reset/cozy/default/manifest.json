@@ -1,0 +1,11 @@
+{
+  "id": "classic/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "46c3b611",
+  "generatedAt": "2026-04-26T09:13:51.512Z"
+}

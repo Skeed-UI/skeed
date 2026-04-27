@@ -1,0 +1,11 @@
+{
+  "id": "working_class/table-row/comfy/default",
+  "archetypeId": "table-row",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "5f58f8ae",
+  "generatedAt": "2026-04-26T09:14:06.876Z"
+}

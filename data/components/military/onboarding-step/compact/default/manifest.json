@@ -1,0 +1,11 @@
+{
+  "id": "military/onboarding-step/compact/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "23e98fce",
+  "generatedAt": "2026-04-26T09:14:00.449Z"
+}

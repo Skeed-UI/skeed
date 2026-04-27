@@ -1,0 +1,11 @@
+{
+  "id": "legal/feature-grid/comfy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2a322b64",
+  "generatedAt": "2026-04-26T09:13:57.147Z"
+}

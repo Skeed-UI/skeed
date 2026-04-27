@@ -1,0 +1,11 @@
+{
+  "id": "teens/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "57f2672e",
+  "generatedAt": "2026-04-26T09:14:06.044Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/calendar-day/compact/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "21cde746",
+  "generatedAt": "2026-04-26T09:13:51.288Z"
+}

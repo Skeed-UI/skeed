@@ -1,0 +1,11 @@
+{
+  "id": "hightech/kpi-grid/comfy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1466276f",
+  "generatedAt": "2026-04-26T09:13:55.701Z"
+}

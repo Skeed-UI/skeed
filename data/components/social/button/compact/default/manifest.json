@@ -1,0 +1,11 @@
+{
+  "id": "social/button/compact/default",
+  "archetypeId": "button",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "57fdda68",
+  "generatedAt": "2026-04-26T09:14:03.925Z"
+}

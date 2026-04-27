@@ -1,0 +1,11 @@
+{
+  "id": "listings/chat-message/comfy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "5b473d72",
+  "generatedAt": "2026-04-26T09:13:57.755Z"
+}

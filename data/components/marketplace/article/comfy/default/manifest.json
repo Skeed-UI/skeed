@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/article/comfy/default",
+  "archetypeId": "article",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3fbd1c18",
+  "generatedAt": "2026-04-26T09:13:58.421Z"
+}

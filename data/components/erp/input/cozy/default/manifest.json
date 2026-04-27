@@ -1,0 +1,11 @@
+{
+  "id": "erp/input/cozy/default",
+  "archetypeId": "input",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7b816f95",
+  "generatedAt": "2026-04-26T09:13:52.757Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "education/progress/cozy/default",
+  "archetypeId": "progress",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1dbad568",
+  "generatedAt": "2026-04-26T09:13:52.007Z"
+}

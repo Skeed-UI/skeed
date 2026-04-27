@@ -1,0 +1,11 @@
+{
+  "id": "legal/kbd/compact/default",
+  "archetypeId": "kbd",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1b716e8f",
+  "generatedAt": "2026-04-26T09:13:57.212Z"
+}

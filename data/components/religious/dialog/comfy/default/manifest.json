@@ -1,0 +1,11 @@
+{
+  "id": "religious/dialog/comfy/default",
+  "archetypeId": "dialog",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "27500a27",
+  "generatedAt": "2026-04-26T09:14:02.513Z"
+}

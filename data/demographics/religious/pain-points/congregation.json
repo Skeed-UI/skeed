@@ -1,0 +1,21 @@
+{
+  "demographic": "religious",
+  "niche": "congregation",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "re1",
+      "description": "Church websites look stuck in 2008 templates.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "re2",
+      "description": "No central hub for events + sermons + giving.",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": []
+    }
+  ]
+}

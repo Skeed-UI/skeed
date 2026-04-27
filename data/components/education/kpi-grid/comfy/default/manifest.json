@@ -1,0 +1,11 @@
+{
+  "id": "education/kpi-grid/comfy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5c864d1c",
+  "generatedAt": "2026-04-26T09:13:51.877Z"
+}

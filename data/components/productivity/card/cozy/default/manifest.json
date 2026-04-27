@@ -1,0 +1,11 @@
+{
+  "id": "productivity/card/cozy/default",
+  "archetypeId": "card",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4c73d3cd",
+  "generatedAt": "2026-04-26T09:14:01.655Z"
+}

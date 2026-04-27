@@ -1,0 +1,52 @@
+{
+  "name": "@skeed/motion",
+  "version": "0.1.0",
+  "description": "Physics-based micro-interactions and environmental effects for React",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react/index.js",
+      "types": "./dist/react/index.d.ts"
+    },
+    "./effects": {
+      "import": "./dist/effects/index.js",
+      "types": "./dist/effects/index.d.ts"
+    },
+    "./environment": {
+      "import": "./dist/environment/index.js",
+      "types": "./dist/environment/index.d.ts"
+    },
+    "./grammar": {
+      "import": "./dist/grammar/types.js",
+      "types": "./dist/grammar/types.d.ts"
+    },
+    "./enterprise": {
+      "import": "./dist/enterprise/index.js",
+      "types": "./dist/enterprise/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@skeed/core": "workspace:*",
+    "@skeed/contracts": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.7.2"
+  },
+  "license": "MIT"
+}

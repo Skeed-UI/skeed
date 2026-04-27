@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/radio/cozy/default",
+  "archetypeId": "radio",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "611da686",
+  "generatedAt": "2026-04-26T09:13:59.698Z"
+}

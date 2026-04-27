@@ -1,0 +1,11 @@
+{
+  "id": "education/banner/cozy/default",
+  "archetypeId": "banner",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6f06bcea",
+  "generatedAt": "2026-04-26T09:13:51.686Z"
+}

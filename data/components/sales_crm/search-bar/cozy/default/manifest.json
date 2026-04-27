@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/search-bar/cozy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "sales_crm",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "49d25b24",
+  "generatedAt": "2026-04-26T09:14:03.627Z"
+}

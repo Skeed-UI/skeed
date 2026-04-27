@@ -1,0 +1,11 @@
+{
+  "id": "classic/navbar/compact/default",
+  "archetypeId": "navbar",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3688e22f",
+  "generatedAt": "2026-04-26T09:13:51.491Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "62c892ad",
+  "generatedAt": "2026-04-26T09:13:54.259Z"
+}

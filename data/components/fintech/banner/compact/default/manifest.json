@@ -1,0 +1,11 @@
+{
+  "id": "fintech/banner/compact/default",
+  "archetypeId": "banner",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "6a77230a",
+  "generatedAt": "2026-04-26T09:13:53.079Z"
+}

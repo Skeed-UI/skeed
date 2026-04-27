@@ -1,0 +1,11 @@
+{
+  "id": "listings/chip/comfy/default",
+  "archetypeId": "chip",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "23a0fe35",
+  "generatedAt": "2026-04-26T09:13:57.779Z"
+}

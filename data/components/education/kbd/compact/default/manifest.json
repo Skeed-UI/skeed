@@ -1,0 +1,11 @@
+{
+  "id": "education/kbd/compact/default",
+  "archetypeId": "kbd",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3de5ec94",
+  "generatedAt": "2026-04-26T09:13:51.865Z"
+}

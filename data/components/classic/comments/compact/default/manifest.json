@@ -1,0 +1,11 @@
+{
+  "id": "classic/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4c98d9e",
+  "generatedAt": "2026-04-26T09:13:51.338Z"
+}

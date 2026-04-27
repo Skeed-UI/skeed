@@ -1,0 +1,11 @@
+{
+  "id": "teens/error-state/comfy/default",
+  "archetypeId": "error-state",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2d7a8ffb",
+  "generatedAt": "2026-04-26T09:14:05.701Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "working_class/tree/comfy/default",
+  "archetypeId": "tree",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "4639cb55",
+  "generatedAt": "2026-04-26T09:14:06.979Z"
+}

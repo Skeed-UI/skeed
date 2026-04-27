@@ -1,0 +1,11 @@
+{
+  "id": "hightech/hero/comfy/default",
+  "archetypeId": "hero",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4303b706",
+  "generatedAt": "2026-04-26T09:13:55.664Z"
+}

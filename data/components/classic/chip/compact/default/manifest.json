@@ -1,0 +1,11 @@
+{
+  "id": "classic/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4b8e7aa5",
+  "generatedAt": "2026-04-26T09:13:51.323Z"
+}

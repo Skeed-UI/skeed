@@ -1,0 +1,11 @@
+{
+  "id": "teens/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "dcc7696",
+  "generatedAt": "2026-04-26T09:14:05.562Z"
+}

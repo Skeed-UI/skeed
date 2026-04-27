@@ -1,0 +1,21 @@
+{
+  "demographic": "teens",
+  "niche": "social",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "te1",
+      "description": "Apps either talk down to teens or pretend they're adults.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "te2",
+      "description": "Tools forget that screen time matters.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    }
+  ]
+}

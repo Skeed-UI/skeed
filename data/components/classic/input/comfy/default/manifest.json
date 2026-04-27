@@ -1,0 +1,11 @@
+{
+  "id": "classic/input/comfy/default",
+  "archetypeId": "input",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "79a220da",
+  "generatedAt": "2026-04-26T09:13:51.438Z"
+}

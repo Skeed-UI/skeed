@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/dropdown/compact/default",
+  "archetypeId": "dropdown",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "23afba4d",
+  "generatedAt": "2026-04-26T09:14:00.974Z"
+}

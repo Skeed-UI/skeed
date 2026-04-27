@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/kpi-grid/comfy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "62a65e49",
+  "generatedAt": "2026-04-26T09:13:59.544Z"
+}

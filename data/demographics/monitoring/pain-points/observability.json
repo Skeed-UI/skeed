@@ -1,0 +1,21 @@
+{
+  "demographic": "monitoring",
+  "niche": "observability",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "mo1",
+      "description": "Alert fatigue from excessive notifications.",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "mo2",
+      "description": "Dashboards tell you what is broken, not why.",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": []
+    }
+  ]
+}

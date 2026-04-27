@@ -1,0 +1,11 @@
+{
+  "id": "listings/callout/cozy/default",
+  "archetypeId": "callout",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "6655f00d",
+  "generatedAt": "2026-04-26T09:13:57.711Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/button/compact/default",
+  "archetypeId": "button",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "37a72b04",
+  "generatedAt": "2026-04-26T09:13:56.932Z"
+}

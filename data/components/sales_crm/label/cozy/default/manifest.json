@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/label/cozy/default",
+  "archetypeId": "label",
+  "demographicId": "sales_crm",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7b5950d8",
+  "generatedAt": "2026-04-26T09:14:03.454Z"
+}

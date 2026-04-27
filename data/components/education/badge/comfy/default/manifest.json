@@ -1,0 +1,11 @@
+{
+  "id": "education/badge/comfy/default",
+  "archetypeId": "badge",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4b96ac68",
+  "generatedAt": "2026-04-26T09:13:51.682Z"
+}

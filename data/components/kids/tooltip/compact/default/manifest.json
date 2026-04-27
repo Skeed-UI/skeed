@@ -1,0 +1,11 @@
+{
+  "id": "kids/tooltip/compact/default",
+  "archetypeId": "tooltip",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "5833a06f",
+  "generatedAt": "2026-04-26T09:13:56.817Z"
+}

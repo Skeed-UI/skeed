@@ -1,0 +1,11 @@
+{
+  "id": "legal/avatar/comfy/default",
+  "archetypeId": "avatar",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "487ee81d",
+  "generatedAt": "2026-04-26T09:13:56.888Z"
+}

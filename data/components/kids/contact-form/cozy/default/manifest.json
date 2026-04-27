@@ -1,0 +1,11 @@
+{
+  "id": "kids/contact-form/cozy/default",
+  "archetypeId": "contact-form",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "715640fc",
+  "generatedAt": "2026-04-26T09:13:56.285Z"
+}

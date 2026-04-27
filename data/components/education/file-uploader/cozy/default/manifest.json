@@ -1,0 +1,11 @@
+{
+  "id": "education/file-uploader/cozy/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3ec01b7a",
+  "generatedAt": "2026-04-26T09:13:51.829Z"
+}

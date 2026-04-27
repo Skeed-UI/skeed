@@ -1,0 +1,11 @@
+{
+  "id": "legal/navbar/comfy/default",
+  "archetypeId": "navbar",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "ea32cc8",
+  "generatedAt": "2026-04-26T09:13:57.308Z"
+}

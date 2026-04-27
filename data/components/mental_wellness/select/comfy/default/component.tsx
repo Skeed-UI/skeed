@@ -1,0 +1,117 @@
+import { type SelectHTMLAttributes, forwardRef, useId } from 'react';
+import { cn } from '@skeed/core/cn';
+
+export interface SelectOption {
+  value: string;
+  label: string;
+  disabled?: boolean;
+}
+
+export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+  label?: string;
+  hint?: string;
+  error?: string;
+  options: SelectOption[];
+  placeholder?: string;
+  fullWidth?: boolean;
+}
+
+const BASE_SELECT_CLASSES =
+  'w-full appearance-none bg-skeed-color-neutral-50 text-skeed-color-neutral-900 ' +
+  'border border-skeed-color-neutral-300 rounded-skeed-radius-2 ' +
+  'px-skeed-density-cozy-padx py-skeed-density-cozy-pady pr-skeed-spacing-9 ' +
+  'font-skeed-body ' +
+  'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 ' +
+  'focus-visible:border-skeed-color-brand-500 ' +
+  'disabled:pointer-events-none disabled:opacity-50 ' +
+  'cursor-pointer';
+
+const ERROR_SELECT_CLASSES =
+  'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
+
+const ChevronDownIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <polyline points="6 9 12 15 18 9" />
+  </svg>
+);
+
+export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
+  {
+    label,
+    hint,
+    error,
+    options,
+    placeholder,
+    fullWidth = false,
+    className,
+    id: idProp,
+    ...rest
+  },
+  ref,
+) {
+  const generatedId = useId();
+  const id = idProp ?? generatedId;
+  const hintId = `${id}-hint`;
+  const errorId = `${id}-error`;
+
+  return (
+    <div className={cn('flex flex-col gap-skeed-spacing-1', fullWidth ? 'w-full' : 'w-auto', className)}>
+      {label && (
+        <label
+          htmlFor={id}
+          className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+        >
+          {label}
+        </label>
+      )}
+      <div className="relative flex items-center">
+        <select
+          ref={ref}
+          id={id}
+          aria-describedby={error ? errorId : hint ? hintId : undefined}
+          aria-invalid={!!error}
+          className={cn(
+            BASE_SELECT_CLASSES,
+            error && ERROR_SELECT_CLASSES,
+          )}
+          {...rest}
+        >
+          {placeholder && (
+            <option value="" disabled>
+              {placeholder}
+            </option>
+          )}
+          {options.map((opt) => (
+            <option key={opt.value} value={opt.value} disabled={opt.disabled}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+        <span className="pointer-events-none absolute right-skeed-spacing-3 flex items-center text-skeed-color-neutral-400">
+          <ChevronDownIcon />
+        </span>
+      </div>
+      {error ? (
+        <p id={errorId} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+          {error}
+        </p>
+      ) : hint ? (
+        <p id={hintId} className="text-sm font-skeed-body text-skeed-color-neutral-500">
+          {hint}
+        </p>
+      ) : null}
+    </div>
+  );
+});

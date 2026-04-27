@@ -1,0 +1,11 @@
+{
+  "id": "religious/progress/compact/default",
+  "archetypeId": "progress",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6e046df8",
+  "generatedAt": "2026-04-26T09:14:02.832Z"
+}

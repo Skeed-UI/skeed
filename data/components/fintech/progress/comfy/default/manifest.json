@@ -1,0 +1,11 @@
+{
+  "id": "fintech/progress/comfy/default",
+  "archetypeId": "progress",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "e0cdaf6",
+  "generatedAt": "2026-04-26T09:13:53.465Z"
+}

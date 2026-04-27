@@ -1,0 +1,11 @@
+{
+  "id": "working_class/drawer/compact/default",
+  "archetypeId": "drawer",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "2b04a4b7",
+  "generatedAt": "2026-04-26T09:14:06.441Z"
+}

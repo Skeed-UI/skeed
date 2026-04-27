@@ -1,0 +1,11 @@
+{
+  "id": "health/skeleton/compact/default",
+  "archetypeId": "skeleton",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "5a308254",
+  "generatedAt": "2026-04-26T09:13:55.176Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "kids/login-form/cozy/default",
+  "archetypeId": "login-form",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "351bb342",
+  "generatedAt": "2026-04-26T09:13:56.494Z"
+}

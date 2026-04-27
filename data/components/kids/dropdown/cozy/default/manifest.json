@@ -1,0 +1,11 @@
+{
+  "id": "kids/dropdown/cozy/default",
+  "archetypeId": "dropdown",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "74f7b2e6",
+  "generatedAt": "2026-04-26T09:13:56.329Z"
+}

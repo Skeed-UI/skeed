@@ -1,0 +1,11 @@
+{
+  "id": "hightech/input/cozy/default",
+  "archetypeId": "input",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "692005a9",
+  "generatedAt": "2026-04-26T09:13:55.673Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hightech/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "156237f0",
+  "generatedAt": "2026-04-26T09:13:56.053Z"
+}

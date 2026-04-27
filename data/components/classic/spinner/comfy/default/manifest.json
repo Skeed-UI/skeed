@@ -1,0 +1,11 @@
+{
+  "id": "classic/spinner/comfy/default",
+  "archetypeId": "spinner",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "56da7acb",
+  "generatedAt": "2026-04-26T09:13:51.589Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fintech/pricing-card/comfy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "76d38f5d",
+  "generatedAt": "2026-04-26T09:13:53.453Z"
+}

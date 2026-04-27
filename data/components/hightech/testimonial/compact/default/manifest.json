@@ -1,0 +1,11 @@
+{
+  "id": "hightech/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "401e0605",
+  "generatedAt": "2026-04-26T09:13:56.046Z"
+}

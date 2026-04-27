@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "sales_crm",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "59eaaee7",
+  "generatedAt": "2026-04-26T09:14:03.213Z"
+}

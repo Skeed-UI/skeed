@@ -1,0 +1,11 @@
+{
+  "id": "social/hero/compact/default",
+  "archetypeId": "hero",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2549999d",
+  "generatedAt": "2026-04-26T09:14:04.154Z"
+}

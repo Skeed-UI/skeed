@@ -1,0 +1,11 @@
+{
+  "id": "education/login-form/cozy/default",
+  "archetypeId": "login-form",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4638f73e",
+  "generatedAt": "2026-04-26T09:13:51.915Z"
+}

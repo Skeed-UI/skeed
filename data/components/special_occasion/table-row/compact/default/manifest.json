@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/table-row/compact/default",
+  "archetypeId": "table-row",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "16ff7c7d",
+  "generatedAt": "2026-04-26T09:14:05.310Z"
+}

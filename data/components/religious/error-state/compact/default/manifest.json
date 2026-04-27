@@ -1,0 +1,11 @@
+{
+  "id": "religious/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3e4eaeef",
+  "generatedAt": "2026-04-26T09:14:02.556Z"
+}

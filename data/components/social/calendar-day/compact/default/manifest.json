@@ -1,0 +1,11 @@
+{
+  "id": "social/calendar-day/compact/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "ba976f3",
+  "generatedAt": "2026-04-26T09:14:03.936Z"
+}

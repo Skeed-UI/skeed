@@ -1,0 +1,11 @@
+{
+  "id": "hightech/avatar/comfy/default",
+  "archetypeId": "avatar",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "44e6c60",
+  "generatedAt": "2026-04-26T09:13:55.362Z"
+}

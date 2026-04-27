@@ -1,0 +1,11 @@
+{
+  "id": "kids/hero/cozy/default",
+  "archetypeId": "hero",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "6c61c69c",
+  "generatedAt": "2026-04-26T09:13:56.419Z"
+}

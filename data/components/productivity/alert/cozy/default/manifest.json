@@ -1,0 +1,11 @@
+{
+  "id": "productivity/alert/cozy/default",
+  "archetypeId": "alert",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1665c96f",
+  "generatedAt": "2026-04-26T09:14:01.545Z"
+}

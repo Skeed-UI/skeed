@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/modal/comfy/default",
+  "archetypeId": "modal",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1f095252",
+  "generatedAt": "2026-04-26T09:14:03.523Z"
+}

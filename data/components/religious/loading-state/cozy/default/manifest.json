@@ -1,0 +1,11 @@
+{
+  "id": "religious/loading-state/cozy/default",
+  "archetypeId": "loading-state",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "2fcd7655",
+  "generatedAt": "2026-04-26T09:14:02.712Z"
+}

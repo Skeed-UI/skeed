@@ -1,0 +1,11 @@
+{
+  "id": "teens/skeleton/cozy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "996f7f",
+  "generatedAt": "2026-04-26T09:14:06.066Z"
+}

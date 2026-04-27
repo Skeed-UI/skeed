@@ -1,0 +1,11 @@
+{
+  "id": "productivity/empty-state/compact/default",
+  "archetypeId": "empty-state",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7e0937b6",
+  "generatedAt": "2026-04-26T09:14:01.774Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/kpi-grid/compact/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "563230c2",
+  "generatedAt": "2026-04-26T09:13:57.223Z"
+}

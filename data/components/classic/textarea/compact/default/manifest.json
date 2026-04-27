@@ -1,0 +1,11 @@
+{
+  "id": "classic/textarea/compact/default",
+  "archetypeId": "textarea",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "325f4b68",
+  "generatedAt": "2026-04-26T09:13:51.629Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/accordion/compact/default",
+  "archetypeId": "accordion",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "1030ad63",
+  "generatedAt": "2026-04-26T09:13:53.726Z"
+}

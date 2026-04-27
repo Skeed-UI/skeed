@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/chip/comfy/default",
+  "archetypeId": "chip",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6eb98ec",
+  "generatedAt": "2026-04-26T09:13:50.830Z"
+}

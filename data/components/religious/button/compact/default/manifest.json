@@ -1,0 +1,11 @@
+{
+  "id": "religious/button/compact/default",
+  "archetypeId": "button",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "558a2fd7",
+  "generatedAt": "2026-04-26T09:14:02.367Z"
+}

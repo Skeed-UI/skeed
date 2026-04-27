@@ -1,0 +1,11 @@
+{
+  "id": "erp/tabs/cozy/default",
+  "archetypeId": "tabs",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "73684941",
+  "generatedAt": "2026-04-26T09:13:52.993Z"
+}

@@ -19,7 +19,21 @@ export const stage_14_5_backend_selector: Stage<PipelineState, PipelineState> = 
     const envVars: { name: string; required: boolean; example?: string }[] = [];
     const apiRoutes: { path: string; template: string }[] = [];
 
-    if (/email|notify|newsletter|waitlist/.test(text)) {
+    const isSpecialOccasion = state.classification?.candidates[0]?.demographic === 'special_occasion';
+    if (isSpecialOccasion || /\brsvp\b|invite|guest list/.test(text)) {
+      stack.push('rsvp-csv-email');
+      npmPackages.push('resend', 'csv-stringify');
+      envVars.push(
+        { name: 'RESEND_API_KEY', required: true, example: 're_xxx' },
+        { name: 'HOST_EMAIL', required: true, example: 'host@example.com' },
+        { name: 'RSVP_DIGEST_CADENCE', required: false, example: 'hourly' },
+      );
+      apiRoutes.push({ path: 'app/api/rsvp/route.ts', template: 'rsvp-csv-email' });
+      apiRoutes.push({ path: 'app/api/rsvp/digest/route.ts', template: 'rsvp-digest' });
+      apiRoutes.push({ path: 'lib/rsvp-store.ts', template: 'rsvp-store-lib' });
+    }
+
+    if (/email|notify|newsletter|waitlist/.test(text) && !stack.includes('rsvp-csv-email')) {
       stack.push('resend');
       npmPackages.push('resend');
       envVars.push({ name: 'RESEND_API_KEY', required: true, example: 're_xxx' });

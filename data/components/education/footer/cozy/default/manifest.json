@@ -1,0 +1,11 @@
+{
+  "id": "education/footer/cozy/default",
+  "archetypeId": "footer",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6e7fca45",
+  "generatedAt": "2026-04-26T09:13:51.837Z"
+}

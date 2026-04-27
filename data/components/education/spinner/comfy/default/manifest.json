@@ -1,0 +1,11 @@
+{
+  "id": "education/spinner/comfy/default",
+  "archetypeId": "spinner",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "43a12efe",
+  "generatedAt": "2026-04-26T09:13:52.079Z"
+}

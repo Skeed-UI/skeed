@@ -1,0 +1,11 @@
+{
+  "id": "religious/faq/cozy/default",
+  "archetypeId": "faq",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "25708867",
+  "generatedAt": "2026-04-26T09:14:02.573Z"
+}

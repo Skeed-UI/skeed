@@ -1,0 +1,11 @@
+{
+  "id": "kids/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "1d84218c",
+  "generatedAt": "2026-04-26T09:13:56.228Z"
+}

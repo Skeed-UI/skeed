@@ -1,0 +1,11 @@
+{
+  "id": "productivity/onboarding-step/compact/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7b1506b8",
+  "generatedAt": "2026-04-26T09:14:01.979Z"
+}

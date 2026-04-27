@@ -1,0 +1,11 @@
+{
+  "id": "religious/alert/cozy/default",
+  "archetypeId": "alert",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "89f284d",
+  "generatedAt": "2026-04-26T09:14:02.291Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/tree/compact/default",
+  "archetypeId": "tree",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "367e6caf",
+  "generatedAt": "2026-04-26T09:13:51.647Z"
+}

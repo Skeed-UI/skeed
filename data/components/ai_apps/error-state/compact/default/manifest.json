@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "67e10a55",
+  "generatedAt": "2026-04-26T09:13:50.892Z"
+}

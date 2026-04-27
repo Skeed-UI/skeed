@@ -1,0 +1,11 @@
+{
+  "id": "gov/badge/comfy/default",
+  "archetypeId": "badge",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "776a9184",
+  "generatedAt": "2026-04-26T09:13:53.787Z"
+}

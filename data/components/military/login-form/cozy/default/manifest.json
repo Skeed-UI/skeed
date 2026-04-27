@@ -1,0 +1,11 @@
+{
+  "id": "military/login-form/cozy/default",
+  "archetypeId": "login-form",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1bfb1f8d",
+  "generatedAt": "2026-04-26T09:14:00.400Z"
+}

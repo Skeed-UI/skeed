@@ -1,0 +1,11 @@
+{
+  "id": "working_class/badge/compact/default",
+  "archetypeId": "badge",
+  "demographicId": "working_class",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "339b5845",
+  "generatedAt": "2026-04-26T09:14:06.274Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "working_class/hero/comfy/default",
+  "archetypeId": "hero",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "62a059ae",
+  "generatedAt": "2026-04-26T09:14:06.552Z"
+}

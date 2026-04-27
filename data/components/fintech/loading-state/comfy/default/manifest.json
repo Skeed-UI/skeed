@@ -1,0 +1,11 @@
+{
+  "id": "fintech/loading-state/comfy/default",
+  "archetypeId": "loading-state",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "64d5f858",
+  "generatedAt": "2026-04-26T09:13:53.336Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/hero/comfy/default",
+  "archetypeId": "hero",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "6197d6e9",
+  "generatedAt": "2026-04-26T09:13:54.092Z"
+}

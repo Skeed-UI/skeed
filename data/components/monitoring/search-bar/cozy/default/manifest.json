@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/search-bar/cozy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "598bd521",
+  "generatedAt": "2026-04-26T09:14:01.288Z"
+}

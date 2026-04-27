@@ -1,0 +1,11 @@
+{
+  "id": "kids/kpi-grid/compact/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "4decadce",
+  "generatedAt": "2026-04-26T09:13:56.447Z"
+}

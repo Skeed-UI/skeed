@@ -1,0 +1,11 @@
+{
+  "id": "teens/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "be8f39",
+  "generatedAt": "2026-04-26T09:14:05.856Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/hero/cozy/default",
+  "archetypeId": "hero",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4edf09",
+  "generatedAt": "2026-04-26T09:13:51.429Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/breadcrumb/comfy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "61e94b07",
+  "generatedAt": "2026-04-26T09:13:56.927Z"
+}

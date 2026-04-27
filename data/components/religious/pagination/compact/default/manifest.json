@@ -1,0 +1,11 @@
+{
+  "id": "religious/pagination/compact/default",
+  "archetypeId": "pagination",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "459ab566",
+  "generatedAt": "2026-04-26T09:14:02.780Z"
+}

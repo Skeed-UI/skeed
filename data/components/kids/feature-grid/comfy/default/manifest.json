@@ -1,0 +1,11 @@
+{
+  "id": "kids/feature-grid/comfy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "551aca34",
+  "generatedAt": "2026-04-26T09:13:56.376Z"
+}

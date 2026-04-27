@@ -1,0 +1,11 @@
+{
+  "id": "listings/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "25ffb60b",
+  "generatedAt": "2026-04-26T09:13:58.049Z"
+}

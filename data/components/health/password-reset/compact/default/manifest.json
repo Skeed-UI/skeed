@@ -1,0 +1,11 @@
+{
+  "id": "health/password-reset/compact/default",
+  "archetypeId": "password-reset",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7d18ace6",
+  "generatedAt": "2026-04-26T09:13:55.028Z"
+}

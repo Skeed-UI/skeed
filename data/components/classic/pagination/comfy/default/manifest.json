@@ -1,0 +1,11 @@
+{
+  "id": "classic/pagination/comfy/default",
+  "archetypeId": "pagination",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "a0f6a32",
+  "generatedAt": "2026-04-26T09:13:51.508Z"
+}

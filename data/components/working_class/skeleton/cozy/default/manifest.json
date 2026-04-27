@@ -1,0 +1,11 @@
+{
+  "id": "working_class/skeleton/cozy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "working_class",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "112181e3",
+  "generatedAt": "2026-04-26T09:14:06.810Z"
+}

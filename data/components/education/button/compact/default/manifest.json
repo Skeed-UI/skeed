@@ -1,0 +1,11 @@
+{
+  "id": "education/button/compact/default",
+  "archetypeId": "button",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4bdfb4d7",
+  "generatedAt": "2026-04-26T09:13:51.696Z"
+}

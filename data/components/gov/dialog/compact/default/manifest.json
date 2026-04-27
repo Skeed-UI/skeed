@@ -1,0 +1,11 @@
+{
+  "id": "gov/dialog/compact/default",
+  "archetypeId": "dialog",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "fc53f1a",
+  "generatedAt": "2026-04-26T09:13:53.963Z"
+}

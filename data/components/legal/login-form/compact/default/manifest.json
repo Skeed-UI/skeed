@@ -1,0 +1,11 @@
+{
+  "id": "legal/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "21917141",
+  "generatedAt": "2026-04-26T09:13:57.267Z"
+}

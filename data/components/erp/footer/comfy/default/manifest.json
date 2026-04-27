@@ -1,0 +1,11 @@
+{
+  "id": "erp/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7481ad19",
+  "generatedAt": "2026-04-26T09:13:52.729Z"
+}

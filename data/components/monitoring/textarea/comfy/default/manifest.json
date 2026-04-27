@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/textarea/comfy/default",
+  "archetypeId": "textarea",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "dc3764f",
+  "generatedAt": "2026-04-26T09:14:01.487Z"
+}

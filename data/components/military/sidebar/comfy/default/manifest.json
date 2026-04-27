@@ -1,0 +1,11 @@
+{
+  "id": "military/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4348684c",
+  "generatedAt": "2026-04-26T09:14:00.589Z"
+}

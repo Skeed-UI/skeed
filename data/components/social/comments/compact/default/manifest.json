@@ -1,0 +1,11 @@
+{
+  "id": "social/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "134a54b",
+  "generatedAt": "2026-04-26T09:14:04.011Z"
+}

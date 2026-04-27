@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/drawer/compact/default",
+  "archetypeId": "drawer",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "268443dd",
+  "generatedAt": "2026-04-26T09:13:50.870Z"
+}

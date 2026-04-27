@@ -1,0 +1,11 @@
+{
+  "id": "social/separator/cozy/default",
+  "archetypeId": "separator",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "45a8dc29",
+  "generatedAt": "2026-04-26T09:14:04.395Z"
+}

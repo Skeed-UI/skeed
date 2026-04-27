@@ -1,0 +1,11 @@
+{
+  "id": "religious/kpi-grid/comfy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "religious",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "54f74481",
+  "generatedAt": "2026-04-26T09:14:02.679Z"
+}

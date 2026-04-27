@@ -1,0 +1,11 @@
+{
+  "id": "religious/search-bar/cozy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "21255348",
+  "generatedAt": "2026-04-26T09:14:02.856Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/skeleton/compact/default",
+  "archetypeId": "skeleton",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3a498b18",
+  "generatedAt": "2026-04-26T09:13:51.125Z"
+}

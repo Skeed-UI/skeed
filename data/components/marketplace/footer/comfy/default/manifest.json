@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "42aba1b4",
+  "generatedAt": "2026-04-26T09:13:58.676Z"
+}

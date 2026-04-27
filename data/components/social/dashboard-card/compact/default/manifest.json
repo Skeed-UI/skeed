@@ -1,0 +1,11 @@
+{
+  "id": "social/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3915f423",
+  "generatedAt": "2026-04-26T09:14:04.032Z"
+}

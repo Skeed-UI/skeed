@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5929b72a",
+  "generatedAt": "2026-04-26T09:13:59.865Z"
+}

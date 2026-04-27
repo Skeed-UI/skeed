@@ -1,0 +1,11 @@
+{
+  "id": "listings/modal/compact/default",
+  "archetypeId": "modal",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "e20de85",
+  "generatedAt": "2026-04-26T09:13:58.074Z"
+}

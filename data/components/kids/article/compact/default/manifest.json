@@ -1,0 +1,11 @@
+{
+  "id": "kids/article/compact/default",
+  "archetypeId": "article",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "36f62264",
+  "generatedAt": "2026-04-26T09:13:56.126Z"
+}

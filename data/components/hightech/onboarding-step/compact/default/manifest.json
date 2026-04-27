@@ -1,0 +1,11 @@
+{
+  "id": "hightech/onboarding-step/compact/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "8547a69",
+  "generatedAt": "2026-04-26T09:13:55.793Z"
+}

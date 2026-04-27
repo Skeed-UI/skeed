@@ -1,0 +1,11 @@
+{
+  "id": "legal/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7771f20f",
+  "generatedAt": "2026-04-26T09:13:57.084Z"
+}

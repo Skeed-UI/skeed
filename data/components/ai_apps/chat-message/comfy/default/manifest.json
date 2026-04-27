@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/chat-message/comfy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2eb18113",
+  "generatedAt": "2026-04-26T09:13:50.817Z"
+}

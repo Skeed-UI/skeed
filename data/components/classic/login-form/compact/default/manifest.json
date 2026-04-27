@@ -1,0 +1,11 @@
+{
+  "id": "classic/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5ac65e10",
+  "generatedAt": "2026-04-26T09:13:51.472Z"
+}

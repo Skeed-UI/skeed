@@ -1,0 +1,11 @@
+{
+  "id": "listings/feature-grid/cozy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "2f3c03dc",
+  "generatedAt": "2026-04-26T09:13:57.907Z"
+}

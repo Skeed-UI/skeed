@@ -1,0 +1,11 @@
+{
+  "id": "fintech/popover/comfy/default",
+  "archetypeId": "popover",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7af963a0",
+  "generatedAt": "2026-04-26T09:13:53.437Z"
+}

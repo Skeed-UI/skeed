@@ -1,0 +1,11 @@
+{
+  "id": "hightech/signup-form/cozy/default",
+  "archetypeId": "signup-form",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6ac05d94",
+  "generatedAt": "2026-04-26T09:13:55.940Z"
+}

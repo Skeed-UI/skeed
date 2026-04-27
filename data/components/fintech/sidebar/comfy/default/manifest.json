@@ -1,0 +1,11 @@
+{
+  "id": "fintech/sidebar/comfy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "8a708c2",
+  "generatedAt": "2026-04-26T09:13:53.531Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "listings/empty-state/comfy/default",
+  "archetypeId": "empty-state",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "17f08e1e",
+  "generatedAt": "2026-04-26T09:13:57.875Z"
+}

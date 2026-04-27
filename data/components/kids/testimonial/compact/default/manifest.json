@@ -1,0 +1,11 @@
+{
+  "id": "kids/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "47595ff3",
+  "generatedAt": "2026-04-26T09:13:56.782Z"
+}

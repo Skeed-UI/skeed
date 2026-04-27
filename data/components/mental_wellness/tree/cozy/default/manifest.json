@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/tree/cozy/default",
+  "archetypeId": "tree",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2b95c0ef",
+  "generatedAt": "2026-04-26T09:13:59.908Z"
+}

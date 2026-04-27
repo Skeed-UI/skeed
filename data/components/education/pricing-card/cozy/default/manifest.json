@@ -1,0 +1,11 @@
+{
+  "id": "education/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "58894211",
+  "generatedAt": "2026-04-26T09:13:52.000Z"
+}

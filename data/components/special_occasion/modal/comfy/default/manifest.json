@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/modal/comfy/default",
+  "archetypeId": "modal",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "5c83a9e2",
+  "generatedAt": "2026-04-26T09:14:05.086Z"
+}

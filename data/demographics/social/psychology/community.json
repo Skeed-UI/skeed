@@ -1,0 +1,21 @@
+{
+  "demographic": "social",
+  "niche": "community",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": [
+    "soft_rounding",
+    "testimonial"
+  ],
+  "motivationPattern": "social",
+  "formality": 1,
+  "noveltyTolerance": 5,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [
+    "urgency_timer"
+  ],
+  "research": {
+    "sources": [],
+    "notes": "Engagement-first; default to fluid layouts that feel native on mobile."
+  }
+}

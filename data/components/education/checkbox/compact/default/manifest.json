@@ -1,0 +1,11 @@
+{
+  "id": "education/checkbox/compact/default",
+  "archetypeId": "checkbox",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "11b9caac",
+  "generatedAt": "2026-04-26T09:13:51.726Z"
+}

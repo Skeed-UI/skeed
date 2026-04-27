@@ -1,0 +1,11 @@
+{
+  "id": "kids/alert/cozy/default",
+  "archetypeId": "alert",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "78a5f9e",
+  "generatedAt": "2026-04-26T09:13:56.118Z"
+}

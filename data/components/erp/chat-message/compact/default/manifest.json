@@ -1,0 +1,11 @@
+{
+  "id": "erp/chat-message/compact/default",
+  "archetypeId": "chat-message",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "58146bab",
+  "generatedAt": "2026-04-26T09:13:52.296Z"
+}

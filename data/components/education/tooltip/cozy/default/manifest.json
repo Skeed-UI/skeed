@@ -1,0 +1,11 @@
+{
+  "id": "education/tooltip/cozy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2627513e",
+  "generatedAt": "2026-04-26T09:13:52.168Z"
+}

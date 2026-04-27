@@ -1,0 +1,11 @@
+{
+  "id": "education/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7bab6711",
+  "generatedAt": "2026-04-26T09:13:51.732Z"
+}

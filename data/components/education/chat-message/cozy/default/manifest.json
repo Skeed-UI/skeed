@@ -1,0 +1,11 @@
+{
+  "id": "education/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4e3a444c",
+  "generatedAt": "2026-04-26T09:13:51.722Z"
+}

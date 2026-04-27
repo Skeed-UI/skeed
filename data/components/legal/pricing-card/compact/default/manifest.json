@@ -1,0 +1,11 @@
+{
+  "id": "legal/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "73101554",
+  "generatedAt": "2026-04-26T09:13:57.378Z"
+}

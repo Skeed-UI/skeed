@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6b9b6371",
+  "generatedAt": "2026-04-26T09:14:01.144Z"
+}

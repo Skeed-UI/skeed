@@ -1,0 +1,11 @@
+{
+  "id": "health/progress/cozy/default",
+  "archetypeId": "progress",
+  "demographicId": "health",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "42c9642f",
+  "generatedAt": "2026-04-26T09:13:55.064Z"
+}

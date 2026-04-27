@@ -1,0 +1,11 @@
+{
+  "id": "legal/pagination/compact/default",
+  "archetypeId": "pagination",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "9f743f9",
+  "generatedAt": "2026-04-26T09:13:57.323Z"
+}

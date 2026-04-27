@@ -173,5 +173,52 @@
       "confirmAction":  "Confirm",
       "cancelAction":   "Cancel"
     }
+  },
+  "formIntelligence": {
+    "validationStyle": "strict",
+    "suggestionMode": "conservative",
+    "groupingStrategy": "functional",
+    "progressiveDisclosure": "conditional",
+    "smartDefaults": {
+      "country": "geo-ip",
+      "language": "browser",
+      "timezone": "browser"
+    },
+    "correctionTypes": ["typo", "format", "semantic"],
+    "voice": {
+      "validation": "security-focused and precise",
+      "suggestion": "format enforcement with examples",
+      "success": "professional confirmation"
+    }
+  },
+  "form": {
+    "input": {
+      "radius": "0.25rem"
+    },
+    "focus": {
+      "ring": "0 0 0 2px rgba(59, 130, 246, 0.15)"
+    },
+    "state": {
+      "error": {
+        "color": "#DC2626"
+      },
+      "success": {
+        "color": "#059669"
+      },
+      "warning": {
+        "color": "#D97706"
+      }
+    },
+    "suggestion": {
+      "background": "#EFF6FF",
+      "text": "#64748B"
+    },
+    "group": {
+      "spacing": "0.75rem",
+      "border": "1px solid #E2E8F0"
+    },
+    "transition": {
+      "duration": "120ms"
+    }
   }
 }

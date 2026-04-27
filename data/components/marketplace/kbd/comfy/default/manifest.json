@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/kbd/comfy/default",
+  "archetypeId": "kbd",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6588db4b",
+  "generatedAt": "2026-04-26T09:13:58.725Z"
+}

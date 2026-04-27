@@ -1,0 +1,11 @@
+{
+  "id": "kids/link/cozy/default",
+  "archetypeId": "link",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "612339ac",
+  "generatedAt": "2026-04-26T09:13:56.472Z"
+}

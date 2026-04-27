@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "1adfaab6",
+  "generatedAt": "2026-04-26T09:14:04.753Z"
+}

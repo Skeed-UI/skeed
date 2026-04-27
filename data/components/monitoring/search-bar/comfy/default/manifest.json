@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/search-bar/comfy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "50b5a2d2",
+  "generatedAt": "2026-04-26T09:14:01.292Z"
+}

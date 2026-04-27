@@ -1,0 +1,11 @@
+{
+  "id": "hightech/spinner/comfy/default",
+  "archetypeId": "spinner",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "32ab682f",
+  "generatedAt": "2026-04-26T09:13:55.981Z"
+}

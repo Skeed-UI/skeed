@@ -1,0 +1,24 @@
+{
+  "demographic": "legal",
+  "niche": "general",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "medium",
+  "trustCuesNeeded": [
+    "institutional_seal",
+    "expert_byline",
+    "compliance_badge",
+    "professional_credentials"
+  ],
+  "motivationPattern": "fear",
+  "formality": 5,
+  "noveltyTolerance": 1,
+  "accessibilityFloor": "AAA",
+  "forbiddenPatterns": [
+    "urgency_timer",
+    "dark_pattern"
+  ],
+  "research": {
+    "sources": [],
+    "notes": "Legal users want gravity + transparency. Plain language. Cite sources."
+  }
+}

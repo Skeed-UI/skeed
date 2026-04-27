@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2728302",
+  "generatedAt": "2026-04-26T09:13:50.839Z"
+}

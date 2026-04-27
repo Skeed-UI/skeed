@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/dropdown/comfy/default",
+  "archetypeId": "dropdown",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1ce9ca62",
+  "generatedAt": "2026-04-26T09:14:03.315Z"
+}

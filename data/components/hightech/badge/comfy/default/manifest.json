@@ -1,0 +1,11 @@
+{
+  "id": "hightech/badge/comfy/default",
+  "archetypeId": "badge",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "450e9f15",
+  "generatedAt": "2026-04-26T09:13:55.373Z"
+}

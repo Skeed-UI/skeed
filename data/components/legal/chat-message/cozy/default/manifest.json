@@ -1,0 +1,11 @@
+{
+  "id": "legal/chat-message/cozy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "131e3f4e",
+  "generatedAt": "2026-04-26T09:13:56.983Z"
+}

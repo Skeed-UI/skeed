@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/avatar/cozy/default",
+  "archetypeId": "avatar",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "cee52a8",
+  "generatedAt": "2026-04-26T09:13:58.429Z"
+}

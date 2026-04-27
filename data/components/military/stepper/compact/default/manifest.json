@@ -1,0 +1,11 @@
+{
+  "id": "military/stepper/compact/default",
+  "archetypeId": "stepper",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "65a9022",
+  "generatedAt": "2026-04-26T09:14:00.644Z"
+}

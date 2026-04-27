@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/search-bar/cozy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "673e7523",
+  "generatedAt": "2026-04-26T09:13:59.709Z"
+}

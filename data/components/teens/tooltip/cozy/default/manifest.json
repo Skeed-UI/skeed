@@ -1,0 +1,11 @@
+{
+  "id": "teens/tooltip/cozy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "65e3055b",
+  "generatedAt": "2026-04-26T09:14:06.206Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/command-palette/compact/default",
+  "archetypeId": "command-palette",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "67211ef1",
+  "generatedAt": "2026-04-26T09:13:50.832Z"
+}

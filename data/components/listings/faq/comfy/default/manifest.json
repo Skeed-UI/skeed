@@ -1,0 +1,11 @@
+{
+  "id": "listings/faq/comfy/default",
+  "archetypeId": "faq",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "162ddc06",
+  "generatedAt": "2026-04-26T09:13:57.899Z"
+}

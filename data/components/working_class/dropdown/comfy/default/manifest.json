@@ -1,0 +1,11 @@
+{
+  "id": "working_class/dropdown/comfy/default",
+  "archetypeId": "dropdown",
+  "demographicId": "working_class",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "35c79c48",
+  "generatedAt": "2026-04-26T09:14:06.459Z"
+}

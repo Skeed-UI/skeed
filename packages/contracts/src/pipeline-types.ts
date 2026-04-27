@@ -163,7 +163,7 @@ export type UserStory = z.infer<typeof UserStory>;
 
 export const LandingCandidate = z.object({
   id: z.string(),
-  archetype: z.enum(['hero-led', 'story-led', 'conversion-focused']),
+  archetype: z.enum(['hero-led', 'story-led', 'conversion-focused', 'event-invitation']),
   layout: LayoutNode,
   preview: z.string(),
 });

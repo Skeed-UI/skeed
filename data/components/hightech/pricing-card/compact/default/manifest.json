@@ -1,0 +1,11 @@
+{
+  "id": "hightech/pricing-card/compact/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4795c144",
+  "generatedAt": "2026-04-26T09:13:55.846Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/breadcrumb/cozy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "29b6503e",
+  "generatedAt": "2026-04-26T09:13:53.810Z"
+}

@@ -29,6 +29,7 @@ export const DemographicId = z.enum([
   'gov',
   'military',
   'productivity',
+  'special_occasion',
 ]);
 export type DemographicId = z.infer<typeof DemographicId>;
 

@@ -1,0 +1,11 @@
+{
+  "id": "listings/contact-form/comfy/default",
+  "archetypeId": "contact-form",
+  "demographicId": "listings",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "44f0c8fa",
+  "generatedAt": "2026-04-26T09:13:57.816Z"
+}

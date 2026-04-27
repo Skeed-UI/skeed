@@ -1,0 +1,11 @@
+{
+  "id": "hightech/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "207104c6",
+  "generatedAt": "2026-04-26T09:13:55.543Z"
+}

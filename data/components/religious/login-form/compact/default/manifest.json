@@ -1,0 +1,11 @@
+{
+  "id": "religious/login-form/compact/default",
+  "archetypeId": "login-form",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3cc1f352",
+  "generatedAt": "2026-04-26T09:14:02.719Z"
+}

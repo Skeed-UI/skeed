@@ -1,0 +1,11 @@
+{
+  "id": "legal/password-reset/compact/default",
+  "archetypeId": "password-reset",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "2c622861",
+  "generatedAt": "2026-04-26T09:13:57.334Z"
+}

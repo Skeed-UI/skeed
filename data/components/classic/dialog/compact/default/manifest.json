@@ -1,0 +1,11 @@
+{
+  "id": "classic/dialog/compact/default",
+  "archetypeId": "dialog",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "25012fbb",
+  "generatedAt": "2026-04-26T09:13:51.358Z"
+}

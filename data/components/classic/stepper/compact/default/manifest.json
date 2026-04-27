@@ -1,0 +1,11 @@
+{
+  "id": "classic/stepper/compact/default",
+  "archetypeId": "stepper",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "31daa764",
+  "generatedAt": "2026-04-26T09:13:51.592Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/progress/compact/default",
+  "archetypeId": "progress",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "9eda365",
+  "generatedAt": "2026-04-26T09:14:05.172Z"
+}

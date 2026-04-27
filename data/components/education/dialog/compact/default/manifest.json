@@ -1,0 +1,11 @@
+{
+  "id": "education/dialog/compact/default",
+  "archetypeId": "dialog",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "665924b1",
+  "generatedAt": "2026-04-26T09:13:51.780Z"
+}

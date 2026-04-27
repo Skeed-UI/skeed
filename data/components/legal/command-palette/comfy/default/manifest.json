@@ -1,0 +1,11 @@
+{
+  "id": "legal/command-palette/comfy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "79f602e",
+  "generatedAt": "2026-04-26T09:13:57.027Z"
+}

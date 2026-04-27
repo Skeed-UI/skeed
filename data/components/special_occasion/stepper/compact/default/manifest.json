@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/stepper/compact/default",
+  "archetypeId": "stepper",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "4dbfdd4d",
+  "generatedAt": "2026-04-26T09:14:05.287Z"
+}

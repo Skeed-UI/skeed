@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/label/compact/default",
+  "archetypeId": "label",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "63d2986d",
+  "generatedAt": "2026-04-26T09:13:50.975Z"
+}

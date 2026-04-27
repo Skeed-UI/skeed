@@ -1,0 +1,11 @@
+{
+  "id": "hightech/switch/compact/default",
+  "archetypeId": "switch",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6caaf69e",
+  "generatedAt": "2026-04-26T09:13:55.999Z"
+}

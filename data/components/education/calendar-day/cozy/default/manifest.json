@@ -1,0 +1,11 @@
+{
+  "id": "education/calendar-day/cozy/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7d4e27b4",
+  "generatedAt": "2026-04-26T09:13:51.704Z"
+}

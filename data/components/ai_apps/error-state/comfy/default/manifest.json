@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/error-state/comfy/default",
+  "archetypeId": "error-state",
+  "demographicId": "ai_apps",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "646a19a0",
+  "generatedAt": "2026-04-26T09:13:50.898Z"
+}

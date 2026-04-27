@@ -1,0 +1,11 @@
+{
+  "id": "military/dashboard-card/comfy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7f31f5e2",
+  "generatedAt": "2026-04-26T09:14:00.131Z"
+}

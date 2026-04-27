@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/tabs/comfy/default",
+  "archetypeId": "tabs",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "fd6b9d6",
+  "generatedAt": "2026-04-26T09:14:05.329Z"
+}

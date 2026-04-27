@@ -1,0 +1,11 @@
+{
+  "id": "erp/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "76cdd064",
+  "generatedAt": "2026-04-26T09:13:52.312Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/dialog/comfy/default",
+  "archetypeId": "dialog",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1304be5c",
+  "generatedAt": "2026-04-26T09:14:00.960Z"
+}

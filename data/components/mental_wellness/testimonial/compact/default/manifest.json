@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "42601b6e",
+  "generatedAt": "2026-04-26T09:13:59.857Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "productivity/kbd/compact/default",
+  "archetypeId": "kbd",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "19d56918",
+  "generatedAt": "2026-04-26T09:14:01.878Z"
+}

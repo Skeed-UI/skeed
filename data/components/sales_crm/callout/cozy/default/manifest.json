@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/callout/cozy/default",
+  "archetypeId": "callout",
+  "demographicId": "sales_crm",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "71819231",
+  "generatedAt": "2026-04-26T09:14:03.191Z"
+}

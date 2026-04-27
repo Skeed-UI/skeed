@@ -1,0 +1,11 @@
+{
+  "id": "social/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1e897b1e",
+  "generatedAt": "2026-04-26T09:14:04.087Z"
+}

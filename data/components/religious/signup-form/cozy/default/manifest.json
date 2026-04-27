@@ -1,0 +1,11 @@
+{
+  "id": "religious/signup-form/cozy/default",
+  "archetypeId": "signup-form",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "5dc7c7aa",
+  "generatedAt": "2026-04-26T09:14:02.899Z"
+}

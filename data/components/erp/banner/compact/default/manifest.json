@@ -1,0 +1,11 @@
+{
+  "id": "erp/banner/compact/default",
+  "archetypeId": "banner",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1fc2d64d",
+  "generatedAt": "2026-04-26T09:13:52.244Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/breadcrumb/compact/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6990db0e",
+  "generatedAt": "2026-04-26T09:13:51.274Z"
+}

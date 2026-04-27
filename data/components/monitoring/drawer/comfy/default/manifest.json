@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/drawer/comfy/default",
+  "archetypeId": "drawer",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5dd121ea",
+  "generatedAt": "2026-04-26T09:14:00.970Z"
+}

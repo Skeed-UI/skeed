@@ -1,0 +1,11 @@
+{
+  "id": "health/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "health",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "3ed3372a",
+  "generatedAt": "2026-04-26T09:13:55.053Z"
+}

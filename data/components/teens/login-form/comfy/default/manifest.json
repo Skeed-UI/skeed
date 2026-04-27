@@ -1,0 +1,11 @@
+{
+  "id": "teens/login-form/comfy/default",
+  "archetypeId": "login-form",
+  "demographicId": "teens",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "8533bc4",
+  "generatedAt": "2026-04-26T09:14:05.865Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/tag/cozy/default",
+  "archetypeId": "tag",
+  "demographicId": "marketplace",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "72327d71",
+  "generatedAt": "2026-04-26T09:13:59.061Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/tree/compact/default",
+  "archetypeId": "tree",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "22e5fcb0",
+  "generatedAt": "2026-04-26T09:14:01.516Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/footer/compact/default",
+  "archetypeId": "footer",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6b51e208",
+  "generatedAt": "2026-04-26T09:14:01.040Z"
+}

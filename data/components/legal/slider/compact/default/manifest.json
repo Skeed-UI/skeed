@@ -1,0 +1,11 @@
+{
+  "id": "legal/slider/compact/default",
+  "archetypeId": "slider",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5c14061",
+  "generatedAt": "2026-04-26T09:13:57.478Z"
+}

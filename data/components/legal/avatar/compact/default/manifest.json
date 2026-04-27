@@ -1,0 +1,11 @@
+{
+  "id": "legal/avatar/compact/default",
+  "archetypeId": "avatar",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1c13744d",
+  "generatedAt": "2026-04-26T09:13:56.879Z"
+}

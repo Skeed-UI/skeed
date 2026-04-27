@@ -1,0 +1,21 @@
+{
+  "demographic": "classic",
+  "niche": "general",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "cl1",
+      "description": "Generic SaaS landing pages all look the same.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "cl2",
+      "description": "Hard to differentiate without going off-brand.",
+      "severity": 3,
+      "frequency": 4,
+      "evidence": []
+    }
+  ]
+}

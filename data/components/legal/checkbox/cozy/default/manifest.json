@@ -1,0 +1,11 @@
+{
+  "id": "legal/checkbox/cozy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "57c587a8",
+  "generatedAt": "2026-04-26T09:13:56.997Z"
+}

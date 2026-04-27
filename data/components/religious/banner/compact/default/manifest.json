@@ -1,0 +1,11 @@
+{
+  "id": "religious/banner/compact/default",
+  "archetypeId": "banner",
+  "demographicId": "religious",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "21b1f1a6",
+  "generatedAt": "2026-04-26T09:14:02.341Z"
+}

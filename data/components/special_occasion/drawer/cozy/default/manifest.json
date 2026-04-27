@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "2436c76d",
+  "generatedAt": "2026-04-26T09:14:04.840Z"
+}

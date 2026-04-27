@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/pricing-card/cozy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "6deeeff1",
+  "generatedAt": "2026-04-26T09:14:05.163Z"
+}

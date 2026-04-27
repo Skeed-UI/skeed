@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/banner/cozy/default",
+  "archetypeId": "banner",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "544ed660",
+  "generatedAt": "2026-04-26T09:14:00.813Z"
+}

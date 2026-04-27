@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/search-bar/cozy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "10d6de41",
+  "generatedAt": "2026-04-26T09:13:51.083Z"
+}

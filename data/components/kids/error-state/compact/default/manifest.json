@@ -1,0 +1,11 @@
+{
+  "id": "kids/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "4a44bd2",
+  "generatedAt": "2026-04-26T09:13:56.347Z"
+}

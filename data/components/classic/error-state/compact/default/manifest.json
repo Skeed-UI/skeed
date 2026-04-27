@@ -1,0 +1,11 @@
+{
+  "id": "classic/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7601258f",
+  "generatedAt": "2026-04-26T09:13:51.385Z"
+}

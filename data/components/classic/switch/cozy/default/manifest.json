@@ -1,0 +1,11 @@
+{
+  "id": "classic/switch/cozy/default",
+  "archetypeId": "switch",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6e1ca45a",
+  "generatedAt": "2026-04-26T09:13:51.600Z"
+}

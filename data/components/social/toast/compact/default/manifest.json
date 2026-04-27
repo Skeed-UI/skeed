@@ -1,0 +1,11 @@
+{
+  "id": "social/toast/compact/default",
+  "archetypeId": "toast",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3f5afcfb",
+  "generatedAt": "2026-04-26T09:14:04.541Z"
+}

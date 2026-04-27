@@ -1,0 +1,11 @@
+{
+  "id": "gov/faq/comfy/default",
+  "archetypeId": "faq",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7b89817d",
+  "generatedAt": "2026-04-26T09:13:54.030Z"
+}

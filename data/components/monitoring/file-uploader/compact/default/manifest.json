@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/file-uploader/compact/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "76724a53",
+  "generatedAt": "2026-04-26T09:14:01.030Z"
+}

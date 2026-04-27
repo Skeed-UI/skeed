@@ -1,0 +1,11 @@
+{
+  "id": "education/select/compact/default",
+  "archetypeId": "select",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "71163580",
+  "generatedAt": "2026-04-26T09:13:52.028Z"
+}

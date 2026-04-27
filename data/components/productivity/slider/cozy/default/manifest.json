@@ -1,0 +1,11 @@
+{
+  "id": "productivity/slider/cozy/default",
+  "archetypeId": "slider",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "38933ed1",
+  "generatedAt": "2026-04-26T09:14:02.138Z"
+}

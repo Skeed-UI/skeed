@@ -1,0 +1,21 @@
+{
+  "demographic": "military",
+  "niche": "tactical",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "mi1",
+      "description": "Operational tools mix mil-spec vocabulary with consumer chrome.",
+      "severity": 5,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "mi2",
+      "description": "Color cues conflict with night-vision compatibility.",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": []
+    }
+  ]
+}

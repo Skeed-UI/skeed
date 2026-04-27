@@ -1,0 +1,11 @@
+{
+  "id": "productivity/checkbox/comfy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7a191707",
+  "generatedAt": "2026-04-26T09:14:01.681Z"
+}

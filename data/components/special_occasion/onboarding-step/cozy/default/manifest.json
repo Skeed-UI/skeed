@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/onboarding-step/cozy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "5eb14d7e",
+  "generatedAt": "2026-04-26T09:14:05.110Z"
+}

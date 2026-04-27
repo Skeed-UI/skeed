@@ -1,0 +1,11 @@
+{
+  "id": "religious/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "37dd1e98",
+  "generatedAt": "2026-04-26T09:14:02.458Z"
+}

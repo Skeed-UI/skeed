@@ -1,0 +1,11 @@
+{
+  "id": "kids/callout/comfy/default",
+  "archetypeId": "callout",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "1b2570f5",
+  "generatedAt": "2026-04-26T09:13:56.210Z"
+}

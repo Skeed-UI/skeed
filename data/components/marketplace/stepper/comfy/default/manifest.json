@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/stepper/comfy/default",
+  "archetypeId": "stepper",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "6075976f",
+  "generatedAt": "2026-04-26T09:13:59.011Z"
+}

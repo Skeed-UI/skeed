@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/error-state/cozy/default",
+  "archetypeId": "error-state",
+  "demographicId": "mental_wellness",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "10600e53",
+  "generatedAt": "2026-04-26T09:13:59.431Z"
+}

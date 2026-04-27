@@ -1,0 +1,11 @@
+{
+  "id": "kids/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "2687a485",
+  "generatedAt": "2026-04-26T09:13:56.789Z"
+}

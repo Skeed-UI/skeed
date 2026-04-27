@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/label/cozy/default",
+  "archetypeId": "label",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "11769aed",
+  "generatedAt": "2026-04-26T09:14:01.113Z"
+}

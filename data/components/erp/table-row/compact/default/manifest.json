@@ -1,0 +1,11 @@
+{
+  "id": "erp/table-row/compact/default",
+  "archetypeId": "table-row",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "3f589209",
+  "generatedAt": "2026-04-26T09:13:52.984Z"
+}

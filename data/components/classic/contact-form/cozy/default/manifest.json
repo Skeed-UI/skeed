@@ -1,0 +1,11 @@
+{
+  "id": "classic/contact-form/cozy/default",
+  "archetypeId": "contact-form",
+  "demographicId": "classic",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "770dfe97",
+  "generatedAt": "2026-04-26T09:13:51.347Z"
+}

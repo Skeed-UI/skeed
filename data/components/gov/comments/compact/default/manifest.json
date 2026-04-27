@@ -1,0 +1,11 @@
+{
+  "id": "gov/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "3250f5f",
+  "generatedAt": "2026-04-26T09:13:53.923Z"
+}

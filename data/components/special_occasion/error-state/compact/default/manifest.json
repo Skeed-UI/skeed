@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "541d702",
+  "generatedAt": "2026-04-26T09:14:04.875Z"
+}

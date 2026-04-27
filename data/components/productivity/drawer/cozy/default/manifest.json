@@ -1,0 +1,11 @@
+{
+  "id": "productivity/drawer/cozy/default",
+  "archetypeId": "drawer",
+  "demographicId": "productivity",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "30cfa1e0",
+  "generatedAt": "2026-04-26T09:14:01.756Z"
+}

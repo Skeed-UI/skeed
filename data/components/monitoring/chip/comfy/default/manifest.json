@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/chip/comfy/default",
+  "archetypeId": "chip",
+  "demographicId": "monitoring",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "80adcbc",
+  "generatedAt": "2026-04-26T09:14:00.904Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/chip/cozy/default",
+  "archetypeId": "chip",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "222ff013",
+  "generatedAt": "2026-04-26T09:14:04.757Z"
+}

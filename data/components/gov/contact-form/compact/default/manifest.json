@@ -1,0 +1,11 @@
+{
+  "id": "gov/contact-form/compact/default",
+  "archetypeId": "contact-form",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "76dc7517",
+  "generatedAt": "2026-04-26T09:13:53.937Z"
+}

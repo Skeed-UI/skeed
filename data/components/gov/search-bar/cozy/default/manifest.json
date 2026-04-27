@@ -1,0 +1,11 @@
+{
+  "id": "gov/search-bar/cozy/default",
+  "archetypeId": "search-bar",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "78507a8b",
+  "generatedAt": "2026-04-26T09:13:54.292Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/skeleton/comfy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "4dfbf51e",
+  "generatedAt": "2026-04-26T09:13:51.577Z"
+}

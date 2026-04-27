@@ -1,0 +1,11 @@
+{
+  "id": "productivity/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "541e66f8",
+  "generatedAt": "2026-04-26T09:14:01.732Z"
+}

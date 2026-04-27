@@ -1,0 +1,11 @@
+{
+  "id": "fintech/table-row/compact/default",
+  "archetypeId": "table-row",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "222746f4",
+  "generatedAt": "2026-04-26T09:13:53.616Z"
+}

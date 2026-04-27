@@ -1,0 +1,11 @@
+{
+  "id": "health/toast/compact/default",
+  "archetypeId": "toast",
+  "demographicId": "health",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "6a1e9886",
+  "generatedAt": "2026-04-26T09:13:55.288Z"
+}

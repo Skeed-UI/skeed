@@ -1,0 +1,11 @@
+{
+  "id": "gov/navbar/cozy/default",
+  "archetypeId": "navbar",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "d95fd9f",
+  "generatedAt": "2026-04-26T09:13:54.201Z"
+}

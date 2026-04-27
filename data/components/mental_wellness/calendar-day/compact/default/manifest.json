@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/calendar-day/compact/default",
+  "archetypeId": "calendar-day",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "646414a8",
+  "generatedAt": "2026-04-26T09:13:59.241Z"
+}

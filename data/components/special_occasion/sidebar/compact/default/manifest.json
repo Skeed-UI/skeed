@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/sidebar/compact/default",
+  "archetypeId": "sidebar",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "1cb7b5b1",
+  "generatedAt": "2026-04-26T09:14:05.231Z"
+}

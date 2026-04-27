@@ -1,0 +1,11 @@
+{
+  "id": "social/button/comfy/default",
+  "archetypeId": "button",
+  "demographicId": "social",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1bf7b6fd",
+  "generatedAt": "2026-04-26T09:14:03.933Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "social/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "637d7752",
+  "generatedAt": "2026-04-26T09:14:03.990Z"
+}

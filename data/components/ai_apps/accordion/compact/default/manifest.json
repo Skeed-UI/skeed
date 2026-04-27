@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/accordion/compact/default",
+  "archetypeId": "accordion",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "231bd480",
+  "generatedAt": "2026-04-26T09:13:50.735Z"
+}

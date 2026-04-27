@@ -1,0 +1,11 @@
+{
+  "id": "kids/separator/compact/default",
+  "archetypeId": "separator",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "3531f5db",
+  "generatedAt": "2026-04-26T09:13:56.648Z"
+}

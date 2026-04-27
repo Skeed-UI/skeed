@@ -1,0 +1,21 @@
+{
+  "demographic": "listings",
+  "niche": "real-estate",
+  "schemaVersion": 1,
+  "points": [
+    {
+      "id": "ls1",
+      "description": "Listing sites feel cluttered and noisy.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "ls2",
+      "description": "Filters reset on back-navigation.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    }
+  ]
+}

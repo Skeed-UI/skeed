@@ -1,0 +1,11 @@
+{
+  "id": "fintech/chat-message/comfy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "6707e6c2",
+  "generatedAt": "2026-04-26T09:13:53.126Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "legal/password-reset/cozy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1c1203e2",
+  "generatedAt": "2026-04-26T09:13:57.338Z"
+}

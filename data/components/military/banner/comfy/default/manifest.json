@@ -1,0 +1,11 @@
+{
+  "id": "military/banner/comfy/default",
+  "archetypeId": "banner",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "68fddbd6",
+  "generatedAt": "2026-04-26T09:13:59.980Z"
+}

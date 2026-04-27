@@ -1,0 +1,16 @@
+{
+  "demographic": "special_occasion",
+  "niche": "gathering",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": ["soft_rounding"],
+  "motivationPattern": "social",
+  "formality": 2,
+  "noveltyTolerance": 4,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [],
+  "research": {
+    "sources": [],
+    "notes": "Generic gatherings (dinner, game night, housewarming, reunion). Default taste = open_moderate; let the host pick from full taste menu."
+  }
+}

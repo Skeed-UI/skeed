@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/dropdown/compact/default",
+  "archetypeId": "dropdown",
+  "demographicId": "special_occasion",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "6227a91d",
+  "generatedAt": "2026-04-26T09:14:04.848Z"
+}

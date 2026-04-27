@@ -1,0 +1,11 @@
+{
+  "id": "health/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "590ae7dd",
+  "generatedAt": "2026-04-26T09:13:55.272Z"
+}

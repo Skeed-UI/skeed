@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/tabs/compact/default",
+  "archetypeId": "tabs",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "b23a44e",
+  "generatedAt": "2026-04-26T09:13:59.043Z"
+}

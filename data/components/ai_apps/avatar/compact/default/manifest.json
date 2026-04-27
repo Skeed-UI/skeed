@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/avatar/compact/default",
+  "archetypeId": "avatar",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5f49c000",
+  "generatedAt": "2026-04-26T09:13:50.758Z"
+}

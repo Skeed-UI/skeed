@@ -1,0 +1,11 @@
+{
+  "id": "classic/file-uploader/compact/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "35feb234",
+  "generatedAt": "2026-04-26T09:13:51.406Z"
+}

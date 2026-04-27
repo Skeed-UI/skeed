@@ -1,0 +1,11 @@
+{
+  "id": "erp/tooltip/compact/default",
+  "archetypeId": "tooltip",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5c7f5179",
+  "generatedAt": "2026-04-26T09:13:53.029Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "classic/spinner/compact/default",
+  "archetypeId": "spinner",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "449328cb",
+  "generatedAt": "2026-04-26T09:13:51.585Z"
+}

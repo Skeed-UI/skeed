@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/modal/compact/default",
+  "archetypeId": "modal",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2bf35dfe",
+  "generatedAt": "2026-04-26T09:13:59.605Z"
+}

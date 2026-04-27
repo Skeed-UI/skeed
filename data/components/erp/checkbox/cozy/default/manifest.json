@@ -1,0 +1,11 @@
+{
+  "id": "erp/checkbox/cozy/default",
+  "archetypeId": "checkbox",
+  "demographicId": "erp",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4f5d917f",
+  "generatedAt": "2026-04-26T09:13:52.307Z"
+}

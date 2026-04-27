@@ -1,0 +1,11 @@
+{
+  "id": "classic/testimonial/compact/default",
+  "archetypeId": "testimonial",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "757f900c",
+  "generatedAt": "2026-04-26T09:13:51.623Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "social/breadcrumb/compact/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "social",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7909f89f",
+  "generatedAt": "2026-04-26T09:14:03.914Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "kids/kbd/cozy/default",
+  "archetypeId": "kbd",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "38f50eee",
+  "generatedAt": "2026-04-26T09:13:56.440Z"
+}

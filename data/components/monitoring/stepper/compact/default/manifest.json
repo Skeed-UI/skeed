@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/stepper/compact/default",
+  "archetypeId": "stepper",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "51459e7d",
+  "generatedAt": "2026-04-26T09:14:01.388Z"
+}

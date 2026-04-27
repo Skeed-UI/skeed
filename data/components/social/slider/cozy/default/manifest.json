@@ -1,0 +1,11 @@
+{
+  "id": "social/slider/cozy/default",
+  "archetypeId": "slider",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "18830681",
+  "generatedAt": "2026-04-26T09:14:04.440Z"
+}

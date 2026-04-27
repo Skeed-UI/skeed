@@ -1,0 +1,11 @@
+{
+  "id": "military/pricing-card/comfy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7202bd0f",
+  "generatedAt": "2026-04-26T09:14:00.514Z"
+}

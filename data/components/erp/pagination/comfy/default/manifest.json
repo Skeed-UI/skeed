@@ -1,0 +1,11 @@
+{
+  "id": "erp/pagination/comfy/default",
+  "archetypeId": "pagination",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "43cd8b8a",
+  "generatedAt": "2026-04-26T09:13:52.852Z"
+}

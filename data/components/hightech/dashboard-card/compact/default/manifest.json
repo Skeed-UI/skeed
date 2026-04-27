@@ -1,0 +1,11 @@
+{
+  "id": "hightech/dashboard-card/compact/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6e6ef229",
+  "generatedAt": "2026-04-26T09:13:55.515Z"
+}

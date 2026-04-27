@@ -1,0 +1,11 @@
+{
+  "id": "legal/hero/compact/default",
+  "archetypeId": "hero",
+  "demographicId": "legal",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "664c5a59",
+  "generatedAt": "2026-04-26T09:13:57.190Z"
+}

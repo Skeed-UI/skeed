@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/switch/comfy/default",
+  "archetypeId": "switch",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "19b3b5c6",
+  "generatedAt": "2026-04-26T09:13:59.024Z"
+}

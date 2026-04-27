@@ -1,0 +1,11 @@
+{
+  "id": "erp/onboarding-step/comfy/default",
+  "archetypeId": "onboarding-step",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6ee1aace",
+  "generatedAt": "2026-04-26T09:13:52.844Z"
+}

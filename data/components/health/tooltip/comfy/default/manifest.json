@@ -1,0 +1,11 @@
+{
+  "id": "health/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "health",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "675d9e27",
+  "generatedAt": "2026-04-26T09:13:55.306Z"
+}

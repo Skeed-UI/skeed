@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/tooltip/compact/default",
+  "archetypeId": "tooltip",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "1f0c9f26",
+  "generatedAt": "2026-04-26T09:13:59.107Z"
+}

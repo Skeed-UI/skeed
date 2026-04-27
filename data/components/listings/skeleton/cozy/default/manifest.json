@@ -1,0 +1,11 @@
+{
+  "id": "listings/skeleton/cozy/default",
+  "archetypeId": "skeleton",
+  "demographicId": "listings",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "74a52cbb",
+  "generatedAt": "2026-04-26T09:13:58.251Z"
+}

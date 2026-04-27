@@ -1,0 +1,11 @@
+{
+  "id": "education/textarea/cozy/default",
+  "archetypeId": "textarea",
+  "demographicId": "education",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3e4224c6",
+  "generatedAt": "2026-04-26T09:13:52.142Z"
+}

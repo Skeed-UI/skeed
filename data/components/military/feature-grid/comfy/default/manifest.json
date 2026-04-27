@@ -1,0 +1,11 @@
+{
+  "id": "military/feature-grid/comfy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7dd88055",
+  "generatedAt": "2026-04-26T09:14:00.224Z"
+}

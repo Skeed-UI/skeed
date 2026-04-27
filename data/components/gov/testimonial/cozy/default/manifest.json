@@ -1,0 +1,11 @@
+{
+  "id": "gov/testimonial/cozy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "53a1ed5c",
+  "generatedAt": "2026-04-26T09:13:54.444Z"
+}

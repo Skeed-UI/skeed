@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/loading-state/compact/default",
+  "archetypeId": "loading-state",
+  "demographicId": "monitoring",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "928d659",
+  "generatedAt": "2026-04-26T09:14:01.131Z"
+}

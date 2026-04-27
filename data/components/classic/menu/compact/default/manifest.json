@@ -1,0 +1,11 @@
+{
+  "id": "classic/menu/compact/default",
+  "archetypeId": "menu",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "70c7865a",
+  "generatedAt": "2026-04-26T09:13:51.478Z"
+}

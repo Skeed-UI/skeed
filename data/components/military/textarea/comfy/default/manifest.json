@@ -1,0 +1,11 @@
+{
+  "id": "military/textarea/comfy/default",
+  "archetypeId": "textarea",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "5a7d6a86",
+  "generatedAt": "2026-04-26T09:14:00.718Z"
+}

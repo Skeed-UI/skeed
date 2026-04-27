@@ -1,14 +1,18 @@
-import type { Stage } from '@skeed/contracts';
+import type { Stage, StageContext } from '@skeed/contracts';
 import { PipelineState } from './state.js';
 
-/** Stage 08 — Score Gate 2. Passthrough. */
 export const stage_08_gate_2: Stage<PipelineState, PipelineState> = {
   name: '08-gate-2',
-  version: '0.1.0',
+  version: '0.2.0',
   inputSchema: PipelineState,
   outputSchema: PipelineState,
   cacheable: false,
-  async run(state) {
+  async run(state, ctx: StageContext) {
+    ctx.emit({
+      stage: '08-gate-2',
+      type: 'token',
+      data: { kind: 'gate', score: state.scoreL2?.composite ?? 0, passes: state.scoreL2?.passes ?? true },
+    });
     return state;
   },
 };

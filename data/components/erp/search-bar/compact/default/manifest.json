@@ -1,0 +1,11 @@
+{
+  "id": "erp/search-bar/compact/default",
+  "archetypeId": "search-bar",
+  "demographicId": "erp",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "ade088e",
+  "generatedAt": "2026-04-26T09:13:52.898Z"
+}

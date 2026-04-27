@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/feature-grid/cozy/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "6f618e7d",
+  "generatedAt": "2026-04-26T09:13:50.914Z"
+}

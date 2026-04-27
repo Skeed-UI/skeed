@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/avatar/compact/default",
+  "archetypeId": "avatar",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "18abae66",
+  "generatedAt": "2026-04-26T09:13:58.426Z"
+}

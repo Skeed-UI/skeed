@@ -1,0 +1,11 @@
+{
+  "id": "erp/modal/comfy/default",
+  "archetypeId": "modal",
+  "demographicId": "erp",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "6f024f62",
+  "generatedAt": "2026-04-26T09:13:52.828Z"
+}

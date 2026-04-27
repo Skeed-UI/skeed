@@ -1,0 +1,11 @@
+{
+  "id": "productivity/file-uploader/compact/default",
+  "archetypeId": "file-uploader",
+  "demographicId": "productivity",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "4a2c7924",
+  "generatedAt": "2026-04-26T09:14:01.819Z"
+}

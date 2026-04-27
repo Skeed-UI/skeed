@@ -1,0 +1,11 @@
+{
+  "id": "military/password-reset/comfy/default",
+  "archetypeId": "password-reset",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "7d582d1c",
+  "generatedAt": "2026-04-26T09:14:00.485Z"
+}

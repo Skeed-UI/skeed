@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/select/comfy/default",
+  "archetypeId": "select",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7076ace2",
+  "generatedAt": "2026-04-26T09:13:59.722Z"
+}

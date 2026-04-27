@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/popover/compact/default",
+  "archetypeId": "popover",
+  "demographicId": "marketplace",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "56f899f6",
+  "generatedAt": "2026-04-26T09:13:58.852Z"
+}

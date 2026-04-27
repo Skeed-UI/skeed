@@ -1,0 +1,11 @@
+{
+  "id": "military/tag/comfy/default",
+  "archetypeId": "tag",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "765fc12f",
+  "generatedAt": "2026-04-26T09:14:00.695Z"
+}

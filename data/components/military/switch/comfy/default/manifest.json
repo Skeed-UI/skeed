@@ -1,0 +1,11 @@
+{
+  "id": "military/switch/comfy/default",
+  "archetypeId": "switch",
+  "demographicId": "military",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4500c7ad",
+  "generatedAt": "2026-04-26T09:14:00.663Z"
+}

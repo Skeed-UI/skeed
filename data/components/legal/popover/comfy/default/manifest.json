@@ -1,0 +1,11 @@
+{
+  "id": "legal/popover/comfy/default",
+  "archetypeId": "popover",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "19a4c207",
+  "generatedAt": "2026-04-26T09:13:57.374Z"
+}

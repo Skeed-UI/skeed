@@ -1,0 +1,11 @@
+{
+  "id": "hightech/stepper/comfy/default",
+  "archetypeId": "stepper",
+  "demographicId": "hightech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "34afeaa0",
+  "generatedAt": "2026-04-26T09:13:55.995Z"
+}

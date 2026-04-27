@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/popover/comfy/default",
+  "archetypeId": "popover",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "18fad5f6",
+  "generatedAt": "2026-04-26T09:13:59.667Z"
+}

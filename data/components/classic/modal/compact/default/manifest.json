@@ -1,0 +1,11 @@
+{
+  "id": "classic/modal/compact/default",
+  "archetypeId": "modal",
+  "demographicId": "classic",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "2ffbcd60",
+  "generatedAt": "2026-04-26T09:13:51.485Z"
+}

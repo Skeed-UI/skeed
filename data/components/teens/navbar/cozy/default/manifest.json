@@ -1,0 +1,11 @@
+{
+  "id": "teens/navbar/cozy/default",
+  "archetypeId": "navbar",
+  "demographicId": "teens",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "74027e7c",
+  "generatedAt": "2026-04-26T09:14:05.898Z"
+}

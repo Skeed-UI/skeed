@@ -1,0 +1,11 @@
+{
+  "id": "hightech/drawer/compact/default",
+  "archetypeId": "drawer",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "60003448",
+  "generatedAt": "2026-04-26T09:13:55.539Z"
+}

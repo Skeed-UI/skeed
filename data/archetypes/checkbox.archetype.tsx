@@ -1,5 +1,6 @@
 import { type InputHTMLAttributes, forwardRef, useId, useRef, useEffect } from 'react';
 import { cn } from '@skeed/core/cn';
+import { Check, Minus } from '@skeed/asset-icon';
 
 export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
   label: string;
@@ -8,39 +9,6 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
   indeterminate?: boolean;
 }
 
-const CheckIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="12"
-    height="12"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="3"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
-
-const MinusIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="12"
-    height="12"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="3"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <line x1="5" y1="12" x2="19" y2="12" />
-  </svg>
-);
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   {
@@ -92,9 +60,10 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
           className={cn(
             'peer appearance-none h-4 w-4 rounded-skeed-radius-2 border border-skeed-color-neutral-300 ' +
             'bg-skeed-color-neutral-50 cursor-pointer ' +
-            'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
+            'transition-all duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
             'checked:bg-skeed-color-brand-500 checked:border-skeed-color-brand-500 ' +
             'indeterminate:bg-skeed-color-brand-500 indeterminate:border-skeed-color-brand-500 ' +
+            'checked:scale-105 indeterminate:scale-105 ' +
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 focus-visible:ring-offset-2 ' +
             'disabled:pointer-events-none disabled:opacity-50',
             error && 'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500',
@@ -106,9 +75,11 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
           className={cn(
             'pointer-events-none absolute inset-0 flex items-center justify-center text-skeed-color-neutral-50',
             'opacity-0 peer-checked:opacity-100 peer-indeterminate:opacity-100',
+            'transition-all duration-skeed-motion-duration-fast',
+            'scale-75 peer-checked:scale-100 peer-indeterminate:scale-100',
           )}
         >
-          {indeterminate ? <MinusIcon /> : <CheckIcon />}
+          {indeterminate ? <Minus size={12} /> : <Check size={12} />}
         </span>
       </div>
       <div className={cn('flex flex-col gap-skeed-spacing-1', !hasSubLabel && 'self-center')}>
@@ -127,7 +98,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
           </p>
         )}
         {error && (
-          <p id={errorId} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+          <p id={errorId} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600 animate-in fade-in slide-in-from-top-1">
             {error}
           </p>
         )}

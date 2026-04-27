@@ -1,0 +1,11 @@
+{
+  "id": "religious/popover/cozy/default",
+  "archetypeId": "popover",
+  "demographicId": "religious",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7dabd963",
+  "generatedAt": "2026-04-26T09:14:02.811Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/separator/comfy/default",
+  "archetypeId": "separator",
+  "demographicId": "mental_wellness",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "228ddd9c",
+  "generatedAt": "2026-04-26T09:13:59.733Z"
+}

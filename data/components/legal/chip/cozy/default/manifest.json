@@ -1,0 +1,11 @@
+{
+  "id": "legal/chip/cozy/default",
+  "archetypeId": "chip",
+  "demographicId": "legal",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "374ccc4b",
+  "generatedAt": "2026-04-26T09:13:57.011Z"
+}

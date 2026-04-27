@@ -1,0 +1,11 @@
+{
+  "id": "classic/footer/comfy/default",
+  "archetypeId": "footer",
+  "demographicId": "classic",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5985389f",
+  "generatedAt": "2026-04-26T09:13:51.418Z"
+}

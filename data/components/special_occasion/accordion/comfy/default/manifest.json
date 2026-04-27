@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/accordion/comfy/default",
+  "archetypeId": "accordion",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "3581625e",
+  "generatedAt": "2026-04-26T09:14:04.588Z"
+}

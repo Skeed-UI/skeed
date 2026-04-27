@@ -1,0 +1,11 @@
+{
+  "id": "legal/testimonial/comfy/default",
+  "archetypeId": "testimonial",
+  "demographicId": "legal",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "4b9713ad",
+  "generatedAt": "2026-04-26T09:13:57.562Z"
+}

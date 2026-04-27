@@ -1,0 +1,11 @@
+{
+  "id": "kids/feature-grid/compact/default",
+  "archetypeId": "feature-grid",
+  "demographicId": "kids",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "75ec85a2",
+  "generatedAt": "2026-04-26T09:13:56.368Z"
+}

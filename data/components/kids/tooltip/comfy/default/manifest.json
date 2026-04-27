@@ -1,0 +1,11 @@
+{
+  "id": "kids/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "kids",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "3761e501",
+  "generatedAt": "2026-04-26T09:13:56.824Z"
+}

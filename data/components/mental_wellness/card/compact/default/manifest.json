@@ -1,0 +1,11 @@
+{
+  "id": "mental_wellness/card/compact/default",
+  "archetypeId": "card",
+  "demographicId": "mental_wellness",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "7894b1f4",
+  "generatedAt": "2026-04-26T09:13:59.268Z"
+}

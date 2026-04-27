@@ -1,0 +1,11 @@
+{
+  "id": "hightech/toast/compact/default",
+  "archetypeId": "toast",
+  "demographicId": "hightech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1f314247",
+  "generatedAt": "2026-04-26T09:13:56.069Z"
+}

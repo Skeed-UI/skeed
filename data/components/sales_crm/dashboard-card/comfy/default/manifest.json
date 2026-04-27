@@ -1,0 +1,11 @@
+{
+  "id": "sales_crm/dashboard-card/comfy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "sales_crm",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "35c837e2",
+  "generatedAt": "2026-04-26T09:14:03.283Z"
+}

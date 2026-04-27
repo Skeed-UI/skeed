@@ -1,0 +1,11 @@
+{
+  "id": "fintech/search-bar/compact/default",
+  "archetypeId": "search-bar",
+  "demographicId": "fintech",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "57eaa515",
+  "generatedAt": "2026-04-26T09:13:53.482Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/progress/compact/default",
+  "archetypeId": "progress",
+  "demographicId": "ai_apps",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "41f4e20e",
+  "generatedAt": "2026-04-26T09:13:51.065Z"
+}

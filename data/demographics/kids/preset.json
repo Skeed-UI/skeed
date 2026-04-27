@@ -165,5 +165,52 @@
       "loading": "Hang on, almost there...",
       "welcome": "Hi friend! Ready to play?"
     }
+  },
+  "formIntelligence": {
+    "validationStyle": "lenient",
+    "suggestionMode": "aggressive",
+    "groupingStrategy": "semantic",
+    "progressiveDisclosure": "always",
+    "smartDefaults": {
+      "country": "browser",
+      "language": "browser",
+      "timezone": "browser"
+    },
+    "correctionTypes": ["typo"],
+    "voice": {
+      "validation": "playful and encouraging with emojis",
+      "suggestion": "fun hints with celebrations",
+      "success": "exciting with animations"
+    }
+  },
+  "form": {
+    "input": {
+      "radius": "1rem"
+    },
+    "focus": {
+      "ring": "0 0 0 4px rgba(240, 58, 133, 0.3)"
+    },
+    "state": {
+      "error": {
+        "color": "#E62929"
+      },
+      "success": {
+        "color": "#06D6A0"
+      },
+      "warning": {
+        "color": "#E0A41B"
+      }
+    },
+    "suggestion": {
+      "background": "#FFF0F6",
+      "text": "#727A8B"
+    },
+    "group": {
+      "spacing": "1.5rem",
+      "border": "2px solid #FFD9E9"
+    },
+    "transition": {
+      "duration": "320ms"
+    }
   }
 }

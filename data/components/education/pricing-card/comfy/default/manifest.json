@@ -1,0 +1,11 @@
+{
+  "id": "education/pricing-card/comfy/default",
+  "archetypeId": "pricing-card",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "55649d7a",
+  "generatedAt": "2026-04-26T09:13:52.002Z"
+}

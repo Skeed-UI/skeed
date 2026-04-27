@@ -1,0 +1,11 @@
+{
+  "id": "education/radio/comfy/default",
+  "archetypeId": "radio",
+  "demographicId": "education",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "5ea1966f",
+  "generatedAt": "2026-04-26T09:13:52.018Z"
+}

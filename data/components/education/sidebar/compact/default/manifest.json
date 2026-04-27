@@ -1,0 +1,11 @@
+{
+  "id": "education/sidebar/compact/default",
+  "archetypeId": "sidebar",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "1ac2978a",
+  "generatedAt": "2026-04-26T09:13:52.044Z"
+}

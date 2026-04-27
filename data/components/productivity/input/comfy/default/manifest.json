@@ -1,0 +1,11 @@
+{
+  "id": "productivity/input/comfy/default",
+  "archetypeId": "input",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7bcc74e5",
+  "generatedAt": "2026-04-26T09:14:01.874Z"
+}

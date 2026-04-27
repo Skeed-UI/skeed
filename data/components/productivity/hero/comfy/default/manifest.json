@@ -1,0 +1,11 @@
+{
+  "id": "productivity/hero/comfy/default",
+  "archetypeId": "hero",
+  "demographicId": "productivity",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "22fcea2b",
+  "generatedAt": "2026-04-26T09:14:01.862Z"
+}

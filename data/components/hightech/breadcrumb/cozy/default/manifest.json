@@ -1,0 +1,11 @@
+{
+  "id": "hightech/breadcrumb/cozy/default",
+  "archetypeId": "breadcrumb",
+  "demographicId": "hightech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "33f84cb3",
+  "generatedAt": "2026-04-26T09:13:55.393Z"
+}

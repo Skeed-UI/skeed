@@ -1,0 +1,21 @@
+{
+  "demographic": "working_class",
+  "niche": "general",
+  "schemaVersion": 1,
+  "cognitiveLoadTarget": "low",
+  "trustCuesNeeded": [
+    "testimonial",
+    "soft_rounding"
+  ],
+  "motivationPattern": "extrinsic",
+  "formality": 2,
+  "noveltyTolerance": 2,
+  "accessibilityFloor": "AA",
+  "forbiddenPatterns": [
+    "dark_pattern"
+  ],
+  "research": {
+    "sources": [],
+    "notes": "Direct copy. Mobile-first. Avoid jargon. Big tap targets."
+  }
+}

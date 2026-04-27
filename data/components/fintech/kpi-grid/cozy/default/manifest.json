@@ -1,0 +1,11 @@
+{
+  "id": "fintech/kpi-grid/cozy/default",
+  "archetypeId": "kpi-grid",
+  "demographicId": "fintech",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "65abf711",
+  "generatedAt": "2026-04-26T09:13:53.302Z"
+}

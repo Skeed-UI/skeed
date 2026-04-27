@@ -1,0 +1,11 @@
+{
+  "id": "health/sidebar/cozy/default",
+  "archetypeId": "sidebar",
+  "demographicId": "health",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "5e7666fb",
+  "generatedAt": "2026-04-26T09:13:55.157Z"
+}

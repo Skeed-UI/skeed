@@ -1,0 +1,11 @@
+{
+  "id": "gov/chat-message/comfy/default",
+  "archetypeId": "chat-message",
+  "demographicId": "gov",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "194f3bef",
+  "generatedAt": "2026-04-26T09:13:53.881Z"
+}

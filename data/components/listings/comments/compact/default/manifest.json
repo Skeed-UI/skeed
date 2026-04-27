@@ -1,0 +1,11 @@
+{
+  "id": "listings/comments/compact/default",
+  "archetypeId": "comments",
+  "demographicId": "listings",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 146,
+  "contentHash": "69b8a183",
+  "generatedAt": "2026-04-26T09:13:57.795Z"
+}

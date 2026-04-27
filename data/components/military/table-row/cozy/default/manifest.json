@@ -1,0 +1,11 @@
+{
+  "id": "military/table-row/cozy/default",
+  "archetypeId": "table-row",
+  "demographicId": "military",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "736f64b",
+  "generatedAt": "2026-04-26T09:14:00.670Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "military/chip/compact/default",
+  "archetypeId": "chip",
+  "demographicId": "military",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "1c0ab107",
+  "generatedAt": "2026-04-26T09:14:00.066Z"
+}

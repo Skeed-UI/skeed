@@ -1,0 +1,11 @@
+{
+  "id": "social/tabs/cozy/default",
+  "archetypeId": "tabs",
+  "demographicId": "social",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "4580b9c9",
+  "generatedAt": "2026-04-26T09:14:04.495Z"
+}

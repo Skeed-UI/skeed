@@ -1,0 +1,11 @@
+{
+  "id": "fintech/banner/comfy/default",
+  "archetypeId": "banner",
+  "demographicId": "fintech",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "69036b9c",
+  "generatedAt": "2026-04-26T09:13:53.083Z"
+}

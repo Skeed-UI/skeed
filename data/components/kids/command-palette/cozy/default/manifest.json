@@ -1,0 +1,11 @@
+{
+  "id": "kids/command-palette/cozy/default",
+  "archetypeId": "command-palette",
+  "demographicId": "kids",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 114,
+  "contentHash": "60a0d6d9",
+  "generatedAt": "2026-04-26T09:13:56.263Z"
+}

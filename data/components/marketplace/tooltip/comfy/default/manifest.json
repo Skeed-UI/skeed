@@ -1,0 +1,11 @@
+{
+  "id": "marketplace/tooltip/comfy/default",
+  "archetypeId": "tooltip",
+  "demographicId": "marketplace",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "3754697b",
+  "generatedAt": "2026-04-26T09:13:59.115Z"
+}

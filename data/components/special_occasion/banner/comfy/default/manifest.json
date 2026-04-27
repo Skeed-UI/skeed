@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/banner/comfy/default",
+  "archetypeId": "banner",
+  "demographicId": "special_occasion",
+  "density": "comfy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "569927e",
+  "generatedAt": "2026-04-26T09:14:04.654Z"
+}

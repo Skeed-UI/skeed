@@ -1,0 +1,11 @@
+{
+  "id": "teens/error-state/compact/default",
+  "archetypeId": "error-state",
+  "demographicId": "teens",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 147,
+  "contentHash": "7eef75a6",
+  "generatedAt": "2026-04-26T09:14:05.693Z"
+}

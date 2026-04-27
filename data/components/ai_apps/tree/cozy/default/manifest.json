@@ -1,0 +1,11 @@
+{
+  "id": "ai_apps/tree/cozy/default",
+  "archetypeId": "tree",
+  "demographicId": "ai_apps",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "3d8cee0b",
+  "generatedAt": "2026-04-26T09:13:51.224Z"
+}

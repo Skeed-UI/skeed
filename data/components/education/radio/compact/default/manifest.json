@@ -1,0 +1,11 @@
+{
+  "id": "education/radio/compact/default",
+  "archetypeId": "radio",
+  "demographicId": "education",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 151,
+  "contentHash": "20791984",
+  "generatedAt": "2026-04-26T09:13:52.013Z"
+}

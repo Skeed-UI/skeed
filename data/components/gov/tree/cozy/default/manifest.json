@@ -1,0 +1,11 @@
+{
+  "id": "gov/tree/cozy/default",
+  "archetypeId": "tree",
+  "demographicId": "gov",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "7e630cbf",
+  "generatedAt": "2026-04-26T09:13:54.495Z"
+}

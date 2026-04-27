@@ -1,0 +1,11 @@
+{
+  "id": "monitoring/dashboard-card/cozy/default",
+  "archetypeId": "dashboard-card",
+  "demographicId": "monitoring",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 150,
+  "contentHash": "90ea254",
+  "generatedAt": "2026-04-26T09:14:00.946Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "gov/faq/compact/default",
+  "archetypeId": "faq",
+  "demographicId": "gov",
+  "density": "compact",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 120,
+  "contentHash": "23b9e60b",
+  "generatedAt": "2026-04-26T09:13:54.023Z"
+}

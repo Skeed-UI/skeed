@@ -1,0 +1,11 @@
+{
+  "id": "special_occasion/table-row/cozy/default",
+  "archetypeId": "table-row",
+  "demographicId": "special_occasion",
+  "density": "cozy",
+  "variant": "default",
+  "framework": "react",
+  "cssVariableCount": 112,
+  "contentHash": "74f0c8a0",
+  "generatedAt": "2026-04-26T09:14:05.314Z"
+}
