@@ -100,7 +100,7 @@ function parseInstruction(
         parameters[key] = true;
       } else if (value === 'false') {
         parameters[key] = false;
-      } else if (!isNaN(Number(value))) {
+      } else if (!Number.isNaN(Number(value))) {
         parameters[key] = Number(value);
       } else {
         parameters[key] = value;

@@ -166,7 +166,7 @@ export async function generateVariants(
     for (const demographicId of demographics) {
       for (const density of densities) {
         const task = async () => {
-          const taskStart = Date.now();
+          const _taskStart = Date.now();
 
           try {
             // Load preset for this demographic

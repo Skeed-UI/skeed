@@ -50,7 +50,7 @@ export function AmbientEnvironment({
   const spotlightStyle = React.useMemo(() => {
     if (!config.light?.followCursor) return {};
 
-    const inertia = config.light.inertia ?? 0.8;
+    const _inertia = config.light.inertia ?? 0.8;
     const radius = config.light.radius ?? 200;
     const intensity = config.light.intensity ?? 0.3;
 
@@ -82,7 +82,8 @@ export function AmbientEnvironment({
             position: 'absolute',
             inset: 0,
             pointerEvents: 'none',
-            background: `radial-gradient(circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), var(--spotlight-color, rgba(255,255,255,0.1)) 0%, transparent var(--spotlight-radius, 200px))`,
+            background:
+              'radial-gradient(circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), var(--spotlight-color, rgba(255,255,255,0.1)) 0%, transparent var(--spotlight-radius, 200px))',
             opacity: config.light.intensity ?? 0.3,
             transition: 'opacity 0.3s ease',
           }}

@@ -305,7 +305,7 @@ function validateByType(
 /**
  * Get required field message based on demographic
  */
-function getRequiredMessage(fieldType: FieldType, demographic: string): string {
+function getRequiredMessage(_fieldType: FieldType, demographic: string): string {
   const voices = SUGGESTION_VOICES[demographic] || SUGGESTION_VOICES.working_class;
   return voices?.required || 'This field is required';
 }

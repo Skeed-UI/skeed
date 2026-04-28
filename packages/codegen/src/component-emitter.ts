@@ -242,7 +242,7 @@ function generateComponentHeader(
     ` * @density ${density}`,
     ` * @variant ${variant}`,
     ` * @category ${archetype.category}`,
-    ` * @schemaVersion 1`,
+    ' * @schemaVersion 1',
     ` * @generatedAt ${new Date().toISOString()}`,
     ' * ',
     ' * DO NOT EDIT: This file is auto-generated from archetype:',

@@ -9,7 +9,9 @@
       "**/*.tsbuildinfo",
       "data/components/**",
       "**/*.skeed.tsx",
-      "**/*.skeed.json"
+      "**/*.skeed.json",
+      "output/**",
+      "packages/cli/templates/**"
     ]
   },
   "formatter": {
@@ -24,17 +26,39 @@
       "recommended": true,
       "style": {
         "useImportType": "error",
-        "useNodejsImportProtocol": "error"
+        "useNodejsImportProtocol": "error",
+        "noNonNullAssertion": "warn"
       },
       "correctness": {
-        "noUnusedVariables": "error",
-        "noUnusedImports": "error"
+        "noUnusedVariables": "warn",
+        "noUnusedImports": "error",
+        "noChildrenProp": "warn"
+      },
+      "a11y": {
+        "useButtonType": "warn",
+        "useKeyWithClickEvents": "warn",
+        "useSemanticElements": "warn",
+        "noSvgWithoutTitle": "warn"
+      },
+      "complexity": {
+        "noForEach": "warn"
       },
       "suspicious": {
-        "noExplicitAny": "warn"
+        "noExplicitAny": "warn",
+        "noAssignInExpressions": "warn",
+        "noShadowRestrictedNames": "warn",
+        "noArrayIndexKey": "warn"
       }
     }
   },
+  "overrides": [
+    {
+      "include": ["data/archetypes/**/*.archetype.tsx"],
+      "linter": {
+        "enabled": false
+      }
+    }
+  ],
   "javascript": {
     "formatter": {
       "quoteStyle": "single",

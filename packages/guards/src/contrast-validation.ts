@@ -12,7 +12,7 @@ function getLuminance(hex: string): number {
     .match(/.{2}/g)
     ?.map((x) => {
       const v = Number.parseInt(x, 16) / 255;
-      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+      return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
     });
   if (!rgb || rgb.length !== 3) return 0;
   const [r, g, b] = rgb;
@@ -182,7 +182,7 @@ function lightenColor(hex: string, percent: number): string {
   const R = Math.min(255, (num >> 16) + amt);
   const G = Math.min(255, ((num >> 8) & 0x00ff) + amt);
   const B = Math.min(255, (num & 0x0000ff) + amt);
-  return '#' + (0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1);
+  return `#${(0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1)}`;
 }
 
 /**
@@ -194,7 +194,7 @@ function darkenColor(hex: string, percent: number): string {
   const R = Math.max(0, (num >> 16) - amt);
   const G = Math.max(0, ((num >> 8) & 0x00ff) - amt);
   const B = Math.max(0, (num & 0x0000ff) - amt);
-  return '#' + (0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1);
+  return `#${(0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1)}`;
 }
 
 /**

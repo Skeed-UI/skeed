@@ -276,7 +276,7 @@ function getLuminance(hex: string): number {
     .match(/.{2}/g)
     ?.map((x) => {
       const v = Number.parseInt(x, 16) / 255;
-      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+      return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
     });
 
   if (!rgb || rgb.length !== 3) return 0;

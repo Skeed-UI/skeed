@@ -12,7 +12,7 @@ registerEffect(
   'ripple',
   (ctx, params): EffectOutput => {
     const intensity = (params.intensity as number) ?? 0.5;
-    const spread = (params.spread as string) ?? 'outward';
+    const _spread = (params.spread as string) ?? 'outward';
 
     // Scale based on material elasticity
     const scale = 0.95 + (1 - ctx.material.elasticity) * intensity * 0.1;
@@ -64,7 +64,7 @@ registerEffect(
  */
 registerEffect(
   'glow',
-  (ctx, params): EffectOutput => {
+  (_ctx, params): EffectOutput => {
     const color = (params.color as string) ?? 'brand';
     const pulse = (params.pulse as string) ?? 'subtle';
     const intensity = (params.intensity as number) ?? 0.5;
@@ -94,7 +94,7 @@ registerEffect(
   'magnetic',
   (ctx, params): EffectOutput => {
     const strength = (params.strength as number) ?? 0.4;
-    const radius = (params.radius as number) ?? 100;
+    const _radius = (params.radius as number) ?? 100;
 
     // Calculate magnetic pull based on cursor position
     const pullX = (ctx.position.x - 0.5) * strength * 20;
@@ -234,7 +234,7 @@ registerEffect(
   'wind',
   (ctx, params): EffectOutput => {
     const strength = (params.strength as number) ?? 0.4;
-    const direction = params.direction as string | undefined;
+    const _direction = params.direction as string | undefined;
 
     // Use cursor velocity to simulate wind
     const windX = ctx.direction.x * strength * 10;

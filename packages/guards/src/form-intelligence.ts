@@ -216,7 +216,7 @@ function validateGroups(
       if (!fieldToGroups.has(fieldId)) {
         fieldToGroups.set(fieldId, []);
       }
-      fieldToGroups.get(fieldId)!.push(group.id);
+      fieldToGroups.get(fieldId)?.push(group.id);
     }
   }
 

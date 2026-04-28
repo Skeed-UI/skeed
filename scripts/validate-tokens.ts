@@ -5,8 +5,8 @@
  * Used in CI quality gates.
  */
 
-import { readFileSync, readdirSync } from 'fs';
-import { join } from 'path';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import { formatValidationReport, validateTokens } from '@skeed/guards';
 
 const ARCHETYPES_DIR = './data/archetypes';

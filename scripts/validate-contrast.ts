@@ -5,8 +5,8 @@
  * Used in CI quality gates.
  */
 
-import { readFileSync, readdirSync } from 'fs';
-import { join } from 'path';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import { formatContrastResult, validateContrastPairs } from '@skeed/guards';
 
 const DEMOGRAPHICS_DIR = './data/demographics';

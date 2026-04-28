@@ -28,7 +28,7 @@ export function renderLanding(sections: SectionSpec[], ctx: RenderContext): stri
   return `${useClient}export default function HomePage() {
   return (
     <main className="min-h-screen bg-[var(--skeed-bg)] text-[var(--skeed-fg)]">
-${blocks.map((b) => '      ' + b.split('\n').join('\n      ')).join('\n')}
+${blocks.map((b) => `      ${b.split('\n').join('\n      ')}`).join('\n')}
     </main>
   );
 }

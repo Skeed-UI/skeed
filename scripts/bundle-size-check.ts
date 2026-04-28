@@ -5,8 +5,8 @@
  * Ensures generated code stays within acceptable limits.
  */
 
-import { readdirSync, statSync } from 'fs';
-import { join } from 'path';
+import { readdirSync, statSync } from 'node:fs';
+import { join } from 'node:path';
 
 const GENERATED_DIR = './output/generated';
 
@@ -41,7 +41,7 @@ function formatBytes(bytes: number): string {
   const k = 1024;
   const sizes = ['B', 'KB', 'MB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return `${Number.parseFloat((bytes / Math.pow(k, i)).toFixed(2))} ${sizes[i]}`;
+  return `${Number.parseFloat((bytes / k ** i).toFixed(2))} ${sizes[i]}`;
 }
 
 function getCategoryFromPath(filePath: string): keyof typeof SIZE_LIMITS {
@@ -141,7 +141,7 @@ async function checkBundleSizes() {
   console.log(`Exceeded: ${exceededCount}/${results.length}`);
 
   // Summary
-  console.log('\n' + '='.repeat(50));
+  console.log(`\n${'='.repeat(50)}`);
   if (exceededCount > 0) {
     console.log(`❌ Bundle size check FAILED: ${exceededCount} files exceed limits`);
 

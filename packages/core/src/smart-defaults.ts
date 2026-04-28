@@ -54,12 +54,13 @@ async function getDefaults(
 
   for (const [fieldId, source] of Object.entries(sources)) {
     switch (source) {
-      case 'browser':
+      case 'browser': {
         const browserValue = getBrowserDefault(fieldId);
         if (browserValue) {
           defaults[fieldId] = browserValue;
         }
         break;
+      }
 
       case 'geo-ip':
         if (options.geoProvider) {
@@ -75,12 +76,13 @@ async function getDefaults(
         }
         break;
 
-      case 'user-context':
+      case 'user-context': {
         const storedValue = getStoredDefault(fieldId, options.storage);
         if (storedValue) {
           defaults[fieldId] = storedValue;
         }
         break;
+      }
 
       case 'none':
         // No default
@@ -330,10 +332,10 @@ export function getBrowserContext(): BrowserContext {
 function getColorScheme(): 'light' | 'dark' | 'no-preference' {
   if (typeof window === 'undefined') return 'no-preference';
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  if (window.matchMedia?.('(prefers-color-scheme: dark)').matches) {
     return 'dark';
   }
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+  if (window.matchMedia?.('(prefers-color-scheme: light)').matches) {
     return 'light';
   }
   return 'no-preference';

@@ -69,7 +69,7 @@ export function useFormValidation(options: UseFormValidationOptions): UseFormVal
       setErrors((prev) => {
         const next = { ...prev };
         if (result.errors.length > 0) {
-          next[fieldId] = result.errors[0]!.message;
+          next[fieldId] = result.errors[0]?.message ?? '';
         } else {
           delete next[fieldId];
         }
@@ -188,7 +188,7 @@ export function useDebouncedValidation(validateFn: (value: string) => void, dela
  * Hook for field-level validation state
  */
 export function useFieldValidation(
-  fieldId: string,
+  _fieldId: string,
   fieldType: FieldType,
   demographic: string,
   options: { required?: boolean; minLength?: number; maxLength?: number; pattern?: string } = {},
@@ -213,7 +213,7 @@ export function useFieldValidation(
     const result = validationEngine.current.validateField(val, rule, demographic);
 
     if (result.errors.length > 0) {
-      setError(result.errors[0]!.message);
+      setError(result.errors[0]?.message ?? null);
       setSuggestion(
         suggestionEngine.current.getSuggestion(result.errors[0]!, fieldType, demographic),
       );
@@ -247,7 +247,7 @@ export function useFieldValidation(
     const result = validationEngine.current.validateField(value, rule, demographic);
 
     if (result.errors.length > 0) {
-      setError(result.errors[0]!.message);
+      setError(result.errors[0]?.message ?? null);
       setSuggestion(
         suggestionEngine.current.getSuggestion(result.errors[0]!, fieldType, demographic),
       );

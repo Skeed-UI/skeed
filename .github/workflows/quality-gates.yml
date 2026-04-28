@@ -51,6 +51,9 @@ jobs:
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        run: pnpm build
       
       - name: Validate archetype tokens
         run: pnpm validate:tokens
@@ -71,6 +74,9 @@ jobs:
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        run: pnpm build
       
       - name: Validate contrast ratios
         run: pnpm validate:contrast
@@ -91,6 +97,9 @@ jobs:
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        run: pnpm build
       
       - name: Run ethics validation
         run: pnpm validate:ethics
@@ -131,6 +140,9 @@ jobs:
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        run: pnpm build
       
       - name: Run all tests
         run: pnpm test
@@ -151,6 +163,9 @@ jobs:
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        run: pnpm build
       
       - name: Run generation smoke test
         run: pnpm smoke-test

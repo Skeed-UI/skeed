@@ -83,7 +83,7 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
       const envLines = (backend?.envVars ?? []).map((v) => `${v.name}=${v.example ?? ''}`);
       files.push({
         path: '.env.example',
-        contents: envLines.join('\n') + '\n',
+        contents: `${envLines.join('\n')}\n`,
         encoding: 'utf8',
         overwrite: true,
       });
@@ -141,7 +141,7 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
 
     // PII scrub
     const pii = scrubPii(
-      pageBody + ' ' + (state.userStories ?? []).map((s) => s.iWantTo).join(' '),
+      `${pageBody} ${(state.userStories ?? []).map((s) => s.iWantTo).join(' ')}`,
     );
     for (const h of pii.hits) {
       warnings.push(`pii[${h.kind}] detected; consider redacting "${h.value}"`);
@@ -211,7 +211,7 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
 function depsBlock(backend: PipelineState['backendPlan']): string {
   const extra = (backend?.npmPackages ?? []).map((p) => `    "${p}": "*"`);
   if (extra.length === 0) return '';
-  return ',\n' + extra.join(',\n');
+  return `,\n${extra.join(',\n')}`;
 }
 
 function slugify(s: string): string {

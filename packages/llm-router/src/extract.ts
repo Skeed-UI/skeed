@@ -80,7 +80,7 @@ export function extractStructured<T>(
 /** Strip ```json ... ``` (or ``` ... ```) and return inner content. */
 export function stripCodeFences(text: string): string {
   const m = text.match(/```(?:json|javascript|js|ts|typescript)?\s*\n?([\s\S]*?)\n?```/);
-  if (m && m[1]) return m[1].trim();
+  if (m?.[1]) return m[1].trim();
   return text;
 }
 

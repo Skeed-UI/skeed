@@ -75,7 +75,7 @@ async function main(): Promise<void> {
 
   process.stdout.write(`Scaffolded data/demographics/${id}/\n`);
   process.stdout.write(
-    `Next: read AGENTS.md inside that folder, then fill out preset.json + at least one niche.\n`,
+    'Next: read AGENTS.md inside that folder, then fill out preset.json + at least one niche.\n',
   );
 }
 

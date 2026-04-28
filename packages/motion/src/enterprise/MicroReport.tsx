@@ -28,7 +28,7 @@ export function MicroReport({
 
   const [displayValue, setDisplayValue] = React.useState(0);
   const numericValue = typeof value === 'number' ? value : Number.parseFloat(value) || 0;
-  const isNumeric = !isNaN(numericValue);
+  const isNumeric = !Number.isNaN(numericValue);
 
   // Count-up animation
   React.useEffect(() => {
@@ -47,7 +47,7 @@ export function MicroReport({
       const progress = Math.min(elapsed / duration, 1);
 
       // Ease out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
+      const eased = 1 - (1 - progress) ** 3;
       const current = startValue + (numericValue - startValue) * eased;
 
       setDisplayValue(current);

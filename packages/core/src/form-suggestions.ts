@@ -175,7 +175,7 @@ function getSuggestion(
 
   // Apply demographic-specific voice
   const demographicPatterns = DEMOGRAPHIC_SUGGESTION_PATTERNS[demographic];
-  if (demographicPatterns && demographicPatterns[fieldType]) {
+  if (demographicPatterns?.[fieldType]) {
     const fieldSuggestions = demographicPatterns[fieldType];
     if (fieldSuggestions.length > 0) {
       // Return the first matching suggestion for this field type
@@ -210,7 +210,7 @@ function getSuggestionsForField(
 
   // Get demographic-specific patterns
   const demographicPatterns = DEMOGRAPHIC_SUGGESTION_PATTERNS[demographic];
-  if (demographicPatterns && demographicPatterns[fieldType]) {
+  if (demographicPatterns?.[fieldType]) {
     suggestions.push(...demographicPatterns[fieldType]);
   }
 

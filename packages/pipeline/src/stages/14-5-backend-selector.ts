@@ -13,13 +13,10 @@ export const stage_14_5_backend_selector: Stage<PipelineState, PipelineState> = 
   cacheable: true,
   async run(state) {
     const stories = state.userStories ?? [];
-    const text =
-      stories
-        .map((s) => `${s.iWantTo} ${s.soThat}`)
-        .join(' ')
-        .toLowerCase() +
-      ' ' +
-      state.prompt.toLowerCase();
+    const text = `${stories
+      .map((s) => `${s.iWantTo} ${s.soThat}`)
+      .join(' ')
+      .toLowerCase()} ${state.prompt.toLowerCase()}`;
     const stack: string[] = [];
     const npmPackages: string[] = [];
     const envVars: { name: string; required: boolean; example?: string }[] = [];

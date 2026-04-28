@@ -87,7 +87,7 @@ async function runChecks(filename: string, code: string): Promise<CodeIssue[]> {
       String((err as { stderr?: string }).stderr ?? '');
     for (const line of out.split('\n')) {
       const m = line.match(/^(.+?)\((\d+),(\d+)\):\s*(error|warning)\s+(.+)$/);
-      if (m && m[1] && m[2] && m[3] && m[4] && m[5]) {
+      if (m?.[1] && m[2] && m[3] && m[4] && m[5]) {
         issues.push({
           file: m[1],
           line: Number(m[2]),

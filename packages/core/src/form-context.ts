@@ -52,7 +52,7 @@ export function useFormContext(): UseFormContextReturn {
       'ontouchstart' in window ||
         navigator.maxTouchPoints > 0 ||
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (window.matchMedia && window.matchMedia('(pointer: coarse)').matches),
+        window.matchMedia?.('(pointer: coarse)').matches,
     );
 
     // Check for reduced motion preference

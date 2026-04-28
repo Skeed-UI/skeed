@@ -141,7 +141,7 @@ export function transformClassName(className: string, substitutions: Map<string,
 export function getSpacingClass(
   value: number,
   property: 'p' | 'px' | 'py' | 'm' | 'mx' | 'my' | 'gap' | 'space-x' | 'space-y',
-  density: Density,
+  _density: Density,
   preset: DemographicPreset,
 ): string {
   // Find closest spacing token index
@@ -191,8 +191,8 @@ export function getRadiusClass(value: number, preset: DemographicPreset): string
  */
 export function validateDensityTokens(
   className: string,
-  preset: DemographicPreset,
-  density: Density,
+  _preset: DemographicPreset,
+  _density: Density,
 ): { valid: boolean; missing: string[] } {
   const missing: string[] = [];
 

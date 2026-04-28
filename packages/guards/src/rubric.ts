@@ -126,6 +126,6 @@ function scoreEthics(i: RubricInput): RubricCriterion {
 }
 
 function round(n: number, places: number): number {
-  const f = Math.pow(10, places);
+  const f = 10 ** places;
   return Math.round(n * f) / f;
 }

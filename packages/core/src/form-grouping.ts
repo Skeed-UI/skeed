@@ -90,7 +90,7 @@ function groupBySemantics(fields: FieldConfig[]): FieldGroup[] {
       if (!groups.has(category)) {
         groups.set(category, []);
       }
-      groups.get(category)!.push(field);
+      groups.get(category)?.push(field);
     } else {
       ungrouped.push(field);
     }
@@ -139,7 +139,7 @@ function groupByFunction(fields: FieldConfig[]): FieldGroup[] {
       if (!groups.has(group)) {
         groups.set(group, []);
       }
-      groups.get(group)!.push(field);
+      groups.get(group)?.push(field);
     } else {
       ungrouped.push(field);
     }
@@ -345,7 +345,7 @@ function suggestGroupLabel(fields: FieldConfig[]): string {
   }
 
   // Default: use the first field's label as a hint
-  return `${fields[0]!.label} & ${fields.length - 1} more`;
+  return `${fields[0]?.label} & ${fields.length - 1} more`;
 }
 
 /**

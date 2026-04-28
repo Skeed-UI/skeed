@@ -5,8 +5,8 @@
  * Tests a single archetype across multiple demographics and densities.
  */
 
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'fs';
-import { join } from 'path';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { emitComponent } from '@skeed/codegen';
 import type { ArchetypeDefinition, DemographicPreset, Density } from '@skeed/contracts';
 import { generateCSSVariables } from '@skeed/core/token-resolver';
@@ -72,7 +72,7 @@ async function runSmokeTest() {
   // Pick 3 simple archetypes for smoke test
   const testArchetypes = archetypeFiles.slice(0, 3);
 
-  let totalGenerated = 0;
+  let _totalGenerated = 0;
   let totalErrors = 0;
   const results: Array<{
     archetype: string;
@@ -124,7 +124,7 @@ async function runSmokeTest() {
                 success: true,
               });
 
-              totalGenerated++;
+              _totalGenerated++;
               console.log(`  ✅ ${demographicId} / ${density}`);
             } catch (err) {
               const error = err instanceof Error ? err.message : String(err);
