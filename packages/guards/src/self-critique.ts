@@ -7,7 +7,13 @@
 import { type RubricInput, type RubricResult, judgeRubric } from './rubric.js';
 
 export interface SelfCritiqueOptions {
-  candidate: { tsx: string; globalsCss: string; assetAlts: string[]; backendStack: string[]; demographic: string };
+  candidate: {
+    tsx: string;
+    globalsCss: string;
+    assetAlts: string[];
+    backendStack: string[];
+    demographic: string;
+  };
   /** Regenerate fn — receives a critique string of failing axes; returns a new tsx + critique deltas. */
   regenerate: (critique: string) => Promise<{ tsx: string; globalsCss?: string }>;
   /** Hard cap. Cannot exceed 1 regen per call (by design). */
@@ -48,13 +54,19 @@ export async function selfCritique(opts: SelfCritiqueOptions): Promise<SelfCriti
   const critique = failingAxes.map((c) => `- ${c.label}: ${c.reasoning}`).join('\n');
 
   const regen = await opts.regenerate(critique);
-  const afterInput: RubricInput = { ...beforeInput, landingTsx: regen.tsx, globalsCss: regen.globalsCss ?? opts.candidate.globalsCss };
+  const afterInput: RubricInput = {
+    ...beforeInput,
+    landingTsx: regen.tsx,
+    globalsCss: regen.globalsCss ?? opts.candidate.globalsCss,
+  };
   const afterRubric = judgeRubric(afterInput);
 
   const useNew = afterRubric.composite > beforeRubric.composite;
   return {
     finalTsx: useNew ? regen.tsx : opts.candidate.tsx,
-    finalGlobalsCss: useNew ? regen.globalsCss ?? opts.candidate.globalsCss : opts.candidate.globalsCss,
+    finalGlobalsCss: useNew
+      ? (regen.globalsCss ?? opts.candidate.globalsCss)
+      : opts.candidate.globalsCss,
     beforeRubric,
     afterRubric,
     critique,

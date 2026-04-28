@@ -2,14 +2,14 @@ import type { Rule } from 'eslint';
 
 /**
  * ESLint Rule: no-literal-tokens
- * 
+ *
  * Bans hardcoded hex colors, px values, and rem values in archetype source.
  * Enforces usage of semantic tokens from the Skeed design system.
- * 
+ *
  * @example
  * // Invalid:
  * <div className="bg-[#FF0000] p-[16px]">
- * 
+ *
  * // Valid:
  * <div className="bg-[--skeed-color-danger-500] p-[--skeed-density-cozy-pady]">
  */
@@ -34,7 +34,8 @@ const rule: Rule.RuleModule = {
       },
     ],
     messages: {
-      noHexColors: 'Use semantic color tokens (e.g., --skeed-color-brand-500) instead of hex colors.',
+      noHexColors:
+        'Use semantic color tokens (e.g., --skeed-color-brand-500) instead of hex colors.',
       noPxValues: 'Use density tokens (e.g., --skeed-density-cozy-pady) instead of px values.',
       noRemValues: 'Use spacing tokens (e.g., --skeed-spacing-4) instead of rem values.',
       noRgbValues: 'Use semantic color tokens instead of rgb/rgba values.',
@@ -83,18 +84,18 @@ const rule: Rule.RuleModule = {
       for (const { regex, messageId, getReplacement } of patterns) {
         let match: RegExpExecArray | null;
         regex.lastIndex = 0;
-        
+
         while ((match = regex.exec(value)) !== null) {
           // Skip if inside a CSS variable reference
           const contextStr = value.substring(
             Math.max(0, (match.index ?? 0) - 20),
-            Math.min(value.length, (match.index ?? 0) + match[0].length + 20)
+            Math.min(value.length, (match.index ?? 0) + match[0].length + 20),
           );
-          
+
           if (contextStr.includes('--skeed-') || contextStr.includes('var(')) {
             continue;
           }
-          
+
           // Capture match values for fix function (TypeScript closure safety)
           const matchIndex = match.index ?? 0;
           const matchValue = match[0];
@@ -115,10 +116,7 @@ const rule: Rule.RuleModule = {
             },
             fix(fixer) {
               const replacement = getReplacement(matchValue);
-              return fixer.replaceText(
-                node,
-                node.raw.replace(matchValue, replacement)
-              );
+              return fixer.replaceText(node, node.raw.replace(matchValue, replacement));
             },
           });
         }
@@ -132,18 +130,21 @@ const rule: Rule.RuleModule = {
           checkNode(node.value);
         }
         // Handle JSX expressions: className={"bg-red-500"}
-        if (node.value?.type === 'JSXExpressionContainer' && node.value.expression?.type === 'Literal') {
+        if (
+          node.value?.type === 'JSXExpressionContainer' &&
+          node.value.expression?.type === 'Literal'
+        ) {
           checkNode(node.value.expression);
         }
       },
-      
+
       // Check template literals
       TemplateLiteral(node: any) {
         for (const quasi of node.quasis) {
           checkNode(quasi);
         }
       },
-      
+
       // Check string literals
       Literal(node: any) {
         // Skip comments if configured
@@ -152,16 +153,18 @@ const rule: Rule.RuleModule = {
         }
         checkNode(node);
       },
-      
+
       // Check comments
-      ...(allowInComments ? {} : {
-        LineComment(node: any) {
-          checkNode(node);
-        },
-        BlockComment(node: any) {
-          checkNode(node);
-        },
-      }),
+      ...(allowInComments
+        ? {}
+        : {
+            LineComment(node: any) {
+              checkNode(node);
+            },
+            BlockComment(node: any) {
+              checkNode(node);
+            },
+          }),
     };
   },
 };

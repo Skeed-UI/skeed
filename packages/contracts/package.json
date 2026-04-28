@@ -4,24 +4,70 @@
   "description": "Skeed shared interfaces and Zod schemas. The single source of truth for every type that crosses a package boundary.",
   "license": "MIT",
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
   "exports": {
-    ".": "./src/index.ts",
-    "./demographic": "./src/demographic.ts",
-    "./component": "./src/component.ts",
-    "./preset": "./src/preset.ts",
-    "./archetype": "./src/archetype.ts",
-    "./psychology": "./src/psychology.ts",
-    "./asset-source": "./src/asset-source.ts",
-    "./llm-provider": "./src/llm-provider.ts",
-    "./research-engine": "./src/research-engine.ts",
-    "./score-rubric": "./src/score-rubric.ts",
-    "./stage": "./src/stage.ts",
-    "./guard": "./src/guard.ts",
-    "./pipeline-types": "./src/pipeline-types.ts",
-    "./layout-dsl": "./src/layout-dsl.ts",
-    "./event-taste": "./src/event-taste.ts"
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./demographic": {
+      "import": "./dist/demographic.js",
+      "types": "./dist/demographic.d.ts"
+    },
+    "./component": {
+      "import": "./dist/component.js",
+      "types": "./dist/component.d.ts"
+    },
+    "./preset": {
+      "import": "./dist/preset.js",
+      "types": "./dist/preset.d.ts"
+    },
+    "./archetype": {
+      "import": "./dist/archetype.js",
+      "types": "./dist/archetype.d.ts"
+    },
+    "./psychology": {
+      "import": "./dist/psychology.js",
+      "types": "./dist/psychology.d.ts"
+    },
+    "./asset-source": {
+      "import": "./dist/asset-source.js",
+      "types": "./dist/asset-source.d.ts"
+    },
+    "./llm-provider": {
+      "import": "./dist/llm-provider.js",
+      "types": "./dist/llm-provider.d.ts"
+    },
+    "./research-engine": {
+      "import": "./dist/research-engine.js",
+      "types": "./dist/research-engine.d.ts"
+    },
+    "./score-rubric": {
+      "import": "./dist/score-rubric.js",
+      "types": "./dist/score-rubric.d.ts"
+    },
+    "./stage": {
+      "import": "./dist/stage.js",
+      "types": "./dist/stage.d.ts"
+    },
+    "./guard": {
+      "import": "./dist/guard.js",
+      "types": "./dist/guard.d.ts"
+    },
+    "./pipeline-types": {
+      "import": "./dist/pipeline-types.js",
+      "types": "./dist/pipeline-types.d.ts"
+    },
+    "./layout-dsl": {
+      "import": "./dist/layout-dsl.js",
+      "types": "./dist/layout-dsl.d.ts"
+    },
+    "./event-taste": {
+      "import": "./dist/event-taste.js",
+      "types": "./dist/event-taste.d.ts"
+    }
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",

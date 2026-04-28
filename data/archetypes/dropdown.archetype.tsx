@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
@@ -10,11 +10,7 @@ export const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(function Dropd
   ref,
 ) {
   return (
-    <div
-      ref={ref}
-      className={cn('relative inline-block', className)}
-      {...rest}
-    >
+    <div ref={ref} className={cn('relative inline-block', className)} {...rest}>
       {children}
       {open && (
         <div

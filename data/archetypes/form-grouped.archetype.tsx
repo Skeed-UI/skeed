@@ -1,8 +1,13 @@
-import React, { type HTMLAttributes, useState, useId } from 'react';
-import { cn } from '@skeed/core/cn';
 import { ChevronDown, ChevronRight } from '@skeed/asset-icon';
-import { createGroupingEngine, type FieldConfig, type GroupingStrategy } from '@skeed/core/form-grouping';
 import type { FieldGroup } from '@skeed/contracts';
+import { cn } from '@skeed/core/cn';
+import {
+  type FieldConfig,
+  type GroupingStrategy,
+  createGroupingEngine,
+} from '@skeed/core/form-grouping';
+import type React from 'react';
+import { type HTMLAttributes, useId, useState } from 'react';
 
 export interface GroupedFormProps extends Omit<HTMLAttributes<HTMLElement>, 'onSubmit'> {
   onSubmit: (data: Record<string, unknown>) => void | Promise<void>;
@@ -25,7 +30,8 @@ const INPUT_BASE =
   'focus-visible:border-skeed-color-brand-500 ' +
   'disabled:pointer-events-none disabled:opacity-50';
 
-const ERROR_INPUT = 'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
+const ERROR_INPUT =
+  'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
 
 export function GroupedForm({
   onSubmit,
@@ -42,9 +48,9 @@ export function GroupedForm({
   const formId = useId();
   const groupingEngine = createGroupingEngine();
   const fieldGroups = groupingEngine.groupFields(fields, groupingStrategy);
-  
+
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(
-    new Set(fieldGroups.filter((g: FieldGroup) => g.defaultExpanded).map((g: FieldGroup) => g.id))
+    new Set(fieldGroups.filter((g: FieldGroup) => g.defaultExpanded).map((g: FieldGroup) => g.id)),
   );
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
@@ -104,15 +110,18 @@ export function GroupedForm({
       aria-labelledby={`${formId}-title`}
       className={cn(
         'flex flex-col gap-skeed-spacing-6 w-full max-w-2xl ' +
-        'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
-        'p-skeed-spacing-8 shadow-skeed-shadow-1',
+          'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
+          'p-skeed-spacing-8 shadow-skeed-shadow-1',
         className,
       )}
       {...rest}
     >
       {/* Header */}
       <div className="flex flex-col gap-skeed-spacing-2">
-        <h1 id={`${formId}-title`} className="text-2xl font-semibold font-skeed-body text-skeed-color-neutral-900">
+        <h1
+          id={`${formId}-title`}
+          className="text-2xl font-semibold font-skeed-body text-skeed-color-neutral-900"
+        >
           {title}
         </h1>
         {subtitle && (
@@ -144,7 +153,7 @@ export function GroupedForm({
               key={group.id}
               className={cn(
                 'border border-skeed-color-neutral-200 rounded-skeed-radius-4 overflow-hidden',
-                groupHasError && 'border-skeed-color-danger-300'
+                groupHasError && 'border-skeed-color-danger-300',
               )}
             >
               {/* Group Header */}
@@ -153,10 +162,10 @@ export function GroupedForm({
                 onClick={() => toggleGroup(group.id)}
                 className={cn(
                   'w-full flex items-center justify-between px-skeed-spacing-4 py-skeed-spacing-3 ' +
-                  'bg-skeed-color-neutral-100 hover:bg-skeed-color-neutral-200 ' +
-                  'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500',
-                  !group.collapsible && 'cursor-default hover:bg-skeed-color-neutral-100'
+                    'bg-skeed-color-neutral-100 hover:bg-skeed-color-neutral-200 ' +
+                    'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500',
+                  !group.collapsible && 'cursor-default hover:bg-skeed-color-neutral-100',
                 )}
                 disabled={!group.collapsible}
                 aria-expanded={isExpanded}
@@ -173,14 +182,13 @@ export function GroupedForm({
                   </span>
                   {groupHasError && (
                     <span className="text-xs text-skeed-color-danger-600">
-                      ({Object.keys(fieldErrors).filter((k) => group.fields.includes(k)).length} errors)
+                      ({Object.keys(fieldErrors).filter((k) => group.fields.includes(k)).length}{' '}
+                      errors)
                     </span>
                   )}
                 </div>
                 {group.description && (
-                  <span className="text-sm text-skeed-color-neutral-500">
-                    {group.description}
-                  </span>
+                  <span className="text-sm text-skeed-color-neutral-500">{group.description}</span>
                 )}
               </button>
 
@@ -201,17 +209,29 @@ export function GroupedForm({
                           className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
                         >
                           {field.label}
-                          {field.required && <span className="text-skeed-color-danger-600 ml-1">*</span>}
+                          {field.required && (
+                            <span className="text-skeed-color-danger-600 ml-1">*</span>
+                          )}
                         </label>
                         <input
                           id={`${formId}-${fieldId}`}
-                          type={field.type === 'email' ? 'email' : field.type === 'password' ? 'password' : 'text'}
+                          type={
+                            field.type === 'email'
+                              ? 'email'
+                              : field.type === 'password'
+                                ? 'password'
+                                : 'text'
+                          }
                           value={formData[fieldId] || ''}
-                          onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleFieldChange(fieldId, e.target.value)}
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                            handleFieldChange(fieldId, e.target.value)
+                          }
                           placeholder={field.label}
                           disabled={isLoading}
                           aria-invalid={!!fieldErrors[fieldId]}
-                          aria-describedby={fieldErrors[fieldId] ? `${formId}-${fieldId}-error` : undefined}
+                          aria-describedby={
+                            fieldErrors[fieldId] ? `${formId}-${fieldId}-error` : undefined
+                          }
                           className={cn(INPUT_BASE, fieldErrors[fieldId] && ERROR_INPUT)}
                         />
                         {fieldErrors[fieldId] && (

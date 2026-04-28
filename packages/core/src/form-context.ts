@@ -1,19 +1,19 @@
 /**
  * Form Context Hooks
- * 
+ *
  * React hooks for accessing browser, user, and environmental context
  * to enable smart defaults and contextual form behavior.
  */
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { 
-  getBrowserContext, 
-  createSmartDefaultsEngine,
-  storeDefault,
+import type { FormState, SmartDefaultSource } from '@skeed/contracts';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import {
   type BrowserContext,
   type GeoContext,
+  createSmartDefaultsEngine,
+  getBrowserContext,
+  storeDefault,
 } from './smart-defaults.js';
-import type { SmartDefaultSource, FormState } from '@skeed/contracts';
 
 export interface UseFormContextReturn {
   browserContext: BrowserContext;
@@ -46,25 +46,25 @@ export function useFormContext(): UseFormContextReturn {
   useEffect(() => {
     // Update context on mount
     setBrowserContext(getBrowserContext());
-    
+
     // Check for touch device
     setIsTouchDevice(
-      'ontouchstart' in window || 
-      navigator.maxTouchPoints > 0 ||
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (window.matchMedia && window.matchMedia('(pointer: coarse)').matches)
+      'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window.matchMedia && window.matchMedia('(pointer: coarse)').matches),
     );
 
     // Check for reduced motion preference
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setPrefersReducedMotion(motionQuery.matches);
-    
+
     const handleMotionChange = (e: MediaQueryListEvent) => {
       setPrefersReducedMotion(e.matches);
     };
-    
+
     motionQuery.addEventListener('change', handleMotionChange);
-    
+
     return () => {
       motionQuery.removeEventListener('change', handleMotionChange);
     };
@@ -88,7 +88,7 @@ export function useSmartDefaults(
   options: {
     geoProvider?: () => Promise<GeoContext>;
     storage?: Storage;
-  } = {}
+  } = {},
 ): UseSmartDefaultsReturn {
   const [defaults, setDefaults] = useState<Partial<FormState>>({});
   const [isLoading, setIsLoading] = useState(false);
@@ -101,7 +101,7 @@ export function useSmartDefaults(
         const browserDefaults = await engineRef.current.getDefaults(fields);
         const inferredDefaults = engineRef.current.inferFromContext(browserDefaults);
         const demographicDefaults = engineRef.current.getDemographicDefaults(demographic);
-        
+
         setDefaults({
           ...demographicDefaults,
           ...browserDefaults,
@@ -111,14 +111,14 @@ export function useSmartDefaults(
         setIsLoading(false);
       }
     },
-    [demographic]
+    [demographic],
   );
 
   const storeUserPreference = useCallback(
     (fieldId: string, value: string) => {
       storeDefault(fieldId, value, options.storage);
     },
-    [options.storage]
+    [options.storage],
   );
 
   return {
@@ -133,12 +133,12 @@ export function useSmartDefaults(
  * Hook to remember and retrieve user's previous form values
  */
 export function usePreviousValues(
-  namespace: string = 'skeed-form',
-  storage: Storage = localStorage
+  namespace = 'skeed-form',
+  storage: Storage = localStorage,
 ): UsePreviousValuesReturn {
   const getStorageKey = useCallback(
     (fieldId: string) => `${namespace}-prev-${fieldId}`,
-    [namespace]
+    [namespace],
   );
 
   const getPreviousValue = useCallback(
@@ -149,7 +149,7 @@ export function usePreviousValues(
         return undefined;
       }
     },
-    [getStorageKey, storage]
+    [getStorageKey, storage],
   );
 
   const storeValue = useCallback(
@@ -160,7 +160,7 @@ export function usePreviousValues(
         // Silently fail
       }
     },
-    [getStorageKey, storage]
+    [getStorageKey, storage],
   );
 
   const clearStoredValues = useCallback(() => {
@@ -214,11 +214,14 @@ export function useDemographicBehavior(demographic: string): {
 } {
   const { prefersReducedMotion } = useFormContext();
 
-  const behaviors: Record<string, {
-    validationDelay: number;
-    shouldShowExamples: boolean;
-    prefersEmojis: boolean;
-  }> = {
+  const behaviors: Record<
+    string,
+    {
+      validationDelay: number;
+      shouldShowExamples: boolean;
+      prefersEmojis: boolean;
+    }
+  > = {
     kids: {
       validationDelay: 500,
       shouldShowExamples: true,
@@ -261,7 +264,7 @@ export function useDemographicBehavior(demographic: string): {
  */
 export function useFormProgress(
   fields: { id: string; required?: boolean }[],
-  values: FormState
+  values: FormState,
 ): {
   completedCount: number;
   requiredCount: number;
@@ -273,20 +276,19 @@ export function useFormProgress(
   const optionalFields = fields.filter((f) => !f.required);
 
   const requiredCompleted = requiredFields.filter(
-    (f) => values[f.id] && String(values[f.id]).trim() !== ''
+    (f) => values[f.id] && String(values[f.id]).trim() !== '',
   ).length;
 
   const optionalCompleted = optionalFields.filter(
-    (f) => values[f.id] && String(values[f.id]).trim() !== ''
+    (f) => values[f.id] && String(values[f.id]).trim() !== '',
   ).length;
 
   const completedCount = requiredCompleted + optionalCompleted;
   const requiredCount = requiredFields.length;
   const optionalCount = optionalFields.length;
 
-  const completionPercentage = requiredCount > 0
-    ? Math.round((requiredCompleted / requiredCount) * 100)
-    : 100;
+  const completionPercentage =
+    requiredCount > 0 ? Math.round((requiredCompleted / requiredCount) * 100) : 100;
 
   return {
     completedCount,

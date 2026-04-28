@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface FooterLinkColumn {
   heading: string;
@@ -26,8 +26,7 @@ const BASE_CLASSES =
 const INNER_CLASSES = 'mx-auto max-w-screen-xl';
 
 const TOP_ROW_CLASSES =
-  'flex flex-col gap-skeed-spacing-8 ' +
-  'sm:flex-row sm:items-start sm:justify-between';
+  'flex flex-col gap-skeed-spacing-8 ' + 'sm:flex-row sm:items-start sm:justify-between';
 
 const LOGO_CLASSES = 'flex-shrink-0';
 

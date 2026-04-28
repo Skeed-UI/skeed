@@ -14,12 +14,14 @@ export const stage_15_compose: Stage<PipelineState, PipelineState> = {
   cacheable: true,
   async run(state) {
     const ds = state.designSystem;
-    const projectName = state.intent?.jobToBeDone?.replace(/^Build:\s*/, '').slice(0, 60) ?? 'Skeed App';
+    const projectName =
+      state.intent?.jobToBeDone?.replace(/^Build:\s*/, '').slice(0, 60) ?? 'Skeed App';
     const tagline = state.userStories?.[0]?.iWantTo ?? 'Get started in seconds';
     const palette = ds?.palette;
 
     const landingTsx =
-      (state as { landingTsx?: string }).landingTsx ?? defaultPage(projectName, tagline, ds?.voice.samples.cta ?? 'Get started');
+      (state as { landingTsx?: string }).landingTsx ??
+      defaultPage(projectName, tagline, ds?.voice.samples.cta ?? 'Get started');
 
     const layoutTsx = `import './globals.css';
 import type { Metadata } from 'next';
@@ -53,7 +55,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       const brand = palette?.primary ?? '#4F46E5';
       const fg = palette?.neutral ?? '#0F172A';
       const accent = palette?.accent ?? brand;
-      const fontStack = (designSystem?.type.stack ?? ['Inter', 'system-ui']).map((f) => (/[\s'"]/.test(f) ? `'${f}'` : f)).join(', ');
+      const fontStack = (designSystem?.type.stack ?? ['Inter', 'system-ui'])
+        .map((f) => (/[\s'"]/.test(f) ? `'${f}'` : f))
+        .join(', ');
       const radius = designSystem?.radius?.[1] ?? 8;
       return `:root {
   --skeed-brand: ${brand};

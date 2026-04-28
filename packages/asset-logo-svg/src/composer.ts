@@ -29,7 +29,14 @@ export async function composeLogoCandidates(opts: ComposeOptions): Promise<LogoC
     const mark = primitives.marks[i % Math.max(1, primitives.marks.length)];
     const shape = primitives.shapes[i % Math.max(1, primitives.shapes.length)];
 
-    const svg = renderSvg({ layout, palette, initial, wordmark, mark: mark?.contents, shape: shape?.contents });
+    const svg = renderSvg({
+      layout,
+      palette,
+      initial,
+      wordmark,
+      mark: mark?.contents,
+      shape: shape?.contents,
+    });
     out.push({
       id: `logo-${i + 1}`,
       svg,
@@ -65,7 +72,9 @@ function hslToHex(h: number, s: number, l: number): string {
   const c = (1 - Math.abs(2 * lN - 1)) * sN;
   const hp = h / 60;
   const x = c * (1 - Math.abs((hp % 2) - 1));
-  let r = 0, g = 0, b = 0;
+  let r = 0,
+    g = 0,
+    b = 0;
   if (hp < 1) [r, g, b] = [c, x, 0];
   else if (hp < 2) [r, g, b] = [x, c, 0];
   else if (hp < 3) [r, g, b] = [0, c, x];
@@ -74,7 +83,9 @@ function hslToHex(h: number, s: number, l: number): string {
   else [r, g, b] = [c, 0, x];
   const m = lN - c / 2;
   const toHex = (v: number) =>
-    Math.round((v + m) * 255).toString(16).padStart(2, '0');
+    Math.round((v + m) * 255)
+      .toString(16)
+      .padStart(2, '0');
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
 }
 

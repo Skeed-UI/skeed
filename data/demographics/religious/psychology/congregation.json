@@ -3,19 +3,12 @@
   "niche": "congregation",
   "schemaVersion": 1,
   "cognitiveLoadTarget": "low",
-  "trustCuesNeeded": [
-    "institutional_seal",
-    "soft_rounding",
-    "testimonial"
-  ],
+  "trustCuesNeeded": ["institutional_seal", "soft_rounding", "testimonial"],
   "motivationPattern": "social",
   "formality": 4,
   "noveltyTolerance": 2,
   "accessibilityFloor": "AAA",
-  "forbiddenPatterns": [
-    "dark_pattern",
-    "urgency_timer"
-  ],
+  "forbiddenPatterns": ["dark_pattern", "urgency_timer"],
   "research": {
     "sources": [],
     "notes": "Reverent tone. Multi-generational audience. Avoid trend-chasing."

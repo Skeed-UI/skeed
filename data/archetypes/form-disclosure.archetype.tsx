@@ -1,8 +1,13 @@
-import React, { type HTMLAttributes, useState, useId, useCallback } from 'react';
-import { cn } from '@skeed/core/cn';
 import { ChevronDown, ChevronRight } from '@skeed/asset-icon';
-import { createDisclosureEngine, type DisclosureRule, type DisclosureState } from '@skeed/core/progressive-disclosure';
 import type { FieldConfig, FormState } from '@skeed/contracts';
+import { cn } from '@skeed/core/cn';
+import {
+  type DisclosureRule,
+  type DisclosureState,
+  createDisclosureEngine,
+} from '@skeed/core/progressive-disclosure';
+import type React from 'react';
+import { type HTMLAttributes, useCallback, useId, useState } from 'react';
 
 export interface FormDisclosureProps extends Omit<HTMLAttributes<HTMLElement>, 'onSubmit'> {
   onSubmit: (data: Record<string, unknown>) => void | Promise<void>;
@@ -26,7 +31,8 @@ const INPUT_BASE =
   'focus-visible:border-skeed-color-brand-500 ' +
   'disabled:pointer-events-none disabled:opacity-50';
 
-const ERROR_INPUT = 'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
+const ERROR_INPUT =
+  'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
 
 /**
  * FormDisclosure - A form component with progressive disclosure support
@@ -47,7 +53,7 @@ export function FormDisclosure({
 }: FormDisclosureProps) {
   const formId = useId();
   const disclosureEngine = createDisclosureEngine();
-  
+
   const [formData, setFormData] = useState<FormState>({});
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,12 +62,15 @@ export function FormDisclosure({
   const isLoading = loading || isSubmitting;
 
   // Get visible fields based on current form state and disclosure rules
-  const disclosureState: DisclosureState = disclosureEngine.evaluateRules(formData, disclosureRules);
+  const disclosureState: DisclosureState = disclosureEngine.evaluateRules(
+    formData,
+    disclosureRules,
+  );
   const visibleFieldIds = disclosureEngine.getVisibleFields(
     fields.map((f) => f.id),
-    disclosureState
+    disclosureState,
   );
-  
+
   const visibleFields = fields.filter((f) => visibleFieldIds.includes(f.id));
   const hiddenFieldCount = fields.length - visibleFields.length;
 
@@ -80,17 +89,20 @@ export function FormDisclosure({
     });
   }, []);
 
-  const handleFieldChange = useCallback((fieldId: string, value: string) => {
-    setFormData((prev: FormState) => ({ ...prev, [fieldId]: value }));
-    // Clear error when user starts typing
-    if (fieldErrors[fieldId]) {
-      setFieldErrors((prev: Record<string, string>) => {
-        const next = { ...prev };
-        delete next[fieldId];
-        return next;
-      });
-    }
-  }, [fieldErrors]);
+  const handleFieldChange = useCallback(
+    (fieldId: string, value: string) => {
+      setFormData((prev: FormState) => ({ ...prev, [fieldId]: value }));
+      // Clear error when user starts typing
+      if (fieldErrors[fieldId]) {
+        setFieldErrors((prev: Record<string, string>) => {
+          const next = { ...prev };
+          delete next[fieldId];
+          return next;
+        });
+      }
+    },
+    [fieldErrors],
+  );
 
   const validate = useCallback((): boolean => {
     const errors: Record<string, string> = {};
@@ -116,24 +128,26 @@ export function FormDisclosure({
   };
 
   const completedCount = visibleFields.filter((f) => formData[f.id]?.trim()).length;
-  const completionPercentage = visibleFields.length > 0
-    ? Math.round((completedCount / visibleFields.length) * 100)
-    : 0;
+  const completionPercentage =
+    visibleFields.length > 0 ? Math.round((completedCount / visibleFields.length) * 100) : 0;
 
   return (
     <section
       aria-labelledby={`${formId}-title`}
       className={cn(
         'flex flex-col gap-skeed-spacing-6 w-full max-w-2xl ' +
-        'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
-        'p-skeed-spacing-8 shadow-skeed-shadow-1',
+          'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
+          'p-skeed-spacing-8 shadow-skeed-shadow-1',
         className,
       )}
       {...rest}
     >
       {/* Header */}
       <div className="flex flex-col gap-skeed-spacing-2">
-        <h1 id={`${formId}-title`} className="text-2xl font-semibold font-skeed-body text-skeed-color-neutral-900">
+        <h1
+          id={`${formId}-title`}
+          className="text-2xl font-semibold font-skeed-body text-skeed-color-neutral-900"
+        >
           {title}
         </h1>
         {subtitle && (
@@ -159,7 +173,8 @@ export function FormDisclosure({
           </div>
           {hiddenFieldCount > 0 && (
             <p className="text-xs text-skeed-color-neutral-500">
-              {hiddenFieldCount} additional {hiddenFieldCount === 1 ? 'field' : 'fields'} will appear based on your answers
+              {hiddenFieldCount} additional {hiddenFieldCount === 1 ? 'field' : 'fields'} will
+              appear based on your answers
             </p>
           )}
         </div>
@@ -191,7 +206,7 @@ export function FormDisclosure({
               key={category}
               className={cn(
                 'border border-skeed-color-neutral-200 rounded-skeed-radius-4 overflow-hidden',
-                animateDisclosure && 'transition-all duration-skeed-motion-duration-normal'
+                animateDisclosure && 'transition-all duration-skeed-motion-duration-normal',
               )}
             >
               {/* Category Header */}
@@ -226,7 +241,7 @@ export function FormDisclosure({
                   id={`${formId}-${category}-content`}
                   className={cn(
                     'p-skeed-spacing-4 flex flex-col gap-skeed-spacing-4',
-                    animateDisclosure && 'animate-in fade-in slide-in-from-top-2 duration-200'
+                    animateDisclosure && 'animate-in fade-in slide-in-from-top-2 duration-200',
                   )}
                 >
                   {categoryFields.map((field: FieldConfig) => (
@@ -236,7 +251,9 @@ export function FormDisclosure({
                         className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
                       >
                         {field.label}
-                        {field.required && <span className="text-skeed-color-danger-600 ml-1">*</span>}
+                        {field.required && (
+                          <span className="text-skeed-color-danger-600 ml-1">*</span>
+                        )}
                       </label>
                       {field.dependencies && field.dependencies.length > 0 && (
                         <p className="text-xs text-skeed-color-neutral-500">
@@ -245,13 +262,23 @@ export function FormDisclosure({
                       )}
                       <input
                         id={`${formId}-${field.id}`}
-                        type={field.type === 'email' ? 'email' : field.type === 'password' ? 'password' : 'text'}
+                        type={
+                          field.type === 'email'
+                            ? 'email'
+                            : field.type === 'password'
+                              ? 'password'
+                              : 'text'
+                        }
                         value={(formData[field.id] as string) || ''}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleFieldChange(field.id, e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                          handleFieldChange(field.id, e.target.value)
+                        }
                         placeholder={field.label}
                         disabled={isLoading}
                         aria-invalid={!!fieldErrors[field.id]}
-                        aria-describedby={fieldErrors[field.id] ? `${formId}-${field.id}-error` : undefined}
+                        aria-describedby={
+                          fieldErrors[field.id] ? `${formId}-${field.id}-error` : undefined
+                        }
                         className={cn(INPUT_BASE, fieldErrors[field.id] && ERROR_INPUT)}
                       />
                       {fieldErrors[field.id] && (

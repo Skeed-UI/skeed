@@ -13,13 +13,20 @@ export const stage_14_5_backend_selector: Stage<PipelineState, PipelineState> = 
   cacheable: true,
   async run(state) {
     const stories = state.userStories ?? [];
-    const text = stories.map((s) => `${s.iWantTo} ${s.soThat}`).join(' ').toLowerCase() + ' ' + state.prompt.toLowerCase();
+    const text =
+      stories
+        .map((s) => `${s.iWantTo} ${s.soThat}`)
+        .join(' ')
+        .toLowerCase() +
+      ' ' +
+      state.prompt.toLowerCase();
     const stack: string[] = [];
     const npmPackages: string[] = [];
     const envVars: { name: string; required: boolean; example?: string }[] = [];
     const apiRoutes: { path: string; template: string }[] = [];
 
-    const isSpecialOccasion = state.classification?.candidates[0]?.demographic === 'special_occasion';
+    const isSpecialOccasion =
+      state.classification?.candidates[0]?.demographic === 'special_occasion';
     if (isSpecialOccasion || /\brsvp\b|invite|guest list/.test(text)) {
       stack.push('rsvp-csv-email');
       npmPackages.push('resend', 'csv-stringify');

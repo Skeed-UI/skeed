@@ -3,7 +3,19 @@
   "niche": "anniversary",
   "schemaVersion": 1,
   "points": [
-    { "id": "an1", "description": "Hard to share a story timeline + memory wall in one place.", "severity": 4, "frequency": 4, "evidence": [] },
-    { "id": "an2", "description": "Existing tools cap photo uploads at low limits.", "severity": 3, "frequency": 4, "evidence": [] }
+    {
+      "id": "an1",
+      "description": "Hard to share a story timeline + memory wall in one place.",
+      "severity": 4,
+      "frequency": 4,
+      "evidence": []
+    },
+    {
+      "id": "an2",
+      "description": "Existing tools cap photo uploads at low limits.",
+      "severity": 3,
+      "frequency": 4,
+      "evidence": []
+    }
   ]
 }

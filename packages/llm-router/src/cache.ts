@@ -80,7 +80,9 @@ export class LlmCache {
       | undefined;
     if (!row) return undefined;
     this.db
-      .prepare('UPDATE llm_cache SET hit_count = hit_count + 1, last_hit_at = ? WHERE cache_key = ?')
+      .prepare(
+        'UPDATE llm_cache SET hit_count = hit_count + 1, last_hit_at = ? WHERE cache_key = ?',
+      )
       .run(new Date().toISOString(), key);
     return {
       cacheKey: row.cache_key,
@@ -93,12 +95,23 @@ export class LlmCache {
     };
   }
 
-  set(key: string, value: { stage: string; modelId: string; text: string; tokenIn: number; tokenOut: number }): void {
+  set(
+    key: string,
+    value: { stage: string; modelId: string; text: string; tokenIn: number; tokenOut: number },
+  ): void {
     this.db
       .prepare(
         'INSERT OR REPLACE INTO llm_cache (cache_key, stage, model_id, text, token_in, token_out, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
       )
-      .run(key, value.stage, value.modelId, value.text, value.tokenIn, value.tokenOut, new Date().toISOString());
+      .run(
+        key,
+        value.stage,
+        value.modelId,
+        value.text,
+        value.tokenIn,
+        value.tokenOut,
+        new Date().toISOString(),
+      );
   }
 
   close(): void {

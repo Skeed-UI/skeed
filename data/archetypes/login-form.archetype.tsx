@@ -1,6 +1,6 @@
-import { type HTMLAttributes, useState, useId } from 'react';
-import { cn } from '@skeed/core/cn';
 import { Eye, EyeOff, Spinner } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, useId, useState } from 'react';
 
 export interface OAuthProvider {
   id: string;
@@ -70,8 +70,8 @@ export function LoginForm({
       aria-labelledby={`${formId}-title`}
       className={cn(
         'flex flex-col gap-skeed-spacing-6 w-full max-w-sm ' +
-        'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
-        'p-skeed-spacing-8 shadow-skeed-shadow-1',
+          'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
+          'p-skeed-spacing-8 shadow-skeed-shadow-1',
         className,
       )}
       {...rest}
@@ -140,14 +140,13 @@ export function LoginForm({
       )}
 
       {/* Credentials form */}
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-skeed-spacing-4"
-        noValidate
-      >
+      <form onSubmit={handleSubmit} className="flex flex-col gap-skeed-spacing-4" noValidate>
         {/* Email */}
         <div className="flex flex-col gap-skeed-spacing-1">
-          <label htmlFor={emailId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+          <label
+            htmlFor={emailId}
+            className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+          >
             Email
           </label>
           <input
@@ -166,7 +165,10 @@ export function LoginForm({
         {/* Password */}
         <div className="flex flex-col gap-skeed-spacing-1">
           <div className="flex items-center justify-between">
-            <label htmlFor={passwordId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+            <label
+              htmlFor={passwordId}
+              className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+            >
               Password
             </label>
             {forgotPasswordHref && (

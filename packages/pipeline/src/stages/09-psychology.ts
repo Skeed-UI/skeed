@@ -1,5 +1,5 @@
-import type { Stage } from '@skeed/contracts';
 import { findRepoData } from '@skeed/asset-logo-svg';
+import type { Stage } from '@skeed/contracts';
 import { loadDemographics } from '@skeed/demographics-loader';
 import { PipelineState } from './state.js';
 
@@ -35,7 +35,9 @@ export const stage_09_psychology: Stage<PipelineState, PipelineState> = {
         if (first) return { ...state, psychology: { ...first, niche: top.niche } };
       }
     } catch (err) {
-      process.stderr.write(`[skeed] psychology lookup failed; synthesizing. ${err instanceof Error ? err.message : String(err)}\n`);
+      process.stderr.write(
+        `[skeed] psychology lookup failed; synthesizing. ${err instanceof Error ? err.message : String(err)}\n`,
+      );
     }
     return { ...state, psychology: synthesize(top.demographic, top.niche) };
   },
@@ -62,6 +64,9 @@ function synthesize(demographic: string, niche: string): PipelineState['psycholo
     noveltyTolerance: isKid ? 5 : 3,
     accessibilityFloor: isKid || isGov || isHealth ? 'AAA' : 'AA',
     forbiddenPatterns: isKid ? ['dark_pattern', 'urgency_timer', 'autoplay_av'] : [],
-    research: { sources: [], notes: 'synthesized — no profile in data/demographics/<demo>/psychology/' },
+    research: {
+      sources: [],
+      notes: 'synthesized — no profile in data/demographics/<demo>/psychology/',
+    },
   };
 }

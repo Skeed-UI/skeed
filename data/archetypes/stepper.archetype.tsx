@@ -1,6 +1,6 @@
-import { type HTMLAttributes, forwardRef } from 'react';
-import { cn } from '@skeed/core/cn';
 import { Check } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface StepperStep {
   id: string;
@@ -19,19 +19,8 @@ export const Stepper = forwardRef<HTMLDivElement, StepperProps>(function Stepper
   ref,
 ) {
   return (
-    <nav
-      ref={ref}
-      aria-label="Progress"
-      className={cn('w-full', className)}
-      {...rest}
-    >
-      <ol
-        className={cn(
-          'flex items-center',
-          'gap-skeed-spacing-2',
-        )}
-        role="list"
-      >
+    <nav ref={ref} aria-label="Progress" className={cn('w-full', className)} {...rest}>
+      <ol className={cn('flex items-center', 'gap-skeed-spacing-2')} role="list">
         {steps.map((step, index) => {
           const isComplete = index < currentStep;
           const isCurrent = index === currentStep;
@@ -56,16 +45,14 @@ export const Stepper = forwardRef<HTMLDivElement, StepperProps>(function Stepper
                   )}
                   aria-current={isCurrent ? 'step' : undefined}
                 >
-                  {isComplete ? (
-                    <Check size={16} />
-                  ) : (
-                    index + 1
-                  )}
+                  {isComplete ? <Check size={16} /> : index + 1}
                 </div>
                 <span
                   className={cn(
                     'mt-skeed-spacing-1 text-xs font-skeed-body',
-                    isCurrent ? 'text-skeed-color-brand-600 font-medium' : 'text-skeed-color-neutral-500',
+                    isCurrent
+                      ? 'text-skeed-color-brand-600 font-medium'
+                      : 'text-skeed-color-neutral-500',
                   )}
                 >
                   {step.label}

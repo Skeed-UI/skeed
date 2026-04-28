@@ -58,7 +58,8 @@ export const ARCHETYPES: Record<LandingArchetype, LandingArchetypeSpec> = {
   },
   'event-invitation': {
     id: 'event-invitation',
-    description: 'Hero with event title + date, story-style details, RSVP form, photos, music toggle.',
+    description:
+      'Hero with event title + date, story-style details, RSVP form, photos, music toggle.',
     baseSections: [
       { role: 'event-hero', archetypeId: 'hero' },
       { role: 'event-details', archetypeId: 'feature-grid' },

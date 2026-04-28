@@ -1,6 +1,13 @@
-import { type HTMLAttributes, forwardRef, useState, useCallback, KeyboardEvent, useRef } from 'react';
-import { cn } from '@skeed/core/cn';
 import { ChevronRight } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import {
+  type HTMLAttributes,
+  type KeyboardEvent,
+  forwardRef,
+  useCallback,
+  useRef,
+  useState,
+} from 'react';
 
 export interface TreeNode {
   id: string;
@@ -44,82 +51,88 @@ export const Tree = forwardRef<HTMLDivElement, TreeProps>(function Tree(
     ]);
   }, []);
 
-  const getVisibleNodes = useCallback((nodes: TreeNode[]): TreeNode[] => {
-    return nodes.flatMap((node) => {
-      if (!isExpanded(node.id) && node.children) {
-        return [node];
-      }
-      return [node, ...(node.children ? getVisibleNodes(node.children) : [])];
-    });
-  }, [expandedNodes]);
-
-  const handleKeyDown = useCallback((event: KeyboardEvent, node: TreeNode) => {
-    const allVisibleIds = getVisibleNodes(nodes).map((n) => n.id);
-    const currentIndex = allVisibleIds.indexOf(node.id);
-
-    switch (event.key) {
-      case 'ArrowDown':
-        event.preventDefault();
-        if (currentIndex < allVisibleIds.length - 1) {
-          const nextId = allVisibleIds[currentIndex + 1];
-          itemRefs.current.get(nextId)?.focus();
-          setFocusedNode(nextId);
+  const getVisibleNodes = useCallback(
+    (nodes: TreeNode[]): TreeNode[] => {
+      return nodes.flatMap((node) => {
+        if (!isExpanded(node.id) && node.children) {
+          return [node];
         }
-        break;
-      case 'ArrowUp':
-        event.preventDefault();
-        if (currentIndex > 0) {
-          const prevId = allVisibleIds[currentIndex - 1];
-          itemRefs.current.get(prevId)?.focus();
-          setFocusedNode(prevId);
-        }
-        break;
-      case 'ArrowRight':
-        event.preventDefault();
-        if (node.children && node.children.length > 0) {
-          if (!isExpanded(node.id)) {
+        return [node, ...(node.children ? getVisibleNodes(node.children) : [])];
+      });
+    },
+    [expandedNodes],
+  );
+
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent, node: TreeNode) => {
+      const allVisibleIds = getVisibleNodes(nodes).map((n) => n.id);
+      const currentIndex = allVisibleIds.indexOf(node.id);
+
+      switch (event.key) {
+        case 'ArrowDown':
+          event.preventDefault();
+          if (currentIndex < allVisibleIds.length - 1) {
+            const nextId = allVisibleIds[currentIndex + 1];
+            itemRefs.current.get(nextId)?.focus();
+            setFocusedNode(nextId);
+          }
+          break;
+        case 'ArrowUp':
+          event.preventDefault();
+          if (currentIndex > 0) {
+            const prevId = allVisibleIds[currentIndex - 1];
+            itemRefs.current.get(prevId)?.focus();
+            setFocusedNode(prevId);
+          }
+          break;
+        case 'ArrowRight':
+          event.preventDefault();
+          if (node.children && node.children.length > 0) {
+            if (!isExpanded(node.id)) {
+              toggleNode(node.id);
+            } else {
+              // Focus first child
+              const firstChild = node.children[0];
+              itemRefs.current.get(firstChild.id)?.focus();
+              setFocusedNode(firstChild.id);
+            }
+          }
+          break;
+        case 'ArrowLeft':
+          event.preventDefault();
+          if (node.children && isExpanded(node.id)) {
+            toggleNode(node.id);
+          }
+          break;
+        case 'Enter':
+        case ' ':
+          event.preventDefault();
+          if (node.children && node.children.length > 0) {
             toggleNode(node.id);
           } else {
-            // Focus first child
-            const firstChild = node.children[0];
-            itemRefs.current.get(firstChild.id)?.focus();
-            setFocusedNode(firstChild.id);
+            onNodeSelect?.(node);
           }
-        }
-        break;
-      case 'ArrowLeft':
-        event.preventDefault();
-        if (node.children && isExpanded(node.id)) {
-          toggleNode(node.id);
-        }
-        break;
-      case 'Enter':
-      case ' ':
-        event.preventDefault();
-        if (node.children && node.children.length > 0) {
-          toggleNode(node.id);
-        } else {
-          onNodeSelect?.(node);
-        }
-        break;
-      case 'Home':
-        event.preventDefault();
-        if (allVisibleIds.length > 0) {
-          const firstId = allVisibleIds[0];
-          itemRefs.current.get(firstId)?.focus();
-          setFocusedNode(firstId);
-        }
-        break;
-      case 'End':
-        event.preventDefault();
-        if (allVisibleIds.length > 0) {
-          const lastId = allVisibleIds[allVisibleIds.length - 1];
-          itemRefs.current.get(lastId)?.focus();
-          setFocusedNode(lastId);
-        }
-        break;
-    }
-  }, [nodes, expandedNodes, toggleNode, onNodeSelect, getVisibleNodes]);
+          break;
+        case 'Home':
+          event.preventDefault();
+          if (allVisibleIds.length > 0) {
+            const firstId = allVisibleIds[0];
+            itemRefs.current.get(firstId)?.focus();
+            setFocusedNode(firstId);
+          }
+          break;
+        case 'End':
+          event.preventDefault();
+          if (allVisibleIds.length > 0) {
+            const lastId = allVisibleIds[allVisibleIds.length - 1];
+            itemRefs.current.get(lastId)?.focus();
+            setFocusedNode(lastId);
+          }
+          break;
+      }
+    },
+    [nodes, expandedNodes, toggleNode, onNodeSelect, getVisibleNodes],
+  );
 
   return (
     <div
@@ -170,7 +183,11 @@ function TreeItem({
   const isExpanded = expandedNodes.has(node.id);
 
   return (
-    <div role="treeitem" aria-expanded={hasChildren ? isExpanded : undefined} className="flex flex-col">
+    <div
+      role="treeitem"
+      aria-expanded={hasChildren ? isExpanded : undefined}
+      className="flex flex-col"
+    >
       <button
         ref={(el) => {
           if (el) itemRefs.current.set(node.id, el);
@@ -203,7 +220,7 @@ function TreeItem({
             size={16}
             className={cn(
               'transition-transform duration-skeed-motion-duration-fast',
-              isExpanded && 'rotate-90'
+              isExpanded && 'rotate-90',
             )}
           />
         )}

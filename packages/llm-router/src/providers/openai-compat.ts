@@ -77,12 +77,21 @@ interface ChatCompletionResponse {
 }
 
 export class HttpError extends Error {
-  constructor(public readonly status: number, message: string) {
+  constructor(
+    public readonly status: number,
+    message: string,
+  ) {
     super(message);
     this.name = 'HttpError';
   }
   /** Whether the status code suggests retrying with a different provider helps. */
   get retryable(): boolean {
-    return this.status === 429 || this.status === 500 || this.status === 502 || this.status === 503 || this.status === 504;
+    return (
+      this.status === 429 ||
+      this.status === 500 ||
+      this.status === 502 ||
+      this.status === 503 ||
+      this.status === 504
+    );
   }
 }

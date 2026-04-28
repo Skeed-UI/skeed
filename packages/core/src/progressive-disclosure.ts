@@ -1,16 +1,11 @@
 /**
  * Progressive Disclosure Engine
- * 
+ *
  * Implements conditional, contextual, and staged disclosure patterns
  * for showing/hiding form fields based on user input and context.
  */
 
-import type {
-  DisclosureRule,
-  DisclosureTrigger,
-  FormState,
-  FieldConfig,
-} from '@skeed/contracts';
+import type { DisclosureRule, DisclosureTrigger, FieldConfig, FormState } from '@skeed/contracts';
 
 export interface DisclosureEngine {
   buildDisclosureRules(fields: FieldConfig[]): DisclosureRule[];
@@ -62,7 +57,7 @@ function buildDisclosureRules(fields: FieldConfig[]): DisclosureRule[] {
     // e.g., show "state" when "country" is selected
     if (field.id.toLowerCase().includes('state') || field.id.toLowerCase().includes('region')) {
       const countryField = fields.find(
-        (f) => f.id.toLowerCase().includes('country') || f.id.toLowerCase().includes('nation')
+        (f) => f.id.toLowerCase().includes('country') || f.id.toLowerCase().includes('nation'),
       );
       if (countryField) {
         rules.push({
@@ -138,7 +133,7 @@ function evaluateRules(rules: DisclosureRule[], currentState: FormState): Disclo
 function getVisibleFields(
   fields: FieldConfig[],
   state: FormState,
-  rules: DisclosureRule[]
+  rules: DisclosureRule[],
 ): FieldConfig[] {
   const disclosureState = evaluateRules(rules, state);
   return fields.filter((field) => {
@@ -181,7 +176,7 @@ export function createDisclosureRule(
   operator: DisclosureTrigger['operator'],
   value: unknown,
   showFields: string[],
-  hideFields?: string[]
+  hideFields?: string[],
 ): DisclosureRule {
   return {
     fieldId,

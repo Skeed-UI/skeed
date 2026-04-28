@@ -54,9 +54,7 @@ export class Catalog {
 
     // FTS5 may not exist if migration hasn't run; do a plain prefix match fallback.
     const ftsAvailable = this.db
-      .prepare(
-        "SELECT name FROM sqlite_master WHERE type='table' AND name='component_fts'",
-      )
+      .prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='component_fts'")
       .get();
 
     let rows: Array<{
@@ -77,9 +75,7 @@ export class Catalog {
         ORDER BY score
         LIMIT ?
       `;
-      rows = this.db
-        .prepare(sql)
-        .all(...params, intentClause || '*', limit) as typeof rows;
+      rows = this.db.prepare(sql).all(...params, intentClause || '*', limit) as typeof rows;
     } else {
       const sql = `
         SELECT c.id, c.manifest_json, c.thumb_path, 0 as score
@@ -110,13 +106,9 @@ export class Catalog {
     });
   }
 
-  getComponent(
-    id: string,
-  ): { manifest: unknown; sourceTsx: string | null } | null {
+  getComponent(id: string): { manifest: unknown; sourceTsx: string | null } | null {
     const row = this.db
-      .prepare(
-        'SELECT manifest_json, source_tsx_path FROM components WHERE id = ?',
-      )
+      .prepare('SELECT manifest_json, source_tsx_path FROM components WHERE id = ?')
       .get(id) as { manifest_json: string; source_tsx_path: string } | undefined;
     if (!row) return null;
     return {
@@ -126,13 +118,15 @@ export class Catalog {
   }
 
   listDemographics(): Array<{ id: string }> {
-    return this.db.prepare('SELECT id FROM demographics ORDER BY id').all() as Array<{ id: string }>;
+    return this.db.prepare('SELECT id FROM demographics ORDER BY id').all() as Array<{
+      id: string;
+    }>;
   }
 
   getPreset(id: string): unknown | null {
-    const row = this.db
-      .prepare('SELECT preset_json FROM demographics WHERE id = ?')
-      .get(id) as { preset_json: string } | undefined;
+    const row = this.db.prepare('SELECT preset_json FROM demographics WHERE id = ?').get(id) as
+      | { preset_json: string }
+      | undefined;
     if (!row) return null;
     return JSON.parse(row.preset_json);
   }

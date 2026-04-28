@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef, useEffect, useCallback, useRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef, useCallback, useEffect, useRef } from 'react';
 
 export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
@@ -15,18 +15,24 @@ export const Popover = forwardRef<HTMLDivElement, PopoverProps>(function Popover
   const previousActiveElement = useRef<Element | null>(null);
 
   // Handle escape key
-  const handleEscape = useCallback((event: KeyboardEvent) => {
-    if (event.key === 'Escape' && onClose) {
-      onClose();
-    }
-  }, [onClose]);
+  const handleEscape = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && onClose) {
+        onClose();
+      }
+    },
+    [onClose],
+  );
 
   // Handle click outside
-  const handleClickOutside = useCallback((event: MouseEvent) => {
-    if (internalRef.current && !internalRef.current.contains(event.target as Node)) {
-      onClose?.();
-    }
-  }, [onClose]);
+  const handleClickOutside = useCallback(
+    (event: MouseEvent) => {
+      if (internalRef.current && !internalRef.current.contains(event.target as Node)) {
+        onClose?.();
+      }
+    },
+    [onClose],
+  );
 
   useEffect(() => {
     if (open) {

@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface ChatMessageProps extends HTMLAttributes<HTMLDivElement> {
   sender: string;
@@ -16,11 +16,7 @@ export const ChatMessage = forwardRef<HTMLDivElement, ChatMessageProps>(function
   return (
     <div
       ref={ref}
-      className={cn(
-        'flex gap-skeed-spacing-3',
-        isMe ? 'flex-row-reverse' : 'flex-row',
-        className,
-      )}
+      className={cn('flex gap-skeed-spacing-3', isMe ? 'flex-row-reverse' : 'flex-row', className)}
       {...rest}
     >
       <div className="h-skeed-spacing-8 w-skeed-spacing-8 rounded-skeed-radius-9999 bg-skeed-color-neutral-200 flex-shrink-0 overflow-hidden">
@@ -37,9 +33,7 @@ export const ChatMessage = forwardRef<HTMLDivElement, ChatMessageProps>(function
           <span className="text-xs font-medium font-skeed-body text-skeed-color-neutral-600">
             {sender}
           </span>
-          <span className="text-xs font-skeed-body text-skeed-color-neutral-400">
-            {timestamp}
-          </span>
+          <span className="text-xs font-skeed-body text-skeed-color-neutral-400">{timestamp}</span>
         </div>
         <div
           className={cn(

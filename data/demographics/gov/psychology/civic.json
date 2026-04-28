@@ -3,12 +3,7 @@
   "niche": "civic",
   "schemaVersion": 1,
   "cognitiveLoadTarget": "low",
-  "trustCuesNeeded": [
-    "institutional_seal",
-    "flat_borders",
-    "audit_trail",
-    "compliance_badge"
-  ],
+  "trustCuesNeeded": ["institutional_seal", "flat_borders", "audit_trail", "compliance_badge"],
   "motivationPattern": "fear",
   "formality": 5,
   "noveltyTolerance": 1,

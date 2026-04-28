@@ -1,6 +1,6 @@
 /**
  * Smart Defaults Engine
- * 
+ *
  * Provides intelligent default values for form fields based on browser context,
  * geo-IP data, user preferences, and demographic-specific common defaults.
  */
@@ -31,10 +31,10 @@ export interface GeoContext {
  * Create a smart defaults engine instance
  */
 export function createSmartDefaultsEngine(
-  options: { 
+  options: {
     geoProvider?: () => Promise<GeoContext>;
     storage?: Storage;
-  } = {}
+  } = {},
 ): SmartDefaultsEngine {
   return {
     getDefaults: (sources) => getDefaults(sources, options),
@@ -48,7 +48,7 @@ export function createSmartDefaultsEngine(
  */
 async function getDefaults(
   sources: Record<string, SmartDefaultSource>,
-  options: { geoProvider?: () => Promise<GeoContext>; storage?: Storage }
+  options: { geoProvider?: () => Promise<GeoContext>; storage?: Storage },
 ): Promise<Partial<FormState>> {
   const defaults: Partial<FormState> = {};
 
@@ -134,7 +134,12 @@ function getGeoDefault(fieldId: string, geo: GeoContext): string | undefined {
     return geo.country;
   }
 
-  if ((fieldIdLower.includes('state') || fieldIdLower.includes('region') || fieldIdLower.includes('province')) && geo.region) {
+  if (
+    (fieldIdLower.includes('state') ||
+      fieldIdLower.includes('region') ||
+      fieldIdLower.includes('province')) &&
+    geo.region
+  ) {
     return geo.region;
   }
 
@@ -154,7 +159,7 @@ function getGeoDefault(fieldId: string, geo: GeoContext): string | undefined {
  */
 function getStoredDefault(fieldId: string, storage?: Storage): string | undefined {
   if (!storage) return undefined;
-  
+
   try {
     const key = `skeed-form-default-${fieldId}`;
     return storage.getItem(key) || undefined;
@@ -168,7 +173,7 @@ function getStoredDefault(fieldId: string, storage?: Storage): string | undefine
  */
 export function storeDefault(fieldId: string, value: string, storage?: Storage): void {
   if (!storage) return;
-  
+
   try {
     const key = `skeed-form-default-${fieldId}`;
     storage.setItem(key, value);
@@ -255,23 +260,23 @@ function getDemographicDefaults(demographic: string): Partial<FormState> {
  */
 function inferCountryFromDomain(domain: string): string | undefined {
   const tldToCountry: Record<string, string> = {
-    'uk': 'GB',
-    'gb': 'GB',
-    'de': 'DE',
-    'fr': 'FR',
-    'es': 'ES',
-    'it': 'IT',
-    'nl': 'NL',
-    'ca': 'CA',
-    'au': 'AU',
-    'jp': 'JP',
-    'cn': 'CN',
-    'br': 'BR',
-    'in': 'IN',
-    'mx': 'MX',
-    'ru': 'RU',
-    'kr': 'KR',
-    'us': 'US',
+    uk: 'GB',
+    gb: 'GB',
+    de: 'DE',
+    fr: 'FR',
+    es: 'ES',
+    it: 'IT',
+    nl: 'NL',
+    ca: 'CA',
+    au: 'AU',
+    jp: 'JP',
+    cn: 'CN',
+    br: 'BR',
+    in: 'IN',
+    mx: 'MX',
+    ru: 'RU',
+    kr: 'KR',
+    us: 'US',
   };
 
   const tld = domain.split('.').pop()?.toLowerCase();
@@ -324,7 +329,7 @@ export function getBrowserContext(): BrowserContext {
  */
 function getColorScheme(): 'light' | 'dark' | 'no-preference' {
   if (typeof window === 'undefined') return 'no-preference';
-  
+
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     return 'dark';
   }

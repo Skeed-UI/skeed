@@ -40,7 +40,10 @@ export const stage_12_user_stories: Stage<PipelineState, PipelineState> = {
         system: SYSTEM,
         user: `Idea: ${state.intent?.jobToBeDone ?? state.prompt}
 Demographic: ${top?.demographic}/${top?.niche}
-Pain points: ${(state.painPoints ?? []).slice(0, 3).map((p) => p.description).join(' | ')}
+Pain points: ${(state.painPoints ?? [])
+          .slice(0, 3)
+          .map((p) => p.description)
+          .join(' | ')}
 
 Write user stories now.`,
         schema: StoriesOut,
@@ -55,7 +58,10 @@ Write user stories now.`,
             iWantTo: 'understand the product within 10 seconds of landing',
             soThat: 'I can decide whether to engage',
             priority: 'P0' as const,
-            acceptanceCriteria: ['hero clearly states value prop', 'one obvious CTA above the fold'],
+            acceptanceCriteria: [
+              'hero clearly states value prop',
+              'one obvious CTA above the fold',
+            ],
           },
           {
             id: 'us-2',

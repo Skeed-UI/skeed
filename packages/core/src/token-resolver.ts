@@ -1,5 +1,5 @@
-import type { DemographicPreset } from '@skeed/contracts/preset';
 import type { Density } from '@skeed/contracts/demographic';
+import type { DemographicPreset } from '@skeed/contracts/preset';
 
 /**
  * Token reference structure for semantic tokens like:
@@ -9,7 +9,16 @@ import type { Density } from '@skeed/contracts/demographic';
  * - motion.duration.fast
  */
 export interface TokenRef {
-  namespace: 'color' | 'spacing' | 'radius' | 'density' | 'font' | 'motion' | 'border' | 'shadow' | 'icon';
+  namespace:
+    | 'color'
+    | 'spacing'
+    | 'radius'
+    | 'density'
+    | 'font'
+    | 'motion'
+    | 'border'
+    | 'shadow'
+    | 'icon';
   path: string[];
 }
 
@@ -55,12 +64,17 @@ export interface TokenOverrides {
     secondary?: string;
     accent?: string;
   };
-  density?: Partial<Record<Density, {
-    padY?: number;
-    padX?: number;
-    gap?: number;
-    lineHeight?: number;
-  }>>;
+  density?: Partial<
+    Record<
+      Density,
+      {
+        padY?: number;
+        padX?: number;
+        gap?: number;
+        lineHeight?: number;
+      }
+    >
+  >;
   motion?: {
     profile?: 'none' | 'subtle' | 'playful' | 'dramatic';
   };
@@ -76,8 +90,18 @@ export function parseTokenRef(token: string): TokenRef | null {
   if (parts.length < 2) return null;
 
   const namespace = parts[0] as TokenRef['namespace'];
-  const validNamespaces: TokenRef['namespace'][] = ['color', 'spacing', 'radius', 'density', 'font', 'motion', 'border', 'shadow', 'icon'];
-  
+  const validNamespaces: TokenRef['namespace'][] = [
+    'color',
+    'spacing',
+    'radius',
+    'density',
+    'font',
+    'motion',
+    'border',
+    'shadow',
+    'icon',
+  ];
+
   if (!validNamespaces.includes(namespace)) {
     return null;
   }
@@ -103,13 +127,13 @@ export function tokenToCssVar(ref: TokenRef): string {
 export function resolveToken(
   ref: TokenRef,
   preset: DemographicPreset,
-  overrides?: TokenOverrides
+  overrides?: TokenOverrides,
 ): string | null {
   switch (ref.namespace) {
     case 'color': {
       const [ramp, shade] = ref.path;
       if (!ramp || !shade) return null;
-      
+
       // Check overrides first
       if (overrides?.color?.primary && ramp === 'brand' && shade === '500') {
         return overrides.color.primary;
@@ -117,28 +141,28 @@ export function resolveToken(
       if (overrides?.color?.secondary && ramp === 'brand' && shade === '600') {
         return overrides.color.secondary;
       }
-      
+
       const rampData = preset.palette[ramp as keyof typeof preset.palette];
       if (typeof rampData === 'object' && rampData !== null) {
         return (rampData as Record<string, string>)[shade] || null;
       }
       return null;
     }
-    
+
     case 'spacing': {
       const [idx] = ref.path;
       if (!idx) return null;
-      const index = parseInt(idx, 10);
+      const index = Number.parseInt(idx, 10);
       if (Number.isNaN(index) || index < 0 || index >= preset.spacing.length) {
         return null;
       }
       return `${preset.spacing[index]}rem`;
     }
-    
+
     case 'radius': {
       const [idx] = ref.path;
       if (!idx) return null;
-      const index = parseInt(idx, 10);
+      const index = Number.parseInt(idx, 10);
       if (Number.isNaN(index) || index < 0 || index >= preset.radius.length) {
         return null;
       }
@@ -148,95 +172,96 @@ export function resolveToken(
       }
       return `${preset.radius[index]}rem`;
     }
-    
+
     case 'density': {
       const [density, prop] = ref.path;
       if (!density || !prop) return null;
-      
+
       const densityConfig = preset.density[density as Density];
       if (!densityConfig) return null;
-      
+
       // Check overrides
-      const overrideValue = overrides?.density?.[density as Density]?.[prop as 'padY' | 'padX' | 'gap' | 'lineHeight'];
+      const overrideValue =
+        overrides?.density?.[density as Density]?.[prop as 'padY' | 'padX' | 'gap' | 'lineHeight'];
       if (overrideValue !== undefined) {
         return prop === 'lineHeight' ? String(overrideValue) : `${overrideValue}rem`;
       }
-      
+
       const value = densityConfig[prop as keyof typeof densityConfig];
       return prop === 'lineHeight' ? String(value) : `${value}rem`;
     }
-    
+
     case 'font': {
       const [role, prop] = ref.path;
       if (!role || !prop) return null;
-      
+
       const fontConfig = preset.typography[role as 'display' | 'body' | 'mono' | 'numeric'];
       if (!fontConfig || typeof fontConfig !== 'object') return null;
-      
+
       if (prop === 'family') {
         const family = fontConfig.family;
         const fallback = fontConfig.fallback;
         return [family, ...fallback].join(', ');
       }
-      
+
       const propValue = (fontConfig as unknown as Record<string, string | number | string[]>)[prop];
       return typeof propValue === 'string' ? propValue : null;
     }
-    
+
     case 'motion': {
       const [type, name] = ref.path;
       if (!type || !name) return null;
-      
+
       if (type === 'duration') {
         const ms = preset.motion.durations[name];
         return ms ? `${ms}ms` : null;
       }
-      
+
       if (type === 'easing') {
         return preset.motion.easings[name] || null;
       }
-      
+
       return null;
     }
-    
+
     case 'shadow': {
       const [idx] = ref.path;
       if (!idx) return null;
-      const index = parseInt(idx, 10);
+      const index = Number.parseInt(idx, 10);
       if (Number.isNaN(index) || index < 0 || index >= preset.elevation.shadows.length) {
         return null;
       }
       return preset.elevation.shadows[index] ?? null;
     }
-    
+
     case 'border': {
       const [prop] = ref.path;
       if (!prop) return null;
-      
+
       if (prop === 'width') {
         return `${preset.borders.width}px`;
       }
       if (prop === 'style') {
         return preset.borders.style;
       }
-      
+
       return null;
     }
-    
+
     case 'icon': {
       const [prop] = ref.path;
       if (!prop) return null;
-      
+
       if (prop === 'pack') {
         return preset.iconography.pack;
       }
       if (prop === 'style') {
         return preset.iconography.style;
       }
-      
+
       return null;
     }
-    
+
     default:
       return null;
   }
@@ -246,11 +271,14 @@ export function resolveToken(
  * Calculate relative luminance of a color
  */
 function getLuminance(hex: string): number {
-  const rgb = hex.replace('#', '').match(/.{2}/g)?.map(x => {
-    const v = parseInt(x, 16) / 255;
-    return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
-  });
-  
+  const rgb = hex
+    .replace('#', '')
+    .match(/.{2}/g)
+    ?.map((x) => {
+      const v = Number.parseInt(x, 16) / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+
   if (!rgb || rgb.length !== 3) return 0;
   const [r, g, b] = rgb;
   if (r === undefined || g === undefined || b === undefined) return 0;
@@ -274,7 +302,7 @@ export function getContrastRatio(color1: string, color2: string): number {
 export function validateContrast(
   pairs: ContrastPair[],
   minAARatio = 4.5,
-  minAAARatio = 7
+  minAAARatio = 7,
 ): { valid: boolean; violations: ContrastPair[]; fixed: ContrastPair[] } {
   const violations: ContrastPair[] = [];
   const fixed: ContrastPair[] = [];
@@ -282,7 +310,7 @@ export function validateContrast(
   for (const pair of pairs) {
     const passesAA = pair.ratio >= minAARatio;
     const passesAAA = pair.ratio >= minAAARatio;
-    
+
     if (!passesAA) {
       violations.push(pair);
     } else if (!pair.passesAA || !pair.passesAAA) {
@@ -304,7 +332,7 @@ export function validateContrast(
 export function generateCSSVariables(
   preset: DemographicPreset,
   density: Density,
-  overrides?: TokenOverrides
+  overrides?: TokenOverrides,
 ): ResolvedTokens {
   const cssVariables: CSSVariable[] = [];
 
@@ -316,7 +344,7 @@ export function generateCSSVariables(
     for (const [shade, value] of Object.entries(shades as Record<string, string>)) {
       const ref: TokenRef = { namespace: 'color', path: [ramp, shade] };
       let resolvedValue = resolveToken(ref, preset, overrides);
-      
+
       // Apply brand color overrides
       if (ramp === 'brand') {
         if (shade === '500' && overrides?.color?.primary) {
@@ -325,7 +353,7 @@ export function generateCSSVariables(
           resolvedValue = overrides.color.secondary;
         }
       }
-      
+
       cssVariables.push({
         name: tokenToCssVar(ref),
         value: resolvedValue || value,
@@ -434,7 +462,7 @@ export function generateCSSVariables(
   for (const role of ['display', 'body', 'mono', 'numeric'] as const) {
     const config = preset.typography[role];
     if (!config) continue;
-    
+
     const familyRef: TokenRef = { namespace: 'font', path: [role, 'family'] };
     const familyValue = config.family;
     const fallbackValue = config.fallback;
@@ -446,29 +474,30 @@ export function generateCSSVariables(
   }
 
   // Process contrast pairs
-  const contrastPairs: ContrastPair[] = preset.palette.contrastPairs?.map(pair => {
-    // Resolve the color values
-    const fgParts = pair.fg.split('.');
-    const bgParts = pair.bg.split('.');
-    
-    const fgRef: TokenRef = { namespace: 'color', path: fgParts };
-    const bgRef: TokenRef = { namespace: 'color', path: bgParts };
-    
-    const resolvedFg = resolveToken(fgRef, preset, overrides);
-    const resolvedBg = resolveToken(bgRef, preset, overrides);
-    const fgValue = resolvedFg ?? '#000000';
-    const bgValue = resolvedBg ?? '#ffffff';
-    
-    const ratio = getContrastRatio(fgValue, bgValue);
-    
-    return {
-      foreground: pair.fg,
-      background: pair.bg,
-      ratio,
-      passesAA: ratio >= 4.5,
-      passesAAA: ratio >= 7,
-    };
-  }) ?? [];
+  const contrastPairs: ContrastPair[] =
+    preset.palette.contrastPairs?.map((pair) => {
+      // Resolve the color values
+      const fgParts = pair.fg.split('.');
+      const bgParts = pair.bg.split('.');
+
+      const fgRef: TokenRef = { namespace: 'color', path: fgParts };
+      const bgRef: TokenRef = { namespace: 'color', path: bgParts };
+
+      const resolvedFg = resolveToken(fgRef, preset, overrides);
+      const resolvedBg = resolveToken(bgRef, preset, overrides);
+      const fgValue = resolvedFg ?? '#000000';
+      const bgValue = resolvedBg ?? '#ffffff';
+
+      const ratio = getContrastRatio(fgValue, bgValue);
+
+      return {
+        foreground: pair.fg,
+        background: pair.bg,
+        ratio,
+        passesAA: ratio >= 4.5,
+        passesAAA: ratio >= 7,
+      };
+    }) ?? [];
 
   return {
     cssVariables,

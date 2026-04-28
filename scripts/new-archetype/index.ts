@@ -56,6 +56,8 @@ async function main(): Promise<void> {
 }
 
 main().catch((err: unknown) => {
-  process.stderr.write(`new-archetype failed: ${err instanceof Error ? err.message : String(err)}\n`);
+  process.stderr.write(
+    `new-archetype failed: ${err instanceof Error ? err.message : String(err)}\n`,
+  );
   process.exit(1);
 });

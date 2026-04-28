@@ -1,6 +1,6 @@
-import { type HTMLAttributes, forwardRef } from 'react';
-import { cn } from '@skeed/core/cn';
 import { X } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   variant?: 'info' | 'success' | 'warning' | 'danger';

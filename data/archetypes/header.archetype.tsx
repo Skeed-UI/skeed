@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface BreadcrumbItem {
   label: string;
@@ -14,15 +14,13 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   divider?: boolean;
 }
 
-const BASE_CLASSES =
-  'w-full bg-skeed-color-neutral-50 px-skeed-spacing-6 py-skeed-spacing-4';
+const BASE_CLASSES = 'w-full bg-skeed-color-neutral-50 px-skeed-spacing-6 py-skeed-spacing-4';
 
 const DIVIDER_CLASSES = 'border-b border-skeed-color-neutral-200';
 
 const BREADCRUMB_NAV_CLASSES = 'mb-skeed-spacing-2';
 
-const BREADCRUMB_LIST_CLASSES =
-  'flex items-center gap-skeed-spacing-1 list-none m-0 p-0 flex-wrap';
+const BREADCRUMB_LIST_CLASSES = 'flex items-center gap-skeed-spacing-1 list-none m-0 p-0 flex-wrap';
 
 const BREADCRUMB_ITEM_CLASSES = 'flex items-center gap-skeed-spacing-1';
 
@@ -43,32 +41,18 @@ const CONTENT_ROW_CLASSES = 'flex items-start justify-between gap-skeed-density-
 
 const TEXT_GROUP_CLASSES = 'flex flex-col gap-skeed-spacing-1 min-w-0';
 
-const TITLE_CLASSES =
-  'font-skeed-display font-semibold text-skeed-color-neutral-900 truncate';
+const TITLE_CLASSES = 'font-skeed-display font-semibold text-skeed-color-neutral-900 truncate';
 
-const SUBTITLE_CLASSES =
-  'font-skeed-body text-skeed-color-neutral-500';
+const SUBTITLE_CLASSES = 'font-skeed-body text-skeed-color-neutral-500';
 
 const ACTIONS_CLASSES = 'flex-shrink-0 flex items-center gap-skeed-density-cozy-gap';
 
 export const Header = forwardRef<HTMLElement, HeaderProps>(function Header(
-  {
-    title,
-    subtitle,
-    breadcrumb,
-    actions,
-    divider = true,
-    className,
-    ...rest
-  },
+  { title, subtitle, breadcrumb, actions, divider = true, className, ...rest },
   ref,
 ) {
   return (
-    <header
-      ref={ref}
-      className={cn(BASE_CLASSES, divider && DIVIDER_CLASSES, className)}
-      {...rest}
-    >
+    <header ref={ref} className={cn(BASE_CLASSES, divider && DIVIDER_CLASSES, className)} {...rest}>
       {breadcrumb && breadcrumb.length > 0 && (
         <nav aria-label="Breadcrumb" className={BREADCRUMB_NAV_CLASSES}>
           <ol className={BREADCRUMB_LIST_CLASSES} aria-label="breadcrumb">
@@ -77,7 +61,9 @@ export const Header = forwardRef<HTMLElement, HeaderProps>(function Header(
               return (
                 <li key={index} className={BREADCRUMB_ITEM_CLASSES}>
                   {index > 0 && (
-                    <span className={BREADCRUMB_SEPARATOR_CLASSES} aria-hidden="true">/</span>
+                    <span className={BREADCRUMB_SEPARATOR_CLASSES} aria-hidden="true">
+                      /
+                    </span>
                   )}
                   {isLast || !crumb.href ? (
                     <span

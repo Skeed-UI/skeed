@@ -23,9 +23,7 @@
     "radius.7",
     "shadow.1"
   ],
-  "assetSlots": [
-    { "role": "feature-icon", "type": "decorative", "required": false }
-  ],
+  "assetSlots": [{ "role": "feature-icon", "type": "decorative", "required": false }],
   "defaultVariantsPerDensity": 1,
   "frameworks": ["react"],
   "license": "MIT",

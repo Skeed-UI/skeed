@@ -8,8 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const pkgRoot = resolve(__dirname, '..');
 
 const registryPath =
-  process.env.SKEED_REGISTRY_PATH ??
-  resolve(pkgRoot, '..', 'indexer', 'dist', 'registry.db');
+  process.env.SKEED_REGISTRY_PATH ?? resolve(pkgRoot, '..', 'indexer', 'dist', 'registry.db');
 
 async function main(): Promise<void> {
   const { server } = createServer({ registryPath });
@@ -19,7 +18,7 @@ async function main(): Promise<void> {
 }
 
 main().catch((err: unknown) => {
-  const message = err instanceof Error ? err.stack ?? err.message : String(err);
+  const message = err instanceof Error ? (err.stack ?? err.message) : String(err);
   process.stderr.write(`skeed-mcp failed: ${message}\n`);
   process.exit(1);
 });

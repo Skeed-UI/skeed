@@ -1,5 +1,5 @@
-import kleur from 'kleur';
 import type { OrchestratorEvent } from '@skeed/pipeline';
+import kleur from 'kleur';
 
 /** Single-line stage progress printer. */
 export function attachProgress(): (e: OrchestratorEvent) => void {

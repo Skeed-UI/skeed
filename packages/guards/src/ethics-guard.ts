@@ -1,6 +1,6 @@
 /**
  * Ethics Guard
- * 
+ *
  * Detects forbidden patterns for AAA-strict demographics.
  * Enforces accessibility, safety, and ethical design standards.
  */
@@ -45,75 +45,72 @@ export interface EthicsViolation {
 }
 
 // Demographics requiring AAA strict compliance
-const AAA_STRICT_DEMOGRAPHICS = [
-  'kids',
-  'education',
-  'health',
-  'gov',
-  'mental_wellness',
-];
+const AAA_STRICT_DEMOGRAPHICS = ['kids', 'education', 'health', 'gov', 'mental_wellness'];
 
 // Forbidden patterns by demographic
-const FORBIDDEN_PATTERNS: Record<string, Array<{ pattern: RegExp; message: string; fix: string }>> = {
+const FORBIDDEN_PATTERNS: Record<
+  string,
+  Array<{ pattern: RegExp; message: string; fix: string }>
+> = {
   kids: [
-    { 
-      pattern: /autoplay|autoPlay/, 
+    {
+      pattern: /autoplay|autoPlay/,
       message: 'Autoplay can overwhelm children and cause distress',
       fix: 'Remove autoplay, add explicit play controls',
     },
-    { 
-      pattern: /notification.*sound|alert.*sound/i, 
+    {
+      pattern: /notification.*sound|alert.*sound/i,
       message: 'Unexpected sounds can startle children',
       fix: 'Use visual indicators instead of sound alerts',
     },
-    { 
-      pattern: /infinite-scroll|infiniteScroll/i, 
+    {
+      pattern: /infinite-scroll|infiniteScroll/i,
       message: 'Infinite scroll can be addictive for children',
       fix: 'Use pagination with clear end states',
     },
-    { 
-      pattern: /gamification.*points|earn.*coins/i, 
+    {
+      pattern: /gamification.*points|earn.*coins/i,
       message: 'Gamification can promote addictive behaviors in children',
       fix: 'Focus on learning outcomes, not extrinsic rewards',
     },
   ],
   education: [
-    { 
-      pattern: /paywall|upgrade.*premium/i, 
+    {
+      pattern: /paywall|upgrade.*premium/i,
       message: 'Paywalls in educational content limit access to learning',
       fix: 'Ensure core educational content remains free',
     },
-    { 
-      pattern: /skip.*lesson|skip.*content/i, 
+    {
+      pattern: /skip.*lesson|skip.*content/i,
       message: 'Skipping educational content undermines learning objectives',
       fix: 'Allow review but encourage completion',
     },
   ],
   health: [
-    { 
-      pattern: /guaranteed.*cure|100%.*effective/i, 
+    {
+      pattern: /guaranteed.*cure|100%.*effective/i,
       message: 'Medical guarantees are misleading and potentially harmful',
       fix: 'Use evidence-based language with appropriate disclaimers',
     },
-    { 
-      pattern: /no.*side.*effects|zero.*risk/i, 
+    {
+      pattern: /no.*side.*effects|zero.*risk/i,
       message: 'Minimizing medical risks is dangerous',
       fix: 'Always disclose potential side effects and risks',
     },
   ],
   mental_wellness: [
-    { 
-      pattern: /cure.*depression|cure.*anxiety/i, 
+    {
+      pattern: /cure.*depression|cure.*anxiety/i,
       message: 'Mental health conditions cannot be "cured" - they are managed',
       fix: 'Use "manage", "support", or "treat" instead of "cure"',
     },
-    { 
-      pattern: /just.*think.*positive|simply.*happy/i, 
+    {
+      pattern: /just.*think.*positive|simply.*happy/i,
       message: 'Toxic positivity trivializes mental health struggles',
       fix: 'Acknowledge difficulties while offering support resources',
     },
-    { 
-      pattern: /self-harm|suicide.*method/i, 
+    {
+      pattern: /self-harm|suicide.*method/i,
       message: 'Content about self-harm methods is prohibited',
       fix: 'Replace with crisis resources and support information',
     },
@@ -122,23 +119,23 @@ const FORBIDDEN_PATTERNS: Record<string, Array<{ pattern: RegExp; message: strin
 
 // Accessibility patterns (required for AAA)
 const REQUIRED_ACCESSIBILITY_PATTERNS = [
-  { 
-    name: 'alt-text', 
+  {
+    name: 'alt-text',
     pattern: /alt\s*=\s*["'][^"']+["']/,
     message: 'Images must have descriptive alt text',
   },
-  { 
-    name: 'aria-label', 
+  {
+    name: 'aria-label',
     pattern: /aria-label|aria-labelledby/,
     message: 'Interactive elements need accessible labels',
   },
-  { 
-    name: 'focus-visible', 
+  {
+    name: 'focus-visible',
     pattern: /focus-visible|focusVisible/,
     message: 'Keyboard navigation must be visible',
   },
-  { 
-    name: 'reduced-motion', 
+  {
+    name: 'reduced-motion',
     pattern: /prefers-reduced-motion|motion-reduce/,
     message: 'Respect user motion preferences',
   },
@@ -149,21 +146,21 @@ const REQUIRED_ACCESSIBILITY_PATTERNS = [
  */
 export function runEthicsGuard(options: EthicsGuardOptions): EthicsGuardResult {
   const { source, demographicId, strict = false } = options;
-  
+
   const violations: EthicsViolation[] = [];
   const fixes: string[] = [];
-  
+
   // Check if this demographic requires strict checking
   const isAAAStrict = AAA_STRICT_DEMOGRAPHICS.includes(demographicId);
-  
+
   // Check forbidden patterns for this demographic
   const forbiddenPatterns = FORBIDDEN_PATTERNS[demographicId] || [];
   const lines = source.split('\n');
-  
+
   for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
     const line = lines[lineIndex]!;
     const lineNum = lineIndex + 1;
-    
+
     for (const { pattern, message, fix } of forbiddenPatterns) {
       const match = pattern.exec(line);
       if (match) {
@@ -179,7 +176,7 @@ export function runEthicsGuard(options: EthicsGuardOptions): EthicsGuardResult {
       }
     }
   }
-  
+
   // For AAA strict, check accessibility requirements
   if (isAAAStrict) {
     for (const { name, pattern, message } of REQUIRED_ACCESSIBILITY_PATTERNS) {
@@ -191,7 +188,7 @@ export function runEthicsGuard(options: EthicsGuardOptions): EthicsGuardResult {
         if (name === 'aria-label' && !/<button|<a |<input/i.test(source)) {
           continue; // No interactive elements
         }
-        
+
         violations.push({
           type: 'missing-accessibility',
           line: 1,
@@ -204,20 +201,20 @@ export function runEthicsGuard(options: EthicsGuardOptions): EthicsGuardResult {
       }
     }
   }
-  
+
   // Determine severity
   let severity: 'error' | 'warning' | 'info' = 'info';
   if (violations.length > 0) {
     severity = isAAAStrict || strict ? 'error' : 'warning';
   }
-  
+
   // Validate based on strictness
-  const valid = isAAAStrict 
-    ? violations.length === 0 
-    : strict 
-      ? violations.length === 0 
-      : violations.filter(v => v.type === 'forbidden-pattern').length === 0;
-  
+  const valid = isAAAStrict
+    ? violations.length === 0
+    : strict
+      ? violations.length === 0
+      : violations.filter((v) => v.type === 'forbidden-pattern').length === 0;
+
   return {
     valid,
     severity,
@@ -240,18 +237,18 @@ export function formatEthicsReport(result: EthicsGuardResult): string {
   if (result.valid) {
     return '✅ Ethics validation passed';
   }
-  
+
   const icon = result.severity === 'error' ? '❌' : '⚠️';
   const lines: string[] = [
     `${icon} Ethics validation ${result.severity} - ${result.violations.length} violations:`,
   ];
-  
+
   for (const v of result.violations) {
     lines.push(`   Line ${v.line}:${v.column} - ${v.type}`);
     lines.push(`     ${v.message}`);
     lines.push(`     → ${v.fix}`);
   }
-  
+
   return lines.join('\n');
 }
 

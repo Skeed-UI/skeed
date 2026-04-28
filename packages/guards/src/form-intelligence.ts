@@ -1,15 +1,15 @@
 /**
  * Form Intelligence Quality Gates
- * 
+ *
  * Validates form configurations, intelligence metadata, and ensures
  * demographic-appropriate form behavior across the Skeed pipeline.
  */
 
 import type {
-  FormIntelligenceConfig,
   FieldGroup,
-  ValidationRule,
   FieldType,
+  FormIntelligenceConfig,
+  ValidationRule,
 } from '@skeed/contracts';
 
 export interface FormIntelligenceGuardOptions {
@@ -42,7 +42,7 @@ export function checkFormIntelligence(
   config: Partial<FormIntelligenceConfig>,
   groups: FieldGroup[],
   rules: Record<string, ValidationRule>,
-  options: FormIntelligenceGuardOptions = {}
+  options: FormIntelligenceGuardOptions = {},
 ): FormIntelligenceGuardResult {
   const violations: FormIntelligenceViolation[] = [];
   const { strict = false } = options;
@@ -77,7 +77,7 @@ export function checkFormIntelligence(
  */
 function validateConfig(
   config: Partial<FormIntelligenceConfig>,
-  strict: boolean
+  strict: boolean,
 ): FormIntelligenceViolation[] {
   const violations: FormIntelligenceViolation[] = [];
 
@@ -97,7 +97,8 @@ function validateConfig(
         type: 'error',
         code: 'MISSING_GROUPING_STRATEGY',
         message: 'Form intelligence config must specify groupingStrategy',
-        suggestion: 'Add groupingStrategy: "semantic" | "functional" | "frequency" | "dependency" | "none"',
+        suggestion:
+          'Add groupingStrategy: "semantic" | "functional" | "frequency" | "dependency" | "none"',
       });
     }
 
@@ -158,7 +159,7 @@ function validateConfig(
  */
 function validateGroups(
   groups: FieldGroup[],
-  options: FormIntelligenceGuardOptions
+  options: FormIntelligenceGuardOptions,
 ): FormIntelligenceViolation[] {
   const violations: FormIntelligenceViolation[] = [];
   const { maxGroups = 10, minFieldsPerGroup = 1, maxFieldsPerGroup = 10 } = options;
@@ -239,11 +240,22 @@ function validateGroups(
  */
 function validateRules(
   rules: Record<string, ValidationRule>,
-  strict: boolean
+  strict: boolean,
 ): FormIntelligenceViolation[] {
   const violations: FormIntelligenceViolation[] = [];
   const validFieldTypes: FieldType[] = [
-    'text', 'email', 'password', 'number', 'phone', 'date', 'url', 'textarea', 'select', 'checkbox', 'radio', 'file'
+    'text',
+    'email',
+    'password',
+    'number',
+    'phone',
+    'date',
+    'url',
+    'textarea',
+    'select',
+    'checkbox',
+    'radio',
+    'file',
   ];
 
   for (const [fieldId, rule] of Object.entries(rules)) {
@@ -303,7 +315,7 @@ function validateRules(
  * Validate demographic configuration fit
  */
 function validateDemographicFit(
-  config: Partial<FormIntelligenceConfig>
+  config: Partial<FormIntelligenceConfig>,
 ): FormIntelligenceViolation[] {
   const violations: FormIntelligenceViolation[] = [];
 
@@ -334,7 +346,7 @@ function validateDemographicFit(
  */
 export function checkFormAccessibility(
   groups: FieldGroup[],
-  rules: Record<string, ValidationRule>
+  rules: Record<string, ValidationRule>,
 ): FormIntelligenceGuardResult {
   const violations: FormIntelligenceViolation[] = [];
 
@@ -385,7 +397,9 @@ export function formatFormIntelligenceReport(result: FormIntelligenceGuardResult
     return '✓ Form intelligence configuration is valid\n';
   }
 
-  lines.push(result.isValid ? '⚠ Form intelligence has warnings\n' : '✗ Form intelligence has errors\n');
+  lines.push(
+    result.isValid ? '⚠ Form intelligence has warnings\n' : '✗ Form intelligence has errors\n',
+  );
 
   if (result.errors.length > 0) {
     lines.push('Errors:');
@@ -418,7 +432,7 @@ export function formatFormIntelligenceReport(result: FormIntelligenceGuardResult
 export function isFormProductionReady(
   config: Partial<FormIntelligenceConfig>,
   groups: FieldGroup[],
-  rules: Record<string, ValidationRule>
+  rules: Record<string, ValidationRule>,
 ): boolean {
   const result = checkFormIntelligence(config, groups, rules, { strict: true });
   return result.isValid && result.warnings.length === 0;

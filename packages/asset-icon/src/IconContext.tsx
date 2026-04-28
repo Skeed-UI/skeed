@@ -1,7 +1,7 @@
 'use client';
 
-import { createContext, useContext, type ReactNode } from 'react';
-import type { IconWeight, IconVariant } from './types';
+import { type ReactNode, createContext, useContext } from 'react';
+import type { IconVariant, IconWeight } from './types';
 
 export interface IconContextValue {
   weight: IconWeight;
@@ -19,12 +19,12 @@ export interface IconProviderProps {
   variant?: IconVariant;
 }
 
-export function IconProvider({ children, weight = 'regular', variant = 'stroke' }: IconProviderProps) {
-  return (
-    <IconContext.Provider value={{ weight, variant }}>
-      {children}
-    </IconContext.Provider>
-  );
+export function IconProvider({
+  children,
+  weight = 'regular',
+  variant = 'stroke',
+}: IconProviderProps) {
+  return <IconContext.Provider value={{ weight, variant }}>{children}</IconContext.Provider>;
 }
 
 export function useIconContext(): IconContextValue {

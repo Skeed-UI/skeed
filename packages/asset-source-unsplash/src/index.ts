@@ -25,9 +25,10 @@ export class UnsplashAssetSource implements AssetSource {
     const isImageSlot = imageSlots.includes(req.slotRole);
 
     // Prefer Unsplash for photography-style requests, not for icons/logos
-    const isPhotoRequest = !req.styleHint?.includes('icon') &&
-                           !req.styleHint?.includes('logo') &&
-                           !req.styleHint?.includes('svg');
+    const isPhotoRequest =
+      !req.styleHint?.includes('icon') &&
+      !req.styleHint?.includes('logo') &&
+      !req.styleHint?.includes('svg');
 
     if (!isImageSlot) {
       return { score: 0.1, reason: 'not an image slot' };
@@ -65,7 +66,7 @@ export class UnsplashAssetSource implements AssetSource {
       throw new Error(`Unsplash API error: ${response.status} ${response.statusText}`);
     }
 
-    const data = await response.json() as { results: UnsplashPhoto[] };
+    const data = (await response.json()) as { results: UnsplashPhoto[] };
 
     const photo = data.results[0];
     if (!photo) {

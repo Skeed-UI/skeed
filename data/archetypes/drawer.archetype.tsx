@@ -1,6 +1,6 @@
-import { type HTMLAttributes, forwardRef, useEffect, useRef } from 'react';
-import { cn } from '@skeed/core/cn';
 import { X } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef, useEffect, useRef } from 'react';
 
 type DrawerSide = 'left' | 'right' | 'bottom';
 type DrawerSize = 'sm' | 'md' | 'lg';
@@ -58,8 +58,7 @@ const HEADER_CLASSES =
   'px-skeed-spacing-6 py-skeed-spacing-4 ' +
   'border-b border-skeed-color-neutral-200';
 
-const TITLE_CLASSES =
-  'font-skeed-display font-semibold text-skeed-color-neutral-900';
+const TITLE_CLASSES = 'font-skeed-display font-semibold text-skeed-color-neutral-900';
 
 const CLOSE_BUTTON_CLASSES =
   'flex items-center justify-center ' +
@@ -70,20 +69,10 @@ const CLOSE_BUTTON_CLASSES =
   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 ' +
   'flex-shrink-0';
 
-const BODY_CLASSES =
-  'flex-1 overflow-y-auto px-skeed-spacing-6 py-skeed-spacing-4';
+const BODY_CLASSES = 'flex-1 overflow-y-auto px-skeed-spacing-6 py-skeed-spacing-4';
 
 export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
-  {
-    open,
-    onClose,
-    title,
-    side = 'right',
-    size = 'md',
-    children,
-    className,
-    ...rest
-  },
+  { open, onClose, title, side = 'right', size = 'md', children, className, ...rest },
   forwardedRef,
 ) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -122,13 +111,13 @@ export const Drawer = forwardRef<HTMLDivElement, DrawerProps>(function Drawer(
     } else {
       document.body.style.overflow = '';
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [open]);
 
   const isHorizontal = side === 'left' || side === 'right';
-  const sizeClass = isHorizontal
-    ? HORIZONTAL_SIZE_CLASSES[size]
-    : BOTTOM_SIZE_CLASSES[size];
+  const sizeClass = isHorizontal ? HORIZONTAL_SIZE_CLASSES[size] : BOTTOM_SIZE_CLASSES[size];
 
   return (
     <>

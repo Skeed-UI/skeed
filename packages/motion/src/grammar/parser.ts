@@ -3,19 +3,53 @@
  * Format: "[material:jelly] [onHover:ripple:intensity=0.6] [onClick:elastic]"
  */
 
-import type { MotionConfig, EffectTrigger, EffectName, ParsedMotion, ParsedEffect, EffectSpec } from './types.js';
 import type { MaterialType } from '../physics/types.js';
+import type {
+  EffectName,
+  EffectSpec,
+  EffectTrigger,
+  MotionConfig,
+  ParsedEffect,
+  ParsedMotion,
+} from './types.js';
 
 const TRIGGERS: EffectTrigger[] = [
-  'onHover', 'onClick', 'onFocus', 'onBlur', 'onScroll',
-  'onMount', 'onUnmount', 'idle', 'enter', 'leave'
+  'onHover',
+  'onClick',
+  'onFocus',
+  'onBlur',
+  'onScroll',
+  'onMount',
+  'onUnmount',
+  'idle',
+  'enter',
+  'leave',
 ];
 
 const EFFECTS: EffectName[] = [
-  'ripple', 'elastic', 'wind', 'morph', 'magnetic', 'glow', 'curtain', 'jiggle',
-  'breathe', 'pulse', 'lift', 'spotlight', 'god-rays', 'lens-flare',
-  'cursor-wake', 'ambient-breeze', 'telescope-expand', 'unfold-cascade',
-  'domino-reveal', 'confidence-wave', 'elastic-snap', 'aurora-glow', 'waveform-pulse'
+  'ripple',
+  'elastic',
+  'wind',
+  'morph',
+  'magnetic',
+  'glow',
+  'curtain',
+  'jiggle',
+  'breathe',
+  'pulse',
+  'lift',
+  'spotlight',
+  'god-rays',
+  'lens-flare',
+  'cursor-wake',
+  'ambient-breeze',
+  'telescope-expand',
+  'unfold-cascade',
+  'domino-reveal',
+  'confidence-wave',
+  'elastic-snap',
+  'aurora-glow',
+  'waveform-pulse',
 ];
 
 const MATERIALS: MaterialType[] = ['jelly', 'metal', 'rubber', 'fabric', 'glass', 'magnetic'];
@@ -24,7 +58,9 @@ const MATERIALS: MaterialType[] = ['jelly', 'metal', 'rubber', 'fabric', 'glass'
  * Parse a single bracketed instruction like "[material:jelly]"
  * or "[onHover:ripple:intensity=0.6]"
  */
-function parseInstruction(instruction: string): ParsedEffect | { type: 'material'; value: MaterialType } | null {
+function parseInstruction(
+  instruction: string,
+): ParsedEffect | { type: 'material'; value: MaterialType } | null {
   // Remove brackets and trim
   const content = instruction.replace(/^\[|\]$/g, '').trim();
   if (!content) return null;
@@ -183,8 +219,16 @@ export function serializeMotion(config: MotionConfig): string {
   }
 
   const triggers: EffectTrigger[] = [
-    'onHover', 'onClick', 'onFocus', 'onBlur', 'onScroll',
-    'onMount', 'onUnmount', 'idle', 'enter', 'leave'
+    'onHover',
+    'onClick',
+    'onFocus',
+    'onBlur',
+    'onScroll',
+    'onMount',
+    'onUnmount',
+    'idle',
+    'enter',
+    'leave',
   ];
 
   for (const trigger of triggers) {

@@ -1,6 +1,6 @@
-import { type HTMLAttributes, forwardRef } from 'react';
+import { ArrowDown, ArrowRight, ArrowUp } from '@skeed/asset-icon';
 import { cn } from '@skeed/core/cn';
-import { ArrowUp, ArrowDown, ArrowRight } from '@skeed/asset-icon';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface KpiMetric {
   id: string;
@@ -36,86 +36,73 @@ const TrendIcon = ({ trend }: { trend: 'up' | 'down' | 'flat' }) => {
   return <ArrowRight size={14} />;
 };
 
-export const KpiGrid = forwardRef<HTMLElement, KpiGridProps>(
-  function KpiGrid(
-    { className, metrics, columns = 4, compact = false, ...rest },
-    ref,
-  ) {
-    return (
-      <section
-        ref={ref as React.Ref<HTMLElement>}
-        className={cn('w-full', className)}
-        {...rest}
-      >
-        <div
-          className={cn(
-            'grid gap-skeed-density-cozy-gap',
-            gridColsClasses[columns],
-          )}
-        >
-          {metrics.map((metric) => (
-            <div
-              key={metric.id}
-              className={cn(
-                'flex flex-col bg-skeed-color-neutral-50 rounded-skeed-radius-2 shadow-skeed-shadow-1 border border-skeed-color-neutral-200',
-                compact
-                  ? 'px-skeed-spacing-3 py-skeed-spacing-2'
-                  : 'px-skeed-density-cozy-padx py-skeed-density-cozy-pady',
-              )}
-            >
-              <p className="font-skeed-body text-sm text-skeed-color-neutral-600 mb-skeed-spacing-1">
-                {metric.label}
-              </p>
+export const KpiGrid = forwardRef<HTMLElement, KpiGridProps>(function KpiGrid(
+  { className, metrics, columns = 4, compact = false, ...rest },
+  ref,
+) {
+  return (
+    <section ref={ref as React.Ref<HTMLElement>} className={cn('w-full', className)} {...rest}>
+      <div className={cn('grid gap-skeed-density-cozy-gap', gridColsClasses[columns])}>
+        {metrics.map((metric) => (
+          <div
+            key={metric.id}
+            className={cn(
+              'flex flex-col bg-skeed-color-neutral-50 rounded-skeed-radius-2 shadow-skeed-shadow-1 border border-skeed-color-neutral-200',
+              compact
+                ? 'px-skeed-spacing-3 py-skeed-spacing-2'
+                : 'px-skeed-density-cozy-padx py-skeed-density-cozy-pady',
+            )}
+          >
+            <p className="font-skeed-body text-sm text-skeed-color-neutral-600 mb-skeed-spacing-1">
+              {metric.label}
+            </p>
 
-              <div className="flex items-baseline gap-skeed-spacing-1">
-                <span
-                  className={cn(
-                    'font-skeed-numeric font-bold text-skeed-color-neutral-900',
-                    compact ? 'text-2xl' : 'text-3xl',
-                  )}
-                >
-                  {metric.value}
-                </span>
-                {metric.unit && (
-                  <span className="font-skeed-body text-sm text-skeed-color-neutral-500">
-                    {metric.unit}
-                  </span>
+            <div className="flex items-baseline gap-skeed-spacing-1">
+              <span
+                className={cn(
+                  'font-skeed-numeric font-bold text-skeed-color-neutral-900',
+                  compact ? 'text-2xl' : 'text-3xl',
                 )}
-              </div>
-
-              {(metric.change !== undefined || metric.changeLabel) && (
-                <div
-                  className={cn(
-                    'mt-skeed-spacing-2 flex items-center gap-skeed-spacing-1 font-skeed-body text-sm',
-                    metric.trend ? trendColorClasses[metric.trend] : 'text-skeed-color-neutral-500',
-                  )}
-                  aria-label={
-                    metric.trend
-                      ? `Trend: ${metric.trend}`
-                      : undefined
-                  }
-                >
-                  {metric.trend && (
-                    <span aria-hidden="true"><TrendIcon trend={metric.trend} /></span>
-                  )}
-                  {metric.change !== undefined && (
-                    <span>
-                      {metric.change > 0 ? '+' : ''}
-                      {metric.change}%
-                    </span>
-                  )}
-                  {metric.changeLabel && (
-                    <span className="text-skeed-color-neutral-500">{metric.changeLabel}</span>
-                  )}
-                </div>
+              >
+                {metric.value}
+              </span>
+              {metric.unit && (
+                <span className="font-skeed-body text-sm text-skeed-color-neutral-500">
+                  {metric.unit}
+                </span>
               )}
             </div>
-          ))}
-        </div>
-      </section>
-    );
-  },
-);
+
+            {(metric.change !== undefined || metric.changeLabel) && (
+              <div
+                className={cn(
+                  'mt-skeed-spacing-2 flex items-center gap-skeed-spacing-1 font-skeed-body text-sm',
+                  metric.trend ? trendColorClasses[metric.trend] : 'text-skeed-color-neutral-500',
+                )}
+                aria-label={metric.trend ? `Trend: ${metric.trend}` : undefined}
+              >
+                {metric.trend && (
+                  <span aria-hidden="true">
+                    <TrendIcon trend={metric.trend} />
+                  </span>
+                )}
+                {metric.change !== undefined && (
+                  <span>
+                    {metric.change > 0 ? '+' : ''}
+                    {metric.change}%
+                  </span>
+                )}
+                {metric.changeLabel && (
+                  <span className="text-skeed-color-neutral-500">{metric.changeLabel}</span>
+                )}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+});
 
 // Skeleton Component
 export interface KpiGridSkeletonProps {
@@ -132,17 +119,8 @@ export function KpiGridSkeleton({
   className,
 }: KpiGridSkeletonProps) {
   return (
-    <section
-      className={cn('w-full', className)}
-      aria-busy="true"
-      aria-label="Loading KPI grid"
-    >
-      <div
-        className={cn(
-          'grid gap-skeed-density-cozy-gap',
-          gridColsClasses[columns],
-        )}
-      >
+    <section className={cn('w-full', className)} aria-busy="true" aria-label="Loading KPI grid">
+      <div className={cn('grid gap-skeed-density-cozy-gap', gridColsClasses[columns])}>
         {Array.from({ length: itemCount }).map((_, i) => (
           <div
             key={i}

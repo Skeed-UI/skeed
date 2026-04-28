@@ -3,11 +3,7 @@
   "niche": "developer-tools",
   "schemaVersion": 1,
   "cognitiveLoadTarget": "high",
-  "trustCuesNeeded": [
-    "expert_byline",
-    "monospaced_numerics",
-    "audit_trail"
-  ],
+  "trustCuesNeeded": ["expert_byline", "monospaced_numerics", "audit_trail"],
   "motivationPattern": "mastery",
   "formality": 2,
   "noveltyTolerance": 4,

@@ -1,6 +1,6 @@
 'use client';
 
-import { getStrokeWidth, type IconProps, type IconWeight } from '../types';
+import { type IconProps, type IconWeight, getStrokeWidth } from '../types';
 
 export type SpinnerVariant = 'track' | 'dots' | 'pulse' | 'arc';
 
@@ -79,14 +79,7 @@ function SpinnerDots({ size = 16, className }: { size?: number; className?: stri
       style={{ animationDuration: '1.2s' }}
     >
       {positions.map((pos, i) => (
-        <circle
-          key={i}
-          cx={pos.x}
-          cy={pos.y}
-          r={dotR}
-          fill="currentColor"
-          opacity={1 - i * 0.25}
-        />
+        <circle key={i} cx={pos.x} cy={pos.y} r={dotR} fill="currentColor" opacity={1 - i * 0.25} />
       ))}
     </svg>
   );
@@ -106,7 +99,12 @@ function SpinnerPulse({ size = 16, className }: { size?: number; className?: str
       aria-hidden="true"
     >
       <circle cx="12" cy="12" r={r} fill="none" stroke="currentColor" strokeWidth="2" opacity="0.3">
-        <animate attributeName="r" values={`${r * 0.5};${r};${r * 0.5}`} dur="1.5s" repeatCount="indefinite" />
+        <animate
+          attributeName="r"
+          values={`${r * 0.5};${r};${r * 0.5}`}
+          dur="1.5s"
+          repeatCount="indefinite"
+        />
         <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
       </circle>
       <circle cx="12" cy="12" r={r * 0.5} fill="currentColor" opacity="0.6" />
@@ -115,8 +113,13 @@ function SpinnerPulse({ size = 16, className }: { size?: number; className?: str
 }
 
 /** Classic arc spinner (original design, refined) */
-function SpinnerArc({ size = 16, className, weight }: { size?: number; className?: string; weight?: IconWeight }) {
-  const strokeWidth = weight !== undefined ? getStrokeWidth(weight, size) : getStrokeWidth('regular', size);
+function SpinnerArc({
+  size = 16,
+  className,
+  weight,
+}: { size?: number; className?: string; weight?: IconWeight }) {
+  const strokeWidth =
+    weight !== undefined ? getStrokeWidth(weight, size) : getStrokeWidth('regular', size);
 
   return (
     <svg
@@ -137,7 +140,13 @@ function SpinnerArc({ size = 16, className, weight }: { size?: number; className
 }
 
 /** Main Spinner component with multiple variants */
-export function Spinner({ size = 16, variant = 'track', weight, className, ...props }: SpinnerProps) {
+export function Spinner({
+  size = 16,
+  variant = 'track',
+  weight,
+  className,
+  ...props
+}: SpinnerProps) {
   const commonProps = { size, className: `${className || ''}`, ...props };
 
   switch (variant) {

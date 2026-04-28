@@ -29,7 +29,5 @@ export async function loadPrimitives(demographicId: string): Promise<LogoPrimiti
       _cache.set(id, demo.logoPrimitives);
     }
   }
-  return (
-    _cache.get(demographicId) ?? { shapes: [], marks: [], wordmarks: [], containers: [] }
-  );
+  return _cache.get(demographicId) ?? { shapes: [], marks: [], wordmarks: [], containers: [] };
 }

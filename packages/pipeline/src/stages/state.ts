@@ -1,4 +1,3 @@
-import { z } from 'zod';
 import {
   BrandAttributes,
   ClassificationResult,
@@ -13,6 +12,7 @@ import {
 } from '@skeed/contracts/pipeline-types';
 import { PainPoint, PsychologyProfile } from '@skeed/contracts/psychology';
 import { IdeaScore } from '@skeed/contracts/score-rubric';
+import { z } from 'zod';
 
 /**
  * Threaded state object passed between every pipeline stage.
@@ -53,7 +53,14 @@ export const PipelineState = PipelineRun.extend({
     .array(
       z.object({
         slot: z.string(),
-        kind: z.enum(['logo', 'hero_illustration', 'content_photo', 'decorative', 'icon', 'avatar']),
+        kind: z.enum([
+          'logo',
+          'hero_illustration',
+          'content_photo',
+          'decorative',
+          'icon',
+          'avatar',
+        ]),
         sourceId: z.string(),
         relativePath: z.string(),
         contents: z.string(),

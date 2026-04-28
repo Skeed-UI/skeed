@@ -44,7 +44,9 @@ export async function llmOrFallback<T>(
     });
     return result.value;
   } catch (err) {
-    process.stderr.write(`[skeed] stage ${opts.stage} LLM failed; falling back. ${err instanceof Error ? err.message : String(err)}\n`);
+    process.stderr.write(
+      `[skeed] stage ${opts.stage} LLM failed; falling back. ${err instanceof Error ? err.message : String(err)}\n`,
+    );
     return fallback();
   }
 }

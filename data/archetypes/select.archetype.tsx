@@ -1,6 +1,6 @@
-import { type SelectHTMLAttributes, forwardRef, useId } from 'react';
-import { cn } from '@skeed/core/cn';
 import { ChevronDown } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type SelectHTMLAttributes, forwardRef, useId } from 'react';
 
 export interface SelectOption {
   value: string;
@@ -59,7 +59,13 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select
   const successId = `${id}-success`;
 
   return (
-    <div className={cn('flex flex-col gap-skeed-spacing-1', fullWidth ? 'w-full' : 'w-auto', className)}>
+    <div
+      className={cn(
+        'flex flex-col gap-skeed-spacing-1',
+        fullWidth ? 'w-full' : 'w-auto',
+        className,
+      )}
+    >
       {label && (
         <label
           htmlFor={id}
@@ -100,11 +106,18 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select
         </span>
       </div>
       {error ? (
-        <p id={errorId} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600 animate-in fade-in slide-in-from-top-1">
+        <p
+          id={errorId}
+          role="alert"
+          className="text-sm font-skeed-body text-skeed-color-danger-600 animate-in fade-in slide-in-from-top-1"
+        >
           {error}
         </p>
       ) : success ? (
-        <p id={successId} className="text-sm font-skeed-body text-skeed-color-success-600 animate-in fade-in slide-in-from-top-1">
+        <p
+          id={successId}
+          className="text-sm font-skeed-body text-skeed-color-success-600 animate-in fade-in slide-in-from-top-1"
+        >
           {success}
         </p>
       ) : hint ? (

@@ -1,3 +1,4 @@
+import { cn } from '@skeed/core/cn';
 /**
  * @generated Component: article
  * @demographic fintech
@@ -6,13 +7,12 @@
  * @category molecule
  * @schemaVersion 1
  * @generatedAt 2026-04-26T03:16:27.017Z
- * 
+ *
  * DO NOT EDIT: This file is auto-generated from archetype:
  *   - Source: article
  *   - Preset: fintech
  */
 import { type HTMLAttributes, forwardRef } from 'react';
-import { cn } from '@skeed/core/cn';
 
 export interface ArticleProps extends HTMLAttributes<HTMLElement> {
   title?: string;
@@ -26,11 +26,7 @@ export const Article = forwardRef<HTMLElement, ArticleProps>(function Article(
   return (
     <article
       ref={ref as any}
-      className={cn(
-        'max-w-none',
-        'prose prose-slate',
-        className,
-      )}
+      className={cn('max-w-none', 'prose prose-slate', className)}
       {...rest}
     >
       {title && (

@@ -1,5 +1,5 @@
-import { type TextareaHTMLAttributes, forwardRef, useId, useState } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type TextareaHTMLAttributes, forwardRef, useId, useState } from 'react';
 
 export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
@@ -72,7 +72,13 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
   };
 
   return (
-    <div className={cn('flex flex-col gap-skeed-spacing-1', fullWidth ? 'w-full' : 'w-auto', className)}>
+    <div
+      className={cn(
+        'flex flex-col gap-skeed-spacing-1',
+        fullWidth ? 'w-full' : 'w-auto',
+        className,
+      )}
+    >
       {label && (
         <label
           htmlFor={id}
@@ -100,7 +106,11 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
       <div className="flex items-start justify-between gap-skeed-spacing-2">
         <div>
           {error ? (
-            <p id={errorId} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+            <p
+              id={errorId}
+              role="alert"
+              className="text-sm font-skeed-body text-skeed-color-danger-600"
+            >
               {error}
             </p>
           ) : hint ? (

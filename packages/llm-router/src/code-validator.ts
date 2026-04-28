@@ -20,9 +20,7 @@ export interface ValidationResult {
   passes: number;
 }
 
-export interface RepairFn {
-  (issues: CodeIssue[], currentCode: string): Promise<string>;
-}
+export type RepairFn = (issues: CodeIssue[], currentCode: string) => Promise<string>;
 
 /**
  * Validate generated TS/TSX code via tsc + biome. If issues found, call repairFn
@@ -50,7 +48,10 @@ export async function validateCode(opts: {
 }
 
 async function runChecks(filename: string, code: string): Promise<CodeIssue[]> {
-  const tmp = join(tmpdir(), `skeed-validate-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`);
+  const tmp = join(
+    tmpdir(),
+    `skeed-validate-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+  );
   await mkdir(tmp, { recursive: true });
   const file = join(tmp, filename);
   await writeFile(file, code, 'utf8');
@@ -58,11 +59,32 @@ async function runChecks(filename: string, code: string): Promise<CodeIssue[]> {
 
   // tsc check
   try {
-    await exec('npx', ['--yes', 'tsc', '--noEmit', '--allowJs', '--jsx', 'preserve', '--target', 'ES2022', '--moduleResolution', 'bundler', '--module', 'esnext', '--skipLibCheck', file], {
-      cwd: tmp,
-    });
+    await exec(
+      'npx',
+      [
+        '--yes',
+        'tsc',
+        '--noEmit',
+        '--allowJs',
+        '--jsx',
+        'preserve',
+        '--target',
+        'ES2022',
+        '--moduleResolution',
+        'bundler',
+        '--module',
+        'esnext',
+        '--skipLibCheck',
+        file,
+      ],
+      {
+        cwd: tmp,
+      },
+    );
   } catch (err: unknown) {
-    const out = String((err as { stdout?: string; stderr?: string }).stdout ?? '') + String((err as { stderr?: string }).stderr ?? '');
+    const out =
+      String((err as { stdout?: string; stderr?: string }).stdout ?? '') +
+      String((err as { stderr?: string }).stderr ?? '');
     for (const line of out.split('\n')) {
       const m = line.match(/^(.+?)\((\d+),(\d+)\):\s*(error|warning)\s+(.+)$/);
       if (m && m[1] && m[2] && m[3] && m[4] && m[5]) {

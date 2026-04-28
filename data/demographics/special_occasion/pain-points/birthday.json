@@ -3,8 +3,26 @@
   "niche": "birthday",
   "schemaVersion": 1,
   "points": [
-    { "id": "bp1", "description": "Sending invites via group chat loses replies in the noise.", "severity": 4, "frequency": 5, "evidence": [] },
-    { "id": "bp2", "description": "No central RSVP + headcount with dietary preferences.", "severity": 4, "frequency": 5, "evidence": [] },
-    { "id": "bp3", "description": "Generic event tools feel corporate; nothing matches a fun vibe.", "severity": 3, "frequency": 5, "evidence": [] }
+    {
+      "id": "bp1",
+      "description": "Sending invites via group chat loses replies in the noise.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "bp2",
+      "description": "No central RSVP + headcount with dietary preferences.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "bp3",
+      "description": "Generic event tools feel corporate; nothing matches a fun vibe.",
+      "severity": 3,
+      "frequency": 5,
+      "evidence": []
+    }
   ]
 }

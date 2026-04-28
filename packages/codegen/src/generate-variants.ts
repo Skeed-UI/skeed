@@ -1,5 +1,9 @@
 import type { DemographicId, Density } from '@skeed/contracts';
-import type { ArchetypeDefinition, GeneratedComponent, ComponentEmitterOptions } from './component-emitter.js';
+import type {
+  ArchetypeDefinition,
+  ComponentEmitterOptions,
+  GeneratedComponent,
+} from './component-emitter.js';
 
 /**
  * Generation options for the cross-product matrix
@@ -114,12 +118,12 @@ interface WorkerPool {
 
 /**
  * Generate the complete cross-product matrix of components
- * 
+ *
  * Total combinations: archetypes.length × demographics.length × densities.length
  * For 60 archetypes × 20 demographics × 3 densities = 3,600 components
  */
 export async function generateVariants(
-  options: GenerateVariantsOptions
+  options: GenerateVariantsOptions,
 ): Promise<GenerationResult> {
   const {
     archetypes,
@@ -163,7 +167,7 @@ export async function generateVariants(
       for (const density of densities) {
         const task = async () => {
           const taskStart = Date.now();
-          
+
           try {
             // Load preset for this demographic
             const preset = await loadPreset(demographicId);
@@ -174,7 +178,7 @@ export async function generateVariants(
             // Check cache if enabled
             const cacheKey = generateCacheKey(archetype, demographicId, density);
             let component: GeneratedComponent;
-            
+
             if (cacheEnabled) {
               const cached = await getCachedComponent(cacheKey, cacheDir);
               if (cached) {
@@ -191,7 +195,7 @@ export async function generateVariants(
                   density,
                 };
                 component = await emitComponent(emitterOptions);
-                
+
                 // Cache the result
                 await cacheComponent(cacheKey, component, cacheDir);
                 cacheStats.additions++;
@@ -209,7 +213,6 @@ export async function generateVariants(
 
             components.push(component);
             stats.successful++;
-            
           } catch (error) {
             const errorMessage = error instanceof Error ? error.message : String(error);
             failures.push({
@@ -223,16 +226,14 @@ export async function generateVariants(
           }
 
           processed++;
-          
+
           // Report progress
           if (onProgress) {
             const elapsedMs = Date.now() - startTime;
             const percentage = Math.round((processed / stats.total) * 100);
             const rate = processed / (elapsedMs / 1000); // items per second
-            const estimatedRemainingMs = rate > 0 
-              ? ((stats.total - processed) / rate) * 1000 
-              : 0;
-            
+            const estimatedRemainingMs = rate > 0 ? ((stats.total - processed) / rate) * 1000 : 0;
+
             onProgress({
               current: processed,
               total: stats.total,
@@ -309,7 +310,7 @@ function processQueue(pool: WorkerPool): void {
 async function waitForPool(pool: WorkerPool): Promise<void> {
   while (pool.running > 0 || pool.queue.length > 0) {
     processQueue(pool);
-    await new Promise(resolve => setTimeout(resolve, 10));
+    await new Promise((resolve) => setTimeout(resolve, 10));
   }
 }
 
@@ -319,14 +320,14 @@ async function waitForPool(pool: WorkerPool): Promise<void> {
 function generateCacheKey(
   archetype: ArchetypeDefinition,
   demographicId: string,
-  density: Density
+  density: Density,
 ): string {
   // Simple hash - in production use crypto.subtle
   const content = `${archetype.id}:${archetype.source}:${demographicId}:${density}`;
   let hash = 0;
   for (let i = 0; i < content.length; i++) {
     const char = content.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
+    hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
   return Math.abs(hash).toString(16);
@@ -378,7 +379,7 @@ export async function generateArchetypeVariants(
   archetype: ArchetypeDefinition,
   demographics: DemographicId[],
   densities: Density[],
-  loadPreset: (demographicId: DemographicId) => Promise<unknown> | unknown
+  loadPreset: (demographicId: DemographicId) => Promise<unknown> | unknown,
 ): Promise<GenerationResult> {
   return generateVariants({
     archetypes: [archetype],
@@ -395,7 +396,7 @@ export async function generateArchetypeVariants(
 export async function generateDemographicVariants(
   archetypes: ArchetypeDefinition[],
   demographicId: DemographicId,
-  loadPreset: (demographicId: DemographicId) => Promise<unknown> | unknown
+  loadPreset: (demographicId: DemographicId) => Promise<unknown> | unknown,
 ): Promise<GenerationResult> {
   return generateVariants({
     archetypes,
@@ -407,9 +408,10 @@ export async function generateDemographicVariants(
 /**
  * Validate generation options
  */
-export function validateGenerationOptions(
-  options: GenerateVariantsOptions
-): { valid: boolean; errors: string[] } {
+export function validateGenerationOptions(options: GenerateVariantsOptions): {
+  valid: boolean;
+  errors: string[];
+} {
   const errors: string[] = [];
 
   if (!options.archetypes || options.archetypes.length === 0) {

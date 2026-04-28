@@ -1,5 +1,10 @@
 export { LlmCache } from './cache.js';
-export { LlmDispatcher, type DispatchOptions, type DispatchEvent, type DispatchResult } from './dispatcher.js';
+export {
+  LlmDispatcher,
+  type DispatchOptions,
+  type DispatchEvent,
+  type DispatchResult,
+} from './dispatcher.js';
 export {
   extractStructured,
   stripCodeFences,
@@ -17,5 +22,15 @@ export {
   type ProviderId,
   type StageId,
 } from './registry.js';
-export { type ChatMessage, type ChatOptions, type ChatResponse, HttpError } from './providers/index.js';
-export { validateCode, type CodeIssue, type ValidationResult, type RepairFn } from './code-validator.js';
+export {
+  type ChatMessage,
+  type ChatOptions,
+  type ChatResponse,
+  HttpError,
+} from './providers/index.js';
+export {
+  validateCode,
+  type CodeIssue,
+  type ValidationResult,
+  type RepairFn,
+} from './code-validator.js';

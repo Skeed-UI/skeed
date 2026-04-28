@@ -2,8 +2,8 @@
  * MotionProvider - context provider for global motion configuration
  */
 
-import * as React from 'react';
-import { createContext, useContext, useState, useEffect } from 'react';
+import type * as React from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import type { MotionProviderProps } from './types.js';
 
 interface MotionContextValue {
@@ -60,9 +60,5 @@ export function MotionProvider({
     reducedMotion,
   };
 
-  return (
-    <MotionContext.Provider value={value}>
-      {children}
-    </MotionContext.Provider>
-  );
+  return <MotionContext.Provider value={value}>{children}</MotionContext.Provider>;
 }

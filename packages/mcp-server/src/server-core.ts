@@ -1,8 +1,5 @@
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
-import {
-  CallToolRequestSchema,
-  ListToolsRequestSchema,
-} from '@modelcontextprotocol/sdk/types.js';
+import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
 import { z } from 'zod';
 import { Catalog } from './catalog.js';
 
@@ -41,7 +38,10 @@ export function createServer(opts: CreateServerOptions): {
           properties: {
             intent: { type: 'string', description: 'Free-text intent' },
             demographic: { type: 'string' },
-            category: { type: 'string', enum: ['atom', 'molecule', 'organism', 'template', 'block', 'page'] },
+            category: {
+              type: 'string',
+              enum: ['atom', 'molecule', 'organism', 'template', 'block', 'page'],
+            },
             density: { type: 'string', enum: ['compact', 'cozy', 'comfy'] },
             framework: { type: 'string', enum: ['react', 'vue', 'svelte', 'web-components'] },
             limit: { type: 'number', minimum: 1, maximum: 50, default: 10 },
@@ -74,7 +74,8 @@ export function createServer(opts: CreateServerOptions): {
       },
       {
         name: 'list_archetypes',
-        description: 'List archetype ids + categories. Archetypes are the canonical token-only templates.',
+        description:
+          'List archetype ids + categories. Archetypes are the canonical token-only templates.',
         inputSchema: { type: 'object', properties: {} },
       },
     ],

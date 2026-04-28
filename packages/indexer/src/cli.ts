@@ -32,7 +32,7 @@ async function main(): Promise<void> {
 }
 
 main().catch((err: unknown) => {
-  const message = err instanceof Error ? err.stack ?? err.message : String(err);
+  const message = err instanceof Error ? (err.stack ?? err.message) : String(err);
   process.stderr.write(`build-index failed: ${message}\n`);
   process.exit(1);
 });

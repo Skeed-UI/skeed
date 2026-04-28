@@ -1,3 +1,4 @@
+import { cn } from '@skeed/core/cn';
 /**
  * @generated Component: accordion
  * @demographic kids
@@ -6,13 +7,12 @@
  * @category molecule
  * @schemaVersion 1
  * @generatedAt 2026-04-26T03:16:26.925Z
- * 
+ *
  * DO NOT EDIT: This file is auto-generated from archetype:
  *   - Source: accordion
  *   - Preset: kids
  */
 import { type HTMLAttributes, forwardRef, useState } from 'react';
-import { cn } from '@skeed/core/cn';
 
 let idCounter = 0;
 function generateId() {
@@ -59,7 +59,10 @@ export const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(func
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className={cn('transition-transform duration-skeed-motion-duration-fast', isOpen ? 'rotate-180' : '')}
+          className={cn(
+            'transition-transform duration-skeed-motion-duration-fast',
+            isOpen ? 'rotate-180' : '',
+          )}
           aria-hidden="true"
         >
           <polyline points="6 9 12 15 18 9" />

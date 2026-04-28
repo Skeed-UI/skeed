@@ -1,22 +1,26 @@
 /**
  * Form Validation Engine
- * 
+ *
  * Validates form fields with demographic-specific rules and patterns.
  * Supports format, semantic, and demographic-specific validation.
  */
 
 import type {
-  ValidationRule,
-  ValidationResult,
-  ValidationError,
-  FormState,
   FieldType,
+  FormState,
+  ValidationError,
+  ValidationResult,
+  ValidationRule,
   ValidationStyle,
 } from '@skeed/contracts';
 
 export interface ValidationEngine {
   validateField(value: string, rules: ValidationRule, demographic: string): ValidationResult;
-  validateForm(state: FormState, rules: Record<string, ValidationRule>, demographic: string): ValidationResult;
+  validateForm(
+    state: FormState,
+    rules: Record<string, ValidationRule>,
+    demographic: string,
+  ): ValidationResult;
   getSuggestion(error: ValidationError, demographic: string): string;
 }
 
@@ -51,34 +55,34 @@ const PATTERNS = {
  */
 const SUGGESTION_VOICES: Record<string, Record<string, string>> = {
   kids: {
-    email: "Try adding an @ symbol! 📧",
-    password: "Add some numbers to make it stronger! 🔢",
-    required: "Oops, this field needs a value! ⭐",
+    email: 'Try adding an @ symbol! 📧',
+    password: 'Add some numbers to make it stronger! 🔢',
+    required: 'Oops, this field needs a value! ⭐',
     format: "Let's try a different format! 🎨",
   },
   fintech: {
-    email: "Please enter a valid email address",
-    password: "Password must include uppercase, lowercase, and numbers",
-    required: "This field is required",
-    format: "Please use the required format",
+    email: 'Please enter a valid email address',
+    password: 'Password must include uppercase, lowercase, and numbers',
+    required: 'This field is required',
+    format: 'Please use the required format',
   },
   gov: {
-    email: "Please enter a valid email address",
-    password: "Password must meet security requirements",
-    required: "This field is required",
-    format: "Please enter in the required format",
+    email: 'Please enter a valid email address',
+    password: 'Password must meet security requirements',
+    required: 'This field is required',
+    format: 'Please enter in the required format',
   },
   health: {
-    email: "Please enter a valid email address",
-    password: "Password must meet HIPAA security requirements",
-    required: "This field is required",
-    format: "Please use the standard format",
+    email: 'Please enter a valid email address',
+    password: 'Password must meet HIPAA security requirements',
+    required: 'This field is required',
+    format: 'Please use the standard format',
   },
   working_class: {
-    email: "Check your email format",
-    password: "Try adding more characters for security",
-    required: "This field is needed",
-    format: "Try the suggested format",
+    email: 'Check your email format',
+    password: 'Try adding more characters for security',
+    required: 'This field is needed',
+    format: 'Try the suggested format',
   },
 };
 
@@ -99,7 +103,7 @@ export function createValidationEngine(): ValidationEngine {
 function validateField(
   value: string,
   rules: ValidationRule,
-  demographic: string
+  demographic: string,
 ): ValidationResult {
   const errors: ValidationError[] = [];
   const warnings: ValidationError[] = [];
@@ -186,7 +190,7 @@ function validateField(
 function validateForm(
   state: FormState,
   rules: Record<string, ValidationRule>,
-  demographic: string
+  demographic: string,
 ): ValidationResult {
   const errors: ValidationError[] = [];
   const warnings: ValidationError[] = [];
@@ -240,7 +244,7 @@ function getSuggestion(error: ValidationError, demographic: string): string {
 function validateByType(
   type: FieldType,
   value: string,
-  validationStyle: ValidationStyle
+  validationStyle: ValidationStyle,
 ): ValidationError[] {
   const errors: ValidationError[] = [];
 
@@ -312,7 +316,7 @@ function getRequiredMessage(fieldType: FieldType, demographic: string): string {
 function getPatternMessage(fieldType: FieldType, demographic: string): string {
   const voices = SUGGESTION_VOICES[demographic] || SUGGESTION_VOICES.working_class;
   if (!voices) return 'Please check the format';
-  
+
   switch (fieldType) {
     case 'email':
       return voices.email || 'Please enter a valid email address';
@@ -328,7 +332,7 @@ function getPatternMessage(fieldType: FieldType, demographic: string): string {
  */
 export function createValidationRule(
   type: FieldType,
-  options: Partial<ValidationRule> = {}
+  options: Partial<ValidationRule> = {},
 ): ValidationRule {
   return {
     type,

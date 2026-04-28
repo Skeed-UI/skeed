@@ -1,5 +1,5 @@
-import type { Stage } from '@skeed/contracts';
 import { composeLogoCandidates } from '@skeed/asset-logo-svg';
+import type { Stage } from '@skeed/contracts';
 import { z } from 'zod';
 import { llmOrFallback } from './llm-helper.js';
 import { PipelineState } from './state.js';
@@ -36,7 +36,8 @@ export const stage_10_brand_logo: Stage<PipelineState, PipelineState> = {
     const top = state.classification?.candidates[0];
     const psy = state.psychology;
     const demographic = top?.demographic ?? 'productivity';
-    const projectName = state.intent?.jobToBeDone?.replace(/^Build:\s*/, '').slice(0, 40) ?? 'Skeed App';
+    const projectName =
+      state.intent?.jobToBeDone?.replace(/^Build:\s*/, '').slice(0, 40) ?? 'Skeed App';
 
     const brand = await llmOrFallback(
       {
@@ -46,7 +47,10 @@ export const stage_10_brand_logo: Stage<PipelineState, PipelineState> = {
         user: `Project: ${projectName}
 Demographic: ${demographic}/${top?.niche ?? 'general'}
 Psychology: formality=${psy?.formality ?? 3}, motivation=${psy?.motivationPattern ?? 'intrinsic'}, motion=playful?${demographic === 'kids'}
-Pain points: ${(state.painPoints ?? []).slice(0, 2).map((p) => p.description).join(' | ')}
+Pain points: ${(state.painPoints ?? [])
+          .slice(0, 2)
+          .map((p) => p.description)
+          .join(' | ')}
 
 Design brand attributes now.`,
         schema: BrandOut,

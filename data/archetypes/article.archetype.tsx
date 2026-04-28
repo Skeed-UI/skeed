@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface ArticleProps extends HTMLAttributes<HTMLElement> {
   title?: string;
@@ -13,11 +13,7 @@ export const Article = forwardRef<HTMLElement, ArticleProps>(function Article(
   return (
     <article
       ref={ref as any}
-      className={cn(
-        'max-w-none',
-        'prose prose-slate',
-        className,
-      )}
+      className={cn('max-w-none', 'prose prose-slate', className)}
       {...rest}
     >
       {title && (

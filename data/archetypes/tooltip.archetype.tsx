@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
   content: string;
@@ -27,12 +27,10 @@ export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function Tooltip
   { className, content, position = 'top', delay = 150, showOnFocus = true, children, ...rest },
   ref,
 ) {
-  const triggerClasses = showOnFocus
-    ? 'group group-focus-within:has-[role="tooltip"]'
-    : '';
+  const triggerClasses = showOnFocus ? 'group group-focus-within:has-[role="tooltip"]' : '';
 
   return (
-    <div ref={ref} className={cn("relative inline-block group", triggerClasses)} {...rest}>
+    <div ref={ref} className={cn('relative inline-block group', triggerClasses)} {...rest}>
       {children}
       <div
         role="tooltip"

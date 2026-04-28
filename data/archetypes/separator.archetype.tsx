@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface SeparatorProps extends HTMLAttributes<HTMLDivElement> {
   orientation?: 'horizontal' | 'vertical';
@@ -16,9 +16,7 @@ export const Separator = forwardRef<HTMLDivElement, SeparatorProps>(function Sep
       aria-orientation={orientation}
       className={cn(
         'border-skeed-color-neutral-200',
-        orientation === 'horizontal'
-          ? 'w-full border-t'
-          : 'h-full border-l',
+        orientation === 'horizontal' ? 'w-full border-t' : 'h-full border-l',
         className,
       )}
       {...rest}

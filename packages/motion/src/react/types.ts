@@ -4,7 +4,6 @@
 
 import type * as React from 'react';
 import type { MotionConfig } from '../grammar/types.js';
-import type { MaterialType } from '../physics/types.js';
 
 export interface MotionProviderProps {
   children: React.ReactNode;

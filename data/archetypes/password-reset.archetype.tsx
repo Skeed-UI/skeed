@@ -1,5 +1,5 @@
-import { type FormHTMLAttributes, type FormEvent, forwardRef, useState } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type FormEvent, type FormHTMLAttributes, forwardRef, useState } from 'react';
 
 export interface PasswordResetProps extends FormHTMLAttributes<HTMLFormElement> {
   onSubmit?: (email: string) => void;
@@ -43,7 +43,10 @@ export const PasswordReset = forwardRef<HTMLFormElement, PasswordResetProps>(fun
       </div>
 
       <div className="flex flex-col gap-skeed-spacing-1">
-        <label htmlFor={emailId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+        <label
+          htmlFor={emailId}
+          className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+        >
           Email address
         </label>
         <input

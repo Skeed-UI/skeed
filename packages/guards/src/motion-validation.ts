@@ -5,7 +5,11 @@
 import type { MotionConfig } from '@skeed/motion/grammar';
 
 export interface MotionViolation {
-  type: 'duration-excessive' | 'demographic-inappropriate' | 'accessibility-risk' | 'forbidden-effect';
+  type:
+    | 'duration-excessive'
+    | 'demographic-inappropriate'
+    | 'accessibility-risk'
+    | 'forbidden-effect';
   component?: string;
   effect?: string;
   message: string;
@@ -62,7 +66,7 @@ const DEMOGRAPHIC_RULES: Record<string, DemographicMotionRules> = {
  */
 export function validateMotionForDemographic(
   motion: MotionConfig,
-  demographic: string
+  demographic: string,
 ): MotionValidationResult {
   const violations: MotionViolation[] = [];
   const rules = DEMOGRAPHIC_RULES[demographic];

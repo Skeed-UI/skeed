@@ -1,6 +1,6 @@
-import { type HTMLAttributes, forwardRef, useState } from 'react';
-import { cn } from '@skeed/core/cn';
 import { ChevronDown } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef, useState } from 'react';
 
 export interface FaqItem {
   id: string;
@@ -32,11 +32,7 @@ export const Faq = forwardRef<HTMLDivElement, FaqProps>(function Faq(
   };
 
   return (
-    <div
-      ref={ref}
-      className={cn('w-full space-y-skeed-spacing-2', className)}
-      {...rest}
-    >
+    <div ref={ref} className={cn('w-full space-y-skeed-spacing-2', className)} {...rest}>
       {items.map((item) => {
         const isOpen = openItems.has(item.id);
         return (

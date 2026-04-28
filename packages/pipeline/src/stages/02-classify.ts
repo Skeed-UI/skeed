@@ -4,10 +4,28 @@ import { llmOrFallback } from './llm-helper.js';
 import { PipelineState } from './state.js';
 
 const DEMOGRAPHIC_IDS = [
-  'kids', 'teens', 'working_class', 'education', 'religious', 'mental_wellness',
-  'health', 'legal', 'erp', 'sales_crm', 'hightech', 'social', 'monitoring',
-  'classic', 'fintech', 'ai_apps', 'marketplace', 'listings', 'gov', 'military',
-  'productivity', 'special_occasion',
+  'kids',
+  'teens',
+  'working_class',
+  'education',
+  'religious',
+  'mental_wellness',
+  'health',
+  'legal',
+  'erp',
+  'sales_crm',
+  'hightech',
+  'social',
+  'monitoring',
+  'classic',
+  'fintech',
+  'ai_apps',
+  'marketplace',
+  'listings',
+  'gov',
+  'military',
+  'productivity',
+  'special_occasion',
 ] as const satisfies readonly DemographicId[];
 
 const Candidate = z.object({
@@ -57,7 +75,14 @@ export const stage_02_classify: Stage<PipelineState, PipelineState> = {
       () => {
         const guess = heuristic(state.prompt);
         return {
-          candidates: [{ demographic: guess.demographic, niche: guess.niche, confidence: 0.65, reasoning: 'heuristic fallback (no LLM provider)' }],
+          candidates: [
+            {
+              demographic: guess.demographic,
+              niche: guess.niche,
+              confidence: 0.65,
+              reasoning: 'heuristic fallback (no LLM provider)',
+            },
+          ],
           needsClarification: false,
         };
       },
@@ -75,24 +100,31 @@ function heuristic(prompt: string): { demographic: DemographicId; niche: string 
   if (/birthday|bday/.test(p)) return { demographic: 'special_occasion', niche: 'birthday' };
   if (/webinar/.test(p)) return { demographic: 'special_occasion', niche: 'webinar' };
   if (/anniversary/.test(p)) return { demographic: 'special_occasion', niche: 'anniversary' };
-  if (/(dinner\s+(night|party)|launch\s+party|baby\s+shower|graduation\s+party|gala|reunion|housewarming|engagement\s+party|game\s+night|rsvp)/.test(p)) {
+  if (
+    /(dinner\s+(night|party)|launch\s+party|baby\s+shower|graduation\s+party|gala|reunion|housewarming|engagement\s+party|game\s+night|rsvp)/.test(
+      p,
+    )
+  ) {
     return { demographic: 'special_occasion', niche: 'gathering' };
   }
   if (/kid|child|school/.test(p)) return { demographic: 'kids', niche: 'learning' };
   if (/teen/.test(p)) return { demographic: 'teens', niche: 'social' };
-  if (/finance|bank|money|invest|trad|crypto/.test(p)) return { demographic: 'fintech', niche: 'consumer' };
+  if (/finance|bank|money|invest|trad|crypto/.test(p))
+    return { demographic: 'fintech', niche: 'consumer' };
   if (/health|clinic|patient|medical/.test(p)) return { demographic: 'health', niche: 'general' };
   if (/gov|public|civic/.test(p)) return { demographic: 'gov', niche: 'general' };
   if (/legal|law|attorney/.test(p)) return { demographic: 'legal', niche: 'general' };
   if (/sales|crm|lead/.test(p)) return { demographic: 'sales_crm', niche: 'general' };
   if (/marketplace|sell|buyer/.test(p)) return { demographic: 'marketplace', niche: 'general' };
   if (/listing|directory/.test(p)) return { demographic: 'listings', niche: 'general' };
-  if (/wellness|meditat|therapy|mental/.test(p)) return { demographic: 'mental_wellness', niche: 'general' };
+  if (/wellness|meditat|therapy|mental/.test(p))
+    return { demographic: 'mental_wellness', niche: 'general' };
   if (/ai|chatbot|llm|gpt|agent/.test(p)) return { demographic: 'ai_apps', niche: 'general' };
   if (/erp|enterprise|inventory/.test(p)) return { demographic: 'erp', niche: 'general' };
   if (/military|defense|tactical/.test(p)) return { demographic: 'military', niche: 'general' };
   if (/social|community|network/.test(p)) return { demographic: 'social', niche: 'general' };
-  if (/monitor|observ|metrics|dashboard/.test(p)) return { demographic: 'monitoring', niche: 'general' };
+  if (/monitor|observ|metrics|dashboard/.test(p))
+    return { demographic: 'monitoring', niche: 'general' };
   if (/religion|church|faith/.test(p)) return { demographic: 'religious', niche: 'general' };
   if (/education|teach|learn|course/.test(p)) return { demographic: 'education', niche: 'general' };
   return { demographic: 'productivity', niche: 'general' };

@@ -9,9 +9,7 @@ export interface MigrationFile {
 }
 
 export async function discoverMigrations(migrationsDir: string): Promise<MigrationFile[]> {
-  const files = (await readdir(migrationsDir))
-    .filter((f) => /^\d{4}_.+\.sql$/.test(f))
-    .sort();
+  const files = (await readdir(migrationsDir)).filter((f) => /^\d{4}_.+\.sql$/.test(f)).sort();
   const out: MigrationFile[] = [];
   for (const file of files) {
     const m = /^(\d{4})_(.+)\.sql$/.exec(file);

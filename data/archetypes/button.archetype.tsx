@@ -1,6 +1,6 @@
-import { type ButtonHTMLAttributes, forwardRef } from 'react';
-import { cn } from '@skeed/core/cn';
 import { Spinner } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type ButtonHTMLAttributes, forwardRef } from 'react';
 
 type Intent = 'primary' | 'secondary' | 'ghost' | 'danger';
 type Size = 'sm' | 'md' | 'lg';
@@ -12,14 +12,11 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const INTENT_CLASSES: Record<Intent, string> = {
-  primary:
-    'bg-skeed-color-brand-500 text-skeed-color-neutral-50 hover:bg-skeed-color-brand-600',
+  primary: 'bg-skeed-color-brand-500 text-skeed-color-neutral-50 hover:bg-skeed-color-brand-600',
   secondary:
     'bg-skeed-color-neutral-100 text-skeed-color-neutral-900 hover:bg-skeed-color-neutral-200',
-  ghost:
-    'bg-transparent text-skeed-color-neutral-900 hover:bg-skeed-color-neutral-100',
-  danger:
-    'bg-skeed-color-danger-500 text-skeed-color-neutral-50 hover:bg-skeed-color-danger-600',
+  ghost: 'bg-transparent text-skeed-color-neutral-900 hover:bg-skeed-color-neutral-100',
+  danger: 'bg-skeed-color-danger-500 text-skeed-color-neutral-50 hover:bg-skeed-color-danger-600',
 };
 
 const SIZE_CLASSES: Record<Size, string> = {
@@ -41,7 +38,16 @@ const LOADING_SIZE: Record<Size, 12 | 16 | 20> = {
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { intent = 'primary', size = 'md', loading = false, className, type, children, disabled, ...rest },
+  {
+    intent = 'primary',
+    size = 'md',
+    loading = false,
+    className,
+    type,
+    children,
+    disabled,
+    ...rest
+  },
   ref,
 ) {
   return (

@@ -3,7 +3,7 @@
  */
 
 import type { EffectName, EffectSpec } from '../grammar/types.js';
-import type { EffectGenerator, RegisteredEffect, EffectContext, EffectOutput } from './types.js';
+import type { EffectContext, EffectGenerator, EffectOutput, RegisteredEffect } from './types.js';
 
 const registry = new Map<EffectName, RegisteredEffect>();
 
@@ -13,7 +13,7 @@ const registry = new Map<EffectName, RegisteredEffect>();
 export function registerEffect(
   name: EffectName,
   generator: EffectGenerator,
-  defaultParameters: Record<string, string | number | boolean> = {}
+  defaultParameters: Record<string, string | number | boolean> = {},
 ): void {
   registry.set(name, { name, generator, defaultParameters });
 }
@@ -35,10 +35,7 @@ export function hasEffect(name: EffectName): boolean {
 /**
  * Execute an effect generator with merged parameters
  */
-export function executeEffect(
-  spec: EffectSpec,
-  context: EffectContext
-): EffectOutput {
+export function executeEffect(spec: EffectSpec, context: EffectContext): EffectOutput {
   const registered = getEffect(spec.name);
   if (!registered) {
     // Return identity (no change) for unknown effects

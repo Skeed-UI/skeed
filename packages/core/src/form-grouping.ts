@@ -1,15 +1,11 @@
 /**
  * Answer Grouping Engine
- * 
+ *
  * Intelligently groups configuration options based on semantic, functional,
  * frequency, or dependency relationships between fields.
  */
 
-import type {
-  FieldGroup,
-  GroupingStrategy,
-  FormState,
-} from '@skeed/contracts';
+import type { FieldGroup, GroupingStrategy } from '@skeed/contracts';
 
 export interface FieldConfig {
   id: string;
@@ -64,10 +60,7 @@ export function createGroupingEngine(): GroupingEngine {
 /**
  * Group fields based on the specified strategy
  */
-function groupFields(
-  fields: FieldConfig[],
-  strategy: GroupingStrategy
-): FieldGroup[] {
+function groupFields(fields: FieldConfig[], strategy: GroupingStrategy): FieldGroup[] {
   switch (strategy) {
     case 'semantic':
       return groupBySemantics(fields);
@@ -290,10 +283,7 @@ function groupNone(fields: FieldConfig[]): FieldGroup[] {
 /**
  * Detect fields related to a given field
  */
-function detectRelatedFields(
-  field: FieldConfig,
-  allFields: FieldConfig[]
-): FieldConfig[] {
+function detectRelatedFields(field: FieldConfig, allFields: FieldConfig[]): FieldConfig[] {
   const related: FieldConfig[] = [];
 
   for (const other of allFields) {

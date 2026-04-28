@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef, useRef, KeyboardEvent } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, type KeyboardEvent, forwardRef, useRef } from 'react';
 
 export interface SidebarItem {
   id: string;
@@ -110,10 +110,12 @@ export const Sidebar = forwardRef<HTMLElement, SidebarProps>(function Sidebar(
           {items.map((item, index) => {
             const content = (
               <>
-                {item.icon && <span className={ICON_CLASSES} aria-hidden="true">{item.icon}</span>}
-                {!collapsed && (
-                  <span className={LABEL_CLASSES}>{item.label}</span>
+                {item.icon && (
+                  <span className={ICON_CLASSES} aria-hidden="true">
+                    {item.icon}
+                  </span>
                 )}
+                {!collapsed && <span className={LABEL_CLASSES}>{item.label}</span>}
                 {!collapsed && item.badge !== undefined && (
                   <span className={BADGE_CLASSES} aria-label={`${item.badge} notifications`}>
                     {item.badge}
@@ -126,7 +128,9 @@ export const Sidebar = forwardRef<HTMLElement, SidebarProps>(function Sidebar(
               <li key={item.id}>
                 {item.href ? (
                   <a
-                    ref={(el) => { itemRefs.current[index] = el; }}
+                    ref={(el) => {
+                      itemRefs.current[index] = el;
+                    }}
                     href={item.href}
                     className={cn(ITEM_BASE_CLASSES, item.active && ITEM_ACTIVE_CLASSES)}
                     aria-current={item.active ? 'page' : undefined}
@@ -137,7 +141,9 @@ export const Sidebar = forwardRef<HTMLElement, SidebarProps>(function Sidebar(
                   </a>
                 ) : (
                   <button
-                    ref={(el) => { itemRefs.current[index] = el; }}
+                    ref={(el) => {
+                      itemRefs.current[index] = el;
+                    }}
                     type="button"
                     className={cn(ITEM_BASE_CLASSES, item.active && ITEM_ACTIVE_CLASSES)}
                     aria-pressed={item.active}

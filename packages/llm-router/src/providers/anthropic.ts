@@ -37,8 +37,7 @@ export async function anthropicChat(
     throw new HttpError(res.status, `${model.id} ${res.status}: ${text.slice(0, 400)}`);
   }
   const data = (await res.json()) as AnthropicResponse;
-  const text =
-    data.content?.map((c) => (c.type === 'text' ? c.text : '')).join('') ?? '';
+  const text = data.content?.map((c) => (c.type === 'text' ? c.text : '')).join('') ?? '';
   return {
     text,
     tokenIn: data.usage?.input_tokens ?? 0,

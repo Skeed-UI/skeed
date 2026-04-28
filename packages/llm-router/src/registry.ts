@@ -196,19 +196,88 @@ export type StageId =
 
 export const ROUTING: Record<StageId, string[]> = {
   // Cheap, fast — DeepSeek first
-  '01-intent': ['deepseek-v4', 'kimi-3-6', 'qwen-3-6', 'gemma-4', 'claude-sonnet-4-6', 'gpt-5-4', 'openrouter-default'],
-  '02-classify': ['deepseek-v4', 'kimi-3-6', 'qwen-3-6', 'gemma-4', 'claude-sonnet-4-6', 'gpt-5-4', 'openrouter-default'],
-  '03-pain-points': ['deepseek-v4', 'kimi-3-6', 'qwen-3-6', 'claude-sonnet-4-6', 'gpt-5-4', 'openrouter-default'],
+  '01-intent': [
+    'deepseek-v4',
+    'kimi-3-6',
+    'qwen-3-6',
+    'gemma-4',
+    'claude-sonnet-4-6',
+    'gpt-5-4',
+    'openrouter-default',
+  ],
+  '02-classify': [
+    'deepseek-v4',
+    'kimi-3-6',
+    'qwen-3-6',
+    'gemma-4',
+    'claude-sonnet-4-6',
+    'gpt-5-4',
+    'openrouter-default',
+  ],
+  '03-pain-points': [
+    'deepseek-v4',
+    'kimi-3-6',
+    'qwen-3-6',
+    'claude-sonnet-4-6',
+    'gpt-5-4',
+    'openrouter-default',
+  ],
   // Scoring — slightly higher iq required
-  '04-score-l1': ['deepseek-reasoner', 'claude-sonnet-4-6', 'kimi-3-6', 'gpt-5-4', 'qwen-3-6', 'openrouter-default'],
-  '07-score-l2': ['deepseek-reasoner', 'claude-opus-4-7', 'claude-sonnet-4-6', 'gpt-5-5', 'kimi-3-6', 'openrouter-default'],
+  '04-score-l1': [
+    'deepseek-reasoner',
+    'claude-sonnet-4-6',
+    'kimi-3-6',
+    'gpt-5-4',
+    'qwen-3-6',
+    'openrouter-default',
+  ],
+  '07-score-l2': [
+    'deepseek-reasoner',
+    'claude-opus-4-7',
+    'claude-sonnet-4-6',
+    'gpt-5-5',
+    'kimi-3-6',
+    'openrouter-default',
+  ],
   // Creative / quality-sensitive — Sonnet first
-  '10-brand-logo': ['claude-sonnet-4-6', 'gpt-5-4', 'deepseek-v4', 'kimi-3-6', 'openrouter-default'],
-  '11-design-system': ['claude-sonnet-4-6', 'gpt-5-4', 'deepseek-v4', 'kimi-3-6', 'openrouter-default'],
-  '12-user-stories': ['deepseek-v4', 'claude-sonnet-4-6', 'kimi-3-6', 'gpt-5-4', 'openrouter-default'],
+  '10-brand-logo': [
+    'claude-sonnet-4-6',
+    'gpt-5-4',
+    'deepseek-v4',
+    'kimi-3-6',
+    'openrouter-default',
+  ],
+  '11-design-system': [
+    'claude-sonnet-4-6',
+    'gpt-5-4',
+    'deepseek-v4',
+    'kimi-3-6',
+    'openrouter-default',
+  ],
+  '12-user-stories': [
+    'deepseek-v4',
+    'claude-sonnet-4-6',
+    'kimi-3-6',
+    'gpt-5-4',
+    'openrouter-default',
+  ],
   // IA + compose — quality matters but volume is high; deepseek first for cost
-  '14-ia': ['deepseek-v4', 'claude-sonnet-4-6', 'gpt-5-4', 'kimi-3-6', 'qwen-3-6', 'openrouter-default'],
-  '15-compose': ['deepseek-v4', 'claude-sonnet-4-6', 'gpt-5-4', 'kimi-3-6', 'qwen-3-6', 'openrouter-default'],
+  '14-ia': [
+    'deepseek-v4',
+    'claude-sonnet-4-6',
+    'gpt-5-4',
+    'kimi-3-6',
+    'qwen-3-6',
+    'openrouter-default',
+  ],
+  '15-compose': [
+    'deepseek-v4',
+    'claude-sonnet-4-6',
+    'gpt-5-4',
+    'kimi-3-6',
+    'qwen-3-6',
+    'openrouter-default',
+  ],
 };
 
 /** Resolve which models in a stage's chain currently have an API key set. */

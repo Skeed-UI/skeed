@@ -3,7 +3,11 @@ import { z } from 'zod';
 import { llmOrFallback } from './llm-helper.js';
 import { PipelineState } from './state.js';
 
-const Axis = z.object({ axisId: z.string(), score: z.number().min(0).max(10), reasoning: z.string() });
+const Axis = z.object({
+  axisId: z.string(),
+  score: z.number().min(0).max(10),
+  reasoning: z.string(),
+});
 const ScoreOut = z.object({
   axes: z.array(Axis).length(5),
   composite: z.number().min(0).max(10),

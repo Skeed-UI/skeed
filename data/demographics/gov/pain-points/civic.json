@@ -38,10 +38,7 @@
       "description": "Critical government documents distributed as untagged, inaccessible PDFs exclude screen reader users, people with cognitive disabilities, and mobile-only users",
       "severity": 5,
       "frequency": 4,
-      "evidence": [
-        "Section 508 enforcement complaints data",
-        "WebAIM PDF accessibility survey"
-      ]
+      "evidence": ["Section 508 enforcement complaints data", "WebAIM PDF accessibility survey"]
     },
     {
       "id": "session-timeout-loss",

@@ -4,11 +4,11 @@ import { LlmCache } from './cache.js';
 import { extractStructured } from './extract.js';
 import { type ChatMessage, type ChatResponse, HttpError, callModel } from './providers/index.js';
 import {
+  MODELS,
   type ModelEntry,
   type StageId,
   availableForStage,
   cheapestAvailable,
-  MODELS,
 } from './registry.js';
 
 export interface DispatchOptions<T> {
@@ -68,7 +68,10 @@ export class LlmDispatcher {
       );
     }
 
-    const schemaHash = createHash('sha256').update(JSON.stringify(opts.schema._def)).digest('hex').slice(0, 16);
+    const schemaHash = createHash('sha256')
+      .update(JSON.stringify(opts.schema._def))
+      .digest('hex')
+      .slice(0, 16);
     const temperature = opts.temperature ?? 0.2;
     const maxRepairs = Math.min(opts.maxRepairs ?? 2, 3);
 
@@ -138,7 +141,11 @@ export class LlmDispatcher {
         }
 
         const extracted = extractStructured(lastResponse.text, opts.schema);
-        opts.onEvent?.({ type: 'extracted', modelId: model.id, strategies: extracted.attempts.length });
+        opts.onEvent?.({
+          type: 'extracted',
+          modelId: model.id,
+          strategies: extracted.attempts.length,
+        });
 
         if (extracted.value !== undefined) {
           if (!opts.noCache) {
@@ -150,7 +157,13 @@ export class LlmDispatcher {
               tokenOut: lastResponse.tokenOut,
             });
           }
-          opts.onEvent?.({ type: 'done', modelId: model.id, tokenIn: totalTokenIn, tokenOut: totalTokenOut, passes });
+          opts.onEvent?.({
+            type: 'done',
+            modelId: model.id,
+            tokenIn: totalTokenIn,
+            tokenOut: totalTokenOut,
+            passes,
+          });
           return {
             value: extracted.value,
             modelId: model.id,
@@ -163,36 +176,59 @@ export class LlmDispatcher {
 
         // Schema fail — repair re-prompt (within same model)
         if (attempt < maxRepairs) {
-          opts.onEvent?.({ type: 'schema-fail', modelId: model.id, error: extracted.schemaErrors ?? 'unknown' });
+          opts.onEvent?.({
+            type: 'schema-fail',
+            modelId: model.id,
+            error: extracted.schemaErrors ?? 'unknown',
+          });
           opts.onEvent?.({ type: 'repair', modelId: model.id, pass: attempt + 1 });
           messages = [
             ...opts.messages,
             { role: 'assistant', content: lastResponse.text },
             {
               role: 'user',
-              content: buildRepairPrompt(extracted.schemaErrors ?? 'unknown', extracted.attempts.length),
+              content: buildRepairPrompt(
+                extracted.schemaErrors ?? 'unknown',
+                extracted.attempts.length,
+              ),
             },
           ];
         } else {
-          lastError = new Error(`schema rejected after ${attempt + 1} passes: ${extracted.schemaErrors ?? 'unknown'}`);
+          lastError = new Error(
+            `schema rejected after ${attempt + 1} passes: ${extracted.schemaErrors ?? 'unknown'}`,
+          );
         }
       }
       // model exhausted — try next in chain
-      opts.onEvent?.({ type: 'fallback', from: model.id, to: 'next', reason: lastError?.message ?? 'exhausted' });
+      opts.onEvent?.({
+        type: 'fallback',
+        from: model.id,
+        to: 'next',
+        reason: lastError?.message ?? 'exhausted',
+      });
     }
 
-    throw new Error(`LLM dispatch failed for stage ${stageId}: ${lastError?.message ?? 'no provider responded'}`);
+    throw new Error(
+      `LLM dispatch failed for stage ${stageId}: ${lastError?.message ?? 'no provider responded'}`,
+    );
   }
 
   /** Cheap repair re-prompt to a tiny model — used by external code-validator etc. */
-  async repairCheap<T>(text: string, schema: z.ZodType<T, z.ZodTypeDef, unknown>, instruction: string): Promise<T | undefined> {
+  async repairCheap<T>(
+    text: string,
+    schema: z.ZodType<T, z.ZodTypeDef, unknown>,
+    instruction: string,
+  ): Promise<T | undefined> {
     const model = cheapestAvailable();
     if (!model) return undefined;
     const apiKey = process.env[model.apiKeyEnv];
     if (!apiKey) return undefined;
     const res = await callModel(model, apiKey, {
       messages: [
-        { role: 'system', content: 'You repair invalid JSON to match a schema. Return only valid JSON.' },
+        {
+          role: 'system',
+          content: 'You repair invalid JSON to match a schema. Return only valid JSON.',
+        },
         { role: 'user', content: `${instruction}\n\nInput:\n${text}` },
       ],
       temperature: 0,

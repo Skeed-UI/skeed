@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef, useRef, KeyboardEvent } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, type KeyboardEvent, forwardRef, useRef } from 'react';
 
 type TabVariant = 'underline' | 'solid' | 'ghost';
 
@@ -18,16 +18,12 @@ export interface TabsProps extends HTMLAttributes<HTMLDivElement> {
 
 const WRAPPER_CLASSES = 'w-full';
 
-const TABLIST_BASE_CLASSES =
-  'flex items-center gap-skeed-spacing-1';
+const TABLIST_BASE_CLASSES = 'flex items-center gap-skeed-spacing-1';
 
 const TABLIST_VARIANT_CLASSES: Record<TabVariant, string> = {
-  underline:
-    'border-b border-skeed-color-neutral-200 gap-skeed-spacing-0',
-  solid:
-    'bg-skeed-color-neutral-100 rounded-skeed-radius-2 p-skeed-spacing-1 gap-skeed-spacing-1',
-  ghost:
-    'gap-skeed-spacing-1',
+  underline: 'border-b border-skeed-color-neutral-200 gap-skeed-spacing-0',
+  solid: 'bg-skeed-color-neutral-100 rounded-skeed-radius-2 p-skeed-spacing-1 gap-skeed-spacing-1',
+  ghost: 'gap-skeed-spacing-1',
 };
 
 const TAB_BASE_CLASSES =
@@ -57,8 +53,7 @@ const TAB_VARIANT_ACTIVE: Record<TabVariant, string> = {
   solid:
     'bg-skeed-color-neutral-50 text-skeed-color-neutral-900 ' +
     'shadow-skeed-shadow-1 rounded-skeed-radius-2',
-  ghost:
-    'bg-skeed-color-brand-50 text-skeed-color-brand-600 rounded-skeed-radius-2',
+  ghost: 'bg-skeed-color-brand-50 text-skeed-color-brand-600 rounded-skeed-radius-2',
 };
 
 export const Tabs = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
@@ -68,9 +63,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
-    const enabledTabs = tabs
-      .map((tab, i) => ({ tab, i }))
-      .filter(({ tab }) => !tab.disabled);
+    const enabledTabs = tabs.map((tab, i) => ({ tab, i })).filter(({ tab }) => !tab.disabled);
 
     const currentEnabledIndex = enabledTabs.findIndex(({ i }) => i === index);
 
@@ -78,14 +71,11 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
 
     if (event.key === 'ArrowRight') {
       event.preventDefault();
-      nextEnabledIndex =
-        enabledTabs[(currentEnabledIndex + 1) % enabledTabs.length]?.i;
+      nextEnabledIndex = enabledTabs[(currentEnabledIndex + 1) % enabledTabs.length]?.i;
     } else if (event.key === 'ArrowLeft') {
       event.preventDefault();
       nextEnabledIndex =
-        enabledTabs[
-          (currentEnabledIndex - 1 + enabledTabs.length) % enabledTabs.length
-        ]?.i;
+        enabledTabs[(currentEnabledIndex - 1 + enabledTabs.length) % enabledTabs.length]?.i;
     } else if (event.key === 'Home') {
       event.preventDefault();
       nextEnabledIndex = enabledTabs[0]?.i;
@@ -118,7 +108,9 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
           return (
             <button
               key={tab.id}
-              ref={(el) => { tabRefs.current[index] = el; }}
+              ref={(el) => {
+                tabRefs.current[index] = el;
+              }}
               type="button"
               role="tab"
               id={`tab-${tab.id}`}
@@ -129,9 +121,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
               tabIndex={isActive ? 0 : -1}
               className={cn(
                 TAB_BASE_CLASSES,
-                isActive
-                  ? TAB_VARIANT_ACTIVE[variant]
-                  : TAB_VARIANT_INACTIVE[variant],
+                isActive ? TAB_VARIANT_ACTIVE[variant] : TAB_VARIANT_INACTIVE[variant],
               )}
               onClick={() => !tab.disabled && onChange(tab.id)}
               onKeyDown={(e) => handleKeyDown(e, index)}

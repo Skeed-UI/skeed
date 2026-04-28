@@ -1,6 +1,6 @@
-import { type HTMLAttributes, forwardRef, useState } from 'react';
-import { cn } from '@skeed/core/cn';
 import { ChevronDown } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef, useState } from 'react';
 
 let idCounter = 0;
 function generateId() {
@@ -39,7 +39,10 @@ export const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(func
         <span>{title}</span>
         <ChevronDown
           size={16}
-          className={cn('transition-transform duration-skeed-motion-duration-fast', isOpen ? 'rotate-180' : '')}
+          className={cn(
+            'transition-transform duration-skeed-motion-duration-fast',
+            isOpen ? 'rotate-180' : '',
+          )}
         />
       </button>
       {isOpen && (

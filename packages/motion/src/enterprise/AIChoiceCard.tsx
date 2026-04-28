@@ -2,9 +2,9 @@
  * AIChoiceCard - Enterprise component for presenting AI-generated choices
  */
 
-import * as React from 'react';
-import { useMotion } from '../react/useMotion.js';
+import type * as React from 'react';
 import { useMotionContext } from '../react/MotionProvider.js';
+import { useMotion } from '../react/useMotion.js';
 
 interface AIChoice {
   id: string;
@@ -89,7 +89,9 @@ function ChoiceOption({
         gap: '12px',
         padding: '16px',
         marginBottom: '8px',
-        border: isSelected ? '2px solid var(--skeed-color-brand-500)' : '1px solid var(--skeed-color-neutral-200)',
+        border: isSelected
+          ? '2px solid var(--skeed-color-brand-500)'
+          : '1px solid var(--skeed-color-neutral-200)',
         borderRadius: '8px',
         background: isSelected ? 'var(--skeed-color-brand-50)' : 'white',
         cursor: 'pointer',
@@ -140,7 +142,9 @@ function ChoiceOption({
           {option.label}
         </div>
         {option.reasoning && (
-          <div style={{ fontSize: '14px', color: 'var(--skeed-color-neutral-500)', marginTop: '4px' }}>
+          <div
+            style={{ fontSize: '14px', color: 'var(--skeed-color-neutral-500)', marginTop: '4px' }}
+          >
             {option.reasoning}
           </div>
         )}
@@ -159,7 +163,14 @@ function ChoiceOption({
             justifyContent: 'center',
           }}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            strokeWidth="3"
+          >
             <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>

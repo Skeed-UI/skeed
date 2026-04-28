@@ -11,7 +11,13 @@ export type ValidationStyle = z.infer<typeof ValidationStyle>;
 export const SuggestionMode = z.enum(['aggressive', 'conservative', 'none']);
 export type SuggestionMode = z.infer<typeof SuggestionMode>;
 
-export const GroupingStrategy = z.enum(['semantic', 'functional', 'frequency', 'dependency', 'none']);
+export const GroupingStrategy = z.enum([
+  'semantic',
+  'functional',
+  'frequency',
+  'dependency',
+  'none',
+]);
 export type GroupingStrategy = z.infer<typeof GroupingStrategy>;
 
 export const ProgressiveDisclosure = z.enum(['always', 'conditional', 'never']);
@@ -132,7 +138,14 @@ export type FieldGroup = z.infer<typeof FieldGroup>;
 
 export const DisclosureTrigger = z.object({
   field: z.string(),
-  operator: z.enum(['equals', 'not-equals', 'contains', 'not-contains', 'greater-than', 'less-than']),
+  operator: z.enum([
+    'equals',
+    'not-equals',
+    'contains',
+    'not-contains',
+    'greater-than',
+    'less-than',
+  ]),
   value: z.any(),
 });
 export type DisclosureTrigger = z.infer<typeof DisclosureTrigger>;

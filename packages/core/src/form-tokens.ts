@@ -1,11 +1,11 @@
 /**
  * Form-specific token helpers
- * 
+ *
  * Provides utilities for working with form state tokens
  * These tokens are used for form input states, validation feedback, and grouping
  */
 
-import { tokenToVarExpr, parseTokenRef } from './tokens.js';
+import { parseTokenRef, tokenToVarExpr } from './tokens.js';
 
 /**
  * Form state token paths
@@ -18,15 +18,15 @@ export const FORM_TOKEN_PATHS = {
   errorColor: 'form.state.error.color',
   successColor: 'form.state.success.color',
   warningColor: 'form.state.warning.color',
-  
+
   // Suggestion UI
   suggestionBg: 'form.suggestion.background',
   suggestionText: 'form.suggestion.text',
-  
+
   // Grouping
   groupSpacing: 'form.group.spacing',
   groupBorder: 'form.group.border',
-  
+
   // Transitions
   transitionDuration: 'form.transition.duration',
 } as const;

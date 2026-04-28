@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import { useRef, useEffect, useState, useCallback } from 'react';
-import type { SpotlightConfig, WindConfig, ParticleConfig, ScenicConfig } from './types.js';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import type { ParticleConfig, ScenicConfig, WindConfig } from './types.js';
 
 interface AmbientEnvironmentProps {
   children: React.ReactNode;
@@ -90,26 +90,15 @@ export function AmbientEnvironment({
       )}
 
       {/* Wind field visualization (optional, for debugging or subtle effect) */}
-      {config.wind?.cursorWake && (
-        <WindWakeIndicator
-          cursor={cursor}
-          config={config.wind}
-        />
-      )}
+      {config.wind?.cursorWake && <WindWakeIndicator cursor={cursor} config={config.wind} />}
 
       {/* Particle field */}
       {config.particles && (
-        <ParticleField
-          config={config.particles}
-          cursor={cursor}
-          containerRef={containerRef}
-        />
+        <ParticleField config={config.particles} cursor={cursor} containerRef={containerRef} />
       )}
 
       {/* Main content */}
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        {children}
-      </div>
+      <div style={{ position: 'relative', zIndex: 1 }}>{children}</div>
     </div>
   );
 }
@@ -155,24 +144,28 @@ function ParticleField({
   containerRef: React.RefObject<HTMLDivElement | null>;
 }): React.ReactElement {
   const count = config.count ?? 30;
-  const [particles, setParticles] = useState<Array<{
-    id: number;
-    x: number;
-    y: number;
-    vx: number;
-    vy: number;
-    size: number;
-    opacity: number;
-  }>>(() =>
+  const [particles, setParticles] = useState<
+    Array<{
+      id: number;
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+    }>
+  >(() =>
     Array.from({ length: count }, (_, i) => ({
       id: i,
       x: Math.random(),
       y: Math.random(),
       vx: (Math.random() - 0.5) * 0.001,
       vy: (Math.random() - 0.5) * 0.001,
-      size: (config.size?.min ?? 2) + Math.random() * ((config.size?.max ?? 4) - (config.size?.min ?? 2)),
+      size:
+        (config.size?.min ?? 2) +
+        Math.random() * ((config.size?.max ?? 4) - (config.size?.min ?? 2)),
       opacity: Math.random() * (config.opacity ?? 0.5),
-    }))
+    })),
   );
 
   useEffect(() => {
@@ -213,7 +206,7 @@ function ParticleField({
           if (y > 1) y = 0;
 
           return { ...p, x, y, vx, vy };
-        })
+        }),
       );
 
       rafId = requestAnimationFrame(animate);

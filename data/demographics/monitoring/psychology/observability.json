@@ -3,11 +3,7 @@
   "niche": "observability",
   "schemaVersion": 1,
   "cognitiveLoadTarget": "high",
-  "trustCuesNeeded": [
-    "monospaced_numerics",
-    "audit_trail",
-    "verified_check"
-  ],
+  "trustCuesNeeded": ["monospaced_numerics", "audit_trail", "verified_check"],
   "motivationPattern": "fear",
   "formality": 3,
   "noveltyTolerance": 2,

@@ -3,11 +3,7 @@
   "niche": "general",
   "schemaVersion": 1,
   "cognitiveLoadTarget": "medium",
-  "trustCuesNeeded": [
-    "testimonial",
-    "monospaced_numerics",
-    "verified_check"
-  ],
+  "trustCuesNeeded": ["testimonial", "monospaced_numerics", "verified_check"],
   "motivationPattern": "extrinsic",
   "formality": 3,
   "noveltyTolerance": 2,

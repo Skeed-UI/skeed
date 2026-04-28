@@ -1,6 +1,6 @@
 /**
  * Token Validation Guard
- * 
+ *
  * Ensures generated components use semantic tokens instead of hardcoded values.
  * This is a critical quality gate for maintaining design system consistency.
  */
@@ -29,7 +29,12 @@ export interface TokenValidationResult {
 
 export interface TokenViolation {
   /** Type of violation */
-  type: 'hardcoded-color' | 'hardcoded-spacing' | 'hardcoded-font' | 'hardcoded-radius' | 'hardcoded-shadow';
+  type:
+    | 'hardcoded-color'
+    | 'hardcoded-spacing'
+    | 'hardcoded-font'
+    | 'hardcoded-radius'
+    | 'hardcoded-shadow';
   /** Line number in source */
   line: number;
   /** Column number in source */
@@ -64,7 +69,8 @@ const VIOLATION_PATTERNS = [
   },
   {
     type: 'hardcoded-spacing' as const,
-    pattern: /p-\[\d+px\]|px-\[\d+px\]|py-\[\d+px\]|m-\[\d+px\]|mx-\[\d+px\]|my-\[\d+px\]|gap-\[\d+px\]/g,
+    pattern:
+      /p-\[\d+px\]|px-\[\d+px\]|py-\[\d+px\]|m-\[\d+px\]|mx-\[\d+px\]|my-\[\d+px\]|gap-\[\d+px\]/g,
     suggestion: 'Use density tokens like density.cozy.padY',
   },
   {
@@ -103,28 +109,28 @@ const VALID_PATTERNS = [
 export function validateTokens(options: TokenValidationOptions): TokenValidationResult {
   const { source, strict = true } = options;
   const violations: TokenViolation[] = [];
-  
+
   const lines = source.split('\n');
-  
+
   for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
     const line = lines[lineIndex]!;
     const lineNum = lineIndex + 1;
-    
+
     for (const { type, pattern, suggestion } of VIOLATION_PATTERNS) {
       // Reset regex lastIndex
       pattern.lastIndex = 0;
-      
+
       let match: RegExpExecArray | null;
       while ((match = pattern.exec(line)) !== null) {
         const value = match[0]!;
         const column = match.index! + 1;
-        
+
         // Check if this is actually in a valid context (e.g., inside a CSS var)
         const context = getContext(line, match.index!, value.length);
         if (isValidContext(context)) {
           continue;
         }
-        
+
         violations.push({
           type,
           line: lineNum,
@@ -135,7 +141,7 @@ export function validateTokens(options: TokenValidationOptions): TokenValidation
       }
     }
   }
-  
+
   return {
     valid: strict ? violations.length === 0 : violations.length < 3,
     violations,
@@ -192,15 +198,15 @@ export function formatValidationReport(result: TokenValidationResult): string {
   if (result.valid) {
     return `✅ Token validation passed\n   ${result.stats.validTokens} semantic tokens found`;
   }
-  
+
   const lines: string[] = [
     `❌ Token validation failed - ${result.violations.length} violations found:`,
   ];
-  
+
   for (const v of result.violations) {
     lines.push(`   Line ${v.line}:${v.column} - ${v.type}: "${v.value}"`);
     lines.push(`     → ${v.suggestion}`);
   }
-  
+
   return lines.join('\n');
 }

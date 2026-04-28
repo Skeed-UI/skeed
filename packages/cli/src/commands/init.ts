@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { resolve } from 'node:path';
-import kleur from 'kleur';
+import type { Scaffold } from '@skeed/contracts';
 import {
   Orchestrator,
   type PipelineState as PipelineStateType,
@@ -17,17 +17,17 @@ import {
   stage_11_design_system,
   stage_12_user_stories,
   stage_13_landing_options,
-  stage_14_ia,
   stage_14_5_backend_selector,
+  stage_14_ia,
   stage_15_compose,
   stage_16_assets,
   stage_17_emit,
 } from '@skeed/pipeline';
-import type { Scaffold } from '@skeed/contracts';
+import kleur from 'kleur';
 import { createMemoryCache } from '../runtime/cache.js';
-import { attachProgress } from '../runtime/progress.js';
 import { inferProjectName } from '../runtime/infer.js';
-import { pickFromPreview, type PreviewCandidate } from '../runtime/preview.js';
+import { type PreviewCandidate, pickFromPreview } from '../runtime/preview.js';
+import { attachProgress } from '../runtime/progress.js';
 import { writeScaffold } from '../runtime/scaffold.js';
 
 export interface InitOptions {
@@ -43,7 +43,9 @@ export async function runInit(opts: InitOptions): Promise<void> {
   const projectName = inferProjectName(opts.prompt, opts.name);
   const outDir = resolve(opts.outDir ?? process.cwd(), projectName);
 
-  process.stdout.write(`\n${kleur.bold('Skeed')} ${kleur.gray('— scaffolding')} ${kleur.cyan(projectName)}\n`);
+  process.stdout.write(
+    `\n${kleur.bold('Skeed')} ${kleur.gray('— scaffolding')} ${kleur.cyan(projectName)}\n`,
+  );
   process.stdout.write(`${kleur.gray('idea:')} ${opts.prompt}\n\n`);
 
   const cache = createMemoryCache();
@@ -66,10 +68,20 @@ export async function runInit(opts: InitOptions): Promise<void> {
     .register(stage_13_landing_options);
   phaseA.on(attachProgress());
 
-  const initial: PipelineStateType = { runId: ctxBase.runId, prompt: opts.prompt, registryVersion: ctxBase.registryVersion };
+  const initial: PipelineStateType = {
+    runId: ctxBase.runId,
+    prompt: opts.prompt,
+    registryVersion: ctxBase.registryVersion,
+  };
   const stateA = (await phaseA.run(initial, ctxBase)) as PipelineStateType & {
     logoCandidates?: Array<{ id: string; svg: string; layout: string; altText: string }>;
-    landingCandidates?: Array<{ id: string; archetype: string; variant: string; tsx: string; preview: string }>;
+    landingCandidates?: Array<{
+      id: string;
+      archetype: string;
+      variant: string;
+      tsx: string;
+      preview: string;
+    }>;
     landingTsx?: string;
   };
 
@@ -126,7 +138,9 @@ export async function runInit(opts: InitOptions): Promise<void> {
 
   const { written } = await writeScaffold({ outDir, scaffold: result });
 
-  process.stdout.write(`\n${kleur.green('done')} ${written} files written to ${kleur.cyan(outDir)}\n`);
+  process.stdout.write(
+    `\n${kleur.green('done')} ${written} files written to ${kleur.cyan(outDir)}\n`,
+  );
   if (chosenLogoId) process.stdout.write(`  logo:    ${kleur.cyan(chosenLogoId)}\n`);
   if (chosenLandingId) process.stdout.write(`  landing: ${kleur.cyan(chosenLandingId)}\n`);
   process.stdout.write(`\nNext steps:\n  cd ${projectName}\n  npm install\n  npm run dev\n\n`);

@@ -45,9 +45,7 @@ async function main(): Promise<void> {
   }
   if (!VALID_DEMOGRAPHIC_IDS.has(id)) {
     process.stderr.write(`unknown demographic id: ${id}\n`);
-    process.stderr.write(
-      `must be one of: ${[...VALID_DEMOGRAPHIC_IDS].join(', ')}\n`,
-    );
+    process.stderr.write(`must be one of: ${[...VALID_DEMOGRAPHIC_IDS].join(', ')}\n`);
     process.exit(1);
   }
   const target = resolve(repoRoot, 'data', 'demographics', id);
@@ -76,10 +74,14 @@ async function main(): Promise<void> {
   );
 
   process.stdout.write(`Scaffolded data/demographics/${id}/\n`);
-  process.stdout.write(`Next: read AGENTS.md inside that folder, then fill out preset.json + at least one niche.\n`);
+  process.stdout.write(
+    `Next: read AGENTS.md inside that folder, then fill out preset.json + at least one niche.\n`,
+  );
 }
 
 main().catch((err: unknown) => {
-  process.stderr.write(`new-demographic failed: ${err instanceof Error ? err.message : String(err)}\n`);
+  process.stderr.write(
+    `new-demographic failed: ${err instanceof Error ? err.message : String(err)}\n`,
+  );
   process.exit(1);
 });

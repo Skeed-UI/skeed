@@ -2,7 +2,7 @@
  * Spring physics solver - zero-dependency implementation
  */
 
-import type { SpringConfig, PhysicsState } from './types.js';
+import type { PhysicsState, SpringConfig } from './types.js';
 
 export interface SpringUpdate {
   position: number;
@@ -16,10 +16,7 @@ const VELOCITY_THRESHOLD = 0.001;
 /**
  * Calculate spring physics update using semi-implicit Euler integration
  */
-export function updateSpring(
-  state: PhysicsState,
-  deltaTime: number
-): SpringUpdate {
+export function updateSpring(state: PhysicsState, deltaTime: number): SpringUpdate {
   const { position, velocity, target, spring } = state;
   const { mass, stiffness, damping } = spring;
 
@@ -42,8 +39,7 @@ export function updateSpring(
 
   // Check if spring has settled
   const isSettled =
-    Math.abs(newPosition - target) < PRECISION &&
-    Math.abs(newVelocity) < VELOCITY_THRESHOLD;
+    Math.abs(newPosition - target) < PRECISION && Math.abs(newVelocity) < VELOCITY_THRESHOLD;
 
   return {
     position: newPosition,
@@ -58,7 +54,7 @@ export function updateSpring(
 export function createSpringFromMaterial(
   mass: number,
   elasticity: number,
-  damping: number
+  damping: number,
 ): SpringConfig {
   // Convert material properties to spring physics
   // Higher elasticity = higher stiffness
@@ -94,8 +90,8 @@ export function estimateSettleTime(spring: SpringConfig): number {
 
   if (dampingRatio >= 1) {
     // Overdamped - slower
-    return 1000 / naturalFrequency * 3;
+    return (1000 / naturalFrequency) * 3;
   }
   // Underdamped - oscillates but settles faster
-  return 1000 / naturalFrequency * 2;
+  return (1000 / naturalFrequency) * 2;
 }

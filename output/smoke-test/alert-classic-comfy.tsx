@@ -1,3 +1,4 @@
+import { cn } from '@skeed/core/cn';
 /**
  * @generated Component: alert
  * @demographic classic
@@ -6,13 +7,12 @@
  * @category molecule
  * @schemaVersion 1
  * @generatedAt 2026-04-26T03:16:26.995Z
- * 
+ *
  * DO NOT EDIT: This file is auto-generated from archetype:
  *   - Source: alert
  *   - Preset: classic
  */
 import { type HTMLAttributes, forwardRef } from 'react';
-import { cn } from '@skeed/core/cn';
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   variant?: 'info' | 'success' | 'warning' | 'danger';

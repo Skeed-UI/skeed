@@ -1,5 +1,5 @@
-import { type InputHTMLAttributes, forwardRef, useId, useState, useEffect } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type InputHTMLAttributes, forwardRef, useEffect, useId, useState } from 'react';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -25,8 +25,10 @@ const BASE_INPUT_CLASSES =
   'disabled:pointer-events-none disabled:opacity-50 ' +
   'read-only:bg-skeed-color-neutral-100';
 
-const ERROR_INPUT_CLASSES = 'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
-const SUCCESS_INPUT_CLASSES = 'border-skeed-color-success-500 focus-visible:ring-skeed-color-success-500 focus-visible:border-skeed-color-success-500';
+const ERROR_INPUT_CLASSES =
+  'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
+const SUCCESS_INPUT_CLASSES =
+  'border-skeed-color-success-500 focus-visible:ring-skeed-color-success-500 focus-visible:border-skeed-color-success-500';
 const LOADING_INPUT_CLASSES = 'bg-skeed-color-neutral-100 cursor-wait';
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
@@ -75,7 +77,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   };
 
   return (
-    <div className={cn('flex flex-col gap-skeed-spacing-1', fullWidth ? 'w-full' : 'w-auto', className)}>
+    <div
+      className={cn(
+        'flex flex-col gap-skeed-spacing-1',
+        fullWidth ? 'w-full' : 'w-auto',
+        className,
+      )}
+    >
       {label && (
         <label
           htmlFor={id}
@@ -93,9 +101,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         <input
           ref={ref}
           id={id}
-          aria-describedby={
-            error ? errorId : success ? successId : hint ? hintId : undefined
-          }
+          aria-describedby={error ? errorId : success ? successId : hint ? hintId : undefined}
           aria-invalid={!!error}
           aria-busy={loading}
           disabled={rest.disabled || loading}
@@ -121,23 +127,36 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
       </div>
       <div className="flex items-center justify-between gap-skeed-spacing-2">
         {error ? (
-          <p id={errorId} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600 animate-in fade-in slide-in-from-top-1">
+          <p
+            id={errorId}
+            role="alert"
+            className="text-sm font-skeed-body text-skeed-color-danger-600 animate-in fade-in slide-in-from-top-1"
+          >
             {error}
           </p>
         ) : success ? (
-          <p id={successId} className="text-sm font-skeed-body text-skeed-color-success-600 animate-in fade-in slide-in-from-top-1">
+          <p
+            id={successId}
+            className="text-sm font-skeed-body text-skeed-color-success-600 animate-in fade-in slide-in-from-top-1"
+          >
             {success}
           </p>
         ) : hint ? (
           <p id={hintId} className="text-sm font-skeed-body text-skeed-color-neutral-500">
             {hint}
           </p>
-        ) : <div />}
+        ) : (
+          <div />
+        )}
         {showCharacterCount && maxLength && (
-          <span className={cn(
-            "text-xs font-skeed-body tabular-nums",
-            charCount > maxLength * 0.9 ? "text-skeed-color-danger-500" : "text-skeed-color-neutral-400"
-          )}>
+          <span
+            className={cn(
+              'text-xs font-skeed-body tabular-nums',
+              charCount > maxLength * 0.9
+                ? 'text-skeed-color-danger-500'
+                : 'text-skeed-color-neutral-400',
+            )}
+          >
             {charCount}/{maxLength}
           </span>
         )}

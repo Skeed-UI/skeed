@@ -1,5 +1,5 @@
-import type { Stage } from '@skeed/contracts';
 import { AssetsRouter } from '@skeed/assets-router';
+import type { Stage } from '@skeed/contracts';
 import { PipelineState } from './state.js';
 
 /**
@@ -40,7 +40,8 @@ export const stage_16_assets: Stage<PipelineState, PipelineState> = {
           intent: state.intent?.jobToBeDone?.slice(0, 80) ?? 'hero illustration',
           size: { width: 1200, height: 600 },
         };
-        if (state.designSystem?.palette.primary) reqBase.brandColor = state.designSystem.palette.primary;
+        if (state.designSystem?.palette.primary)
+          reqBase.brandColor = state.designSystem.palette.primary;
         const heroResult = await router.route(reqBase);
         assets.push({
           slot: 'hero',
@@ -51,7 +52,9 @@ export const stage_16_assets: Stage<PipelineState, PipelineState> = {
           encoding: 'utf8',
         });
       } catch (err) {
-        process.stderr.write(`[skeed] hero asset fetch failed: ${err instanceof Error ? err.message : String(err)}\n`);
+        process.stderr.write(
+          `[skeed] hero asset fetch failed: ${err instanceof Error ? err.message : String(err)}\n`,
+        );
       }
     }
 

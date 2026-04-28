@@ -82,7 +82,9 @@ async function main(): Promise<void> {
   const demos = await loadDemographics({ dataRoot: resolve(dataRoot, 'demographics') });
   const demoCheck: CheckResult = { name: 'demographics', errors: [], warnings: [] };
   for (const err of demos.errors) {
-    const isStub = [...stubs].some((s) => err.path.endsWith(`demographics\\${s}`) || err.path.endsWith(`demographics/${s}`));
+    const isStub = [...stubs].some(
+      (s) => err.path.endsWith(`demographics\\${s}`) || err.path.endsWith(`demographics/${s}`),
+    );
     if (isStub && !STRICT) {
       demoCheck.warnings.push({ path: err.path, message: 'STUB — fill in per AGENTS.md' });
     } else {
@@ -109,7 +111,8 @@ async function main(): Promise<void> {
     if (demo.logoPrimitives.shapes.length + demo.logoPrimitives.marks.length === 0) {
       sink.push({
         path: `data/demographics/${demoId}/logo-primitives/`,
-        message: 'demographic has no logo shape or mark primitives — composer cannot generate logos',
+        message:
+          'demographic has no logo shape or mark primitives — composer cannot generate logos',
       });
     }
   }
@@ -143,7 +146,9 @@ async function main(): Promise<void> {
   );
 
   if (totalErrors > 0) {
-    process.stdout.write(`\nFAILED: ${totalErrors} validation error(s), ${totalWarnings} warning(s).\n`);
+    process.stdout.write(
+      `\nFAILED: ${totalErrors} validation error(s), ${totalWarnings} warning(s).\n`,
+    );
     process.exit(1);
   }
   if (totalWarnings > 0 && STRICT) {
@@ -156,7 +161,7 @@ async function main(): Promise<void> {
 }
 
 main().catch((err: unknown) => {
-  const message = err instanceof Error ? err.stack ?? err.message : String(err);
+  const message = err instanceof Error ? (err.stack ?? err.message) : String(err);
   process.stderr.write(`lint-data crashed: ${message}\n`);
   process.exit(2);
 });

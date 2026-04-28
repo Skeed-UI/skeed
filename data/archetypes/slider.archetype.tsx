@@ -1,5 +1,5 @@
-import { type InputHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type InputHTMLAttributes, forwardRef } from 'react';
 
 export interface SliderProps extends InputHTMLAttributes<HTMLInputElement> {
   min?: number;
@@ -13,7 +13,7 @@ export const Slider = forwardRef<HTMLInputElement, SliderProps>(function Slider(
   { className, min = 0, max = 100, step = 1, value, onValueChange, ...rest },
   ref,
 ) {
-  const percentage = ((value ?? min) - min) / (max - min) * 100;
+  const percentage = (((value ?? min) - min) / (max - min)) * 100;
 
   return (
     <div className={cn('w-full', className)}>
@@ -40,7 +40,9 @@ export const Slider = forwardRef<HTMLInputElement, SliderProps>(function Slider(
       </div>
       <div className="flex justify-between mt-skeed-spacing-1">
         <span className="text-xs font-skeed-body text-skeed-color-neutral-500">{min}</span>
-        <span className="text-xs font-skeed-body text-skeed-color-neutral-700 font-medium">{value ?? min}</span>
+        <span className="text-xs font-skeed-body text-skeed-color-neutral-700 font-medium">
+          {value ?? min}
+        </span>
         <span className="text-xs font-skeed-body text-skeed-color-neutral-500">{max}</span>
       </div>
     </div>

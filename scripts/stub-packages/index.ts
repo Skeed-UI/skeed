@@ -96,7 +96,8 @@ Do not import any AssetSource implementation directly — they're injected.`,
   },
   {
     id: 'asset-logo-svg',
-    description: 'Programmatic SVG logo composer using primitives from data/demographics/<id>/logo-primitives/.',
+    description:
+      'Programmatic SVG logo composer using primitives from data/demographics/<id>/logo-primitives/.',
     agentBrief: `Implement:
 
 - src/composer.ts — given (BrandAttributes, DemographicPreset, LogoPrimitiveIndex) → 3-4 LogoCandidates with SVG source + favicon variants + alt text.
@@ -110,7 +111,7 @@ Implement the \`AssetSource\` interface from @skeed/contracts. \`match()\` score
   },
   {
     id: 'llm-cache',
-    description: 'Provider-agnostic prompt cache (Tier-3 \`~/.skeed/cache.db\`).',
+    description: 'Provider-agnostic prompt cache (Tier-3 `~/.skeed/cache.db`).',
     agentBrief: `Implement:
 
 - src/store.ts — opens \`~/.skeed/cache.db\` (creates if missing), exposes get/set/stats. Schema in \`packages/llm-cache/migrations/0001_init.sql\`.
@@ -229,6 +230,8 @@ async function exists(p: string): Promise<boolean> {
 }
 
 main().catch((err: unknown) => {
-  process.stderr.write(`stub-packages failed: ${err instanceof Error ? err.message : String(err)}\n`);
+  process.stderr.write(
+    `stub-packages failed: ${err instanceof Error ? err.message : String(err)}\n`,
+  );
   process.exit(1);
 });

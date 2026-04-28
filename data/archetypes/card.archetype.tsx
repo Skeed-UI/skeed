@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface CardProps extends HTMLAttributes<HTMLElement> {
   variant?: 'elevated' | 'outlined' | 'flat';
@@ -15,21 +15,14 @@ const paddingClasses = {
 };
 
 const variantClasses = {
-  elevated:
-    'bg-skeed-color-neutral-50 shadow-skeed-shadow-1 rounded-skeed-radius-2',
+  elevated: 'bg-skeed-color-neutral-50 shadow-skeed-shadow-1 rounded-skeed-radius-2',
   outlined:
     'bg-skeed-color-neutral-50 border border-skeed-color-neutral-200 rounded-skeed-radius-2',
   flat: 'bg-skeed-color-neutral-100 rounded-skeed-radius-2',
 };
 
 export const Card = forwardRef<HTMLElement, CardProps>(function Card(
-  {
-    className,
-    variant = 'elevated',
-    padding = 'md',
-    interactive = false,
-    ...rest
-  },
+  { className, variant = 'elevated', padding = 'md', interactive = false, ...rest },
   ref,
 ) {
   return (
@@ -50,51 +43,54 @@ export const Card = forwardRef<HTMLElement, CardProps>(function Card(
 
 export interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
-  function CardHeader({ className, ...rest }, ref) {
-    return (
-      <div
-        ref={ref}
-        className={cn(
-          'mb-skeed-spacing-3 border-b border-skeed-color-neutral-200 pb-skeed-spacing-3',
-          className,
-        )}
-        {...rest}
-      />
-    );
-  },
-);
+export const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(function CardHeader(
+  { className, ...rest },
+  ref,
+) {
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        'mb-skeed-spacing-3 border-b border-skeed-color-neutral-200 pb-skeed-spacing-3',
+        className,
+      )}
+      {...rest}
+    />
+  );
+});
 
 export interface CardBodyProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const CardBody = forwardRef<HTMLDivElement, CardBodyProps>(
-  function CardBody({ className, ...rest }, ref) {
-    return (
-      <div
-        ref={ref}
-        className={cn('text-skeed-color-neutral-900 font-skeed-body', className)}
-        {...rest}
-      />
-    );
-  },
-);
+export const CardBody = forwardRef<HTMLDivElement, CardBodyProps>(function CardBody(
+  { className, ...rest },
+  ref,
+) {
+  return (
+    <div
+      ref={ref}
+      className={cn('text-skeed-color-neutral-900 font-skeed-body', className)}
+      {...rest}
+    />
+  );
+});
 
 export interface CardFooterProps extends HTMLAttributes<HTMLDivElement> {}
 
-export const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
-  function CardFooter({ className, ...rest }, ref) {
-    return (
-      <div
-        ref={ref}
-        className={cn(
-          'mt-skeed-spacing-3 border-t border-skeed-color-neutral-200 pt-skeed-spacing-3',
-          className,
-        )}
-        {...rest}
-      />
-    );
-  },
-);
+export const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(function CardFooter(
+  { className, ...rest },
+  ref,
+) {
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        'mt-skeed-spacing-3 border-t border-skeed-color-neutral-200 pt-skeed-spacing-3',
+        className,
+      )}
+      {...rest}
+    />
+  );
+});
 
 // Skeleton Components
 export interface CardSkeletonProps extends HTMLAttributes<HTMLElement> {

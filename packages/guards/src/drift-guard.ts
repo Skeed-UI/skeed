@@ -32,7 +32,12 @@ export function checkDrift(args: {
     drifted.push({
       field: 'brandPrimary',
       expected: args.spec.brandPrimary,
-      evidence: [{ file: globals.path, found: globals.contents.match(/--skeed-brand:\s*([^;]+)/)?.[1] ?? '<not found>' }],
+      evidence: [
+        {
+          file: globals.path,
+          found: globals.contents.match(/--skeed-brand:\s*([^;]+)/)?.[1] ?? '<not found>',
+        },
+      ],
     });
   }
 

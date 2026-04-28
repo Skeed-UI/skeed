@@ -3,8 +3,8 @@
  */
 
 import * as React from 'react';
-import { useMotion } from '../react/useMotion.js';
 import { useMotionContext } from '../react/MotionProvider.js';
+import { useMotion } from '../react/useMotion.js';
 
 interface MicroReportProps {
   type: 'trend' | 'status' | 'count' | 'percentage';
@@ -27,7 +27,7 @@ export function MicroReport({
   const disabled = contextVal.reducedMotion;
 
   const [displayValue, setDisplayValue] = React.useState(0);
-  const numericValue = typeof value === 'number' ? value : parseFloat(value) || 0;
+  const numericValue = typeof value === 'number' ? value : Number.parseFloat(value) || 0;
   const isNumeric = !isNaN(numericValue);
 
   // Count-up animation
@@ -68,11 +68,12 @@ export function MicroReport({
   });
 
   // Format display value
-  const formattedValue = type === 'percentage'
-    ? `${Math.round(displayValue)}%`
-    : type === 'count'
-    ? Math.round(displayValue).toLocaleString()
-    : displayValue.toFixed(1);
+  const formattedValue =
+    type === 'percentage'
+      ? `${Math.round(displayValue)}%`
+      : type === 'count'
+        ? Math.round(displayValue).toLocaleString()
+        : displayValue.toFixed(1);
 
   const trendColors = {
     up: 'var(--skeed-color-success-500)',
@@ -108,7 +109,9 @@ export function MicroReport({
       )}
 
       {/* Value */}
-      <span style={{ fontWeight: '600', fontSize: '18px', color: 'var(--skeed-color-neutral-900)' }}>
+      <span
+        style={{ fontWeight: '600', fontSize: '18px', color: 'var(--skeed-color-neutral-900)' }}
+      >
         {isNumeric ? formattedValue : value}
       </span>
 

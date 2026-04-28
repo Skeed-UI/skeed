@@ -19,13 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v4
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
       
       - name: Install dependencies
@@ -44,23 +42,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v4
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       
       - name: Validate archetype tokens
-        run: |
-          echo "Checking for hardcoded values in archetypes..."
-          # This would run a script that checks all archetypes
-          node --experimental-vm-modules scripts/validate-tokens.js
+        run: pnpm validate:tokens
   
   # Job 3: Contrast Validation
   contrast-check:
@@ -69,23 +62,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v4
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       
       - name: Validate contrast ratios
-        run: |
-          echo "Checking WCAG contrast compliance..."
-          # Check all preset contrast pairs
-          node --experimental-vm-modules scripts/validate-contrast.js
+        run: pnpm validate:contrast
   
   # Job 4: Ethics Guard
   ethics-check:
@@ -94,22 +82,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v4
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       
       - name: Run ethics validation
-        run: |
-          echo "Checking ethics patterns..."
-          node --experimental-vm-modules scripts/validate-ethics.js
+        run: pnpm validate:ethics
   
   # Job 5: Bundle Size Check
   bundle-size:
@@ -118,22 +102,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v4
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       
       - name: Check bundle size limits
-        run: |
-          echo "Checking bundle sizes..."
-          node --experimental-vm-modules scripts/bundle-size-check.js
+        run: pnpm validate:bundle
 
   # Job 6: Test Suite
   test:
@@ -142,13 +122,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v4
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
       
       - name: Install dependencies
@@ -164,20 +142,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 9
+      - uses: pnpm/action-setup@v4
       
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
       
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       
       - name: Run generation smoke test
-        run: |
-          echo "Running component generation smoke test..."
-          # Generate a small subset to verify the pipeline works
-          node --experimental-vm-modules scripts/smoke-test-generation.js
+        run: pnpm smoke-test

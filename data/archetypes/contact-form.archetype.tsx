@@ -1,9 +1,14 @@
-import { type HTMLAttributes, useState, useId } from 'react';
+import { CheckCircle, Spinner } from '@skeed/asset-icon';
 import { cn } from '@skeed/core/cn';
-import { Spinner, CheckCircle } from '@skeed/asset-icon';
+import { type HTMLAttributes, useId, useState } from 'react';
 
 export interface ContactFormProps extends Omit<HTMLAttributes<HTMLElement>, 'onSubmit'> {
-  onSubmit: (data: { name: string; email: string; subject?: string; message: string }) => void | Promise<void>;
+  onSubmit: (data: {
+    name: string;
+    email: string;
+    subject?: string;
+    message: string;
+  }) => void | Promise<void>;
   loading?: boolean;
   success?: boolean;
   error?: string;
@@ -22,7 +27,8 @@ const INPUT_BASE =
   'focus-visible:border-skeed-color-brand-500 ' +
   'disabled:pointer-events-none disabled:opacity-50';
 
-const ERROR_INPUT = 'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
+const ERROR_INPUT =
+  'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
 
 type FieldKey = 'name' | 'email' | 'subject' | 'message';
 
@@ -80,15 +86,18 @@ export function ContactForm({
       aria-labelledby={`${formId}-title`}
       className={cn(
         'flex flex-col gap-skeed-spacing-6 w-full max-w-lg ' +
-        'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
-        'p-skeed-spacing-8 shadow-skeed-shadow-1',
+          'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
+          'p-skeed-spacing-8 shadow-skeed-shadow-1',
         className,
       )}
       {...rest}
     >
       {/* Header */}
       <div className="flex flex-col gap-skeed-spacing-2">
-        <h1 id={`${formId}-title`} className="text-2xl font-semibold font-skeed-body text-skeed-color-neutral-900">
+        <h1
+          id={`${formId}-title`}
+          className="text-2xl font-semibold font-skeed-body text-skeed-color-neutral-900"
+        >
           {title}
         </h1>
         {subtitle && (
@@ -141,7 +150,10 @@ export function ContactForm({
             <div className="grid grid-cols-1 gap-skeed-spacing-4 sm:grid-cols-2">
               {/* Name */}
               <div className="flex flex-col gap-skeed-spacing-1">
-                <label htmlFor={nameId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+                <label
+                  htmlFor={nameId}
+                  className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+                >
                   Name
                 </label>
                 <input
@@ -157,7 +169,11 @@ export function ContactForm({
                   className={cn(INPUT_BASE, fieldErrors['name'] && ERROR_INPUT)}
                 />
                 {fieldErrors['name'] && (
-                  <p id={`${nameId}-error`} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+                  <p
+                    id={`${nameId}-error`}
+                    role="alert"
+                    className="text-sm font-skeed-body text-skeed-color-danger-600"
+                  >
                     {fieldErrors['name']}
                   </p>
                 )}
@@ -165,7 +181,10 @@ export function ContactForm({
 
               {/* Email */}
               <div className="flex flex-col gap-skeed-spacing-1">
-                <label htmlFor={emailId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+                <label
+                  htmlFor={emailId}
+                  className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+                >
                   Email
                 </label>
                 <input
@@ -181,7 +200,11 @@ export function ContactForm({
                   className={cn(INPUT_BASE, fieldErrors['email'] && ERROR_INPUT)}
                 />
                 {fieldErrors['email'] && (
-                  <p id={`${emailId}-error`} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+                  <p
+                    id={`${emailId}-error`}
+                    role="alert"
+                    className="text-sm font-skeed-body text-skeed-color-danger-600"
+                  >
                     {fieldErrors['email']}
                   </p>
                 )}
@@ -191,8 +214,12 @@ export function ContactForm({
             {/* Subject */}
             {includeSubject && (
               <div className="flex flex-col gap-skeed-spacing-1">
-                <label htmlFor={subjectId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
-                  Subject <span className="font-normal text-skeed-color-neutral-400">(optional)</span>
+                <label
+                  htmlFor={subjectId}
+                  className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+                >
+                  Subject{' '}
+                  <span className="font-normal text-skeed-color-neutral-400">(optional)</span>
                 </label>
                 <input
                   id={subjectId}
@@ -208,7 +235,10 @@ export function ContactForm({
 
             {/* Message */}
             <div className="flex flex-col gap-skeed-spacing-1">
-              <label htmlFor={messageId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+              <label
+                htmlFor={messageId}
+                className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+              >
                 Message
               </label>
               <textarea
@@ -220,14 +250,14 @@ export function ContactForm({
                 disabled={isLoading}
                 aria-invalid={!!fieldErrors['message']}
                 aria-describedby={fieldErrors['message'] ? `${messageId}-error` : undefined}
-                className={cn(
-                  INPUT_BASE,
-                  'resize-y',
-                  fieldErrors['message'] && ERROR_INPUT,
-                )}
+                className={cn(INPUT_BASE, 'resize-y', fieldErrors['message'] && ERROR_INPUT)}
               />
               {fieldErrors['message'] && (
-                <p id={`${messageId}-error`} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+                <p
+                  id={`${messageId}-error`}
+                  role="alert"
+                  className="text-sm font-skeed-body text-skeed-color-danger-600"
+                >
                   {fieldErrors['message']}
                 </p>
               )}

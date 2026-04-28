@@ -52,7 +52,10 @@ async function main(): Promise<void> {
   for (const [demoId, demo] of targetDemos) {
     if (emitted >= maxCount) break;
     // Skip demos with no real psychology / primitives content
-    if (demo.psychology.size === 0 && demo.logoPrimitives.marks.length + demo.logoPrimitives.shapes.length === 0) {
+    if (
+      demo.psychology.size === 0 &&
+      demo.logoPrimitives.marks.length + demo.logoPrimitives.shapes.length === 0
+    ) {
       skipped += 1;
       continue;
     }
@@ -143,6 +146,8 @@ function hashStr(s: string): string {
 }
 
 main().catch((err: unknown) => {
-  process.stderr.write(`codegen failed: ${err instanceof Error ? err.stack ?? err.message : String(err)}\n`);
+  process.stderr.write(
+    `codegen failed: ${err instanceof Error ? (err.stack ?? err.message) : String(err)}\n`,
+  );
   process.exit(2);
 });

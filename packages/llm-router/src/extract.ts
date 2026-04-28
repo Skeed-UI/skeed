@@ -1,5 +1,5 @@
 import { jsonrepair } from 'jsonrepair';
-import { type z } from 'zod';
+import type { z } from 'zod';
 
 export interface ExtractionAttempt {
   strategy: string;
@@ -27,7 +27,10 @@ export interface ExtractionResult<T> {
  * If the schema rejects all parsed candidates, returns last schema-error message
  * so the caller can decide to re-prompt the model.
  */
-export function extractStructured<T>(text: string, schema: z.ZodType<T, z.ZodTypeDef, unknown>): ExtractionResult<T> {
+export function extractStructured<T>(
+  text: string,
+  schema: z.ZodType<T, z.ZodTypeDef, unknown>,
+): ExtractionResult<T> {
   const attempts: ExtractionAttempt[] = [];
   const candidates: string[] = [];
 

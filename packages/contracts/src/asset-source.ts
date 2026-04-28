@@ -1,5 +1,5 @@
-import type { DemographicId } from './demographic.js';
 import type { AssetSlotType } from './component.js';
+import type { DemographicId } from './demographic.js';
 
 export interface AssetRequest {
   slotRole: string;

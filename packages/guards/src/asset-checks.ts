@@ -38,7 +38,8 @@ export function checkAssets(assets: AssetCheckInput[]): AssetIssue[] {
     }
 
     if (a.mime === 'image/svg+xml') {
-      const svg = typeof a.contents === 'string' ? a.contents : new TextDecoder().decode(a.contents);
+      const svg =
+        typeof a.contents === 'string' ? a.contents : new TextDecoder().decode(a.contents);
       if (!/<title[\s>]/i.test(svg)) {
         issues.push({
           asset: a.id,
@@ -65,7 +66,8 @@ export async function checkGarbledText(
   const issues: AssetIssue[] = [];
   for (const a of assets) {
     if (!a.mime.startsWith('image/') || a.mime === 'image/svg+xml') continue;
-    const bytes = typeof a.contents === 'string' ? new TextEncoder().encode(a.contents) : a.contents;
+    const bytes =
+      typeof a.contents === 'string' ? new TextEncoder().encode(a.contents) : a.contents;
     try {
       const recognized = await ocr(bytes);
       if (looksGarbled(recognized, expectedTextHint)) {

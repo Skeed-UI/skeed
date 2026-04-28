@@ -84,17 +84,17 @@ interface TokenSubstitution {
  */
 export async function emitComponent(options: ComponentEmitterOptions): Promise<GeneratedComponent> {
   const { archetype, preset, density, overrides, variant = 'default' } = options;
-  
+
   // Generate CSS variables for this preset/density combination
   const { generateCSSVariables } = await import('@skeed/core/token-resolver');
   const resolved = generateCSSVariables(preset, density, overrides);
-  
+
   // Build CSS variable map
   const cssVariables = new Map<string, string>();
   for (const variable of resolved.cssVariables) {
     cssVariables.set(variable.name, variable.value);
   }
-  
+
   // Add current density variables
   const densityCfg = preset.density[density];
   cssVariables.set('--skeed-current-density', density);
@@ -102,24 +102,24 @@ export async function emitComponent(options: ComponentEmitterOptions): Promise<G
   cssVariables.set('--skeed-current-padx', `${densityCfg.padX}rem`);
   cssVariables.set('--skeed-current-gap', `${densityCfg.gap}rem`);
   cssVariables.set('--skeed-current-lh', String(densityCfg.lineHeight));
-  
+
   // Transform source code
   const substitutions = buildTokenSubstitutions(archetype.tokens, cssVariables);
   let source = transformSource(archetype.source, substitutions);
-  
+
   // Add component header comment
   const header = generateComponentHeader(archetype, preset, density, variant);
   source = header + source;
-  
+
   // Generate component ID
   const id = `${preset.id}/${archetype.id}/${density}/${variant}`;
-  
+
   // Calculate content hash for caching
   const contentHash = generateContentHash(source);
-  
+
   // Determine WCAG level based on demographic
   const wcagLevel = isAAAStrict(preset.id) ? 'AAA' : 'AA';
-  
+
   return {
     id,
     source,
@@ -144,14 +144,14 @@ export async function emitComponent(options: ComponentEmitterOptions): Promise<G
  */
 function buildTokenSubstitutions(
   tokens: string[],
-  cssVariables: Map<string, string>
+  cssVariables: Map<string, string>,
 ): TokenSubstitution[] {
   const substitutions: TokenSubstitution[] = [];
-  
+
   for (const token of tokens) {
     const cssVar = tokenToCssVariable(token);
     const value = cssVariables.get(cssVar);
-    
+
     if (value) {
       const type = inferTokenType(token);
       substitutions.push({
@@ -161,7 +161,7 @@ function buildTokenSubstitutions(
       });
     }
   }
-  
+
   return substitutions;
 }
 
@@ -173,7 +173,7 @@ function tokenToCssVariable(token: string): string {
   if (token.startsWith('skeed-')) {
     return `--${token}`;
   }
-  
+
   // Convert dot notation to CSS variable format
   // e.g., color.brand.500 → --skeed-color-brand-500
   const parts = token.split('.');
@@ -197,31 +197,25 @@ function inferTokenType(token: string): TokenSubstitution['type'] {
 /**
  * Transform source code with token substitutions
  */
-function transformSource(
-  source: string,
-  substitutions: TokenSubstitution[]
-): string {
+function transformSource(source: string, substitutions: TokenSubstitution[]): string {
   let result = source;
-  
+
   // Sort substitutions by length (longest first) to avoid partial replacements
   const sorted = [...substitutions].sort((a, b) => b.original.length - a.original.length);
-  
+
   for (const sub of sorted) {
     // Replace CSS variable syntax
-    const varPattern = new RegExp(
-      `var\\(${escapeRegex(tokenToCssVariable(sub.original))}\\)`,
-      'g'
-    );
+    const varPattern = new RegExp(`var\\(${escapeRegex(tokenToCssVariable(sub.original))}\\)`, 'g');
     result = result.replace(varPattern, sub.replacement);
-    
+
     // Replace Tailwind bracket syntax
     const bracketPattern = new RegExp(
       `\\[${escapeRegex(tokenToCssVariable(sub.original))}\\]`,
-      'g'
+      'g',
     );
     result = result.replace(bracketPattern, sub.replacement);
   }
-  
+
   return result;
 }
 
@@ -239,7 +233,7 @@ function generateComponentHeader(
   archetype: ArchetypeDefinition,
   preset: DemographicPreset,
   density: Density,
-  variant: string
+  variant: string,
 ): string {
   const lines = [
     '/**',
@@ -257,7 +251,7 @@ function generateComponentHeader(
     ' */',
     '',
   ];
-  
+
   return lines.join('\n');
 }
 
@@ -269,7 +263,7 @@ function generateContentHash(content: string): string {
   let hash = 0;
   for (let i = 0; i < content.length; i++) {
     const char = content.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
+    hash = (hash << 5) - hash + char;
     hash = hash & hash; // Convert to 32bit integer
   }
   return Math.abs(hash).toString(16).padStart(8, '0');
@@ -279,13 +273,7 @@ function generateContentHash(content: string): string {
  * Check if demographic requires AAA strict accessibility
  */
 function isAAAStrict(demographicId: string): boolean {
-  const aaaStrictDemographics = [
-    'kids',
-    'education', 
-    'health',
-    'gov',
-    'mental_wellness',
-  ];
+  const aaaStrictDemographics = ['kids', 'education', 'health', 'gov', 'mental_wellness'];
   return aaaStrictDemographics.includes(demographicId);
 }
 
@@ -304,11 +292,11 @@ export function emitCSSVariables(component: GeneratedComponent): string {
     `/* CSS Variables for ${component.id} */`,
     `:root[data-skeed-preset="${component.manifest.demographicId}"][data-skeed-density="${component.manifest.density}"] {`,
   ];
-  
+
   for (const [name, value] of component.cssVariables) {
     lines.push(`  ${name}: ${value};`);
   }
-  
+
   lines.push('}');
   return lines.join('\n');
 }
@@ -319,10 +307,10 @@ export function emitCSSVariables(component: GeneratedComponent): string {
 export function validateEmission(
   archetype: ArchetypeDefinition,
   preset: DemographicPreset,
-  density: Density
+  density: Density,
 ): { valid: boolean; errors: string[] } {
   const errors: string[] = [];
-  
+
   // Check all tokens can be resolved
   for (const token of archetype.tokens) {
     const cssVar = tokenToCssVariable(token);
@@ -331,12 +319,12 @@ export function validateEmission(
       errors.push(`Invalid token format: ${token}`);
     }
   }
-  
+
   // Check density exists in preset
   if (!preset.density[density]) {
     errors.push(`Density ${density} not found in preset ${preset.id}`);
   }
-  
+
   return {
     valid: errors.length === 0,
     errors,

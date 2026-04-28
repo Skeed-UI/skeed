@@ -60,7 +60,8 @@ Extract pain points now.`;
         painPoints: [
           {
             id: 'p1',
-            description: 'Existing tools are too generic; off-the-shelf options miss demographic needs.',
+            description:
+              'Existing tools are too generic; off-the-shelf options miss demographic needs.',
             severity: 4,
             frequency: 4,
             evidence: [],

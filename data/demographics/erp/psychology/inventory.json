@@ -3,11 +3,7 @@
   "niche": "inventory",
   "schemaVersion": 1,
   "cognitiveLoadTarget": "high",
-  "trustCuesNeeded": [
-    "audit_trail",
-    "monospaced_numerics",
-    "verified_check"
-  ],
+  "trustCuesNeeded": ["audit_trail", "monospaced_numerics", "verified_check"],
   "motivationPattern": "extrinsic",
   "formality": 4,
   "noveltyTolerance": 1,

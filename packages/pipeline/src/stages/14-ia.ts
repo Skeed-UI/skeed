@@ -19,9 +19,18 @@ const IaOut = z.object({
   pages: z.array(PageZ).min(1).max(8),
   nav: z.object({
     pattern: z.enum(['tab', 'sidebar', 'bottom', 'top']),
-    items: z.array(z.object({ pageId: z.string(), label: z.string(), icon: z.string().optional() })),
+    items: z.array(
+      z.object({ pageId: z.string(), label: z.string(), icon: z.string().optional() }),
+    ),
   }),
-  dataModel: z.array(z.object({ entity: z.string(), fields: z.array(z.object({ name: z.string(), type: z.string() })) })).default([]),
+  dataModel: z
+    .array(
+      z.object({
+        entity: z.string(),
+        fields: z.array(z.object({ name: z.string(), type: z.string() })),
+      }),
+    )
+    .default([]),
 });
 
 const SYSTEM = `You design the information architecture (sitemap + nav + data model) for a product.

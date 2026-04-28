@@ -2,14 +2,14 @@
  * useMotion hook - primary interface for physics-based animations
  */
 
-import * as React from 'react';
-import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
-import type { MotionConfig, EffectSpec } from '../grammar/types.js';
-import { parseMotion } from '../grammar/parser.js';
-import { getMaterial, type Material } from '../physics/types.js';
+import type * as React from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { executeEffect } from '../effects/registry.js';
 import type { EffectContext } from '../effects/types.js';
-import type { UseMotionOptions, UseMotionReturn, MotionStyle } from './types.js';
+import { parseMotion } from '../grammar/parser.js';
+import type { EffectSpec, MotionConfig } from '../grammar/types.js';
+import { type Material, getMaterial } from '../physics/types.js';
+import type { MotionStyle, UseMotionOptions, UseMotionReturn } from './types.js';
 
 interface CursorState {
   x: number;
@@ -65,7 +65,7 @@ function createEffectContext(
   trigger: EffectContext['trigger'],
   cursor: CursorState,
   material: Material,
-  intensity: number = 0.5
+  intensity = 0.5,
 ): EffectContext {
   return {
     trigger,
@@ -84,7 +84,9 @@ function createEffectContext(
   };
 }
 
-function transformsToString(transforms: { type: string; x?: number; y?: number; z?: number; angle?: number }[]): string {
+function transformsToString(
+  transforms: { type: string; x?: number; y?: number; z?: number; angle?: number }[],
+): string {
   return transforms
     .map((t) => {
       switch (t.type) {
@@ -162,7 +164,7 @@ export function useMotion(options: UseMotionOptions): UseMotionReturn {
       const rect = target.getBoundingClientRect();
       updatePosition(e, rect);
     },
-    [disabled, updatePosition]
+    [disabled, updatePosition],
   );
 
   const handleMouseLeave = useCallback(() => {
@@ -176,7 +178,7 @@ export function useMotion(options: UseMotionOptions): UseMotionReturn {
       const rect = elementRef.current.getBoundingClientRect();
       updatePosition(e, rect);
     },
-    [disabled, updatePosition]
+    [disabled, updatePosition],
   );
 
   const handleClick = useCallback(
@@ -193,7 +195,7 @@ export function useMotion(options: UseMotionOptions): UseMotionReturn {
         setActiveTrigger((prev: string | null) => (prev === 'click' ? null : prev));
       }, 300);
     },
-    [disabled, updatePosition]
+    [disabled, updatePosition],
   );
 
   const handleFocus = useCallback(() => {
@@ -220,8 +222,8 @@ export function useMotion(options: UseMotionOptions): UseMotionReturn {
 
     // Filter to only EffectSpec items (skip material string, etc.)
     const effectListRaw = Array.isArray(effects) ? effects : [effects];
-    const effectList = effectListRaw.filter((e): e is EffectSpec =>
-      e !== null && typeof e === 'object' && 'name' in e
+    const effectList = effectListRaw.filter(
+      (e): e is EffectSpec => e !== null && typeof e === 'object' && 'name' in e,
     );
 
     if (effectList.length === 0) {
@@ -234,7 +236,7 @@ export function useMotion(options: UseMotionOptions): UseMotionReturn {
       activeTrigger as EffectContext['trigger'],
       cursor,
       material,
-      intensity
+      intensity,
     );
 
     const outputs = effectList.map((spec) => executeEffect(spec, context));

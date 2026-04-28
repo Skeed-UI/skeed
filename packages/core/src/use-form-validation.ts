@@ -1,20 +1,20 @@
 /**
  * React hooks for form validation and suggestions
- * 
+ *
  * Provides hooks for integrating the validation and suggestion engines
  * into React components with real-time feedback.
  */
 
-import { useState, useCallback, useRef } from 'react';
-import { createValidationEngine, type ValidationEngine } from './form-validation.js';
-import { createSuggestionEngine, type SuggestionEngine } from './form-suggestions.js';
 import type {
-  ValidationRule,
-  ValidationResult,
-  Suggestion,
-  FormState,
   FieldType,
+  FormState,
+  Suggestion,
+  ValidationResult,
+  ValidationRule,
 } from '@skeed/contracts';
+import { useCallback, useRef, useState } from 'react';
+import { type SuggestionEngine, createSuggestionEngine } from './form-suggestions.js';
+import { type ValidationEngine, createValidationEngine } from './form-validation.js';
 
 export interface UseFormValidationOptions {
   demographic: string;
@@ -39,14 +39,18 @@ export interface UseFormValidationReturn {
 /**
  * Hook for form validation with real-time feedback
  */
-export function useFormValidation(
-  options: UseFormValidationOptions
-): UseFormValidationReturn {
-  const { demographic, rules, validateOnBlur = true, validateOnChange = false, debounceMs = 300 } = options;
-  
+export function useFormValidation(options: UseFormValidationOptions): UseFormValidationReturn {
+  const {
+    demographic,
+    rules,
+    validateOnBlur = true,
+    validateOnChange = false,
+    debounceMs = 300,
+  } = options;
+
   const validationEngine = useRef<ValidationEngine>(createValidationEngine());
   const suggestionEngine = useRef<SuggestionEngine>(createSuggestionEngine());
-  
+
   const [state, setState] = useState<FormState>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [suggestions, setSuggestions] = useState<Record<string, Suggestion[]>>({});
@@ -60,7 +64,7 @@ export function useFormValidation(
       }
 
       const result = validationEngine.current.validateField(value, fieldRules, demographic);
-      
+
       // Update errors state
       setErrors((prev) => {
         const next = { ...prev };
@@ -77,7 +81,7 @@ export function useFormValidation(
         const suggestion = suggestionEngine.current.getSuggestion(
           result.errors[0]!,
           fieldRules.type,
-          demographic
+          demographic,
         );
         setSuggestions((prev) => ({
           ...prev,
@@ -93,31 +97,31 @@ export function useFormValidation(
 
       return result;
     },
-    [demographic, rules]
+    [demographic, rules],
   );
 
   const validate = useCallback((): boolean => {
     const result = validationEngine.current.validateForm(state, rules, demographic);
-    
+
     const errorMap: Record<string, string> = {};
     for (const error of result.errors) {
       errorMap[error.field] = error.message;
     }
     setErrors(errorMap);
     setIsValid(result.isValid);
-    
+
     return result.isValid;
   }, [state, rules, demographic]);
 
   const setFieldValue = useCallback(
     (fieldId: string, value: string) => {
       setState((prev) => ({ ...prev, [fieldId]: value }));
-      
+
       if (validateOnChange) {
         validateField(fieldId, value);
       }
     },
-    [validateOnChange, validateField]
+    [validateOnChange, validateField],
   );
 
   const clearError = useCallback((fieldId: string) => {
@@ -154,10 +158,7 @@ export function useFormValidation(
 /**
  * Hook for debounced field validation
  */
-export function useDebouncedValidation(
-  validateFn: (value: string) => void,
-  delayMs: number = 300
-) {
+export function useDebouncedValidation(validateFn: (value: string) => void, delayMs = 300) {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const debouncedValidate = useCallback(
@@ -165,12 +166,12 @@ export function useDebouncedValidation(
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
-      
+
       timeoutRef.current = setTimeout(() => {
         validateFn(value);
       }, delayMs);
     },
-    [validateFn, delayMs]
+    [validateFn, delayMs],
   );
 
   const cancel = useCallback(() => {
@@ -190,7 +191,7 @@ export function useFieldValidation(
   fieldId: string,
   fieldType: FieldType,
   demographic: string,
-  options: { required?: boolean; minLength?: number; maxLength?: number; pattern?: string } = {}
+  options: { required?: boolean; minLength?: number; maxLength?: number; pattern?: string } = {},
 ) {
   const [value, setValue] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -208,13 +209,13 @@ export function useFieldValidation(
       maxLength: options.maxLength,
       pattern: options.pattern,
     };
-    
+
     const result = validationEngine.current.validateField(val, rule, demographic);
-    
+
     if (result.errors.length > 0) {
       setError(result.errors[0]!.message);
       setSuggestion(
-        suggestionEngine.current.getSuggestion(result.errors[0]!, fieldType, demographic)
+        suggestionEngine.current.getSuggestion(result.errors[0]!, fieldType, demographic),
       );
     } else {
       setError(null);
@@ -229,7 +230,7 @@ export function useFieldValidation(
         debouncedValidate(newValue);
       }
     },
-    [touched, debouncedValidate]
+    [touched, debouncedValidate],
   );
 
   const handleBlur = useCallback(() => {
@@ -242,13 +243,13 @@ export function useFieldValidation(
       maxLength: options.maxLength,
       pattern: options.pattern,
     };
-    
+
     const result = validationEngine.current.validateField(value, rule, demographic);
-    
+
     if (result.errors.length > 0) {
       setError(result.errors[0]!.message);
       setSuggestion(
-        suggestionEngine.current.getSuggestion(result.errors[0]!, fieldType, demographic)
+        suggestionEngine.current.getSuggestion(result.errors[0]!, fieldType, demographic),
       );
     } else {
       setError(null);

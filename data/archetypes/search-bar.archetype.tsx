@@ -1,6 +1,6 @@
-import { type HTMLAttributes, useRef } from 'react';
+import { Search, Spinner, X } from '@skeed/asset-icon';
 import { cn } from '@skeed/core/cn';
-import { Search, X, Spinner } from '@skeed/asset-icon';
+import { type HTMLAttributes, useRef } from 'react';
 
 export interface SearchBarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
   value: string;
@@ -77,11 +77,7 @@ export function SearchBar({
   };
 
   return (
-    <div
-      role="search"
-      className={cn(fullWidth ? 'w-full' : 'w-auto', className)}
-      {...rest}
-    >
+    <div role="search" className={cn(fullWidth ? 'w-full' : 'w-auto', className)} {...rest}>
       <form onSubmit={handleSubmit} className="relative flex items-center">
         {/* Leading icon: spinner when loading, search icon otherwise */}
         <span
@@ -105,12 +101,12 @@ export function SearchBar({
           onKeyDown={handleKeyDown}
           className={cn(
             'w-full appearance-none bg-skeed-color-neutral-50 text-skeed-color-neutral-900 ' +
-            'border border-skeed-color-neutral-300 rounded-skeed-radius-2 ' +
-            'font-skeed-body placeholder:text-skeed-color-neutral-400 ' +
-            'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 ' +
-            'focus-visible:border-skeed-color-brand-500 ' +
-            'disabled:pointer-events-none disabled:opacity-50',
+              'border border-skeed-color-neutral-300 rounded-skeed-radius-2 ' +
+              'font-skeed-body placeholder:text-skeed-color-neutral-400 ' +
+              'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 ' +
+              'focus-visible:border-skeed-color-brand-500 ' +
+              'disabled:pointer-events-none disabled:opacity-50',
             SIZE_CLASSES[size],
             LEADING_PADDING[size],
             showClear && TRAILING_PADDING[size],
@@ -124,9 +120,9 @@ export function SearchBar({
             onClick={handleClear}
             className={cn(
               'absolute flex items-center justify-center rounded-skeed-radius-2 ' +
-              'text-skeed-color-neutral-400 hover:text-skeed-color-neutral-900 ' +
-              'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500',
+                'text-skeed-color-neutral-400 hover:text-skeed-color-neutral-900 ' +
+                'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500',
               CLEAR_SIZE_CLASSES[size],
             )}
           >

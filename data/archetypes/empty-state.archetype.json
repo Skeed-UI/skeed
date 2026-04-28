@@ -15,9 +15,7 @@
     "spacing.10",
     "spacing.16"
   ],
-  "assetSlots": [
-    { "role": "illustration", "type": "hero_illustration", "required": false }
-  ],
+  "assetSlots": [{ "role": "illustration", "type": "hero_illustration", "required": false }],
   "defaultVariantsPerDensity": 1,
   "frameworks": ["react"],
   "license": "MIT",

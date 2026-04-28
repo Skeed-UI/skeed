@@ -1,6 +1,6 @@
-import { type HTMLAttributes, forwardRef } from 'react';
-import { cn } from '@skeed/core/cn';
 import { X } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
@@ -16,11 +16,14 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(function Modal(
   const previousActiveElement = useRef<Element | null>(null);
 
   // Handle escape key
-  const handleEscape = useCallback((event: KeyboardEvent) => {
-    if (event.key === 'Escape' && onClose) {
-      onClose();
-    }
-  }, [onClose]);
+  const handleEscape = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && onClose) {
+        onClose();
+      }
+    },
+    [onClose],
+  );
 
   useEffect(() => {
     if (open) {
@@ -35,7 +38,7 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(function Modal(
         const modalEl = internalRef.current;
         if (modalEl) {
           const focusableEl = modalEl.querySelector<HTMLElement>(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
           );
           (focusableEl || modalEl).focus();
         }

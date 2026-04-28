@@ -1,5 +1,5 @@
-import { type InputHTMLAttributes, forwardRef, useId } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type InputHTMLAttributes, forwardRef, useId } from 'react';
 
 export interface RadioProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
   label: string;
@@ -43,11 +43,11 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(function Radio(
           aria-describedby={description ? descriptionId : undefined}
           className={cn(
             'peer appearance-none h-4 w-4 rounded-skeed-radius-9999 border border-skeed-color-neutral-300 ' +
-            'bg-skeed-color-neutral-50 cursor-pointer ' +
-            'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
-            'checked:border-skeed-color-brand-500 ' +
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 focus-visible:ring-offset-2 ' +
-            'disabled:pointer-events-none disabled:opacity-50',
+              'bg-skeed-color-neutral-50 cursor-pointer ' +
+              'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
+              'checked:border-skeed-color-brand-500 ' +
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 focus-visible:ring-offset-2 ' +
+              'disabled:pointer-events-none disabled:opacity-50',
           )}
           {...rest}
         />
@@ -128,7 +128,11 @@ export function RadioGroup({
         ))}
       </div>
       {error && (
-        <p id={errorId} role="alert" className="mt-skeed-spacing-2 text-sm font-skeed-body text-skeed-color-danger-600">
+        <p
+          id={errorId}
+          role="alert"
+          className="mt-skeed-spacing-2 text-sm font-skeed-body text-skeed-color-danger-600"
+        >
           {error}
         </p>
       )}

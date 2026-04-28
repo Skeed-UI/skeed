@@ -11,7 +11,11 @@ export const stage_08_gate_2: Stage<PipelineState, PipelineState> = {
     ctx.emit({
       stage: '08-gate-2',
       type: 'token',
-      data: { kind: 'gate', score: state.scoreL2?.composite ?? 0, passes: state.scoreL2?.passes ?? true },
+      data: {
+        kind: 'gate',
+        score: state.scoreL2?.composite ?? 0,
+        passes: state.scoreL2?.passes ?? true,
+      },
     });
     return state;
   },

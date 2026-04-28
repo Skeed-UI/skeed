@@ -9,5 +9,8 @@
   "noveltyTolerance": 5,
   "accessibilityFloor": "AA",
   "forbiddenPatterns": ["dark_pattern"],
-  "research": { "sources": [], "notes": "AI-app users tolerate novelty but need transparent provenance + reversibility." }
+  "research": {
+    "sources": [],
+    "notes": "AI-app users tolerate novelty but need transparent provenance + reversibility."
+  }
 }

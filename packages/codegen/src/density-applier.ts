@@ -1,6 +1,6 @@
-import type { DemographicPreset } from '@skeed/contracts/preset';
 import type { Density } from '@skeed/contracts/demographic';
-import { generateCSSVariables, type TokenOverrides } from '@skeed/core/token-resolver';
+import type { DemographicPreset } from '@skeed/contracts/preset';
+import { type TokenOverrides, generateCSSVariables } from '@skeed/core/token-resolver';
 
 /**
  * Options for applying density to an archetype
@@ -44,7 +44,7 @@ const TOKEN_TO_CSS_VAR: Record<string, string> = {
   'density-padx': '--skeed-current-padx',
   'density-gap': '--skeed-current-gap',
   'density-lh': '--skeed-current-lh',
-  
+
   // Common density references (will be replaced with current density)
   'skeed-density-cozy-pady': '--skeed-current-pady',
   'skeed-density-cozy-padx': '--skeed-current-padx',
@@ -62,10 +62,10 @@ const TOKEN_TO_CSS_VAR: Record<string, string> = {
  */
 export function applyDensity(options: DensityApplierOptions): DensityApplierResult {
   const { preset, density, overrides } = options;
-  
+
   // Get density configuration
   const densityCfg = preset.density[density];
-  
+
   // Apply overrides if present
   const finalConfig = {
     padY: overrides?.density?.[density]?.padY ?? densityCfg.padY,
@@ -73,26 +73,26 @@ export function applyDensity(options: DensityApplierOptions): DensityApplierResu
     gap: overrides?.density?.[density]?.gap ?? densityCfg.gap,
     lineHeight: overrides?.density?.[density]?.lineHeight ?? densityCfg.lineHeight,
   };
-  
+
   // Generate CSS variables
   const resolved = generateCSSVariables(preset, density, overrides);
-  
+
   // Build CSS variable map
   const cssVariables = new Map<string, string>();
   for (const variable of resolved.cssVariables) {
     cssVariables.set(variable.name, variable.value);
   }
-  
+
   // Add current density variables
   cssVariables.set('--skeed-current-density', density);
   cssVariables.set('--skeed-current-pady', `${finalConfig.padY}rem`);
   cssVariables.set('--skeed-current-padx', `${finalConfig.padX}rem`);
   cssVariables.set('--skeed-current-gap', `${finalConfig.gap}rem`);
   cssVariables.set('--skeed-current-lh', String(finalConfig.lineHeight));
-  
+
   // Build token substitutions for Tailwind classes
   const tokenSubstitutions = new Map<string, string>();
-  
+
   // Map density-specific tokens to current density values
   for (const [token, cssVar] of Object.entries(TOKEN_TO_CSS_VAR)) {
     const value = cssVariables.get(cssVar);
@@ -100,10 +100,10 @@ export function applyDensity(options: DensityApplierOptions): DensityApplierResu
       tokenSubstitutions.set(`skeed-${token}`, value);
     }
   }
-  
+
   // Generate component ID
   const componentId = `${preset.id}/${density}`;
-  
+
   return {
     cssVariables,
     tokenSubstitutions,
@@ -115,23 +115,23 @@ export function applyDensity(options: DensityApplierOptions): DensityApplierResu
 /**
  * Transform a className string using density substitutions
  */
-export function transformClassName(
-  className: string,
-  substitutions: Map<string, string>
-): string {
+export function transformClassName(className: string, substitutions: Map<string, string>): string {
   let result = className;
-  
+
   // Replace each token with its substituted value
   for (const [token, value] of substitutions.entries()) {
     // Replace Tailwind arbitrary value syntax: p-[--skeed-density-cozy-pady]
     const pattern = new RegExp(`\\[--${token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\]`, 'g');
     result = result.replace(pattern, value);
-    
+
     // Replace CSS var reference syntax
-    const varPattern = new RegExp(`var\\(--${token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\)`, 'g');
+    const varPattern = new RegExp(
+      `var\\(--${token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\)`,
+      'g',
+    );
     result = result.replace(varPattern, value);
   }
-  
+
   return result;
 }
 
@@ -142,13 +142,13 @@ export function getSpacingClass(
   value: number,
   property: 'p' | 'px' | 'py' | 'm' | 'mx' | 'my' | 'gap' | 'space-x' | 'space-y',
   density: Density,
-  preset: DemographicPreset
+  preset: DemographicPreset,
 ): string {
   // Find closest spacing token index
   const spacing = preset.spacing;
   let closestIdx = 0;
   let closestDiff = Math.abs(spacing[0]! - value);
-  
+
   for (let i = 1; i < spacing.length; i++) {
     const diff = Math.abs(spacing[i]! - value);
     if (diff < closestDiff) {
@@ -156,7 +156,7 @@ export function getSpacingClass(
       closestIdx = i;
     }
   }
-  
+
   // Return Tailwind class with CSS variable reference
   return `${property}-[--skeed-spacing-${closestIdx}]`;
 }
@@ -164,20 +164,17 @@ export function getSpacingClass(
 /**
  * Get the Tailwind class for a radius value
  */
-export function getRadiusClass(
-  value: number,
-  preset: DemographicPreset
-): string {
+export function getRadiusClass(value: number, preset: DemographicPreset): string {
   // Special case for full radius
   if (value >= 9999) {
     return 'rounded-[--skeed-radius-9999]';
   }
-  
+
   // Find closest radius token index
   const radius = preset.radius;
   let closestIdx = 0;
   let closestDiff = Math.abs(radius[0]! - value);
-  
+
   for (let i = 1; i < radius.length; i++) {
     const diff = Math.abs(radius[i]! - value);
     if (diff < closestDiff) {
@@ -185,7 +182,7 @@ export function getRadiusClass(
       closestIdx = i;
     }
   }
-  
+
   return `rounded-[--skeed-radius-${closestIdx}]`;
 }
 
@@ -195,16 +192,16 @@ export function getRadiusClass(
 export function validateDensityTokens(
   className: string,
   preset: DemographicPreset,
-  density: Density
+  density: Density,
 ): { valid: boolean; missing: string[] } {
   const missing: string[] = [];
-  
+
   // Extract all CSS variable references
   const varRegex = /var\(--(skeed-[\w-]+)\)/g;
   const bracketRegex = /\[--(skeed-[\w-]+)\]/g;
-  
+
   const tokens = new Set<string>();
-  
+
   let match: RegExpExecArray | null;
   while ((match = varRegex.exec(className)) !== null) {
     if (match[1]) tokens.add(match[1]);
@@ -212,7 +209,7 @@ export function validateDensityTokens(
   while ((match = bracketRegex.exec(className)) !== null) {
     if (match[1]) tokens.add(match[1]);
   }
-  
+
   // Check if density-specific tokens exist
   for (const token of tokens) {
     if (token.includes('density')) {
@@ -226,7 +223,7 @@ export function validateDensityTokens(
       }
     }
   }
-  
+
   return {
     valid: missing.length === 0,
     missing,

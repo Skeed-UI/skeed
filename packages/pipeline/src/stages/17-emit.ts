@@ -51,11 +51,24 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
 
     // Composed pages overlay
     const home = state.composedPages?.find((p) => p.pageId === 'home');
-    if (home) files.push({ path: 'app/page.tsx', contents: home.tsx, encoding: 'utf8', overwrite: true });
+    if (home)
+      files.push({ path: 'app/page.tsx', contents: home.tsx, encoding: 'utf8', overwrite: true });
     const layout = state.composedPages?.find((p) => p.pageId === '_layout');
-    if (layout) files.push({ path: 'app/layout.tsx', contents: layout.tsx, encoding: 'utf8', overwrite: true });
+    if (layout)
+      files.push({
+        path: 'app/layout.tsx',
+        contents: layout.tsx,
+        encoding: 'utf8',
+        overwrite: true,
+      });
     const globals = state.composedPages?.find((p) => p.pageId === '_globals');
-    if (globals) files.push({ path: 'app/globals.css', contents: globals.tsx, encoding: 'utf8', overwrite: true });
+    if (globals)
+      files.push({
+        path: 'app/globals.css',
+        contents: globals.tsx,
+        encoding: 'utf8',
+        overwrite: true,
+      });
 
     // Backend API routes (from BackendPlan.apiRoutes)
     for (const route of backend?.apiRoutes ?? []) {
@@ -68,7 +81,12 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
     // .env.example from envVars
     if ((backend?.envVars ?? []).length > 0) {
       const envLines = (backend?.envVars ?? []).map((v) => `${v.name}=${v.example ?? ''}`);
-      files.push({ path: '.env.example', contents: envLines.join('\n') + '\n', encoding: 'utf8', overwrite: true });
+      files.push({
+        path: '.env.example',
+        contents: envLines.join('\n') + '\n',
+        encoding: 'utf8',
+        overwrite: true,
+      });
     }
 
     // Assets
@@ -101,7 +119,9 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
     });
 
     // ── Guard pass ─────────────────────────────────────────────────────────
-    const warnings: string[] = templateRoot ? [] : ['template root not found; using composed-only output'];
+    const warnings: string[] = templateRoot
+      ? []
+      : ['template root not found; using composed-only output'];
     const demographic = state.classification?.candidates[0]?.demographic ?? 'productivity';
     // findLast — composed overlay wins over template
     const homeFile = [...files].reverse().find((f) => f.path === 'app/page.tsx');
@@ -114,11 +134,15 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
       warnings.push(`forbidden-pattern[${v.pattern.severity}] ${v.pattern.reason} → "${v.match}"`);
     }
     if (hasBlockingViolation(forbidden)) {
-      warnings.push('one or more BLOCKING forbidden-pattern violations were emitted; review skeed.config.json');
+      warnings.push(
+        'one or more BLOCKING forbidden-pattern violations were emitted; review skeed.config.json',
+      );
     }
 
     // PII scrub
-    const pii = scrubPii(pageBody + ' ' + (state.userStories ?? []).map((s) => s.iWantTo).join(' '));
+    const pii = scrubPii(
+      pageBody + ' ' + (state.userStories ?? []).map((s) => s.iWantTo).join(' '),
+    );
     for (const h of pii.hits) {
       warnings.push(`pii[${h.kind}] detected; consider redacting "${h.value}"`);
     }
@@ -154,12 +178,21 @@ export const stage_17_emit: Stage<PipelineState, Scaffold> = {
       backendStack: backend?.stack ?? ['none'],
     });
     if (!rubric.passes) {
-      warnings.push(`rubric: composite ${rubric.composite}/10 below threshold (failing axes: ${rubric.criteria.filter((c) => c.score < 7).map((c) => c.id).join(', ')})`);
+      warnings.push(
+        `rubric: composite ${rubric.composite}/10 below threshold (failing axes: ${rubric.criteria
+          .filter((c) => c.score < 7)
+          .map((c) => c.id)
+          .join(', ')})`,
+      );
     }
 
     // Drift guard
     const drift = checkDrift({
-      spec: { demographic, brandPrimary: state.designSystem?.palette.primary ?? '#4F46E5', backendStack: backend?.stack ?? [] },
+      spec: {
+        demographic,
+        brandPrimary: state.designSystem?.palette.primary ?? '#4F46E5',
+        backendStack: backend?.stack ?? [],
+      },
       files: files.map((f) => ({ path: f.path, contents: f.contents })),
     });
     for (const d of drift.driftedFromSpec) {

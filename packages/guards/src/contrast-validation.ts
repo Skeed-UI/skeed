@@ -1,16 +1,19 @@
 /**
  * Contrast Validation Guard
- * 
+ *
  * Ensures WCAG AA/AAA contrast compliance for generated components.
  * Auto-fixes contrast issues where possible.
  */
 
 // Local implementation of getContrastRatio (also available in @skeed/core)
 function getLuminance(hex: string): number {
-  const rgb = hex.replace('#', '').match(/.{2}/g)?.map(x => {
-    const v = parseInt(x, 16) / 255;
-    return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
-  });
+  const rgb = hex
+    .replace('#', '')
+    .match(/.{2}/g)
+    ?.map((x) => {
+      const v = Number.parseInt(x, 16) / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
   if (!rgb || rgb.length !== 3) return 0;
   const [r, g, b] = rgb;
   if (r === undefined || g === undefined || b === undefined) return 0;
@@ -81,26 +84,15 @@ const AAA_STRICT_DEMOGRAPHICS = ['kids', 'education', 'health', 'gov', 'mental_w
 /**
  * Validate contrast between two colors
  */
-export function validateContrast(
-  options: ContrastValidationOptions
-): ContrastValidationResult {
-  const {
-    foreground,
-    background,
-    level = 'AA',
-    textSize = 'normal',
-    demographicId,
-  } = options;
+export function validateContrast(options: ContrastValidationOptions): ContrastValidationResult {
+  const { foreground, background, level = 'AA', textSize = 'normal', demographicId } = options;
 
   // Auto-upgrade to AAA for strict demographics
-  const effectiveLevel = demographicId && AAA_STRICT_DEMOGRAPHICS.includes(demographicId)
-    ? 'AAA'
-    : level;
+  const effectiveLevel =
+    demographicId && AAA_STRICT_DEMOGRAPHICS.includes(demographicId) ? 'AAA' : level;
 
   const ratio = getContrastRatio(foreground, background);
-  const requiredRatio = effectiveLevel === 'AAA'
-    ? AAA_RATIOS[textSize]
-    : AA_RATIOS[textSize];
+  const requiredRatio = effectiveLevel === 'AAA' ? AAA_RATIOS[textSize] : AA_RATIOS[textSize];
 
   const passesAA = ratio >= AA_RATIOS[textSize];
   const passesAAA = ratio >= AAA_RATIOS[textSize];
@@ -128,7 +120,7 @@ export function validateContrast(
 function generateFixSuggestion(
   foreground: string,
   background: string,
-  requiredRatio: number
+  requiredRatio: number,
 ): ContrastFixSuggestion | undefined {
   // Try lightening foreground
   const lightenedFg = lightenColor(foreground, 0.2);
@@ -185,7 +177,7 @@ function generateFixSuggestion(
  * Lighten a hex color by a percentage
  */
 function lightenColor(hex: string, percent: number): string {
-  const num = parseInt(hex.replace('#', ''), 16);
+  const num = Number.parseInt(hex.replace('#', ''), 16);
   const amt = Math.round(2.55 * percent * 100);
   const R = Math.min(255, (num >> 16) + amt);
   const G = Math.min(255, ((num >> 8) & 0x00ff) + amt);
@@ -197,7 +189,7 @@ function lightenColor(hex: string, percent: number): string {
  * Darken a hex color by a percentage
  */
 function darkenColor(hex: string, percent: number): string {
-  const num = parseInt(hex.replace('#', ''), 16);
+  const num = Number.parseInt(hex.replace('#', ''), 16);
   const amt = Math.round(2.55 * percent * 100);
   const R = Math.max(0, (num >> 16) - amt);
   const G = Math.max(0, ((num >> 8) & 0x00ff) - amt);
@@ -209,16 +201,20 @@ function darkenColor(hex: string, percent: number): string {
  * Batch validate multiple contrast pairs
  */
 export function validateContrastPairs(
-  pairs: Array<{ foreground: string; background: string; textSize: 'normal' | 'large' | undefined }>,
-  options: Omit<ContrastValidationOptions, 'foreground' | 'background'>
+  pairs: Array<{
+    foreground: string;
+    background: string;
+    textSize: 'normal' | 'large' | undefined;
+  }>,
+  options: Omit<ContrastValidationOptions, 'foreground' | 'background'>,
 ): ContrastValidationResult[] {
-  return pairs.map(pair =>
+  return pairs.map((pair) =>
     validateContrast({
       ...options,
       foreground: pair.foreground,
       background: pair.background,
       textSize: pair.textSize,
-    })
+    }),
   );
 }
 
@@ -236,13 +232,13 @@ export function formatContrastResult(result: ContrastValidationResult): string {
   if (result.valid) {
     return `✅ Contrast ${result.ratio.toFixed(2)}:1 passes ${result.passesAAA ? 'AAA' : 'AA'}`;
   }
-  
+
   let msg = `❌ Contrast ${result.ratio.toFixed(2)}:1 fails ${result.passesAAA ? 'AAA' : 'AA'} (need ${result.requiredRatio}:1)`;
-  
+
   if (result.suggestion) {
     msg += `\n   → Suggestion: ${result.suggestion.type}`;
     msg += ` (would give ${result.suggestion.newRatio.toFixed(2)}:1)`;
   }
-  
+
   return msg;
 }

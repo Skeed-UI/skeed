@@ -1,13 +1,13 @@
 /**
  * Skeed Codegen Package
- * 
+ *
  * Component generation engine that transforms archetypes × presets × densities
  * into resolved, runnable components.
- * 
+ *
  * @example
  * ```typescript
  * import { generateVariants, emitComponent } from '@skeed/codegen';
- * 
+ *
  * // Generate all 3,600 components
  * const result = await generateVariants({
  *   archetypes: await loadArchetypes(),
@@ -15,7 +15,7 @@
  *   loadPreset: async (id) => await loadPreset(id),
  *   onProgress: (p) => console.log(`${p.percentage}% complete`),
  * });
- * 
+ *
  * // Or generate a single component
  * const component = await emitComponent({
  *   archetype: buttonArchetype,

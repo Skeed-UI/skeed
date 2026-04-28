@@ -1,5 +1,5 @@
-import { type AnchorHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type AnchorHTMLAttributes, forwardRef } from 'react';
 
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: 'default' | 'muted' | 'primary';

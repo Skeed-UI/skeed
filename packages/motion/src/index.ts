@@ -3,7 +3,12 @@
  */
 
 // Physics engine
-export { updateSpring, createSpringFromMaterial, estimateSettleTime, SPRING_PRESETS } from './physics/spring.js';
+export {
+  updateSpring,
+  createSpringFromMaterial,
+  estimateSettleTime,
+  SPRING_PRESETS,
+} from './physics/spring.js';
 export { getMaterial, MATERIALS } from './physics/types.js';
 export type {
   Vector2D,
@@ -14,7 +19,12 @@ export type {
 } from './physics/types.js';
 
 // Grammar parser
-export { parseMotion, parseMotionString, validateMotionString, serializeMotion } from './grammar/parser.js';
+export {
+  parseMotion,
+  parseMotionString,
+  validateMotionString,
+  serializeMotion,
+} from './grammar/parser.js';
 export type {
   EffectTrigger,
   EffectName,
@@ -27,7 +37,13 @@ export type {
 } from './grammar/types.js';
 
 // Effect system
-export { registerEffect, getEffect, hasEffect, executeEffect, listEffects } from './effects/registry.js';
+export {
+  registerEffect,
+  getEffect,
+  hasEffect,
+  executeEffect,
+  listEffects,
+} from './effects/registry.js';
 export type {
   EffectContext,
   Transform,

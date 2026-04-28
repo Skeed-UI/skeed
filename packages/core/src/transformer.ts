@@ -1,7 +1,7 @@
-import type { DemographicPreset } from '@skeed/contracts/preset';
 import type { Density } from '@skeed/contracts/demographic';
-import { parseTokenRef, tokenToCssVar, type TokenRef } from './tokens.js';
+import type { DemographicPreset } from '@skeed/contracts/preset';
 import { type TokenOverrides, generateCSSVariables } from './token-resolver.js';
+import { type TokenRef, parseTokenRef, tokenToCssVar } from './tokens.js';
 
 export interface TransformerOptions {
   /** Strict mode throws on unresolved tokens; non-strict emits a CSS comment. */
@@ -28,7 +28,7 @@ export interface TransformerOutput {
 /**
  * Walks a DemographicPreset and emits a `:root[data-skeed-preset="..."]`
  * scoped block of CSS custom properties. Deterministic: same preset → byte-identical output.
- * 
+ *
  * Enhanced to support density-specific generation and brand overrides.
  */
 export function presetToCssVars(
@@ -41,7 +41,7 @@ export function presetToCssVars(
 
   // Use new token resolver for comprehensive CSS generation
   const resolved = generateCSSVariables(preset, density, opts.overrides);
-  
+
   // Generate CSS variables from resolved tokens
   for (const variable of resolved.cssVariables) {
     lines.push(`  ${variable.name}: ${variable.value};`);
@@ -52,12 +52,12 @@ export function presetToCssVars(
   }
 
   const mainBlock = `:root[data-skeed-preset="${preset.id}"] {\n${lines.join('\n')}\n}\n`;
-  
+
   // Generate density-specific CSS if requested
   let densityBlock: string | undefined;
   if (opts.includeDensityVars) {
     const densityLines: string[] = [];
-    
+
     // Add density-specific overrides
     const densityCfg = preset.density[density as keyof typeof preset.density];
     densityLines.push(`  --skeed-current-density: ${density};`);
@@ -65,19 +65,19 @@ export function presetToCssVars(
     densityLines.push(`  --skeed-current-padx: ${densityCfg.padX}rem;`);
     densityLines.push(`  --skeed-current-gap: ${densityCfg.gap}rem;`);
     densityLines.push(`  --skeed-current-lh: ${densityCfg.lineHeight};`);
-    
+
     densityBlock = `:root[data-skeed-density="${density}"] {\n${densityLines.join('\n')}\n}\n`;
   }
 
-  return { 
-    cssVarsBlock: mainBlock, 
+  return {
+    cssVarsBlock: mainBlock,
     densityCssBlock: densityBlock,
     unresolvedTokens: unresolved,
     metadata: {
       demographicId: preset.id,
       density,
       totalTokens: resolved.cssVariables.length,
-    }
+    },
   };
 }
 

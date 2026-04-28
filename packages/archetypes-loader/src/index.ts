@@ -1,6 +1,9 @@
 import { readFile, readdir, stat } from 'node:fs/promises';
 import { join } from 'node:path';
-import { type ArchetypeManifest, ArchetypeManifest as ArchetypeManifestSchema } from '@skeed/contracts';
+import {
+  type ArchetypeManifest,
+  ArchetypeManifest as ArchetypeManifestSchema,
+} from '@skeed/contracts';
 
 export interface LoadedArchetype {
   manifest: ArchetypeManifest;

@@ -3,7 +3,19 @@
   "niche": "gathering",
   "schemaVersion": 1,
   "points": [
-    { "id": "gp1", "description": "Casual events get lost when spread across SMS, calendar, and DM.", "severity": 4, "frequency": 5, "evidence": [] },
-    { "id": "gp2", "description": "No way to capture the vibe before guests arrive.", "severity": 3, "frequency": 5, "evidence": [] }
+    {
+      "id": "gp1",
+      "description": "Casual events get lost when spread across SMS, calendar, and DM.",
+      "severity": 4,
+      "frequency": 5,
+      "evidence": []
+    },
+    {
+      "id": "gp2",
+      "description": "No way to capture the vibe before guests arrive.",
+      "severity": 3,
+      "frequency": 5,
+      "evidence": []
+    }
   ]
 }

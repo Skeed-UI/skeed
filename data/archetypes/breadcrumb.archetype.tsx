@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface BreadcrumbItem {
   label: string;
@@ -13,8 +13,7 @@ export interface BreadcrumbProps extends HTMLAttributes<HTMLElement> {
 
 const BASE_CLASSES = 'w-full';
 
-const LIST_CLASSES =
-  'flex items-center flex-wrap gap-skeed-spacing-1 list-none m-0 p-0';
+const LIST_CLASSES = 'flex items-center flex-wrap gap-skeed-spacing-1 list-none m-0 p-0';
 
 const ITEM_CLASSES = 'flex items-center gap-skeed-spacing-1';
 
@@ -25,12 +24,10 @@ const LINK_CLASSES =
   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 ' +
   'rounded-skeed-radius-1';
 
-const CURRENT_CLASSES =
-  'font-skeed-body text-sm text-skeed-color-neutral-900 font-medium';
+const CURRENT_CLASSES = 'font-skeed-body text-sm text-skeed-color-neutral-900 font-medium';
 
 const SEPARATOR_CLASSES =
-  'text-skeed-color-neutral-400 font-skeed-body text-sm select-none ' +
-  'px-skeed-spacing-1';
+  'text-skeed-color-neutral-400 font-skeed-body text-sm select-none ' + 'px-skeed-spacing-1';
 
 export const Breadcrumb = forwardRef<HTMLElement, BreadcrumbProps>(function Breadcrumb(
   { items, separator = '/', className, ...rest },
@@ -49,10 +46,7 @@ export const Breadcrumb = forwardRef<HTMLElement, BreadcrumbProps>(function Brea
                 </span>
               )}
               {isLast || !item.href ? (
-                <span
-                  className={CURRENT_CLASSES}
-                  aria-current={isLast ? 'page' : undefined}
-                >
+                <span className={CURRENT_CLASSES} aria-current={isLast ? 'page' : undefined}>
                   {item.label}
                 </span>
               ) : (

@@ -1,4 +1,3 @@
-import type { z } from 'zod';
 import type {
   LLMChatRequest,
   LLMChatResult,
@@ -7,6 +6,7 @@ import type {
   LLMMessage,
   LLMProvider,
 } from '@skeed/contracts/llm-provider';
+import type { z } from 'zod';
 
 interface OpenAIResponse {
   id: string;
@@ -76,7 +76,7 @@ export class OpenaiLLMProvider implements LLMProvider {
       throw new Error(`OpenAI API error: ${response.status} ${error}`);
     }
 
-    const data = await response.json() as OpenAIResponse;
+    const data = (await response.json()) as OpenAIResponse;
     const content = data.choices[0]?.message?.content;
 
     if (!content) {
@@ -96,7 +96,7 @@ export class OpenaiLLMProvider implements LLMProvider {
 
     // Calculate cost (approximate, based on GPT-4o pricing)
     const costCents = Math.ceil(
-      (data.usage.prompt_tokens * 0.0025 + data.usage.completion_tokens * 0.01) * 100
+      (data.usage.prompt_tokens * 0.0025 + data.usage.completion_tokens * 0.01) * 100,
     );
 
     return {
@@ -134,12 +134,10 @@ export class OpenaiLLMProvider implements LLMProvider {
       throw new Error(`OpenAI API error: ${response.status} ${error}`);
     }
 
-    const data = await response.json() as OpenAIEmbedResponse;
+    const data = (await response.json()) as OpenAIEmbedResponse;
 
     // Sort by index to maintain order
-    const vectors = data.data
-      .sort((a, b) => a.index - b.index)
-      .map((d) => d.embedding);
+    const vectors = data.data.sort((a, b) => a.index - b.index).map((d) => d.embedding);
 
     // Calculate cost (approximate, $0.02 per 1M tokens)
     const costCents = Math.ceil((data.usage.total_tokens / 1_000_000) * 2 * 100);

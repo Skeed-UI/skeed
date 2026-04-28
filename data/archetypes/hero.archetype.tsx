@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 type Align = 'left' | 'center' | 'right';
 
@@ -49,15 +49,7 @@ const ILLUSTRATION_CLASSES =
   'min-h-skeed-spacing-10';
 
 export const Hero = forwardRef<HTMLElement, HeroProps>(function Hero(
-  {
-    headline,
-    subtext,
-    ctaLabel,
-    onCtaClick,
-    align = 'center',
-    className,
-    ...rest
-  },
+  { headline, subtext, ctaLabel, onCtaClick, align = 'center', className, ...rest },
   ref,
 ) {
   return (
@@ -65,9 +57,7 @@ export const Hero = forwardRef<HTMLElement, HeroProps>(function Hero(
       <div className={cn(CONTENT_CLASSES, ALIGN_CLASSES[align])}>
         <h1 className={HEADLINE_CLASSES}>{headline}</h1>
 
-        {subtext && (
-          <p className={SUBTEXT_CLASSES}>{subtext}</p>
-        )}
+        {subtext && <p className={SUBTEXT_CLASSES}>{subtext}</p>}
 
         {ctaLabel && (
           <button type="button" className={CTA_CLASSES} onClick={onCtaClick}>
@@ -76,11 +66,7 @@ export const Hero = forwardRef<HTMLElement, HeroProps>(function Hero(
         )}
 
         {/* Asset slot: hero_illustration */}
-        <div
-          className={ILLUSTRATION_CLASSES}
-          role="img"
-          aria-label="Hero illustration"
-        />
+        <div className={ILLUSTRATION_CLASSES} role="img" aria-label="Hero illustration" />
       </div>
     </section>
   );

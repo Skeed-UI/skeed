@@ -1,6 +1,6 @@
-import { type HTMLAttributes, useState, useId } from 'react';
+import { Check, Eye, EyeOff, Spinner } from '@skeed/asset-icon';
 import { cn } from '@skeed/core/cn';
-import { Eye, EyeOff, Spinner, Check } from '@skeed/asset-icon';
+import { type HTMLAttributes, useId, useState } from 'react';
 
 type FieldKey = 'name' | 'email' | 'password' | 'confirm-password';
 
@@ -28,7 +28,8 @@ const INPUT_BASE =
   'focus-visible:border-skeed-color-brand-500 ' +
   'disabled:pointer-events-none disabled:opacity-50';
 
-const ERROR_INPUT = 'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
+const ERROR_INPUT =
+  'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500 focus-visible:border-skeed-color-danger-500';
 
 const TOGGLE_BTN =
   'absolute right-skeed-spacing-3 flex items-center text-skeed-color-neutral-400 ' +
@@ -51,7 +52,11 @@ function getPasswordStrength(pw: string): PasswordStrength {
   return 'strong';
 }
 
-const STRENGTH_LABEL: Record<PasswordStrength, string> = { weak: 'Weak', fair: 'Fair', strong: 'Strong' };
+const STRENGTH_LABEL: Record<PasswordStrength, string> = {
+  weak: 'Weak',
+  fair: 'Fair',
+  strong: 'Strong',
+};
 
 const STRENGTH_TEXT_CLASSES: Record<PasswordStrength, string> = {
   weak: 'text-skeed-color-danger-600',
@@ -135,15 +140,18 @@ export function SignupForm({
       aria-labelledby={`${formId}-title`}
       className={cn(
         'flex flex-col gap-skeed-spacing-6 w-full max-w-sm ' +
-        'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
-        'p-skeed-spacing-8 shadow-skeed-shadow-1',
+          'bg-skeed-color-neutral-50 rounded-skeed-radius-7 ' +
+          'p-skeed-spacing-8 shadow-skeed-shadow-1',
         className,
       )}
       {...rest}
     >
       {/* Header */}
       <div className="flex flex-col gap-skeed-spacing-2">
-        <h1 id={`${formId}-title`} className="text-2xl font-semibold font-skeed-body text-skeed-color-neutral-900">
+        <h1
+          id={`${formId}-title`}
+          className="text-2xl font-semibold font-skeed-body text-skeed-color-neutral-900"
+        >
           {title}
         </h1>
         {subtitle && (
@@ -170,7 +178,10 @@ export function SignupForm({
         {/* Name */}
         {hasName && (
           <div className="flex flex-col gap-skeed-spacing-1">
-            <label htmlFor={nameId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+            <label
+              htmlFor={nameId}
+              className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+            >
               Full name
             </label>
             <input
@@ -186,7 +197,11 @@ export function SignupForm({
               className={cn(INPUT_BASE, fieldErrors['name'] && ERROR_INPUT)}
             />
             {fieldErrors['name'] && (
-              <p id={`${nameId}-error`} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+              <p
+                id={`${nameId}-error`}
+                role="alert"
+                className="text-sm font-skeed-body text-skeed-color-danger-600"
+              >
                 {fieldErrors['name']}
               </p>
             )}
@@ -196,7 +211,10 @@ export function SignupForm({
         {/* Email */}
         {hasEmail && (
           <div className="flex flex-col gap-skeed-spacing-1">
-            <label htmlFor={emailId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+            <label
+              htmlFor={emailId}
+              className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+            >
               Email
             </label>
             <input
@@ -212,7 +230,11 @@ export function SignupForm({
               className={cn(INPUT_BASE, fieldErrors['email'] && ERROR_INPUT)}
             />
             {fieldErrors['email'] && (
-              <p id={`${emailId}-error`} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+              <p
+                id={`${emailId}-error`}
+                role="alert"
+                className="text-sm font-skeed-body text-skeed-color-danger-600"
+              >
                 {fieldErrors['email']}
               </p>
             )}
@@ -222,7 +244,10 @@ export function SignupForm({
         {/* Password */}
         {hasPw && (
           <div className="flex flex-col gap-skeed-spacing-1">
-            <label htmlFor={pwId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+            <label
+              htmlFor={pwId}
+              className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+            >
               Password
             </label>
             <div className="relative flex items-center">
@@ -235,11 +260,19 @@ export function SignupForm({
                 autoComplete="new-password"
                 disabled={isLoading}
                 aria-invalid={!!fieldErrors['password']}
-                aria-describedby={[
-                  fieldErrors['password'] ? `${pwId}-error` : '',
-                  pw.length > 0 ? `${pwId}-strength` : '',
-                ].filter(Boolean).join(' ') || undefined}
-                className={cn(INPUT_BASE, 'pr-skeed-spacing-10', fieldErrors['password'] && ERROR_INPUT)}
+                aria-describedby={
+                  [
+                    fieldErrors['password'] ? `${pwId}-error` : '',
+                    pw.length > 0 ? `${pwId}-strength` : '',
+                  ]
+                    .filter(Boolean)
+                    .join(' ') || undefined
+                }
+                className={cn(
+                  INPUT_BASE,
+                  'pr-skeed-spacing-10',
+                  fieldErrors['password'] && ERROR_INPUT,
+                )}
               />
               <button
                 type="button"
@@ -252,7 +285,11 @@ export function SignupForm({
               </button>
             </div>
             {pw.length > 0 && (
-              <div id={`${pwId}-strength`} className="flex flex-col gap-skeed-spacing-1" aria-live="polite">
+              <div
+                id={`${pwId}-strength`}
+                className="flex flex-col gap-skeed-spacing-1"
+                aria-live="polite"
+              >
                 <div className="h-1 w-full rounded-skeed-radius-9999 bg-skeed-color-neutral-200 overflow-hidden">
                   <div
                     className={cn(
@@ -267,7 +304,11 @@ export function SignupForm({
               </div>
             )}
             {fieldErrors['password'] && (
-              <p id={`${pwId}-error`} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+              <p
+                id={`${pwId}-error`}
+                role="alert"
+                className="text-sm font-skeed-body text-skeed-color-danger-600"
+              >
                 {fieldErrors['password']}
               </p>
             )}
@@ -277,7 +318,10 @@ export function SignupForm({
         {/* Confirm Password */}
         {hasConfirmPw && (
           <div className="flex flex-col gap-skeed-spacing-1">
-            <label htmlFor={confirmPwId} className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900">
+            <label
+              htmlFor={confirmPwId}
+              className="text-sm font-medium font-skeed-body text-skeed-color-neutral-900"
+            >
               Confirm password
             </label>
             <div className="relative flex items-center">
@@ -290,8 +334,14 @@ export function SignupForm({
                 autoComplete="new-password"
                 disabled={isLoading}
                 aria-invalid={!!fieldErrors['confirm-password']}
-                aria-describedby={fieldErrors['confirm-password'] ? `${confirmPwId}-error` : undefined}
-                className={cn(INPUT_BASE, 'pr-skeed-spacing-10', fieldErrors['confirm-password'] && ERROR_INPUT)}
+                aria-describedby={
+                  fieldErrors['confirm-password'] ? `${confirmPwId}-error` : undefined
+                }
+                className={cn(
+                  INPUT_BASE,
+                  'pr-skeed-spacing-10',
+                  fieldErrors['confirm-password'] && ERROR_INPUT,
+                )}
               />
               <button
                 type="button"
@@ -304,7 +354,11 @@ export function SignupForm({
               </button>
             </div>
             {fieldErrors['confirm-password'] && (
-              <p id={`${confirmPwId}-error`} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+              <p
+                id={`${confirmPwId}-error`}
+                role="alert"
+                className="text-sm font-skeed-body text-skeed-color-danger-600"
+              >
                 {fieldErrors['confirm-password']}
               </p>
             )}
@@ -326,11 +380,11 @@ export function SignupForm({
                   aria-describedby={fieldErrors['terms'] ? `${termsId}-error` : undefined}
                   className={cn(
                     'peer appearance-none h-4 w-4 rounded-skeed-radius-2 border border-skeed-color-neutral-300 ' +
-                    'bg-skeed-color-neutral-50 cursor-pointer ' +
-                    'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
-                    'checked:bg-skeed-color-brand-500 checked:border-skeed-color-brand-500 ' +
-                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 focus-visible:ring-offset-2 ' +
-                    'disabled:pointer-events-none disabled:opacity-50',
+                      'bg-skeed-color-neutral-50 cursor-pointer ' +
+                      'transition-colors duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
+                      'checked:bg-skeed-color-brand-500 checked:border-skeed-color-brand-500 ' +
+                      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 focus-visible:ring-offset-2 ' +
+                      'disabled:pointer-events-none disabled:opacity-50',
                     fieldErrors['terms'] && 'border-skeed-color-danger-500',
                   )}
                 />
@@ -341,23 +395,40 @@ export function SignupForm({
                   <Check size={12} />
                 </span>
               </div>
-              <label htmlFor={termsId} className="text-sm font-skeed-body text-skeed-color-neutral-700 cursor-pointer leading-snug">
+              <label
+                htmlFor={termsId}
+                className="text-sm font-skeed-body text-skeed-color-neutral-700 cursor-pointer leading-snug"
+              >
                 I agree to the{' '}
                 {termsHref && (
-                  <a href={termsHref} className="text-skeed-color-brand-500 hover:text-skeed-color-brand-600 underline-offset-4 hover:underline" target="_blank" rel="noreferrer">
+                  <a
+                    href={termsHref}
+                    className="text-skeed-color-brand-500 hover:text-skeed-color-brand-600 underline-offset-4 hover:underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Terms of Service
                   </a>
                 )}
                 {termsHref && privacyHref && ' and '}
                 {privacyHref && (
-                  <a href={privacyHref} className="text-skeed-color-brand-500 hover:text-skeed-color-brand-600 underline-offset-4 hover:underline" target="_blank" rel="noreferrer">
+                  <a
+                    href={privacyHref}
+                    className="text-skeed-color-brand-500 hover:text-skeed-color-brand-600 underline-offset-4 hover:underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Privacy Policy
                   </a>
                 )}
               </label>
             </div>
             {fieldErrors['terms'] && (
-              <p id={`${termsId}-error`} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600">
+              <p
+                id={`${termsId}-error`}
+                role="alert"
+                className="text-sm font-skeed-body text-skeed-color-danger-600"
+              >
                 {fieldErrors['terms']}
               </p>
             )}

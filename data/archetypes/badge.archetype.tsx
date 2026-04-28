@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   variant?: 'default' | 'success' | 'warning' | 'danger' | 'info' | 'neutral';
@@ -8,18 +8,12 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const variantClasses: Record<NonNullable<BadgeProps['variant']>, string> = {
-  default:
-    'bg-skeed-color-brand-100 text-skeed-color-brand-700',
-  success:
-    'bg-skeed-color-success-100 text-skeed-color-success-700',
-  warning:
-    'bg-skeed-color-warning-100 text-skeed-color-warning-700',
-  danger:
-    'bg-skeed-color-danger-100 text-skeed-color-danger-700',
-  info:
-    'bg-skeed-color-info-100 text-skeed-color-info-700',
-  neutral:
-    'bg-skeed-color-neutral-100 text-skeed-color-neutral-700',
+  default: 'bg-skeed-color-brand-100 text-skeed-color-brand-700',
+  success: 'bg-skeed-color-success-100 text-skeed-color-success-700',
+  warning: 'bg-skeed-color-warning-100 text-skeed-color-warning-700',
+  danger: 'bg-skeed-color-danger-100 text-skeed-color-danger-700',
+  info: 'bg-skeed-color-info-100 text-skeed-color-info-700',
+  neutral: 'bg-skeed-color-neutral-100 text-skeed-color-neutral-700',
 };
 
 const dotVariantClasses: Record<NonNullable<BadgeProps['variant']>, string> = {
@@ -56,7 +50,9 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(function Badge(
           aria-hidden="true"
           className={cn(
             'block rounded-skeed-radius-9999',
-            size === 'sm' ? 'h-skeed-spacing-1 w-skeed-spacing-1' : 'h-skeed-spacing-2 w-skeed-spacing-2',
+            size === 'sm'
+              ? 'h-skeed-spacing-1 w-skeed-spacing-1'
+              : 'h-skeed-spacing-2 w-skeed-spacing-2',
             dotVariantClasses[variant],
           )}
         />

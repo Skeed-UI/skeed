@@ -8,10 +8,19 @@ export interface PiiHit {
   index: number;
 }
 
-const PLACEHOLDER_EMAIL = /^(you|me|user|name|test|example|placeholder|admin)@(example|test|placeholder|domain)\.(com|org|net)$/i;
+const PLACEHOLDER_EMAIL =
+  /^(you|me|user|name|test|example|placeholder|admin)@(example|test|placeholder|domain)\.(com|org|net)$/i;
 
-const PATTERNS: Array<{ kind: PiiHit['kind']; pattern: RegExp; postCheck?: (m: string) => boolean }> = [
-  { kind: 'email', pattern: /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, postCheck: (m) => !PLACEHOLDER_EMAIL.test(m) },
+const PATTERNS: Array<{
+  kind: PiiHit['kind'];
+  pattern: RegExp;
+  postCheck?: (m: string) => boolean;
+}> = [
+  {
+    kind: 'email',
+    pattern: /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g,
+    postCheck: (m) => !PLACEHOLDER_EMAIL.test(m),
+  },
   { kind: 'phone', pattern: /(?:\+?\d{1,3}[\s.-]?)?(?:\(?\d{3}\)?[\s.-]?)\d{3}[\s.-]?\d{4}/g },
   { kind: 'ssn', pattern: /\b\d{3}-\d{2}-\d{4}\b/g },
   { kind: 'credit-card', pattern: /\b(?:\d[ -]*?){13,16}\b/g, postCheck: luhnCheck },

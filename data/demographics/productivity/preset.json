@@ -118,8 +118,8 @@
   "radius": [0, 4, 6, 8, 12, 16, 20, 24],
   "density": {
     "compact": { "padY": 6, "padX": 10, "gap": 6, "lineHeight": 1.4 },
-    "cozy":    { "padY": 10, "padX": 14, "gap": 10, "lineHeight": 1.5 },
-    "comfy":   { "padY": 14, "padX": 18, "gap": 14, "lineHeight": 1.6 }
+    "cozy": { "padY": 10, "padX": 14, "gap": 10, "lineHeight": 1.5 },
+    "comfy": { "padY": 14, "padX": 18, "gap": 14, "lineHeight": 1.6 }
   },
   "motion": {
     "profile": "subtle",
@@ -157,7 +157,13 @@
   "illustrationStylePrompt": "clean flat illustration, indigo and violet color palette, abstract productivity and workflow concepts, minimal geometric shapes representing tasks lists and kanban boards, focus and flow state imagery, modern app aesthetic, no human faces, no text overlays, soft gradient backgrounds",
   "logoPrimitiveConstraints": {
     "allowedShapeKinds": ["circle", "rounded-square", "diamond", "hexagon", "abstract"],
-    "allowedMarkKinds": ["check-mark", "lightning", "symbol-geometric", "monogram", "abstract-flow"],
+    "allowedMarkKinds": [
+      "check-mark",
+      "lightning",
+      "symbol-geometric",
+      "monogram",
+      "abstract-flow"
+    ],
     "allowedWordmarkStyles": ["geometric-sans", "friendly-sans", "rounded-sans"],
     "allowedContainerStyles": ["lockup-horizontal", "lockup-stacked", "icon-only", "badge-soft"]
   },

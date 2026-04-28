@@ -1,6 +1,6 @@
-import { type InputHTMLAttributes, forwardRef, useState, useRef, useCallback, useId } from 'react';
+import { AlertCircle, Check, Upload, X } from '@skeed/asset-icon';
 import { cn } from '@skeed/core/cn';
-import { Upload, X, AlertCircle, Check } from '@skeed/asset-icon';
+import { type InputHTMLAttributes, forwardRef, useCallback, useId, useRef, useState } from 'react';
 
 export interface FileInfo {
   id: string;
@@ -10,7 +10,8 @@ export interface FileInfo {
   error?: string;
 }
 
-export interface FileUploaderProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'> {
+export interface FileUploaderProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'> {
   accept?: string;
   multiple?: boolean;
   maxSize?: number; // in bytes
@@ -28,7 +29,7 @@ const formatFileSize = (bytes: number): string => {
   const k = 1024;
   const sizes = ['B', 'KB', 'MB', 'GB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(1))} ${sizes[i]}`;
+  return `${Number.parseFloat((bytes / Math.pow(k, i)).toFixed(1))} ${sizes[i]}`;
 };
 
 const generateId = (): string => `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
@@ -114,13 +115,19 @@ export const FileUploader = forwardRef<HTMLInputElement, FileUploaderProps>(func
             try {
               await onUpload(fileInfo);
               setFiles((prev) =>
-                prev.map((f) => (f.id === fileInfo.id ? { ...f, status: 'complete', progress: 100 } : f)),
+                prev.map((f) =>
+                  f.id === fileInfo.id ? { ...f, status: 'complete', progress: 100 } : f,
+                ),
               );
             } catch (error) {
               setFiles((prev) =>
                 prev.map((f) =>
                   f.id === fileInfo.id
-                    ? { ...f, status: 'error', error: error instanceof Error ? error.message : 'Upload failed' }
+                    ? {
+                        ...f,
+                        status: 'error',
+                        error: error instanceof Error ? error.message : 'Upload failed',
+                      }
                     : f,
                 ),
               );
@@ -270,7 +277,10 @@ export const FileUploader = forwardRef<HTMLInputElement, FileUploaderProps>(func
 
       {/* Helper Text */}
       {helperText && (
-        <p id={`${statusId}-helper`} className="mt-skeed-spacing-1 text-xs text-skeed-color-neutral-500">
+        <p
+          id={`${statusId}-helper`}
+          className="mt-skeed-spacing-1 text-xs text-skeed-color-neutral-500"
+        >
           {helperText}
           {maxSize && ` • Max ${formatFileSize(maxSize)} per file`}
           {accept && ` • ${accept}`}
@@ -320,7 +330,9 @@ export const FileUploader = forwardRef<HTMLInputElement, FileUploaderProps>(func
 
               {/* File Info */}
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-skeed-color-neutral-900 truncate">{file.file.name}</p>
+                <p className="text-sm font-medium text-skeed-color-neutral-900 truncate">
+                  {file.file.name}
+                </p>
                 <p className="text-xs text-skeed-color-neutral-500">
                   {formatFileSize(file.file.size)}
                   {file.status === 'uploading' && file.progress > 0 && ` • ${file.progress}%`}

@@ -10,9 +10,7 @@ const entry = resolve(__dirname, '..', 'src', 'index.ts');
 const require = createRequire(import.meta.url);
 const tsxUrl = pathToFileURL(require.resolve('tsx/esm')).href;
 
-const child = spawn(
-  process.execPath,
-  ['--import', tsxUrl, entry, ...process.argv.slice(2)],
-  { stdio: 'inherit' },
-);
+const child = spawn(process.execPath, ['--import', tsxUrl, entry, ...process.argv.slice(2)], {
+  stdio: 'inherit',
+});
 child.on('exit', (code) => process.exit(code ?? 0));

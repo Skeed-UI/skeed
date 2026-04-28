@@ -1,7 +1,8 @@
-import { type HTMLAttributes, useId } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, useId } from 'react';
 
-export interface SwitchProps extends Omit<HTMLAttributes<HTMLButtonElement>, 'onChange' | 'onClick'> {
+export interface SwitchProps
+  extends Omit<HTMLAttributes<HTMLButtonElement>, 'onChange' | 'onClick'> {
   checked: boolean;
   onChange: (checked: boolean) => void;
   label?: string;
@@ -89,7 +90,10 @@ export function Switch({
             </span>
           )}
           {description && (
-            <span id={descriptionId} className="text-sm font-skeed-body text-skeed-color-neutral-500">
+            <span
+              id={descriptionId}
+              className="text-sm font-skeed-body text-skeed-color-neutral-500"
+            >
               {description}
             </span>
           )}

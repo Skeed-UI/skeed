@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef, useEffect, useCallback, useRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef, useCallback, useEffect, useRef } from 'react';
 
 export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   open?: boolean;
@@ -16,11 +16,14 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
   const previousActiveElement = useRef<Element | null>(null);
 
   // Handle escape key
-  const handleEscape = useCallback((event: KeyboardEvent) => {
-    if (event.key === 'Escape' && onClose) {
-      onClose();
-    }
-  }, [onClose]);
+  const handleEscape = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && onClose) {
+        onClose();
+      }
+    },
+    [onClose],
+  );
 
   useEffect(() => {
     if (open) {
@@ -33,7 +36,7 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
         const dialogEl = internalRef.current;
         if (dialogEl) {
           const focusableEl = dialogEl.querySelector<HTMLElement>(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
           );
           (focusableEl || dialogEl).focus();
         }
@@ -85,12 +88,19 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
         {...rest}
       >
         {title && (
-          <h2 id="dialog-title" className="text-lg font-semibold font-skeed-body text-skeed-color-neutral-900 mb-skeed-spacing-1" tabIndex={-1}>
+          <h2
+            id="dialog-title"
+            className="text-lg font-semibold font-skeed-body text-skeed-color-neutral-900 mb-skeed-spacing-1"
+            tabIndex={-1}
+          >
             {title}
           </h2>
         )}
         {description && (
-          <p id="dialog-description" className="text-sm font-skeed-body text-skeed-color-neutral-600 mb-skeed-spacing-4">
+          <p
+            id="dialog-description"
+            className="text-sm font-skeed-body text-skeed-color-neutral-600 mb-skeed-spacing-4"
+          >
             {description}
           </p>
         )}

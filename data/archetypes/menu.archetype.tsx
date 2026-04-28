@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef, type ReactNode } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, type ReactNode, forwardRef } from 'react';
 
 export interface MenuItem {
   id: string;

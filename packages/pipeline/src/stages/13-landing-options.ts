@@ -1,7 +1,7 @@
-import type { Stage } from '@skeed/contracts';
 import { findRepoData } from '@skeed/asset-logo-svg';
+import type { Stage } from '@skeed/contracts';
 import { loadDemographics } from '@skeed/demographics-loader';
-import { generateLandingCandidates, type LandingArchetype } from '@skeed/landing-options';
+import { type LandingArchetype, generateLandingCandidates } from '@skeed/landing-options';
 import { PipelineState } from './state.js';
 
 let _demoCache: Awaited<ReturnType<typeof loadDemographics>> | undefined;
@@ -24,7 +24,8 @@ export const stage_13_landing_options: Stage<PipelineState, PipelineState> = {
   cacheable: true,
   async run(state) {
     const top = state.classification?.candidates[0];
-    const projectName = state.intent?.jobToBeDone?.replace(/^Build:\s*/, '').slice(0, 60) ?? 'Skeed App';
+    const projectName =
+      state.intent?.jobToBeDone?.replace(/^Build:\s*/, '').slice(0, 60) ?? 'Skeed App';
     const tagline = state.userStories?.[0]?.iWantTo ?? 'Get started in seconds';
     const ctaLabel = state.designSystem?.voice.samples.cta ?? 'Get started';
     const features = (state.userStories ?? []).slice(0, 3).map((s) => ({
@@ -49,7 +50,15 @@ export const stage_13_landing_options: Stage<PipelineState, PipelineState> = {
       event = {
         ...(eventDate ? { eventDate } : {}),
         ...(eventLocation ? { eventLocation } : {}),
-        ...(taste ? { rsvpStyle: taste.rsvpStyle, tasteId: taste.id, tasteLabel: taste.label, musicGenre: taste.musicGenre, musicSrc: musicSrcFor(taste.musicGenre) } : {}),
+        ...(taste
+          ? {
+              rsvpStyle: taste.rsvpStyle,
+              tasteId: taste.id,
+              tasteLabel: taste.label,
+              musicGenre: taste.musicGenre,
+              musicSrc: musicSrcFor(taste.musicGenre),
+            }
+          : {}),
       };
     }
 
@@ -72,16 +81,35 @@ export const stage_13_landing_options: Stage<PipelineState, PipelineState> = {
       id: 'landing-root',
       type: 'col' as const,
       props: { gap: 0, align: 'stretch' as const },
-      children: [{ id: 'page', type: 'slot' as const, componentId: `landing/${chosen.archetype}`, bindings: {} }],
+      children: [
+        {
+          id: 'page',
+          type: 'slot' as const,
+          componentId: `landing/${chosen.archetype}`,
+          bindings: {},
+        },
+      ],
     };
 
     return {
       ...state,
-      landingChosen: { id: chosen.id, archetype: chosen.archetype as never, layout, preview: chosen.preview },
+      landingChosen: {
+        id: chosen.id,
+        archetype: chosen.archetype as never,
+        layout,
+        preview: chosen.preview,
+      },
       ...({
         landingTsx: chosen.tsx,
         landingCandidates: candidates,
-        eventTaste: event ? { tasteId: event.tasteId, tasteLabel: event.tasteLabel, musicGenre: event.musicGenre, rsvpStyle: event.rsvpStyle } : undefined,
+        eventTaste: event
+          ? {
+              tasteId: event.tasteId,
+              tasteLabel: event.tasteLabel,
+              musicGenre: event.musicGenre,
+              rsvpStyle: event.rsvpStyle,
+            }
+          : undefined,
       } as { landingTsx: string; landingCandidates: typeof candidates; eventTaste?: unknown }),
     };
   },
@@ -92,8 +120,10 @@ function preferredArchetype(
   isWaitlistIdea: boolean,
 ): 'hero-led' | 'story-led' | 'conversion-focused' {
   if (isWaitlistIdea) return 'conversion-focused';
-  if (demographic === 'kids' || demographic === 'mental_wellness' || demographic === 'religious') return 'hero-led';
-  if (demographic === 'gov' || demographic === 'health' || demographic === 'legal') return 'story-led';
+  if (demographic === 'kids' || demographic === 'mental_wellness' || demographic === 'religious')
+    return 'hero-led';
+  if (demographic === 'gov' || demographic === 'health' || demographic === 'legal')
+    return 'story-led';
   return 'conversion-focused';
 }
 
@@ -119,7 +149,9 @@ function pickTaste(
 }
 
 function pickEventDate(prompt: string): string | undefined {
-  const m = prompt.match(/\b(?:on\s+)?(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*\s+\d{1,2}(?:,\s*\d{4})?/i);
+  const m = prompt.match(
+    /\b(?:on\s+)?(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*\s+\d{1,2}(?:,\s*\d{4})?/i,
+  );
   return m?.[0]?.trim();
 }
 

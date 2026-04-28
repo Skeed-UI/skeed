@@ -23,9 +23,7 @@
     "radius.2",
     "shadow.1"
   ],
-  "assetSlots": [
-    { "role": "avatar", "type": "avatar", "required": false }
-  ],
+  "assetSlots": [{ "role": "avatar", "type": "avatar", "required": false }],
   "defaultVariantsPerDensity": 1,
   "frameworks": ["react"],
   "license": "MIT",

@@ -2,11 +2,20 @@
  * Effect generator types - procedural animation system
  */
 
-import type { Vector2D, Material } from '../physics/types.js';
 import type { EffectName } from '../grammar/types.js';
+import type { Material, Vector2D } from '../physics/types.js';
 
 export interface EffectContext {
-  trigger: 'hover' | 'click' | 'focus' | 'blur' | 'scroll' | 'mount' | 'unmount' | 'gesture' | 'idle';
+  trigger:
+    | 'hover'
+    | 'click'
+    | 'focus'
+    | 'blur'
+    | 'scroll'
+    | 'mount'
+    | 'unmount'
+    | 'gesture'
+    | 'idle';
   intensity: number; // 0-1 based on velocity/pressure
   direction: Vector2D; // cursor movement vector
   position: Vector2D; // relative position within element (0-1)
@@ -42,7 +51,10 @@ export interface EffectOutput {
   easing?: string; // CSS easing function, if not using spring
 }
 
-export type EffectGenerator = (ctx: EffectContext, parameters: Record<string, string | number | boolean>) => EffectOutput;
+export type EffectGenerator = (
+  ctx: EffectContext,
+  parameters: Record<string, string | number | boolean>,
+) => EffectOutput;
 
 export interface RegisteredEffect {
   name: EffectName;

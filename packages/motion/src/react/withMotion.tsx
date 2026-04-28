@@ -2,12 +2,11 @@
  * withMotion HOC - wraps components with motion capabilities
  */
 
-import * as React from 'react';
+import type * as React from 'react';
 import { forwardRef } from 'react';
-import { useMotion } from './useMotion.js';
 import { useMotionContext } from './MotionProvider.js';
-import type { MotionConfig } from '../grammar/types.js';
 import type { WithMotionProps } from './types.js';
+import { useMotion } from './useMotion.js';
 
 type AnyProps = Record<string, unknown>;
 
@@ -15,8 +14,10 @@ type AnyProps = Record<string, unknown>;
  * Higher-order component that adds motion props to any component
  */
 export function withMotion<P extends AnyProps>(
-  Component: React.ComponentType<P>
-): React.ForwardRefExoticComponent<React.PropsWithoutRef<P & WithMotionProps> & React.RefAttributes<unknown>> {
+  Component: React.ComponentType<P>,
+): React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P & WithMotionProps> & React.RefAttributes<unknown>
+> {
   const MotionComponent = forwardRef<unknown, P & WithMotionProps>(
     function MotionWrapper(props, ref) {
       const { motion, motionDisabled, ...restProps } = props;
@@ -43,7 +44,7 @@ export function withMotion<P extends AnyProps>(
 
       const createHandler = (
         motionHandler: ((e: React.MouseEvent<HTMLElement>) => void) | undefined,
-        existingHandler: unknown
+        existingHandler: unknown,
       ) => {
         return (e: React.MouseEvent<HTMLElement>) => {
           motionHandler?.(e);
@@ -55,7 +56,7 @@ export function withMotion<P extends AnyProps>(
 
       const createFocusHandler = (
         motionHandler: ((e: React.FocusEvent<HTMLElement>) => void) | undefined,
-        existingHandler: unknown
+        existingHandler: unknown,
       ) => {
         return (e: React.FocusEvent<HTMLElement>) => {
           motionHandler?.(e);
@@ -82,7 +83,7 @@ export function withMotion<P extends AnyProps>(
       } as unknown as P;
 
       return <Component {...componentProps} />;
-    }
+    },
   );
 
   return MotionComponent;

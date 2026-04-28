@@ -1,7 +1,7 @@
 'use client';
 
 import { useIconContext } from '../IconContext';
-import { getStrokeWidth, type IconProps } from '../types';
+import { type IconProps, getStrokeWidth } from '../types';
 
 export function Eye({ size = 16, weight, className, ...props }: IconProps) {
   const ctx = useIconContext();

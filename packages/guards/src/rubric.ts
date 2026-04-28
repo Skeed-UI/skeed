@@ -54,8 +54,19 @@ function scoreClarity(i: RubricInput): RubricCriterion {
 function scoreDemographicFit(i: RubricInput): RubricCriterion {
   const isKids = i.demographic === 'kids';
   const hasFun = /Let.s\s+go|fun|play/i.test(i.landingTsx);
-  if (isKids && !hasFun) return { id: 'demographic_fit', label: 'Demographic fit', score: 6, reasoning: 'kids copy lacks playfulness markers' };
-  return { id: 'demographic_fit', label: 'Demographic fit', score: 8, reasoning: 'demographic markers present' };
+  if (isKids && !hasFun)
+    return {
+      id: 'demographic_fit',
+      label: 'Demographic fit',
+      score: 6,
+      reasoning: 'kids copy lacks playfulness markers',
+    };
+  return {
+    id: 'demographic_fit',
+    label: 'Demographic fit',
+    score: 8,
+    reasoning: 'demographic markers present',
+  };
 }
 
 function scoreBrandCoherence(i: RubricInput): RubricCriterion {
@@ -76,7 +87,9 @@ function scoreAccessibility(i: RubricInput): RubricCriterion {
     id: 'accessibility',
     label: 'Accessibility',
     score: altsOk ? 9 : 5,
-    reasoning: altsOk ? 'all assets have meaningful alt text' : 'placeholder alt text on at least one asset',
+    reasoning: altsOk
+      ? 'all assets have meaningful alt text'
+      : 'placeholder alt text on at least one asset',
   };
 }
 
@@ -86,14 +99,20 @@ function scoreOriginality(i: RubricInput): RubricCriterion {
     id: 'originality',
     label: 'Originality',
     score: generic === 0 ? 8 : Math.max(2, 8 - generic),
-    reasoning: generic === 0 ? 'no placeholder copy detected' : `${generic} placeholder/TODO matches`,
+    reasoning:
+      generic === 0 ? 'no placeholder copy detected' : `${generic} placeholder/TODO matches`,
   };
 }
 
 function scoreConversionStrength(i: RubricInput): RubricCriterion {
   const ctaCount = (i.landingTsx.match(/<a\b[^>]*href=|<button\b/gi) ?? []).length;
   const score = Math.min(10, ctaCount * 3);
-  return { id: 'conversion_strength', label: 'Conversion strength', score, reasoning: `${ctaCount} CTAs detected` };
+  return {
+    id: 'conversion_strength',
+    label: 'Conversion strength',
+    score,
+    reasoning: `${ctaCount} CTAs detected`,
+  };
 }
 
 function scoreEthics(i: RubricInput): RubricCriterion {

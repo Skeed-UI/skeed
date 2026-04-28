@@ -101,9 +101,24 @@ function fallbackDS(demographic: string): z.infer<typeof DsOut> {
   const isKids = demographic === 'kids';
   return {
     tokens: [
-      { name: 'color-brand', value: isKids ? '#FF6B35' : '#4F46E5', role: 'brand', contrastsWith: ['#FFFFFF'] },
-      { name: 'color-bg', value: isKids ? '#FFF7ED' : '#FFFFFF', role: 'surface', contrastsWith: [] },
-      { name: 'color-fg', value: isKids ? '#1A1A1A' : '#0F172A', role: 'on-surface', contrastsWith: [isKids ? '#FFF7ED' : '#FFFFFF'] },
+      {
+        name: 'color-brand',
+        value: isKids ? '#FF6B35' : '#4F46E5',
+        role: 'brand',
+        contrastsWith: ['#FFFFFF'],
+      },
+      {
+        name: 'color-bg',
+        value: isKids ? '#FFF7ED' : '#FFFFFF',
+        role: 'surface',
+        contrastsWith: [],
+      },
+      {
+        name: 'color-fg',
+        value: isKids ? '#1A1A1A' : '#0F172A',
+        role: 'on-surface',
+        contrastsWith: [isKids ? '#FFF7ED' : '#FFFFFF'],
+      },
     ],
     palette: {
       primary: isKids ? '#FF6B35' : '#4F46E5',
@@ -129,7 +144,10 @@ function fallbackDS(demographic: string): z.infer<typeof DsOut> {
     iconography: { packId: isKids ? 'lucide-rounded' : 'lucide', weight: isKids ? 2 : 1.75 },
     voice: {
       tone: isKids ? ['friendly', 'encouraging'] : ['direct', 'professional'],
-      samples: { cta: isKids ? "Let's go!" : 'Get started', empty: isKids ? 'Nothing here yet — try adding something fun.' : 'No items yet.' },
+      samples: {
+        cta: isKids ? "Let's go!" : 'Get started',
+        empty: isKids ? 'Nothing here yet — try adding something fun.' : 'No items yet.',
+      },
     },
   };
 }

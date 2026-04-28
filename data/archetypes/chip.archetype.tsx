@@ -1,5 +1,5 @@
-import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type ButtonHTMLAttributes, forwardRef } from 'react';
 
 export interface ChipProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'active' | 'disabled';
@@ -7,9 +7,11 @@ export interface ChipProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantClasses: Record<NonNullable<ChipProps['variant']>, string> = {
-  default: 'bg-skeed-color-neutral-100 text-skeed-color-neutral-700 hover:bg-skeed-color-neutral-200 border-skeed-color-neutral-300',
+  default:
+    'bg-skeed-color-neutral-100 text-skeed-color-neutral-700 hover:bg-skeed-color-neutral-200 border-skeed-color-neutral-300',
   active: 'bg-skeed-color-brand-100 text-skeed-color-brand-700 border-skeed-color-brand-300',
-  disabled: 'bg-skeed-color-neutral-50 text-skeed-color-neutral-400 border-skeed-color-neutral-200 cursor-not-allowed',
+  disabled:
+    'bg-skeed-color-neutral-50 text-skeed-color-neutral-400 border-skeed-color-neutral-200 cursor-not-allowed',
 };
 
 const sizeClasses: Record<NonNullable<ChipProps['size']>, string> = {

@@ -1,5 +1,5 @@
-import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
   src?: string;
@@ -34,16 +34,7 @@ const statusColorClasses: Record<NonNullable<AvatarProps['status']>, string> = {
 };
 
 export const Avatar = forwardRef<HTMLDivElement, AvatarProps>(function Avatar(
-  {
-    className,
-    src,
-    alt = '',
-    initials,
-    size = 'md',
-    shape = 'circle',
-    status,
-    ...rest
-  },
+  { className, src, alt = '', initials, size = 'md', shape = 'circle', status, ...rest },
   ref,
 ) {
   const shapeClass = shape === 'circle' ? 'rounded-skeed-radius-9999' : 'rounded-skeed-radius-2';
@@ -63,11 +54,7 @@ export const Avatar = forwardRef<HTMLDivElement, AvatarProps>(function Avatar(
       {...rest}
     >
       {src ? (
-        <img
-          src={src}
-          alt={alt}
-          className="h-full w-full object-cover"
-        />
+        <img src={src} alt={alt} className="h-full w-full object-cover" />
       ) : (
         <span aria-hidden="true" className="select-none uppercase leading-none">
           {initials ? initials.slice(0, 2) : '?'}

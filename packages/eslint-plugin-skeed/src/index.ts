@@ -1,6 +1,6 @@
 /**
  * Skeed ESLint Plugin
- * 
+ *
  * ESLint rules for enforcing Skeed design system standards:
  * - no-literal-tokens: Bans hardcoded hex/px/rem in archetype source
  * - ethics-pattern-check: Enforces ethics rules per demographic

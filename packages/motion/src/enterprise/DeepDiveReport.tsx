@@ -4,8 +4,8 @@
  */
 
 import * as React from 'react';
-import { useMotion } from '../react/useMotion.js';
 import { useMotionContext } from '../react/MotionProvider.js';
+import { useMotion } from '../react/useMotion.js';
 
 export interface ReportNode {
   id: string;
@@ -62,9 +62,7 @@ export function DeepDiveReport({
   const context = useMotionContext();
   const disabled = context.reducedMotion;
 
-  const [breadcrumb, setBreadcrumb] = React.useState<BreadcrumbItem[]>([
-    { node: root, depth: 0 },
-  ]);
+  const [breadcrumb, setBreadcrumb] = React.useState<BreadcrumbItem[]>([{ node: root, depth: 0 }]);
   const [expandingNode, setExpandingNode] = React.useState<string | null>(null);
 
   const current = breadcrumb[breadcrumb.length - 1];
@@ -82,7 +80,7 @@ export function DeepDiveReport({
       onNavigate?.(newPath.map((b) => b.node));
       setTimeout(() => setExpandingNode(null), 400);
     },
-    [breadcrumb, onNavigate]
+    [breadcrumb, onNavigate],
   );
 
   const navigateBack = React.useCallback(
@@ -92,7 +90,7 @@ export function DeepDiveReport({
       setBreadcrumb(newPath);
       onNavigate?.(newPath.map((b) => b.node));
     },
-    [breadcrumb, onNavigate]
+    [breadcrumb, onNavigate],
   );
 
   return (
@@ -122,17 +120,13 @@ export function DeepDiveReport({
           animation: disabled
             ? undefined
             : expandingNode
-            ? 'pushFold 0.4s ease'
-            : 'origamiUnfold 0.4s ease',
+              ? 'pushFold 0.4s ease'
+              : 'origamiUnfold 0.4s ease',
         }}
       >
         {/* Node Summary */}
         <div style={{ marginBottom: '20px' }}>
-          {renderSummary ? (
-            renderSummary(current.node)
-          ) : (
-            <DefaultSummary node={current.node} />
-          )}
+          {renderSummary ? renderSummary(current.node) : <DefaultSummary node={current.node} />}
         </div>
 
         {/* Metrics Grid */}
@@ -146,7 +140,9 @@ export function DeepDiveReport({
 
         {/* Detail Section */}
         {current.node.detail && (
-          <div style={{ marginTop: '20px', padding: '16px', background: 'white', borderRadius: '8px' }}>
+          <div
+            style={{ marginTop: '20px', padding: '16px', background: 'white', borderRadius: '8px' }}
+          >
             {renderDetail ? renderDetail(current.node) : current.node.detail}
           </div>
         )}
@@ -214,10 +210,12 @@ function BreadcrumbNav({
             style={{
               padding: '4px 8px',
               border: 'none',
-              background: index === items.length - 1 ? 'var(--skeed-color-brand-50)' : 'transparent',
-              color: index === items.length - 1
-                ? 'var(--skeed-color-brand-700)'
-                : 'var(--skeed-color-neutral-600)',
+              background:
+                index === items.length - 1 ? 'var(--skeed-color-brand-50)' : 'transparent',
+              color:
+                index === items.length - 1
+                  ? 'var(--skeed-color-brand-700)'
+                  : 'var(--skeed-color-neutral-600)',
               borderRadius: '4px',
               cursor: index === items.length - 1 ? 'default' : 'pointer',
               fontSize: '14px',
@@ -267,10 +265,10 @@ function DefaultSummary({ node }: { node: ReportNode }): React.ReactElement {
               node.priority === 'critical'
                 ? 'var(--skeed-color-danger-500)'
                 : node.priority === 'high'
-                ? 'var(--skeed-color-warning-500)'
-                : node.priority === 'medium'
-                ? 'var(--skeed-color-info-500)'
-                : 'var(--skeed-color-neutral-400)',
+                  ? 'var(--skeed-color-warning-500)'
+                  : node.priority === 'medium'
+                    ? 'var(--skeed-color-info-500)'
+                    : 'var(--skeed-color-neutral-400)',
             marginTop: '6px',
             flexShrink: 0,
           }}
@@ -364,15 +362,24 @@ function DefaultMetric({ metric }: { metric: ReportMetric }): React.ReactElement
 
   return (
     <div>
-      <div style={{ fontSize: '12px', color: 'var(--skeed-color-neutral-500)', marginBottom: '4px' }}>
+      <div
+        style={{ fontSize: '12px', color: 'var(--skeed-color-neutral-500)', marginBottom: '4px' }}
+      >
         {metric.label}
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <span style={{ fontSize: '24px', fontWeight: '700', color: 'var(--skeed-color-neutral-900)' }}>
+        <span
+          style={{ fontSize: '24px', fontWeight: '700', color: 'var(--skeed-color-neutral-900)' }}
+        >
           {formatValue(metric.value, metric.format)}
         </span>
         {metric.trend && (
-          <span style={{ color: trendColors[metric.trend as 'up' | 'down' | 'neutral'], fontSize: '16px' }}>
+          <span
+            style={{
+              color: trendColors[metric.trend as 'up' | 'down' | 'neutral'],
+              fontSize: '16px',
+            }}
+          >
             {metric.trend === 'up' ? '↑' : metric.trend === 'down' ? '↓' : '→'}
           </span>
         )}
@@ -453,7 +460,9 @@ function DrillDownCard({
       }}
       {...motionResult.handlers}
     >
-      <div style={{ fontWeight: '600', marginBottom: '8px', color: 'var(--skeed-color-neutral-900)' }}>
+      <div
+        style={{ fontWeight: '600', marginBottom: '8px', color: 'var(--skeed-color-neutral-900)' }}
+      >
         {node.title}
       </div>
       {node.summary && (
@@ -464,7 +473,9 @@ function DrillDownCard({
         </div>
       )}
       {node.metrics && node.metrics.length > 0 && (
-        <div style={{ marginTop: '12px', fontSize: '12px', color: 'var(--skeed-color-neutral-500)' }}>
+        <div
+          style={{ marginTop: '12px', fontSize: '12px', color: 'var(--skeed-color-neutral-500)' }}
+        >
           {node.metrics.length} metric{node.metrics.length > 1 ? 's' : ''}
         </div>
       )}

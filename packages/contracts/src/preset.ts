@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { Density, DemographicId } from './demographic.js';
+import { DemographicId, Density } from './demographic.js';
 
 const ColorRamp = z.object({
   '50': z.string(),

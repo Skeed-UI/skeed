@@ -3,10 +3,10 @@
  * Designed for progressive disclosure of information
  */
 
+import { ArrowDown, ArrowRight, ArrowUp, ChevronDown } from '@skeed/asset-icon';
 import * as React from 'react';
-import { useMotion } from '../react/useMotion.js';
 import { useMotionContext } from '../react/MotionProvider.js';
-import { ChevronDown, ArrowUp, ArrowDown, ArrowRight } from '@skeed/asset-icon';
+import { useMotion } from '../react/useMotion.js';
 
 export interface SummaryData {
   id: string;
@@ -74,8 +74,8 @@ export function VisualSummary({
     layout === 'grid'
       ? { gridTemplateColumns: `repeat(${Math.min(data.length, 4)}, 1fr)` }
       : layout === 'featured'
-      ? { gridTemplateColumns: '2fr 1fr 1fr' }
-      : { gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' };
+        ? { gridTemplateColumns: '2fr 1fr 1fr' }
+        : { gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' };
 
   return (
     <div
@@ -210,8 +210,8 @@ function SummaryItem({
         return value >= 1000000
           ? `${(value / 1000000).toFixed(1)}M`
           : value >= 1000
-          ? `${(value / 1000).toFixed(1)}K`
-          : value.toLocaleString();
+            ? `${(value / 1000).toFixed(1)}K`
+            : value.toLocaleString();
       default:
         return value.toLocaleString();
     }
@@ -271,8 +271,19 @@ function SummaryItem({
       <div style={{ position: 'relative', zIndex: 1 }}>
         {/* Icon and Label */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-          {item.icon && <span style={{ color: item.color || 'var(--skeed-color-neutral-500)' }}>{item.icon}</span>}
-          <span style={{ fontSize: '12px', color: 'var(--skeed-color-neutral-500)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          {item.icon && (
+            <span style={{ color: item.color || 'var(--skeed-color-neutral-500)' }}>
+              {item.icon}
+            </span>
+          )}
+          <span
+            style={{
+              fontSize: '12px',
+              color: 'var(--skeed-color-neutral-500)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px',
+            }}
+          >
             {item.label}
           </span>
         </div>
@@ -301,7 +312,13 @@ function SummaryItem({
                 color: item.trend ? trendColors[item.trend] : 'var(--skeed-color-neutral-500)',
               }}
             >
-              {item.trend === 'up' ? <ArrowUp size={14} /> : item.trend === 'down' ? <ArrowDown size={14} /> : <ArrowRight size={14} />}
+              {item.trend === 'up' ? (
+                <ArrowUp size={16} />
+              ) : item.trend === 'down' ? (
+                <ArrowDown size={16} />
+              ) : (
+                <ArrowRight size={16} />
+              )}
               {item.change !== undefined && Math.abs(item.change).toFixed(1)}
               {item.changeLabel && (
                 <span style={{ fontSize: '12px', color: 'var(--skeed-color-neutral-400)' }}>
@@ -335,14 +352,26 @@ interface KPIGridProps {
   columns?: number;
 }
 
-export function KPIGrid({ metrics, title, className, columns = 4 }: KPIGridProps): React.ReactElement {
+export function KPIGrid({
+  metrics,
+  title,
+  className,
+  columns = 4,
+}: KPIGridProps): React.ReactElement {
   const context = useMotionContext();
   const disabled = context.reducedMotion;
 
   return (
     <div className={className}>
       {title && (
-        <h4 style={{ margin: '0 0 16px', fontSize: '14px', fontWeight: '600', color: 'var(--skeed-color-neutral-600)' }}>
+        <h4
+          style={{
+            margin: '0 0 16px',
+            fontSize: '14px',
+            fontWeight: '600',
+            color: 'var(--skeed-color-neutral-600)',
+          }}
+        >
           {title}
         </h4>
       )}
@@ -394,16 +423,26 @@ function KPICard({
       }}
       {...motionResult.handlers}
     >
-      <div style={{ fontSize: '12px', color: 'var(--skeed-color-neutral-500)', marginBottom: '8px' }}>
+      <div
+        style={{ fontSize: '12px', color: 'var(--skeed-color-neutral-500)', marginBottom: '8px' }}
+      >
         {metric.label}
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <span style={{ fontSize: '20px', fontWeight: '700', color: 'var(--skeed-color-neutral-900)' }}>
+        <span
+          style={{ fontSize: '20px', fontWeight: '700', color: 'var(--skeed-color-neutral-900)' }}
+        >
           {metric.value}
         </span>
         {metric.trend && (
           <span style={{ color: trendColors[metric.trend], fontSize: '14px' }}>
-            {metric.trend === 'up' ? <ArrowUp size={14} /> : metric.trend === 'down' ? <ArrowDown size={14} /> : <ArrowRight size={14} />}
+            {metric.trend === 'up' ? (
+              <ArrowUp size={16} />
+            ) : metric.trend === 'down' ? (
+              <ArrowDown size={16} />
+            ) : (
+              <ArrowRight size={16} />
+            )}
           </span>
         )}
       </div>

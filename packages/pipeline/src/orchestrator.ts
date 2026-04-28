@@ -86,7 +86,11 @@ export class Orchestrator {
     return current;
   }
 
-  private cacheKey(stage: Stage<unknown, unknown>, input: unknown, registryVersion: string): string {
+  private cacheKey(
+    stage: Stage<unknown, unknown>,
+    input: unknown,
+    registryVersion: string,
+  ): string {
     const canonical = JSON.stringify(input, Object.keys(input as object).sort());
     return createHash('sha256')
       .update(`${stage.name}@${stage.version}|${registryVersion}|${canonical}`)

@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "palette": {
     "brand": {
-      "50":  "#EFF6FF",
+      "50": "#EFF6FF",
       "100": "#DBEAFE",
       "200": "#BFDBFE",
       "300": "#93C5FD",
@@ -16,7 +16,7 @@
       "950": "#172554"
     },
     "neutral": {
-      "50":  "#F8FAFC",
+      "50": "#F8FAFC",
       "100": "#F1F5F9",
       "200": "#E2E8F0",
       "300": "#CBD5E1",
@@ -29,7 +29,7 @@
       "950": "#020617"
     },
     "success": {
-      "50":  "#ECFDF5",
+      "50": "#ECFDF5",
       "100": "#D1FAE5",
       "200": "#A7F3D0",
       "300": "#6EE7B7",
@@ -42,7 +42,7 @@
       "950": "#022C22"
     },
     "warning": {
-      "50":  "#FFFBEB",
+      "50": "#FFFBEB",
       "100": "#FEF3C7",
       "200": "#FDE68A",
       "300": "#FCD34D",
@@ -55,7 +55,7 @@
       "950": "#451A03"
     },
     "danger": {
-      "50":  "#FEF2F2",
+      "50": "#FEF2F2",
       "100": "#FEE2E2",
       "200": "#FECACA",
       "300": "#FCA5A5",
@@ -68,7 +68,7 @@
       "950": "#450A0A"
     },
     "info": {
-      "50":  "#EFF6FF",
+      "50": "#EFF6FF",
       "100": "#DBEAFE",
       "200": "#BFDBFE",
       "300": "#93C5FD",
@@ -81,10 +81,10 @@
       "950": "#172554"
     },
     "contrastPairs": [
-      { "fg": "#0F172A", "bg": "#F8FAFC", "ratio": 17.2,  "passesAA": true, "passesAAA": true },
-      { "fg": "#FFFFFF", "bg": "#1D4ED8", "ratio": 8.8,   "passesAA": true, "passesAAA": true },
-      { "fg": "#FFFFFF", "bg": "#1E3A8A", "ratio": 12.5,  "passesAA": true, "passesAAA": true },
-      { "fg": "#0F172A", "bg": "#DBEAFE", "ratio": 11.4,  "passesAA": true, "passesAAA": true }
+      { "fg": "#0F172A", "bg": "#F8FAFC", "ratio": 17.2, "passesAA": true, "passesAAA": true },
+      { "fg": "#FFFFFF", "bg": "#1D4ED8", "ratio": 8.8, "passesAA": true, "passesAAA": true },
+      { "fg": "#FFFFFF", "bg": "#1E3A8A", "ratio": 12.5, "passesAA": true, "passesAAA": true },
+      { "fg": "#0F172A", "bg": "#DBEAFE", "ratio": 11.4, "passesAA": true, "passesAAA": true }
     ]
   },
   "typography": {
@@ -117,31 +117,31 @@
   "spacing": [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64],
   "radius": [0, 2, 4, 6, 8, 12, 16, 24],
   "density": {
-    "compact": { "padY": 4,  "padX": 8,  "gap": 4,  "lineHeight": 1.35 },
-    "cozy":    { "padY": 8,  "padX": 12, "gap": 8,  "lineHeight": 1.45 },
-    "comfy":   { "padY": 12, "padX": 16, "gap": 12, "lineHeight": 1.55 }
+    "compact": { "padY": 4, "padX": 8, "gap": 4, "lineHeight": 1.35 },
+    "cozy": { "padY": 8, "padX": 12, "gap": 8, "lineHeight": 1.45 },
+    "comfy": { "padY": 12, "padX": 16, "gap": 12, "lineHeight": 1.55 }
   },
   "motion": {
     "profile": "subtle",
     "durations": {
-      "fast":   120,
+      "fast": 120,
       "normal": 200,
-      "slow":   300,
-      "enter":  250
+      "slow": 300,
+      "enter": 250
     },
     "easings": {
       "default": "cubic-bezier(0.4,0,0.2,1)",
-      "enter":   "cubic-bezier(0,0,0.2,1)",
-      "exit":    "cubic-bezier(0.4,0,1,1)"
+      "enter": "cubic-bezier(0,0,0.2,1)",
+      "exit": "cubic-bezier(0.4,0,1,1)"
     }
   },
   "iconography": {
     "style": "line",
-    "pack":  "lucide"
+    "pack": "lucide"
   },
   "borders": {
-    "width":     1,
-    "style":     "solid",
+    "width": 1,
+    "style": "solid",
     "treatment": "hard"
   },
   "elevation": {
@@ -156,8 +156,8 @@
   },
   "illustrationStylePrompt": "clean flat illustration, cobalt blue and slate color palette, abstract financial data visualization, minimal geometric shapes, professional corporate style, no text, no faces, subtle grid or chart motifs in background, modern fintech aesthetic",
   "logoPrimitiveConstraints": {
-    "allowedShapeKinds":    ["shield", "hexagon", "circle", "rounded-square", "square"],
-    "allowedMarkKinds":     ["monogram", "symbol-geometric", "chart-mark", "wordmark-only"],
+    "allowedShapeKinds": ["shield", "hexagon", "circle", "rounded-square", "square"],
+    "allowedMarkKinds": ["monogram", "symbol-geometric", "chart-mark", "wordmark-only"],
     "allowedWordmarkStyles": ["geometric-sans", "condensed-sans", "tabular-mono"],
     "allowedContainerStyles": ["lockup-horizontal", "lockup-stacked", "wordmark-only", "badge-flat"]
   },
@@ -165,13 +165,13 @@
   "voice": {
     "tone": ["professional", "direct", "precise", "trustworthy"],
     "samples": {
-      "primaryAction":  "Continue",
-      "errorEmpty":     "No data available",
-      "successToast":   "Transaction complete",
-      "loading":        "Loading...",
-      "welcome":        "Welcome back",
-      "confirmAction":  "Confirm",
-      "cancelAction":   "Cancel"
+      "primaryAction": "Continue",
+      "errorEmpty": "No data available",
+      "successToast": "Transaction complete",
+      "loading": "Loading...",
+      "welcome": "Welcome back",
+      "confirmAction": "Confirm",
+      "cancelAction": "Cancel"
     }
   },
   "formIntelligence": {

@@ -1,6 +1,6 @@
 /**
  * Skeed Guards Package
- * 
+ *
  * Quality gates for component generation:
  * - Token validation (no hardcoded values)
  * - Contrast validation (WCAG AA/AAA compliance)

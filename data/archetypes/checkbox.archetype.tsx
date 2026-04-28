@@ -1,6 +1,6 @@
-import { type InputHTMLAttributes, forwardRef, useId, useRef, useEffect } from 'react';
-import { cn } from '@skeed/core/cn';
 import { Check, Minus } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
+import { type InputHTMLAttributes, forwardRef, useEffect, useId, useRef } from 'react';
 
 export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
   label: string;
@@ -8,7 +8,6 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
   error?: string;
   indeterminate?: boolean;
 }
-
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
   {
@@ -59,13 +58,13 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
           aria-invalid={!!error}
           className={cn(
             'peer appearance-none h-4 w-4 rounded-skeed-radius-2 border border-skeed-color-neutral-300 ' +
-            'bg-skeed-color-neutral-50 cursor-pointer ' +
-            'transition-all duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
-            'checked:bg-skeed-color-brand-500 checked:border-skeed-color-brand-500 ' +
-            'indeterminate:bg-skeed-color-brand-500 indeterminate:border-skeed-color-brand-500 ' +
-            'checked:scale-105 indeterminate:scale-105 ' +
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 focus-visible:ring-offset-2 ' +
-            'disabled:pointer-events-none disabled:opacity-50',
+              'bg-skeed-color-neutral-50 cursor-pointer ' +
+              'transition-all duration-skeed-motion-duration-fast ease-skeed-motion-easing-default ' +
+              'checked:bg-skeed-color-brand-500 checked:border-skeed-color-brand-500 ' +
+              'indeterminate:bg-skeed-color-brand-500 indeterminate:border-skeed-color-brand-500 ' +
+              'checked:scale-105 indeterminate:scale-105 ' +
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500 focus-visible:ring-offset-2 ' +
+              'disabled:pointer-events-none disabled:opacity-50',
             error && 'border-skeed-color-danger-500 focus-visible:ring-skeed-color-danger-500',
           )}
           {...rest}
@@ -87,7 +86,9 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
           htmlFor={id}
           className={cn(
             'text-sm font-medium font-skeed-body leading-none',
-            disabled ? 'text-skeed-color-neutral-400 cursor-not-allowed' : 'text-skeed-color-neutral-900 cursor-pointer',
+            disabled
+              ? 'text-skeed-color-neutral-400 cursor-not-allowed'
+              : 'text-skeed-color-neutral-900 cursor-pointer',
           )}
         >
           {label}
@@ -98,7 +99,11 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Che
           </p>
         )}
         {error && (
-          <p id={errorId} role="alert" className="text-sm font-skeed-body text-skeed-color-danger-600 animate-in fade-in slide-in-from-top-1">
+          <p
+            id={errorId}
+            role="alert"
+            className="text-sm font-skeed-body text-skeed-color-danger-600 animate-in fade-in slide-in-from-top-1"
+          >
             {error}
           </p>
         )}

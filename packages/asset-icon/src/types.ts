@@ -44,7 +44,7 @@ export const STROKE_WIDTHS: Record<IconWeight, Record<number, number>> = {
 };
 
 /** Get stroke width for given weight and size */
-export function getStrokeWidth(weight: IconWeight = 'regular', size: number = 16): number {
+export function getStrokeWidth(weight: IconWeight = 'regular', size = 16): number {
   const sizes = [12, 16, 20, 24, 32];
   const sizeKey = sizes.find((s) => s >= size) ?? 24;
   return STROKE_WIDTHS[weight][sizeKey] ?? 2;

@@ -1,15 +1,15 @@
 /**
  * Form Suggestion System
- * 
+ *
  * Provides actionable suggestions based on validation errors and user input.
  * Supports demographic-specific suggestion voices and patterns.
  */
 
 import type {
+  FieldType,
   Suggestion,
   SuggestionPattern,
   SuggestionTrigger,
-  FieldType,
   ValidationError,
 } from '@skeed/contracts';
 
@@ -166,7 +166,7 @@ export function createSuggestionEngine(): SuggestionEngine {
 function getSuggestion(
   error: ValidationError,
   fieldType: FieldType,
-  demographic: string
+  demographic: string,
 ): Suggestion {
   const baseSuggestion = ERROR_SUGGESTIONS[error.code] || {
     message: 'Please check your input',
@@ -204,7 +204,7 @@ function getSuggestion(
 function getSuggestionsForField(
   fieldType: FieldType,
   value: string,
-  demographic: string
+  demographic: string,
 ): Suggestion[] {
   const suggestions: Suggestion[] = [];
 
@@ -274,7 +274,7 @@ function shouldShowSuggestion(pattern: SuggestionPattern, hasError: boolean): bo
 export function createSuggestionPattern(
   fieldType: FieldType,
   trigger: SuggestionTrigger,
-  options: Partial<SuggestionPattern> = {}
+  options: Partial<SuggestionPattern> = {},
 ): SuggestionPattern {
   return {
     fieldType,

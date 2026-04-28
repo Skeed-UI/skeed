@@ -149,10 +149,13 @@ async function loadLogoPrimitives(root: string): Promise<LogoPrimitiveIndex> {
       const contents = await readFile(filePath, 'utf8');
       const id = file.replace(/\.(svg|json)$/, '');
       const singular: LogoPrimitive['kind'] =
-        kind === 'shapes' ? 'shape'
-        : kind === 'marks' ? 'mark'
-        : kind === 'wordmarks' ? 'wordmark'
-        : 'container';
+        kind === 'shapes'
+          ? 'shape'
+          : kind === 'marks'
+            ? 'mark'
+            : kind === 'wordmarks'
+              ? 'wordmark'
+              : 'container';
       out[kind].push({ id, kind: singular, filePath, contents });
     }
   }

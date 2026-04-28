@@ -1,5 +1,5 @@
-import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@skeed/core/cn';
+import { forwardRef } from 'react';
 
 export interface PaginationProps {
   currentPage: number;

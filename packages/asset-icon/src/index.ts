@@ -3,7 +3,12 @@ export type { IconProps, IconComponent, IconWeight, IconVariant } from './types'
 export { getStrokeWidth, STROKE_WIDTHS } from './types';
 
 // Context for adaptive icon rendering
-export { IconProvider, useIconContext, type IconContextValue, type IconProviderProps } from './IconContext';
+export {
+  IconProvider,
+  useIconContext,
+  type IconContextValue,
+  type IconProviderProps,
+} from './IconContext';
 
 // Common icons
 export { Eye } from './icons/eye';

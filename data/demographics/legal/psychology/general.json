@@ -13,10 +13,7 @@
   "formality": 5,
   "noveltyTolerance": 1,
   "accessibilityFloor": "AAA",
-  "forbiddenPatterns": [
-    "urgency_timer",
-    "dark_pattern"
-  ],
+  "forbiddenPatterns": ["urgency_timer", "dark_pattern"],
   "research": {
     "sources": [],
     "notes": "Legal users want gravity + transparency. Plain language. Cite sources."

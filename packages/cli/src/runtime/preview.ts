@@ -35,7 +35,8 @@ export async function pickFromPreview(opts: PreviewOptions): Promise<string> {
     server.on('error', reject);
     server.listen(0, '127.0.0.1', async () => {
       const addr = server.address();
-      if (!addr || typeof addr !== 'object') return reject(new Error('unable to bind preview server'));
+      if (!addr || typeof addr !== 'object')
+        return reject(new Error('unable to bind preview server'));
       const url = `http://127.0.0.1:${addr.port}`;
       process.stdout.write(`\n  preview: ${url}\n  (waiting for your pick — open the browser)\n`);
       if (!opts.silent) {
@@ -98,7 +99,11 @@ function galleryHtml(res: ServerResponse, opts: PreviewOptions): void {
   res.end(html);
 }
 
-function handleSelect(req: IncomingMessage, res: ServerResponse, finish: (id: string) => void): void {
+function handleSelect(
+  req: IncomingMessage,
+  res: ServerResponse,
+  finish: (id: string) => void,
+): void {
   let raw = '';
   req.on('data', (chunk) => {
     raw += chunk;
