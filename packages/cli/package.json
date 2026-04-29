@@ -2,14 +2,42 @@
   "name": "@skeed/cli",
   "version": "0.1.0",
   "description": "Skeed CLI — `npx skeed init '<idea>'` scaffolds a demographic-tuned Next.js project.",
+  "keywords": [
+    "cli",
+    "scaffold",
+    "nextjs",
+    "react",
+    "design-system",
+    "demographic",
+    "ui-components",
+    "tailwind",
+    "typescript",
+    "ai-assisted",
+    "mcp",
+    "component-library",
+    "design-tokens",
+    "code-generation"
+  ],
   "license": "MIT",
+  "homepage": "https://github.com/skeed/skeed#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skeed/skeed.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/skeed/skeed/issues"
+  },
   "type": "module",
   "bin": {
     "skeed": "./bin/skeed.mjs"
   },
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": ["bin", "dist", "templates"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",

@@ -2,9 +2,32 @@
   "name": "@skeed/motion",
   "version": "0.1.0",
   "description": "Physics-based micro-interactions and environmental effects for React",
+  "keywords": [
+    "react",
+    "animation",
+    "micro-interactions",
+    "physics",
+    "motion",
+    "gestures",
+    "spring",
+    "demographic",
+    "accessibility",
+    "reduced-motion"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/skeed/skeed/tree/main/packages/motion#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skeed/skeed.git",
+    "directory": "packages/motion"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -48,6 +71,5 @@
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "typescript": "^5.7.2"
-  },
-  "license": "MIT"
+  }
 }

@@ -2,6 +2,26 @@
 
 > MCP-native demographic design system builder. A different kind of AI app builder — scaffolding expert with deep design-system + demographic-psychology expertise.
 
+[![NPM Version](https://img.shields.io/npm/v/@skeed/cli.svg?style=flat-square)](https://www.npmjs.com/package/@skeed/cli)
+[![NPM Downloads](https://img.shields.io/npm/dm/@skeed/cli.svg?style=flat-square)](https://npmjs.com/package/@skeed/cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg?style=flat-square)](https://www.typescriptlang.org)
+[![Node](https://img.shields.io/badge/Node-%3E%3D22.0.0-green.svg?style=flat-square)](https://nodejs.org)
+
+**Production-ready scaffolding for demographic-targeted applications.**
+
+Skeed transforms a raw idea into a complete, runnable Next.js application — with brand identity, design system, and component selection tuned to your target audience.
+
+## Quick Install
+
+```bash
+# Install the CLI globally
+npm install -g @skeed/cli
+
+# Or use npx (no install required)
+npx @skeed/cli init "Build an app that manages my emails automatically"
+```
+
 ## What it does
 
 Skeed takes a prompt like *"Build an app that manages my emails automatically and gives me feedback every morning"* and produces a complete, demographic-targeted scaffold:
@@ -13,9 +33,41 @@ Skeed takes a prompt like *"Build an app that manages my emails automatically an
 5. **Composes pages + lands on a user-picked landing page** — 2-3 candidates, you pick.
 6. **Emits a runnable Next.js scaffold** — with assets (AI-generated illustrations, stock imagery, demographic-fit avatars).
 
-## Status
+## Features
 
-Pre-alpha. See [the architecture plan](https://github.com/) and [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+- **Demographic Intelligence** — 19+ researched personas with psychology-mapped design patterns
+- **3,600+ Components** — Curated, accessibility-tested, demographic-tagged component catalog
+- **17-Stage Pipeline** — From idea validation to deployed scaffold in one command
+- **Design Token System** — Deterministic preset→CSS transformation, zero magic values
+- **MCP-Native** — Component registry exposed via Model Context Protocol for AI-assisted workflows
+- **Guardrails Built-In** — Contrast validation, ethics checks, accessibility assertions
+
+## Why Skeed
+
+Most scaffolding tools generate generic code. Skeed generates *targeted* code.
+
+| Generic Scaffolder | Skeed |
+|-------------------|-------|
+| One-size-fits-all components | Demographic-tuned variants (density, motion, voice) |
+| Arbitrary color palettes | Psychology-mapped color systems |
+| Boilerplate landing pages | Persona-optimized conversion flows |
+| Manual component selection | AI-assisted, constraint-aware composition |
+
+Built for teams who ship to real users — not demos.
+
+## Packages
+
+| Package | Description | Install |
+|---------|-------------|---------|
+| `@skeed/cli` | Main CLI for scaffolding apps | `npm i -g @skeed/cli` |
+| `@skeed/core` | Design tokens & CSS transformer | `npm i @skeed/core` |
+| `@skeed/contracts` | Shared types & Zod schemas | `npm i @skeed/contracts` |
+| `@skeed/motion` | Physics-based micro-interactions | `npm i @skeed/motion` |
+| `@skeed/pipeline` | 17-stage NL→design-system pipeline | `npm i @skeed/pipeline` |
+| `@skeed/mcp-server` | MCP server for component registry | `npm i -g @skeed/mcp-server` |
+| `@skeed/indexer` | SQLite registry builder | `npm i @skeed/indexer` |
+| `@skeed/guards` | Deterministic guardrails | `npm i @skeed/guards` |
+| `@skeed/codegen` | Component generation engine | `npm i @skeed/codegen` |
 
 ## Quick Start
 
@@ -118,6 +170,61 @@ skeed init "Invoice generator for freelancers" \
 skeed init "Mental health check-in app" \
   --demographic "gen-z-workers" \
   --out ./mental-health-apps
+```
+
+## Using Packages Programmatically
+
+Import individual packages into your own projects:
+
+### Design Tokens & CSS
+```typescript
+import { transformPresetToCSS } from '@skeed/core/transformer';
+import { resolveTokens } from '@skeed/core/token-resolver';
+
+// Generate CSS from a demographic preset
+const css = transformPresetToCSS({
+  demographicId: 'health-conscious-seniors',
+  density: 'comfortable'
+});
+```
+
+### Motion & Animation
+```tsx
+import { MotionButton } from '@skeed/motion/react';
+import { useSpringAnimation } from '@skeed/motion';
+
+// Physics-based button with demographic-tuned easing
+<MotionButton 
+  demographics="gen-z-workers"
+  gesture="tap"
+>
+  Get Started
+</MotionButton>
+```
+
+### Component Generation
+```typescript
+import { generateComponent } from '@skeed/codegen';
+
+// Generate a demographic-tuned component
+const component = await generateComponent({
+  archetypeId: 'button',
+  demographicId: 'busy-professionals',
+  preset: ' productivity'
+});
+```
+
+### MCP Server (IDE Integration)
+```bash
+# Add to your MCP settings (Claude/Cursor)
+{
+  "mcpServers": {
+    "skeed": {
+      "command": "npx",
+      "args": ["@skeed/mcp-server"]
+    }
+  }
+}
 ```
 
 ### Development Setup

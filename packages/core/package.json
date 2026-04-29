@@ -2,10 +2,31 @@
   "name": "@skeed/core",
   "version": "0.1.0",
   "description": "Skeed core: design tokens API, deterministic preset→CSS transformer, class-merge helper. Pure functions, no I/O.",
+  "keywords": [
+    "design-tokens",
+    "css-transformer",
+    "tailwind",
+    "design-system",
+    "typescript",
+    "class-merge",
+    "cn",
+    "form-validation",
+    "accessibility"
+  ],
   "license": "MIT",
+  "homepage": "https://github.com/skeed/skeed/tree/main/packages/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skeed/skeed.git",
+    "directory": "packages/core"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

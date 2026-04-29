@@ -4,13 +4,20 @@
   "description": "Builds the Tier-2 SQLite registry index from data/. Read-only at runtime; regeneratable from source-of-truth on every CI run.",
   "license": "MIT",
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "bin": {
-    "skeed-build-index": "./src/cli.ts"
+    "skeed-build-index": "./dist/cli.js"
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
