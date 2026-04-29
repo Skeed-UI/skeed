@@ -11,7 +11,7 @@ export const Popover = forwardRef<HTMLDivElement, PopoverProps>(function Popover
   { className, open = false, onClose, placement = 'bottom', children, ...rest },
   forwardedRef,
 ) {
-  const internalRef = useRef<HTMLDivElement>(null);
+  const internalRef = useRef<HTMLDivElement | null>(null);
   const previousActiveElement = useRef<Element | null>(null);
 
   // Handle escape key

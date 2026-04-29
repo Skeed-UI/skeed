@@ -195,6 +195,7 @@ function TreeItem({
         type="button"
         disabled={node.disabled}
         aria-disabled={node.disabled}
+        aria-label={hasChildren ? `Expand ${node.label}` : `Select ${node.label}`}
         className={cn(
           'flex items-center gap-skeed-spacing-2',
           'px-skeed-spacing-3 py-skeed-spacing-2',
@@ -218,8 +219,9 @@ function TreeItem({
         {hasChildren && (
           <ChevronRight
             size={16}
+            aria-hidden="true"
             className={cn(
-              'transition-transform duration-skeed-motion-duration-fast',
+              'transition-transform duration-skeed-motion-duration-fast motion-reduce:transition-none',
               isExpanded && 'rotate-90',
             )}
           />

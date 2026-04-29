@@ -31,6 +31,46 @@
       "types": "./dist/cn.d.ts",
       "import": "./dist/cn.js",
       "default": "./dist/cn.js"
+    },
+    "./form-grouping": {
+      "types": "./dist/form-grouping.d.ts",
+      "import": "./dist/form-grouping.js",
+      "default": "./dist/form-grouping.js"
+    },
+    "./form-context": {
+      "types": "./dist/form-context.d.ts",
+      "import": "./dist/form-context.js",
+      "default": "./dist/form-context.js"
+    },
+    "./form-validation": {
+      "types": "./dist/form-validation.d.ts",
+      "import": "./dist/form-validation.js",
+      "default": "./dist/form-validation.js"
+    },
+    "./form-suggestions": {
+      "types": "./dist/form-suggestions.d.ts",
+      "import": "./dist/form-suggestions.js",
+      "default": "./dist/form-suggestions.js"
+    },
+    "./form-tokens": {
+      "types": "./dist/form-tokens.d.ts",
+      "import": "./dist/form-tokens.js",
+      "default": "./dist/form-tokens.js"
+    },
+    "./smart-defaults": {
+      "types": "./dist/smart-defaults.d.ts",
+      "import": "./dist/smart-defaults.js",
+      "default": "./dist/smart-defaults.js"
+    },
+    "./progressive-disclosure": {
+      "types": "./dist/progressive-disclosure.d.ts",
+      "import": "./dist/progressive-disclosure.js",
+      "default": "./dist/progressive-disclosure.js"
+    },
+    "./use-form-validation": {
+      "types": "./dist/use-form-validation.d.ts",
+      "import": "./dist/use-form-validation.js",
+      "default": "./dist/use-form-validation.js"
     }
   },
   "scripts": {

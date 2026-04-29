@@ -12,7 +12,7 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
   { className, open = false, onClose, title, description, children, ...rest },
   forwardedRef,
 ) {
-  const internalRef = useRef<HTMLDivElement>(null);
+  const internalRef = useRef<HTMLDivElement | null>(null);
   const previousActiveElement = useRef<Element | null>(null);
 
   // Handle escape key

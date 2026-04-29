@@ -7,6 +7,8 @@
 
 import type { FieldGroup, GroupingStrategy } from '@skeed/contracts';
 
+export type { GroupingStrategy };
+
 export interface FieldConfig {
   id: string;
   label: string;

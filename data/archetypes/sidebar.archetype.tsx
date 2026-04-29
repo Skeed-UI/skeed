@@ -7,6 +7,7 @@ export interface SidebarItem {
   icon?: React.ReactNode;
   href?: string;
   active?: boolean;
+  disabled?: boolean;
   badge?: string | number;
 }
 

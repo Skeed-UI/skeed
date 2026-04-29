@@ -114,8 +114,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
             error && ERROR_INPUT_CLASSES,
             success && !error && SUCCESS_INPUT_CLASSES,
             loading && LOADING_INPUT_CLASSES,
-            leadingIcon && 'pl-skeed-spacing-9',
-            trailingIcon && 'pr-skeed-spacing-9',
+            !!leadingIcon && 'pl-skeed-spacing-9',
+            !!trailingIcon && 'pr-skeed-spacing-9',
           )}
           {...rest}
         />

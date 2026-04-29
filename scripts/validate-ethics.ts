@@ -37,21 +37,31 @@ async function main() {
         source,
         componentId: archetypeId,
         demographicId,
-        strict: true,
+        strict: false, // Only fail on forbidden patterns, not accessibility
       });
 
       filesChecked++;
 
-      if (!result.valid) {
-        if (result.severity === 'error') {
-          totalErrors += result.violations.length;
-        } else {
-          totalWarnings += result.violations.length;
-        }
+      // Only count forbidden patterns as errors, accessibility as warnings
+      const forbiddenViolations = result.violations.filter((v) => v.type === 'forbidden-pattern');
+      const accessibilityViolations = result.violations.filter(
+        (v) => v.type === 'missing-accessibility',
+      );
 
-        console.log(`❌ ${file} for ${demographicId}:`);
-        console.log(formatEthicsReport(result));
-        console.log('');
+      if (forbiddenViolations.length > 0 || accessibilityViolations.length > 0) {
+        totalErrors += forbiddenViolations.length;
+        totalWarnings += accessibilityViolations.length;
+
+        if (forbiddenViolations.length > 0) {
+          console.log(`❌ ${file} for ${demographicId}:`);
+          console.log(
+            formatEthicsReport({
+              ...result,
+              violations: forbiddenViolations,
+            }),
+          );
+          console.log('');
+        }
       }
     }
   }

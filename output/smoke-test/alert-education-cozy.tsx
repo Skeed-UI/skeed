@@ -5,7 +5,7 @@
  * @variant default
  * @category molecule
  * @schemaVersion 1
- * @generatedAt 2026-04-29T00:17:32.719Z
+ * @generatedAt 2026-04-29T05:55:36.525Z
  * 
  * DO NOT EDIT: This file is auto-generated from archetype:
  *   - Source: alert
