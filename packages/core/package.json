@@ -8,24 +8,29 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "default": "./dist/index.js"
     },
     "./tokens": {
+      "types": "./dist/tokens.d.ts",
       "import": "./dist/tokens.js",
-      "types": "./dist/tokens.d.ts"
+      "default": "./dist/tokens.js"
     },
     "./transformer": {
+      "types": "./dist/transformer.d.ts",
       "import": "./dist/transformer.js",
-      "types": "./dist/transformer.d.ts"
+      "default": "./dist/transformer.js"
     },
     "./token-resolver": {
+      "types": "./dist/token-resolver.d.ts",
       "import": "./dist/token-resolver.js",
-      "types": "./dist/token-resolver.d.ts"
+      "default": "./dist/token-resolver.js"
     },
     "./cn": {
+      "types": "./dist/cn.d.ts",
       "import": "./dist/cn.js",
-      "types": "./dist/cn.d.ts"
+      "default": "./dist/cn.js"
     }
   },
   "scripts": {

@@ -1,4 +1,3 @@
-import { cn } from '@skeed/core/cn';
 /**
  * @generated Component: article
  * @demographic classic
@@ -6,12 +5,13 @@ import { cn } from '@skeed/core/cn';
  * @variant default
  * @category molecule
  * @schemaVersion 1
- * @generatedAt 2026-04-26T03:16:27.023Z
- *
+ * @generatedAt 2026-04-29T00:17:32.804Z
+ * 
  * DO NOT EDIT: This file is auto-generated from archetype:
  *   - Source: article
  *   - Preset: classic
  */
+import { cn } from '@skeed/core/cn';
 import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface ArticleProps extends HTMLAttributes<HTMLElement> {

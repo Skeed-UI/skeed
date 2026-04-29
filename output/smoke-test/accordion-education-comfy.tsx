@@ -1,4 +1,3 @@
-import { cn } from '@skeed/core/cn';
 /**
  * @generated Component: accordion
  * @demographic education
@@ -6,12 +5,14 @@ import { cn } from '@skeed/core/cn';
  * @variant default
  * @category molecule
  * @schemaVersion 1
- * @generatedAt 2026-04-26T03:16:26.936Z
- *
+ * @generatedAt 2026-04-29T00:17:32.681Z
+ * 
  * DO NOT EDIT: This file is auto-generated from archetype:
  *   - Source: accordion
  *   - Preset: education
  */
+import { ChevronDown } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
 import { type HTMLAttributes, forwardRef, useState } from 'react';
 
 let idCounter = 0;
@@ -49,24 +50,13 @@ export const AccordionItem = forwardRef<HTMLDivElement, AccordionItemProps>(func
         )}
       >
         <span>{title}</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+        <ChevronDown
+          size={16}
           className={cn(
             'transition-transform duration-skeed-motion-duration-fast',
             isOpen ? 'rotate-180' : '',
           )}
-          aria-hidden="true"
-        >
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
+        />
       </button>
       {isOpen && (
         <div

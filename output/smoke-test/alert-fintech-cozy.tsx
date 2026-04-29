@@ -1,4 +1,3 @@
-import { cn } from '@skeed/core/cn';
 /**
  * @generated Component: alert
  * @demographic fintech
@@ -6,12 +5,14 @@ import { cn } from '@skeed/core/cn';
  * @variant default
  * @category molecule
  * @schemaVersion 1
- * @generatedAt 2026-04-26T03:16:26.986Z
- *
+ * @generatedAt 2026-04-29T00:17:32.749Z
+ * 
  * DO NOT EDIT: This file is auto-generated from archetype:
  *   - Source: alert
  *   - Preset: fintech
  */
+import { X } from '@skeed/asset-icon';
+import { cn } from '@skeed/core/cn';
 import { type HTMLAttributes, forwardRef } from 'react';
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
@@ -58,21 +59,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(function Alert(
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-skeed-color-brand-500',
           )}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
+          <X size={16} />
         </button>
       )}
     </div>
