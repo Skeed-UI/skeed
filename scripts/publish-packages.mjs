@@ -18,6 +18,7 @@ const registry = process.env.NPM_CONFIG_REGISTRY || 'https://registry.npmjs.org/
 const dryRun = process.argv.includes('--dry-run') || process.argv.includes('dry-run');
 const useProvenance =
   process.env.GITHUB_ACTIONS === 'true' && process.env.SKEED_DISABLE_PROVENANCE !== 'true';
+const publishUnscopedAlias = process.env.SKEED_PUBLISH_UNSCOPED_ALIAS === 'true';
 
 const publishOrder = [
   '@skeed/contracts',
@@ -54,7 +55,7 @@ const publishOrder = [
   '@skeed/ui',
   '@skeed/pipeline',
   '@skeed/cli',
-  'skeed',
+  ...(publishUnscopedAlias ? ['skeed'] : []),
   '@skeed/mcp-server',
   '@skeed/eslint-plugin-skeed',
 ];
