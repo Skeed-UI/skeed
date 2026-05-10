@@ -1,4 +1,4 @@
-import { skeedTypographyPresets } from '@skeed/tailwind';
+import { skeedTypographyPresets, skeedVisualPresets } from '@skeed/tailwind';
 import { type CSSProperties, StrictMode, useState } from 'react';
 import { type Root, createRoot } from 'react-dom/client';
 import {
@@ -64,7 +64,7 @@ function App(): React.ReactElement {
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-5">
             {hierarchyPresetCards.map((card) => (
               <article
-                className="grid content-between gap-4 rounded-skeed border border-skeed-border p-4"
+                className="grid content-between gap-4 rounded-skeed border border-skeed-border bg-skeed-bg p-4"
                 key={card.id}
                 style={typographyCardStyle(card.id)}
               >
@@ -258,7 +258,7 @@ function App(): React.ReactElement {
           </div>
         </section>
 
-        <section className="skeed-fixture-dark grid gap-4 rounded-skeed border border-skeed-border bg-white p-4 shadow-sm md:grid-cols-2">
+        <section className="skeed-dark grid gap-4 rounded-skeed border border-skeed-border bg-white p-4 shadow-sm md:grid-cols-2">
           <SkeedAlert intent="brand" title="Dark surface check">
             Representative primitives keep readable contrast when the token surface is dark.
           </SkeedAlert>
@@ -396,7 +396,17 @@ const hierarchyPresetCards: Array<{
 
 function typographyCardStyle(id: TypographyCardId): SkeedCssProperties {
   const preset = skeedTypographyPresets[id];
+  const visual = skeedVisualPresets[id];
   return {
+    '--skeed-brand': visual.colors.brand,
+    '--skeed-accent': visual.colors.accent,
+    '--skeed-bg': visual.colors.bg,
+    '--skeed-fg': visual.colors.fg,
+    '--skeed-muted': visual.colors.muted,
+    '--skeed-border': visual.colors.border,
+    '--skeed-success': visual.colors.success,
+    '--skeed-danger': visual.colors.danger,
+    '--skeed-radius': visual.radius,
     '--skeed-font-body-family': preset.fonts.body,
     '--skeed-font-display-family': preset.fonts.display,
     '--skeed-font-mono-family': preset.fonts.mono,

@@ -1,13 +1,18 @@
 {
   "name": "skeed",
-  "version": "0.1.0",
-  "description": "Skeed CLI — alias for @skeed/cli",
+  "version": "0.1.5",
+  "description": "Skeed CLI alias for @skeed/cli.",
   "license": "MIT",
   "type": "module",
   "bin": {
     "skeed": "./bin/skeed.mjs"
   },
-  "files": ["bin"],
+  "files": [
+    "bin"
+  ],
+  "dependencies": {
+    "@skeed/cli": "0.1.5"
+  },
   "publishConfig": {
     "access": "public"
   },

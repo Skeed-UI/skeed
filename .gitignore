@@ -2,6 +2,8 @@ node_modules
 dist
 build
 .turbo
+.next
+**/.next
 *.log
 .DS_Store
 .env
@@ -30,7 +32,10 @@ coverage/
 .vitest-cache/
 playwright-report/
 test-results/
+.playwright-mcp/
 
 # Built indices (regeneratable, not in git)
 packages/indexer/dist/*.db
 packages/mcp-server/dist/registry-*.db
+packages/mcp-server/*.db-shm
+packages/mcp-server/*.db-wal

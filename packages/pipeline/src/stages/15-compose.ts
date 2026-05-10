@@ -6,6 +6,11 @@ import { findRepoData } from '@skeed/asset-logo-svg';
 import type { Stage } from '@skeed/contracts';
 import { Catalog, type CatalogRow } from '@skeed/mcp-server';
 import { PipelineState } from './state.js';
+import {
+  renderFontHeadLinks,
+  typographyForDemographic,
+  themeTraceForDemographic,
+} from './theme-profile.js';
 
 /**
  * Stage 15 - Compose. Uses the semantic Skeed registry when available and
@@ -25,7 +30,11 @@ export const stage_15_compose: Stage<PipelineState, PipelineState> = {
       state.intent?.jobToBeDone?.replace(/^Build:\s*/, '') ?? 'Skeed App',
       80,
     );
-    const tagline = state.userStories?.[0]?.iWantTo ?? 'Get started in seconds';
+    const rawTagline = state.userStories?.[0]?.iWantTo ?? '';
+    const tagline =
+      rawTagline && !isGenericCopy(rawTagline)
+        ? rawTagline
+        : `A focused experience for a ${productSubject(projectName)} with clear next steps.`;
     const cta = ds?.voice.samples.cta ?? 'Get started';
     const selection = await createSelectionContext(state);
     const selectedSlots: SelectedSlotComponent[] = [];
@@ -55,7 +64,11 @@ export const stage_15_compose: Stage<PipelineState, PipelineState> = {
 
     const selectedComponents = Array.from(selectedFiles.values());
     const sectionsComponent = renderSectionsLibrary(selectedSlots);
-    const layoutTsx = renderLayout(projectName, tagline);
+    const layoutTsx = renderLayout(
+      projectName,
+      tagline,
+      state.classification?.candidates[0]?.demographic,
+    );
     const globals = `${renderGlobals(state)}\n${renderSelectedTokenCss(selectedComponents)}\n${renderSkeedClassShim()}`;
 
     return {
@@ -177,10 +190,10 @@ async function pageFromSpec(input: PageBuildInput): Promise<string> {
 
   return `${importLine}export default function ${componentName(page.id)}Page() {
   return (
-    <main className="min-h-screen bg-[var(--skeed-bg)] text-[var(--skeed-fg)]">
-      <header className="container mx-auto flex items-center justify-between px-6 py-5">
-        <a href="/" className="font-bold">${escapeHtml(projectName)}</a>
-        <nav className="flex gap-6 text-sm opacity-80">
+    <main className="skeed-type-page min-h-screen bg-[var(--skeed-bg)] text-[var(--skeed-fg)]">
+      <header className="container mx-auto flex flex-wrap items-center justify-between gap-4 px-6 py-5">
+        <a href="/" className="skeed-smart-title font-bold">${escapeHtml(projectName)}</a>
+        <nav className="flex flex-wrap gap-6 text-sm opacity-80">
           ${navItems
             .map(
               (item) =>
@@ -345,9 +358,61 @@ function renderSlotComponent(input: {
   archetypeId: string;
 }): string {
   const { wrapperName, role, intent, projectName, tagline, cta, archetypeId } = input;
-  const body = intent || tagline;
-  const title = /hero/i.test(role) ? projectName : body;
+  const copy = copyForSlot({ role, intent, projectName, tagline });
+  const body = copy.body;
+  const title = /hero/i.test(role) ? projectName : copy.heading;
   return `<${wrapperName} label="${escapeHtml(titleCase(role))}" heading="${escapeHtml(title)}" body="${escapeHtml(body || tagline)}" cta="${escapeHtml(cta)}" archetype="${escapeHtml(archetypeId)}" />`;
+}
+
+function copyForSlot(input: {
+  role: string;
+  intent: string;
+  projectName: string;
+  tagline: string;
+}): { heading: string; body: string } {
+  const role = input.role.toLowerCase();
+  const intent = input.intent.trim();
+  const project = input.projectName.trim();
+  const subject = productSubject(project);
+  const fallback =
+    input.tagline && !isGenericCopy(input.tagline)
+      ? input.tagline
+      : `A focused experience for a ${subject} with clear next steps.`;
+  if (intent && !isGenericCopy(intent)) {
+    return { heading: titleCase(intent), body: intent };
+  }
+  if (/thank|thanks|success/.test(role) || /thank user/.test(intent)) {
+    return {
+      heading: 'Your next step is ready',
+      body: `You are set up to continue with a ${subject} and pick up from a clear, useful starting point.`,
+    };
+  }
+  if (/feature|benefit|outcome/.test(role)) {
+    return {
+      heading: 'Everything important stays easy to scan',
+      body: `Track the work that matters, compare progress, and keep decisions moving without adding noise to a ${subject}.`,
+    };
+  }
+  if (/cta|signup|start|join/.test(role)) {
+    return {
+      heading: 'Start with a guided setup',
+      body: `Create your first plan, tune the details, and move into a ${subject} with less manual cleanup.`,
+    };
+  }
+  return {
+    heading: project,
+    body: fallback,
+  };
+}
+
+function isGenericCopy(value: string): boolean {
+  return /\b(state value prop|thank user|understand the general value|list \d+ benefits|capture email|capture signup|invite the user|placeholder|lorem|todo|insert|generic|sample copy)\b/i.test(
+    value,
+  );
+}
+
+function productSubject(projectName: string): string {
+  return projectName.trim().toLowerCase().replace(/^(a|an|the)\s+/, '');
 }
 
 function renderSectionsLibrary(selected: SelectedSlotComponent[]): string {
@@ -379,17 +444,17 @@ function featureItems(seed: string): Array<{ id: string; title: string; descript
   ].map((title, index) => ({
     id: \`feature-\${index + 1}\`,
     title: title.replace(/[-_]/g, ' ').replace(/\\b\\w/g, (match) => match.toUpperCase()),
-    description: 'Focused around the core workflow instead of generic page filler.',
+    description: 'Focused around the core workflow with clear hierarchy, readable copy, and a calm next action.',
   }));
 }
 
 export function FallbackSection({ label, heading, body, cta, archetype }: SectionProps) {
   return (
     <section className="container mx-auto px-6 py-16" data-archetype={archetype}>
-      <p className="text-sm font-semibold uppercase opacity-60">{label}</p>
-      <h2 className="mt-3 text-3xl font-bold">{heading}</h2>
-      <p className="mt-4 max-w-2xl opacity-80">{body}</p>
-      <a href="#" className="mt-6 inline-block rounded-full bg-[var(--skeed-brand)] px-8 py-3 font-semibold text-white">
+      <p className="skeed-eyebrow">{label}</p>
+      <h2 className="skeed-type-title mt-3">{heading}</h2>
+      <p className="skeed-type-body skeed-smart-text mt-4 max-w-2xl opacity-80">{body}</p>
+      <a href="#" className="skeed-cta-primary skeed-press-soft mt-6">
         {cta}
       </a>
     </section>
@@ -429,7 +494,7 @@ function renderSelectedWrapper(slot: SelectedSlotComponent): string {
     return `export function ${slot.wrapperName}({ heading, body, archetype }: SectionProps) {
   return (
     <section className="container mx-auto px-6 py-16" data-archetype={archetype}>
-      <h2 className="mb-6 text-3xl font-bold">{heading}</h2>
+      <h2 className="skeed-type-title mb-6">{heading}</h2>
       <${component} sender="Skeed" content={body} timestamp="Now" />
     </section>
   );
@@ -440,9 +505,9 @@ function renderSelectedWrapper(slot: SelectedSlotComponent): string {
   return (
     <section className="container mx-auto px-6 py-16" data-archetype={archetype}>
       <${component}>
-        <p className="text-sm font-semibold uppercase opacity-60">{label}</p>
-        <h2 className="mt-3 text-3xl font-bold">{heading}</h2>
-        <p className="mt-4 opacity-80">{body}</p>
+        <p className="skeed-eyebrow">{label}</p>
+        <h2 className="skeed-type-section mt-3">{heading}</h2>
+        <p className="skeed-type-body skeed-smart-text mt-4 opacity-80">{body}</p>
       </${component}>
     </section>
   );
@@ -453,7 +518,9 @@ function renderSelectedWrapper(slot: SelectedSlotComponent): string {
 }`;
 }
 
-function renderLayout(projectName: string, tagline: string): string {
+function renderLayout(projectName: string, tagline: string, demographic: string | undefined): string {
+  const typography = typographyForDemographic(demographic);
+  const fontLinks = renderFontHeadLinks(typography);
   return `import './globals.css';
 import type { Metadata } from 'next';
 
@@ -465,6 +532,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+${fontLinks ? `${fontLinks}\n` : ''}      {/* Skeed: ${typography.label} typography - ${typography.rationale} */}
       <body>{children}</body>
     </html>
   );
@@ -715,9 +783,16 @@ function renderGlobals(state: PipelineState): string {
   const brand = designSystem?.palette.primary ?? '#4F46E5';
   const fg = designSystem?.palette.neutral ?? '#0F172A';
   const accent = designSystem?.palette.accent ?? brand;
-  const typography = typographyCssFor(state.classification?.candidates[0]?.demographic);
+  const typography = typographyForDemographic(state.classification?.candidates[0]?.demographic);
+  const themeTrace = themeTraceForDemographic(state.classification?.candidates[0]?.demographic);
   const radius = designSystem?.radius?.[1] ?? 8;
-  return `@tailwind base;
+  return `/* Generated by Skeed.
+   Demographic: ${themeTrace.demographic}
+   Typeface: ${typography.label}
+   Rationale: ${typography.rationale}
+   Defaults: smart text, adaptive grids, CSS-first micro-interactions, reduced motion.
+*/
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -725,10 +800,13 @@ function renderGlobals(state: PipelineState): string {
   --skeed-brand: ${brand};
   --skeed-accent: ${accent};
   --skeed-bg: #FFFFFF;
+  --skeed-surface: #FFFFFF;
+  --skeed-surface-muted: #f8fafc;
   --skeed-fg: ${fg};
   --skeed-muted: color-mix(in srgb, ${fg} 68%, white);
   --skeed-border: color-mix(in srgb, ${fg} 14%, transparent);
   --skeed-success: #15803d;
+  --skeed-warning: #b45309;
   --skeed-danger: #b91c1c;
   --skeed-radius: ${radius}px;
   --skeed-motion-fast: ${designSystem?.motion.duration.fast ?? 120}ms;
@@ -746,6 +824,10 @@ function renderGlobals(state: PipelineState): string {
   --skeed-type-title-line: ${typography.title.lineHeight};
   --skeed-type-title-tracking: ${typography.title.letterSpacing};
   --skeed-type-title-weight: ${typography.title.weight};
+  --skeed-type-section-size: ${typography.section.size};
+  --skeed-type-section-line: ${typography.section.lineHeight};
+  --skeed-type-section-tracking: ${typography.section.letterSpacing};
+  --skeed-type-section-weight: ${typography.section.weight};
   --skeed-type-body-size: ${typography.body.size};
   --skeed-type-body-line: ${typography.body.lineHeight};
   --skeed-type-body-tracking: ${typography.body.letterSpacing};
@@ -770,6 +852,7 @@ button, input, textarea, select { font: inherit; }
 .mx-auto { margin-left: auto; margin-right: auto; }
 .min-h-screen { min-height: 100vh; }
 .flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
 .flex-col { flex-direction: column; }
 .flex-row { flex-direction: row; }
 .flex-row-reverse { flex-direction: row-reverse; }
@@ -795,7 +878,7 @@ button, input, textarea, select { font: inherit; }
 .leading-tight { line-height: 1.1; }
 .leading-relaxed { line-height: 1.65; }
 .opacity-80 { opacity: .8; } .opacity-70 { opacity: .7; } .opacity-60 { opacity: .6; }
-.gap-2 { gap: .5rem; } .gap-6 { gap: 1.5rem; } .gap-10 { gap: 2.5rem; }
+.gap-2 { gap: .5rem; } .gap-4 { gap: 1rem; } .gap-6 { gap: 1.5rem; } .gap-10 { gap: 2.5rem; }
 .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; } .px-8 { padding-left: 2rem; padding-right: 2rem; }
 .py-3 { padding-top: .75rem; padding-bottom: .75rem; } .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; } .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
 .p-6 { padding: 1.5rem; } .p-8 { padding: 2rem; }
@@ -817,13 +900,26 @@ button, input, textarea, select { font: inherit; }
 .text-\\[var\\(--skeed-fg\\)\\] { color: var(--skeed-fg); }
 .text-white { color: #fff; }
 .hover\\:underline:hover { text-decoration: underline; }
-.skeed-type-page { color: var(--skeed-fg); font-family: var(--skeed-font-body-family); font-size: var(--skeed-type-body-size); line-height: var(--skeed-type-body-line); letter-spacing: var(--skeed-type-body-tracking); font-weight: var(--skeed-type-body-weight); }
-.skeed-type-hero { font-family: var(--skeed-font-display-family); font-size: var(--skeed-type-hero-size); line-height: var(--skeed-type-hero-line); letter-spacing: var(--skeed-type-hero-tracking); font-weight: var(--skeed-type-hero-weight); }
-.skeed-type-title { font-family: var(--skeed-font-display-family); font-size: var(--skeed-type-title-size); line-height: var(--skeed-type-title-line); letter-spacing: var(--skeed-type-title-tracking); font-weight: var(--skeed-type-title-weight); }
-.skeed-type-body { font-family: var(--skeed-font-body-family); font-size: var(--skeed-type-body-size); line-height: var(--skeed-type-body-line); letter-spacing: var(--skeed-type-body-tracking); font-weight: var(--skeed-type-body-weight); }
+.skeed-smart-text { hyphens: auto; overflow-wrap: break-word; word-break: normal; }
+.skeed-smart-title { hyphens: auto; overflow-wrap: break-word; text-wrap: balance; word-break: normal; }
+.skeed-adaptive-grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); }
+.skeed-adaptive-grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr)); }
+.skeed-adaptive-grid-dense { grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr)); }
+.skeed-type-page { color: var(--skeed-fg); font-family: var(--skeed-font-body-family); font-size: var(--skeed-type-body-size); line-height: var(--skeed-type-body-line); letter-spacing: var(--skeed-type-body-tracking); font-weight: var(--skeed-type-body-weight); overflow-wrap: break-word; word-break: normal; }
+.skeed-type-hero { font-family: var(--skeed-font-display-family); font-size: var(--skeed-type-hero-size); line-height: var(--skeed-type-hero-line); letter-spacing: var(--skeed-type-hero-tracking); font-weight: var(--skeed-type-hero-weight); hyphens: auto; overflow-wrap: break-word; text-wrap: balance; word-break: normal; }
+.skeed-type-title { font-family: var(--skeed-font-display-family); font-size: var(--skeed-type-title-size); line-height: var(--skeed-type-title-line); letter-spacing: var(--skeed-type-title-tracking); font-weight: var(--skeed-type-title-weight); hyphens: auto; overflow-wrap: break-word; text-wrap: balance; word-break: normal; }
+.skeed-type-section { font-family: var(--skeed-font-display-family); font-size: var(--skeed-type-section-size); line-height: var(--skeed-type-section-line); letter-spacing: var(--skeed-type-section-tracking); font-weight: var(--skeed-type-section-weight); hyphens: auto; overflow-wrap: break-word; text-wrap: balance; word-break: normal; }
+.skeed-type-body { font-family: var(--skeed-font-body-family); font-size: var(--skeed-type-body-size); line-height: var(--skeed-type-body-line); letter-spacing: var(--skeed-type-body-tracking); font-weight: var(--skeed-type-body-weight); overflow-wrap: break-word; word-break: normal; }
+.skeed-type-caption { font-family: var(--skeed-font-body-family); font-size: var(--skeed-type-caption-size); line-height: var(--skeed-type-caption-line); letter-spacing: var(--skeed-type-caption-tracking); font-weight: var(--skeed-type-caption-weight); overflow-wrap: break-word; word-break: normal; }
 .skeed-eyebrow { color: var(--skeed-accent); font-size: var(--skeed-type-caption-size); font-weight: 700; letter-spacing: var(--skeed-eyebrow-tracking); text-transform: uppercase; }
-.skeed-cta-primary { display: inline-flex; align-items: center; justify-content: center; min-height: var(--skeed-cta-min-height); padding: 0 var(--skeed-cta-padding-x); border-radius: var(--skeed-cta-radius); background: var(--skeed-brand); color: #fff; font-weight: var(--skeed-cta-primary-weight); box-shadow: var(--skeed-cta-shadow); }
-.skeed-cta-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: var(--skeed-cta-min-height); padding: 0 var(--skeed-cta-padding-x); border-radius: var(--skeed-cta-radius); border: 1px solid var(--skeed-border); background: #fff; color: var(--skeed-fg); font-weight: var(--skeed-cta-secondary-weight); }
+.skeed-cta-primary { display: inline-flex; align-items: center; justify-content: center; min-height: var(--skeed-cta-min-height); max-width: 100%; isolation: isolate; overflow: hidden; padding: 0 var(--skeed-cta-padding-x); position: relative; border-radius: var(--skeed-cta-radius); background: linear-gradient(135deg, var(--skeed-brand), color-mix(in srgb, var(--skeed-brand) 72%, var(--skeed-accent))); color: #fff; font-weight: var(--skeed-cta-primary-weight); box-shadow: var(--skeed-cta-shadow); text-align: center; text-wrap: balance; white-space: normal; transition: transform var(--skeed-motion-fast) var(--skeed-ease), box-shadow var(--skeed-motion-base) var(--skeed-ease); }
+.skeed-cta-primary::after { content: ""; position: absolute; inset: -2px; pointer-events: none; transform: translateX(-130%) skewX(-18deg); transition: transform var(--skeed-motion-slow) var(--skeed-ease); background: linear-gradient(105deg, transparent 32%, rgba(255, 255, 255, .34) 48%, transparent 64%); }
+.skeed-cta-primary:hover { box-shadow: 0 16px 34px color-mix(in srgb, var(--skeed-brand) 24%, transparent); }
+.skeed-cta-primary:hover::after { transform: translateX(130%) skewX(-18deg); }
+.skeed-cta-primary:active { transform: scale(.985); }
+.skeed-cta-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: var(--skeed-cta-min-height); max-width: 100%; padding: 0 var(--skeed-cta-padding-x); border-radius: var(--skeed-cta-radius); border: 1px solid var(--skeed-border); background: #fff; color: var(--skeed-fg); font-weight: var(--skeed-cta-secondary-weight); text-align: center; text-wrap: balance; white-space: normal; transition: transform var(--skeed-motion-fast) var(--skeed-ease), border-color var(--skeed-motion-base) var(--skeed-ease), background-color var(--skeed-motion-base) var(--skeed-ease); }
+.skeed-cta-secondary:hover { border-color: color-mix(in srgb, var(--skeed-brand) 42%, var(--skeed-border)); background: color-mix(in srgb, var(--skeed-brand) 4%, #fff); }
+.skeed-cta-secondary:active { transform: scale(.985); }
 .skeed-focus-ring { outline: 2px solid transparent; outline-offset: 2px; box-shadow: 0 0 0 3px color-mix(in srgb, var(--skeed-brand) 32%, transparent); }
 .skeed-hover-lift { transform: translate3d(0,0,0); transition: transform var(--skeed-motion-base) var(--skeed-ease), box-shadow var(--skeed-motion-base) var(--skeed-ease); will-change: transform; }
 .skeed-hover-lift:hover { transform: translate3d(0,-2px,0); box-shadow: 0 14px 30px rgba(15,23,42,.12); }
@@ -837,6 +933,7 @@ button, input, textarea, select { font: inherit; }
 @keyframes skeed-slide-up { from { opacity: 0; transform: translate3d(0,10px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 1ms !important; }
+  .skeed-cta-primary::after { display: none; }
 }
 @media (min-width: 640px) { .sm\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 768px) { .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -845,9 +942,22 @@ button, input, textarea, select { font: inherit; }
 }
 
 function renderSelectedTokenCss(selected: SelectedSkeedComponent[]): string {
-  const css = unique(selected.map((item) => item.tokensCss).filter(Boolean));
+  const css = unique(selected.map((item) => sanitizeSelectedTokenCss(item.tokensCss)).filter(Boolean));
   if (css.length === 0) return '';
-  return `/* Skeed selected component tokens */\n${css.join('\n')}`;
+  return `/* Skeed selected component tokens.
+   Component colors and shadows are preserved, but the scaffold theme remains
+   the authority for typography, spacing, density, motion, and CTA hierarchy. */
+${css.join('\n')}`;
+}
+
+function sanitizeSelectedTokenCss(css: string): string {
+  const protectedThemeVariables =
+    /^\s*--skeed-(font|type|spacing|density|current|motion|cta|radius)-/;
+  return css
+    .split(/\r?\n/)
+    .filter((line) => !protectedThemeVariables.test(line))
+    .join('\n')
+    .trim();
 }
 
 function renderSkeedClassShim(): string {
@@ -905,26 +1015,58 @@ function renderSkeedClassShim(): string {
   lines.push('.py-skeed-density-cozy-pady{padding-top:.75rem;padding-bottom:.75rem;}');
   lines.push('.font-skeed-display{font-family:var(--skeed-font-display-family,inherit);}');
   lines.push('.font-skeed-body{font-family:var(--skeed-font-body-family,inherit);}');
+  lines.push('.skeed-smart-text{hyphens:auto;overflow-wrap:break-word;word-break:normal;}');
   lines.push(
-    '.skeed-type-page{color:var(--skeed-fg);font-family:var(--skeed-font-body-family);font-size:var(--skeed-type-body-size);line-height:var(--skeed-type-body-line);letter-spacing:var(--skeed-type-body-tracking);font-weight:var(--skeed-type-body-weight);}',
+    '.skeed-smart-title{hyphens:auto;overflow-wrap:break-word;text-wrap:balance;word-break:normal;}',
   );
   lines.push(
-    '.skeed-type-hero{font-family:var(--skeed-font-display-family);font-size:var(--skeed-type-hero-size);line-height:var(--skeed-type-hero-line);letter-spacing:var(--skeed-type-hero-tracking);font-weight:var(--skeed-type-hero-weight);}',
+    '.skeed-adaptive-grid-2{grid-template-columns:repeat(auto-fit,minmax(min(16rem,100%),1fr));}',
   );
   lines.push(
-    '.skeed-type-title{font-family:var(--skeed-font-display-family);font-size:var(--skeed-type-title-size);line-height:var(--skeed-type-title-line);letter-spacing:var(--skeed-type-title-tracking);font-weight:var(--skeed-type-title-weight);}',
+    '.skeed-adaptive-grid-3{grid-template-columns:repeat(auto-fit,minmax(min(12rem,100%),1fr));}',
   );
   lines.push(
-    '.skeed-type-body{font-family:var(--skeed-font-body-family);font-size:var(--skeed-type-body-size);line-height:var(--skeed-type-body-line);letter-spacing:var(--skeed-type-body-tracking);font-weight:var(--skeed-type-body-weight);}',
+    '.skeed-adaptive-grid-dense{grid-template-columns:repeat(auto-fit,minmax(min(9rem,100%),1fr));}',
+  );
+  lines.push(
+    '.skeed-type-page{color:var(--skeed-fg);font-family:var(--skeed-font-body-family);font-size:var(--skeed-type-body-size);line-height:var(--skeed-type-body-line);letter-spacing:var(--skeed-type-body-tracking);font-weight:var(--skeed-type-body-weight);overflow-wrap:break-word;word-break:normal;}',
+  );
+  lines.push(
+    '.skeed-type-hero{font-family:var(--skeed-font-display-family);font-size:var(--skeed-type-hero-size);line-height:var(--skeed-type-hero-line);letter-spacing:var(--skeed-type-hero-tracking);font-weight:var(--skeed-type-hero-weight);hyphens:auto;overflow-wrap:break-word;text-wrap:balance;word-break:normal;}',
+  );
+  lines.push(
+    '.skeed-type-title{font-family:var(--skeed-font-display-family);font-size:var(--skeed-type-title-size);line-height:var(--skeed-type-title-line);letter-spacing:var(--skeed-type-title-tracking);font-weight:var(--skeed-type-title-weight);hyphens:auto;overflow-wrap:break-word;text-wrap:balance;word-break:normal;}',
+  );
+  lines.push(
+    '.skeed-type-section{font-family:var(--skeed-font-display-family);font-size:var(--skeed-type-section-size);line-height:var(--skeed-type-section-line);letter-spacing:var(--skeed-type-section-tracking);font-weight:var(--skeed-type-section-weight);hyphens:auto;overflow-wrap:break-word;text-wrap:balance;word-break:normal;}',
+  );
+  lines.push(
+    '.skeed-type-body{font-family:var(--skeed-font-body-family);font-size:var(--skeed-type-body-size);line-height:var(--skeed-type-body-line);letter-spacing:var(--skeed-type-body-tracking);font-weight:var(--skeed-type-body-weight);overflow-wrap:break-word;word-break:normal;}',
+  );
+  lines.push(
+    '.skeed-type-caption{font-family:var(--skeed-font-body-family);font-size:var(--skeed-type-caption-size);line-height:var(--skeed-type-caption-line);letter-spacing:var(--skeed-type-caption-tracking);font-weight:var(--skeed-type-caption-weight);overflow-wrap:break-word;word-break:normal;}',
   );
   lines.push(
     '.skeed-eyebrow{color:var(--skeed-accent);font-size:var(--skeed-type-caption-size);font-weight:700;letter-spacing:var(--skeed-eyebrow-tracking);text-transform:uppercase;}',
   );
   lines.push(
-    '.skeed-cta-primary{display:inline-flex;align-items:center;justify-content:center;min-height:var(--skeed-cta-min-height);padding:0 var(--skeed-cta-padding-x);border-radius:var(--skeed-cta-radius);background:var(--skeed-brand);color:#fff;font-weight:var(--skeed-cta-primary-weight);box-shadow:var(--skeed-cta-shadow);}',
+    '.skeed-cta-primary{display:inline-flex;align-items:center;justify-content:center;min-height:var(--skeed-cta-min-height);max-width:100%;isolation:isolate;overflow:hidden;padding:0 var(--skeed-cta-padding-x);position:relative;border-radius:var(--skeed-cta-radius);background:linear-gradient(135deg,var(--skeed-brand),color-mix(in srgb,var(--skeed-brand) 72%,var(--skeed-accent)));color:#fff;font-weight:var(--skeed-cta-primary-weight);box-shadow:var(--skeed-cta-shadow);text-align:center;text-wrap:balance;white-space:normal;transition:transform var(--skeed-motion-fast) var(--skeed-ease),box-shadow var(--skeed-motion-base) var(--skeed-ease);}',
   );
   lines.push(
-    '.skeed-cta-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:var(--skeed-cta-min-height);padding:0 var(--skeed-cta-padding-x);border-radius:var(--skeed-cta-radius);border:1px solid var(--skeed-border);background:#fff;color:var(--skeed-fg);font-weight:var(--skeed-cta-secondary-weight);}',
+    '.skeed-cta-primary::after{content:"";position:absolute;inset:-2px;pointer-events:none;transform:translateX(-130%) skewX(-18deg);transition:transform var(--skeed-motion-slow) var(--skeed-ease);background:linear-gradient(105deg,transparent 32%,rgba(255,255,255,.34) 48%,transparent 64%);}',
+  );
+  lines.push('.skeed-cta-primary:hover{box-shadow:0 16px 34px color-mix(in srgb,var(--skeed-brand) 24%,transparent);}');
+  lines.push('.skeed-cta-primary:hover::after{transform:translateX(130%) skewX(-18deg);}');
+  lines.push('.skeed-cta-primary:active{transform:scale(.985);}');
+  lines.push(
+    '.skeed-cta-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:var(--skeed-cta-min-height);max-width:100%;padding:0 var(--skeed-cta-padding-x);border-radius:var(--skeed-cta-radius);border:1px solid var(--skeed-border);background:#fff;color:var(--skeed-fg);font-weight:var(--skeed-cta-secondary-weight);text-align:center;text-wrap:balance;white-space:normal;transition:transform var(--skeed-motion-fast) var(--skeed-ease),border-color var(--skeed-motion-base) var(--skeed-ease),background-color var(--skeed-motion-base) var(--skeed-ease);}',
+  );
+  lines.push(
+    '.skeed-cta-secondary:hover{border-color:color-mix(in srgb,var(--skeed-brand) 42%,var(--skeed-border));background:color-mix(in srgb,var(--skeed-brand) 4%,#fff);}',
+  );
+  lines.push('.skeed-cta-secondary:active{transform:scale(.985);}');
+  lines.push(
+    '@media (prefers-reduced-motion:reduce){.skeed-cta-primary::after{display:none}.skeed-cta-primary:active,.skeed-cta-secondary:active{transform:none}}',
   );
   lines.push('.shadow-skeed-shadow-1{box-shadow:0 1px 3px rgba(15,23,42,.12);}');
   lines.push('.shadow-skeed-shadow-2{box-shadow:0 8px 24px rgba(15,23,42,.14);}');

@@ -79,18 +79,22 @@ export function FlagshipFeatureGrid({
     <section className="px-6 py-16">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-normal text-skeed-fg">{title}</h2>
-          {subtitle ? <p className="mt-3 text-skeed-muted">{subtitle}</p> : null}
+          <h2 className="skeed-smart-title text-3xl font-bold tracking-normal text-skeed-fg">
+            {title}
+          </h2>
+          {subtitle ? <p className="skeed-smart-text mt-3 text-skeed-muted">{subtitle}</p> : null}
         </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="skeed-adaptive-grid-3 mt-8 grid gap-4">
           {features.map((feature) => (
             <article
               className="skeed-hover-lift rounded-skeed border border-skeed-border bg-white p-5"
               key={feature.id}
             >
               <div className="mb-4 h-9 w-9 rounded-full bg-skeed-brand/10" />
-              <h3 className="font-semibold text-skeed-fg">{feature.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-skeed-muted">{feature.description}</p>
+              <h3 className="skeed-smart-title font-semibold text-skeed-fg">{feature.title}</h3>
+              <p className="skeed-smart-text mt-2 text-sm leading-6 text-skeed-muted">
+                {feature.description}
+              </p>
             </article>
           ))}
         </div>
@@ -102,15 +106,19 @@ export function FlagshipFeatureGrid({
 export function FlagshipKpiGrid({ stats }: { stats: Stat[] }): React.ReactElement {
   return (
     <section className="px-6 py-12">
-      <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-3">
+      <div className="skeed-adaptive-grid-3 mx-auto grid max-w-6xl gap-4">
         {stats.map((stat) => (
           <article
             className="rounded-skeed border border-skeed-border bg-white p-5"
             key={stat.label}
           >
-            <p className="text-sm text-skeed-muted">{stat.label}</p>
-            <p className="mt-2 text-3xl font-bold text-skeed-fg">{stat.value}</p>
-            {stat.detail ? <p className="mt-2 text-sm text-skeed-muted">{stat.detail}</p> : null}
+            <p className="skeed-smart-text text-sm text-skeed-muted">{stat.label}</p>
+            <p className="skeed-smart-title mt-2 text-3xl font-bold text-skeed-fg">
+              {stat.value}
+            </p>
+            {stat.detail ? (
+              <p className="skeed-smart-text mt-2 text-sm text-skeed-muted">{stat.detail}</p>
+            ) : null}
           </article>
         ))}
       </div>

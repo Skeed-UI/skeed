@@ -39,11 +39,13 @@ const alertClasses: Record<Intent, string> = {
 type SkeedButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
 
 const buttonVariantClasses: Record<SkeedButtonVariant, string> = {
-  primary: 'bg-skeed-brand text-white shadow-sm hover:bg-skeed-color-brand-600',
+  primary:
+    'skeed-sheen bg-skeed-brand text-white shadow-sm hover:bg-skeed-color-brand-600 hover:shadow-[var(--skeed-cta-shadow-hover)]',
   secondary:
-    'border border-skeed-border bg-white text-skeed-fg shadow-sm hover:bg-skeed-color-neutral-50',
-  ghost: 'bg-transparent text-skeed-fg hover:bg-skeed-color-neutral-100',
-  danger: 'bg-skeed-danger text-white shadow-sm hover:bg-skeed-color-danger-600',
+    'skeed-sheen-soft border border-skeed-border bg-white text-skeed-fg shadow-sm hover:border-skeed-color-brand-300 hover:bg-skeed-color-neutral-50 hover:shadow-[0_10px_22px_rgba(15,23,42,.08)]',
+  ghost: 'skeed-sheen-soft bg-transparent text-skeed-fg hover:bg-skeed-color-neutral-100',
+  danger:
+    'skeed-sheen bg-skeed-danger text-white shadow-sm hover:bg-skeed-color-danger-600 hover:shadow-[0_12px_26px_rgba(220,38,38,.18)]',
 };
 
 const buttonSizeClasses: Record<Size, string> = {
@@ -90,7 +92,7 @@ export function SkeedButton(props: SkeedButtonProps): React.ReactElement {
       ...anchorProps
     } = props;
     const classes = cx(
-      'skeed-press-soft inline-flex shrink-0 items-center justify-center rounded-skeed font-semibold transition-colors focus-visible:skeed-focus-ring',
+      'skeed-press-soft inline-flex shrink-0 items-center justify-center rounded-skeed font-semibold transition focus-visible:skeed-focus-ring',
       buttonSizeClasses[size],
       buttonVariantClasses[variant],
       className,
@@ -119,7 +121,7 @@ export function SkeedButton(props: SkeedButtonProps): React.ReactElement {
     ...buttonProps
   } = props;
   const classes = cx(
-    'skeed-press-soft inline-flex shrink-0 items-center justify-center rounded-skeed font-semibold transition-colors focus-visible:skeed-focus-ring disabled:pointer-events-none disabled:opacity-50',
+    'skeed-press-soft inline-flex shrink-0 items-center justify-center rounded-skeed font-semibold transition focus-visible:skeed-focus-ring disabled:pointer-events-none disabled:opacity-50',
     buttonSizeClasses[size],
     buttonVariantClasses[variant],
     className,
@@ -162,7 +164,7 @@ export function SkeedIconButton({
       {...props}
       aria-label={label}
       className={cx(
-        'skeed-press-soft inline-flex shrink-0 items-center justify-center rounded-skeed transition-colors focus-visible:skeed-focus-ring disabled:pointer-events-none disabled:opacity-50',
+        'skeed-press-soft inline-flex shrink-0 items-center justify-center rounded-skeed transition focus-visible:skeed-focus-ring disabled:pointer-events-none disabled:opacity-50',
         sizeClass,
         buttonVariantClasses[variant],
         className,

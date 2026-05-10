@@ -1,6 +1,6 @@
 {
   "name": "@skeed/indexer",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Builds the Tier-2 SQLite registry index from data/. Read-only at runtime; regeneratable from source-of-truth on every CI run.",
   "license": "MIT",
   "type": "module",
@@ -16,7 +16,8 @@
     "skeed-build-index": "./dist/cli.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "migrations"
   ],
   "publishConfig": {
     "access": "public"

@@ -1,6 +1,6 @@
 {
   "name": "@skeed/tailwind",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "Tailwind 3 preset and CSS-first micro-interactions for Skeed UI.",
   "keywords": [
     "skeed",

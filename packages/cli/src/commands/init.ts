@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { createInterface } from 'node:readline';
-import { resolve } from 'node:path';
+import { relative, resolve } from 'node:path';
 import { DemographicId, type Scaffold } from '@skeed/contracts';
 import { LocalLLMProvider } from '@skeed/llm-provider-local';
 import {
@@ -44,7 +44,9 @@ export interface InitOptions {
 }
 
 export async function runInit(opts: InitOptions): Promise<void> {
-  if (opts.noApiKey) {
+  const nonInteractive = Boolean(opts.yes) || !process.stdin.isTTY || !process.stdout.isTTY;
+
+  if (opts.noApiKey || (nonInteractive && !opts.apiKey)) {
     process.env.SKEED_DISABLE_LOCAL_LLM = '1';
   } else {
     delete process.env.SKEED_DISABLE_LOCAL_LLM;
@@ -54,7 +56,7 @@ export async function runInit(opts: InitOptions): Promise<void> {
   const outDir = resolve(opts.outDir ?? process.cwd(), projectName);
 
   process.stdout.write(
-    `\n${kleur.bold('Skeed')} ${kleur.gray('— scaffolding')} ${kleur.cyan(projectName)}\n`,
+    `\n${kleur.bold('Skeed')} ${kleur.gray('- scaffolding')} ${kleur.cyan(projectName)}\n`,
   );
   process.stdout.write(`${kleur.gray('idea:')} ${opts.prompt}\n\n`);
 
@@ -62,7 +64,7 @@ export async function runInit(opts: InitOptions): Promise<void> {
   let apiKey = opts.apiKey;
   let localProvider: LocalLLMProvider | undefined;
 
-  if (!apiKey && !opts.noApiKey) {
+  if (!apiKey && !opts.noApiKey && !nonInteractive) {
     apiKey = await promptForApiKey();
   }
 
@@ -72,7 +74,7 @@ export async function runInit(opts: InitOptions): Promise<void> {
     process.stdout.write(
       `${kleur.gray('api:')} Using provided ${provider} key for structured generation\n`,
     );
-  } else if (!opts.noApiKey) {
+  } else if (!opts.noApiKey && !nonInteractive) {
     // Offer local model as alternative
     localProvider = await promptForLocalModel();
     if (localProvider) {
@@ -81,7 +83,7 @@ export async function runInit(opts: InitOptions): Promise<void> {
       );
     } else {
       process.stdout.write(
-        `${kleur.yellow('⚠')} No AI provider available — using fallback content (less personalized)\n`,
+        `${kleur.yellow('warn')} No AI provider available - using fallback content (less personalized)\n`,
       );
       process.stdout.write(
         `  ${kleur.gray('Tip: Provide an API key or download the local model for better results')}\n\n`,
@@ -95,8 +97,7 @@ export async function runInit(opts: InitOptions): Promise<void> {
 
   const cache = createMemoryCache();
   const ctxBase = { runId: randomUUID(), registryVersion: '0.1.0', cache, apiKey };
-
-  // ── Phase A: stages 1-13 — produce candidates ────────────────────────────
+  // Phase A: stages 1-13 produce candidates.
   const phaseA1 = new Orchestrator()
     .register(stage_01_intent)
     .register(stage_02_classify)
@@ -144,8 +145,7 @@ export async function runInit(opts: InitOptions): Promise<void> {
     }>;
     landingTsx?: string;
   };
-
-  // ── Optional approval gates via local browser preview ────────────────────
+  // Optional approval gates via local browser preview.
   let chosenLandingId: string | undefined;
   let chosenLogoId: string | undefined;
   if (opts.preview && !opts.yes) {
@@ -155,7 +155,7 @@ export async function runInit(opts: InitOptions): Promise<void> {
         description: `Demographic: ${stateA.classification?.candidates[0]?.demographic ?? 'unknown'}`,
         candidates: stateA.logoCandidates.map<PreviewCandidate>((c) => ({
           id: c.id,
-          label: `${c.layout} — ${c.id}`,
+          label: `${c.layout} - ${c.id}`,
           html: c.svg,
         })),
       });
@@ -169,7 +169,7 @@ export async function runInit(opts: InitOptions): Promise<void> {
         candidates: stateA.landingCandidates.map<PreviewCandidate>((c) => ({
           id: c.id,
           label: `${c.archetype} / ${c.variant}`,
-          html: `<p style="font-size:.85rem;opacity:.7">${c.preview}</p><pre style="overflow:auto;max-height:160px;font-size:.7rem">${escape(c.tsx.slice(0, 600))}…</pre>`,
+          html: `<p style="font-size:.85rem;opacity:.7">${c.preview}</p><pre style="overflow:auto;max-height:160px;font-size:.7rem">${escape(c.tsx.slice(0, 600))}...</pre>`,
         })),
       });
       const picked = stateA.landingCandidates.find((c) => c.id === chosenLandingId);
@@ -185,8 +185,7 @@ export async function runInit(opts: InitOptions): Promise<void> {
       }
     }
   }
-
-  // ── Phase B: stages 14-17 — finalize + emit ──────────────────────────────
+  // Phase B: stages 14-17 finalize and emit.
   const phaseB = new Orchestrator()
     .register(stage_14_ia)
     .register(stage_14_5_backend_selector)
@@ -203,7 +202,9 @@ export async function runInit(opts: InitOptions): Promise<void> {
   );
   if (chosenLogoId) process.stdout.write(`  logo:    ${kleur.cyan(chosenLogoId)}\n`);
   if (chosenLandingId) process.stdout.write(`  landing: ${kleur.cyan(chosenLandingId)}\n`);
-  process.stdout.write(`\nNext steps:\n  cd ${projectName}\n  npm install\n  npm run dev\n\n`);
+  process.stdout.write(
+    `\nNext steps:\n  cd ${shellQuoteCdTarget(relative(process.cwd(), outDir) || '.')}\n  npm install\n  npm run dev\n\n`,
+  );
   if (result.warnings.length > 0) {
     for (const w of result.warnings) process.stdout.write(`${kleur.yellow('warn')} ${w}\n`);
   }
@@ -211,6 +212,11 @@ export async function runInit(opts: InitOptions): Promise<void> {
 
 function escape(s: string): string {
   return s.replace(/[<>&'"`]/g, (c) => `&#${c.charCodeAt(0)};`);
+}
+
+function shellQuoteCdTarget(path: string): string {
+  const normalized = path.replace(/\\/g, '/');
+  return /\s/.test(normalized) ? `"${normalized.replace(/"/g, '\\"')}"` : normalized;
 }
 
 async function promptForApiKey(): Promise<string | undefined> {
@@ -227,7 +233,7 @@ async function promptForApiKey(): Promise<string | undefined> {
 
   process.stdout.write(`${kleur.cyan('LLM API Key Setup')}\n`);
   process.stdout.write(
-    `For better content generation, provide an API key from OpenAI, Anthropic, or Google.\n`,
+    `For better content generation, provide an API key from OpenAI, Anthropic, Google, Groq, DeepSeek, Qwen, Kimi, or OpenRouter.\n`,
   );
   process.stdout.write(`Leave blank to skip and try local model instead.\n\n`);
 
@@ -238,7 +244,9 @@ async function promptForApiKey(): Promise<string | undefined> {
     return undefined;
   }
 
-  const provider = await question('Provider (openai/anthropic/google): ');
+  const provider = await question(
+    'Provider (openai/anthropic/google/groq/deepseek/qwen/kimi/openrouter): ',
+  );
   const key = await question('API Key: ');
 
   rl.close();
@@ -259,6 +267,7 @@ function applyApiKey(provider: string, key: string): void {
     openai: 'OPENAI_API_KEY',
     anthropic: 'ANTHROPIC_API_KEY',
     google: 'GOOGLE_API_KEY',
+    groq: 'GROQ_API_KEY',
     deepseek: 'DEEPSEEK_API_KEY',
     moonshot: 'MOONSHOT_API_KEY',
     kimi: 'MOONSHOT_API_KEY',

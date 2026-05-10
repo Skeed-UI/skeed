@@ -101,7 +101,7 @@ skeed init "Build a meditation app for busy professionals"
 # With options
 skeed init "A fitness tracker for seniors" \
   --name "silver-fit" \
-  --demographic "health-conscious-seniors" \
+  --demographic "health" \
   --out ./projects \
   --preview
 ```
@@ -170,14 +170,14 @@ skeed init "A budgeting app for college students" --preview
 ```bash
 skeed init "Invoice generator for freelancers" \
   --name "quick-invoice" \
-  --demographic "freelancers" \
+  --demographic "productivity" \
   --yes
 ```
 
 **Specific demographic targeting**:
 ```bash
 skeed init "Mental health check-in app" \
-  --demographic "gen-z-workers" \
+  --demographic "mental_wellness" \
   --out ./mental-health-apps
 ```
 
@@ -192,8 +192,8 @@ import { resolveTokens } from '@skeed/core/token-resolver';
 
 // Generate CSS from a demographic preset
 const css = transformPresetToCSS({
-  demographicId: 'health-conscious-seniors',
-  density: 'comfortable'
+  demographicId: 'health',
+  density: 'comfy'
 });
 ```
 
@@ -237,7 +237,7 @@ import { useSpringAnimation } from '@skeed/motion';
 
 // Physics-based button with demographic-tuned easing
 <MotionButton 
-  demographics="gen-z-workers"
+  demographics="productivity"
   gesture="tap"
 >
   Get Started
@@ -251,8 +251,8 @@ import { generateComponent } from '@skeed/codegen';
 // Generate a demographic-tuned component
 const component = await generateComponent({
   archetypeId: 'button',
-  demographicId: 'busy-professionals',
-  preset: ' productivity'
+  demographicId: 'productivity',
+  preset: 'productivity'
 });
 ```
 

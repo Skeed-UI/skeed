@@ -344,7 +344,7 @@ export function SkeedDashboardCard({
         </div>
       ) : null}
       {items.length > 0 ? (
-        <dl className="mt-5 grid gap-3 sm:grid-cols-3">
+        <dl className="skeed-adaptive-grid-dense mt-5 grid gap-3">
           {items.map((item) => (
             <div
               className="rounded-skeed border border-skeed-border bg-skeed-bg p-3"
@@ -755,11 +755,11 @@ export function SkeedKanbanPreview({
       )}
     >
       <h2 className="px-1 text-lg font-bold text-skeed-fg">{title}</h2>
-      <div className="mt-4 grid gap-4 lg:grid-cols-3">
+      <div className="skeed-adaptive-grid-3 mt-4 grid gap-4">
         {columns.map((column) => (
           <div className="rounded-skeed border border-skeed-border bg-white p-3" key={column.id}>
             <div className="flex items-center justify-between gap-3">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-skeed-muted">
+              <h3 className="skeed-smart-text text-sm font-semibold uppercase tracking-wide text-skeed-muted">
                 {column.title}
               </h3>
               <span className="rounded-full bg-skeed-bg px-2 py-1 text-xs font-semibold text-skeed-muted">
@@ -778,9 +778,13 @@ export function SkeedKanbanPreview({
                       className={cn('mt-1 h-2 w-2 rounded-full border', statusClasses(item.status))}
                     />
                     <div>
-                      <p className="text-sm font-semibold text-skeed-fg">{item.title}</p>
+                      <p className="skeed-smart-title text-sm font-semibold text-skeed-fg">
+                        {item.title}
+                      </p>
                       {item.meta ? (
-                        <p className="mt-1 text-xs text-skeed-muted">{item.meta}</p>
+                        <p className="skeed-smart-text mt-1 text-xs text-skeed-muted">
+                          {item.meta}
+                        </p>
                       ) : null}
                     </div>
                   </div>
@@ -918,7 +922,7 @@ export function SkeedGoalProgress({
         />
       </div>
       {milestones.length > 0 ? (
-        <ol className="mt-4 grid gap-2 sm:grid-cols-3">
+        <ol className="skeed-adaptive-grid-dense mt-4 grid gap-2">
           {milestones.map((milestone) => (
             <li className="flex items-center gap-2 text-sm text-skeed-muted" key={milestone.label}>
               <span

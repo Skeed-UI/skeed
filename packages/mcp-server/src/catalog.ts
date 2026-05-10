@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import Database from 'better-sqlite3';
 
 export interface CatalogRow {
@@ -237,7 +238,7 @@ export class Catalog {
       files: [
         ...(manifest.source ?? []).map((source) => ({
           source: source.path,
-          target: `components/skeed/${id.split('/').slice(1).join('-')}.tsx`,
+          target: `components/skeed/${idToRegistryName(id)}.tsx`,
         })),
       ],
       dependencies: manifest.dependencies ?? [],
@@ -511,6 +512,14 @@ export class Catalog {
     };
     const itemName = idToRegistryName(id);
     const target = `components/skeed/${itemName}.tsx`;
+    const normalizedSource =
+      includeContent && sourceTsx
+        ? normalizeRegistrySource(sourceTsx, {
+            serverComponentSafe: getServerComponentSafe(manifest),
+            cnImport: '@/lib/utils',
+          })
+        : sourceTsx;
+    const needsCnHelper = Boolean(normalizedSource?.includes("@/lib/utils"));
     return {
       name: itemName,
       type: 'registry:component',
@@ -522,8 +531,18 @@ export class Catalog {
         {
           path: target,
           type: 'registry:component',
-          ...(includeContent && sourceTsx ? { content: sourceTsx } : {}),
+          ...(includeContent && normalizedSource ? { content: normalizedSource } : {}),
         },
+        ...(includeContent && needsCnHelper
+          ? [
+              {
+                path: 'lib/utils.ts',
+                type: 'registry:lib',
+                content:
+                  "export function cn(...values: Array<string | false | null | undefined>): string {\n  return values.filter(Boolean).join(' ');\n}\n",
+              },
+            ]
+          : []),
       ],
       meta: {
         skeedId: id,
@@ -591,18 +610,32 @@ export class Catalog {
             ? 0.2
             : -0.2
           : 0;
-        const keywordBoost = overlap(tokenize(opts.intent), [
+        const intentTokens = tokenize(opts.intent);
+        const keywordBoost = overlap(intentTokens, [
           ...(manifest.keywords ?? []),
           ...(manifest.aiIntentPhrases ?? []).flatMap(tokenize),
         ]).length;
-        const roleOverlap = overlap(tokenize(opts.intent), componentRoleTokens(item.row.id)).length;
+        const roleOverlap = overlap(intentTokens, componentRoleTokens(item.row.id)).length;
+        const roleIntentPenalty = hasComponentRoleIntent(opts.intent) && roleOverlap === 0 ? -0.3 : 0;
         const qualityBoost =
-          manifest.qualityTier === 'flagship' ? 0.55 : manifest.qualityTier === 'legacy' ? -0.1 : 0;
+          manifest.qualityTier === 'flagship'
+            ? roleOverlap > 0 || keywordBoost > 0
+              ? 0.36
+              : 0.14
+            : manifest.qualityTier === 'legacy'
+              ? -0.1
+              : 0;
         const productionSurfaceBoost =
-          manifest.qualityTier === 'flagship' && hasProductionSurfaceIntent(opts.intent) ? 0.22 : 0;
+          manifest.qualityTier === 'flagship' && hasProductionSurfaceIntent(opts.intent)
+            ? roleOverlap > 0
+              ? 0.16
+              : 0.04
+            : 0;
         const generatedSurfacePenalty =
           manifest.qualityTier !== 'flagship' && hasProductionSurfaceIntent(opts.intent)
-            ? -0.08
+            ? roleOverlap > 0
+              ? 0
+              : -0.08
             : 0;
         const score =
           item.semantic * 0.68 +
@@ -611,8 +644,9 @@ export class Catalog {
           qualityBoost +
           productionSurfaceBoost +
           generatedSurfacePenalty +
-          keywordBoost * 0.01 +
-          roleOverlap * 0.035;
+          keywordBoost * 0.035 +
+          roleOverlap * 0.26 +
+          roleIntentPenalty;
         return {
           id: item.row.id,
           name: manifest.name,
@@ -630,6 +664,7 @@ export class Catalog {
             ...(keywordBoost ? [`${keywordBoost} intent keyword overlap(s)`] : []),
             ...(roleOverlap ? [`${roleOverlap} component role overlap(s)`] : []),
             ...(productionSurfaceBoost ? ['flagship production-surface boost'] : []),
+            ...(roleIntentPenalty ? ['role intent penalty: no component role overlap'] : []),
           ],
           signals: manifest.psychologySignals,
           qualityTier: manifest.qualityTier ?? 'generated',
@@ -707,16 +742,22 @@ function hasProductionSurfaceIntent(intent: string): boolean {
   );
 }
 
+function hasComponentRoleIntent(intent: string): boolean {
+  return /\b(hero|input|form|button|card|grid|table|tabs?|accordion|faq|modal|dialog|popover|toast|alert|badge|avatar|progress|slider|switch|checkbox|radio|select|command|palette|navbar|sidebar|timeline|stepper|kpi|metric|pricing|chat|message|voice|orb|uploader|search)\b/i.test(
+    intent,
+  );
+}
+
 function embedText(text: string, dimensions = 64): number[] {
   const vector = Array.from({ length: dimensions }, () => 0);
   for (const token of tokenize(text)) {
-    const hash = hashString(token);
-    const index = hash % dimensions;
-    const sign = hash % 2 === 0 ? 1 : -1;
+    const hash = createHash('sha256').update(token).digest();
+    const index = (hash[0] ?? 0) % dimensions;
+    const sign = (hash[1] ?? 0) % 2 === 0 ? 1 : -1;
     vector[index] = (vector[index] ?? 0) + sign * (1 + Math.min(token.length, 12) / 12);
   }
   const norm = Math.sqrt(vector.reduce((sum, value) => sum + value * value, 0)) || 1;
-  return vector.map((value) => value / norm);
+  return vector.map((value) => Number((value / norm).toFixed(6)));
 }
 
 function decodeVector(blob: Buffer): number[] {
@@ -730,11 +771,29 @@ function cosine(a: number[], b: number[]): number {
   return sum;
 }
 
-function hashString(value: string): number {
-  let hash = 2166136261;
-  for (let i = 0; i < value.length; i += 1) {
-    hash ^= value.charCodeAt(i);
-    hash = Math.imul(hash, 16777619);
+function normalizeRegistrySource(
+  source: string,
+  opts: { serverComponentSafe: boolean; cnImport: string },
+): string {
+  const nextSource = source.replace(/from ['"]@skeed\/core\/cn['"]/g, `from '${opts.cnImport}'`);
+  const withoutDirective = nextSource.replace(/^(['"])use client\1;?\s*/, '');
+  if (opts.serverComponentSafe && !requiresClientBoundary(withoutDirective)) return withoutDirective;
+  if (nextSource.startsWith("'use client'") || nextSource.startsWith('"use client"')) {
+    return nextSource;
   }
-  return Math.abs(hash >>> 0);
+  return `'use client';\n\n${nextSource}`;
+}
+
+function getServerComponentSafe(manifest: unknown): boolean {
+  return Boolean(
+    (manifest as { performanceBudget?: { serverComponentSafe?: boolean } }).performanceBudget
+      ?.serverComponentSafe,
+  );
+}
+
+function requiresClientBoundary(source: string): boolean {
+  return (
+    /\b(useState|useEffect|useReducer|useRef|useLayoutEffect)\b/.test(source) ||
+    /\bon[A-Z]\w+=/.test(source)
+  );
 }

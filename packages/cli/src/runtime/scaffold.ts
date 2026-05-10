@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
-import { dirname, join, resolve } from 'node:path';
+import { dirname, resolve } from 'node:path';
 import type { Scaffold } from '@skeed/contracts';
+import { resolveInside } from './cli-utils.js';
 
 export interface WriteScaffoldOptions {
   outDir: string;
@@ -14,7 +15,7 @@ export async function writeScaffold(
   let written = 0;
   const skipped = 0;
   for (const file of opts.scaffold.files) {
-    const target = join(root, file.path);
+    const target = resolveInside(root, file.path);
     await mkdir(dirname(target), { recursive: true });
     if (file.encoding === 'base64') {
       await writeFile(target, Buffer.from(file.contents, 'base64'));

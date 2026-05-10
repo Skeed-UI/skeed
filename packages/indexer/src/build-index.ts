@@ -641,7 +641,7 @@ function buildRichManifest(args: {
         preview: { thumb: previewThumb },
       },
     ],
-    dependencies: [],
+    dependencies: inferDependencies(args.source),
     registryDependencies: [],
     tokensUsed: nonEmptyStrings(archetypeManifest.tokensUsed),
     assetSlots: Array.isArray(archetypeManifest.assetSlots)
@@ -1058,6 +1058,31 @@ function nonEmptyStrings(value: unknown): string[] {
   return Array.isArray(value)
     ? value.map((item) => String(item).trim()).filter((item) => item.length > 0)
     : [];
+}
+
+function inferDependencies(source: string): string[] {
+  const dependencies = new Set<string>();
+  const importRegex = /from\s+['"]([^'"]+)['"]|import\s+['"]([^'"]+)['"]/g;
+  for (const match of source.matchAll(importRegex)) {
+    const specifier = match[1] ?? match[2] ?? '';
+    if (
+      !specifier ||
+      specifier.startsWith('.') ||
+      specifier.startsWith('@/') ||
+      specifier === 'react' ||
+      specifier === 'react-dom' ||
+      specifier === '@skeed/core/cn'
+    ) {
+      continue;
+    }
+    if (specifier.startsWith('@')) {
+      const [scope, name] = specifier.split('/');
+      if (scope && name) dependencies.add(`${scope}/${name}`);
+      continue;
+    }
+    dependencies.add(specifier.split('/')[0] ?? specifier);
+  }
+  return [...dependencies].sort();
 }
 
 function tokenize(value: string): string[] {

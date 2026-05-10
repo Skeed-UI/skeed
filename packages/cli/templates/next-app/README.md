@@ -28,3 +28,5 @@ This app is Tailwind 3-first and includes Skeed semantic hierarchy utilities:
 - `skeed-cta-secondary`
 
 The generated `skeed.tailwind.ts` mirrors `@skeed/tailwind` so the scaffold keeps demographic typography, CTA hierarchy, reduced-motion behavior, and CSS-first micro-interactions even before package publishing catches up.
+
+The demographic choice is not decorative. The CLI writes the active typeface stack, scale, CTA geometry, motion caps, and smart text/grid utilities into the scaffold so generated pages inherit the same UI judgment by default.

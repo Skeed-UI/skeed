@@ -37,6 +37,22 @@ test.describe('@skeed/ui browser QA', () => {
     expect(results.violations).toEqual([]);
   });
 
+  test('keeps dark token surfaces accessible without fixture-only CSS', async ({ page }) => {
+    const darkSurface = page.locator('.skeed-dark').first();
+    const surface = await darkSurface.evaluate(
+      (element) => window.getComputedStyle(element).backgroundColor,
+    );
+    const nestedSurface = await darkSurface
+      .locator('.bg-white')
+      .first()
+      .evaluate((element) => window.getComputedStyle(element).backgroundColor);
+    const results = await new AxeBuilder({ page }).include('.skeed-dark').analyze();
+
+    expect(surface).not.toBe('rgb(255, 255, 255)');
+    expect(nestedSurface).not.toBe('rgb(255, 255, 255)');
+    expect(results.violations).toEqual([]);
+  });
+
   test('supports keyboard and form interaction on representative controls', async ({ page }) => {
     await page.getByLabel('Runner name').fill('Maya Runner');
     await expect(page.getByLabel('Runner name')).toHaveValue('Maya Runner');
@@ -91,6 +107,39 @@ test.describe('@skeed/ui browser QA', () => {
     });
 
     expect(overflow).toBeLessThanOrEqual(1);
+  });
+
+  test('keeps choice group spacing and button micro-interactions visible', async ({ page }) => {
+    await page.setViewportSize({ height: 900, width: 390 });
+    await page.goto('/');
+
+    for (const legendText of ['Motion tone', 'Demographic target']) {
+      const group = page.locator('fieldset').filter({ hasText: legendText });
+      const legendBox = await group.locator('legend').boundingBox();
+      const firstOptionBox = await group.locator('label').first().boundingBox();
+
+      expect(
+        firstOptionBox && legendBox ? firstOptionBox.y - (legendBox.y + legendBox.height) : 0,
+      ).toBeGreaterThanOrEqual(8);
+    }
+
+    const primaryButton = page.getByRole('button', { name: 'Primary action' });
+    await primaryButton.hover();
+
+    const buttonMicroInteraction = await primaryButton.evaluate((element) => {
+      const styles = window.getComputedStyle(element);
+      const afterStyles = window.getComputedStyle(element, '::after');
+
+      return {
+        afterBackground: afterStyles.backgroundImage,
+        afterContent: afterStyles.content,
+        overflow: styles.overflow,
+      };
+    });
+
+    expect(buttonMicroInteraction.overflow).toBe('hidden');
+    expect(buttonMicroInteraction.afterContent).toBe('""');
+    expect(buttonMicroInteraction.afterBackground).toContain('linear-gradient');
   });
 
   test('honors reduced motion for Skeed micro-interactions', async ({ page }) => {

@@ -48,6 +48,9 @@ function safeDomId(value: string): string {
   return value.replace(/[^a-zA-Z0-9_-]/g, '-');
 }
 
+const choiceFieldsetClasses = 'm-0 grid min-w-0 gap-3 border-0 p-0 text-skeed-fg';
+const choiceLegendClasses = 'mb-2 text-sm font-semibold leading-6';
+
 function inputSize(size: FieldSize): string {
   if (size === 'sm') {
     return 'min-h-10 px-3 py-2 text-sm';
@@ -72,7 +75,7 @@ function controlClass(tone: FieldTone, size: FieldSize, className?: string): str
 
 function primaryButtonClass(className?: string): string {
   return cx(
-    'skeed-press-soft inline-flex min-h-11 items-center justify-center rounded-skeed bg-skeed-brand px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition focus-visible:skeed-focus-ring disabled:cursor-not-allowed disabled:opacity-60',
+    'skeed-press-soft skeed-sheen inline-flex min-h-11 items-center justify-center rounded-skeed bg-skeed-brand px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition focus-visible:skeed-focus-ring disabled:cursor-not-allowed disabled:opacity-60',
     className,
   );
 }
@@ -318,15 +321,16 @@ export function SkeedCheckboxGroup({
 }): React.ReactElement {
   const id = useId();
   const { describedBy, errorId, helpId } = fieldIds(id, helpText, error);
-  const gridClass = columns === 3 ? 'md:grid-cols-3' : columns === 2 ? 'md:grid-cols-2' : '';
+  const gridClass =
+    columns === 3 ? 'skeed-adaptive-grid-3' : columns === 2 ? 'skeed-adaptive-grid-2' : '';
 
   return (
     <fieldset
       aria-describedby={describedBy}
       aria-invalid={Boolean(error) || undefined}
-      className={cx('grid gap-3 text-skeed-fg', className)}
+      className={cx(choiceFieldsetClasses, className)}
     >
-      <legend className="text-sm font-semibold">{legend}</legend>
+      <legend className={choiceLegendClasses}>{legend}</legend>
       {helpText ? (
         <p className="text-sm leading-5 text-skeed-muted" id={helpId}>
           {helpText}
@@ -361,10 +365,12 @@ export function SkeedCheckboxGroup({
                 type="checkbox"
                 value={option.value}
               />
-              <span className="grid gap-1">
-                <span className="text-sm font-medium">{option.label}</span>
+              <span className="min-w-0 grid gap-1">
+                <span className="skeed-smart-text text-sm font-medium">{option.label}</span>
                 {option.description ? (
-                  <span className="text-sm leading-5 text-skeed-muted">{option.description}</span>
+                  <span className="skeed-smart-text text-sm leading-5 text-skeed-muted">
+                    {option.description}
+                  </span>
                 ) : null}
               </span>
             </label>
@@ -404,15 +410,16 @@ export function SkeedRadioGroup({
   const id = useId();
   const groupName = name ?? id;
   const { describedBy, errorId, helpId } = fieldIds(id, helpText, error);
-  const gridClass = columns === 3 ? 'md:grid-cols-3' : columns === 2 ? 'md:grid-cols-2' : '';
+  const gridClass =
+    columns === 3 ? 'skeed-adaptive-grid-3' : columns === 2 ? 'skeed-adaptive-grid-2' : '';
 
   return (
     <fieldset
       aria-describedby={describedBy}
       aria-invalid={Boolean(error) || undefined}
-      className={cx('grid gap-3 text-skeed-fg', className)}
+      className={cx(choiceFieldsetClasses, className)}
     >
-      <legend className="text-sm font-semibold">{legend}</legend>
+      <legend className={choiceLegendClasses}>{legend}</legend>
       {helpText ? (
         <p className="text-sm leading-5 text-skeed-muted" id={helpId}>
           {helpText}
@@ -440,10 +447,12 @@ export function SkeedRadioGroup({
                 type="radio"
                 value={option.value}
               />
-              <span className="grid gap-1">
-                <span className="text-sm font-medium">{option.label}</span>
+              <span className="min-w-0 grid gap-1">
+                <span className="skeed-smart-text text-sm font-medium">{option.label}</span>
                 {option.description ? (
-                  <span className="text-sm leading-5 text-skeed-muted">{option.description}</span>
+                  <span className="skeed-smart-text text-sm leading-5 text-skeed-muted">
+                    {option.description}
+                  </span>
                 ) : null}
               </span>
             </label>
@@ -486,15 +495,15 @@ export function SkeedChoiceCardGroup({
     <fieldset
       aria-describedby={describedBy}
       aria-invalid={Boolean(error) || undefined}
-      className={cx('grid gap-3 text-skeed-fg', className)}
+      className={cx(choiceFieldsetClasses, className)}
     >
-      <legend className="text-sm font-semibold">{legend}</legend>
+      <legend className={choiceLegendClasses}>{legend}</legend>
       {helpText ? (
         <p className="text-sm leading-5 text-skeed-muted" id={helpId}>
           {helpText}
         </p>
       ) : null}
-      <div className="grid gap-3 md:grid-cols-3">
+      <div className="skeed-adaptive-grid-3 grid gap-3">
         {options.map((option) => {
           const checked = value === option.value;
           const optionId = `${id}-${safeDomId(option.value)}`;
@@ -507,7 +516,9 @@ export function SkeedChoiceCardGroup({
             <label
               className={cx(
                 'skeed-hover-lift relative flex min-h-36 cursor-pointer flex-col gap-3 rounded-skeed border bg-white p-4 shadow-sm transition focus-within:skeed-focus-ring',
-                checked ? 'border-skeed-brand ring-2 ring-skeed-brand/20' : 'border-skeed-border',
+                checked
+                  ? 'border-skeed-brand bg-skeed-brand/5 shadow-[0_12px_28px_rgba(15,23,42,.10)]'
+                  : 'border-skeed-border',
                 option.disabled && 'cursor-not-allowed opacity-60',
               )}
               key={option.value}
@@ -524,13 +535,16 @@ export function SkeedChoiceCardGroup({
                 value={option.value}
               />
               <span className="pointer-events-none flex items-start justify-between gap-3">
-                <span className="grid gap-1">
+                <span className="min-w-0 grid gap-1">
                   {option.eyebrow ? (
-                    <span className="text-xs font-semibold uppercase tracking-wide text-skeed-accent">
+                    <span className="skeed-smart-text text-xs font-semibold uppercase tracking-wide text-skeed-accent">
                       {option.eyebrow}
                     </span>
                   ) : null}
-                  <span className="text-base font-semibold text-skeed-fg" id={labelId}>
+                  <span
+                    className="skeed-smart-title text-base font-semibold text-skeed-fg"
+                    id={labelId}
+                  >
                     {option.label}
                   </span>
                 </span>
@@ -545,14 +559,17 @@ export function SkeedChoiceCardGroup({
               </span>
               {option.description ? (
                 <span
-                  className="pointer-events-none text-sm leading-6 text-skeed-muted"
+                  className="skeed-smart-text pointer-events-none text-sm leading-6 text-skeed-muted"
                   id={descriptionId}
                 >
                   {option.description}
                 </span>
               ) : null}
               {option.meta ? (
-                <span className="pointer-events-none mt-auto text-sm font-medium" id={metaId}>
+                <span
+                  className="skeed-smart-text pointer-events-none mt-auto text-sm font-medium"
+                  id={metaId}
+                >
                   {option.meta}
                 </span>
               ) : null}

@@ -38,7 +38,7 @@ export async function pickFromPreview(opts: PreviewOptions): Promise<string> {
       if (!addr || typeof addr !== 'object')
         return reject(new Error('unable to bind preview server'));
       const url = `http://127.0.0.1:${addr.port}`;
-      process.stdout.write(`\n  preview: ${url}\n  (waiting for your pick — open the browser)\n`);
+      process.stdout.write(`\n  preview: ${url}\n  (waiting for your pick - open the browser)\n`);
       if (!opts.silent) {
         try {
           const open = (await import('open')).default;
@@ -69,7 +69,7 @@ function galleryHtml(res: ServerResponse, opts: PreviewOptions): void {
     .join('');
   const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8" />
-<title>${escape(opts.title)} — Skeed preview</title>
+<title>${escape(opts.title)} - Skeed preview</title>
 <style>
   :root { color-scheme: light dark; }
   body { font-family: ui-sans-serif, system-ui, sans-serif; max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }

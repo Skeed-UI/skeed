@@ -250,17 +250,17 @@ export function SkeedVoiceOrb({
   const isActive = state === 'listening' || state === 'thinking';
 
   return (
-    <div className="inline-flex items-center gap-3 rounded-full border border-skeed-border bg-white px-4 py-3 shadow-sm">
+    <div className="inline-flex max-w-full items-center gap-3 rounded-full border border-skeed-border bg-white px-4 py-3 shadow-sm">
       <div
         className={cx(
-          'relative flex h-14 w-14 items-center justify-center rounded-full border transition',
+          'relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border transition',
           isActive ? 'border-skeed-brand bg-skeed-brand/10' : 'border-skeed-border bg-skeed-bg',
         )}
       >
         <span
           className={cx(
             'absolute h-full w-full rounded-full border border-skeed-brand/30',
-            isActive && 'animate-ping motion-reduce:animate-none',
+            isActive && 'animate-pulse motion-reduce:animate-none',
           )}
         />
         <span
@@ -272,8 +272,8 @@ export function SkeedVoiceOrb({
         />
       </div>
       <div className="min-w-0">
-        <p className="text-sm font-semibold text-skeed-fg">{label}</p>
-        <div className="mt-2 h-1.5 w-28 overflow-hidden rounded-full bg-skeed-bg">
+        <p className="skeed-smart-text text-sm font-semibold text-skeed-fg">{label}</p>
+        <div className="mt-2 h-1.5 max-w-full overflow-hidden rounded-full bg-skeed-bg sm:w-28">
           <div
             className="h-full rounded-full bg-skeed-brand transition-all duration-300"
             style={scoreStyle(state === 'muted' ? 0 : level)}

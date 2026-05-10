@@ -1,7 +1,7 @@
 {
   "name": "@skeed/pipeline",
-  "version": "0.1.3",
-  "description": "Skeed 17-stage NL→design-system pipeline. DAG runner + stage contracts. Each stage is owned by an agent.",
+  "version": "0.1.5",
+  "description": "Skeed 17-stage natural-language-to-design-system pipeline. DAG runner + stage contracts. Each stage is owned by an agent.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -20,7 +20,9 @@
       "types": "./dist/stages/*.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -47,7 +49,7 @@
     "@skeed/landing-options": "^0.1.0",
     "@skeed/llm-provider-local": "^0.1.0",
     "@skeed/llm-router": "^0.1.0",
-    "@skeed/mcp-server": "^0.1.0",
+    "@skeed/mcp-server": "0.1.4",
     "@skeed/research-bridge": "^0.1.0",
     "zod": "^3.24.1"
   },
