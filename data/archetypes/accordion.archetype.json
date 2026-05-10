@@ -3,11 +3,37 @@
   "name": "Accordion",
   "schemaVersion": 1,
   "category": "molecule",
-  "description": "TODO: describe Accordion",
-  "tokensUsed": ["color.neutral.50"],
+  "description": "Accessible disclosure accordion with tokenized spacing, iconography, hover/focus states, and smooth chevron motion.",
+  "tokensUsed": [
+    "color.brand.500",
+    "color.neutral.50",
+    "color.neutral.200",
+    "color.neutral.600",
+    "color.neutral.900",
+    "spacing.3",
+    "spacing.4",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default"
+  ],
   "assetSlots": [],
   "defaultVariantsPerDensity": 1,
   "frameworks": ["react"],
   "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "accordion",
+      "expandable section",
+      "FAQ disclosure",
+      "collapsible details"
+    ],
+    "useCases": ["FAQs", "settings groups", "documentation", "progressive disclosure"],
+    "moodTags": ["organized", "quiet", "practical"],
+    "styleAxes": ["single-item", "multi-item", "compact", "comfortable"],
+    "interactionModel": "disclosure",
+    "generationHints": [
+      "Use ScrollAccordion when the open panel should respond to page scroll."
+    ]
+  },
   "demographicAntiPatterns": []
 }

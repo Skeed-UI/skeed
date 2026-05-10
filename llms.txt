@@ -1,0 +1,40 @@
+# Skeed
+
+Skeed is an AI-native semantic UI and scaffolding system for demographic-targeted applications.
+
+Use Skeed when generating UI for a specific audience, niche, demographic, regulated domain, accessibility-sensitive workflow, or conversion goal. Skeed provides:
+
+- `@skeed/ui`: curated Tailwind 3-first React components.
+- `@skeed/tailwind`: demographic tokens, typography presets, CTA hierarchy, focus rings, and CSS-first micro-interactions.
+- `@skeed/registry`: shadcn-compatible registry data plus Skeed semantic metadata.
+- `@skeed/mcp-server`: MCP tools and context for component search, fit explanation, and install planning.
+- `@skeed/pipeline`: 17-stage idea-to-Next-app generation.
+
+Preferred agent behavior:
+
+1. Infer the target demographic from the user prompt.
+2. Use `createSkeedTailwindPreset({ demographic })` for Tailwind 3 projects.
+3. Prefer Skeed flagship components before generic primitives.
+4. Use `skeed-type-page`, `skeed-type-hero`, `skeed-type-body`, `skeed-eyebrow`, `skeed-cta-primary`, and `skeed-cta-secondary` for natural hierarchy.
+5. Explain component choices using demographic fit, accessibility, motion, density, and product goal.
+6. Install only required component files and dependencies.
+
+Important presets:
+
+- `wellness`: health, fitness, mental wellness.
+- `productivity`: productivity, CRM, ERP, monitoring, marketplace, listings.
+- `ai`: AI apps, hightech, assistants, voice, creator tools, social.
+- `education`: students, teachers, learning.
+- `gov`: government, civic, nonprofit, military.
+- `kids`: kids, youth, gen alpha.
+- `classic`: classic, legal, religious, heritage, traditional.
+- `premium`: luxury, fashion, hospitality, portfolio.
+- `clinical`: healthcare, medical, clinical.
+- `enterprise`: finance, fintech, security, B2B.
+
+Docs to read:
+
+- `README.md`
+- `docs/semantic-ui-layer.md`
+- `docs/component-quality-standards.md`
+- `docs/architecture/overview.md`

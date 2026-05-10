@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: var(--skeed-bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--skeed-fg);
+  background: var(--skeed-bg);
+  font-family: var(--skeed-font-body-family);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.skeed-fixture-dark {
+  --skeed-bg: var(--skeed-color-neutral-950);
+  --skeed-fg: var(--skeed-color-neutral-50);
+  --skeed-muted: var(--skeed-color-neutral-300);
+  --skeed-border: var(--skeed-color-neutral-700);
+  --skeed-brand: var(--skeed-color-brand-400);
+  --skeed-accent: var(--skeed-color-info-300);
+  --skeed-success: var(--skeed-color-success-300);
+  --skeed-danger: var(--skeed-color-danger-300);
+  color: var(--skeed-fg);
+  background: var(--skeed-bg);
+}
+
+.skeed-fixture-dark .bg-white {
+  background-color: var(--skeed-color-neutral-900);
+}
+
+.skeed-fixture-dark .bg-skeed-bg,
+.skeed-fixture-dark .bg-skeed-color-neutral-50,
+.skeed-fixture-dark .bg-skeed-color-neutral-100 {
+  background-color: var(--skeed-color-neutral-800);
+}
+
+.skeed-fixture-dark .border-skeed-border {
+  border-color: var(--skeed-border);
+}

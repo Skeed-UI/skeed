@@ -1,0 +1,58 @@
+{
+  "id": "choice-card-group",
+  "name": "Choice Card Group",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "Selectable cards presented as a radiogroup with grid, stack, featured, and segmented layouts for polished onboarding, plan, and preference choices.",
+  "tokensUsed": [
+    "color.brand.50",
+    "color.brand.300",
+    "color.brand.500",
+    "color.brand.600",
+    "color.neutral.50",
+    "color.neutral.100",
+    "color.neutral.200",
+    "color.neutral.500",
+    "color.neutral.600",
+    "color.neutral.900",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.8",
+    "radius.2",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default",
+    "shadow.1",
+    "shadow.2"
+  ],
+  "assetSlots": [
+    {
+      "role": "choice-icon",
+      "type": "icon",
+      "required": false,
+      "fallbackHint": "Small semantic icon for each selectable option"
+    }
+  ],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "choice cards",
+      "selectable card group",
+      "onboarding options",
+      "plan picker",
+      "clickable choices"
+    ],
+    "useCases": ["onboarding", "pricing", "AI mode selection", "preference setup", "quiz answers"],
+    "moodTags": ["decisive", "friendly", "guided", "premium"],
+    "styleAxes": ["grid", "stack", "featured", "segmented"],
+    "interactionModel": "selectable",
+    "generationHints": [
+      "Prefer this over radio inputs when options need descriptions, icons, emotional framing, or comparison."
+    ]
+  },
+  "demographicAntiPatterns": []
+}

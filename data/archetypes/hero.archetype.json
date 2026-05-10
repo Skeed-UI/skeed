@@ -7,17 +7,24 @@
   "tokensUsed": [
     "color.neutral.50",
     "color.neutral.100",
+    "color.neutral.200",
     "color.neutral.600",
     "color.neutral.900",
+    "color.brand.100",
+    "color.brand.300",
     "color.brand.500",
     "color.brand.600",
     "spacing.3",
     "spacing.6",
     "spacing.8",
     "spacing.10",
+    "spacing.12",
+    "spacing.20",
+    "spacing.32",
     "density.cozy.gap",
     "radius.2",
     "radius.3",
+    "radius.9999",
     "font.display",
     "font.body",
     "motion.duration.fast",
@@ -36,5 +43,20 @@
   "defaultVariantsPerDensity": 1,
   "frameworks": ["react"],
   "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "landing hero",
+      "hero with adaptive visual",
+      "conversion hero",
+      "app introduction section"
+    ],
+    "useCases": ["landing pages", "product intros", "campaign pages", "onboarding starts"],
+    "moodTags": ["clear", "confident", "polished"],
+    "styleAxes": ["left", "center", "right", "orbital", "product", "none"],
+    "interactionModel": "static",
+    "generationHints": [
+      "Prefer real product, place, or state imagery when assets exist; use the orbital fallback only when no asset source is available."
+    ]
+  },
   "demographicAntiPatterns": ["kids"]
 }

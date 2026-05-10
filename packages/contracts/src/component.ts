@@ -62,6 +62,49 @@ export const ComponentDemographicWeight = z.object({
   weight: z.number().min(0).max(1),
 });
 
+export const ComponentQualityTier = z.enum(['flagship', 'generated', 'legacy']);
+export type ComponentQualityTier = z.infer<typeof ComponentQualityTier>;
+
+export const PrimitiveStackItem = z.object({
+  library: z.string(),
+  primitive: z.string(),
+  purpose: z.string().optional(),
+});
+
+export const InteractionContract = z.object({
+  keyboard: z.array(z.string()).default([]),
+  pointer: z.array(z.string()).default([]),
+  focus: z.array(z.string()).default([]),
+  screenReader: z.array(z.string()).default([]),
+});
+
+export const MotionContract = z.object({
+  tone: z.enum(['calm', 'precise', 'premium', 'playful', 'clinical', 'enterprise']),
+  cssFirst: z.boolean().default(true),
+  reducedMotion: z.string(),
+  continuous: z.boolean().default(false),
+});
+
+export const ContentSlot = z.object({
+  name: z.string(),
+  type: z.enum(['text', 'richText', 'image', 'icon', 'stat', 'action', 'collection']),
+  required: z.boolean().default(true),
+  guidance: z.string().optional(),
+});
+
+export const PerformanceBudget = z.object({
+  clientJsKb: z.number().min(0).default(0),
+  animationRuntime: z.enum(['none', 'css', 'motion']).default('css'),
+  serverComponentSafe: z.boolean().default(true),
+});
+
+export const AgentUsage = z.object({
+  whenToUse: z.array(z.string()).default([]),
+  whenNotToUse: z.array(z.string()).default([]),
+  installNotes: z.array(z.string()).default([]),
+  propExamples: z.record(z.string(), z.unknown()).default({}),
+});
+
 /**
  * Canonical metadata for a single Skeed component.
  *
@@ -71,8 +114,8 @@ export const ComponentDemographicWeight = z.object({
  * The TSX source lives in a sibling `component.skeed.tsx`.
  */
 export const ComponentManifest = z.object({
-  id: z.string().regex(/^[a-z_]+\/[a-z0-9-]+\/[a-z0-9-]+$/, {
-    message: 'id must match <demographic>/<archetype>/<variant> in lowercase-kebab',
+  id: z.string().regex(/^[a-z_]+\/[a-z0-9-]+\/[a-z0-9-]+(\/[a-z0-9-]+)?$/, {
+    message: 'id must match <demographic>/<archetype>/<density>/<variant> in lowercase-kebab',
   }),
   name: z.string(),
   version: z.string().regex(/^\d+\.\d+\.\d+$/),
@@ -103,6 +146,32 @@ export const ComponentManifest = z.object({
   preview: z.object({
     thumb: z.string(),
     storybookUrl: z.string().optional(),
+  }),
+  qualityTier: ComponentQualityTier.default('generated'),
+  primitiveStack: z.array(PrimitiveStackItem).default([]),
+  interactionContract: InteractionContract.default({
+    keyboard: [],
+    pointer: [],
+    focus: [],
+    screenReader: [],
+  }),
+  motionContract: MotionContract.default({
+    tone: 'precise',
+    cssFirst: true,
+    reducedMotion: 'Disable non-essential transitions and continuous effects.',
+    continuous: false,
+  }),
+  contentSlots: z.array(ContentSlot).default([]),
+  performanceBudget: PerformanceBudget.default({
+    clientJsKb: 0,
+    animationRuntime: 'css',
+    serverComponentSafe: true,
+  }),
+  agentUsage: AgentUsage.default({
+    whenToUse: [],
+    whenNotToUse: [],
+    installNotes: [],
+    propExamples: {},
   }),
 });
 export type ComponentManifest = z.infer<typeof ComponentManifest>;

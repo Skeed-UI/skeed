@@ -1,0 +1,52 @@
+{
+  "id": "voice-orb-input",
+  "name": "Voice Orb Input",
+  "schemaVersion": 1,
+  "category": "organism",
+  "description": "Voice-first input element with a polished orb control, listening/thinking/error states, waveform bars, and keyboard-friendly text fallback.",
+  "tokensUsed": [
+    "color.brand.300",
+    "color.brand.500",
+    "color.brand.600",
+    "color.success.500",
+    "color.danger.500",
+    "color.neutral.50",
+    "color.neutral.200",
+    "color.neutral.500",
+    "color.neutral.900",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.5",
+    "spacing.6",
+    "spacing.10",
+    "radius.9999",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default",
+    "shadow.1",
+    "shadow.2"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "voice orb",
+      "voice input",
+      "AI prompt input",
+      "speech input element",
+      "assistant input bar"
+    ],
+    "useCases": ["AI assistants", "voice search", "dictation", "meditation prompts", "hands-free workflows"],
+    "moodTags": ["alive", "clean", "futuristic", "approachable"],
+    "styleAxes": ["idle", "listening", "thinking", "error"],
+    "interactionModel": "input",
+    "generationHints": [
+      "Pair with SpeechBubble for conversational products and with ChoiceCardGroup for mode selection."
+    ]
+  },
+  "demographicAntiPatterns": []
+}

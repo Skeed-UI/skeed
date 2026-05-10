@@ -1,0 +1,122 @@
+name: Publish npm Packages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run npm publish in dry-run mode"
+        required: false
+        default: "false"
+
+concurrency:
+  group: publish-npm-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish unpublished package versions
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_API_KEY }}
+      NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint package data
+        run: pnpm lint:data
+
+      - name: Check publish-critical files
+        run: pnpm exec biome check packages/tailwind/src packages/tailwind/package.json packages/ui/src packages/ui/tests packages/ui/browser-tests packages/ui/browser-fixture packages/ui/playwright.config.ts packages/ui/tsconfig.browser.json packages/ui/package.json package.json scripts/publish-packages.mjs .github/workflows/publish-npm.yml
+
+      - name: Typecheck packages
+        run: pnpm typecheck
+
+      - name: Typecheck UI browser fixture
+        run: pnpm --filter @skeed/ui typecheck:browser
+
+      - name: Test packages
+        run: pnpm test
+
+      - name: Build packages
+        run: pnpm build
+
+      - name: Verify UI package tarballs
+        shell: bash
+        run: |
+          set -euo pipefail
+          for package_dir in packages/tailwind packages/ui; do
+            echo "Checking ${package_dir}"
+            pack_file="$(mktemp)"
+            (cd "${package_dir}" && npm pack --dry-run --json > "${pack_file}")
+            node - "${package_dir}" "${pack_file}" <<'NODE'
+              const fs = require('node:fs');
+              const packageDir = process.argv[2];
+              const packFile = process.argv[3];
+              const entries = JSON.parse(fs.readFileSync(packFile, 'utf8'));
+              const files = entries[0]?.files?.map((file) => file.path) ?? [];
+              const forbidden = files.filter((file) =>
+                /^(src|tests|browser-tests|browser-fixture)\//.test(file) ||
+                /^(playwright-report|test-results)\//.test(file) ||
+                /(^|\/)(tsconfig|playwright\.config)\b/.test(file)
+              );
+              if (forbidden.length > 0) {
+                console.error(`${packageDir} tarball includes non-production files:`);
+                for (const file of forbidden) console.error(`- ${file}`);
+                process.exit(1);
+              }
+              const hasRuntime = files.some((file) => /^dist\/.+\.js$/.test(file));
+              const hasTypes = files.some((file) => /^dist\/.+\.d\.ts$/.test(file));
+              if (!hasRuntime || !hasTypes) {
+                console.error(`${packageDir} tarball must include built JS and declaration files.`);
+                process.exit(1);
+              }
+              console.log(`${packageDir}: ${files.length} production files`);
+            NODE
+            rm -f "${pack_file}"
+          done
+
+      - name: Install Playwright browser
+        run: pnpm --filter @skeed/ui exec playwright install --with-deps chromium
+
+      - name: Run UI browser QA
+        run: pnpm --filter @skeed/ui test:browser
+
+      - name: Upload UI browser QA artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-browser-qa
+          path: |
+            packages/ui/test-results
+            packages/ui/playwright-report
+          if-no-files-found: ignore
+
+      - name: Publish packages
+        if: github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true'
+        env:
+          SKEED_SKIP_BUILD: "true"
+        run: pnpm publish:packages
+
+      - name: Dry-run publish packages
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run == 'true'
+        env:
+          SKEED_SKIP_BUILD: "true"
+        run: pnpm publish:packages -- --dry-run

@@ -65,6 +65,60 @@ export const PipelineState = PipelineRun.extend({
         relativePath: z.string(),
         contents: z.string(),
         encoding: z.enum(['utf8', 'base64']),
+        altText: z.string().optional(),
+      }),
+    )
+    .optional(),
+  // Registry components selected by Stage 15 and emitted by Stage 17.
+  selectedComponents: z
+    .array(
+      z.object({
+        id: z.string(),
+        fileName: z.string(),
+        exportName: z.string(),
+        source: z.string(),
+        tokensCss: z.string(),
+        manifest: z
+          .object({
+            name: z.string().optional(),
+            archetypeId: z.string().optional(),
+            description: z.string().optional(),
+            assetSlots: z
+              .array(
+                z.object({
+                  role: z.string(),
+                  type: z.string(),
+                  required: z.boolean().optional(),
+                }),
+              )
+              .optional(),
+            qualityTier: z.string().optional(),
+            primitiveStack: z
+              .array(z.union([z.string(), z.record(z.string(), z.unknown())]))
+              .optional(),
+            motionContract: z.record(z.string(), z.unknown()).optional(),
+            interactionContract: z.record(z.string(), z.unknown()).optional(),
+            contentSlots: z
+              .array(
+                z.object({
+                  name: z.string(),
+                  type: z.string(),
+                  required: z.boolean().optional(),
+                }),
+              )
+              .optional(),
+            performanceBudget: z
+              .object({
+                clientJsKb: z.number().optional(),
+                animationRuntime: z.string().optional(),
+                serverComponentSafe: z.boolean().optional(),
+              })
+              .optional(),
+            dependencies: z.array(z.string()).optional(),
+            agentUsage: z.record(z.string(), z.unknown()).optional(),
+          })
+          .passthrough(),
+        reasons: z.array(z.string()),
       }),
     )
     .optional(),

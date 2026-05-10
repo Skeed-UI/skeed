@@ -27,6 +27,7 @@
     "validate:ethics": "tsx scripts/validate-ethics.ts",
     "validate:bundle": "tsx scripts/bundle-size-check.ts",
     "smoke-test": "tsx scripts/smoke-test-generation.ts",
+    "publish:packages": "node scripts/publish-packages.mjs",
     "ci": "pnpm lint:data && pnpm typecheck && pnpm lint && pnpm validate:tokens && pnpm validate:contrast && pnpm test && pnpm build"
   },
   "devDependencies": {

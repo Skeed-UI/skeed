@@ -25,5 +25,20 @@
   "defaultVariantsPerDensity": 1,
   "frameworks": ["react"],
   "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "content card",
+      "dashboard card",
+      "clickable card",
+      "container with header body footer"
+    ],
+    "useCases": ["dashboards", "settings panels", "content summaries", "resource previews"],
+    "moodTags": ["clean", "familiar", "structured"],
+    "styleAxes": ["elevated", "outlined", "flat", "interactive", "skeleton"],
+    "interactionModel": "clickable",
+    "generationHints": [
+      "Use Card for familiar structured UI; consider Scroll, SpeechBubble, or ChoiceCardGroup when content needs stronger emotional framing."
+    ]
+  },
   "demographicAntiPatterns": []
 }

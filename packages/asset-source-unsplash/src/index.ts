@@ -21,14 +21,13 @@ export class UnsplashAssetSource implements AssetSource {
 
   match(req: AssetRequest): { score: number; reason: string } {
     // Unsplash works best for hero images, backgrounds, and general photography
-    const imageSlots = ['hero_illustration', 'background', 'card_image', 'avatar'];
-    const isImageSlot = imageSlots.includes(req.slotRole);
+    const imageSlots = ['hero_illustration', 'background', 'content_photo', 'avatar'];
+    const isImageSlot = imageSlots.includes(req.slotType);
 
     // Prefer Unsplash for photography-style requests, not for icons/logos
+    const styleHint = req.styleHint?.toLowerCase() ?? '';
     const isPhotoRequest =
-      !req.styleHint?.includes('icon') &&
-      !req.styleHint?.includes('logo') &&
-      !req.styleHint?.includes('svg');
+      !styleHint.includes('icon') && !styleHint.includes('logo') && !styleHint.includes('svg');
 
     if (!isImageSlot) {
       return { score: 0.1, reason: 'not an image slot' };

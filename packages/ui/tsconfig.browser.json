@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "types": ["node", "@playwright/test"]
+  },
+  "include": [
+    "browser-fixture/**/*.ts",
+    "browser-fixture/**/*.tsx",
+    "browser-tests/**/*.ts",
+    "playwright.config.ts",
+    "src/**/*.tsx"
+  ]
+}

@@ -1,6 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --skeed-brand: {{SKEED_BRAND}};
+  --skeed-accent: {{SKEED_BRAND}};
+  --skeed-bg: #ffffff;
   --skeed-fg: {{SKEED_FG}};
+  --skeed-muted: color-mix(in srgb, {{SKEED_FG}} 68%, white);
+  --skeed-border: color-mix(in srgb, {{SKEED_FG}} 14%, transparent);
+  --skeed-success: #15803d;
+  --skeed-danger: #b91c1c;
+  --skeed-radius: 0.75rem;
+  --skeed-ease: cubic-bezier(.2, .8, .2, 1);
+  --skeed-motion-fast: 120ms;
+  --skeed-motion-base: 180ms;
+  --skeed-motion-slow: 240ms;
+  --skeed-font-body-family: Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --skeed-font-display-family: Aptos Display, Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --skeed-font-mono-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --skeed-type-hero-size: clamp(2.25rem, 5vw, 4.5rem);
+  --skeed-type-hero-line: 1.04;
+  --skeed-type-hero-tracking: -0.01em;
+  --skeed-type-hero-weight: 720;
+  --skeed-type-title-size: clamp(1.75rem, 3vw, 2.75rem);
+  --skeed-type-title-line: 1.12;
+  --skeed-type-title-tracking: -0.006em;
+  --skeed-type-title-weight: 680;
+  --skeed-type-body-size: 1rem;
+  --skeed-type-body-line: 1.72;
+  --skeed-type-body-tracking: 0;
+  --skeed-type-body-weight: 400;
 }
 * { box-sizing: border-box; }
-html, body { padding: 0; margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; }
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--skeed-font-body-family);
+  font-size: var(--skeed-type-body-size);
+  line-height: var(--skeed-type-body-line);
+  letter-spacing: var(--skeed-type-body-tracking);
+  color: var(--skeed-fg);
+  background: var(--skeed-bg);
+}

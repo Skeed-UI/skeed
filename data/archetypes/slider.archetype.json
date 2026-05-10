@@ -3,11 +3,46 @@
   "name": "Slider",
   "schemaVersion": 1,
   "category": "molecule",
-  "description": "TODO: describe Slider",
-  "tokensUsed": ["color.neutral.50"],
+  "description": "Accessible range slider with labels, live value output, polished thumb tracking, and clean/glow/meter/steps visual modes.",
+  "tokensUsed": [
+    "color.brand.500",
+    "color.success.500",
+    "color.warning.500",
+    "color.danger.500",
+    "color.neutral.50",
+    "color.neutral.200",
+    "color.neutral.500",
+    "color.neutral.700",
+    "color.neutral.900",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "radius.9999",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default",
+    "shadow.1",
+    "shadow.2"
+  ],
   "assetSlots": [],
   "defaultVariantsPerDensity": 1,
   "frameworks": ["react"],
   "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "beautiful slider",
+      "range control",
+      "adjust intensity",
+      "set a numeric preference"
+    ],
+    "useCases": ["pricing controls", "AI temperature", "volume", "progress tuning", "filter ranges"],
+    "moodTags": ["precise", "smooth", "controlled"],
+    "styleAxes": ["clean", "glow", "meter", "steps"],
+    "interactionModel": "input",
+    "generationHints": [
+      "Use glow for AI, wellness, and creator tools; meter for operational dashboards; steps for plans, ratings, and simple choices."
+    ]
+  },
   "demographicAntiPatterns": []
 }

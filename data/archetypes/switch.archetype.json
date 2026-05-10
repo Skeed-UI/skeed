@@ -3,25 +3,47 @@
   "name": "Switch",
   "schemaVersion": 1,
   "category": "atom",
-  "description": "Toggle switch using role=switch button pattern. Visually distinct from checkbox with animated thumb. Supports sm/md sizes, label, and description.",
+  "description": "Polished role=switch control with calm, glow, split, and signal variants. Tuned for demographic mood shifts without changing behavior.",
   "tokensUsed": [
     "color.brand.500",
+    "color.brand.600",
+    "color.success.500",
+    "color.danger.500",
+    "color.warning.500",
     "color.neutral.50",
+    "color.neutral.200",
     "color.neutral.300",
     "color.neutral.400",
     "color.neutral.500",
     "color.neutral.900",
-    "radius.full",
+    "radius.9999",
     "spacing.1",
     "spacing.3",
     "font.body",
     "motion.duration.fast",
+    "motion.duration.normal",
     "motion.easing.default",
-    "shadow.1"
+    "shadow.1",
+    "shadow.2"
   ],
   "assetSlots": [],
   "defaultVariantsPerDensity": 1,
   "frameworks": ["react"],
   "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "toggle setting",
+      "beautiful switch",
+      "on off control",
+      "preference switch"
+    ],
+    "useCases": ["settings", "permissions", "notification preferences", "feature flags"],
+    "moodTags": ["precise", "responsive", "polished"],
+    "styleAxes": ["calm", "glow", "split-state", "signal"],
+    "interactionModel": "clickable",
+    "generationHints": [
+      "Use calm for enterprise and government, glow for AI and productivity, split for high-contrast binary decisions, signal for monitoring or active systems."
+    ]
+  },
   "demographicAntiPatterns": []
 }

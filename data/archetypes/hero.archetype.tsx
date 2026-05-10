@@ -1,5 +1,5 @@
 import { cn } from '@skeed/core/cn';
-import { type HTMLAttributes, forwardRef } from 'react';
+import { type HTMLAttributes, type ReactNode, forwardRef } from 'react';
 
 type Align = 'left' | 'center' | 'right';
 
@@ -9,6 +9,8 @@ export interface HeroProps extends HTMLAttributes<HTMLElement> {
   ctaLabel?: string;
   onCtaClick?: () => void;
   align?: Align;
+  illustration?: ReactNode;
+  visualTone?: 'orbital' | 'product' | 'none';
 }
 
 const ALIGN_CLASSES: Record<Align, string> = {
@@ -45,11 +47,21 @@ const CTA_CLASSES =
 
 const ILLUSTRATION_CLASSES =
   'mt-skeed-spacing-8 w-full rounded-skeed-radius-3 ' +
-  'bg-skeed-color-neutral-100 ' +
-  'min-h-skeed-spacing-10';
+  'border border-skeed-color-neutral-200 bg-skeed-color-neutral-50 shadow-skeed-shadow-1 ' +
+  'min-h-skeed-spacing-10 overflow-hidden';
 
 export const Hero = forwardRef<HTMLElement, HeroProps>(function Hero(
-  { headline, subtext, ctaLabel, onCtaClick, align = 'center', className, ...rest },
+  {
+    headline,
+    subtext,
+    ctaLabel,
+    onCtaClick,
+    align = 'center',
+    illustration,
+    visualTone = 'orbital',
+    className,
+    ...rest
+  },
   ref,
 ) {
   return (
@@ -65,8 +77,17 @@ export const Hero = forwardRef<HTMLElement, HeroProps>(function Hero(
           </button>
         )}
 
-        {/* Asset slot: hero_illustration */}
-        <div className={ILLUSTRATION_CLASSES} role="img" aria-label="Hero illustration" />
+        {visualTone !== 'none' && (
+          <div className={ILLUSTRATION_CLASSES} role="img" aria-label="Hero illustration">
+            {illustration ?? (
+              <div className="relative flex min-h-skeed-spacing-10 items-center justify-center px-skeed-spacing-6 py-skeed-spacing-8">
+                <span className="absolute h-skeed-spacing-32 w-skeed-spacing-32 rounded-skeed-radius-9999 bg-skeed-color-brand-100 opacity-70 blur-xl" />
+                <span className="absolute h-skeed-spacing-20 w-skeed-spacing-20 rounded-skeed-radius-9999 border border-skeed-color-brand-300" />
+                <span className="relative h-skeed-spacing-12 w-skeed-spacing-12 rotate-45 rounded-skeed-radius-2 bg-skeed-color-brand-500 shadow-skeed-shadow-2" />
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,0 +1,51 @@
+{
+  "id": "scroll",
+  "name": "Scroll",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "An ancient, editorial alternative to a card. Uses rolled-edge details, restrained texture, and demographic-tunable tones for ceremonial content blocks.",
+  "tokensUsed": [
+    "color.brand.50",
+    "color.brand.200",
+    "color.brand.500",
+    "color.warning.50",
+    "color.warning.200",
+    "color.neutral.50",
+    "color.neutral.200",
+    "color.neutral.900",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.5",
+    "spacing.6",
+    "density.cozy.lh",
+    "radius.1",
+    "radius.9999",
+    "font.body",
+    "font.display",
+    "motion.duration.normal",
+    "motion.easing.default",
+    "shadow.1"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "ancient card alternative",
+      "scroll panel",
+      "ceremonial content block",
+      "premium editorial note"
+    ],
+    "useCases": ["quotes", "ritual steps", "announcements", "lesson notes", "special offers"],
+    "moodTags": ["ceremonial", "warm", "editorial", "memorable"],
+    "styleAxes": ["parchment", "ceremony", "clean", "night"],
+    "interactionModel": "static",
+    "generationHints": [
+      "Use instead of Card when the content should feel authored, treasured, historical, ceremonial, or story-driven."
+    ]
+  },
+  "demographicAntiPatterns": []
+}

@@ -1,6 +1,6 @@
 {
   "name": "@skeed/cli",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Skeed CLI — `npx skeed init '<idea>'` scaffolds a demographic-tuned Next.js project.",
   "keywords": [
     "cli",
@@ -45,8 +45,11 @@
     "dev": "tsx src/index.ts"
   },
   "dependencies": {
-    "@skeed/contracts": "workspace:*",
-    "@skeed/pipeline": "workspace:*",
+    "@skeed/contracts": "^0.1.0",
+    "@skeed/indexer": "^0.1.0",
+    "@skeed/llm-provider-local": "^0.1.0",
+    "@skeed/mcp-server": "^0.1.0",
+    "@skeed/pipeline": "^0.1.0",
     "cac": "^6.7.14",
     "kleur": "^4.1.5",
     "open": "^10.1.0",

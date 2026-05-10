@@ -91,9 +91,23 @@ export class Orchestrator {
     input: unknown,
     registryVersion: string,
   ): string {
-    const canonical = JSON.stringify(input, Object.keys(input as object).sort());
+    const canonical = stableStringify(input);
     return createHash('sha256')
       .update(`${stage.name}@${stage.version}|${registryVersion}|${canonical}`)
       .digest('hex');
   }
+}
+
+function stableStringify(value: unknown): string {
+  return JSON.stringify(sortDeep(value));
+}
+
+function sortDeep(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(sortDeep);
+  if (!value || typeof value !== 'object') return value;
+  const out: Record<string, unknown> = {};
+  for (const key of Object.keys(value).sort()) {
+    out[key] = sortDeep((value as Record<string, unknown>)[key]);
+  }
+  return out;
 }

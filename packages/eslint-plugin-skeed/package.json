@@ -1,6 +1,6 @@
 {
   "name": "@skeed/eslint-plugin-skeed",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "ESLint rules: bans literal hex/px/rem in archetype source, enforces ethics rules per demographic.",
   "license": "MIT",
   "type": "module",
@@ -12,7 +12,9 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -22,7 +24,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@skeed/contracts": "workspace:*"
+    "@skeed/contracts": "^0.1.0"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.0",

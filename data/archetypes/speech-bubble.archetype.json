@@ -1,0 +1,62 @@
+{
+  "id": "speech-bubble",
+  "name": "Speech Bubble",
+  "schemaVersion": 1,
+  "category": "molecule",
+  "description": "Expressive speech/cloud bubble for messages, quotes, coach tips, and assistant narration with tokenized tone and tail placement.",
+  "tokensUsed": [
+    "color.brand.50",
+    "color.brand.200",
+    "color.success.50",
+    "color.success.200",
+    "color.warning.50",
+    "color.warning.200",
+    "color.neutral.50",
+    "color.neutral.100",
+    "color.neutral.200",
+    "color.neutral.500",
+    "color.neutral.700",
+    "color.neutral.900",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "spacing.4",
+    "spacing.5",
+    "spacing.8",
+    "radius.4",
+    "radius.7",
+    "radius.9999",
+    "font.body",
+    "motion.duration.fast",
+    "motion.easing.default",
+    "shadow.1"
+  ],
+  "assetSlots": [
+    {
+      "role": "speaker-avatar",
+      "type": "avatar",
+      "required": false,
+      "fallbackHint": "Small speaker identity image or generated avatar"
+    }
+  ],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "speech bubble",
+      "cloud bubble",
+      "assistant message",
+      "coach tip",
+      "testimonial quote bubble"
+    ],
+    "useCases": ["chat", "AI narration", "coaching", "testimonials", "kids education"],
+    "moodTags": ["conversational", "soft", "expressive"],
+    "styleAxes": ["neutral", "brand", "success", "warning", "cloud"],
+    "interactionModel": "static",
+    "generationHints": [
+      "Use cloud for children, wellness, and informal assistants; use neutral or brand for professional chat and AI copilots."
+    ]
+  },
+  "demographicAntiPatterns": []
+}

@@ -1,12 +1,14 @@
 {
   "name": "@skeed/asset-icon",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Shared icon components for Skeed UI components.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -26,7 +28,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@skeed/contracts": "workspace:*"
+    "@skeed/contracts": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

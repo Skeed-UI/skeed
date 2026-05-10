@@ -187,6 +187,7 @@ export type StageId =
   | '02-classify'
   | '03-pain-points'
   | '04-score-l1'
+  | '06-research'
   | '07-score-l2'
   | '10-brand-logo'
   | '11-design-system'
@@ -229,6 +230,14 @@ export const ROUTING: Record<StageId, string[]> = {
     'kimi-3-6',
     'gpt-5-4',
     'qwen-3-6',
+    'openrouter-default',
+  ],
+  '06-research': [
+    'deepseek-v4',
+    'kimi-3-6',
+    'qwen-3-6',
+    'claude-sonnet-4-6',
+    'gpt-5-4',
     'openrouter-default',
   ],
   '07-score-l2': [

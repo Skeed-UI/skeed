@@ -310,3 +310,105 @@ registerEffect(
   },
   { urgency: 'medium' },
 );
+
+/**
+ * Spotlight effect - local illumination around the pointer or focal point
+ */
+registerEffect(
+  'spotlight',
+  (ctx, params): EffectOutput => {
+    const color = (params.color as string) ?? 'brand';
+    const reach = (params.reach as number) ?? 0.42;
+    const intensity = (params.intensity as number) ?? ctx.intensity;
+
+    return {
+      transforms: [],
+      cssProperties: {
+        '--motion-spotlight-x': `${Math.round(ctx.position.x * 100)}%`,
+        '--motion-spotlight-y': `${Math.round(ctx.position.y * 100)}%`,
+        '--motion-spotlight-reach': String(reach),
+        '--motion-spotlight-color': `var(--skeed-color-${color}-500)`,
+        '--motion-spotlight-opacity': String(Math.min(1, Math.max(0, intensity))),
+      },
+      springConfig: {
+        mass: 0.4,
+        stiffness: 180,
+        damping: 18,
+      },
+    };
+  },
+  { color: 'brand', reach: 0.42, intensity: 0.65 },
+);
+
+/**
+ * God-rays effect - directional light sweep for premium reveals
+ */
+registerEffect(
+  'god-rays',
+  (ctx, params): EffectOutput => {
+    const angle = (params.angle as number) ?? -24;
+    const intensity = (params.intensity as number) ?? 0.45;
+    const drift = Math.sin(ctx.timestamp / 1800) * 4;
+
+    return {
+      transforms: [{ type: 'translate', x: drift, y: 0 }],
+      cssProperties: {
+        '--motion-rays-angle': `${angle}deg`,
+        '--motion-rays-opacity': String(intensity),
+        '--motion-rays-offset': `${Math.round((ctx.timestamp / 24) % 100)}%`,
+      },
+      duration: 600,
+      easing: 'ease-out',
+    };
+  },
+  { angle: -24, intensity: 0.45 },
+);
+
+/**
+ * Lens flare effect - tiny highlight glint from a high-energy interaction
+ */
+registerEffect(
+  'lens-flare',
+  (ctx, params): EffectOutput => {
+    const color = (params.color as string) ?? 'warning';
+    const intensity = (params.intensity as number) ?? Math.max(0.4, ctx.intensity);
+
+    return {
+      transforms: [{ type: 'scale', x: 1 + intensity * 0.03, y: 1 + intensity * 0.03 }],
+      filters: [{ type: 'brightness', value: 1 + intensity * 0.18 }],
+      cssProperties: {
+        '--motion-flare-x': `${Math.round(ctx.position.x * 100)}%`,
+        '--motion-flare-y': `${Math.round(ctx.position.y * 100)}%`,
+        '--motion-flare-color': `var(--skeed-color-${color}-500)`,
+        '--motion-flare-opacity': String(Math.min(1, intensity)),
+      },
+      duration: 280,
+      easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
+    };
+  },
+  { color: 'warning', intensity: 0.7 },
+);
+
+/**
+ * Aurora glow effect - slow multi-point ambient light for calm AI surfaces
+ */
+registerEffect(
+  'aurora-glow',
+  (ctx, params): EffectOutput => {
+    const intensity = (params.intensity as number) ?? 0.35;
+    const phase = (ctx.timestamp % 5000) / 5000;
+
+    return {
+      transforms: [],
+      cssProperties: {
+        '--motion-aurora-phase': String(phase),
+        '--motion-aurora-opacity': String(intensity),
+        '--motion-aurora-primary': 'var(--skeed-color-brand-500)',
+        '--motion-aurora-secondary': 'var(--skeed-color-success-500)',
+      },
+      duration: 1200,
+      easing: 'ease-in-out',
+    };
+  },
+  { intensity: 0.35 },
+);

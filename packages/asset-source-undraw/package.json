@@ -1,6 +1,6 @@
 {
   "name": "@skeed/asset-source-undraw",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Skeed AssetSource adapter for undraw.",
   "license": "MIT",
   "type": "module",
@@ -12,7 +12,9 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -22,7 +24,7 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@skeed/contracts": "workspace:*"
+    "@skeed/contracts": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

@@ -1,6 +1,6 @@
 {
   "name": "@skeed/motion",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Physics-based micro-interactions and environmental effects for React",
   "keywords": [
     "react",
@@ -24,7 +24,9 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -59,9 +61,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@skeed/core": "workspace:*",
-    "@skeed/contracts": "workspace:*",
-    "@skeed/asset-icon": "workspace:*"
+    "@skeed/core": "^0.1.0",
+    "@skeed/contracts": "^0.1.0",
+    "@skeed/asset-icon": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",

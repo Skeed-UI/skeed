@@ -20,8 +20,9 @@ export async function composeLogoCandidates(opts: ComposeOptions): Promise<LogoC
   const primitives = await loadPrimitives(opts.demographicId);
 
   const palette = paletteForBrand(opts.brand);
-  const initial = (opts.projectName.trim()[0] ?? 'S').toUpperCase();
-  const wordmark = opts.projectName.slice(0, 24);
+  // Generate smart acronym from project name (e.g., "Build a meditation app" -> "Meditate")
+  const wordmark = generateBrandName(opts.projectName);
+  const initial = wordmark[0]?.toUpperCase() ?? 'S';
 
   const out: LogoCandidate[] = [];
   for (let i = 0; i < wanted; i += 1) {
@@ -120,6 +121,42 @@ function rasterFallback(_svg: string, size: number, palette: Palette): string {
 
 function monochrome(svg: string, palette: Palette): string {
   return svg.replace(new RegExp(palette.primary.replace('#', '\\#'), 'gi'), '#000000');
+}
+
+/**
+ * Generate a short brand name from a project description
+ * "Build a meditation app for busy professionals" -> "Meditate"
+ * "Create a fitness tracker for athletes" -> "FitTrack"
+ */
+function generateBrandName(projectName: string): string {
+  // Remove common prefixes
+  const cleaned = projectName
+    .replace(/^(build|create|make|design|develop|a|an|the)\s+/gi, '')
+    .replace(/\s+(app|tool|platform|service|system)\s*/gi, ' ')
+    .replace(/\s+for\s+.*$/i, '') // Remove "for [demographic]" suffix
+    .trim();
+
+  // Get key words
+  const words = cleaned.split(/\s+/).filter((w) => w.length > 2);
+
+  if (words.length === 0) return 'App';
+  if (words.length === 1) return capitalize(words[0]!).slice(0, 12);
+
+  // Try to create a compound name from first 2-3 words
+  const firstWord = words[0]!;
+  const lastWord = words[words.length - 1]!;
+
+  // If first word is short, combine with last word
+  if (firstWord.length <= 4) {
+    return capitalize(firstWord) + capitalize(lastWord).slice(0, 8);
+  }
+
+  // Otherwise use first word with possible suffix
+  return capitalize(firstWord).slice(0, 12);
+}
+
+function capitalize(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 }
 
 function escape(s: string): string {

@@ -8,9 +8,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg?style=flat-square)](https://www.typescriptlang.org)
 [![Node](https://img.shields.io/badge/Node-%3E%3D22.0.0-green.svg?style=flat-square)](https://nodejs.org)
 
-**Production-ready scaffolding for demographic-targeted applications.**
+**Production-ready scaffolding and UI context for demographic-targeted applications.**
 
 Skeed transforms a raw idea into a complete, runnable Next.js application — with brand identity, design system, and component selection tuned to your target audience.
+
+Skeed is not only a component library. It is an AI-native semantic UI layer: Tailwind 3 tokens, curated React components, installable registry data, demographic psychology, typography hierarchy, motion rules, and agent-readable context in one system.
 
 ## Quick Install
 
@@ -29,14 +31,16 @@ Skeed takes a prompt like *"Build an app that manages my emails automatically an
 1. **Validates the idea** — clarifies demographic + niche + pain points, scores it (twice, with optional deep research between).
 2. **Generates a brand** — SVG-native logos tuned to the demographic.
 3. **Synthesizes a design system** — palette, typography, motion, voice, all matched to demographic psychology.
-4. **Selects the right components** — from a catalog of ~3,600 demographic-tagged components served via MCP.
+4. **Selects the right components** - from a catalog of 4,224+ demographic-tagged generated variants plus curated flagship components.
 5. **Composes pages + lands on a user-picked landing page** — 2-3 candidates, you pick.
 6. **Emits a runnable Next.js scaffold** — with assets (AI-generated illustrations, stock imagery, demographic-fit avatars).
 
 ## Features
 
-- **Demographic Intelligence** — 19+ researched personas with psychology-mapped design patterns
-- **3,600+ Components** — Curated, accessibility-tested, demographic-tagged component catalog
+- **Demographic Intelligence** - researched personas with psychology-mapped design patterns
+- **4,224+ Registry Components** - generated breadth plus curated flagship UI for production surfaces
+- **Tailwind 3-First UI Preset** - demographic color, type, radius, density, CTA, and motion utilities
+- **Typography That Does Not Fight Itself** - preset type systems for wellness, productivity, AI, education, gov, kids, classic, premium, clinical, and enterprise
 - **17-Stage Pipeline** — From idea validation to deployed scaffold in one command
 - **Design Token System** — Deterministic preset→CSS transformation, zero magic values
 - **MCP-Native** — Component registry exposed via Model Context Protocol for AI-assisted workflows
@@ -48,8 +52,10 @@ Most scaffolding tools generate generic code. Skeed generates *targeted* code.
 
 | Generic Scaffolder | Skeed |
 |-------------------|-------|
-| One-size-fits-all components | Demographic-tuned variants (density, motion, voice) |
+| One-size-fits-all components | Demographic-tuned variants (density, motion, voice, hierarchy) |
 | Arbitrary color palettes | Psychology-mapped color systems |
+| Every element competes for attention | Semantic type and CTA utilities create a natural page hierarchy |
+| Font choice left to chance | Audience-mapped type presets with readable fallback stacks |
 | Boilerplate landing pages | Persona-optimized conversion flows |
 | Manual component selection | AI-assisted, constraint-aware composition |
 
@@ -60,6 +66,9 @@ Built for teams who ship to real users — not demos.
 | Package | Description | Install |
 |---------|-------------|---------|
 | `@skeed/cli` | Main CLI for scaffolding apps | `npm i -g @skeed/cli` |
+| `@skeed/ui` | Tailwind 3-first flagship React components | `npm i @skeed/ui` |
+| `@skeed/tailwind` | Demographic tokens, typography, CTA hierarchy, and CSS-first micro-interactions | `npm i @skeed/tailwind` |
+| `@skeed/registry` | Shadcn-compatible registry data product | `npm i @skeed/registry` |
 | `@skeed/core` | Design tokens & CSS transformer | `npm i @skeed/core` |
 | `@skeed/contracts` | Shared types & Zod schemas | `npm i @skeed/contracts` |
 | `@skeed/motion` | Physics-based micro-interactions | `npm i @skeed/motion` |
@@ -187,6 +196,39 @@ const css = transformPresetToCSS({
   density: 'comfortable'
 });
 ```
+
+### Tailwind 3 Preset, Typography, and Micro-Interactions
+```typescript
+import { createSkeedTailwindPreset } from '@skeed/tailwind';
+
+export default {
+  content: {
+    relative: true,
+    files: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
+  },
+  presets: [
+    createSkeedTailwindPreset({
+      demographic: 'classic',
+      tone: 'calm',
+    }),
+  ],
+};
+```
+
+Use semantic classes instead of restyling every component:
+
+```tsx
+<main className="skeed-type-page">
+  <p className="skeed-eyebrow">For trustees</p>
+  <h1 className="skeed-type-hero">A calmer way to manage legacy giving</h1>
+  <p className="skeed-type-body">
+    Clear records, plain-language guidance, and fewer risky handoffs.
+  </p>
+  <a className="skeed-cta-primary" href="/start">Start securely</a>
+</main>
+```
+
+The preset resolves `classic`, `kids`, `health`, `sales_crm`, `ai_apps`, `gov`, `fintech`, `marketplace`, and other demographic IDs into type scales, CTA sizing, focus rings, reduced-motion behavior, and CSS-first hover/press/entry utilities.
 
 ### Motion & Animation
 ```tsx

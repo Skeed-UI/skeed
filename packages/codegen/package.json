@@ -1,6 +1,6 @@
 {
   "name": "@skeed/codegen",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Component generation engine for Skeed - transforms archetypes × presets × densities into resolved components",
   "type": "module",
   "exports": {
@@ -21,7 +21,9 @@
       "default": "./dist/generate-variants.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -32,11 +34,11 @@
     "lint": "biome lint src"
   },
   "dependencies": {
-    "@skeed/contracts": "workspace:*",
-    "@skeed/core": "workspace:*",
-    "@skeed/archetypes-loader": "workspace:*",
-    "@skeed/asset-logo-svg": "workspace:*",
-    "@skeed/demographics-loader": "workspace:*"
+    "@skeed/contracts": "^0.1.0",
+    "@skeed/core": "^0.1.0",
+    "@skeed/archetypes-loader": "^0.1.0",
+    "@skeed/asset-logo-svg": "^0.1.0",
+    "@skeed/demographics-loader": "^0.1.0"
   },
   "scripts-extra": {
     "gen": "tsx src/cli.ts"

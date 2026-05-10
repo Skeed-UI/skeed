@@ -1,6 +1,6 @@
 # {{APP_TITLE}}
 
-Generated with [Skeed](https://github.com/) — `npx skeed init`.
+Generated with [Skeed](https://github.com/) - `npx skeed init`.
 
 ## Run
 
@@ -14,3 +14,17 @@ Open http://localhost:3000.
 ## Skeed config
 
 See `skeed.config.json` for the demographic, design system, and backend stack chosen for this project.
+
+## UI system
+
+This app is Tailwind 3-first and includes Skeed semantic hierarchy utilities:
+
+- `skeed-type-page`
+- `skeed-type-hero`
+- `skeed-type-title`
+- `skeed-type-body`
+- `skeed-eyebrow`
+- `skeed-cta-primary`
+- `skeed-cta-secondary`
+
+The generated `skeed.tailwind.ts` mirrors `@skeed/tailwind` so the scaffold keeps demographic typography, CTA hierarchy, reduced-motion behavior, and CSS-first micro-interactions even before package publishing catches up.

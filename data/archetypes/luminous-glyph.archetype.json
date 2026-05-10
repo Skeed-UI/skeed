@@ -1,0 +1,46 @@
+{
+  "id": "luminous-glyph",
+  "name": "Luminous Glyph",
+  "schemaVersion": 1,
+  "category": "atom",
+  "description": "Decorative diamond, star, or light-bulb glyph that emits animated tokenized light around itself for premium page accents and attention points.",
+  "tokensUsed": [
+    "color.brand.500",
+    "color.warning.500",
+    "color.success.500",
+    "color.danger.500",
+    "color.neutral.50",
+    "color.neutral.900",
+    "spacing.1",
+    "spacing.2",
+    "spacing.3",
+    "spacing.5",
+    "spacing.8",
+    "radius.1",
+    "radius.2",
+    "radius.9999",
+    "motion.duration.fast",
+    "shadow.1"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "diamond light",
+      "star decoration",
+      "light bulb effect",
+      "animated decorative glow",
+      "luminous page accent"
+    ],
+    "useCases": ["hero accents", "empty states", "achievement markers", "premium callouts", "AI affordance highlights"],
+    "moodTags": ["magical", "premium", "luminous", "focused"],
+    "styleAxes": ["diamond", "star", "light-bulb", "soft-glow", "strong-glow"],
+    "interactionModel": "ambient",
+    "generationHints": [
+      "Use sparingly as page-level affordance or attention marker; avoid dense operational interfaces unless the glyph maps to status."
+    ]
+  },
+  "demographicAntiPatterns": []
+}

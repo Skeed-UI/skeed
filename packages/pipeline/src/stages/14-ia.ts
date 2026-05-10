@@ -66,6 +66,7 @@ Stories: ${(state.userStories ?? []).map((s) => `[${s.priority}] ${s.iWantTo}`).
 Design the IA now.`,
         schema: IaOut,
         temperature: 0.3,
+        validate: (value) => validateIa(value),
       },
       () => ({
         pages: [
@@ -93,3 +94,44 @@ Design the IA now.`,
     return { ...state, siteMap: out };
   },
 };
+
+function validateIa(value: z.infer<typeof IaOut>): string[] {
+  const issues: string[] = [];
+  if (!value.pages.some((page) => page.id === 'home' && page.route === '/')) {
+    issues.push('IA must include a home page at /');
+  }
+  const pageIds = new Set<string>();
+  const routes = new Set<string>();
+  for (const page of value.pages) {
+    if (pageIds.has(page.id)) issues.push(`duplicate page id ${page.id}`);
+    pageIds.add(page.id);
+    if (routes.has(page.route)) issues.push(`duplicate route ${page.route}`);
+    routes.add(page.route);
+    if (!page.route.startsWith('/')) issues.push(`page ${page.id} route must start with /`);
+    if (!/^[a-z0-9_/-]+$/i.test(page.route)) {
+      issues.push(`page ${page.id} route has invalid characters`);
+    }
+    if (page.slots.length === 0) issues.push(`page ${page.id} has no slots`);
+    for (const slot of page.slots) {
+      if (slot.role.trim().length === 0) issues.push(`page ${page.id} has empty slot role`);
+      if (/<[^>]+>/.test(slot.intent)) issues.push(`page ${page.id} slot intent has placeholder text`);
+    }
+  }
+  for (const item of value.nav.items) {
+    if (!pageIds.has(item.pageId)) issues.push(`nav item references missing page ${item.pageId}`);
+    if (item.label.trim().length === 0) issues.push(`nav item for ${item.pageId} has empty label`);
+  }
+  for (const entity of value.dataModel) {
+    if (!/^[A-Z][A-Za-z0-9]*$/.test(entity.entity)) {
+      issues.push(`data model entity "${entity.entity}" must be PascalCase`);
+    }
+    const fieldNames = new Set<string>();
+    for (const field of entity.fields) {
+      if (fieldNames.has(field.name)) {
+        issues.push(`entity ${entity.entity} has duplicate field ${field.name}`);
+      }
+      fieldNames.add(field.name);
+    }
+  }
+  return issues;
+}

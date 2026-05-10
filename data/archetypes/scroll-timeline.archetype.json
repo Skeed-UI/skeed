@@ -1,0 +1,50 @@
+{
+  "id": "scroll-timeline",
+  "name": "Scroll Timeline",
+  "schemaVersion": 1,
+  "category": "organism",
+  "description": "Narrative timeline that can be driven by page scroll state. Supports active and completed steps, alternating layouts, and tokenized progress styling.",
+  "tokensUsed": [
+    "color.brand.500",
+    "color.brand.600",
+    "color.neutral.50",
+    "color.neutral.200",
+    "color.neutral.500",
+    "color.neutral.600",
+    "color.neutral.900",
+    "spacing.1",
+    "spacing.2",
+    "spacing.4",
+    "spacing.6",
+    "spacing.8",
+    "spacing.10",
+    "radius.2",
+    "radius.9999",
+    "font.body",
+    "font.display",
+    "motion.duration.normal",
+    "motion.easing.default",
+    "shadow.1",
+    "shadow.2"
+  ],
+  "assetSlots": [],
+  "defaultVariantsPerDensity": 1,
+  "frameworks": ["react"],
+  "license": "MIT",
+  "aiMetadata": {
+    "intentPhrases": [
+      "scroll timeline",
+      "journey timeline",
+      "process timeline",
+      "scroll reactive steps"
+    ],
+    "useCases": ["onboarding journeys", "case studies", "roadmaps", "lesson paths", "product workflows"],
+    "moodTags": ["narrative", "guided", "structured"],
+    "styleAxes": ["vertical", "alternating", "active-step", "completed-step"],
+    "interactionModel": "scroll-reactive",
+    "generationHints": [
+      "Drive activeIndex from IntersectionObserver when composing a full page; keep static activeIndex for server-rendered previews."
+    ]
+  },
+  "demographicAntiPatterns": []
+}

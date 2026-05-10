@@ -1,0 +1,39 @@
+{
+  "name": "skeed",
+  "version": "0.1.0",
+  "description": "Skeed CLI — alias for @skeed/cli",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "skeed": "./bin/skeed.mjs"
+  },
+  "files": ["bin"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cli",
+    "scaffold",
+    "nextjs",
+    "react",
+    "design-system",
+    "demographic",
+    "ui-components",
+    "tailwind",
+    "typescript",
+    "ai-assisted",
+    "mcp",
+    "component-library",
+    "design-tokens",
+    "code-generation"
+  ],
+  "homepage": "https://github.com/skeed/skeed#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skeed/skeed.git",
+    "directory": "packages/skeed"
+  },
+  "bugs": {
+    "url": "https://github.com/skeed/skeed/issues"
+  }
+}

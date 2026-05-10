@@ -7,6 +7,17 @@
 1. **UI Component System** — Catalog of demographic-tagged components served via MCP. Token-only archetypes × demographic presets × densities, generated.
 2. **NL → Design System Pipeline** — 17-stage DAG from prompt to scaffold, with two scoring gates and AutoResearchClaw between them.
 
+## Semantic UI layer
+
+Skeed's production UI path is Tailwind 3-first:
+
+- `@skeed/ui` provides curated flagship React components.
+- `@skeed/tailwind` provides demographic tokens, typography, CTA hierarchy, focus rings, and CSS-first motion utilities.
+- `@skeed/registry` packages installable component payloads and shadcn-compatible registry data.
+- `@skeed/mcp-server` exposes the registry to AI agents so selection can be justified with demographic fit, accessibility, motion, and install context.
+
+The key product promise is that generated UI should have hierarchy by default. Agents and generated apps should use semantic utilities such as `skeed-type-hero`, `skeed-type-body`, `skeed-eyebrow`, `skeed-cta-primary`, and `skeed-cta-secondary` before hand-rolled typography stacks.
+
 ## Data tiers
 
 - **Tier 1 — Source of truth.** Filesystem under `data/`. Plain JSON / TSX / SVG. Reviewable in PRs.

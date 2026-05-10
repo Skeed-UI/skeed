@@ -86,6 +86,7 @@ Synthesize the design system now.`,
         schema: DsOut,
         temperature: 0.4,
         maxTokens: 1500,
+        validate: (value) => validateDesignSystem(value, demographic),
       },
       () => fallbackDS(demographic),
     );
@@ -97,8 +98,28 @@ Synthesize the design system now.`,
   },
 };
 
+function validateDesignSystem(value: z.infer<typeof DsOut>, demographic: string): string[] {
+  const issues: string[] = [];
+  if (!isHex(value.palette.primary)) issues.push('primary palette color is not a hex color');
+  if (!isHex(value.palette.neutral)) issues.push('neutral palette color is not a hex color');
+  if (value.type.scale.some((size) => size <= 0)) issues.push('type scale contains non-positive values');
+  const strictMotion = ['kids', 'health', 'gov', 'mental_wellness'].includes(demographic);
+  if (strictMotion && Math.max(...Object.values(value.motion.duration)) > 200) {
+    issues.push('AAA-strict demographic motion duration exceeds 200ms');
+  }
+  if (value.voice.samples.cta && value.voice.samples.cta.length > 32) {
+    issues.push('CTA voice sample is too long for common button UI');
+  }
+  return issues;
+}
+
+function isHex(value: string): boolean {
+  return /^#[0-9a-f]{6}$/i.test(value);
+}
+
 function fallbackDS(demographic: string): z.infer<typeof DsOut> {
   const isKids = demographic === 'kids';
+  const strictMotion = ['kids', 'health', 'gov', 'mental_wellness'].includes(demographic);
   return {
     tokens: [
       {
@@ -135,7 +156,9 @@ function fallbackDS(demographic: string): z.infer<typeof DsOut> {
     radius: isKids ? [4, 8, 16, 24] : [4, 6, 8, 12],
     density: isKids ? 'comfortable' : 'compact',
     motion: {
-      duration: isKids ? { fast: 180, base: 280, slow: 420 } : { fast: 120, base: 200, slow: 320 },
+      duration: strictMotion
+        ? { fast: 120, base: 180, slow: 200 }
+        : { fast: 120, base: 200, slow: 320 },
       easing: {
         standard: isKids ? 'cubic-bezier(.34,1.56,.64,1)' : 'cubic-bezier(.4,0,.2,1)',
         emphasized: 'cubic-bezier(.2,.8,.2,1)',

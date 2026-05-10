@@ -1,0 +1,43 @@
+{
+  "name": "@skeed/tailwind",
+  "version": "0.1.7",
+  "description": "Tailwind 3 preset and CSS-first micro-interactions for Skeed UI.",
+  "keywords": [
+    "skeed",
+    "tailwind",
+    "tailwindcss",
+    "design-tokens",
+    "micro-interactions",
+    "demographic"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./v4": {
+      "import": "./dist/v4.js",
+      "types": "./dist/v4.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
