@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build packages
+        run: pnpm build
+
       - name: Lint package data
         run: pnpm lint:data
 
@@ -54,9 +57,6 @@ jobs:
 
       - name: Test packages
         run: pnpm test
-
-      - name: Build packages
-        run: pnpm build
 
       - name: Verify UI package tarballs
         shell: bash
