@@ -89,7 +89,7 @@ jobs:
                 process.exit(1);
               }
               console.log(`${packageDir}: ${files.length} production files`);
-            NODE
+          NODE
             rm -f "${pack_file}"
           done
 
